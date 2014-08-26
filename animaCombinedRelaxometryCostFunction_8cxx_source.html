@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_51f6d94a1d7ee6f99a886fa26632c272.html">quantitative-mri</a></li><li class="navelem"><a class="el" href="dir_6becb0b39eae59acbd986df0df417203.html">estimation</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_c4abb40ef761a7d0f7be931d0aa470c1.html">quantitative-mri</a></li><li class="navelem"><a class="el" href="dir_d02e7a1ace4d7374d13bddba647b6714.html">estimation</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -133,11 +133,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">double</span> expTRT1Value = std::exp(- m_TRValue / m_T1Value);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">double</span> baseSimulatedT1Value = m_KValue * m_M0Value * (1.0 - expTRT1Value);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_T1FlipAngles.size();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_T1FlipAngles.size();++i)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordtype">double</span> simulatedValue = baseSimulatedT1Value * std::sin(m_B1Value * m_T1FlipAngles[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]) / (1.0 - expTRT1Value * std::cos(m_B1Value * m_T1FlipAngles[i]));</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordtype">double</span> simulatedValue = baseSimulatedT1Value * std::sin(m_B1Value * m_T1FlipAngles[i]) / (1.0 - expTRT1Value * std::cos(m_B1Value * m_T1FlipAngles[i]));</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            residualValue += (simulatedValue - m_T1RelaxometrySignals[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]) * (simulatedValue - m_T1RelaxometrySignals[i]);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            residualValue += (simulatedValue - m_T1RelaxometrySignals[i]) * (simulatedValue - m_T1RelaxometrySignals[i]);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
@@ -152,8 +152,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classanima_1_1EPGSignalSimulator.html#abe5b8d8d73ea02f9f71bc5096ecae48e">anima::EPGSignalSimulator::RealVectorType</a> simulatedT2Values = t2SignalSimulator.<a class="code" href="classanima_1_1EPGSignalSimulator.html#a54f0ea3dc562d4c42f9dbbe39a87bf3f">GetValue</a>(m_T1Value,m_T2Value,m_B1Value,m_M0Value);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">// Loop on all signals to be generated</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; numT2Signals;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            residualValue += (simulatedT2Values[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - m_T2RelaxometrySignals[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]) * (simulatedT2Values[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - m_T2RelaxometrySignals[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numT2Signals;++i)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            residualValue += (simulatedT2Values[i] - m_T2RelaxometrySignals[i]) * (simulatedT2Values[i] - m_T2RelaxometrySignals[i]);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> residualValue;</div>
@@ -175,14 +175,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1CombinedRelaxometryCostFunction_html_afd96d3859a715da2c6ef29df474327b7a68ce42d9c4378cbb44121a6009066a1f"><div class="ttname"><a href="classanima_1_1CombinedRelaxometryCostFunction.html#afd96d3859a715da2c6ef29df474327b7a68ce42d9c4378cbb44121a6009066a1f">anima::CombinedRelaxometryCostFunction::T2</a></div><div class="ttdef"><b>Definition:</b> <a href="animaCombinedRelaxometryCostFunction_8h_source.html#l00053">animaCombinedRelaxometryCostFunction.h:53</a></div></div>
 <div class="ttc" id="classanima_1_1EPGSignalSimulator_html_a04b07b8d1f829e7b6fa629a9f95e4031"><div class="ttname"><a href="classanima_1_1EPGSignalSimulator.html#a04b07b8d1f829e7b6fa629a9f95e4031">anima::EPGSignalSimulator::SetNumberOfEchoes</a></div><div class="ttdeci">void SetNumberOfEchoes(unsigned int val)</div><div class="ttdef"><b>Definition:</b> <a href="animaEPGSignalSimulator_8h_source.html#l00028">animaEPGSignalSimulator.h:28</a></div></div>
 <div class="ttc" id="classanima_1_1CombinedRelaxometryCostFunction_html_afd96d3859a715da2c6ef29df474327b7a19d2d6117d62a0b86900120e92ce7f8a"><div class="ttname"><a href="classanima_1_1CombinedRelaxometryCostFunction.html#afd96d3859a715da2c6ef29df474327b7a19d2d6117d62a0b86900120e92ce7f8a">anima::CombinedRelaxometryCostFunction::T1</a></div><div class="ttdef"><b>Definition:</b> <a href="animaCombinedRelaxometryCostFunction_8h_source.html#l00054">animaCombinedRelaxometryCostFunction.h:54</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 <div class="ttc" id="animaCombinedRelaxometryCostFunction_8h_html"><div class="ttname"><a href="animaCombinedRelaxometryCostFunction_8h.html">animaCombinedRelaxometryCostFunction.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:47 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

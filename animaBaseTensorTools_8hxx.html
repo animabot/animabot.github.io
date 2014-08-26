@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_cd4d95685d4cbee0b9dbf23f92e916d9.html">matrix_operations</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_73eaca8a1c78e75e2135cc879f8581a1.html">matrix_operations</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -128,24 +128,27 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a765144e8a4a17ccb22def89761317aad"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a765144e8a4a17ccb22def89761317aad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a765144e8a4a17ccb22def89761317aad">anima::GetTensorLogarithm</a> (const vnl_matrix&lt; <a class="el" href="xform__nii_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a> &gt; &amp;tensor, vnl_matrix&lt; <a class="el" href="xform__nii_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a> &gt; &amp;log_tensor)</td></tr>
-<tr class="separator:a765144e8a4a17ccb22def89761317aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a094f5340728b719975b6d4fa20484685"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a094f5340728b719975b6d4fa20484685"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a094f5340728b719975b6d4fa20484685">anima::GetTensorPower</a> (const vnl_matrix&lt; <a class="el" href="xform__nii_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a> &gt; &amp;tensor, vnl_matrix&lt; <a class="el" href="xform__nii_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a> &gt; &amp;outputTensor, <a class="el" href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a> powerValue)</td></tr>
-<tr class="separator:a094f5340728b719975b6d4fa20484685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d0c8fefb8ce8dc21068833d7fab0d9"><td class="memTemplParams" colspan="2">template&lt;typename PixelRawType , unsigned int ImageDimension&gt; </td></tr>
+<tr class="memitem:a74d0c8fefb8ce8dc21068833d7fab0d9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a74d0c8fefb8ce8dc21068833d7fab0d9">anima::ExtractRotationFromMatrixTransform</a> (itk::MatrixOffsetTransformBase&lt; PixelRawType, ImageDimension, ImageDimension &gt; *trsf, vnl_matrix&lt; double &gt; &amp;rotationMatrix, vnl_matrix&lt; double &gt; &amp;tmpMat)</td></tr>
+<tr class="separator:a74d0c8fefb8ce8dc21068833d7fab0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58182974c47595bfcab0eb38f21b1e7b"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a58182974c47595bfcab0eb38f21b1e7b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a58182974c47595bfcab0eb38f21b1e7b">anima::GetTensorExponential</a> (const vnl_matrix&lt; <a class="el" href="xform__nii_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a> &gt; &amp;log_tensor, vnl_matrix&lt; <a class="el" href="xform__nii_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a> &gt; &amp;tensor)</td></tr>
+<tr class="memitem:a58182974c47595bfcab0eb38f21b1e7b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a58182974c47595bfcab0eb38f21b1e7b">anima::GetTensorExponential</a> (const vnl_matrix&lt; T &gt; &amp;log_tensor, vnl_matrix&lt; T &gt; &amp;tensor)</td></tr>
 <tr class="separator:a58182974c47595bfcab0eb38f21b1e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57c5a40480f2d9052b981119f0a432c6"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 &gt; </td></tr>
-<tr class="memitem:a57c5a40480f2d9052b981119f0a432c6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a57c5a40480f2d9052b981119f0a432c6">anima::GetVectorRepresentation</a> (const vnl_matrix&lt; T1 &gt; &amp;tensor, itk::VariableLengthVector&lt; T2 &gt; &amp;vector, unsigned int vecDim=0, bool scale=false)</td></tr>
-<tr class="separator:a57c5a40480f2d9052b981119f0a432c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e0c95cf3b70dde9b0d8acdaffdd8dcc"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 &gt; </td></tr>
 <tr class="memitem:a3e0c95cf3b70dde9b0d8acdaffdd8dcc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a3e0c95cf3b70dde9b0d8acdaffdd8dcc">anima::GetTensorFromVectorRepresentation</a> (const itk::VariableLengthVector&lt; T1 &gt; &amp;vector, vnl_matrix&lt; T2 &gt; &amp;tensor, unsigned int tensDim=0, bool scale=false)</td></tr>
 <tr class="separator:a3e0c95cf3b70dde9b0d8acdaffdd8dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74d0c8fefb8ce8dc21068833d7fab0d9"><td class="memTemplParams" colspan="2">template&lt;typename PixelRawType , unsigned int ImageDimension&gt; </td></tr>
-<tr class="memitem:a74d0c8fefb8ce8dc21068833d7fab0d9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a74d0c8fefb8ce8dc21068833d7fab0d9">anima::ExtractRotationFromMatrixTransform</a> (itk::MatrixOffsetTransformBase&lt; PixelRawType, ImageDimension, ImageDimension &gt; *trsf, vnl_matrix&lt; <a class="el" href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a> &gt; &amp;rotationMatrix, vnl_matrix&lt; <a class="el" href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a> &gt; &amp;tmpMat)</td></tr>
-<tr class="separator:a74d0c8fefb8ce8dc21068833d7fab0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765144e8a4a17ccb22def89761317aad"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a765144e8a4a17ccb22def89761317aad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a765144e8a4a17ccb22def89761317aad">anima::GetTensorLogarithm</a> (const vnl_matrix&lt; T &gt; &amp;tensor, vnl_matrix&lt; T &gt; &amp;log_tensor)</td></tr>
+<tr class="separator:a765144e8a4a17ccb22def89761317aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a094f5340728b719975b6d4fa20484685"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a094f5340728b719975b6d4fa20484685"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a094f5340728b719975b6d4fa20484685">anima::GetTensorPower</a> (const vnl_matrix&lt; T &gt; &amp;tensor, vnl_matrix&lt; T &gt; &amp;outputTensor, double powerValue)</td></tr>
+<tr class="separator:a094f5340728b719975b6d4fa20484685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c5a40480f2d9052b981119f0a432c6"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 &gt; </td></tr>
+<tr class="memitem:a57c5a40480f2d9052b981119f0a432c6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a57c5a40480f2d9052b981119f0a432c6">anima::GetVectorRepresentation</a> (const vnl_matrix&lt; T1 &gt; &amp;tensor, itk::VariableLengthVector&lt; T2 &gt; &amp;vector, unsigned int vecDim=0, bool scale=false)</td></tr>
+<tr class="separator:a57c5a40480f2d9052b981119f0a432c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4473f4d26359aa733d23a615e6bf652"><td class="memTemplParams" colspan="2">template&lt;class T1 &gt; </td></tr>
+<tr class="memitem:aa4473f4d26359aa733d23a615e6bf652"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#aa4473f4d26359aa733d23a615e6bf652">anima::ovlScore</a> (vnl_diag_matrix&lt; T1 &gt; &amp;eigsX, vnl_matrix&lt; T1 &gt; &amp;eigVecsX, vnl_diag_matrix&lt; T1 &gt; &amp;eigsY, vnl_matrix&lt; T1 &gt; &amp;eigVecsY)</td></tr>
+<tr class="separator:aa4473f4d26359aa733d23a615e6bf652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9855e18846dcc42ff426c7e75f77555"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 &gt; </td></tr>
 <tr class="memitem:ad9855e18846dcc42ff426c7e75f77555"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#ad9855e18846dcc42ff426c7e75f77555">anima::RecomposeTensor</a> (vnl_diag_matrix&lt; T1 &gt; &amp;eigs, vnl_matrix&lt; T1 &gt; &amp;eigVecs, vnl_matrix&lt; T2 &gt; &amp;resMatrix)</td></tr>
 <tr class="memdesc:ad9855e18846dcc42ff426c7e75f77555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recompose tensor from values extracted using SymmetricEigenAnalysis (vnl_symmetric_eigensystem transposes all this)  <a href="#ad9855e18846dcc42ff426c7e75f77555">More...</a><br/></td></tr>
@@ -153,16 +156,21 @@ Functions</h2></td></tr>
 <tr class="memitem:a5531bbc22467dd42d8faa25d8121dc9e"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 &gt; </td></tr>
 <tr class="memitem:a5531bbc22467dd42d8faa25d8121dc9e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a5531bbc22467dd42d8faa25d8121dc9e">anima::RotateSymmetricMatrix</a> (vnl_matrix&lt; T1 &gt; &amp;tensor, vnl_matrix&lt; T2 &gt; &amp;rotationMatrix, vnl_matrix&lt; T2 &gt; &amp;rotated_tensor)</td></tr>
 <tr class="separator:a5531bbc22467dd42d8faa25d8121dc9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4473f4d26359aa733d23a615e6bf652"><td class="memTemplParams" colspan="2">template&lt;class T1 &gt; </td></tr>
-<tr class="memitem:aa4473f4d26359aa733d23a615e6bf652"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#aa4473f4d26359aa733d23a615e6bf652">anima::ovlScore</a> (vnl_diag_matrix&lt; T1 &gt; &amp;eigsX, vnl_matrix&lt; T1 &gt; &amp;eigVecsX, vnl_diag_matrix&lt; T1 &gt; &amp;eigsY, vnl_matrix&lt; T1 &gt; &amp;eigVecsY)</td></tr>
-<tr class="separator:aa4473f4d26359aa733d23a615e6bf652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:50 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:21 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_dc8e20babfe0aca4fd040d16f22a90d1.html">spherical_harmonics</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_d5904cbc7c80c8c3e5a9d9f8a4b636f4.html">spherical_harmonics</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -101,34 +101,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="AnimaSHToolsExport_8h.html">AnimaSHToolsExport.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;AnimaSHToolsExport.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>anima</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<a class="code" href="AnimaSHToolsExport_8h.html#a5dc82f06a2952b6fc45d2068befe9bd0">ANIMASHTOOLS_EXPORT</a> <span class="keywordtype">void</span> <a class="code" href="namespaceanima.html#a8b0d3d96c2f12f97b868243d695fccda">GetEulerAnglesFromJacobianMatrix</a>(vnl_matrix &lt;double&gt; &amp;J, std::vector &lt;double&gt; &amp;resVal);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<a class="code" href="AnimaSHToolsExport_8h.html#a5dc82f06a2952b6fc45d2068befe9bd0">ANIMASHTOOLS_EXPORT</a> <span class="keywordtype">void</span> <a class="code" href="namespaceanima.html#a7f7c2014cbf40f3edac99d97ead55610">EstimateLocalODFRotationMatrix</a>(vnl_matrix &lt;double&gt; &amp;resVal, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;ANIMASHTOOLS_EXPORT <span class="keywordtype">void</span> <a class="code" href="namespaceanima.html#a8b0d3d96c2f12f97b868243d695fccda">GetEulerAnglesFromJacobianMatrix</a>(vnl_matrix &lt;double&gt; &amp;J, std::vector &lt;double&gt; &amp;resVal);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;ANIMASHTOOLS_EXPORT <span class="keywordtype">void</span> <a class="code" href="namespaceanima.html#a7f7c2014cbf40f3edac99d97ead55610">EstimateLocalODFRotationMatrix</a>(vnl_matrix &lt;double&gt; &amp;resVal, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l,</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                    <span class="keywordtype">double</span> alpha, <span class="keywordtype">double</span> beta, <span class="keywordtype">double</span> gamma);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<a class="code" href="AnimaSHToolsExport_8h.html#a5dc82f06a2952b6fc45d2068befe9bd0">ANIMASHTOOLS_EXPORT</a> std::vector &lt;std::vector &lt;double&gt; &gt; <a class="code" href="namespaceanima.html#ac106a4b87ec3d4e653ee7f8b714091d6">InitializeSampleDirections</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbTheta, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbPhi, <a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a> sampleDirFileName);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;ANIMASHTOOLS_EXPORT std::vector &lt;std::vector &lt;double&gt; &gt; <a class="code" href="namespaceanima.html#ac106a4b87ec3d4e653ee7f8b714091d6">InitializeSampleDirections</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbTheta, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbPhi, std::string sampleDirFileName);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<a class="code" href="AnimaSHToolsExport_8h.html#a5dc82f06a2952b6fc45d2068befe9bd0">ANIMASHTOOLS_EXPORT</a> <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#aed1606b651f468444fa651e028471c0c">GetDValue</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l, <span class="keywordtype">int</span> <a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a>, <span class="keywordtype">int</span> mp, <span class="keywordtype">double</span> angle);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;ANIMASHTOOLS_EXPORT <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#aed1606b651f468444fa651e028471c0c">GetDValue</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> mp, <span class="keywordtype">double</span> angle);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;} <span class="comment">// end of namespace anima</span></div>
-<div class="ttc" id="load__untouch__nii_8m_html_a33c2e9f764beb522ead31ce2394a933a"><div class="ttname"><a href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a></div><div class="ttdeci">Load NIFTI or ANALYZE but not applying any appropriate affine geometric transform or voxel intensity scaling Although according to NIFTI all those header information are supposed to be applied to the loaded NIFTI there are some situations that people do want to leave the original NIFTI header and data untouched They will probably just use MATLAB to do certain image processing regardless of image and to save data back with the same NIfTI header Since this program is only served for those please use it together with save_untouch_nii m</div><div class="ttdef"><b>Definition:</b> <a href="load__untouch__nii_8m_source.html#l00001">load_untouch_nii.m:1</a></div></div>
-<div class="ttc" id="load__lbeig_8m_html_a338951b7e7607b65262fb051e7804d91"><div class="ttname"><a href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">string</a></div><div class="ttdeci">string</div><div class="ttdef"><b>Definition:</b> <a href="load__lbeig_8m_source.html#l00008">load_lbeig.m:8</a></div></div>
-<div class="ttc" id="AnimaSHToolsExport_8h_html"><div class="ttname"><a href="AnimaSHToolsExport_8h.html">AnimaSHToolsExport.h</a></div></div>
 <div class="ttc" id="namespaceanima_html_a7f7c2014cbf40f3edac99d97ead55610"><div class="ttname"><a href="namespaceanima.html#a7f7c2014cbf40f3edac99d97ead55610">anima::EstimateLocalODFRotationMatrix</a></div><div class="ttdeci">void EstimateLocalODFRotationMatrix(vnl_matrix&lt; double &gt; &amp;resVal, unsigned int l, double alpha, double beta, double gamma)</div><div class="ttdef"><b>Definition:</b> <a href="animaODFFunctions_8cxx_source.html#l00165">animaODFFunctions.cxx:165</a></div></div>
-<div class="ttc" id="AnimaSHToolsExport_8h_html_a5dc82f06a2952b6fc45d2068befe9bd0"><div class="ttname"><a href="AnimaSHToolsExport_8h.html#a5dc82f06a2952b6fc45d2068befe9bd0">ANIMASHTOOLS_EXPORT</a></div><div class="ttdeci">#define ANIMASHTOOLS_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="AnimaSHToolsExport_8h_source.html#l00015">AnimaSHToolsExport.h:15</a></div></div>
 <div class="ttc" id="namespaceanima_html_aed1606b651f468444fa651e028471c0c"><div class="ttname"><a href="namespaceanima.html#aed1606b651f468444fa651e028471c0c">anima::GetDValue</a></div><div class="ttdeci">double GetDValue(unsigned int l, int m, int mp, double angle)</div><div class="ttdef"><b>Definition:</b> <a href="animaODFFunctions_8cxx_source.html#l00110">animaODFFunctions.cxx:110</a></div></div>
 <div class="ttc" id="namespaceanima_html_a8b0d3d96c2f12f97b868243d695fccda"><div class="ttname"><a href="namespaceanima.html#a8b0d3d96c2f12f97b868243d695fccda">anima::GetEulerAnglesFromJacobianMatrix</a></div><div class="ttdeci">void GetEulerAnglesFromJacobianMatrix(vnl_matrix&lt; double &gt; &amp;J, std::vector&lt; double &gt; &amp;resVal)</div><div class="ttdef"><b>Definition:</b> <a href="animaODFFunctions_8cxx_source.html#l00068">animaODFFunctions.cxx:68</a></div></div>
 <div class="ttc" id="namespaceanima_html_ac106a4b87ec3d4e653ee7f8b714091d6"><div class="ttname"><a href="namespaceanima.html#ac106a4b87ec3d4e653ee7f8b714091d6">anima::InitializeSampleDirections</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; double &gt; &gt; InitializeSampleDirections(unsigned int nbTheta, unsigned int nbPhi, std::string sampleDirFileName)</div><div class="ttdef"><b>Definition:</b> <a href="animaODFFunctions_8cxx_source.html#l00018">animaODFFunctions.cxx:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:48 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:20 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

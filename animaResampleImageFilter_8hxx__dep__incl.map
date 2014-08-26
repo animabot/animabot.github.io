@@ -1,8 +1,9 @@
 <map id="animaResampleImageFilter.hxx" name="animaResampleImageFilter.hxx">
-<area shape="rect" id="node2" href="$animaResampleImageFilter_8h.html" title="animaResampleImageFilter.h" alt="" coords="688,80,877,107"/>
-<area shape="rect" id="node3" href="$animaBlockMatchingBaseRegistrationMethod_8hxx.html" title="animaBlockMatchingBaseRegistration\lMethod.hxx" alt="" coords="505,155,745,197"/>
+<area shape="rect" id="node2" href="$animaResampleImageFilter_8h.html" title="animaResampleImageFilter.h" alt="" coords="757,80,946,107"/>
+<area shape="rect" id="node3" href="$animaBlockMatchingBaseRegistrationMethod_8hxx.html" title="animaBlockMatchingBaseRegistration\lMethod.hxx" alt="" coords="420,155,660,197"/>
 <area shape="rect" id="node14" href="$animaPyramidImageFilter_8hxx.html" title="animaPyramidImageFilter.hxx" alt="" coords="772,344,962,371"/>
-<area shape="rect" id="node19" href="$animaApplyTransformSerie_8cxx.html" title="animaApplyTransformSerie.cxx" alt="" coords="819,163,1017,189"/>
+<area shape="rect" id="node19" href="$animaApplyTransformSerie_8cxx.html" title="animaApplyTransformSerie.cxx" alt="" coords="820,163,1018,189"/>
+<area shape="rect" id="node20" href="$animaPyramidalSymmetryBridge_8txx.html" title="animaPyramidalSymmetryBridge.txx" alt="" coords="1043,163,1270,189"/>
 <area shape="rect" id="node4" href="$animaBlockMatchingBaseRegistrationMethod_8h.html" title="animaBlockMatchingBaseRegistration\lMethod.h" alt="" coords="334,246,574,287"/>
 <area shape="rect" id="node5" href="$animaAsymmetricBlockMatchingRegistrationMethod_8h.html" title="animaAsymmetricBlockMatching\lRegistrationMethod.h" alt="" coords="36,337,245,378"/>
 <area shape="rect" id="node7" href="$animaPyramidalDenseSVFMatchingBridge_8h.html" title="animaPyramidalDenseSVFMatching\lBridge.h" alt="" coords="242,518,469,559"/>
@@ -17,4 +18,6 @@
 <area shape="rect" id="node16" href="$animaPyramidalDenseTensorSVFMatchingBridge_8h.html" title="animaPyramidalDenseTensor\lSVFMatchingBridge.h" alt="" coords="773,518,962,559"/>
 <area shape="rect" id="node18" href="$animaPyramidImage_8cxx.html" title="animaPyramidImage.cxx" alt="" coords="986,525,1149,552"/>
 <area shape="rect" id="node17" href="$animaDenseTensorSVFBMRegistration_8cxx.html" title="animaDenseTensorSVFBMRegistration.cxx" alt="" coords="753,608,1020,635"/>
+<area shape="rect" id="node21" href="$animaPyramidalSymmetryBridge_8h.html" title="animaPyramidalSymmetryBridge.h" alt="" coords="1048,253,1266,280"/>
+<area shape="rect" id="node22" href="$animaSymmetryPlane_8cxx.html" title="animaSymmetryPlane.cxx" alt="" coords="1072,344,1242,371"/>
 </map>

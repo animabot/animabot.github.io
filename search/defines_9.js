@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['mandatory',['MANDATORY',['../Arguments_8h.html#af01a350216f7b1b0df190bdb8c676edc',1,'Arguments.h']]],
-  ['mandatory_5fi',['MANDATORY_I',['../Arguments_8h.html#a065fd632c24f1afbf3d2f351fdc0096a',1,'Arguments.h']]],
-  ['mandatory_5fo',['MANDATORY_O',['../Arguments_8h.html#a8fde7f2aee1292e7e0e53a4d58ff0962',1,'Arguments.h']]],
-  ['max',['MAX',['../animaBackgroundNoiseVarianceEstimationImageFilter_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'MAX():&#160;animaBackgroundNoiseVarianceEstimationImageFilter.h'],['../animaTensorGeneralizedCorrelationImageToImageMetric_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'MAX():&#160;animaTensorGeneralizedCorrelationImageToImageMetric.h'],['../animaMEstimateSVFImageFilter_8hxx.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'MAX():&#160;animaMEstimateSVFImageFilter.hxx']]],
-  ['max_5fbackground_5fvalue',['MAX_BACKGROUND_VALUE',['../animaNyulStandardization_8cpp.html#a122def239646ad53dbf08f17a12a2fd1',1,'animaNyulStandardization.cpp']]],
-  ['max_5fvalue',['MAX_VALUE',['../animaNyulStandardization_8cpp.html#a4ce3e2af80a76d816ab7f8567ec4a65a',1,'animaNyulStandardization.cpp']]],
-  ['min',['MIN',['../animaBackgroundNoiseVarianceEstimationImageFilter_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'MIN():&#160;animaBackgroundNoiseVarianceEstimationImageFilter.h'],['../animaTensorGeneralizedCorrelationImageToImageMetric_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'MIN():&#160;animaTensorGeneralizedCorrelationImageToImageMetric.h'],['../animaMEstimateSVFImageFilter_8hxx.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'MIN():&#160;animaMEstimateSVFImageFilter.hxx']]],
-  ['min_5fnoise_5fvalue',['MIN_NOISE_VALUE',['../animaNyulStandardization_8cpp.html#a50cadc0e1ecb38104494c4af658049dd',1,'animaNyulStandardization.cpp']]]
+  ['op',['OP',['../Arguments_8h.html#acc1c7ab9edfe0576554dd8bba8c2638e',1,'Arguments.h']]],
+  ['optional',['OPTIONAL',['../Arguments_8h.html#a1dd554eba728485dad1d5b0d32edeee3',1,'Arguments.h']]],
+  ['optional_5fi',['OPTIONAL_I',['../Arguments_8h.html#acabea00fe7177179c8b70dfae5c662e5',1,'Arguments.h']]],
+  ['optional_5fo',['OPTIONAL_O',['../Arguments_8h.html#a31a78ab3a5eb518a9cb0f99ba4041948',1,'Arguments.h']]]
 ];

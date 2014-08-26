@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_e0676dafc74e2c2a50cc0954728bf1d1.html">segmentation</a></li><li class="navelem"><a class="el" href="dir_3881d67f5b4e0e99a36173ae7be37e0d.html">commands</a></li><li class="navelem"><a class="el" href="dir_6f4ce99b5789c01b8382f888dfc4cbc0.html">dice_measure</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_0d9c7126e550519933d4cb232d63098f.html">segmentation</a></li><li class="navelem"><a class="el" href="dir_7619114af295fe88b278a3731dc798fa.html">commands</a></li><li class="navelem"><a class="el" href="dir_7dc02f2aa1f2534e085db3924977a72a.html">dice_measure</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -114,7 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        cmd.parse(argc,argv);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; <a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; e)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; e.error() &lt;&lt; <span class="stringliteral">&quot;for argument &quot;</span> &lt;&lt; e.argId() &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span>(1);</div>
@@ -137,9 +137,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> (refIt.Get() != 0)</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordtype">bool</span> isAlreadyIn = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; usefulLabels.size();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; usefulLabels.size();++i)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">if</span> (refIt.Get() == usefulLabels[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>])</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">if</span> (refIt.Get() == usefulLabels[i])</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    isAlreadyIn = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    <span class="keywordflow">break</span>;</div>
@@ -158,8 +158,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    std::map &lt;unsigned int, unsigned int&gt; labelBackMap;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    labelBackMap[0] = 0;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; usefulLabels.size();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        labelBackMap[usefulLabels[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]] = <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>+1;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; usefulLabels.size();++i)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        labelBackMap[usefulLabels[i]] = i+1;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    refIt.GoToBegin();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
@@ -191,8 +191,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">double</span> score = 0;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 1;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt;= numLabels;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            score += cardInter[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] / cardRef[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1;i &lt;= numLabels;++i)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            score += cardInter[i] / cardRef[i];</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        score /= numLabels;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        </div>
@@ -203,12 +203,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 1;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt;= numLabels;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1;i &lt;= numLabels;++i)</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">if</span> (cardRef[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] == 0)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">if</span> (cardRef[i] == 0)</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordtype">double</span> score = 2*cardInter[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]/(cardRef[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] + cardTest[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordtype">double</span> score = 2*cardInter[i]/(cardRef[i] + cardTest[i]);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">if</span> (jacArg.isSet())</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                score = score/(2.0 - score);</div>
@@ -216,21 +216,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">if</span> (xlsArg.isSet())</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                std::cout &lt;&lt; score &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; std::flush;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;Label &quot;</span> &lt;&lt; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; score &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;Label &quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; score &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    </div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
-<div class="ttc" id="xform__nii_8m_html_a5389c938d8f439f89bc6549e6a18285d"><div class="ttname"><a href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a></div><div class="ttdeci">hdr.dime.xyzt_units, 7 e()</div></div>
 <div class="ttc" id="animaDiceMeasure_8cxx_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="animaDiceMeasure_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="animaDiceMeasure_8cxx_source.html#l00005">animaDiceMeasure.cxx:5</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:48 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

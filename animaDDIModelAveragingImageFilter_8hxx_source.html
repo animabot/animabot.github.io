@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_a378dc9af426dd8223a65e1788193c6b.html">diffusion</a></li><li class="navelem"><a class="el" href="dir_3eadf029d2506710e537ad2bc5f25192.html">ddi_estimator</a></li><li class="navelem"><a class="el" href="dir_fe17049fc2ab3042b1b11f02cf1eaba0.html">ddi_model_averaging</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_07ebd98e1841996e654b05628ce7f9e4.html">diffusion</a></li><li class="navelem"><a class="el" href="dir_614c8424d3af14552616de9bfd58e7a4.html">ddi_estimator</a></li><li class="navelem"><a class="el" href="dir_92af59c063e7290fe7988d0295f052f0.html">ddi_model_averaging</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -108,12 +108,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>anima</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> PixelScalarType&gt; <span class="keyword">const</span> <span class="keywordtype">double</span> DDIModelAveragingImageFilter&lt;PixelScalarType&gt;::m_ZeroThreshold = 1<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-6;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> PixelScalarType&gt; <span class="keyword">const</span> <span class="keywordtype">double</span> DDIModelAveragingImageFilter&lt;PixelScalarType&gt;::m_ZeroThreshold = 1e-6;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> PixelScalarType&gt;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<a class="code" href="classanima_1_1DDIModelAveragingImageFilter.html#aa21a670cb2102b73861dc802c50a9145">DDIModelAveragingImageFilter&lt;PixelScalarType&gt;</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classanima_1_1DDIModelAveragingImageFilter.html#aa21a670cb2102b73861dc802c50a9145">   19</a></span>&#160;<a class="code" href="classanima_1_1DDIModelAveragingImageFilter.html#aa21a670cb2102b73861dc802c50a9145">::SetAICcVolume</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>, <a class="code" href="classanima_1_1DDIModelAveragingImageFilter.html#a3d2ecd7681b476d24b4f7541fe311de2">AICcImageType</a> *vol)</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classanima_1_1DDIModelAveragingImageFilter.html#aa21a670cb2102b73861dc802c50a9145">   19</a></span>&#160;<a class="code" href="classanima_1_1DDIModelAveragingImageFilter.html#aa21a670cb2102b73861dc802c50a9145">::SetAICcVolume</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i, <a class="code" href="classanima_1_1DDIModelAveragingImageFilter.html#a3d2ecd7681b476d24b4f7541fe311de2">AICcImageType</a> *vol)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (i == m_AICcVolumes.size())</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        m_AICcVolumes.push_back(vol);</div>
@@ -122,7 +122,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        itkExceptionMacro(<span class="stringliteral">&quot;Trying to add a non contiguous AICc volume... Add AICc volumes contiguously (0,1,2,3,...)...&quot;</span>);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        m_AICcVolumes[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = vol;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        m_AICcVolumes[i] = vol;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> PixelScalarType&gt;</div>
@@ -148,19 +148,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    origin4d[3] = 0;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    direction4d(3,3) = 1;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; 3;++i)</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        region4d.SetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,region3d.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        region4d.SetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,region3d.GetSize()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        region4d.SetIndex(i,region3d.GetIndex()[i]);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        region4d.SetSize(i,region3d.GetSize()[i]);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        size4d[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = region3d.GetSize()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        spacing4d[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = outPtr-&gt;GetSpacing()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        origin4d[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = outPtr-&gt;GetOrigin()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            direction4d(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) = (outPtr-&gt;GetDirection())(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        size4d[i] = region3d.GetSize()[i];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        spacing4d[i] = outPtr-&gt;GetSpacing()[i];</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        origin4d[i] = outPtr-&gt;GetOrigin()[i];</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; 3;++j)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            direction4d(i,j) = (outPtr-&gt;GetDirection())(i,j);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        direction4d(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,3) = 0;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        direction4d(3,<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>) = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        direction4d(i,3) = 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        direction4d(3,i) = 0;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    m_Output4D = Image4DType::New();</div>
@@ -174,9 +174,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionConstIterator &lt;OutputImageType&gt; OutImageIteratorType;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionIterator &lt;Image4DType&gt; Image4DIteratorType;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; ndim;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; ndim;++i)</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        region4d.SetIndex(3,<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        region4d.SetIndex(3,i);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        region4d.SetSize(3,1);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        OutImageIteratorType outItr(outPtr,region3d);</div>
@@ -184,7 +184,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">while</span> (!fillItr.IsAtEnd())</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            fillItr.Set(outItr.Get()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            fillItr.Set(outItr.Get()[i]);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            ++fillItr;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            ++outItr;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
@@ -204,9 +204,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    this-&gt;Superclass::GenerateOutputInformation();</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> maxModelSize = 0;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; this-&gt;GetNumberOfIndexedInputs();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; this-&gt;GetNumberOfIndexedInputs();++i)</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> modelSize = this-&gt;GetInput(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)-&gt;GetNumberOfComponentsPerPixel();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> modelSize = this-&gt;GetInput(i)-&gt;GetNumberOfComponentsPerPixel();</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">if</span> (modelSize &gt; maxModelSize)</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            maxModelSize = modelSize;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
@@ -226,7 +226,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">if</span> (m_AICcVolumes.size() != this-&gt;GetNumberOfIndexedInputs())</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a> <a class="code" href="load__nii__ext_8m.html#aef5461a34124216ffeadd235c3f81324">error</a>(<span class="stringliteral">&quot;There should be the same number of input images and input AICc volumes... &quot;</span>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        std::string error(<span class="stringliteral">&quot;There should be the same number of input images and input AICc volumes... &quot;</span>);</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        error += m_AICcVolumes.size();</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        error += <span class="stringliteral">&quot; &quot;</span>;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        error += this-&gt;GetNumberOfIndexedInputs();</div>
@@ -234,9 +234,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> maxModelSize = 0;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; this-&gt;GetNumberOfIndexedInputs();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; this-&gt;GetNumberOfIndexedInputs();++i)</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    {</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> modelSize = this-&gt;GetInput(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)-&gt;GetNumberOfComponentsPerPixel();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> modelSize = this-&gt;GetInput(i)-&gt;GetNumberOfComponentsPerPixel();</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">if</span> (modelSize &gt; maxModelSize)</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            maxModelSize = modelSize;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
@@ -278,20 +278,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="comment">// Define DCM matrices</span></div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    std::vector &lt;MatrixType&gt; dcmEstimates(nbCompartments, nullMatrix);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; nbCompartments;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; nbCompartments;++i)</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; TensorPixelType::Dimension;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; TensorPixelType::Dimension;++j)</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a> = <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>;<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a> &lt; TensorPixelType::Dimension;++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = j;k &lt; TensorPixelType::Dimension;++k)</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            {</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = 0;l &lt; nbModels;++l)</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                    <span class="keywordtype">double</span> <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a> = weights[l] * models[l][<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> * m_CompartmentSize + <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] * models[l][<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> * m_CompartmentSize + <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>];</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                    <span class="keywordtype">double</span> t = weights[l] * models[l][i * m_CompartmentSize + j] * models[l][i * m_CompartmentSize + k];</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                    dcmEstimates[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>](<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>,<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) += t;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                    dcmEstimates[i](j,k) += t;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                    <span class="keywordflow">if</span> (j != <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>)</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                        dcmEstimates[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>](<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) += t;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                    <span class="keywordflow">if</span> (j != k)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                        dcmEstimates[i](k,j) += t;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                }</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            }</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
@@ -301,12 +301,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    eigenAnalysis eigSystem(TensorPixelType::Dimension);</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    eigSystem.SetOrderEigenValues(<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; nbCompartments;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; nbCompartments;++i)</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        eigSystem.ComputeEigenValuesAndVectors(dcmEstimates[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>], eigVals, eigVecs);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        eigSystem.ComputeEigenValuesAndVectors(dcmEstimates[i], eigVals, eigVecs);</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; TensorPixelType::Dimension;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            resVec[i * m_CompartmentSize + <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] = eigVecs.get_row(2)(<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; TensorPixelType::Dimension;++j)</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            resVec[i * m_CompartmentSize + j] = eigVecs.get_row(2)(j);</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = 0;l &lt; nbModels;++l)</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        {</div>
@@ -323,7 +323,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = 0;l &lt; nbModels;++l)</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1;i &lt;= 4;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1;i &lt;= 4;++i)</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            resVec[modelSize-i] += weights[l] * models[l][modelSize-i];</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">return</span> resVec;</div>
@@ -339,7 +339,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numInputs = this-&gt;GetNumberOfIndexedInputs();</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    std::vector &lt;ImageIteratorType&gt; inIterators(numInputs);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numInputs;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numInputs;++i)</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        inIterators[i] = ImageIteratorType(this-&gt;GetInput(i),outputRegionForThread);</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionIterator &lt;OutputImageType&gt; OutImageIteratorType;</div>
@@ -350,7 +350,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionConstIterator &lt;AICcImageType&gt; AICcImageIteratorType;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    std::vector &lt;AICcImageIteratorType&gt; aiccIterators(numInputs);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numInputs;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numInputs;++i)</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        aiccIterators[i] = AICcImageIteratorType(m_AICcVolumes[i],outputRegionForThread);</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">// Initialize output vector</span></div>
@@ -387,9 +387,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        resVec.Fill(0.0);</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordtype">bool</span> uselessVoxel = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a> = 0;<a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a> &lt; numInputs;++<a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a>)</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = 0;m &lt; numInputs;++m)</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            <span class="keywordflow">if</span> (aiccIterators[<a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a>].Get() != 0)</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            <span class="keywordflow">if</span> (aiccIterators[m].Get() != 0)</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            {</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                uselessVoxel = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                <span class="keywordflow">break</span>;</div>
@@ -404,10 +404,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            moseIterator.Set(0);</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            ++moseIterator;</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a> = 0;<a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a> &lt; numInputs;++<a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a>)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = 0;m &lt; numInputs;++m)</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            {</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                ++inIterators[<a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a>];</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                ++aiccIterators[<a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a>];</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                ++inIterators[m];</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                ++aiccIterators[m];</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            }</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            progress.CompletedPixel();</div>
@@ -416,13 +416,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> modelId, modelSize;</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt;= m_NumberOfCompartments;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt;= m_NumberOfCompartments;++i)</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            rawModels[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>].clear();</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            rawAIC[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>].clear();</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            rawModels[i].clear();</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            rawAIC[i].clear();</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        }</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; this-&gt;GetNumberOfIndexedInputs();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; this-&gt;GetNumberOfIndexedInputs();++i)</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        {</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            modelSize = this-&gt;GetInput(i)-&gt;GetNumberOfComponentsPerPixel();</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            modelId = (modelSize - 4) /m_CompartmentSize;</div>
@@ -430,10 +430,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            rawAIC[modelId].push_back(aiccIterators[i].Get());</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        }</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt;= m_NumberOfCompartments;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt;= m_NumberOfCompartments;++i)</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        {</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            modelsData[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = this-&gt;AverageSameLengthModels(rawModels[i], rawAIC[i]);</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            aicData[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = *std::min_element(rawAIC[i].begin(), rawAIC[i].<a class="code" href="load__nii__img_8m.html#a0e58fe5bf1f468ebd8ae6b3620a52472">end</a>());</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            modelsData[i] = this-&gt;AverageSameLengthModels(rawModels[i], rawAIC[i]);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            aicData[i] = *std::min_element(rawAIC[i].begin(), rawAIC[i].end());</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        }</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        modelWeights = this-&gt;GetAkaikeWeights(aicData);</div>
@@ -443,13 +443,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <span class="keywordtype">double</span> b0Value = modelWeights[0] * modelsData[0][2];</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordtype">double</span> sigmaSq = modelWeights[0] * modelsData[0][3];</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_NumberOfCombinations;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_NumberOfCombinations;++i)</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        {</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            dcmEstimates[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = nullMatrix;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            kEstimates[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = 0;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            dEstimates[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = 0;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            aEstimates[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = 0;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            wEstimates[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = 0;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            dcmEstimates[i] = nullMatrix;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            kEstimates[i] = 0;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            dEstimates[i] = 0;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            aEstimates[i] = 0;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            wEstimates[i] = 0;</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        }</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keywordtype">double</span> normDenom = 1.0 - modelWeights[0];</div>
@@ -461,30 +461,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numComb = boost::math::factorial&lt;double&gt;(l);</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a> = 0;<a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a> &lt; numComb/l;++<a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a>)</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = 0;m &lt; numComb/l;++m)</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                {</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; l;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; l;++j)</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                    {</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> p = 0;p &lt; m_NumberOfCombinations/numComb;++p)</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                        {</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = 0;n &lt; TensorPixelType::Dimension;++n)</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                            {</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a> = n;<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a> &lt; TensorPixelType::Dimension;++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>)</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = n;k &lt; TensorPixelType::Dimension;++k)</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                                {</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                                    <span class="keywordtype">double</span> <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a> = modelWeights[l] * modelsData[l][m_CompartmentSize*<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> + n] * modelsData[l][m_CompartmentSize*<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> + <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] / normDenom;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                                    <span class="keywordtype">double</span> t = modelWeights[l] * modelsData[l][m_CompartmentSize*j + n] * modelsData[l][m_CompartmentSize*j + k] / normDenom;</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                                    dcmEstimates[pos](n,<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) += t;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                                    dcmEstimates[pos](n,k) += t;</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                                    <span class="keywordflow">if</span> (n != <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>)</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                                        dcmEstimates[pos](<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>,n) += t;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                                    <span class="keywordflow">if</span> (n != k)</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                                        dcmEstimates[pos](k,n) += t;</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                                }</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                            }</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                            kEstimates[pos] += modelWeights[l] * modelsData[l][m_CompartmentSize*<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">anima::KappaIndex</a>] / normDenom;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                            dEstimates[pos] += modelWeights[l] * modelsData[l][m_CompartmentSize*<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">anima::DIndex</a>] / normDenom;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                            aEstimates[pos] += modelWeights[l] * modelsData[l][m_CompartmentSize*<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">anima::AIndex</a>] / normDenom;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                            kEstimates[pos] += modelWeights[l] * modelsData[l][m_CompartmentSize*j + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">anima::KappaIndex</a>] / normDenom;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                            dEstimates[pos] += modelWeights[l] * modelsData[l][m_CompartmentSize*j + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">anima::DIndex</a>] / normDenom;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                            aEstimates[pos] += modelWeights[l] * modelsData[l][m_CompartmentSize*j + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">anima::AIndex</a>] / normDenom;</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                            <span class="comment">// Q: should we divide here also by normDenom? i kind of think so</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                            wEstimates[pos] += modelWeights[l] * modelsData[l][m_CompartmentSize*<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">anima::WIndex</a>] * l / m_NumberOfCombinations / normDenom;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                            wEstimates[pos] += modelWeights[l] * modelsData[l][m_CompartmentSize*j + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">anima::WIndex</a>] * l / m_NumberOfCombinations / normDenom;</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                            ++pos;</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                        }</div>
@@ -504,7 +504,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        dVec.clear();</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        aVec.clear();</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        wVec.clear();</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_NumberOfCombinations;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_NumberOfCombinations;++i)</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        {</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;            <a class="code" href="classanima_1_1DDIModelAveragingImageFilter.html#ae0c59a14c50840e0023cc86570c12454">eigenAnalysis</a> eigSystem(TensorPixelType::Dimension);</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            eigSystem.SetOrderEigenValues(<span class="keyword">true</span>);</div>
@@ -529,13 +529,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;            <span class="comment">// Computing similarity matrix</span></div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;            connectivityMatrix.set_size(realNumberOfCombinations,realNumberOfCombinations);</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;            connectivityMatrix.fill(0.0);</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; realNumberOfCombinations;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; realNumberOfCombinations;++i)</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            {</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = i+1;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; realNumberOfCombinations;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i+1;j &lt; realNumberOfCombinations;++j)</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                {</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                    <span class="keywordtype">double</span> <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                    <span class="keywordtype">double</span> t;</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;                    <span class="keywordflow">if</span> (m_Similarity == <span class="stringliteral">&quot;orientation&quot;</span>)</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;                        t = std::abs(<a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">anima::ComputeScalarProduct</a>(muEstimates[i], muEstimates[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>]));</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;                        t = std::abs(<a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">anima::ComputeScalarProduct</a>(muEstimates[i], muEstimates[j]));</div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;                    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                    {</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;                        t1 = getTensor(muEstimates[i], kVec[i], dVec[i], aVec[i]);</div>
@@ -565,7 +565,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfClusters = modFilter.GetNumberOfClusters();</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numberOfClusters;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numberOfClusters;++i)</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;            {</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                clusterMembers = modFilter.GetReverseClassMembership(i);</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> clusterSize = clusterMembers.size();</div>
@@ -576,9 +576,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                dcmMatrix.fill(0.0);</div>
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                <span class="keywordtype">double</span> kappa = 0, diffusivity = 0, eaf = 0, w = 0;</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; clusterSize;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; clusterSize;++j)</div>
 <div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                {</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> compartmentIndex = clusterMembers[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> compartmentIndex = clusterMembers[j];</div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                    <span class="keywordtype">double</span> kTmp = kVec[compartmentIndex];</div>
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                    <span class="keywordtype">double</span> dTmp = dVec[compartmentIndex];</div>
@@ -586,16 +586,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;                    <span class="keywordtype">double</span> wTmp = wVec[compartmentIndex];</div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;</div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;                    <span class="comment">// orientation averaging</span></div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a> = 0;<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a> &lt; TensorPixelType::Dimension;++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>)</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0;k &lt; TensorPixelType::Dimension;++k)</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;                    {</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>;l &lt; TensorPixelType::Dimension;++l)</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = k;l &lt; TensorPixelType::Dimension;++l)</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;                        {</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;                            <span class="keywordtype">double</span> <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a> = wTmp * muEstimates[compartmentIndex][<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] * muEstimates[compartmentIndex][l];</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;                            <span class="keywordtype">double</span> t = wTmp * muEstimates[compartmentIndex][k] * muEstimates[compartmentIndex][l];</div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;                            dcmMatrix(<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>,l) += <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>;</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;                            dcmMatrix(k,l) += t;</div>
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;                            <span class="keywordflow">if</span> (<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a> != l)</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;                                dcmMatrix(l,<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) += <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;                            <span class="keywordflow">if</span> (k != l)</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;                                dcmMatrix(l,k) += t;</div>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;                        }</div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;                    }</div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;</div>
@@ -623,8 +623,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                eigSystem.SetOrderEigenValues(<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                eigSystem.ComputeEigenValuesAndVectors(dcmMatrix, eigVals, eigVecs);</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; TensorPixelType::Dimension;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                    resVec[i*m_CompartmentSize + <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] = eigVecs.get_row(2)(<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>);</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; TensorPixelType::Dimension;++j)</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                    resVec[i*m_CompartmentSize + j] = eigVecs.get_row(2)(j);</div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                resVec[i*m_CompartmentSize + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">anima::KappaIndex</a>] = kappa / w;</div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                resVec[i*m_CompartmentSize + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">anima::DIndex</a>] = diffusivity / w;</div>
@@ -649,10 +649,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;</div>
 <div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        moseIterator.Set(realNumberOfCompartments);</div>
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numInputs;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numInputs;++i)</div>
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;        {</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;            ++inIterators[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;            ++aiccIterators[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;            ++inIterators[i];</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;            ++aiccIterators[i];</div>
 <div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;        }</div>
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;</div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        ++outIterator;</div>
@@ -671,17 +671,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;</div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    TensorPixelType tensor;</div>
 <div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TensorPixelType::Dimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TensorPixelType::Dimension;++i)</div>
 <div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    {</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = i;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; TensorPixelType::Dimension;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i;j &lt; TensorPixelType::Dimension;++j)</div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;        {</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;            <span class="keywordtype">double</span> <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a> = (axialdiff - radialdiff) * mu[i] * mu[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;            <span class="keywordtype">double</span> t = (axialdiff - radialdiff) * mu[i] * mu[j];</div>
 <div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;            tensor(i,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) = <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>;</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;            tensor(<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>,i) = <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>;</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;            tensor(i,j) = t;</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;            tensor(j,i) = t;</div>
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;            <span class="keywordflow">if</span> (i == <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                tensor(i,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) += radialdiff;</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;            <span class="keywordflow">if</span> (i == j)</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                tensor(i,j) += radialdiff;</div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;        }</div>
 <div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    }</div>
 <div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;</div>
@@ -691,14 +691,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> PixelScalarType&gt;</div>
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;<span class="keywordtype">double</span></div>
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;DDIModelAveragingImageFilter&lt;PixelScalarType&gt;</div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;::getTensorDeterminant(<span class="keyword">const</span> TensorPixelType &amp;<a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>)</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;::getTensorDeterminant(<span class="keyword">const</span> TensorPixelType &amp;t)</div>
 <div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;{</div>
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    TensorPixelType::EigenValuesArrayType eigVals;</div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;</div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    t.ComputeEigenValues(eigVals);</div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;</div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    <span class="keywordtype">double</span> resVal = 1;</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TensorPixelType::Dimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TensorPixelType::Dimension;++i)</div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;        resVal *= eigVals[i];</div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;</div>
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    <span class="keywordflow">return</span> resVal;</div>
@@ -710,14 +710,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;::getScalarProduct(<span class="keyword">const</span> TensorPixelType &amp;t1, <span class="keyword">const</span> TensorPixelType &amp;t2)</div>
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;{</div>
 <div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    <span class="keywordtype">double</span> resVal = 0;</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TensorPixelType::Dimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TensorPixelType::Dimension;++i)</div>
 <div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    {</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = i;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; TensorPixelType::Dimension;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i;j &lt; TensorPixelType::Dimension;++j)</div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;        {</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;            <span class="keywordtype">double</span> t = t1(i,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) * t2(i,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>);</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;            resVal += <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>;</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;            <span class="keywordflow">if</span> (i != <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                resVal += <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>;</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;            <span class="keywordtype">double</span> t = t1(i,j) * t2(i,j);</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;            resVal += t;</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;            <span class="keywordflow">if</span> (i != j)</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                resVal += t;</div>
 <div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;        }</div>
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    }</div>
 <div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;</div>
@@ -736,15 +736,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    t2.ComputeEigenAnalysis(eigVals2, eigVecs2);</div>
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;</div>
 <div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    <span class="keywordtype">double</span> resVal = 0;</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TensorPixelType::Dimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TensorPixelType::Dimension;++i)</div>
 <div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    {</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = i;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; TensorPixelType::Dimension;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i;j &lt; TensorPixelType::Dimension;++j)</div>
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        {</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;            <span class="keywordtype">double</span> sp = <a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">anima::ComputeScalarProduct</a>(eigVecs1.GetVnlMatrix().get_row(i), eigVecs2.GetVnlMatrix().get_row(<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>));</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;            <span class="keywordtype">double</span> t = eigVals1[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] * eigVals2[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] * sp * sp;</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;            resVal += <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>;</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;            <span class="keywordflow">if</span> (i != <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                resVal += <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a>;</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;            <span class="keywordtype">double</span> sp = <a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">anima::ComputeScalarProduct</a>(eigVecs1.GetVnlMatrix().get_row(i), eigVecs2.GetVnlMatrix().get_row(j));</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;            <span class="keywordtype">double</span> t = eigVals1[i] * eigVals2[j] * sp * sp;</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;            resVal += t;</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;            <span class="keywordflow">if</span> (i != j)</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                resVal += t;</div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;        }</div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    }</div>
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;</div>
@@ -761,23 +761,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    WeightDataType modelWeights(nbInputs, 0);</div>
 <div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;</div>
 <div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <span class="keywordtype">double</span> minAIC = 1e100;</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; nbInputs;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; nbInputs;++i)</div>
 <div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;    {</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        <span class="keywordtype">double</span> tmpAIC = aicData[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        <span class="keywordtype">double</span> tmpAIC = aicData[i];</div>
 <div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;</div>
 <div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;        <span class="keywordflow">if</span> (tmpAIC &lt; minAIC)</div>
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;            minAIC = tmpAIC;</div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    }</div>
 <div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;</div>
 <div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    <span class="keywordtype">double</span> sumModelWeights = 0;</div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; nbInputs;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; nbInputs;++i)</div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    {</div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <span class="keywordtype">double</span> tmpVal = exp((minAIC - aicData[i]) / 2.0);</div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;        modelWeights[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = tmpVal;</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;        modelWeights[i] = tmpVal;</div>
 <div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;        sumModelWeights += tmpVal;</div>
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    }</div>
 <div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; nbInputs;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; nbInputs;++i)</div>
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;        modelWeights[i] /= sumModelWeights;</div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;</div>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    <span class="keywordflow">return</span> modelWeights;</div>
@@ -786,14 +786,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;} <span class="comment">// end namespace anima</span></div>
 <div class="ttc" id="classanima_1_1DDIModelAveragingImageFilter_html"><div class="ttname"><a href="classanima_1_1DDIModelAveragingImageFilter.html">anima::DDIModelAveragingImageFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIModelAveragingImageFilter_8h_source.html#l00017">animaDDIModelAveragingImageFilter.h:17</a></div></div>
 <div class="ttc" id="classanima_1_1ModularityClusteringFilter_html"><div class="ttname"><a href="classanima_1_1ModularityClusteringFilter.html">anima::ModularityClusteringFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="animaModularityClusteringFilter_8h_source.html#l00010">animaModularityClusteringFilter.h:10</a></div></div>
-<div class="ttc" id="load__untouch__nii_8m_html_a33c2e9f764beb522ead31ce2394a933a"><div class="ttname"><a href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a></div><div class="ttdeci">Load NIFTI or ANALYZE but not applying any appropriate affine geometric transform or voxel intensity scaling Although according to NIFTI all those header information are supposed to be applied to the loaded NIFTI there are some situations that people do want to leave the original NIFTI header and data untouched They will probably just use MATLAB to do certain image processing regardless of image and to save data back with the same NIfTI header Since this program is only served for those please use it together with save_untouch_nii m</div><div class="ttdef"><b>Definition:</b> <a href="load__untouch__nii_8m_source.html#l00001">load_untouch_nii.m:1</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">anima::WIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00052">animaDDIDistribution.h:52</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_abf2bc2545a4a5f5683d9ef3ed0d977e0"><div class="ttname"><a href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a></div><div class="ttdeci">j</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00231">reslice_nii.m:231</a></div></div>
 <div class="ttc" id="animaModularityClusteringFilter_8h_html"><div class="ttname"><a href="animaModularityClusteringFilter_8h.html">animaModularityClusteringFilter.h</a></div></div>
-<div class="ttc" id="load__lbeig_8m_html_a338951b7e7607b65262fb051e7804d91"><div class="ttname"><a href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">string</a></div><div class="ttdeci">string</div><div class="ttdef"><b>Definition:</b> <a href="load__lbeig_8m_source.html#l00008">load_lbeig.m:8</a></div></div>
 <div class="ttc" id="classanima_1_1DDIModelAveragingImageFilter_html_a50a7f36a702ca74f7799b2a1199e685a"><div class="ttname"><a href="classanima_1_1DDIModelAveragingImageFilter.html#a50a7f36a702ca74f7799b2a1199e685a">anima::DDIModelAveragingImageFilter::BeforeThreadedGenerateData</a></div><div class="ttdeci">void BeforeThreadedGenerateData(void)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIModelAveragingImageFilter_8hxx_source.html#l00128">animaDDIModelAveragingImageFilter.hxx:128</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">anima::AIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00051">animaDDIDistribution.h:51</a></div></div>
-<div class="ttc" id="xform__nii_8m_html_a5389c938d8f439f89bc6549e6a18285d"><div class="ttname"><a href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a></div><div class="ttdeci">hdr.dime.xyzt_units, 7 e()</div></div>
 <div class="ttc" id="classanima_1_1DDIModelAveragingImageFilter_html_a41b9e1c042a0939a18d40caeeb4f7c48"><div class="ttname"><a href="classanima_1_1DDIModelAveragingImageFilter.html#a41b9e1c042a0939a18d40caeeb4f7c48">anima::DDIModelAveragingImageFilter::TensorPixelType</a></div><div class="ttdeci">itk::DiffusionTensor3D&lt; MathType &gt; TensorPixelType</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIModelAveragingImageFilter_8h_source.html#l00050">animaDDIModelAveragingImageFilter.h:50</a></div></div>
 <div class="ttc" id="classanima_1_1DDIModelAveragingImageFilter_html_a4075ac306b95e353dbefd2927230b01a"><div class="ttname"><a href="classanima_1_1DDIModelAveragingImageFilter.html#a4075ac306b95e353dbefd2927230b01a">anima::DDIModelAveragingImageFilter::MatrixType</a></div><div class="ttdeci">vnl_matrix_fixed&lt; MathType, TensorPixelType::Dimension, TensorPixelType::Dimension &gt; MatrixType</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIModelAveragingImageFilter_8h_source.html#l00051">animaDDIModelAveragingImageFilter.h:51</a></div></div>
 <div class="ttc" id="classanima_1_1DDIModelAveragingImageFilter_html_aab3b1b51ee927672107727367085e67c"><div class="ttname"><a href="classanima_1_1DDIModelAveragingImageFilter.html#aab3b1b51ee927672107727367085e67c">anima::DDIModelAveragingImageFilter::ModelDataType</a></div><div class="ttdeci">std::vector&lt; OutputPixelType &gt; ModelDataType</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIModelAveragingImageFilter_8h_source.html#l00055">animaDDIModelAveragingImageFilter.h:55</a></div></div>
@@ -801,7 +797,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1DDIModelAveragingImageFilter_html_a8473a91babe296720699a6239f0e519a"><div class="ttname"><a href="classanima_1_1DDIModelAveragingImageFilter.html#a8473a91babe296720699a6239f0e519a">anima::DDIModelAveragingImageFilter::GetOutputAs4DImage</a></div><div class="ttdeci">Image4DType * GetOutputAs4DImage()</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIModelAveragingImageFilter_8hxx_source.html#l00033">animaDDIModelAveragingImageFilter.hxx:33</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">anima::DIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00050">animaDDIDistribution.h:50</a></div></div>
 <div class="ttc" id="classanima_1_1DDIModelAveragingImageFilter_html_ad138ed826d9971ddf9ad7751968b59d6"><div class="ttname"><a href="classanima_1_1DDIModelAveragingImageFilter.html#ad138ed826d9971ddf9ad7751968b59d6">anima::DDIModelAveragingImageFilter::OutputImageRegionType</a></div><div class="ttdeci">Superclass::OutputImageRegionType OutputImageRegionType</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIModelAveragingImageFilter_8h_source.html#l00046">animaDDIModelAveragingImageFilter.h:46</a></div></div>
-<div class="ttc" id="load__nii__ext_8m_html_aef5461a34124216ffeadd235c3f81324"><div class="ttname"><a href="load__nii__ext_8m.html#aef5461a34124216ffeadd235c3f81324">error</a></div><div class="ttdeci">error(msg)</div></div>
 <div class="ttc" id="classanima_1_1DDIModelAveragingImageFilter_html_a2232913c2ce53a932073ee5b3f31d692"><div class="ttname"><a href="classanima_1_1DDIModelAveragingImageFilter.html#a2232913c2ce53a932073ee5b3f31d692">anima::DDIModelAveragingImageFilter::VectorType</a></div><div class="ttdeci">vnl_vector_fixed&lt; MathType, TensorPixelType::Dimension &gt; VectorType</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIModelAveragingImageFilter_8h_source.html#l00052">animaDDIModelAveragingImageFilter.h:52</a></div></div>
 <div class="ttc" id="animaHyperbolicFunctions_8h_html"><div class="ttname"><a href="animaHyperbolicFunctions_8h.html">animaHyperbolicFunctions.h</a></div></div>
 <div class="ttc" id="classanima_1_1DDIModelAveragingImageFilter_html_a54733b172141f1676549f87dfc5c20cc"><div class="ttname"><a href="classanima_1_1DDIModelAveragingImageFilter.html#a54733b172141f1676549f87dfc5c20cc">anima::DDIModelAveragingImageFilter::OutputPixelType</a></div><div class="ttdeci">OutputImageType::PixelType OutputPixelType</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIModelAveragingImageFilter_8h_source.html#l00042">animaDDIModelAveragingImageFilter.h:42</a></div></div>
@@ -812,20 +807,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1DDIModelAveragingImageFilter_html_a90d7d99f25ef1fb68c61488ac7a5524b"><div class="ttname"><a href="classanima_1_1DDIModelAveragingImageFilter.html#a90d7d99f25ef1fb68c61488ac7a5524b">anima::DDIModelAveragingImageFilter::WeightDataType</a></div><div class="ttdeci">std::vector&lt; MathType &gt; WeightDataType</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIModelAveragingImageFilter_8h_source.html#l00056">animaDDIModelAveragingImageFilter.h:56</a></div></div>
 <div class="ttc" id="classanima_1_1DDIModelAveragingImageFilter_html_a3d2ecd7681b476d24b4f7541fe311de2"><div class="ttname"><a href="classanima_1_1DDIModelAveragingImageFilter.html#a3d2ecd7681b476d24b4f7541fe311de2">anima::DDIModelAveragingImageFilter::AICcImageType</a></div><div class="ttdeci">itk::Image&lt; PixelScalarType, 3 &gt; AICcImageType</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIModelAveragingImageFilter_8h_source.html#l00025">animaDDIModelAveragingImageFilter.h:25</a></div></div>
 <div class="ttc" id="namespaceanima_html_ac341bd69a70af69030fcf86cac5cbc60"><div class="ttname"><a href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">anima::xi</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double xi(const T &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00029">animaHyperbolicFunctions.hxx:29</a></div></div>
-<div class="ttc" id="emgm_8m_html_aaccc9105df5383111407fd5b41255e23"><div class="ttname"><a href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a></div><div class="ttdeci">t</div><div class="ttdef"><b>Definition:</b> <a href="emgm_8m_source.html#l00018">emgm.m:18</a></div></div>
 <div class="ttc" id="namespaceanima_html_aa03e48b97dce00f55539919c31f97cec"><div class="ttname"><a href="namespaceanima.html#aa03e48b97dce00f55539919c31f97cec">anima::MatrixType</a></div><div class="ttdeci">itk::Matrix&lt; double, 3, 3 &gt; MatrixType</div><div class="ttdef"><b>Definition:</b> <a href="animaMatrixOperations_8h_source.html#l00008">animaMatrixOperations.h:8</a></div></div>
 <div class="ttc" id="namespaceanima_html_aeee6e80d3716e1da776bdc937185aea5"><div class="ttname"><a href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">anima::ComputeScalarProduct</a></div><div class="ttdeci">double ComputeScalarProduct(const VectorType &amp;v1, const VectorType &amp;v2, const unsigned int NDimension)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00203">animaVectorOperations.hxx:203</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">anima::KappaIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00049">animaDDIDistribution.h:49</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_adc468c70fb574ebd07287b38d0d0676d"><div class="ttname"><a href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a></div><div class="ttdeci">k</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00232">reslice_nii.m:232</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 <div class="ttc" id="classanima_1_1DDIModelAveragingImageFilter_html_aa21a670cb2102b73861dc802c50a9145"><div class="ttname"><a href="classanima_1_1DDIModelAveragingImageFilter.html#aa21a670cb2102b73861dc802c50a9145">anima::DDIModelAveragingImageFilter::SetAICcVolume</a></div><div class="ttdeci">void SetAICcVolume(unsigned int i, AICcImageType *vol)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIModelAveragingImageFilter_8hxx_source.html#l00019">animaDDIModelAveragingImageFilter.hxx:19</a></div></div>
-<div class="ttc" id="load__nii__img_8m_html_a0e58fe5bf1f468ebd8ae6b3620a52472"><div class="ttname"><a href="load__nii__img_8m.html#a0e58fe5bf1f468ebd8ae6b3620a52472">end</a></div><div class="ttdeci">end end[img, hdr]</div><div class="ttdef"><b>Definition:</b> <a href="load__nii__img_8m_source.html#l00115">load_nii_img.m:115</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:47 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_423358b46ff3212c2d9dd0c29bd36652.html">transformations</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_f6683a9cf9ba77fa562d84348ba6912d.html">transformations</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -141,10 +141,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    m_CenterTransform.SetIdentity();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    m_CenterTransformInv.SetIdentity();</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; 3;++i)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        m_CenterTransform(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,3) = rotCenter[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        m_CenterTransformInv(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,3) = - rotCenter[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        m_CenterTransform(i,3) = rotCenter[i];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        m_CenterTransformInv(i,3) = - rotCenter[i];</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
@@ -223,11 +223,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="classanima_1_1SymmetryConstrainedTransform.html#a0cac45788cf21fa9fe5a57aa3481e646">MatrixType</a> linearMatrix;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="classanima_1_1SymmetryConstrainedTransform.html#a3be23e42be65335440b211acf136b31a">OffsetType</a> off;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; 3;++i)</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        off[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = resultMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,3);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            linearMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) = resultMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        off[i] = resultMatrix(i,3);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; 3;++j)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            linearMatrix(i,j) = resultMatrix(i,j);</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    this-&gt;SetMatrix(linearMatrix);</div>
@@ -249,11 +249,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    tmpMatrix = refSymmetryPlane-&gt;GetMatrix();</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    tmpOffset = refSymmetryPlane-&gt;GetOffset();</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; 3;++i)</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        m_RefSymmetryMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,3) = tmpOffset[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            m_RefSymmetryMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) = tmpMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        m_RefSymmetryMatrix(i,3) = tmpOffset[i];</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; 3;++j)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            m_RefSymmetryMatrix(i,j) = tmpMatrix(i,j);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    m_RefSymmetryMatrix = m_RefSymmetryMatrix.GetInverse();</div>
@@ -261,11 +261,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    tmpMatrix = floSymmetryPlane-&gt;GetMatrix();</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    tmpOffset = floSymmetryPlane-&gt;GetOffset();</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; 3;++i)</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        m_FloSymmetryMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,3) = tmpOffset[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            m_FloSymmetryMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) = tmpMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        m_FloSymmetryMatrix(i,3) = tmpOffset[i];</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; 3;++j)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            m_FloSymmetryMatrix(i,j) = tmpMatrix(i,j);</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
@@ -285,7 +285,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;} <span class="comment">// end of namespace anima</span></div>
 <div class="ttc" id="classanima_1_1SymmetryConstrainedTransform_html_a3be23e42be65335440b211acf136b31a"><div class="ttname"><a href="classanima_1_1SymmetryConstrainedTransform.html#a3be23e42be65335440b211acf136b31a">anima::SymmetryConstrainedTransform::OffsetType</a></div><div class="ttdeci">Superclass::OffsetType OffsetType</div><div class="ttdef"><b>Definition:</b> <a href="animaSymmetryConstrainedTransform_8h_source.html#l00050">animaSymmetryConstrainedTransform.h:50</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_abf2bc2545a4a5f5683d9ef3ed0d977e0"><div class="ttname"><a href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a></div><div class="ttdeci">j</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00231">reslice_nii.m:231</a></div></div>
 <div class="ttc" id="classanima_1_1SymmetryConstrainedTransform_html_a2d883da7d38479f896d642a5b4362410"><div class="ttname"><a href="classanima_1_1SymmetryConstrainedTransform.html#a2d883da7d38479f896d642a5b4362410">anima::SymmetryConstrainedTransform::SetRotationCenter</a></div><div class="ttdeci">void SetRotationCenter(OutputPointType &amp;rotCenter)</div><div class="ttdef"><b>Definition:</b> <a href="animaSymmetryConstrainedTransform_8hxx_source.html#l00042">animaSymmetryConstrainedTransform.hxx:42</a></div></div>
 <div class="ttc" id="classanima_1_1SymmetryConstrainedTransform_html_a0f772baa89bfe91176f9aea128f356c3"><div class="ttname"><a href="classanima_1_1SymmetryConstrainedTransform.html#a0f772baa89bfe91176f9aea128f356c3">anima::SymmetryConstrainedTransform::HomogeneousMatrixType</a></div><div class="ttdeci">itk::Matrix&lt; ScalarType, 4, 4 &gt; HomogeneousMatrixType</div><div class="ttdef"><b>Definition:</b> <a href="animaSymmetryConstrainedTransform_8h_source.html#l00046">animaSymmetryConstrainedTransform.h:46</a></div></div>
 <div class="ttc" id="classanima_1_1SymmetryConstrainedTransform_html_a60c54f2c248fc4ccf7a69eb884ee8b4c"><div class="ttname"><a href="classanima_1_1SymmetryConstrainedTransform.html#a60c54f2c248fc4ccf7a69eb884ee8b4c">anima::SymmetryConstrainedTransform::OutputPointType</a></div><div class="ttdeci">Superclass::OutputPointType OutputPointType</div><div class="ttdef"><b>Definition:</b> <a href="animaSymmetryConstrainedTransform_8h_source.html#l00044">animaSymmetryConstrainedTransform.h:44</a></div></div>
@@ -297,15 +296,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1SymmetryConstrainedTransform_html_a048dd8b475581c065883ca584e2964e8"><div class="ttname"><a href="classanima_1_1SymmetryConstrainedTransform.html#a048dd8b475581c065883ca584e2964e8">anima::SymmetryConstrainedTransform::GetParameters</a></div><div class="ttdeci">const ParametersType &amp; GetParameters(void) const </div><div class="ttdef"><b>Definition:</b> <a href="animaSymmetryConstrainedTransform_8hxx_source.html#l00079">animaSymmetryConstrainedTransform.hxx:79</a></div></div>
 <div class="ttc" id="classanima_1_1SymmetryConstrainedTransform_html_a13e1bac8961fb168d3b7e9e186fb017b"><div class="ttname"><a href="classanima_1_1SymmetryConstrainedTransform.html#a13e1bac8961fb168d3b7e9e186fb017b">anima::SymmetryConstrainedTransform::SetIdentity</a></div><div class="ttdeci">virtual void SetIdentity(void)</div><div class="ttdef"><b>Definition:</b> <a href="animaSymmetryConstrainedTransform_8hxx_source.html#l00092">animaSymmetryConstrainedTransform.hxx:92</a></div></div>
 <div class="ttc" id="classanima_1_1SymmetryConstrainedTransform_html_a08278dcafdbc176143b2deae74e80846"><div class="ttname"><a href="classanima_1_1SymmetryConstrainedTransform.html#a08278dcafdbc176143b2deae74e80846">anima::SymmetryConstrainedTransform::Superclass</a></div><div class="ttdeci">itk::MatrixOffsetTransformBase&lt; TScalarType, 3 &gt; Superclass</div><div class="ttdef"><b>Definition:</b> <a href="animaSymmetryConstrainedTransform_8h_source.html#l00016">animaSymmetryConstrainedTransform.h:16</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 <div class="ttc" id="classanima_1_1SymmetryConstrainedTransform_html_a1976febab24b787c36ab0f7cba1932c5"><div class="ttname"><a href="classanima_1_1SymmetryConstrainedTransform.html#a1976febab24b787c36ab0f7cba1932c5">anima::SymmetryConstrainedTransform::SymmetryConstrainedTransform</a></div><div class="ttdeci">SymmetryConstrainedTransform()</div><div class="ttdef"><b>Definition:</b> <a href="animaSymmetryConstrainedTransform_8hxx_source.html#l00009">animaSymmetryConstrainedTransform.hxx:9</a></div></div>
 <div class="ttc" id="classanima_1_1SymmetryConstrainedTransform_html_a95d1aff4cdfb073dd43383f91092ddd9"><div class="ttname"><a href="classanima_1_1SymmetryConstrainedTransform.html#a95d1aff4cdfb073dd43383f91092ddd9">anima::SymmetryConstrainedTransform::PrintSelf</a></div><div class="ttdeci">void PrintSelf(std::ostream &amp;os, itk::Indent indent) const </div><div class="ttdef"><b>Definition:</b> <a href="animaSymmetryConstrainedTransform_8hxx_source.html#l00179">animaSymmetryConstrainedTransform.hxx:179</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:20 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

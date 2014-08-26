@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_3553dd7649db2abadc30239e41176615.html">registration</a></li><li class="navelem"><a class="el" href="dir_b23bf097591d04294e0a6c58e98ed928.html">similarity-measures</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_42156ca842fecd25315aaaaf78422bef.html">registration</a></li><li class="navelem"><a class="el" href="dir_c75b01df70757afb8ceb074781db0053.html">similarity-measures</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -142,9 +142,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classanima_1_1FastCorrelationImageToImageMetric.html#af8b8f624ee2375f3cc3336bf6e9b7654">ContinuousIndexType</a> transformedIndex;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classanima_1_1FastCorrelationImageToImageMetric.html#a2d5fddcfa971ef409e81100977c05d65">RealType</a> movingValue;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; this-&gt;m_NumberOfPixelsCounted;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; this-&gt;m_NumberOfPixelsCounted;++i)</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        transformedPoint = this-&gt;m_Transform-&gt;TransformPoint( m_FixedImagePoints[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        transformedPoint = this-&gt;m_Transform-&gt;TransformPoint( m_FixedImagePoints[i] );</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        this-&gt;m_Interpolator-&gt;GetInputImage()-&gt;TransformPhysicalPointToContinuousIndex(transformedPoint,transformedIndex);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span>( this-&gt;m_Interpolator-&gt;IsInsideBuffer( transformedIndex ) )</div>
@@ -152,7 +152,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            movingValue  = this-&gt;m_Interpolator-&gt;EvaluateAtContinuousIndex( transformedIndex );</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            smm += movingValue * movingValue;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            sfm += m_FixedImageValues[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] * movingValue;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            sfm += m_FixedImageValues[i] * movingValue;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            sm += movingValue;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
@@ -197,8 +197,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">typename</span> FixedImageType::IndexType index;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    this-&gt;m_NumberOfPixelsCounted = this-&gt;GetFixedImageRegion().GetSize()[0];</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 1;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; TFixedImage::GetImageDimension();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        this-&gt;m_NumberOfPixelsCounted *= this-&gt;GetFixedImageRegion().GetSize()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1;i &lt; TFixedImage::GetImageDimension();++i)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        this-&gt;m_NumberOfPixelsCounted *= this-&gt;GetFixedImageRegion().GetSize()[i];</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    m_FixedImagePoints.resize(this-&gt;m_NumberOfPixelsCounted);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    m_FixedImageValues.resize(this-&gt;m_NumberOfPixelsCounted);</div>
@@ -271,14 +271,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1FastCorrelationImageToImageMetric_html_afe2fcc7d1bacdd1a5927c9f073edfc9e"><div class="ttname"><a href="classanima_1_1FastCorrelationImageToImageMetric.html#afe2fcc7d1bacdd1a5927c9f073edfc9e">anima::FastCorrelationImageToImageMetric::GetValueAndDerivative</a></div><div class="ttdeci">void GetValueAndDerivative(const TransformParametersType &amp;parameters, MeasureType &amp;Value, DerivativeType &amp;Derivative) const </div><div class="ttdef"><b>Definition:</b> <a href="animaFastCorrelationImageToImageMetric_8hxx_source.html#l00156">animaFastCorrelationImageToImageMetric.hxx:156</a></div></div>
 <div class="ttc" id="classanima_1_1FastCorrelationImageToImageMetric_html_a4ebd273f407c4260566c4da2373f2be3"><div class="ttname"><a href="classanima_1_1FastCorrelationImageToImageMetric.html#a4ebd273f407c4260566c4da2373f2be3">anima::FastCorrelationImageToImageMetric::GetValue</a></div><div class="ttdeci">MeasureType GetValue(const TransformParametersType &amp;parameters) const </div><div class="ttdef"><b>Definition:</b> <a href="animaFastCorrelationImageToImageMetric_8hxx_source.html#l00029">animaFastCorrelationImageToImageMetric.hxx:29</a></div></div>
 <div class="ttc" id="classanima_1_1FastCorrelationImageToImageMetric_html_a2d5fddcfa971ef409e81100977c05d65"><div class="ttname"><a href="classanima_1_1FastCorrelationImageToImageMetric.html#a2d5fddcfa971ef409e81100977c05d65">anima::FastCorrelationImageToImageMetric::RealType</a></div><div class="ttdeci">Superclass::RealType RealType</div><div class="ttdef"><b>Definition:</b> <a href="animaFastCorrelationImageToImageMetric_8h_source.html#l00030">animaFastCorrelationImageToImageMetric.h:30</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 <div class="ttc" id="animaFastCorrelationImageToImageMetric_8h_html"><div class="ttname"><a href="animaFastCorrelationImageToImageMetric_8h.html">animaFastCorrelationImageToImageMetric.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:48 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

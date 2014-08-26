@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_09db29757e5132ce64ec9b71a86a1978.html">special_functions</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_5f6734a3b84e8ad02c78ecf36866e5b0.html">special_functions</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -102,11 +102,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>anima</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="namespaceanima.html#a2aa9fd33a6f72b5f65a217c2848432ac">    8</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a546b11905751e6de497ca20586193836">ShOverId</a>(<span class="keyword">const</span> <a class="code" href="reslice__nii_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a> &amp;x)</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="namespaceanima.html#a2aa9fd33a6f72b5f65a217c2848432ac">    8</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a546b11905751e6de497ca20586193836">ShOverId</a>(<span class="keyword">const</span> T &amp;x)</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">double</span> resVal = x;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">if</span> (resVal &lt; 1<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-4)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">if</span> (resVal &lt; 1e-4)</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        resVal = 1.0 + resVal * resVal / 6.0;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        resVal = std::sinh(resVal) / resVal;</div>
@@ -114,7 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> resVal;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespaceanima.html#a2e4b0c5b37a91f8b6f7d87fd70ce856f">   20</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T1, <span class="keyword">class</span> T2, <span class="keyword">class</span> T3&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a12de5574fa5ea868a1ed8b4c64eff799">ShRatio</a>(<span class="keyword">const</span> T1 &amp;<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>, <span class="keyword">const</span> T2 &amp;alpha, <span class="keyword">const</span> T3 &amp;beta)</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespaceanima.html#a2e4b0c5b37a91f8b6f7d87fd70ce856f">   20</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T1, <span class="keyword">class</span> T2, <span class="keyword">class</span> T3&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a12de5574fa5ea868a1ed8b4c64eff799">ShRatio</a>(<span class="keyword">const</span> T1 &amp;k, <span class="keyword">const</span> T2 &amp;alpha, <span class="keyword">const</span> T3 &amp;beta)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">double</span> ss = alpha * alpha + beta * beta;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
@@ -123,11 +123,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> resVal;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespaceanima.html#aa155a8ad28d67b1309795a4b72d5a2d2">   29</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">double</span>  <a class="code" href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">xi</a>(<span class="keyword">const</span> <a class="code" href="reslice__nii_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a> &amp;<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>)</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespaceanima.html#aa155a8ad28d67b1309795a4b72d5a2d2">   29</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">double</span>  <a class="code" href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">xi</a>(<span class="keyword">const</span> T &amp;k)</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">double</span> resVal = k * <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">double</span> resVal = k * k;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (k &lt; 1<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-4)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (k &lt; 1e-4)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        resVal = 1.0 / 3.0 - resVal / 45;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        resVal = 1.0 / (k * tanh(k)) - 1.0 / resVal;</div>
@@ -135,11 +135,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> resVal;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="namespaceanima.html#ab74695ff21c4f045a25e158f5aaf9fd1">   41</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#aa6a70b979a57a3a4de5c297af39003df">jtwo</a>(<span class="keyword">const</span> <a class="code" href="reslice__nii_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a> &amp;<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="namespaceanima.html#ab74695ff21c4f045a25e158f5aaf9fd1">   41</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#aa6a70b979a57a3a4de5c297af39003df">jtwo</a>(<span class="keyword">const</span> T &amp;k)</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">double</span> jtwoVal = k * <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">double</span> jtwoVal = k * k;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (k &lt; 1<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-4)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (k &lt; 1e-4)</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        jtwoVal = 1.0 / 3.0 + 2.0 * k * k / 45.0;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        jtwoVal = 1.0 - 2.0 * (1.0 / (k * tanh(k)) - 1.0 / jtwoVal);</div>
@@ -147,11 +147,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> jtwoVal;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespaceanima.html#a67acaf9ea11bd8eec95ceaa1655256e1">   53</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#ae73ff17970dfd958496d0072d20baf8b">jfour</a>(<span class="keyword">const</span> <a class="code" href="reslice__nii_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a> &amp;<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>)</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespaceanima.html#a67acaf9ea11bd8eec95ceaa1655256e1">   53</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#ae73ff17970dfd958496d0072d20baf8b">jfour</a>(<span class="keyword">const</span> T &amp;k)</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">double</span> jfourVal = k * <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">double</span> jfourVal = k * k;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (k &lt; 1<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-3)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (k &lt; 1e-3)</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        jfourVal = 1.0 / 5.0 + 4.0 * k * k / 45.0;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        jfourVal = 1.0 - 4.0 * (1.0 / (k * tanh(k)) - 3.0 * (1.0 - 2.0 * (1.0 / (k * tanh(k)) - 1.0 / jfourVal)) / jfourVal);</div>
@@ -163,20 +163,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="ttc" id="namespaceanima_html_aa6a70b979a57a3a4de5c297af39003df"><div class="ttname"><a href="namespaceanima.html#aa6a70b979a57a3a4de5c297af39003df">anima::jtwo</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double jtwo(const T &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00041">animaHyperbolicFunctions.hxx:41</a></div></div>
-<div class="ttc" id="xform__nii_8m_html_a5389c938d8f439f89bc6549e6a18285d"><div class="ttname"><a href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a></div><div class="ttdeci">hdr.dime.xyzt_units, 7 e()</div></div>
 <div class="ttc" id="animaHyperbolicFunctions_8h_html"><div class="ttname"><a href="animaHyperbolicFunctions_8h.html">animaHyperbolicFunctions.h</a></div></div>
 <div class="ttc" id="namespaceanima_html_a546b11905751e6de497ca20586193836"><div class="ttname"><a href="namespaceanima.html#a546b11905751e6de497ca20586193836">anima::ShOverId</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double ShOverId(const T &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00008">animaHyperbolicFunctions.hxx:8</a></div></div>
 <div class="ttc" id="namespaceanima_html_ac341bd69a70af69030fcf86cac5cbc60"><div class="ttname"><a href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">anima::xi</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double xi(const T &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00029">animaHyperbolicFunctions.hxx:29</a></div></div>
 <div class="ttc" id="namespaceanima_html_a12de5574fa5ea868a1ed8b4c64eff799"><div class="ttname"><a href="namespaceanima.html#a12de5574fa5ea868a1ed8b4c64eff799">anima::ShRatio</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double ShRatio(const T1 &amp;k, const T2 &amp;alpha, const T3 &amp;beta)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00020">animaHyperbolicFunctions.hxx:20</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_adc468c70fb574ebd07287b38d0d0676d"><div class="ttname"><a href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a></div><div class="ttdeci">k</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00232">reslice_nii.m:232</a></div></div>
 <div class="ttc" id="namespaceanima_html_ae73ff17970dfd958496d0072d20baf8b"><div class="ttname"><a href="namespaceanima.html#ae73ff17970dfd958496d0072d20baf8b">anima::jfour</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double jfour(const T &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00053">animaHyperbolicFunctions.hxx:53</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_adf1f3edb9115acb0a1e04209b7a9937b"><div class="ttname"><a href="reslice__nii_8m.html#adf1f3edb9115acb0a1e04209b7a9937b">T</a></div><div class="ttdeci">T</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00208">reslice_nii.m:208</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:48 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

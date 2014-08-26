@@ -1,9 +1,10 @@
 <map id="animaSymmetryConstrainedRegistration.cxx" name="animaSymmetryConstrainedRegistration.cxx">
-<area shape="rect" id="node2" href="$animaPyramidalSymmetryConstrainedRegistrationBridge_8h.html" title="animaPyramidalSymmetryConstrained\lRegistrationBridge.h" alt="" coords="3457,97,3697,138"/>
-<area shape="rect" id="node11" href="$Arguments_8h.html" title="Arguments.h" alt="" coords="1581,195,1675,221"/>
-<area shape="rect" id="node6" href="$animaSymmetryConstrainedTransform_8h.html" title="animaSymmetryConstrained\lTransform.h" alt="" coords="2431,187,2613,229"/>
-<area shape="rect" id="node9" href="$animaSymmetryConstrainedTransform_8hxx.html" title="animaSymmetryConstrained\lTransform.hxx" alt="" coords="2629,278,2811,319"/>
-<area shape="rect" id="node29" href="$CliProgress_8h.html" title="CliProgress.h" alt="" coords="2181,285,2277,312"/>
-<area shape="rect" id="node31" href="$GuiArguments_8h.html" title="GuiArguments.h" alt="" coords="2303,285,2417,312"/>
-<area shape="rect" id="node30" href="$AnimaParsingExport_8h.html" title="AnimaParsingExport.h" alt="" coords="2155,368,2303,395"/>
+<area shape="rect" id="node2" href="$animaPyramidalSymmetryConstrainedRegistrationBridge_8h.html" title="animaPyramidalSymmetryConstrained\lRegistrationBridge.h" alt="" coords="2687,97,2927,138"/>
+<area shape="rect" id="node11" href="$Arguments_8h.html" title="Arguments.h" alt="" coords="3927,195,4021,221"/>
+<area shape="rect" id="node6" href="$animaSymmetryConstrainedTransform_8h.html" title="animaSymmetryConstrained\lTransform.h" alt="" coords="2715,187,2897,229"/>
+<area shape="rect" id="node34" href="$animaPyramidalSymmetryConstrainedRegistrationBridge_8txx.html" title="animaPyramidalSymmetryConstrained\lRegistrationBridge.txx" alt="" coords="1351,187,1591,229"/>
+<area shape="rect" id="node9" href="$animaSymmetryConstrainedTransform_8hxx.html" title="animaSymmetryConstrained\lTransform.hxx" alt="" coords="2814,278,2996,319"/>
+<area shape="rect" id="node29" href="$CliProgress_8h.html" title="CliProgress.h" alt="" coords="3073,285,3169,312"/>
+<area shape="rect" id="node31" href="$GuiArguments_8h.html" title="GuiArguments.h" alt="" coords="3616,285,3731,312"/>
+<area shape="rect" id="node42" href="$animaNewuoaOptimizer_8h.html" title="animaNewuoaOptimizer.h" alt="" coords="1984,285,2152,312"/>
 </map>

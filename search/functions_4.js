@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['data_5fhistory',['data_history',['../save__nii__hdr_8m.html#a70c170fbd64912553b6e420234dd01ee',1,'data_history(fid, hdr.hist):&#160;save_nii_hdr.m'],['../save__untouch0__nii__hdr_8m.html#a70c170fbd64912553b6e420234dd01ee',1,'data_history(fid, hdr.hist):&#160;save_untouch0_nii_hdr.m'],['../save__untouch__nii__hdr_8m.html#a70c170fbd64912553b6e420234dd01ee',1,'data_history(fid, hdr.hist):&#160;save_untouch_nii_hdr.m']]],
   ['ddicostfunction',['DDICostFunction',['../classanima_1_1DDICostFunction.html#ae3ab029878ec418f125c5624fa0f06f3',1,'anima::DDICostFunction']]],
   ['ddilinearinterpolateimagefunction',['DDILinearInterpolateImageFunction',['../classanima_1_1DDILinearInterpolateImageFunction.html#afb9f3e25c44cc4e1d8b450d0af94c6b8',1,'anima::DDILinearInterpolateImageFunction']]],
   ['ddimodelaveragingimagefilter',['DDIModelAveragingImageFilter',['../classanima_1_1DDIModelAveragingImageFilter.html#a3cd8e403c24682fb8ff75566324090f8',1,'anima::DDIModelAveragingImageFilter']]],
@@ -12,13 +11,8 @@ var searchData=
   ['deletechildren',['DeleteChildren',['../classtinyxml2_1_1XMLNode.html#a0360085cc54df5bff85d5c5da13afdce',1,'tinyxml2::XMLNode']]],
   ['deletenode',['DeleteNode',['../classtinyxml2_1_1XMLDocument.html#ac1d6e2c7fcc1a660624ac4f68e96380d',1,'tinyxml2::XMLDocument']]],
   ['densesvftransformagregator',['DenseSVFTransformAgregator',['../classanima_1_1DenseSVFTransformAgregator.html#a51483def46c078c3ae9891d4f4bd2b65',1,'anima::DenseSVFTransformAgregator']]],
-  ['det',['det',['../xform__nii_8m.html#a1f3fb972d2721a5ebac11058d4a3228f',1,'xform_nii.m']]],
-  ['dim',['dim',['../reslice__nii_8m.html#a3bf3ce4ab99aef10bf19775d375feda5',1,'dim(5) &gt; 1 for i:&#160;reslice_nii.m'],['../reslice__nii_8m.html#a0af65adc0fa79423f9ce42d26bfee965',1,'dim(2:4):&#160;reslice_nii.m'],['../xform__nii_8m.html#a209706a3986f2715bddabe919088e00e',1,'dim([2:4]):&#160;xform_nii.m']]],
-  ['disp',['disp',['../hellier__hist__normalization__gmm_8m.html#a937015b0735346d40cdc2d827e5a1ba2',1,'disp(&apos;The last Gaussian is the GM&apos;):&#160;hellier_hist_normalization_gmm.m'],['../hellier__hist__normalization__gmm_8m.html#a346eafe8e9acca421f43f402ac503b7a',1,'disp(&apos;The last Gaussian is the CSF&apos;):&#160;hellier_hist_normalization_gmm.m'],['../hellier__hist__normalization__gmm_8m.html#af59a77b662426cc34a2b3a23162d42a6',1,'disp(&apos;The middle Gaussian is the CSF&apos;):&#160;hellier_hist_normalization_gmm.m']]],
-  ['double',['double',['../save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c',1,'save_untouch_nii.m']]],
   ['doubleattribute',['DoubleAttribute',['../classtinyxml2_1_1XMLElement.html#a536922a5cae9c9769a3dc1b7a8ff0d44',1,'tinyxml2::XMLElement']]],
   ['doublevalue',['DoubleValue',['../classtinyxml2_1_1XMLAttribute.html#a336153e5aa1b7ccd6502fc249bfb3fd7',1,'tinyxml2::XMLAttribute']]],
-  ['dsr',['dsr',['../save__nii__hdr_8m.html#abeca945d0a8dd386ad1188ecb9a82910',1,'dsr():&#160;save_nii_hdr.m'],['../save__untouch0__nii__hdr_8m.html#abeca945d0a8dd386ad1188ecb9a82910',1,'dsr():&#160;save_untouch0_nii_hdr.m'],['../save__untouch__nii__hdr_8m.html#abeca945d0a8dd386ad1188ecb9a82910',1,'dsr():&#160;save_untouch_nii_hdr.m']]],
   ['dtiestimationimagefilter',['DTIEstimationImageFilter',['../classanima_1_1DTIEstimationImageFilter.html#a79b18ebcbc0722df19a5c060cb49e6a1',1,'anima::DTIEstimationImageFilter']]],
   ['dtiextrapolateimagefilter',['DTIExtrapolateImageFilter',['../classanima_1_1DTIExtrapolateImageFilter.html#a15c38d14e9276e7ac69d2f321632c77a',1,'anima::DTIExtrapolateImageFilter']]],
   ['dtinoncentralchicostfunction',['DTINonCentralChiCostFunction',['../classanima_1_1DTINonCentralChiCostFunction.html#a390c511659e3762b78d202d3d81aa297',1,'anima::DTINonCentralChiCostFunction']]],

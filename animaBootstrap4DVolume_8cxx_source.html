@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_ed3368f26f16f15399ac33d4f4eb1680.html">statistics</a></li><li class="navelem"><a class="el" href="dir_2ebea2d661eaef1ad15570742cb4777b.html">boot_strap_4d_volume</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_c8b7036025fdd15a286ad6e57754d006.html">statistics</a></li><li class="navelem"><a class="el" href="dir_62e1739505d479f9276505f25978f5a3.html">boot_strap_4d_volume</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -116,7 +116,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        cmd.parse(argc,argv);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; <a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; e)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; e.error() &lt;&lt; <span class="stringliteral">&quot;for argument &quot;</span> &lt;&lt; e.argId() &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span>(1);</div>
@@ -157,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        std::ifstream infoList(infoArg.getValue().c_str());</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">while</span> (!infoList.eof())</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordtype">char</span> tmpStr[2048];</div>
@@ -167,7 +167,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            mainFilter-&gt;SetNthInformationFile(i,tmpStr);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            ++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            ++i;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        infoList.close();</div>
@@ -187,8 +187,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> ((resInfoArg.getValue() != <span class="stringliteral">&quot;&quot;</span>)&amp;&amp;(mainFilter-&gt;GetOutputInformation().size() != 0))</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        std::ofstream outInfo(resInfoArg.getValue().c_str());</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; mainFilter-&gt;GetOutputInformation().size();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            outInfo &lt;&lt; mainFilter-&gt;GetOutputInformation()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; mainFilter-&gt;GetOutputInformation().size();++i)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            outInfo &lt;&lt; mainFilter-&gt;GetOutputInformation()[i] &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        outInfo.close();</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
@@ -197,15 +197,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 <div class="ttc" id="animaBootstrap4DVolumeImageFilter_8h_html"><div class="ttname"><a href="animaBootstrap4DVolumeImageFilter_8h.html">animaBootstrap4DVolumeImageFilter.h</a></div></div>
 <div class="ttc" id="animaBootstrap4DVolume_8cxx_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="animaBootstrap4DVolume_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="animaBootstrap4DVolume_8cxx_source.html#l00009">animaBootstrap4DVolume.cxx:9</a></div></div>
-<div class="ttc" id="xform__nii_8m_html_a5389c938d8f439f89bc6549e6a18285d"><div class="ttname"><a href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a></div><div class="ttdeci">hdr.dime.xyzt_units, 7 e()</div></div>
 <div class="ttc" id="classanima_1_1Bootstrap4DVolumeImageFilter_html"><div class="ttname"><a href="classanima_1_1Bootstrap4DVolumeImageFilter.html">anima::Bootstrap4DVolumeImageFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="animaBootstrap4DVolumeImageFilter_8h_source.html#l00007">animaBootstrap4DVolumeImageFilter.h:7</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:47 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

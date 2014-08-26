@@ -1,9 +1,0 @@
-<map id="denoising" name="denoising">
-<area shape="rect" id="node2" href="dir_a87727c709caed632d6b17772c739b82.html" title="non_local_means_image_filter" alt="" coords="67,159,261,207"/>
-<area shape="rect" id="node4" href="dir_7c56fd695fa167f22c9792e36f843ea4.html" title="statistics" alt="" coords="128,255,200,303"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000093_000088.html" title="1" alt="" coords="168,229,176,244"/>
-<area shape="rect" id="node3" href="dir_3f3508c9065dd47fd794008d43155ee0.html" title="non_local_means_temporal_image_filter" alt="" coords="38,63,289,111"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000095_000093.html" title="1" alt="" coords="168,133,176,148"/>
-<area shape="rect" id="clust2" href="dir_6a162e3793be86c74b47a770dfbbff9d.html" alt="" coords="27,52,401,217"/>
-<area shape="rect" id="clust1" href="dir_0fad36fe10bbcca9e7c6f0593f8115a7.html" title="filtering" alt="" coords="16,16,412,228"/>
-</map>

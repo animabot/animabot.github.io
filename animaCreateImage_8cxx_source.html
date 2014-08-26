@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_095a24d07a9127cd13840a5c61add069.html">common_tools</a></li><li class="navelem"><a class="el" href="dir_41db16cb2ed444fd072389e41941cef1.html">create_image</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_29451194e96d97a87fe9896dcac739f0.html">common_tools</a></li><li class="navelem"><a class="el" href="dir_6c6350288df903d56dfd0870907d635a.html">create_image</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -122,7 +122,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    cmd.parse(argc,argv);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; <a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; e)</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; e.error() &lt;&lt; <span class="stringliteral">&quot;for argument &quot;</span> &lt;&lt; e.argId() &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span>(1);</div>
@@ -190,8 +190,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        resImage-&gt;Allocate();</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        </div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        tmpData.SetSize(vdim);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; vdim;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            tmpData[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = valueArg.getValue();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; vdim;++i)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            tmpData[i] = valueArg.getValue();</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        itk::ImageRegionIterator &lt;VectorImageType&gt; tmpIt(resImage,resImage-&gt;GetLargestPossibleRegion());</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        </div>
@@ -211,15 +211,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    </div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
-<div class="ttc" id="xform__nii_8m_html_a5389c938d8f439f89bc6549e6a18285d"><div class="ttname"><a href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a></div><div class="ttdeci">hdr.dime.xyzt_units, 7 e()</div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 <div class="ttc" id="animaCreateImage_8cxx_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="animaCreateImage_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="animaCreateImage_8cxx_source.html#l00013">animaCreateImage.cxx:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:47 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

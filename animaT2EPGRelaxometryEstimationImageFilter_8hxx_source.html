@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_51f6d94a1d7ee6f99a886fa26632c272.html">quantitative-mri</a></li><li class="navelem"><a class="el" href="dir_6becb0b39eae59acbd986df0df417203.html">estimation</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_c4abb40ef761a7d0f7be931d0aa470c1.html">quantitative-mri</a></li><li class="navelem"><a class="el" href="dir_d02e7a1ace4d7374d13bddba647b6714.html">estimation</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -116,8 +116,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionIterator &lt;MaskImageType&gt; MaskIteratorType;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::vector &lt;IteratorType&gt; inItrs(this-&gt;GetNumberOfIndexedInputs());</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; this-&gt;GetNumberOfIndexedInputs();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        inItrs[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = IteratorType(this-&gt;GetInput(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>),this-&gt;GetOutput()-&gt;GetLargestPossibleRegion());</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; this-&gt;GetNumberOfIndexedInputs();++i)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        inItrs[i] = IteratorType(this-&gt;GetInput(i),this-&gt;GetOutput()-&gt;GetLargestPossibleRegion());</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">typename</span> MaskImageType::Pointer maskImage = MaskImageType::New();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    maskImage-&gt;Initialize();</div>
@@ -131,8 +131,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">while</span> (!maskItr.IsAtEnd())</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">double</span> averageVal = 0;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; this-&gt;GetNumberOfIndexedInputs();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            averageVal += inItrs[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>].Get();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; this-&gt;GetNumberOfIndexedInputs();++i)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            averageVal += inItrs[i].Get();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        averageVal /= this-&gt;GetNumberOfIndexedInputs();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
@@ -143,8 +143,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            maskItr.Set(1);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; this-&gt;GetNumberOfIndexedInputs();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            ++inItrs[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; this-&gt;GetNumberOfIndexedInputs();++i)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            ++inItrs[i];</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        ++maskItr;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
@@ -165,8 +165,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numInputs = this-&gt;GetNumberOfIndexedInputs();</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    std::vector &lt;ImageIteratorType&gt; inIterators;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; numInputs;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        inIterators.push_back(ImageIteratorType(this-&gt;GetInput(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>),outputRegionForThread));</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numInputs;++i)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        inIterators.push_back(ImageIteratorType(this-&gt;GetInput(i),outputRegionForThread));</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionIterator &lt;MaskImageType&gt; MaskIteratorType;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    MaskIteratorType maskItr(this-&gt;GetComputationMask(),outputRegionForThread);</div>
@@ -224,8 +224,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            ++outT2Iterator;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            ++outM0Iterator;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; numInputs;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                ++inIterators[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numInputs;++i)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                ++inIterators[i];</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">if</span> (m_T1Map)</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                ++t1MapItr;</div>
@@ -249,8 +249,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordtype">double</span> sumT2LogSignals = 0;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordtype">double</span> sumT2EchosLogSignals = 0;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; numInputs;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            relaxoT2Data[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = inIterators[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>].Get();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numInputs;++i)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            relaxoT2Data[i] = inIterators[i].Get();</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        cost-&gt;SetT2RelaxometrySignals(relaxoT2Data);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
@@ -300,8 +300,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        ++outT2Iterator;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        ++outM0Iterator;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; numInputs;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            ++inIterators[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numInputs;++i)</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            ++inIterators[i];</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">if</span> (m_T1Map)</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            ++t1MapItr;</div>
@@ -324,14 +324,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1MaskedImageToImageFilter_html_ac092aa3305794ca04db8d91bb4401477"><div class="ttname"><a href="classanima_1_1MaskedImageToImageFilter.html#ac092aa3305794ca04db8d91bb4401477">anima::MaskedImageToImageFilter::OutputImageRegionType</a></div><div class="ttdeci">Superclass::OutputImageRegionType OutputImageRegionType</div><div class="ttdef"><b>Definition:</b> <a href="animaMaskedImageToImageFilter_8h_source.html#l00029">animaMaskedImageToImageFilter.h:29</a></div></div>
 <div class="ttc" id="classanima_1_1BobyqaOptimizer_html"><div class="ttname"><a href="classanima_1_1BobyqaOptimizer.html">anima::BobyqaOptimizer</a></div><div class="ttdoc">BOBYQA Optimizer. </div><div class="ttdef"><b>Definition:</b> <a href="animaBobyqaOptimizer_8h_source.html#l00015">animaBobyqaOptimizer.h:15</a></div></div>
 <div class="ttc" id="animaT2EPGRelaxometryCostFunction_8h_html"><div class="ttname"><a href="animaT2EPGRelaxometryCostFunction_8h.html">animaT2EPGRelaxometryCostFunction.h</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 <div class="ttc" id="animaBobyqaOptimizer_8h_html"><div class="ttname"><a href="animaBobyqaOptimizer_8h.html">animaBobyqaOptimizer.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:20 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

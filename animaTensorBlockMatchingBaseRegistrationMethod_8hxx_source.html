@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_3553dd7649db2abadc30239e41176615.html">registration</a></li><li class="navelem"><a class="el" href="dir_0987574d5c0baf57d2e74e34c4921d2d.html">algorithms</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_42156ca842fecd25315aaaaf78422bef.html">registration</a></li><li class="navelem"><a class="el" href="dir_7646fbf2946f8461121dd27d7c24b3ac.html">algorithms</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -198,7 +198,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#af421a75508c320a1b05e9bc3e0015346">  104</a></span>&#160;<a class="code" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#af421a75508c320a1b05e9bc3e0015346">::GetMTime</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> mtime = Superclass::GetMTime();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> m;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">// Some of the following should be removed once ivars are put in the</span></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// input and output lists</span></div>
@@ -221,7 +221,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">typename</span> <a class="code" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html">TensorBlockMatchingBaseRegistrationMethod&lt;TInputImage&gt;::BaseInputTransformType::Pointer</a></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<a class="code" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a81cd900bdb37acf082f18e4d9e96b884">TensorBlockMatchingBaseRegistrationMethod&lt;TInputImage&gt;</a></div>
-<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a81cd900bdb37acf082f18e4d9e96b884">  130</a></span>&#160;<a class="code" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a81cd900bdb37acf082f18e4d9e96b884">::GetBaseTransformPointer</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a81cd900bdb37acf082f18e4d9e96b884">  130</a></span>&#160;<a class="code" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a81cd900bdb37acf082f18e4d9e96b884">::GetBaseTransformPointer</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i)</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (i &lt; m_BaseTransformsPointers.size())</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">return</span> m_BaseTransformsPointers[i];</div>
@@ -232,7 +232,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keywordtype">void</span></div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<a class="code" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a96c613df57a0362a9dc2dd8bf023ff51">TensorBlockMatchingBaseRegistrationMethod&lt;TInputImage&gt;</a></div>
-<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a96c613df57a0362a9dc2dd8bf023ff51">  141</a></span>&#160;<a class="code" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a96c613df57a0362a9dc2dd8bf023ff51">::SetBaseTransform</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>, <a class="code" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a4a6f856a92d52d2ec876a16f2227bb63">BaseInputTransformType</a> *trsf)</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a96c613df57a0362a9dc2dd8bf023ff51">  141</a></span>&#160;<a class="code" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a96c613df57a0362a9dc2dd8bf023ff51">::SetBaseTransform</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i, <a class="code" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a4a6f856a92d52d2ec876a16f2227bb63">BaseInputTransformType</a> *trsf)</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">if</span> (i &lt; m_BaseTransformsPointers.size())</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        m_BaseTransformsPointers[i] = trsf;</div>
@@ -462,8 +462,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="comment">// Compute the distance between consecutive solutions, until a certain threshold</span></div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keywordtype">double</span> err = 0;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; newPars.Size(); ++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            err += pow(newPars[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - oldPars[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>], 2.);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; newPars.Size(); ++i)</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            err += pow(newPars[i] - oldPars[i], 2.);</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">if</span> (err &lt; m_MinimalTransformError)</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        {</div>
@@ -594,10 +594,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;            tr-&gt;SetIdentity();</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = startBlock; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; endBlock; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>++)</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = startBlock; i &lt; endBlock; i++)</div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;            {</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                m_BaseTransformsPointers[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = itkTransformType::New();</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                m_BaseTransformsPointers[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]-&gt;SetParameters(tr-&gt;GetParameters());</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                m_BaseTransformsPointers[i] = itkTransformType::New();</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                m_BaseTransformsPointers[i]-&gt;SetParameters(tr-&gt;GetParameters());</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;            }</div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;</div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;            <span class="keywordflow">break</span>;</div>
@@ -613,13 +613,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                tr-&gt;SetIdentity();</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                itk::ContinuousIndex &lt;double,InputImageType::ImageDimension&gt; tmpIndex;</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = startBlock; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; endBlock; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>++)</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = startBlock; i &lt; endBlock; i++)</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                {</div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                    <span class="keyword">typename</span> itkTransformType::Pointer tmpTr = itkTransformType::New();</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                    tmpTr-&gt;SetCenter(this-&gt;m_Agregator-&gt;GetInputOrigin(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>));</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                    tmpTr-&gt;SetCenter(this-&gt;m_Agregator-&gt;GetInputOrigin(i));</div>
 <div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                    m_BaseTransformsPointers[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = tmpTr;</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                    m_BaseTransformsPointers[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]-&gt;SetParameters(tr-&gt;GetParameters());</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                    m_BaseTransformsPointers[i] = tmpTr;</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                    m_BaseTransformsPointers[i]-&gt;SetParameters(tr-&gt;GetParameters());</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                }</div>
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;</div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;            }</div>
@@ -638,13 +638,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;                tr-&gt;SetIdentity();</div>
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;                itk::ContinuousIndex &lt;double,InputImageType::ImageDimension&gt; tmpIndex;</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = startBlock; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; endBlock; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>++)</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = startBlock; i &lt; endBlock; i++)</div>
 <div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;                {</div>
 <div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;                    <span class="keyword">typename</span> itkTransformType::Pointer tmpTr = itkTransformType::New();</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;                    tmpTr-&gt;SetCenter(m_Agregator-&gt;GetInputOrigin(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>));</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;                    tmpTr-&gt;SetCenter(m_Agregator-&gt;GetInputOrigin(i));</div>
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;                    m_BaseTransformsPointers[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = tmpTr;</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                    m_BaseTransformsPointers[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]-&gt;SetParameters(tr-&gt;GetParameters());</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;                    m_BaseTransformsPointers[i] = tmpTr;</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                    m_BaseTransformsPointers[i]-&gt;SetParameters(tr-&gt;GetParameters());</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;                }</div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;            }</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;            <span class="keywordflow">else</span></div>
@@ -723,55 +723,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;</div>
 <div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;            <span class="keywordflow">if</span> (m_TransformKind == <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a92ee78916f31ff05ad4ae0fd4efd3309">Rigid</a>)</div>
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;            {</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; InputImageType::ImageDimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; InputImageType::ImageDimension;++i)</div>
 <div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;                {</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;                    tmpScales[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = m_SearchRadius * 180.0 / (m_SearchAngleRadius * M_PI);</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;                    lowerBounds[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = - m_AngleMax * M_PI / 180.0;</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;                    upperBounds[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = m_AngleMax * M_PI / 180.0;</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;                    tmpScales[i] = m_SearchRadius * 180.0 / (m_SearchAngleRadius * M_PI);</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;                    lowerBounds[i] = - m_AngleMax * M_PI / 180.0;</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;                    upperBounds[i] = m_AngleMax * M_PI / 180.0;</div>
 <div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;                    tmpScales[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>+InputImageType::ImageDimension] = 1.0 / fixedSpacing[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;                    tmpScales[i+InputImageType::ImageDimension] = 1.0 / fixedSpacing[i];</div>
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;                    lowerBounds[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>+InputImageType::ImageDimension] = - m_TranslateMax * fixedSpacing[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                    upperBounds[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>+InputImageType::ImageDimension] = m_TranslateMax * fixedSpacing[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;                    lowerBounds[i+InputImageType::ImageDimension] = - m_TranslateMax * fixedSpacing[i];</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                    upperBounds[i+InputImageType::ImageDimension] = m_TranslateMax * fixedSpacing[i];</div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;                }</div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;            }</div>
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (m_TransformKind == <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a73bc7c8bbc76cb531c28de8d12bd61f4">Translation</a>)</div>
 <div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;            {</div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; InputImageType::ImageDimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; InputImageType::ImageDimension;++i)</div>
 <div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;                {</div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;                    tmpScales[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = 1.0 / fixedSpacing[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;                    tmpScales[i] = 1.0 / fixedSpacing[i];</div>
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;                    lowerBounds[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = - m_TranslateMax * fixedSpacing[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;                    upperBounds[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = m_TranslateMax * fixedSpacing[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;                    lowerBounds[i] = - m_TranslateMax * fixedSpacing[i];</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;                    upperBounds[i] = m_TranslateMax * fixedSpacing[i];</div>
 <div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;                }</div>
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;            }</div>
 <div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;            <span class="keywordflow">else</span> <span class="comment">// Affine</span></div>
 <div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;            {</div>
 <div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;                <span class="comment">// There are 12 parameters: 3 angles, 3 translations, 3 scales, 3 skew factors</span></div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; InputImageType::ImageDimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; InputImageType::ImageDimension;++i)</div>
 <div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;                {</div>
 <div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;                    <span class="comment">// Angles</span></div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;                    tmpScales[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = m_SearchRadius * 180.0 / (m_SearchAngleRadius * M_PI);</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;                    lowerBounds[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = - m_AngleMax * M_PI / 180.0;</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;                    upperBounds[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = m_AngleMax * M_PI / 180.0;</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;                    tmpScales[i] = m_SearchRadius * 180.0 / (m_SearchAngleRadius * M_PI);</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;                    lowerBounds[i] = - m_AngleMax * M_PI / 180.0;</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;                    upperBounds[i] = m_AngleMax * M_PI / 180.0;</div>
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;</div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;                    <span class="comment">// Translations</span></div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;                    tmpScales[InputImageType::ImageDimension + <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = 1.0 / fixedSpacing[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;                    tmpScales[InputImageType::ImageDimension + i] = 1.0 / fixedSpacing[i];</div>
 <div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;</div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;                    lowerBounds[InputImageType::ImageDimension + <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = - m_TranslateMax * fixedSpacing[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                    upperBounds[InputImageType::ImageDimension + <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = m_TranslateMax * fixedSpacing[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;                    lowerBounds[InputImageType::ImageDimension + i] = - m_TranslateMax * fixedSpacing[i];</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                    upperBounds[InputImageType::ImageDimension + i] = m_TranslateMax * fixedSpacing[i];</div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;</div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;                    <span class="comment">// Scales</span></div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;                    tmpScales[2 * InputImageType::ImageDimension + <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = m_SearchRadius / m_SearchScaleRadius;</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;                    tmpScales[2 * InputImageType::ImageDimension + i] = m_SearchRadius / m_SearchScaleRadius;</div>
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;</div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;                    lowerBounds[2 * InputImageType::ImageDimension + <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = - log (m_ScaleMax);</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;                    upperBounds[2 * InputImageType::ImageDimension + <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = log (m_ScaleMax);</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;                    lowerBounds[2 * InputImageType::ImageDimension + i] = - log (m_ScaleMax);</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;                    upperBounds[2 * InputImageType::ImageDimension + i] = log (m_ScaleMax);</div>
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;</div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;                    <span class="comment">// Skews</span></div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;                    tmpScales[3 * InputImageType::ImageDimension + <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = m_SearchRadius * 180.0 / (m_SearchSkewRadius * M_PI);</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;                    tmpScales[3 * InputImageType::ImageDimension + i] = m_SearchRadius * 180.0 / (m_SearchSkewRadius * M_PI);</div>
 <div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;                    lowerBounds[3 * InputImageType::ImageDimension + <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = - m_SkewMax * M_PI / 180.0;</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;                    upperBounds[3 * InputImageType::ImageDimension + <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = m_SkewMax * M_PI / 180.0;</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;                    lowerBounds[3 * InputImageType::ImageDimension + i] = - m_SkewMax * M_PI / 180.0;</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;                    upperBounds[3 * InputImageType::ImageDimension + i] = m_SkewMax * M_PI / 180.0;</div>
 <div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;                }</div>
 <div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;            }</div>
 <div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;</div>
@@ -794,22 +794,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;            <span class="keyword">typename</span> InputImageType::DirectionType fixedDirection = m_FixedImage-&gt;GetDirection();</div>
 <div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;</div>
 <div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;            vnl_matrix &lt;double&gt; geometry(InputImageType::ImageDimension,InputImageType::ImageDimension);</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; InputImageType::ImageDimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; InputImageType::ImageDimension;++i)</div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;            {</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;                <span class="keywordtype">double</span> tmpVoxSize = fixedSpacing[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;                <span class="keywordtype">double</span> tmpVoxSize = fixedSpacing[i];</div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; InputImageType::ImageDimension;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;                    geometry(<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>,<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>) = tmpVoxSize*fixedDirection(<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>,<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>);</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; InputImageType::ImageDimension;++j)</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;                    geometry(j,i) = tmpVoxSize*fixedDirection(j,i);</div>
 <div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;            }</div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;</div>
 <div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;            tmpOpt-&gt;SetGeometry(geometry);</div>
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;</div>
 <div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;            LocalOptimizerType::ScalesType tmpScales(InputImageType::ImageDimension);</div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; steps.Size(); ++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; steps.Size(); ++i)</div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;            {</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;                steps[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = m_SearchRadius;</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                tmpScales[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = m_StepSize;</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;                steps[i] = m_SearchRadius;</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                tmpScales[i] = m_StepSize;</div>
 <div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;            }</div>
 <div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;</div>
 <div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;            tmpOpt-&gt;SetGeometry(m_Geometry);</div>
@@ -1013,11 +1013,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;        m_Geometry.set_size(TInputImage::ImageDimension,TInputImage::ImageDimension);</div>
 <div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;        m_Geometry.set_identity();</div>
 <div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; TInputImage::ImageDimension;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; TInputImage::ImageDimension;++j)</div>
 <div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;        {</div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;            <span class="keywordtype">double</span> spacing = m_FixedImage-&gt;GetSpacing()[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; TInputImage::ImageDimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;                m_Geometry(<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>,<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>) = spacing * m_FixedImage-&gt;GetDirection()(<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>,<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>);</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;            <span class="keywordtype">double</span> spacing = m_FixedImage-&gt;GetSpacing()[j];</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TInputImage::ImageDimension;++i)</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;                m_Geometry(j,i) = spacing * m_FixedImage-&gt;GetDirection()(j,i);</div>
 <div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;        }</div>
 <div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;</div>
 <div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;        this-&gt;Modified();</div>
@@ -1041,7 +1041,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;}</div>
 <div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;</div>
 <div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;<span class="keyword">const</span> <a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a></div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;<span class="keyword">const</span> std::string</div>
 <div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;<a class="code" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a39cfd3031925550b14f248d60164a762">TensorBlockMatchingBaseRegistrationMethod&lt;TInputImage&gt;</a></div>
 <div class="line"><a name="l00967"></a><span class="lineno"><a class="line" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a39cfd3031925550b14f248d60164a762">  967</a></span>&#160;<a class="code" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a39cfd3031925550b14f248d60164a762">::GetStopConditionDescription</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;<span class="keyword"></span>{</div>
@@ -1049,13 +1049,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;}</div>
 <div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;</div>
 <div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;} <span class="comment">// end namespace anima</span></div>
-<div class="ttc" id="load__untouch__nii_8m_html_a33c2e9f764beb522ead31ce2394a933a"><div class="ttname"><a href="load__untouch__nii_8m.html#a33c2e9f764beb522ead31ce2394a933a">m</a></div><div class="ttdeci">Load NIFTI or ANALYZE but not applying any appropriate affine geometric transform or voxel intensity scaling Although according to NIFTI all those header information are supposed to be applied to the loaded NIFTI there are some situations that people do want to leave the original NIFTI header and data untouched They will probably just use MATLAB to do certain image processing regardless of image and to save data back with the same NIfTI header Since this program is only served for those please use it together with save_untouch_nii m</div><div class="ttdef"><b>Definition:</b> <a href="load__untouch__nii_8m_source.html#l00001">load_untouch_nii.m:1</a></div></div>
 <div class="ttc" id="classCommandIterationUpdate_html_a07d09836044e93fd8693d947d77a58a5"><div class="ttname"><a href="classCommandIterationUpdate.html#a07d09836044e93fd8693d947d77a58a5">CommandIterationUpdate::Pointer</a></div><div class="ttdeci">itk::SmartPointer&lt; Self &gt; Pointer</div><div class="ttdef"><b>Definition:</b> <a href="animaTensorBlockMatchingBaseRegistrationMethod_8hxx_source.html#l00035">animaTensorBlockMatchingBaseRegistrationMethod.hxx:35</a></div></div>
 <div class="ttc" id="classanima_1_1TensorBlockMatchingBaseRegistrationMethod_html_ab8a0c811fbd41897af05d98b3e6c73e6"><div class="ttname"><a href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ab8a0c811fbd41897af05d98b3e6c73e6">anima::TensorBlockMatchingBaseRegistrationMethod::DataObjectPointerArraySizeType</a></div><div class="ttdeci">itk::ProcessObject::DataObjectPointerArraySizeType DataObjectPointerArraySizeType</div><div class="ttdef"><b>Definition:</b> <a href="animaTensorBlockMatchingBaseRegistrationMethod_8h_source.html#l00202">animaTensorBlockMatchingBaseRegistrationMethod.h:202</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_abf2bc2545a4a5f5683d9ef3ed0d977e0"><div class="ttname"><a href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a></div><div class="ttdeci">j</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00231">reslice_nii.m:231</a></div></div>
 <div class="ttc" id="classanima_1_1TensorBlockMatchingBaseRegistrationMethod_html_a6734a69ec8b345bd03e211f90d369003"><div class="ttname"><a href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a6734a69ec8b345bd03e211f90d369003">anima::TensorBlockMatchingBaseRegistrationMethod::ThreadedMatching</a></div><div class="ttdeci">static ITK_THREAD_RETURN_TYPE ThreadedMatching(void *arg)</div><div class="ttdef"><b>Definition:</b> <a href="animaTensorBlockMatchingBaseRegistrationMethod_8hxx_source.html#l00422">animaTensorBlockMatchingBaseRegistrationMethod.hxx:422</a></div></div>
 <div class="ttc" id="animaPyramidalDenseTensorSVFMatchingBridge_8h_html_abf74dfd688b4203cefa6d49f8d14403ea4a535408a4e3702d8f58520f7c755975"><div class="ttname"><a href="animaPyramidalDenseTensorSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea4a535408a4e3702d8f58520f7c755975">TensorOrientedGeneralizedCorrelation</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseTensorSVFMatchingBridge_8h_source.html#l00033">animaPyramidalDenseTensorSVFMatchingBridge.h:33</a></div></div>
-<div class="ttc" id="load__lbeig_8m_html_a338951b7e7607b65262fb051e7804d91"><div class="ttname"><a href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">string</a></div><div class="ttdeci">string</div><div class="ttdef"><b>Definition:</b> <a href="load__lbeig_8m_source.html#l00008">load_lbeig.m:8</a></div></div>
 <div class="ttc" id="animaPyramidalDenseTensorSVFMatchingBridge_8h_html_abf74dfd688b4203cefa6d49f8d14403ea38e1c35a73bcbeb2fc9b857e4d02bf51"><div class="ttname"><a href="animaPyramidalDenseTensorSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea38e1c35a73bcbeb2fc9b857e4d02bf51">TensorMeanSquares</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseTensorSVFMatchingBridge_8h_source.html#l00030">animaPyramidalDenseTensorSVFMatchingBridge.h:30</a></div></div>
 <div class="ttc" id="classanima_1_1TensorBlockMatchingBaseRegistrationMethod_html_a4a6f856a92d52d2ec876a16f2227bb63"><div class="ttname"><a href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a4a6f856a92d52d2ec876a16f2227bb63">anima::TensorBlockMatchingBaseRegistrationMethod::BaseInputTransformType</a></div><div class="ttdeci">AgregatorType::BaseInputTransformType BaseInputTransformType</div><div class="ttdef"><b>Definition:</b> <a href="animaTensorBlockMatchingBaseRegistrationMethod_8h_source.html#l00056">animaTensorBlockMatchingBaseRegistrationMethod.h:56</a></div></div>
 <div class="ttc" id="classanima_1_1SmoothingRecursiveYvvGaussianImageFilter_html"><div class="ttname"><a href="classanima_1_1SmoothingRecursiveYvvGaussianImageFilter.html">anima::SmoothingRecursiveYvvGaussianImageFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="animaSmoothingRecursiveYvvGaussianImageFilter_8h_source.html#l00016">animaSmoothingRecursiveYvvGaussianImageFilter.h:16</a></div></div>
@@ -1136,7 +1133,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1TensorMeanSquaresImageToImageMetric_html"><div class="ttname"><a href="classanima_1_1TensorMeanSquaresImageToImageMetric.html">anima::TensorMeanSquaresImageToImageMetric</a></div><div class="ttdef"><b>Definition:</b> <a href="animaTensorMeanSquaresImageToImageMetric_8h_source.html#l00011">animaTensorMeanSquaresImageToImageMetric.h:11</a></div></div>
 <div class="ttc" id="structanima_1_1TensorBlockMatchingBaseRegistrationMethod_1_1ThreadedMatchData_html"><div class="ttname"><a href="structanima_1_1TensorBlockMatchingBaseRegistrationMethod_1_1ThreadedMatchData.html">anima::TensorBlockMatchingBaseRegistrationMethod::ThreadedMatchData</a></div><div class="ttdef"><b>Definition:</b> <a href="animaTensorBlockMatchingBaseRegistrationMethod_8h_source.html#l00231">animaTensorBlockMatchingBaseRegistrationMethod.h:231</a></div></div>
 <div class="ttc" id="animaVelocityUtils_8h_html"><div class="ttname"><a href="animaVelocityUtils_8h.html">animaVelocityUtils.h</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 <div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_aa1cc1190aa1b958d686d46e0860bc836a92ee78916f31ff05ad4ae0fd4efd3309"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a92ee78916f31ff05ad4ae0fd4efd3309">Rigid</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00024">animaPyramidalDenseSVFMatchingBridge.h:24</a></div></div>
 <div class="ttc" id="animaBobyqaOptimizer_8h_html"><div class="ttname"><a href="animaBobyqaOptimizer_8h.html">animaBobyqaOptimizer.h</a></div></div>
 <div class="ttc" id="classanima_1_1SplitAffine3DTransform_html"><div class="ttname"><a href="classanima_1_1SplitAffine3DTransform.html">anima::SplitAffine3DTransform</a></div><div class="ttdef"><b>Definition:</b> <a href="animaSplitAffine3DTransform_8h_source.html#l00010">animaSplitAffine3DTransform.h:10</a></div></div>
@@ -1144,9 +1140,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:20 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

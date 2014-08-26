@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_51f6d94a1d7ee6f99a886fa26632c272.html">quantitative-mri</a></li><li class="navelem"><a class="el" href="dir_72a75b39714ab6a1c0abb1e884c34ee1.html">mr-simulation</a></li><li class="navelem"><a class="el" href="dir_116c7db5677b6a17b32eefa479b30784.html">simu_bloch_se</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_c4abb40ef761a7d0f7be931d0aa470c1.html">quantitative-mri</a></li><li class="navelem"><a class="el" href="dir_6edbe729778e82f1c19367cffffae034.html">mr-simulation</a></li><li class="navelem"><a class="el" href="dir_370ee398060a5532434467f55bc9f891.html">simu_bloch_se</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -96,89 +96,93 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="animaSimuBlochSE_8hxx.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="animaSimuBlochSE_8h.html">animaSimuBlochSE.h</a>&quot;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;itkObjectFactory.h&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;itkImageRegionIterator.h&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;itkImageRegionConstIterator.h&gt;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">namespace </span>anima</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> TImage&gt;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classanima_1_1SimuBlochSE.html#a5fcc4787799a5b753115042916bb910a">   51</a></span>&#160;<a class="code" href="classanima_1_1SimuBlochSE.html#a5fcc4787799a5b753115042916bb910a">SimuBlochSE&lt;TImage&gt;::SimuBlochSE</a>()</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    this-&gt;SetNumberOfRequiredInputs(3);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> TImage&gt;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classanima_1_1SimuBlochSE.html#a0e06ecc4d4a047bafb4b74a33c0073fd">   57</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classanima_1_1SimuBlochSE.html#a0e06ecc4d4a047bafb4b74a33c0073fd">SimuBlochSE&lt;TImage&gt;::SetInputT1</a>(<span class="keyword">const</span> TImage* T1)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    SetInput(0, const_cast&lt;TImage*&gt;(T1));</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> TImage&gt;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classanima_1_1SimuBlochSE.html#a2d27fac9c5627df622af790f8e53ff11">   63</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classanima_1_1SimuBlochSE.html#a2d27fac9c5627df622af790f8e53ff11">SimuBlochSE&lt;TImage&gt;::SetInputT2</a>(<span class="keyword">const</span> TImage* T2)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    SetInput(1, const_cast&lt;TImage*&gt;(T2));</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> TImage&gt;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classanima_1_1SimuBlochSE.html#a40356a31c2db8f7ff219a8f8f0f2ebcf">   69</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classanima_1_1SimuBlochSE.html#a40356a31c2db8f7ff219a8f8f0f2ebcf">SimuBlochSE&lt;TImage&gt;::SetInputM0</a>(<span class="keyword">const</span> TImage* M0)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;itkObjectFactory.h&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;itkImageRegionIterator.h&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;itkImageRegionConstIterator.h&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span>anima</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> TImage&gt;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classanima_1_1SimuBlochSE.html#a5fcc4787799a5b753115042916bb910a">   43</a></span>&#160;<a class="code" href="classanima_1_1SimuBlochSE.html#a5fcc4787799a5b753115042916bb910a">SimuBlochSE&lt;TImage&gt;::SimuBlochSE</a>()</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    this-&gt;SetNumberOfRequiredInputs(3);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> TImage&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classanima_1_1SimuBlochSE.html#a0e06ecc4d4a047bafb4b74a33c0073fd">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classanima_1_1SimuBlochSE.html#a0e06ecc4d4a047bafb4b74a33c0073fd">SimuBlochSE&lt;TImage&gt;::SetInputT1</a>(<span class="keyword">const</span> TImage* T1)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    SetInput(0, const_cast&lt;TImage*&gt;(T1));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> TImage&gt;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classanima_1_1SimuBlochSE.html#a2d27fac9c5627df622af790f8e53ff11">   55</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classanima_1_1SimuBlochSE.html#a2d27fac9c5627df622af790f8e53ff11">SimuBlochSE&lt;TImage&gt;::SetInputT2</a>(<span class="keyword">const</span> TImage* T2)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    SetInput(1, const_cast&lt;TImage*&gt;(T2));</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> TImage&gt;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classanima_1_1SimuBlochSE.html#a40356a31c2db8f7ff219a8f8f0f2ebcf">   61</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classanima_1_1SimuBlochSE.html#a40356a31c2db8f7ff219a8f8f0f2ebcf">SimuBlochSE&lt;TImage&gt;::SetInputM0</a>(<span class="keyword">const</span> TImage* M0)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    SetInput(2, const_cast&lt;TImage*&gt;(M0));</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> TImage&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classanima_1_1SimuBlochSE.html#a224b393d65ebd6ee55e212451e4a3159">SimuBlochSE&lt; TImage&gt;</a></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classanima_1_1SimuBlochSE.html#a224b393d65ebd6ee55e212451e4a3159">   68</a></span>&#160;<a class="code" href="classanima_1_1SimuBlochSE.html#a224b393d65ebd6ee55e212451e4a3159">::ThreadedGenerateData</a>(<span class="keyword">const</span> <a class="code" href="classanima_1_1SimuBlochSE.html#a94c7f27b77574a2d4b73c55cee84ef8e">OutputImageRegionType</a> &amp;outputRegionForThread,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                       itk::ThreadIdType threadId)</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    SetInput(2, const_cast&lt;TImage*&gt;(M0));</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> TImage&gt;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classanima_1_1SimuBlochSE.html#a224b393d65ebd6ee55e212451e4a3159">SimuBlochSE&lt; TImage&gt;</a></div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classanima_1_1SimuBlochSE.html#a224b393d65ebd6ee55e212451e4a3159">   76</a></span>&#160;<a class="code" href="classanima_1_1SimuBlochSE.html#a224b393d65ebd6ee55e212451e4a3159">::ThreadedGenerateData</a>(<span class="keyword">const</span> <a class="code" href="classanima_1_1SimuBlochSE.html#a94c7f27b77574a2d4b73c55cee84ef8e">OutputImageRegionType</a> &amp;outputRegionForThread,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                       itk::ThreadIdType threadId)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">typename</span> TImage::ConstPointer T1 = this-&gt;GetInput(0);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">typename</span> TImage::ConstPointer T2 = this-&gt;GetInput(1);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">typename</span> TImage::ConstPointer M0 = this-&gt;GetInput(2);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    itk::ImageRegionIterator&lt;TImage&gt; outputIterator(this-&gt;GetOutput(), outputRegionForThread);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    itk::ImageRegionConstIterator&lt;TImage&gt; inputIteratorT1(T1, outputRegionForThread);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    itk::ImageRegionConstIterator&lt;TImage&gt; inputIteratorT2(T2, outputRegionForThread);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    itk::ImageRegionConstIterator&lt;TImage&gt; inputIteratorM0(M0, outputRegionForThread);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// For each voxel, calculate the signal of Spin Echo using bloch equation</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">while</span>(!outputIterator.IsAtEnd())</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">if</span> ( (inputIteratorT1.Get() &lt;= 0) || ( inputIteratorT2.Get() &lt;=0))</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            outputIterator.Set(0);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            outputIterator.Set(inputIteratorM0.Get() * (1-exp(- m_TR / inputIteratorT1.Get())) * exp(- m_TE / inputIteratorT2.Get()) );</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        ++inputIteratorT1;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        ++inputIteratorT2;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        ++inputIteratorM0;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        ++outputIterator;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}<span class="comment">// end of namespace anima</span></div>
-<div class="ttc" id="classanima_1_1SimuBlochSE_html_a5fcc4787799a5b753115042916bb910a"><div class="ttname"><a href="classanima_1_1SimuBlochSE.html#a5fcc4787799a5b753115042916bb910a">anima::SimuBlochSE::SimuBlochSE</a></div><div class="ttdeci">SimuBlochSE()</div><div class="ttdef"><b>Definition:</b> <a href="animaSimuBlochSE_8hxx_source.html#l00051">animaSimuBlochSE.hxx:51</a></div></div>
-<div class="ttc" id="animaSimuBlochSE_8h_html"><div class="ttname"><a href="animaSimuBlochSE_8h.html">animaSimuBlochSE.h</a></div></div>
-<div class="ttc" id="classanima_1_1SimuBlochSE_html_a0e06ecc4d4a047bafb4b74a33c0073fd"><div class="ttname"><a href="classanima_1_1SimuBlochSE.html#a0e06ecc4d4a047bafb4b74a33c0073fd">anima::SimuBlochSE::SetInputT1</a></div><div class="ttdeci">void SetInputT1(const TImage *T1)</div><div class="ttdef"><b>Definition:</b> <a href="animaSimuBlochSE_8hxx_source.html#l00057">animaSimuBlochSE.hxx:57</a></div></div>
-<div class="ttc" id="classanima_1_1SimuBlochSE_html_a224b393d65ebd6ee55e212451e4a3159"><div class="ttname"><a href="classanima_1_1SimuBlochSE.html#a224b393d65ebd6ee55e212451e4a3159">anima::SimuBlochSE::ThreadedGenerateData</a></div><div class="ttdeci">virtual void ThreadedGenerateData(const OutputImageRegionType &amp;outputRegionForThread, itk::ThreadIdType threadId)</div><div class="ttdef"><b>Definition:</b> <a href="animaSimuBlochSE_8hxx_source.html#l00076">animaSimuBlochSE.hxx:76</a></div></div>
-<div class="ttc" id="classanima_1_1SimuBlochSE_html_a2d27fac9c5627df622af790f8e53ff11"><div class="ttname"><a href="classanima_1_1SimuBlochSE.html#a2d27fac9c5627df622af790f8e53ff11">anima::SimuBlochSE::SetInputT2</a></div><div class="ttdeci">void SetInputT2(const TImage *T2)</div><div class="ttdef"><b>Definition:</b> <a href="animaSimuBlochSE_8hxx_source.html#l00063">animaSimuBlochSE.hxx:63</a></div></div>
-<div class="ttc" id="classanima_1_1SimuBlochSE_html_a40356a31c2db8f7ff219a8f8f0f2ebcf"><div class="ttname"><a href="classanima_1_1SimuBlochSE.html#a40356a31c2db8f7ff219a8f8f0f2ebcf">anima::SimuBlochSE::SetInputM0</a></div><div class="ttdeci">void SetInputM0(const TImage *M0)</div><div class="ttdef"><b>Definition:</b> <a href="animaSimuBlochSE_8hxx_source.html#l00069">animaSimuBlochSE.hxx:69</a></div></div>
-<div class="ttc" id="classanima_1_1SimuBlochSE_html_a94c7f27b77574a2d4b73c55cee84ef8e"><div class="ttname"><a href="classanima_1_1SimuBlochSE.html#a94c7f27b77574a2d4b73c55cee84ef8e">anima::SimuBlochSE::OutputImageRegionType</a></div><div class="ttdeci">Superclass::OutputImageRegionType OutputImageRegionType</div><div class="ttdef"><b>Definition:</b> <a href="animaSimuBlochSE_8h_source.html#l00056">animaSimuBlochSE.h:56</a></div></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typename</span> TImage::ConstPointer T1 = this-&gt;GetInput(0);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">typename</span> TImage::ConstPointer T2 = this-&gt;GetInput(1);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">typename</span> TImage::ConstPointer M0 = this-&gt;GetInput(2);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    itk::ImageRegionIterator&lt;TImage&gt; outputIterator(this-&gt;GetOutput(), outputRegionForThread);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    itk::ImageRegionConstIterator&lt;TImage&gt; inputIteratorT1(T1, outputRegionForThread);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    itk::ImageRegionConstIterator&lt;TImage&gt; inputIteratorT2(T2, outputRegionForThread);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    itk::ImageRegionConstIterator&lt;TImage&gt; inputIteratorM0(M0, outputRegionForThread);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// For each voxel, calculate the signal of Spin Echo using bloch equation</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">while</span>(!outputIterator.IsAtEnd())</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span> ( (inputIteratorT1.Get() &lt;= 0) || ( inputIteratorT2.Get() &lt;=0))</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            outputIterator.Set(0);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            outputIterator.Set(inputIteratorM0.Get() * (1-exp(- m_TR / inputIteratorT1.Get())) * exp(- m_TE / inputIteratorT2.Get()) );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        ++inputIteratorT1;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        ++inputIteratorT2;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        ++inputIteratorM0;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        ++outputIterator;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}<span class="comment">// end of namespace anima</span></div>
+<div class="ttc" id="classanima_1_1SimuBlochSE_html_a5fcc4787799a5b753115042916bb910a"><div class="ttname"><a href="classanima_1_1SimuBlochSE.html#a5fcc4787799a5b753115042916bb910a">anima::SimuBlochSE::SimuBlochSE</a></div><div class="ttdeci">SimuBlochSE()</div><div class="ttdef"><b>Definition:</b> <a href="animaSimuBlochSE_8hxx_source.html#l00043">animaSimuBlochSE.hxx:43</a></div></div>
+<div class="ttc" id="classanima_1_1SimuBlochSE_html_a0e06ecc4d4a047bafb4b74a33c0073fd"><div class="ttname"><a href="classanima_1_1SimuBlochSE.html#a0e06ecc4d4a047bafb4b74a33c0073fd">anima::SimuBlochSE::SetInputT1</a></div><div class="ttdeci">void SetInputT1(const TImage *T1)</div><div class="ttdef"><b>Definition:</b> <a href="animaSimuBlochSE_8hxx_source.html#l00049">animaSimuBlochSE.hxx:49</a></div></div>
+<div class="ttc" id="classanima_1_1SimuBlochSE_html_a224b393d65ebd6ee55e212451e4a3159"><div class="ttname"><a href="classanima_1_1SimuBlochSE.html#a224b393d65ebd6ee55e212451e4a3159">anima::SimuBlochSE::ThreadedGenerateData</a></div><div class="ttdeci">virtual void ThreadedGenerateData(const OutputImageRegionType &amp;outputRegionForThread, itk::ThreadIdType threadId)</div><div class="ttdef"><b>Definition:</b> <a href="animaSimuBlochSE_8hxx_source.html#l00068">animaSimuBlochSE.hxx:68</a></div></div>
+<div class="ttc" id="classanima_1_1SimuBlochSE_html_a2d27fac9c5627df622af790f8e53ff11"><div class="ttname"><a href="classanima_1_1SimuBlochSE.html#a2d27fac9c5627df622af790f8e53ff11">anima::SimuBlochSE::SetInputT2</a></div><div class="ttdeci">void SetInputT2(const TImage *T2)</div><div class="ttdef"><b>Definition:</b> <a href="animaSimuBlochSE_8hxx_source.html#l00055">animaSimuBlochSE.hxx:55</a></div></div>
+<div class="ttc" id="classanima_1_1SimuBlochSE_html_a40356a31c2db8f7ff219a8f8f0f2ebcf"><div class="ttname"><a href="classanima_1_1SimuBlochSE.html#a40356a31c2db8f7ff219a8f8f0f2ebcf">anima::SimuBlochSE::SetInputM0</a></div><div class="ttdeci">void SetInputM0(const TImage *M0)</div><div class="ttdef"><b>Definition:</b> <a href="animaSimuBlochSE_8hxx_source.html#l00061">animaSimuBlochSE.hxx:61</a></div></div>
+<div class="ttc" id="classanima_1_1SimuBlochSE_html_a94c7f27b77574a2d4b73c55cee84ef8e"><div class="ttname"><a href="classanima_1_1SimuBlochSE.html#a94c7f27b77574a2d4b73c55cee84ef8e">anima::SimuBlochSE::OutputImageRegionType</a></div><div class="ttdeci">Superclass::OutputImageRegionType OutputImageRegionType</div><div class="ttdef"><b>Definition:</b> <a href="animaSimuBlochSE_8h_source.html#l00017">animaSimuBlochSE.h:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:20 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

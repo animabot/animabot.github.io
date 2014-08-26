@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_1cdaeaec24fcf43e9106b3f77915644e.html">arithmetic</a></li><li class="navelem"><a class="el" href="dir_832010975f99a32c8a2fb5583ca9cb53.html">average_linear_transforms</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_ce38a050e5ccfc0578ca6faf3955a9c3.html">arithmetic</a></li><li class="navelem"><a class="el" href="dir_87a9904614a070ee515a8d0c911436c8.html">average_linear_transforms</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -113,7 +113,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        cmd.parse(argc,argv);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; <a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; e)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; e.error() &lt;&lt; <span class="stringliteral">&quot;for argument &quot;</span> &lt;&lt; e.argId() &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">return</span>(1);</div>
@@ -164,11 +164,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        workMatrix.set_identity();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; Dimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; Dimension;++i)</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            workMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,Dimension) = trsf-&gt;GetOffset()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; Dimension;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                workMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) = trsf-&gt;GetMatrix()(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            workMatrix(i,Dimension) = trsf-&gt;GetOffset()[i];</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; Dimension;++j)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                workMatrix(i,j) = trsf-&gt;GetMatrix()(i,j);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        logWorkMatrix += <a class="code" href="namespaceanima.html#a9fcd63d3c884d70f4b05017ce3ee1c5d">anima::GetLogarithm</a>(workMatrix);</div>
@@ -185,11 +185,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    MatrixTransformType::OffsetType outOffset;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="namespaceanima.html#aa03e48b97dce00f55539919c31f97cec">MatrixTransformType::MatrixType</a> outMatrix;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; Dimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; Dimension;++i)</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        outOffset[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = workMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,Dimension);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; Dimension;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            outMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) = workMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        outOffset[i] = workMatrix(i,Dimension);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; Dimension;++j)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            outMatrix(i,j) = workMatrix(i,j);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    outTrsf-&gt;SetMatrix(outMatrix);</div>
@@ -203,20 +203,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
-<div class="ttc" id="reslice__nii_8m_html_abf2bc2545a4a5f5683d9ef3ed0d977e0"><div class="ttname"><a href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a></div><div class="ttdeci">j</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00231">reslice_nii.m:231</a></div></div>
-<div class="ttc" id="xform__nii_8m_html_a5389c938d8f439f89bc6549e6a18285d"><div class="ttname"><a href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a></div><div class="ttdeci">hdr.dime.xyzt_units, 7 e()</div></div>
 <div class="ttc" id="namespaceanima_html_a56005f620363d6e825943faa42fdfd89"><div class="ttname"><a href="namespaceanima.html#a56005f620363d6e825943faa42fdfd89">anima::GetExponential</a></div><div class="ttdeci">vnl_matrix&lt; T &gt; GetExponential(const vnl_matrix&lt; T &gt; &amp;m, const int numApprox=1)</div><div class="ttdoc">Computation of the matrix exponential. Algo: classical scaling and squaring, as in Matlab...</div><div class="ttdef"><b>Definition:</b> <a href="animaMatrixLogExp_8hxx_source.html#l00199">animaMatrixLogExp.hxx:199</a></div></div>
 <div class="ttc" id="animaMatrixLogExp_8h_html"><div class="ttname"><a href="animaMatrixLogExp_8h.html">animaMatrixLogExp.h</a></div></div>
 <div class="ttc" id="animaAverageLinearTransforms_8cxx_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="animaAverageLinearTransforms_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="animaAverageLinearTransforms_8cxx_source.html#l00008">animaAverageLinearTransforms.cxx:8</a></div></div>
 <div class="ttc" id="namespaceanima_html_a9fcd63d3c884d70f4b05017ce3ee1c5d"><div class="ttname"><a href="namespaceanima.html#a9fcd63d3c884d70f4b05017ce3ee1c5d">anima::GetLogarithm</a></div><div class="ttdeci">vnl_matrix&lt; T &gt; GetLogarithm(const vnl_matrix&lt; T &gt; &amp;m, const double precision=0.00000000001, const int numApprox=1)</div><div class="ttdoc">Computation of the matrix logarithm. Algo: inverse scaling and squaring, variant proposed by Cheng et...</div><div class="ttdef"><b>Definition:</b> <a href="animaMatrixLogExp_8hxx_source.html#l00146">animaMatrixLogExp.hxx:146</a></div></div>
 <div class="ttc" id="namespaceanima_html_aa03e48b97dce00f55539919c31f97cec"><div class="ttname"><a href="namespaceanima.html#aa03e48b97dce00f55539919c31f97cec">anima::MatrixType</a></div><div class="ttdeci">itk::Matrix&lt; double, 3, 3 &gt; MatrixType</div><div class="ttdef"><b>Definition:</b> <a href="animaMatrixOperations_8h_source.html#l00008">animaMatrixOperations.h:8</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:47 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

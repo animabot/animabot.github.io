@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['emgm_2em',['emgm.m',['../emgm_8m.html',1,'']]]
+  ['guiarguments_2eh',['GuiArguments.h',['../GuiArguments_8h.html',1,'']]]
 ];

@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_51e3291a7a6553fd1a91abcb1b3d36a4.html">optimizers</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_4b8637a08b46ddef05ef2c04b31564d6.html">optimizers</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -118,7 +118,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    m_NumberSamplingPoints = 0; <span class="comment">// This value if still at 0 at optimization time, will be set at Parameters+2 at initialisation (minimum number of sampling point required for optimisation).</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    m_RhoBegin = 5;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    m_RhoEnd = 1<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-3;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    m_RhoEnd = 1e-3;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    m_Stop = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
@@ -154,7 +154,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (!this-&gt;m_ScalesInitialized)</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="classanima_1_1NewuoaOptimizer.html#afab31a40b4dc374f9109084828ff4b7d">NewuoaOptimizer::ParametersType</a> sc(m_SpaceDimension);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_SpaceDimension; ++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>) sc[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = 1.;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; m_SpaceDimension; ++i) sc[i] = 1.;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        this-&gt;SetScales(sc);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
@@ -164,7 +164,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ip = this-&gt;GetInitialPosition();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">double</span> *p = <span class="keyword">new</span> <span class="keywordtype">double</span>[m_SpaceDimension];</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_SpaceDimension; ++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>) p[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = ip[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] * this-&gt;GetScales()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; m_SpaceDimension; ++i) p[i] = ip[i] * this-&gt;GetScales()[i];</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">double</span> av = 2 * m_SpaceDimension + 1;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
@@ -183,14 +183,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    m_CurrentIteration = currIter;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    this-&gt;m_CurrentPosition = <a class="code" href="classanima_1_1NewuoaOptimizer.html#afab31a40b4dc374f9109084828ff4b7d">NewuoaOptimizer::ParametersType</a>(m_SpaceDimension);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_SpaceDimension; ++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>) m_CurrentPosition[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = p[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] / this-&gt;GetScales()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; m_SpaceDimension; ++i) m_CurrentPosition[i] = p[i] / this-&gt;GetScales()[i];</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">delete</span>[] w;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">delete</span>[] p;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">const</span> <a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">const</span> std::string</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<a class="code" href="classanima_1_1NewuoaOptimizer.html#aaf4340c4c5ae2719dec3f40af506b68f">NewuoaOptimizer</a></div>
 <div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classanima_1_1NewuoaOptimizer.html#aaf4340c4c5ae2719dec3f40af506b68f">  101</a></span>&#160;<a class="code" href="classanima_1_1NewuoaOptimizer.html#aaf4340c4c5ae2719dec3f40af506b68f">::GetStopConditionDescription</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword"></span>{</div>
@@ -319,11 +319,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="comment">/* Local variables */</span></div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">double</span> f = 0;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> i__, <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>, <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>, ih, nf, nh, ip, jp;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> i__, j, k, ih, nf, nh, ip, jp;</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="comment">//long size, size2, bsize;</span></div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">double</span> dx;</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> np, nfm;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">double</span> one;</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> idz;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">double</span> dsq, rho = 0;</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> ipt = 0,jpt = 0;</div>
@@ -414,11 +414,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    i__1 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            ;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        xbase[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] = x[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++j) {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        xbase[j] = x[j];</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        i__2 = npt;</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++k) {</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            xpt[k + j * xpt_dim1] = zero;</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        }</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
@@ -436,10 +436,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    }</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    i__2 = npt;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        pq[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] = zero;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++k) {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        pq[k] = zero;</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        i__1 = nptm;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++j) {</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            zmat[k + j * zmat_dim1] = zero;</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        }</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    }</div>
@@ -498,8 +498,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    i__1 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            ;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        x[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] = xpt[nf + j * xpt_dim1] + xbase[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++j) {</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        x[j] = xpt[nf + j * xpt_dim1] + xbase[j];</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    }</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="keywordflow">goto</span> L310;</div>
@@ -633,16 +633,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="keywordflow">if</span> (dsq &lt;= xoptsq * .001) {</div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        tempq = xoptsq * .25;</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        i__1 = npt;</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;            sum = zero;</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;            i__2 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;                    ;</div>
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;            <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__2; ++i__) {</div>
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;                sum += xpt[k + i__ * xpt_dim1] * xopt[i__];</div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;            }</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;            temp = pq[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] * sum;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;            temp = pq[k] * sum;</div>
 <div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;            sum -= half * xoptsq;</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;            w[npt + <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] = sum;</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;            w[npt + k] = sum;</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;            i__2 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;                    ;</div>
 <div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;            <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__2; ++i__) {</div>
@@ -652,8 +652,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;                w[i__] = sum * xpt[k + i__ * xpt_dim1] + tempq * xopt[i__];</div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                ip = npt + i__;</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;                i__3 = i__;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                <span class="keywordflow">for</span> (j = 1; j &lt;= i__3; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                    bmat[ip + j * bmat_dim1] = bmat[ip + j * bmat_dim1] + vlag[i__] * w[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] + w[i__] * vlag[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                <span class="keywordflow">for</span> (j = 1; j &lt;= i__3; ++j) {</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                    bmat[ip + j * bmat_dim1] = bmat[ip + j * bmat_dim1] + vlag[i__] * w[j] + w[i__] * vlag[j];</div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                }</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;            }</div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        }</div>
@@ -661,7 +661,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;        <span class="comment">/*     Then the revisions of BMAT that depend on ZMAT are calculated. */</span></div>
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;</div>
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;        i__3 = nptm;</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__3; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__3; ++k) {</div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;            sumz = zero;</div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;            i__2 = npt;</div>
 <div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;            <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__2; ++i__) {</div>
@@ -670,13 +670,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;            }</div>
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;            i__2 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;                    ;</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                sum = tempq * sumz * xopt[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                sum = tempq * sumz * xopt[j];</div>
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;                i__1 = npt;</div>
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;                <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__1; ++i__) {</div>
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                    sum += w[i__] * xpt[i__ + j * xpt_dim1];</div>
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                }</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;                vlag[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] = sum;</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;                vlag[j] = sum;</div>
 <div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;                <span class="keywordflow">if</span> (k &lt; idz) {</div>
 <div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;                    sum = -sum;</div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;                }</div>
@@ -694,8 +694,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;                    temp = -temp;</div>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;                }</div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;                i__2 = i__;</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;                <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;                    bmat[ip + j * bmat_dim1] += temp * vlag[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;                <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;                    bmat[ip + j * bmat_dim1] += temp * vlag[j];</div>
 <div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;                }</div>
 <div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;            }</div>
 <div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;        }</div>
@@ -707,29 +707,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;        ih = 0;</div>
 <div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;        i__2 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;                ;</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;            w[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] = zero;</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;            w[j] = zero;</div>
 <div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;            i__1 = npt;</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;            <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                w[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] += pq[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] * xpt[k + j * xpt_dim1];</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;                xpt[k + j * xpt_dim1] -= half * xopt[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;            <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                w[j] += pq[k] * xpt[k + j * xpt_dim1];</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;                xpt[k + j * xpt_dim1] -= half * xopt[j];</div>
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;            }</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;            i__1 = <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>;</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;            i__1 = j;</div>
 <div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;            <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__1; ++i__) {</div>
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;                ++ih;</div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;                <span class="keywordflow">if</span> (i__ &lt; j) {</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                    gq[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] += hq[ih] * xopt[i__];</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;                    gq[j] += hq[ih] * xopt[i__];</div>
 <div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;                }</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                gq[i__] += hq[ih] * xopt[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;                hq[ih] = hq[ih] + w[i__] * xopt[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] + xopt[i__] * w[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;                gq[i__] += hq[ih] * xopt[j];</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;                hq[ih] = hq[ih] + w[i__] * xopt[j] + xopt[i__] * w[j];</div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;                bmat[npt + i__ + j * bmat_dim1] = bmat[npt + j + i__ * bmat_dim1];</div>
 <div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;            }</div>
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;        }</div>
 <div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        i__1 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;                ;</div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;            xbase[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] += xopt[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;            xopt[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] = zero;</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++j) {</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;            xbase[j] += xopt[j];</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;            xopt[j] = zero;</div>
 <div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        }</div>
 <div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        xoptsq = zero;</div>
 <div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;    }</div>
@@ -747,23 +747,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    <span class="comment">/*     components of W_check will be held in W. */</span></div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;</div>
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    i__1 = npt;</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;        suma = zero;</div>
 <div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;        sumb = zero;</div>
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;        sum = zero;</div>
 <div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;        i__2 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;                ;</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;            suma += xpt[k + j * xpt_dim1] * d__[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;            sumb += xpt[k + j * xpt_dim1] * xopt[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;            sum += bmat[k + j * bmat_dim1] * d__[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;            suma += xpt[k + j * xpt_dim1] * d__[j];</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;            sumb += xpt[k + j * xpt_dim1] * xopt[j];</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;            sum += bmat[k + j * bmat_dim1] * d__[j];</div>
 <div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        }</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;        w[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] = suma * (half * suma + sumb);</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;        vlag[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] = sum;</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;        w[k] = suma * (half * suma + sumb);</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;        vlag[k] = sum;</div>
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    }</div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    beta = zero;</div>
 <div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    i__1 = nptm;</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
 <div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;        sum = zero;</div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;        i__2 = npt;</div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__2; ++i__) {</div>
@@ -784,25 +784,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    dx = zero;</div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    i__2 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;            ;</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;        sum = zero;</div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        i__1 = npt;</div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;        <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__1; ++i__) {</div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;            sum += w[i__] * bmat[i__ + j * bmat_dim1];</div>
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        }</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        bsum += sum * d__[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        jp = npt + <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>;</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        bsum += sum * d__[j];</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        jp = npt + j;</div>
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        i__1 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;                ;</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;            sum += bmat[jp + k * bmat_dim1] * d__[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>];</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;            sum += bmat[jp + k * bmat_dim1] * d__[k];</div>
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;        }</div>
 <div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        vlag[jp] = sum;</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;        bsum += sum * d__[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        dx += d__[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] * xopt[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;        bsum += sum * d__[j];</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        dx += d__[j] * xopt[j];</div>
 <div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    }</div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    beta = dx * dx + dsq * (xoptsq + dx + dx + half * dsq) + beta - bsum;</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    vlag[kopt] += <a class="code" href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a>;</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    vlag[kopt] += one;</div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;</div>
 <div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;</div>
 <div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    <span class="comment">/*     If KNEW is positive and if the cancellation in DENOM is unacceptable, */</span></div>
@@ -851,7 +851,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    }</div>
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;</div>
 <div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    <span class="comment">// Call to cost function</span></div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_SpaceDimension; ++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>) px[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = x[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>+1] / this-&gt;GetScales()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; m_SpaceDimension; ++i) px[i] = x[i+1] / this-&gt;GetScales()[i];</div>
 <div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    <span class="comment">//   f = cost(&amp;x[1]);//*fun;</span></div>
 <div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;</div>
 <div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    <span class="keywordflow">try</span> {</div>
@@ -883,12 +883,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    ih = 0;</div>
 <div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    i__2 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;            ;</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        vquad += d__[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] * gq[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;        i__1 = <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>;</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        vquad += d__[j] * gq[j];</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;        i__1 = j;</div>
 <div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__1; ++i__) {</div>
 <div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;            ++ih;</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;            temp = d__[i__] * xnew[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] + d__[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] * xopt[i__];</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;            temp = d__[i__] * xnew[j] + d__[j] * xopt[i__];</div>
 <div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;            <span class="keywordflow">if</span> (i__ == j) {</div>
 <div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;                temp = half * temp;</div>
 <div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;            }</div>
@@ -896,8 +896,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;        }</div>
 <div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;    }</div>
 <div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;    i__1 = npt;</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;        vquad += pq[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] * w[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>];</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;        vquad += pq[k] * w[k];</div>
 <div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;    }</div>
 <div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    diff = f - fopt - vquad;</div>
 <div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    diffc = diffb;</div>
@@ -962,30 +962,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;    detrat = zero;</div>
 <div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;    <span class="keywordflow">if</span> (f &gt;= fsave) {</div>
 <div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;        ktemp = kopt;</div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        detrat = <a class="code" href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a>;</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        detrat = one;</div>
 <div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    }</div>
 <div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    i__1 = npt;</div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
 <div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;        hdiag = zero;</div>
 <div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;        i__2 = nptm;</div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;            temp = <a class="code" href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a>;</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;            temp = one;</div>
 <div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;            <span class="keywordflow">if</span> (j &lt; idz) {</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;                temp = -<a class="code" href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a>;</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;                temp = -one;</div>
 <div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;            }</div>
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;            <span class="comment">/* Computing 2nd power */</span></div>
 <div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;            d__1 = zmat[k + j * zmat_dim1];</div>
 <div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;            hdiag += temp * (d__1 * d__1);</div>
 <div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;        }</div>
 <div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;        <span class="comment">/* Computing 2nd power */</span></div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        d__2 = vlag[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>];</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        d__2 = vlag[k];</div>
 <div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;        temp = (d__1 = beta * hdiag + d__2 * d__2, std::abs(d__1));</div>
 <div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        distsq = zero;</div>
 <div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;        i__2 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;                ;</div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
 <div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;            <span class="comment">/* Computing 2nd power */</span></div>
-<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;            d__1 = xpt[k + j * xpt_dim1] - xopt[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;            d__1 = xpt[k + j * xpt_dim1] - xopt[j];</div>
 <div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;            distsq += d__1 * d__1;</div>
 <div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;        }</div>
 <div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;        <span class="keywordflow">if</span> (distsq &gt; rhosq) {</div>
@@ -995,7 +995,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;        }</div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        <span class="keywordflow">if</span> (temp &gt; detrat &amp;&amp; k != ktemp) {</div>
 <div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;            detrat = temp;</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;            knew = <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>;</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;            knew = k;</div>
 <div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        }</div>
 <div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;    }</div>
 <div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;    <span class="keywordflow">if</span> (knew == 0) {</div>
@@ -1015,7 +1015,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__1; ++i__) {</div>
 <div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;        temp = pq[knew] * xpt[knew + i__ * xpt_dim1];</div>
 <div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;        i__2 = i__;</div>
-<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
 <div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;            ++ih;</div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;            hq[ih] += temp * xpt[knew + j * xpt_dim1];</div>
 <div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;        }</div>
@@ -1027,14 +1027,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;    <span class="comment">/*     vector of the model. Also include the new interpolation point. */</span></div>
 <div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;</div>
 <div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;    i__2 = nptm;</div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
 <div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;        temp = diff * zmat[knew + j * zmat_dim1];</div>
 <div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;        <span class="keywordflow">if</span> (j &lt; idz) {</div>
 <div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;            temp = -temp;</div>
 <div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;        }</div>
 <div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;        i__1 = npt;</div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
-<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;            pq[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] += temp * zmat[k + j * zmat_dim1];</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;            pq[k] += temp * zmat[k + j * zmat_dim1];</div>
 <div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;        }</div>
 <div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;    }</div>
 <div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;    gqsq = zero;</div>
@@ -1057,8 +1057,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;            itest = 0;</div>
 <div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;            i__1 = npt;</div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;            <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;                vlag[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] = fval[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] - fval[kopt];</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;            <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;                vlag[k] = fval[k] - fval[kopt];</div>
 <div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;            }</div>
 <div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;            gisq = zero;</div>
 <div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;            i__1 = this-&gt;m_SpaceDimension</div>
@@ -1066,8 +1066,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;            <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__1; ++i__) {</div>
 <div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;                sum = zero;</div>
 <div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;                i__2 = npt;</div>
-<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;                <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
-<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;                    sum += bmat[k + i__ * bmat_dim1] * vlag[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>];</div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;                <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++k) {</div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;                    sum += bmat[k + i__ * bmat_dim1] * vlag[k];</div>
 <div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;                }</div>
 <div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;                gisq += sum * sum;</div>
 <div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;                w[i__] = sum;</div>
@@ -1091,22 +1091,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;                    hq[ih] = zero;</div>
 <div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;                }</div>
 <div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;                i__1 = nptm;</div>
-<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;                <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;                    w[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] = zero;</div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;                <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++j) {</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;                    w[j] = zero;</div>
 <div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;                    i__2 = npt;</div>
-<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;                    <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
-<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;                        w[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] += vlag[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] * zmat[k + j * zmat_dim1];</div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;                    <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++k) {</div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;                        w[j] += vlag[k] * zmat[k + j * zmat_dim1];</div>
 <div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;                    }</div>
 <div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;                    <span class="keywordflow">if</span> (j &lt; idz) {</div>
-<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;                        w[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] = -w[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;                        w[j] = -w[j];</div>
 <div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;                    }</div>
 <div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;                }</div>
 <div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;                i__1 = npt;</div>
-<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;                <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
-<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;                    pq[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] = zero;</div>
+<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;                <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
+<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;                    pq[k] = zero;</div>
 <div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;                    i__2 = nptm;</div>
-<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;                    <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;                        pq[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] += zmat[k + j * zmat_dim1] * w[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;                    <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
+<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;                        pq[k] += zmat[k + j * zmat_dim1] * w[j];</div>
 <div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;                    }</div>
 <div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;                }</div>
 <div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;                itest = 0;</div>
@@ -1135,17 +1135,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;L460:</div>
 <div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;    distsq = delta * 4. * delta;</div>
 <div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;    i__2 = npt;</div>
-<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++k) {</div>
 <div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;        sum = zero;</div>
 <div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;        i__1 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;                ;</div>
-<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++j) {</div>
 <div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;            <span class="comment">/* Computing 2nd power */</span></div>
-<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;            d__1 = xpt[k + j * xpt_dim1] - xopt[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;            d__1 = xpt[k + j * xpt_dim1] - xopt[j];</div>
 <div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;            sum += d__1 * d__1;</div>
 <div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;        }</div>
 <div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;        <span class="keywordflow">if</span> (sum &gt; distsq) {</div>
-<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;            knew = <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>;</div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;            knew = k;</div>
 <div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;            distsq = sum;</div>
 <div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;        }</div>
 <div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;    }</div>
@@ -1214,19 +1214,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;}</div>
 <div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;</div>
 <div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;<span class="keywordtype">int</span> <a class="code" href="classanima_1_1NewuoaOptimizer.html#ab4bcdbb5b713e8d359db71464aa0edf7">NewuoaOptimizer</a></div>
-<div class="line"><a name="l01126"></a><span class="lineno"><a class="line" href="classanima_1_1NewuoaOptimizer.html#ab4bcdbb5b713e8d359db71464aa0edf7"> 1126</a></span>&#160;<a class="code" href="classanima_1_1NewuoaOptimizer.html#ab4bcdbb5b713e8d359db71464aa0edf7">::bigden_</a>(<span class="keywordtype">long</span> <span class="keywordtype">int</span> npt, <span class="keywordtype">double</span> *xopt,<span class="keywordtype">double</span> *xpt, <span class="keywordtype">double</span> *bmat, <span class="keywordtype">double</span> *zmat, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *idz,<span class="keywordtype">long</span> <span class="keywordtype">int</span> *ndim, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *kopt, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *knew, <span class="keywordtype">double</span> *d__, <span class="keywordtype">double</span> *w, <span class="keywordtype">double</span> *vlag, <span class="keywordtype">double</span> *beta, <span class="keywordtype">double</span> *<a class="code" href="load__lbeig_8m.html#a1af5497f0d80ec2d3e57945765f73d8c">s</a>, <span class="keywordtype">double</span> *wvec, <span class="keywordtype">double</span> *prod)</div>
+<div class="line"><a name="l01126"></a><span class="lineno"><a class="line" href="classanima_1_1NewuoaOptimizer.html#ab4bcdbb5b713e8d359db71464aa0edf7"> 1126</a></span>&#160;<a class="code" href="classanima_1_1NewuoaOptimizer.html#ab4bcdbb5b713e8d359db71464aa0edf7">::bigden_</a>(<span class="keywordtype">long</span> <span class="keywordtype">int</span> npt, <span class="keywordtype">double</span> *xopt,<span class="keywordtype">double</span> *xpt, <span class="keywordtype">double</span> *bmat, <span class="keywordtype">double</span> *zmat, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *idz,<span class="keywordtype">long</span> <span class="keywordtype">int</span> *ndim, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *kopt, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *knew, <span class="keywordtype">double</span> *d__, <span class="keywordtype">double</span> *w, <span class="keywordtype">double</span> *vlag, <span class="keywordtype">double</span> *beta, <span class="keywordtype">double</span> *s, <span class="keywordtype">double</span> *wvec, <span class="keywordtype">double</span> *prod)</div>
 <div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;{</div>
 <div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;    <span class="comment">/* System generated locals */</span></div>
 <div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> xpt_dim1, xpt_offset, bmat_dim1, bmat_offset, zmat_dim1, zmat_offset, wvec_dim1, wvec_offset, prod_dim1, prod_offset, i__1, i__2;</div>
 <div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;    <span class="keywordtype">double</span> d__1;</div>
 <div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;</div>
 <div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;    <span class="comment">/* Local variables */</span></div>
-<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> i__, <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>, <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>;</div>
+<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> i__, j, k;</div>
 <div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;    <span class="keywordtype">double</span> dd;</div>
 <div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> jc;</div>
 <div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;    <span class="keywordtype">double</span> ds;</div>
 <div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> ip, iu, nw;</div>
-<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;    <span class="keywordtype">double</span> ss, den[9], <a class="code" href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a>, par[9], tau, sum, two, diff, half,temp;</div>
+<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;    <span class="keywordtype">double</span> ss, den[9], one, par[9], tau, sum, two, diff, half,temp;</div>
 <div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> ksav;</div>
 <div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;    <span class="keywordtype">double</span> step;</div>
 <div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> nptm;</div>
@@ -1282,7 +1282,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;    --d__;</div>
 <div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;    --w;</div>
 <div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;    --vlag;</div>
-<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;    --<a class="code" href="load__lbeig_8m.html#a1af5497f0d80ec2d3e57945765f73d8c">s</a>;</div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;    --s;</div>
 <div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;</div>
 <div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;    <span class="comment">/* Function Body */</span></div>
 <div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;    half = .5;</div>
@@ -1298,20 +1298,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;    <span class="comment">/*     to W(N+NPT). */</span></div>
 <div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;</div>
 <div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;    i__1 = npt;</div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
 <div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;        w[this-&gt;m_SpaceDimension</div>
-<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;                + <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] = zero;</div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;                + k] = zero;</div>
 <div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;    }</div>
 <div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;    i__1 = nptm;</div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++j) {</div>
 <div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;        temp = zmat[*knew + j * zmat_dim1];</div>
 <div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;        <span class="keywordflow">if</span> (j &lt; *idz) {</div>
 <div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;            temp = -temp;</div>
 <div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;        }</div>
 <div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;        i__2 = npt;</div>
-<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++k) {</div>
 <div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;            w[this-&gt;m_SpaceDimension</div>
-<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;                    + <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] += temp * zmat[k + j * zmat_dim1];</div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;                    + k] += temp * zmat[k + j * zmat_dim1];</div>
 <div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;        }</div>
 <div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;    }</div>
 <div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;    alpha = w[this-&gt;m_SpaceDimension</div>
@@ -1345,7 +1345,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;        ksav = *knew;</div>
 <div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;        dtest = ds * ds / ss;</div>
 <div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;        i__2 = npt;</div>
-<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++k) {</div>
 <div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;            <span class="keywordflow">if</span> (k != *kopt) {</div>
 <div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;                dstemp = zero;</div>
 <div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;                sstemp = zero;</div>
@@ -1357,7 +1357,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;                    sstemp += diff * diff;</div>
 <div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;                }</div>
 <div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;                <span class="keywordflow">if</span> (dstemp * dstemp / sstemp &lt; dtest) {</div>
-<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;                    ksav = <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>;</div>
+<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;                    ksav = k;</div>
 <div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;                    dtest = dstemp * dstemp / sstemp;</div>
 <div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;                    ds = dstemp;</div>
 <div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;                    ss = sstemp;</div>
@@ -1407,7 +1407,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;        <span class="comment">/*     Put the coefficients of Wcheck in WVEC. */</span></div>
 <div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;</div>
 <div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;        i__2 = npt;</div>
-<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++k) {</div>
 <div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;            tempa = zero;</div>
 <div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;            tempb = zero;</div>
 <div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;            tempc = zero;</div>
@@ -1443,31 +1443,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;                nw = *ndim;</div>
 <div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;            }</div>
 <div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;            i__2 = npt;</div>
-<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;            <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;            <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++k) {</div>
 <div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;                prod[k + jc * prod_dim1] = zero;</div>
 <div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;            }</div>
 <div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;            i__2 = nptm;</div>
-<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
 <div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;                sum = zero;</div>
 <div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;                i__1 = npt;</div>
-<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;                <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;                <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
 <div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;                    sum += zmat[k + j * zmat_dim1] * wvec[k + jc * wvec_dim1];</div>
 <div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;                }</div>
 <div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;                <span class="keywordflow">if</span> (j &lt; *idz) {</div>
 <div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;                    sum = -sum;</div>
 <div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;                }</div>
 <div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;                i__1 = npt;</div>
-<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;                <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;                <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
 <div class="line"><a name="l01370"></a><span class="lineno"> 1370</span>&#160;                    prod[k + jc * prod_dim1] += sum * zmat[k + j * zmat_dim1];</div>
 <div class="line"><a name="l01371"></a><span class="lineno"> 1371</span>&#160;                }</div>
 <div class="line"><a name="l01372"></a><span class="lineno"> 1372</span>&#160;            }</div>
 <div class="line"><a name="l01373"></a><span class="lineno"> 1373</span>&#160;            <span class="keywordflow">if</span> (nw == *ndim) {</div>
 <div class="line"><a name="l01374"></a><span class="lineno"> 1374</span>&#160;                i__1 = npt;</div>
-<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;                <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l01375"></a><span class="lineno"> 1375</span>&#160;                <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
 <div class="line"><a name="l01376"></a><span class="lineno"> 1376</span>&#160;                    sum = zero;</div>
 <div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160;                    i__2 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;                            ;</div>
-<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;                    <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;                    <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
 <div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;                        sum += bmat[k + j * bmat_dim1] * wvec[npt + j + jc * wvec_dim1];</div>
 <div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;                    }</div>
 <div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;                    prod[k + jc * prod_dim1] += sum;</div>
@@ -1475,7 +1475,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;            }</div>
 <div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;            i__1 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;                    ;</div>
-<div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++j) {</div>
 <div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160;                sum = zero;</div>
 <div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;                i__2 = nw;</div>
 <div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;                <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__2; ++i__) {</div>
@@ -1488,7 +1488,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;        <span class="comment">/*     Include in DEN the part of BETA that depends on THETA. */</span></div>
 <div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;</div>
 <div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;        i__1 = *ndim;</div>
-<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
 <div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;            sum = zero;</div>
 <div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;            <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= 5; ++i__) {</div>
 <div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;                par[i__ - 1] = half * prod[k + i__ * prod_dim1] * wvec[k + i__ * wvec_dim1];</div>
@@ -1549,20 +1549,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01458"></a><span class="lineno"> 1458</span>&#160;        denmax = sum;</div>
 <div class="line"><a name="l01459"></a><span class="lineno"> 1459</span>&#160;        isave = 0;</div>
 <div class="line"><a name="l01460"></a><span class="lineno"> 1460</span>&#160;        iu = 49;</div>
-<div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;        temp = twopi / (<a class="code" href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a>) (iu + 1);</div>
-<div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;        par[0] = <a class="code" href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a>;</div>
+<div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;        temp = twopi / (double) (iu + 1);</div>
+<div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;        par[0] = one;</div>
 <div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;        i__1 = iu;</div>
 <div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;        <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__1; ++i__) {</div>
-<div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;            angle = (<a class="code" href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a>) i__ * temp;</div>
+<div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;            angle = (double) i__ * temp;</div>
 <div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;            par[1] = cos(angle);</div>
 <div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;            par[2] = sin(angle);</div>
 <div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;            <span class="keywordflow">for</span> (j = 4; j &lt;= 8; j += 2) {</div>
 <div class="line"><a name="l01469"></a><span class="lineno"> 1469</span>&#160;                par[j - 1] = par[1] * par[j - 3] - par[2] * par[j - 2];</div>
-<div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160;                par[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] = par[1] * par[j - 2] + par[2] * par[j - 3];</div>
+<div class="line"><a name="l01470"></a><span class="lineno"> 1470</span>&#160;                par[j] = par[1] * par[j - 2] + par[2] * par[j - 3];</div>
 <div class="line"><a name="l01471"></a><span class="lineno"> 1471</span>&#160;            }</div>
 <div class="line"><a name="l01472"></a><span class="lineno"> 1472</span>&#160;            sumold = sum;</div>
 <div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;            sum = zero;</div>
-<div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= 9; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= 9; ++j) {</div>
 <div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;                sum += denex[j - 1] * par[j - 1];</div>
 <div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;            }</div>
 <div class="line"><a name="l01477"></a><span class="lineno"> 1477</span>&#160;            <span class="keywordflow">if</span> (std::abs(sum) &gt; std::abs(denmax)) {</div>
@@ -1585,7 +1585,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;            tempb -= denmax;</div>
 <div class="line"><a name="l01495"></a><span class="lineno"> 1495</span>&#160;            step = half * (tempa - tempb) / (tempa + tempb);</div>
 <div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160;        }</div>
-<div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;        angle = temp * ((<a class="code" href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a>) isave + step);</div>
+<div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;        angle = temp * ((double) isave + step);</div>
 <div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;</div>
 <div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;        <span class="comment">/*     Calculate the new this-&gt;m_SpaceDimension</span></div>
 <div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;<span class="comment"> of the denominator, the new VLAG vector */</span></div>
@@ -1595,19 +1595,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;        par[2] = sin(angle);</div>
 <div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160;        <span class="keywordflow">for</span> (j = 4; j &lt;= 8; j += 2) {</div>
 <div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;            par[j - 1] = par[1] * par[j - 3] - par[2] * par[j - 2];</div>
-<div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;            par[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] = par[1] * par[j - 2] + par[2] * par[j - 3];</div>
+<div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;            par[j] = par[1] * par[j - 2] + par[2] * par[j - 3];</div>
 <div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;        }</div>
 <div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;        *beta = zero;</div>
 <div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160;        denmax = zero;</div>
-<div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= 9; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= 9; ++j) {</div>
 <div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;            *beta += den[j - 1] * par[j - 1];</div>
 <div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;            denmax += denex[j - 1] * par[j - 1];</div>
 <div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;        }</div>
 <div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;        i__1 = *ndim;</div>
-<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
-<div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;            vlag[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] = zero;</div>
-<div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= 5; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;                vlag[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] += prod[k + j * prod_dim1] * par[j - 1];</div>
+<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
+<div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;            vlag[k] = zero;</div>
+<div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= 5; ++j) {</div>
+<div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;                vlag[k] += prod[k + j * prod_dim1] * par[j - 1];</div>
 <div class="line"><a name="l01520"></a><span class="lineno"> 1520</span>&#160;            }</div>
 <div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160;        }</div>
 <div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;        tau = vlag[*knew];</div>
@@ -1647,15 +1647,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01556"></a><span class="lineno"> 1556</span>&#160;            s[i__] = tau * bmat[*knew + i__ * bmat_dim1] + alpha * temp;</div>
 <div class="line"><a name="l01557"></a><span class="lineno"> 1557</span>&#160;        }</div>
 <div class="line"><a name="l01558"></a><span class="lineno"> 1558</span>&#160;        i__1 = npt;</div>
-<div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
 <div class="line"><a name="l01560"></a><span class="lineno"> 1560</span>&#160;            sum = zero;</div>
 <div class="line"><a name="l01561"></a><span class="lineno"> 1561</span>&#160;            i__2 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l01562"></a><span class="lineno"> 1562</span>&#160;                    ;</div>
-<div class="line"><a name="l01563"></a><span class="lineno"> 1563</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l01564"></a><span class="lineno"> 1564</span>&#160;                sum += xpt[k + j * xpt_dim1] * w[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l01563"></a><span class="lineno"> 1563</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
+<div class="line"><a name="l01564"></a><span class="lineno"> 1564</span>&#160;                sum += xpt[k + j * xpt_dim1] * w[j];</div>
 <div class="line"><a name="l01565"></a><span class="lineno"> 1565</span>&#160;            }</div>
 <div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160;            temp = (tau * w[this-&gt;m_SpaceDimension</div>
-<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;                    + <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] - alpha * vlag[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>]) * sum;</div>
+<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;                    + k] - alpha * vlag[k]) * sum;</div>
 <div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160;            i__2 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;                    ;</div>
 <div class="line"><a name="l01570"></a><span class="lineno"> 1570</span>&#160;            <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__2; ++i__) {</div>
@@ -1674,36 +1674,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01583"></a><span class="lineno"> 1583</span>&#160;        }</div>
 <div class="line"><a name="l01584"></a><span class="lineno"> 1584</span>&#160;        ssden = dd * ss - ds * ds;</div>
 <div class="line"><a name="l01585"></a><span class="lineno"> 1585</span>&#160;    }</div>
-<div class="line"><a name="l01586"></a><span class="lineno"> 1586</span>&#160;    <span class="keywordflow">while</span> (ssden &gt;= dd * 1<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-8 * ss);</div>
+<div class="line"><a name="l01586"></a><span class="lineno"> 1586</span>&#160;    <span class="keywordflow">while</span> (ssden &gt;= dd * 1e-8 * ss);</div>
 <div class="line"><a name="l01587"></a><span class="lineno"> 1587</span>&#160;</div>
 <div class="line"><a name="l01588"></a><span class="lineno"> 1588</span>&#160;</div>
 <div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160;    <span class="comment">/*     Set the vector W before the RETURN from the subroutine. */</span></div>
 <div class="line"><a name="l01590"></a><span class="lineno"> 1590</span>&#160;</div>
 <div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160;    i__2 = *ndim;</div>
-<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>)</div>
+<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++k)</div>
 <div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;    {</div>
-<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;        w[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] = zero;</div>
-<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= 5; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
+<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;        w[k] = zero;</div>
+<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= 5; ++j)</div>
 <div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160;        {</div>
-<div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;            w[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] += wvec[k + j * wvec_dim1] * par[j - 1];</div>
+<div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;            w[k] += wvec[k + j * wvec_dim1] * par[j - 1];</div>
 <div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;        }</div>
 <div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;    }</div>
-<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;    vlag[*kopt] += <a class="code" href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a>;</div>
+<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;    vlag[*kopt] += one;</div>
 <div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;}</div>
 <div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;</div>
 <div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;<span class="keywordtype">int</span> <a class="code" href="classanima_1_1NewuoaOptimizer.html#a827e0a75f5cb250a8bf9c2e531e2d4bd">NewuoaOptimizer</a></div>
-<div class="line"><a name="l01605"></a><span class="lineno"><a class="line" href="classanima_1_1NewuoaOptimizer.html#a827e0a75f5cb250a8bf9c2e531e2d4bd"> 1605</a></span>&#160;<a class="code" href="classanima_1_1NewuoaOptimizer.html#a827e0a75f5cb250a8bf9c2e531e2d4bd">::biglag_</a>(<span class="keywordtype">long</span> <span class="keywordtype">int</span> npt, <span class="keywordtype">double</span> *xopt, <span class="keywordtype">double</span> *xpt, <span class="keywordtype">double</span> *bmat, <span class="keywordtype">double</span> *zmat, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *idz, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *ndim, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *knew, <span class="keywordtype">double</span> *delta, <span class="keywordtype">double</span> *d__, <span class="keywordtype">double</span> *alpha, <span class="keywordtype">double</span> *hcol, <span class="keywordtype">double</span> *gc, <span class="keywordtype">double</span> *gd, <span class="keywordtype">double</span> *<a class="code" href="load__lbeig_8m.html#a1af5497f0d80ec2d3e57945765f73d8c">s</a>, <span class="keywordtype">double</span> *w)</div>
+<div class="line"><a name="l01605"></a><span class="lineno"><a class="line" href="classanima_1_1NewuoaOptimizer.html#a827e0a75f5cb250a8bf9c2e531e2d4bd"> 1605</a></span>&#160;<a class="code" href="classanima_1_1NewuoaOptimizer.html#a827e0a75f5cb250a8bf9c2e531e2d4bd">::biglag_</a>(<span class="keywordtype">long</span> <span class="keywordtype">int</span> npt, <span class="keywordtype">double</span> *xopt, <span class="keywordtype">double</span> *xpt, <span class="keywordtype">double</span> *bmat, <span class="keywordtype">double</span> *zmat, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *idz, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *ndim, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *knew, <span class="keywordtype">double</span> *delta, <span class="keywordtype">double</span> *d__, <span class="keywordtype">double</span> *alpha, <span class="keywordtype">double</span> *hcol, <span class="keywordtype">double</span> *gc, <span class="keywordtype">double</span> *gd, <span class="keywordtype">double</span> *s, <span class="keywordtype">double</span> *w)</div>
 <div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;{</div>
 <div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;    <span class="comment">/* System generated locals */</span></div>
 <div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> xpt_dim1, xpt_offset, bmat_dim1, bmat_offset, zmat_dim1, zmat_offset, i__1, i__2;</div>
 <div class="line"><a name="l01609"></a><span class="lineno"> 1609</span>&#160;    <span class="keywordtype">double</span> d__1;</div>
 <div class="line"><a name="l01610"></a><span class="lineno"> 1610</span>&#160;</div>
 <div class="line"><a name="l01611"></a><span class="lineno"> 1611</span>&#160;    <span class="comment">/* Local variables */</span></div>
-<div class="line"><a name="l01612"></a><span class="lineno"> 1612</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> i__, <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>, <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>;</div>
+<div class="line"><a name="l01612"></a><span class="lineno"> 1612</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> i__, j, k;</div>
 <div class="line"><a name="l01613"></a><span class="lineno"> 1613</span>&#160;    <span class="keywordtype">double</span> dd, gg;</div>
 <div class="line"><a name="l01614"></a><span class="lineno"> 1614</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> iu;</div>
-<div class="line"><a name="l01615"></a><span class="lineno"> 1615</span>&#160;    <span class="keywordtype">double</span> sp, ss, cf1, cf2, cf3, cf4, cf5, dhd, cth, <a class="code" href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a>, tau, sth, sum, half, temp, step;</div>
+<div class="line"><a name="l01615"></a><span class="lineno"> 1615</span>&#160;    <span class="keywordtype">double</span> sp, ss, cf1, cf2, cf3, cf4, cf5, dhd, cth, one, tau, sth, sum, half, temp, step;</div>
 <div class="line"><a name="l01616"></a><span class="lineno"> 1616</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> nptm;</div>
 <div class="line"><a name="l01617"></a><span class="lineno"> 1617</span>&#160;    <span class="keywordtype">double</span> zero, angle, scale, denom;</div>
 <div class="line"><a name="l01618"></a><span class="lineno"> 1618</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> iterc, isave;</div>
@@ -1744,7 +1744,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01653"></a><span class="lineno"> 1653</span>&#160;    --hcol;</div>
 <div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160;    --gc;</div>
 <div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160;    --gd;</div>
-<div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;    --<a class="code" href="load__lbeig_8m.html#a1af5497f0d80ec2d3e57945765f73d8c">s</a>;</div>
+<div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;    --s;</div>
 <div class="line"><a name="l01657"></a><span class="lineno"> 1657</span>&#160;    --w;</div>
 <div class="line"><a name="l01658"></a><span class="lineno"> 1658</span>&#160;</div>
 <div class="line"><a name="l01659"></a><span class="lineno"> 1659</span>&#160;    <span class="comment">/* Function Body */</span></div>
@@ -1761,18 +1761,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01670"></a><span class="lineno"> 1670</span>&#160;</div>
 <div class="line"><a name="l01671"></a><span class="lineno"> 1671</span>&#160;    iterc = 0;</div>
 <div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160;    i__1 = npt;</div>
-<div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
-<div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;        hcol[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] = zero;</div>
+<div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
+<div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;        hcol[k] = zero;</div>
 <div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160;    }</div>
 <div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160;    i__1 = nptm;</div>
-<div class="line"><a name="l01677"></a><span class="lineno"> 1677</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l01677"></a><span class="lineno"> 1677</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++j) {</div>
 <div class="line"><a name="l01678"></a><span class="lineno"> 1678</span>&#160;        temp = zmat[*knew + j * zmat_dim1];</div>
 <div class="line"><a name="l01679"></a><span class="lineno"> 1679</span>&#160;        <span class="keywordflow">if</span> (j &lt; *idz) {</div>
 <div class="line"><a name="l01680"></a><span class="lineno"> 1680</span>&#160;            temp = -temp;</div>
 <div class="line"><a name="l01681"></a><span class="lineno"> 1681</span>&#160;        }</div>
 <div class="line"><a name="l01682"></a><span class="lineno"> 1682</span>&#160;        i__2 = npt;</div>
-<div class="line"><a name="l01683"></a><span class="lineno"> 1683</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
-<div class="line"><a name="l01684"></a><span class="lineno"> 1684</span>&#160;            hcol[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] += temp * zmat[k + j * zmat_dim1];</div>
+<div class="line"><a name="l01683"></a><span class="lineno"> 1683</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++k) {</div>
+<div class="line"><a name="l01684"></a><span class="lineno"> 1684</span>&#160;            hcol[k] += temp * zmat[k + j * zmat_dim1];</div>
 <div class="line"><a name="l01685"></a><span class="lineno"> 1685</span>&#160;        }</div>
 <div class="line"><a name="l01686"></a><span class="lineno"> 1686</span>&#160;    }</div>
 <div class="line"><a name="l01687"></a><span class="lineno"> 1687</span>&#160;    *alpha = hcol[*knew];</div>
@@ -1792,17 +1792,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01701"></a><span class="lineno"> 1701</span>&#160;        dd += d__1 * d__1;</div>
 <div class="line"><a name="l01702"></a><span class="lineno"> 1702</span>&#160;    }</div>
 <div class="line"><a name="l01703"></a><span class="lineno"> 1703</span>&#160;    i__2 = npt;</div>
-<div class="line"><a name="l01704"></a><span class="lineno"> 1704</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l01704"></a><span class="lineno"> 1704</span>&#160;    <span class="keywordflow">for</span> (k = 1; k &lt;= i__2; ++k) {</div>
 <div class="line"><a name="l01705"></a><span class="lineno"> 1705</span>&#160;        temp = zero;</div>
 <div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160;        sum = zero;</div>
 <div class="line"><a name="l01707"></a><span class="lineno"> 1707</span>&#160;        i__1 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l01708"></a><span class="lineno"> 1708</span>&#160;                ;</div>
-<div class="line"><a name="l01709"></a><span class="lineno"> 1709</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l01710"></a><span class="lineno"> 1710</span>&#160;            temp += xpt[k + j * xpt_dim1] * xopt[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
-<div class="line"><a name="l01711"></a><span class="lineno"> 1711</span>&#160;            sum += xpt[k + j * xpt_dim1] * d__[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l01709"></a><span class="lineno"> 1709</span>&#160;        <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++j) {</div>
+<div class="line"><a name="l01710"></a><span class="lineno"> 1710</span>&#160;            temp += xpt[k + j * xpt_dim1] * xopt[j];</div>
+<div class="line"><a name="l01711"></a><span class="lineno"> 1711</span>&#160;            sum += xpt[k + j * xpt_dim1] * d__[j];</div>
 <div class="line"><a name="l01712"></a><span class="lineno"> 1712</span>&#160;        }</div>
-<div class="line"><a name="l01713"></a><span class="lineno"> 1713</span>&#160;        temp = hcol[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] * temp;</div>
-<div class="line"><a name="l01714"></a><span class="lineno"> 1714</span>&#160;        sum = hcol[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] * sum;</div>
+<div class="line"><a name="l01713"></a><span class="lineno"> 1713</span>&#160;        temp = hcol[k] * temp;</div>
+<div class="line"><a name="l01714"></a><span class="lineno"> 1714</span>&#160;        sum = hcol[k] * sum;</div>
 <div class="line"><a name="l01715"></a><span class="lineno"> 1715</span>&#160;        i__1 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l01716"></a><span class="lineno"> 1716</span>&#160;                ;</div>
 <div class="line"><a name="l01717"></a><span class="lineno"> 1717</span>&#160;        <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__1; ++i__) {</div>
@@ -1832,11 +1832,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01741"></a><span class="lineno"> 1741</span>&#160;    }</div>
 <div class="line"><a name="l01742"></a><span class="lineno"> 1742</span>&#160;    temp = zero;</div>
 <div class="line"><a name="l01743"></a><span class="lineno"> 1743</span>&#160;    <span class="keywordflow">if</span> (sp * sp &gt; dd * .99 * gg) {</div>
-<div class="line"><a name="l01744"></a><span class="lineno"> 1744</span>&#160;        temp = <a class="code" href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a>;</div>
+<div class="line"><a name="l01744"></a><span class="lineno"> 1744</span>&#160;        temp = one;</div>
 <div class="line"><a name="l01745"></a><span class="lineno"> 1745</span>&#160;    }</div>
 <div class="line"><a name="l01746"></a><span class="lineno"> 1746</span>&#160;    tau = scale * (std::abs(sp) + half * scale * std::abs(dhd));</div>
 <div class="line"><a name="l01747"></a><span class="lineno"> 1747</span>&#160;    <span class="keywordflow">if</span> (gg * delsq &lt; tau * .01 * tau) {</div>
-<div class="line"><a name="l01748"></a><span class="lineno"> 1748</span>&#160;        temp = <a class="code" href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a>;</div>
+<div class="line"><a name="l01748"></a><span class="lineno"> 1748</span>&#160;        temp = one;</div>
 <div class="line"><a name="l01749"></a><span class="lineno"> 1749</span>&#160;    }</div>
 <div class="line"><a name="l01750"></a><span class="lineno"> 1750</span>&#160;    i__1 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l01751"></a><span class="lineno"> 1751</span>&#160;            ;</div>
@@ -1867,7 +1867,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01776"></a><span class="lineno"> 1776</span>&#160;            ss += d__1 * d__1;</div>
 <div class="line"><a name="l01777"></a><span class="lineno"> 1777</span>&#160;        }</div>
 <div class="line"><a name="l01778"></a><span class="lineno"> 1778</span>&#160;        temp = dd * ss - sp * sp;</div>
-<div class="line"><a name="l01779"></a><span class="lineno"> 1779</span>&#160;        <span class="keywordflow">if</span> (temp &lt;= dd * 1<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-8 * ss) {</div>
+<div class="line"><a name="l01779"></a><span class="lineno"> 1779</span>&#160;        <span class="keywordflow">if</span> (temp &lt;= dd * 1e-8 * ss) {</div>
 <div class="line"><a name="l01780"></a><span class="lineno"> 1780</span>&#160;            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l01781"></a><span class="lineno"> 1781</span>&#160;        }</div>
 <div class="line"><a name="l01782"></a><span class="lineno"> 1782</span>&#160;        denom = std::sqrt(temp);</div>
@@ -1882,14 +1882,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01791"></a><span class="lineno"> 1791</span>&#160;        <span class="comment">/*     beginning with the multiplication of S by the second derivative matrix. */</span></div>
 <div class="line"><a name="l01792"></a><span class="lineno"> 1792</span>&#160;</div>
 <div class="line"><a name="l01793"></a><span class="lineno"> 1793</span>&#160;        i__1 = npt;</div>
-<div class="line"><a name="l01794"></a><span class="lineno"> 1794</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l01794"></a><span class="lineno"> 1794</span>&#160;        <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
 <div class="line"><a name="l01795"></a><span class="lineno"> 1795</span>&#160;            sum = zero;</div>
 <div class="line"><a name="l01796"></a><span class="lineno"> 1796</span>&#160;            i__2 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l01797"></a><span class="lineno"> 1797</span>&#160;                    ;</div>
-<div class="line"><a name="l01798"></a><span class="lineno"> 1798</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l01799"></a><span class="lineno"> 1799</span>&#160;                sum += xpt[k + j * xpt_dim1] * s[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l01798"></a><span class="lineno"> 1798</span>&#160;            <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
+<div class="line"><a name="l01799"></a><span class="lineno"> 1799</span>&#160;                sum += xpt[k + j * xpt_dim1] * s[j];</div>
 <div class="line"><a name="l01800"></a><span class="lineno"> 1800</span>&#160;            }</div>
-<div class="line"><a name="l01801"></a><span class="lineno"> 1801</span>&#160;            sum = hcol[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>] * sum;</div>
+<div class="line"><a name="l01801"></a><span class="lineno"> 1801</span>&#160;            sum = hcol[k] * sum;</div>
 <div class="line"><a name="l01802"></a><span class="lineno"> 1802</span>&#160;            i__2 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l01803"></a><span class="lineno"> 1803</span>&#160;                    ;</div>
 <div class="line"><a name="l01804"></a><span class="lineno"> 1804</span>&#160;            <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__2; ++i__) {</div>
@@ -1920,10 +1920,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01829"></a><span class="lineno"> 1829</span>&#160;        tauold = taubeg;</div>
 <div class="line"><a name="l01830"></a><span class="lineno"> 1830</span>&#160;        isave = 0;</div>
 <div class="line"><a name="l01831"></a><span class="lineno"> 1831</span>&#160;        iu = 49;</div>
-<div class="line"><a name="l01832"></a><span class="lineno"> 1832</span>&#160;        temp = twopi / (<a class="code" href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a>) (iu + 1);</div>
+<div class="line"><a name="l01832"></a><span class="lineno"> 1832</span>&#160;        temp = twopi / (double) (iu + 1);</div>
 <div class="line"><a name="l01833"></a><span class="lineno"> 1833</span>&#160;        i__2 = iu;</div>
 <div class="line"><a name="l01834"></a><span class="lineno"> 1834</span>&#160;        <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__2; ++i__) {</div>
-<div class="line"><a name="l01835"></a><span class="lineno"> 1835</span>&#160;            angle = (<a class="code" href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a>) i__ * temp;</div>
+<div class="line"><a name="l01835"></a><span class="lineno"> 1835</span>&#160;            angle = (double) i__ * temp;</div>
 <div class="line"><a name="l01836"></a><span class="lineno"> 1836</span>&#160;            cth = cos(angle);</div>
 <div class="line"><a name="l01837"></a><span class="lineno"> 1837</span>&#160;            sth = sin(angle);</div>
 <div class="line"><a name="l01838"></a><span class="lineno"> 1838</span>&#160;            tau = cf1 + (cf2 + cf4 * cth) * cth + (cf3 + cf5 * cth) * sth;</div>
@@ -1948,7 +1948,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01857"></a><span class="lineno"> 1857</span>&#160;            tempb -= taumax;</div>
 <div class="line"><a name="l01858"></a><span class="lineno"> 1858</span>&#160;            step = half * (tempa - tempb) / (tempa + tempb);</div>
 <div class="line"><a name="l01859"></a><span class="lineno"> 1859</span>&#160;        }</div>
-<div class="line"><a name="l01860"></a><span class="lineno"> 1860</span>&#160;        angle = temp * ((<a class="code" href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a>) isave + step);</div>
+<div class="line"><a name="l01860"></a><span class="lineno"> 1860</span>&#160;        angle = temp * ((double) isave + step);</div>
 <div class="line"><a name="l01861"></a><span class="lineno"> 1861</span>&#160;</div>
 <div class="line"><a name="l01862"></a><span class="lineno"> 1862</span>&#160;        <span class="comment">/*     Calculate the new D and GD. Then test for convergence. */</span></div>
 <div class="line"><a name="l01863"></a><span class="lineno"> 1863</span>&#160;</div>
@@ -1980,8 +1980,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01889"></a><span class="lineno"> 1889</span>&#160;</div>
 <div class="line"><a name="l01890"></a><span class="lineno"> 1890</span>&#160;</div>
 <div class="line"><a name="l01891"></a><span class="lineno"> 1891</span>&#160;    <span class="comment">/* Local variables */</span></div>
-<div class="line"><a name="l01892"></a><span class="lineno"> 1892</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> i__, <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>, ja, jb, jl, jp;</div>
-<div class="line"><a name="l01893"></a><span class="lineno"> 1893</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a>, tau, temp;</div>
+<div class="line"><a name="l01892"></a><span class="lineno"> 1892</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> i__, j, ja, jb, jl, jp;</div>
+<div class="line"><a name="l01893"></a><span class="lineno"> 1893</span>&#160;    <span class="keywordtype">double</span> one, tau, temp;</div>
 <div class="line"><a name="l01894"></a><span class="lineno"> 1894</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> nptm;</div>
 <div class="line"><a name="l01895"></a><span class="lineno"> 1895</span>&#160;    <span class="keywordtype">double</span> zero;</div>
 <div class="line"><a name="l01896"></a><span class="lineno"> 1896</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> iflag;</div>
@@ -2016,7 +2016,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01925"></a><span class="lineno"> 1925</span>&#160;</div>
 <div class="line"><a name="l01926"></a><span class="lineno"> 1926</span>&#160;    jl = 1;</div>
 <div class="line"><a name="l01927"></a><span class="lineno"> 1927</span>&#160;    i__1 = nptm;</div>
-<div class="line"><a name="l01928"></a><span class="lineno"> 1928</span>&#160;    <span class="keywordflow">for</span> (j = 2; j &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l01928"></a><span class="lineno"> 1928</span>&#160;    <span class="keywordflow">for</span> (j = 2; j &lt;= i__1; ++j) {</div>
 <div class="line"><a name="l01929"></a><span class="lineno"> 1929</span>&#160;        <span class="keywordflow">if</span> (j == *idz) {</div>
 <div class="line"><a name="l01930"></a><span class="lineno"> 1930</span>&#160;            jl = *idz;</div>
 <div class="line"><a name="l01931"></a><span class="lineno"> 1931</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (zmat[*knew + j * zmat_dim1] != zero) {</div>
@@ -2059,7 +2059,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01968"></a><span class="lineno"> 1968</span>&#160;    tau = vlag[*knew];</div>
 <div class="line"><a name="l01969"></a><span class="lineno"> 1969</span>&#160;    tausq = tau * tau;</div>
 <div class="line"><a name="l01970"></a><span class="lineno"> 1970</span>&#160;    denom = alpha * *beta + tausq;</div>
-<div class="line"><a name="l01971"></a><span class="lineno"> 1971</span>&#160;    vlag[*knew] -= <a class="code" href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a>;</div>
+<div class="line"><a name="l01971"></a><span class="lineno"> 1971</span>&#160;    vlag[*knew] -= one;</div>
 <div class="line"><a name="l01972"></a><span class="lineno"> 1972</span>&#160;</div>
 <div class="line"><a name="l01973"></a><span class="lineno"> 1973</span>&#160;    <span class="comment">/*     Complete the updating of ZMAT when there is only one nonzero element */</span></div>
 <div class="line"><a name="l01974"></a><span class="lineno"> 1974</span>&#160;    <span class="comment">/*     in the KNEW-th row of the new matrix ZMAT, but, if IFLAG is set to one, */</span></div>
@@ -2128,8 +2128,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02037"></a><span class="lineno"> 2037</span>&#160;</div>
 <div class="line"><a name="l02038"></a><span class="lineno"> 2038</span>&#160;    i__1 = this-&gt;m_SpaceDimension</div>
 <div class="line"><a name="l02039"></a><span class="lineno"> 2039</span>&#160;            ;</div>
-<div class="line"><a name="l02040"></a><span class="lineno"> 2040</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l02041"></a><span class="lineno"> 2041</span>&#160;        jp = npt + <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>;</div>
+<div class="line"><a name="l02040"></a><span class="lineno"> 2040</span>&#160;    <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++j) {</div>
+<div class="line"><a name="l02041"></a><span class="lineno"> 2041</span>&#160;        jp = npt + j;</div>
 <div class="line"><a name="l02042"></a><span class="lineno"> 2042</span>&#160;        w[jp] = bmat[*knew + j * bmat_dim1];</div>
 <div class="line"><a name="l02043"></a><span class="lineno"> 2043</span>&#160;        tempa = (alpha * vlag[jp] - tau * w[jp]) / denom;</div>
 <div class="line"><a name="l02044"></a><span class="lineno"> 2044</span>&#160;        tempb = (-(*beta) * w[jp] - tau * vlag[jp]) / denom;</div>
@@ -2152,7 +2152,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02061"></a><span class="lineno"> 2061</span>&#160;    <span class="keywordtype">double</span> d__1, d__2;</div>
 <div class="line"><a name="l02062"></a><span class="lineno"> 2062</span>&#160;</div>
 <div class="line"><a name="l02063"></a><span class="lineno"> 2063</span>&#160;    <span class="comment">/* Local variables */</span></div>
-<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> i__, <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>, <a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>;</div>
+<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> i__, j, k;</div>
 <div class="line"><a name="l02065"></a><span class="lineno"> 2065</span>&#160;    <span class="keywordtype">double</span> dd = 0, cf, dg, gg = 0;</div>
 <div class="line"><a name="l02066"></a><span class="lineno"> 2066</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> ih;</div>
 <div class="line"><a name="l02067"></a><span class="lineno"> 2067</span>&#160;    <span class="keywordtype">double</span> ds = 0, sg = 0;</div>
@@ -2250,9 +2250,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02159"></a><span class="lineno"> 2159</span>&#160; TRSL50:</div>
 <div class="line"><a name="l02160"></a><span class="lineno"> 2160</span>&#160;  dhd = zero;</div>
 <div class="line"><a name="l02161"></a><span class="lineno"> 2161</span>&#160;  i__1 = m_SpaceDimension;</div>
-<div class="line"><a name="l02162"></a><span class="lineno"> 2162</span>&#160;  <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l02162"></a><span class="lineno"> 2162</span>&#160;  <span class="keywordflow">for</span> (j = 1; j &lt;= i__1; ++j) {</div>
 <div class="line"><a name="l02163"></a><span class="lineno"> 2163</span>&#160;     <span class="comment">/* L60: */</span></div>
-<div class="line"><a name="l02164"></a><span class="lineno"> 2164</span>&#160;     dhd += d__[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] * hd[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l02164"></a><span class="lineno"> 2164</span>&#160;     dhd += d__[j] * hd[j];</div>
 <div class="line"><a name="l02165"></a><span class="lineno"> 2165</span>&#160;  }</div>
 <div class="line"><a name="l02166"></a><span class="lineno"> 2166</span>&#160;</div>
 <div class="line"><a name="l02167"></a><span class="lineno"> 2167</span>&#160;  <span class="comment">/*     Update CRVMIN and set the step-length ALPHA. */</span></div>
@@ -2291,7 +2291,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02200"></a><span class="lineno"> 2200</span>&#160;     <span class="keywordflow">if</span> (qadd &lt;= qred * .01) {</div>
 <div class="line"><a name="l02201"></a><span class="lineno"> 2201</span>&#160;        <span class="keywordflow">goto</span> TRSL160;</div>
 <div class="line"><a name="l02202"></a><span class="lineno"> 2202</span>&#160;     }</div>
-<div class="line"><a name="l02203"></a><span class="lineno"> 2203</span>&#160;     <span class="keywordflow">if</span> (gg &lt;= ggbeg * 1<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-4) {</div>
+<div class="line"><a name="l02203"></a><span class="lineno"> 2203</span>&#160;     <span class="keywordflow">if</span> (gg &lt;= ggbeg * 1e-4) {</div>
 <div class="line"><a name="l02204"></a><span class="lineno"> 2204</span>&#160;        <span class="keywordflow">goto</span> TRSL160;</div>
 <div class="line"><a name="l02205"></a><span class="lineno"> 2205</span>&#160;     }</div>
 <div class="line"><a name="l02206"></a><span class="lineno"> 2206</span>&#160;     <span class="keywordflow">if</span> (iterc == itermax) {</div>
@@ -2326,7 +2326,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;  <span class="comment">/*     Test whether an alternative iteration is required. */</span></div>
 <div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;</div>
 <div class="line"><a name="l02237"></a><span class="lineno"> 2237</span>&#160; TRSL90:</div>
-<div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;  <span class="keywordflow">if</span> (gg &lt;= ggbeg * 1<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-4) {</div>
+<div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;  <span class="keywordflow">if</span> (gg &lt;= ggbeg * 1e-4) {</div>
 <div class="line"><a name="l02239"></a><span class="lineno"> 2239</span>&#160;     <span class="keywordflow">goto</span> TRSL160;</div>
 <div class="line"><a name="l02240"></a><span class="lineno"> 2240</span>&#160;  }</div>
 <div class="line"><a name="l02241"></a><span class="lineno"> 2241</span>&#160;  sg = zero;</div>
@@ -2376,10 +2376,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02285"></a><span class="lineno"> 2285</span>&#160;  qmin = qbeg;</div>
 <div class="line"><a name="l02286"></a><span class="lineno"> 2286</span>&#160;  isave = 0;</div>
 <div class="line"><a name="l02287"></a><span class="lineno"> 2287</span>&#160;  iu = 49;</div>
-<div class="line"><a name="l02288"></a><span class="lineno"> 2288</span>&#160;  temp = twopi / (<a class="code" href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a>) (iu + 1);</div>
+<div class="line"><a name="l02288"></a><span class="lineno"> 2288</span>&#160;  temp = twopi / (double) (iu + 1);</div>
 <div class="line"><a name="l02289"></a><span class="lineno"> 2289</span>&#160;  i__1 = iu;</div>
 <div class="line"><a name="l02290"></a><span class="lineno"> 2290</span>&#160;  <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__1; ++i__) {</div>
-<div class="line"><a name="l02291"></a><span class="lineno"> 2291</span>&#160;     angle = (<a class="code" href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a>) i__ * temp;</div>
+<div class="line"><a name="l02291"></a><span class="lineno"> 2291</span>&#160;     angle = (double) i__ * temp;</div>
 <div class="line"><a name="l02292"></a><span class="lineno"> 2292</span>&#160;     cth = cos(angle);</div>
 <div class="line"><a name="l02293"></a><span class="lineno"> 2293</span>&#160;     sth = sin(angle);</div>
 <div class="line"><a name="l02294"></a><span class="lineno"> 2294</span>&#160;     qnew = (sg + cf * cth) * cth + (dg + dhs * cth) * sth;</div>
@@ -2405,7 +2405,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02314"></a><span class="lineno"> 2314</span>&#160;     tempb -= qmin;</div>
 <div class="line"><a name="l02315"></a><span class="lineno"> 2315</span>&#160;     angle = half * (tempa - tempb) / (tempa + tempb);</div>
 <div class="line"><a name="l02316"></a><span class="lineno"> 2316</span>&#160;  }</div>
-<div class="line"><a name="l02317"></a><span class="lineno"> 2317</span>&#160;  angle = temp * ((<a class="code" href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a>) isave + angle);</div>
+<div class="line"><a name="l02317"></a><span class="lineno"> 2317</span>&#160;  angle = temp * ((double) isave + angle);</div>
 <div class="line"><a name="l02318"></a><span class="lineno"> 2318</span>&#160;</div>
 <div class="line"><a name="l02319"></a><span class="lineno"> 2319</span>&#160;  <span class="comment">/*     Calculate the new STEP and HS. Then test for convergence. */</span></div>
 <div class="line"><a name="l02320"></a><span class="lineno"> 2320</span>&#160;</div>
@@ -2444,14 +2444,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;     hd[i__] = zero;</div>
 <div class="line"><a name="l02354"></a><span class="lineno"> 2354</span>&#160;  }</div>
 <div class="line"><a name="l02355"></a><span class="lineno"> 2355</span>&#160;  i__1 = npt;</div>
-<div class="line"><a name="l02356"></a><span class="lineno"> 2356</span>&#160;  <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>) {</div>
+<div class="line"><a name="l02356"></a><span class="lineno"> 2356</span>&#160;  <span class="keywordflow">for</span> (k = 1; k &lt;= i__1; ++k) {</div>
 <div class="line"><a name="l02357"></a><span class="lineno"> 2357</span>&#160;     temp = zero;</div>
 <div class="line"><a name="l02358"></a><span class="lineno"> 2358</span>&#160;     i__2 = m_SpaceDimension;</div>
-<div class="line"><a name="l02359"></a><span class="lineno"> 2359</span>&#160;     <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
+<div class="line"><a name="l02359"></a><span class="lineno"> 2359</span>&#160;     <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
 <div class="line"><a name="l02360"></a><span class="lineno"> 2360</span>&#160;        <span class="comment">/* L190: */</span></div>
-<div class="line"><a name="l02361"></a><span class="lineno"> 2361</span>&#160;        temp += xpt[k + j * xpt_dim1] * d__[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l02361"></a><span class="lineno"> 2361</span>&#160;        temp += xpt[k + j * xpt_dim1] * d__[j];</div>
 <div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160;     }</div>
-<div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;     temp *= pq[<a class="code" href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a>];</div>
+<div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;     temp *= pq[k];</div>
 <div class="line"><a name="l02364"></a><span class="lineno"> 2364</span>&#160;     i__2 = m_SpaceDimension;</div>
 <div class="line"><a name="l02365"></a><span class="lineno"> 2365</span>&#160;     <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__2; ++i__) {</div>
 <div class="line"><a name="l02366"></a><span class="lineno"> 2366</span>&#160;        <span class="comment">/* L200: */</span></div>
@@ -2460,15 +2460,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02369"></a><span class="lineno"> 2369</span>&#160;  }</div>
 <div class="line"><a name="l02370"></a><span class="lineno"> 2370</span>&#160;  ih = 0;</div>
 <div class="line"><a name="l02371"></a><span class="lineno"> 2371</span>&#160;  i__2 = m_SpaceDimension;</div>
-<div class="line"><a name="l02372"></a><span class="lineno"> 2372</span>&#160;  <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) {</div>
-<div class="line"><a name="l02373"></a><span class="lineno"> 2373</span>&#160;     i__1 = <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>;</div>
+<div class="line"><a name="l02372"></a><span class="lineno"> 2372</span>&#160;  <span class="keywordflow">for</span> (j = 1; j &lt;= i__2; ++j) {</div>
+<div class="line"><a name="l02373"></a><span class="lineno"> 2373</span>&#160;     i__1 = j;</div>
 <div class="line"><a name="l02374"></a><span class="lineno"> 2374</span>&#160;     <span class="keywordflow">for</span> (i__ = 1; i__ &lt;= i__1; ++i__) {</div>
 <div class="line"><a name="l02375"></a><span class="lineno"> 2375</span>&#160;        ++ih;</div>
 <div class="line"><a name="l02376"></a><span class="lineno"> 2376</span>&#160;        <span class="keywordflow">if</span> (i__ &lt; j) {</div>
-<div class="line"><a name="l02377"></a><span class="lineno"> 2377</span>&#160;          hd[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] += hq[ih] * d__[i__];</div>
+<div class="line"><a name="l02377"></a><span class="lineno"> 2377</span>&#160;          hd[j] += hq[ih] * d__[i__];</div>
 <div class="line"><a name="l02378"></a><span class="lineno"> 2378</span>&#160;        }</div>
 <div class="line"><a name="l02379"></a><span class="lineno"> 2379</span>&#160;        <span class="comment">/* L210: */</span></div>
-<div class="line"><a name="l02380"></a><span class="lineno"> 2380</span>&#160;        hd[i__] += hq[ih] * d__[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l02380"></a><span class="lineno"> 2380</span>&#160;        hd[i__] += hq[ih] * d__[j];</div>
 <div class="line"><a name="l02381"></a><span class="lineno"> 2381</span>&#160;     }</div>
 <div class="line"><a name="l02382"></a><span class="lineno"> 2382</span>&#160;  }</div>
 <div class="line"><a name="l02383"></a><span class="lineno"> 2383</span>&#160;  <span class="keywordflow">if</span> (iterc == 0) {</div>
@@ -2481,15 +2481,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l02390"></a><span class="lineno"> 2390</span>&#160;}</div>
 <div class="line"><a name="l02391"></a><span class="lineno"> 2391</span>&#160;</div>
 <div class="line"><a name="l02392"></a><span class="lineno"> 2392</span>&#160;}</div>
-<div class="ttc" id="load__lbeig_8m_html_a1af5497f0d80ec2d3e57945765f73d8c"><div class="ttname"><a href="load__lbeig_8m.html#a1af5497f0d80ec2d3e57945765f73d8c">s</a></div><div class="ttdeci">s</div><div class="ttdef"><b>Definition:</b> <a href="load__lbeig_8m_source.html#l00005">load_lbeig.m:5</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_abf2bc2545a4a5f5683d9ef3ed0d977e0"><div class="ttname"><a href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a></div><div class="ttdeci">j</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00231">reslice_nii.m:231</a></div></div>
 <div class="ttc" id="classanima_1_1NewuoaOptimizer_html_ad6361de3307088e8726fb981c073065e"><div class="ttname"><a href="classanima_1_1NewuoaOptimizer.html#ad6361de3307088e8726fb981c073065e">anima::NewuoaOptimizer::optimize</a></div><div class="ttdeci">double optimize(double *w, long int npt, double *x, double rhobeg, double rhoend, long int maxfun, int &amp;iter)</div><div class="ttdef"><b>Definition:</b> <a href="animaNewuoaOptimizer_8cxx_source.html#l00164">animaNewuoaOptimizer.cxx:164</a></div></div>
-<div class="ttc" id="save__untouch__nii_8m_html_a0b7f34288633818cf68d423a0bc99f93"><div class="ttname"><a href="save__untouch__nii_8m.html#a0b7f34288633818cf68d423a0bc99f93">one</a></div><div class="ttdeci">Save NIFTI or ANALYZE dataset that is loaded by load_untouch_nii m The output image format and file extension will be the same as the input one(NIFTI.nii, NIFTI.img or ANALYZE.img).Therefore</div></div>
-<div class="ttc" id="load__lbeig_8m_html_a338951b7e7607b65262fb051e7804d91"><div class="ttname"><a href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">string</a></div><div class="ttdeci">string</div><div class="ttdef"><b>Definition:</b> <a href="load__lbeig_8m_source.html#l00008">load_lbeig.m:8</a></div></div>
-<div class="ttc" id="xform__nii_8m_html_a5389c938d8f439f89bc6549e6a18285d"><div class="ttname"><a href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a></div><div class="ttdeci">hdr.dime.xyzt_units, 7 e()</div></div>
 <div class="ttc" id="classanima_1_1NewuoaOptimizer_html_a827e0a75f5cb250a8bf9c2e531e2d4bd"><div class="ttname"><a href="classanima_1_1NewuoaOptimizer.html#a827e0a75f5cb250a8bf9c2e531e2d4bd">anima::NewuoaOptimizer::biglag_</a></div><div class="ttdeci">int biglag_(long int npt, double *xopt, double *xpt, double *bmat, double *zmat, long int *idz, long int *ndim, long int *knew, double *delta, double *d__, double *alpha, double *hcol, double *gc, double *gd, double *s, double *w)</div><div class="ttdef"><b>Definition:</b> <a href="animaNewuoaOptimizer_8cxx_source.html#l01605">animaNewuoaOptimizer.cxx:1605</a></div></div>
 <div class="ttc" id="classanima_1_1NewuoaOptimizer_html_a3890d367047fa8d4adb41a17756d8fda"><div class="ttname"><a href="classanima_1_1NewuoaOptimizer.html#a3890d367047fa8d4adb41a17756d8fda">anima::NewuoaOptimizer::update_</a></div><div class="ttdeci">int update_(long int npt, double *bmat, double *zmat, long int *idz, long int *ndim, double *vlag, double *beta, long int *knew, double *w)</div><div class="ttdef"><b>Definition:</b> <a href="animaNewuoaOptimizer_8cxx_source.html#l01884">animaNewuoaOptimizer.cxx:1884</a></div></div>
-<div class="ttc" id="save__untouch__nii_8m_html_a7bd3e5e3766c0b45fc244c495cf0fd1c"><div class="ttname"><a href="save__untouch__nii_8m.html#a7bd3e5e3766c0b45fc244c495cf0fd1c">double</a></div><div class="ttdeci">end switch double(hdr.dime.datatype)</div></div>
 <div class="ttc" id="classanima_1_1NewuoaOptimizer_html_a93960f4276452292d96193cfdbf93a00"><div class="ttname"><a href="classanima_1_1NewuoaOptimizer.html#a93960f4276452292d96193cfdbf93a00">anima::NewuoaOptimizer::trsapp_</a></div><div class="ttdeci">int trsapp_(long int npt, double *xopt, double *xpt, double *gq, double *hq, double *pq, double *delta, double *step, double *d__, double *g, double *hd, double *hs, double *crvmin)</div><div class="ttdef"><b>Definition:</b> <a href="animaNewuoaOptimizer_8cxx_source.html#l02057">animaNewuoaOptimizer.cxx:2057</a></div></div>
 <div class="ttc" id="classanima_1_1NewuoaOptimizer_html_afab31a40b4dc374f9109084828ff4b7d"><div class="ttname"><a href="classanima_1_1NewuoaOptimizer.html#afab31a40b4dc374f9109084828ff4b7d">anima::NewuoaOptimizer::ParametersType</a></div><div class="ttdeci">SingleValuedNonLinearOptimizer::ParametersType ParametersType</div><div class="ttdef"><b>Definition:</b> <a href="animaNewuoaOptimizer_8h_source.html#l00042">animaNewuoaOptimizer.h:42</a></div></div>
 <div class="ttc" id="animaNewuoaOptimizer_8h_html"><div class="ttname"><a href="animaNewuoaOptimizer_8h.html">animaNewuoaOptimizer.h</a></div></div>
@@ -2497,17 +2491,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1NewuoaOptimizer_html_a828de8a2e0b87998b6a017c6e6809f96"><div class="ttname"><a href="classanima_1_1NewuoaOptimizer.html#a828de8a2e0b87998b6a017c6e6809f96">anima::NewuoaOptimizer::StartOptimization</a></div><div class="ttdeci">void StartOptimization()</div><div class="ttdef"><b>Definition:</b> <a href="animaNewuoaOptimizer_8cxx_source.html#l00042">animaNewuoaOptimizer.cxx:42</a></div></div>
 <div class="ttc" id="classanima_1_1NewuoaOptimizer_html_aaf4340c4c5ae2719dec3f40af506b68f"><div class="ttname"><a href="classanima_1_1NewuoaOptimizer.html#aaf4340c4c5ae2719dec3f40af506b68f">anima::NewuoaOptimizer::GetStopConditionDescription</a></div><div class="ttdeci">const std::string GetStopConditionDescription() const </div><div class="ttdef"><b>Definition:</b> <a href="animaNewuoaOptimizer_8cxx_source.html#l00101">animaNewuoaOptimizer.cxx:101</a></div></div>
 <div class="ttc" id="classanima_1_1NewuoaOptimizer_html_a54ce35ffa07d60c2fc49c9324a0a03c8"><div class="ttname"><a href="classanima_1_1NewuoaOptimizer.html#a54ce35ffa07d60c2fc49c9324a0a03c8">anima::NewuoaOptimizer::newuob_</a></div><div class="ttdeci">double newuob_(long int npt, double *x, double rhobeg, double rhoend, long int maxfun, double *xbase, double *xopt, double *xnew, double *xpt, double *fval, double *gq, double *hq, double *pq, double *bmat, double *zmat, long int *ndim, double *d__, double *vlag, double *w, int &amp;iter)</div><div class="ttdef"><b>Definition:</b> <a href="animaNewuoaOptimizer_8cxx_source.html#l00223">animaNewuoaOptimizer.cxx:223</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_adc468c70fb574ebd07287b38d0d0676d"><div class="ttname"><a href="reslice__nii_8m.html#adc468c70fb574ebd07287b38d0d0676d">k</a></div><div class="ttdeci">k</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00232">reslice_nii.m:232</a></div></div>
 <div class="ttc" id="classanima_1_1NewuoaOptimizer_html_a1e60e202ab576bdf116fc156a04dbb26"><div class="ttname"><a href="classanima_1_1NewuoaOptimizer.html#a1e60e202ab576bdf116fc156a04dbb26">anima::NewuoaOptimizer::NewuoaOptimizer</a></div><div class="ttdeci">NewuoaOptimizer()</div><div class="ttdef"><b>Definition:</b> <a href="animaNewuoaOptimizer_8cxx_source.html#l00016">animaNewuoaOptimizer.cxx:16</a></div></div>
 <div class="ttc" id="classanima_1_1NewuoaOptimizer_html_a4486f50e170ed1e96b0953f489624870"><div class="ttname"><a href="classanima_1_1NewuoaOptimizer.html#a4486f50e170ed1e96b0953f489624870">anima::NewuoaOptimizer::PrintSelf</a></div><div class="ttdeci">void PrintSelf(std::ostream &amp;os, itk::Indent indent) const </div><div class="ttdef"><b>Definition:</b> <a href="animaNewuoaOptimizer_8cxx_source.html#l00111">animaNewuoaOptimizer.cxx:111</a></div></div>
 <div class="ttc" id="classanima_1_1NewuoaOptimizer_html_ab4bcdbb5b713e8d359db71464aa0edf7"><div class="ttname"><a href="classanima_1_1NewuoaOptimizer.html#ab4bcdbb5b713e8d359db71464aa0edf7">anima::NewuoaOptimizer::bigden_</a></div><div class="ttdeci">int bigden_(long int npt, double *xopt, double *xpt, double *bmat, double *zmat, long int *idz, long int *ndim, long int *kopt, long int *knew, double *d__, double *w, double *vlag, double *beta, double *s, double *wvec, double *prod)</div><div class="ttdef"><b>Definition:</b> <a href="animaNewuoaOptimizer_8cxx_source.html#l01126">animaNewuoaOptimizer.cxx:1126</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:48 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:20 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

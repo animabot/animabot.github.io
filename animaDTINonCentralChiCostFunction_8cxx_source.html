@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_a378dc9af426dd8223a65e1788193c6b.html">diffusion</a></li><li class="navelem"><a class="el" href="dir_c46adbe57daebacc98776eda899be636.html">dti_estimator</a></li><li class="navelem"><a class="el" href="dir_537bdd1e9fe042ce74ee3a42565f6fe5.html">dti_non_central_chi_estimator</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_07ebd98e1841996e654b05628ce7f9e4.html">diffusion</a></li><li class="navelem"><a class="el" href="dir_8cd991101a9a6816c3833c5e02e239e6.html">dti_estimator</a></li><li class="navelem"><a class="el" href="dir_c2d9e5cea49f26b923126c537d6febf5.html">dti_non_central_chi_estimator</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -116,16 +116,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">double</span> costValue = - log(m_Sigma);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        costValue *= nbRawSignals;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; nbRawSignals;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; nbRawSignals;++i)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordtype">double</span> tmpVal = 0;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordtype">double</span> y = m_RawSignal[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordtype">double</span> y = m_RawSignal[i];</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            tmpVal += m_NumberOfCoils * log(y);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordtype">double</span> modelValue = 0;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; m_NumberOfParameters;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                modelValue += m_DesignMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) * parameters[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; m_NumberOfParameters;++j)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                modelValue += m_DesignMatrix(i,j) * parameters[j];</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            modelValue = exp(modelValue);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span> (m_UseB0Value)</div>
@@ -151,41 +151,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        std::vector &lt;double&gt; nuVector(m_RawSignal.size());</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        vnl_matrix &lt;double&gt; nuDerivativeMatrix(m_RawSignal.size(),m_NumberOfParameters);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_RawSignal.size();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_RawSignal.size();++i)</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordtype">double</span> modelValue = 0;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; m_NumberOfParameters;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                modelValue += m_DesignMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) * parameters[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; m_NumberOfParameters;++j)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                modelValue += m_DesignMatrix(i,j) * parameters[j];</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            modelValue = exp(modelValue);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">if</span> (m_UseB0Value)</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                modelValue *= m_B0Value;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            nuVector[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = modelValue;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            nuVector[i] = modelValue;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; m_NumberOfParameters;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                nuDerivativeMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) = m_DesignMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) * modelValue;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; m_NumberOfParameters;++j)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                nuDerivativeMatrix(i,j) = m_DesignMatrix(i,j) * modelValue;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_RawSignal.size();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_RawSignal.size();++i)</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordtype">double</span> dnuValue = - nuVector[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordtype">double</span> y = m_RawSignal[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordtype">double</span> dnuValue = - nuVector[i];</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordtype">double</span> y = m_RawSignal[i];</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordtype">double</span> insideValue = y * nuVector[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] / m_Sigma;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordtype">double</span> insideValue = y * nuVector[i] / m_Sigma;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordtype">double</span> besselRatio = <a class="code" href="namespaceanima.html#a9ff04ca634c401501fb0edc345a6d31a">anima::bessel_ratio_i</a>(insideValue,m_NumberOfCoils);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            dnuValue += besselRatio * y;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; m_NumberOfParameters;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                derivative[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] += nuDerivativeMatrix(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) * dnuValue;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; m_NumberOfParameters;++j)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                derivative[j] += nuDerivativeMatrix(i,j) * dnuValue;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
 <div class="ttc" id="animaDTINonCentralChiCostFunction_8h_html"><div class="ttname"><a href="animaDTINonCentralChiCostFunction_8h.html">animaDTINonCentralChiCostFunction.h</a></div></div>
 <div class="ttc" id="namespaceanima_html_a949de832f68b737513a4e18dc0cb46dd"><div class="ttname"><a href="namespaceanima.html#a949de832f68b737513a4e18dc0cb46dd">anima::log_bessel_i</a></div><div class="ttdeci">double log_bessel_i(unsigned int order, const double &amp;x)</div><div class="ttdoc">Computes the log of modified Bessel function of the first kind: I_{N} (N &gt;= 0) </div><div class="ttdef"><b>Definition:</b> <a href="animaBesselFunctions_8cxx_source.html#l00014">animaBesselFunctions.cxx:14</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_abf2bc2545a4a5f5683d9ef3ed0d977e0"><div class="ttname"><a href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a></div><div class="ttdeci">j</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00231">reslice_nii.m:231</a></div></div>
 <div class="ttc" id="classanima_1_1DTINonCentralChiCostFunction_html_ad42622f811b71c7e182d266c926f5a7f"><div class="ttname"><a href="classanima_1_1DTINonCentralChiCostFunction.html#ad42622f811b71c7e182d266c926f5a7f">anima::DTINonCentralChiCostFunction::ParametersType</a></div><div class="ttdeci">Superclass::ParametersType ParametersType</div><div class="ttdef"><b>Definition:</b> <a href="animaDTINonCentralChiCostFunction_8h_source.html#l00027">animaDTINonCentralChiCostFunction.h:27</a></div></div>
 <div class="ttc" id="classanima_1_1DTINonCentralChiCostFunction_html_a97ab5442283d67a5e23aee20851044cc"><div class="ttname"><a href="classanima_1_1DTINonCentralChiCostFunction.html#a97ab5442283d67a5e23aee20851044cc">anima::DTINonCentralChiCostFunction::GetValue</a></div><div class="ttdeci">virtual MeasureType GetValue(const ParametersType &amp;parameters) const </div><div class="ttdef"><b>Definition:</b> <a href="animaDTINonCentralChiCostFunction_8cxx_source.html#l00016">animaDTINonCentralChiCostFunction.cxx:16</a></div></div>
 <div class="ttc" id="classanima_1_1DTINonCentralChiCostFunction_html_a390c511659e3762b78d202d3d81aa297"><div class="ttname"><a href="classanima_1_1DTINonCentralChiCostFunction.html#a390c511659e3762b78d202d3d81aa297">anima::DTINonCentralChiCostFunction::DTINonCentralChiCostFunction</a></div><div class="ttdeci">DTINonCentralChiCostFunction()</div><div class="ttdef"><b>Definition:</b> <a href="animaDTINonCentralChiCostFunction_8cxx_source.html#l00006">animaDTINonCentralChiCostFunction.cxx:6</a></div></div>
@@ -194,13 +193,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespaceanima_html_a9ff04ca634c401501fb0edc345a6d31a"><div class="ttname"><a href="namespaceanima.html#a9ff04ca634c401501fb0edc345a6d31a">anima::bessel_ratio_i</a></div><div class="ttdeci">double bessel_ratio_i(const double &amp;x, unsigned int N, unsigned int approx_order)</div><div class="ttdoc">Computes the ratio of modified Bessel functions of the first kind: I_{N} / I_{N-1} (N &gt;= 1) ...</div><div class="ttdef"><b>Definition:</b> <a href="animaBesselFunctions_8cxx_source.html#l00051">animaBesselFunctions.cxx:51</a></div></div>
 <div class="ttc" id="classanima_1_1DTINonCentralChiCostFunction_html_ad8519d78b10827bb212be38b0868c4bf"><div class="ttname"><a href="classanima_1_1DTINonCentralChiCostFunction.html#ad8519d78b10827bb212be38b0868c4bf">anima::DTINonCentralChiCostFunction::DerivativeType</a></div><div class="ttdeci">Superclass::DerivativeType DerivativeType</div><div class="ttdef"><b>Definition:</b> <a href="animaDTINonCentralChiCostFunction_8h_source.html#l00026">animaDTINonCentralChiCostFunction.h:26</a></div></div>
 <div class="ttc" id="animaBesselFunctions_8h_html"><div class="ttname"><a href="animaBesselFunctions_8h.html">animaBesselFunctions.h</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:48 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

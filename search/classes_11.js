@@ -20,6 +20,5 @@ var searchData=
   ['trackerarguments',['trackerArguments',['../structanima_1_1BaseProbabilisticTractographyImageFilter_1_1trackerArguments.html',1,'anima::BaseProbabilisticTractographyImageFilter']]],
   ['trackerarguments',['trackerArguments',['../structanima_1_1dtiTractographyImageFilter_1_1trackerArguments.html',1,'anima::dtiTractographyImageFilter']]],
   ['transforminformation',['TransformInformation',['../structanima_1_1TransformSeriesReader_1_1TransformInformation.html',1,'anima::TransformSeriesReader']]],
-  ['transformiofactoryregistermanager',['TransformIOFactoryRegisterManager',['../classitk_1_1TransformIOFactoryRegisterManager.html',1,'itk']]],
   ['transformseriesreader',['TransformSeriesReader',['../classanima_1_1TransformSeriesReader.html',1,'anima']]]
 ];

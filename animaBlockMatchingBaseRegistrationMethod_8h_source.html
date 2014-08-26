@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_3553dd7649db2abadc30239e41176615.html">registration</a></li><li class="navelem"><a class="el" href="dir_0987574d5c0baf57d2e74e34c4921d2d.html">algorithms</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_42156ca842fecd25315aaaaf78422bef.html">registration</a></li><li class="navelem"><a class="el" href="dir_7646fbf2946f8461121dd27d7c24b3ac.html">algorithms</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -194,8 +194,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
 <div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#aaea664bfa12a092e92159f3f64850925">  118</a></span>&#160;    std::vector &lt;double&gt; &amp;<a class="code" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#aaea664bfa12a092e92159f3f64850925">GetBlockWeights</a>() {<span class="keywordflow">return</span> m_BlockWeights;}</div>
 <div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#a550adb8f2f01c30e167fb62321a6c4c9">  119</a></span>&#160;    std::vector&lt;typename BaseInputTransformType::Pointer&gt; &amp;<a class="code" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#a550adb8f2f01c30e167fb62321a6c4c9">GetBaseTransformsPointers</a>() {<span class="keywordflow">return</span> m_BaseTransformsPointers;}</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">typename</span> BaseInputTransformType::Pointer <a class="code" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#aa794aa9aa1759638d1ccb0c195942f81">GetBaseTransformPointer</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#a7a76a58c02ad57a2828865ba0d02b259">SetBaseTransform</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>, <a class="code" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#adc5bb39b93d65f8e18c17c9dad89793e">BaseInputTransformType</a> *trsf);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">typename</span> BaseInputTransformType::Pointer <a class="code" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#aa794aa9aa1759638d1ccb0c195942f81">GetBaseTransformPointer</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#a7a76a58c02ad57a2828865ba0d02b259">SetBaseTransform</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i, <a class="code" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#adc5bb39b93d65f8e18c17c9dad89793e">BaseInputTransformType</a> *trsf);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#a91071b7d6a32fc6d30913bbd07417002">itkSetEnumMacro</a> (OptimizerKind, <a class="code" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#a89bf9f8f47f55884265f7135441306cb">OptimizerDefinition</a>);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#a83430d4b842cd7875018c4711aa16c9a">itkGetEnumMacro</a> (OptimizerKind, <a class="code" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#a89bf9f8f47f55884265f7135441306cb">OptimizerDefinition</a>);</div>
@@ -458,13 +458,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1BlockMatchingBaseRegistrationMethod_html_aaab87eb0fba4ceddbe43738b767debe7a725a5b8406f5b8d43780943a9fab1f3d"><div class="ttname"><a href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#aaab87eb0fba4ceddbe43738b767debe7a725a5b8406f5b8d43780943a9fab1f3d">anima::BlockMatchingBaseRegistrationMethod::Affine</a></div><div class="ttdef"><b>Definition:</b> <a href="animaBlockMatchingBaseRegistrationMethod_8h_source.html#l00036">animaBlockMatchingBaseRegistrationMethod.h:36</a></div></div>
 <div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_a0836f0ad88bc1041ae2d8c20592874dc"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dc">Agregator</a></div><div class="ttdeci">Agregator</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00041">animaPyramidalDenseSVFMatchingBridge.h:41</a></div></div>
 <div class="ttc" id="classanima_1_1BlockMatchingBaseRegistrationMethod_html_aaab87eb0fba4ceddbe43738b767debe7"><div class="ttname"><a href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#aaab87eb0fba4ceddbe43738b767debe7">anima::BlockMatchingBaseRegistrationMethod::TransformationDefinition</a></div><div class="ttdeci">TransformationDefinition</div><div class="ttdef"><b>Definition:</b> <a href="animaBlockMatchingBaseRegistrationMethod_8h_source.html#l00036">animaBlockMatchingBaseRegistrationMethod.h:36</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:47 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

@@ -114,18 +114,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9101a0083d7370c85bd5aaaba7157f84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtinyxml2_1_1MemPool.html#a9101a0083d7370c85bd5aaaba7157f84">MemPool</a> ()</td></tr>
-<tr class="separator:a9101a0083d7370c85bd5aaaba7157f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae55ad9e3faeca702e6ccbb38fdbcad72"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtinyxml2_1_1MemPool.html#ae55ad9e3faeca702e6ccbb38fdbcad72">~MemPool</a> ()</td></tr>
-<tr class="separator:ae55ad9e3faeca702e6ccbb38fdbcad72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c518d49e3a94bde566f61e13b7240bb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtinyxml2_1_1MemPool.html#a0c518d49e3a94bde566f61e13b7240bb">ItemSize</a> () const =0</td></tr>
-<tr class="separator:a0c518d49e3a94bde566f61e13b7240bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f977b5fed752c0bbfe5295f469d6449"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtinyxml2_1_1MemPool.html#a4f977b5fed752c0bbfe5295f469d6449">Alloc</a> ()=0</td></tr>
 <tr class="separator:a4f977b5fed752c0bbfe5295f469d6449"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49e3bfac2cba2ebd6776b31e571f64f7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtinyxml2_1_1MemPool.html#a49e3bfac2cba2ebd6776b31e571f64f7">Free</a> (void *)=0</td></tr>
 <tr class="separator:a49e3bfac2cba2ebd6776b31e571f64f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c518d49e3a94bde566f61e13b7240bb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtinyxml2_1_1MemPool.html#a0c518d49e3a94bde566f61e13b7240bb">ItemSize</a> () const =0</td></tr>
+<tr class="separator:a0c518d49e3a94bde566f61e13b7240bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9101a0083d7370c85bd5aaaba7157f84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtinyxml2_1_1MemPool.html#a9101a0083d7370c85bd5aaaba7157f84">MemPool</a> ()</td></tr>
+<tr class="separator:a9101a0083d7370c85bd5aaaba7157f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5804dd1387b2e4de5eef710076a0db1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtinyxml2_1_1MemPool.html#ac5804dd1387b2e4de5eef710076a0db1">SetTracked</a> ()=0</td></tr>
 <tr class="separator:ac5804dd1387b2e4de5eef710076a0db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae55ad9e3faeca702e6ccbb38fdbcad72"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtinyxml2_1_1MemPool.html#ae55ad9e3faeca702e6ccbb38fdbcad72">~MemPool</a> ()</td></tr>
+<tr class="separator:ae55ad9e3faeca702e6ccbb38fdbcad72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -281,6 +281,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classtinyxml2_1_1MemPoolT.html#a7798932414916199a1bc0f9c3f368521">tinyxml2::MemPoolT&lt; SIZE &gt;</a>, <a class="el" href="classtinyxml2_1_1MemPoolT.html#a7798932414916199a1bc0f9c3f368521">tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLComment) &gt;</a>, <a class="el" href="classtinyxml2_1_1MemPoolT.html#a7798932414916199a1bc0f9c3f368521">tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLText) &gt;</a>, <a class="el" href="classtinyxml2_1_1MemPoolT.html#a7798932414916199a1bc0f9c3f368521">tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLAttribute) &gt;</a>, and <a class="el" href="classtinyxml2_1_1MemPoolT.html#a7798932414916199a1bc0f9c3f368521">tinyxml2::MemPoolT&lt; sizeof(tinyxml2::XMLElement) &gt;</a>.</p>
 
+<p>Referenced by <a class="el" href="tinyxml2_8cxx_source.html#l00697">tinyxml2::XMLNode::InsertAfterChild()</a>, <a class="el" href="tinyxml2_8cxx_source.html#l00648">tinyxml2::XMLNode::InsertEndChild()</a>, <a class="el" href="tinyxml2_8cxx_source.html#l00672">tinyxml2::XMLNode::InsertFirstChild()</a>, and <a class="el" href="tinyxml2_8cxx_source.html#l00772">tinyxml2::XMLNode::ParseDeep()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -289,9 +291,17 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:51 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:22 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

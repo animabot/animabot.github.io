@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_a378dc9af426dd8223a65e1788193c6b.html">diffusion</a></li><li class="navelem"><a class="el" href="dir_45da87a87cc1af15298f8835c65bf5b6.html">common</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_07ebd98e1841996e654b05628ce7f9e4.html">diffusion</a></li><li class="navelem"><a class="el" href="dir_e14227fd39eaa94df2d52fe42c03fcd8.html">common</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -136,10 +136,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::vector &lt;bool&gt; resVal(m_TotalNumberOfDirections,<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_TotalNumberOfDirections;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_TotalNumberOfDirections;++i)</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span> (m_BValues[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] &lt;= m_B0ValueThreshold)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                resVal[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span> (m_BValues[i] &lt;= m_B0ValueThreshold)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                resVal[i] = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> resVal;</div>
@@ -196,14 +196,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            this-&gt;ReadBValues();</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">// Normalize gradient directions</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_TotalNumberOfDirections;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_TotalNumberOfDirections;++i)</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="keywordflow">if</span> ((m_BValues[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] &lt;= m_B0ValueThreshold)||(<a class="code" href="namespaceanima.html#a2e8d718d69cfdb2139dde1768f85f6e2">anima::ComputeNorm</a>(m_Gradients[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]) == 0))</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="keywordflow">if</span> ((m_BValues[i] &lt;= m_B0ValueThreshold)||(<a class="code" href="namespaceanima.html#a2e8d718d69cfdb2139dde1768f85f6e2">anima::ComputeNorm</a>(m_Gradients[i]) == 0))</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    m_BValues[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = 0;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    m_BValues[i] = 0;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                        m_Gradients[i][<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] = 0;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; 3;++j)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                        m_Gradients[i][j] = 0;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                }</div>
@@ -215,7 +215,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <a class="code" href="namespaceanima.html#a75307a7eb3fa0266ae6134d2c65dba63">anima::Normalize</a>(m_Gradients[i],m_Gradients[i]);</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="keywordflow">if</span> (!m_GradientIndependentNormalization)</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    m_BValues[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] *= norm;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    m_BValues[i] *= norm;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            }</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
@@ -236,7 +236,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        m_Gradients.clear();</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        std::vector &lt; std::vector &lt;double&gt; &gt; trVecs(3);</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; 3;++i)</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        {</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">if</span> (gradFile.eof())</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <span class="keywordflow">throw</span> itk::ExceptionObject(__FILE__, __LINE__,<span class="stringliteral">&quot;BVec file is missing data&quot;</span>,ITK_LOCATION);</div>
@@ -247,15 +247,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">while</span>((strcmp(tmpStr,<span class="stringliteral">&quot;&quot;</span>) == 0)&amp;&amp;(!gradFile.eof()))</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                gradFile.getline(tmpStr,8192);</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a> workStr(tmpStr);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            std::string workStr(tmpStr);</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            boost::algorithm::trim_right(workStr);</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            std::istringstream iss(workStr);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a> shortStr;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            std::string shortStr;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">do</span></div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            {</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                iss &gt;&gt; shortStr;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                trVecs[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>].push_back(boost::lexical_cast&lt;BValueScalarType&gt; (shortStr));</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                trVecs[i].push_back(boost::lexical_cast&lt;BValueScalarType&gt; (shortStr));</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            }</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">while</span> (!iss.eof());</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        }</div>
@@ -263,11 +263,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        m_TotalNumberOfDirections = trVecs[0].size();</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        m_Gradients.resize(m_TotalNumberOfDirections);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_TotalNumberOfDirections;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_TotalNumberOfDirections;++i)</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            this-&gt;InitializeEmptyGradient(m_Gradients[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0;<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                m_Gradients[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>][<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] = trVecs[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>][<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            this-&gt;InitializeEmptyGradient(m_Gradients[i]);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; 3;++j)</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                m_Gradients[i][j] = trVecs[j][i];</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        }</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
@@ -321,8 +321,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">if</span> (!bvalFile.is_open())</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_TotalNumberOfDirections;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                m_BValues[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = boost::lexical_cast&lt;BValueScalarType&gt;(m_BValueBaseString);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_TotalNumberOfDirections;++i)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                m_BValues[i] = boost::lexical_cast&lt;BValueScalarType&gt;(m_BValueBaseString);</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
@@ -331,17 +331,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        {</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <span class="keywordtype">char</span> tmpStr[8192];</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            bvalFile.getline(tmpStr,8192);</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a> workStr(tmpStr);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            std::string workStr(tmpStr);</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            boost::algorithm::trim_right(workStr);</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            std::istringstream iss(workStr);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a> shortStr;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            std::string shortStr;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">do</span></div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            {</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                iss &gt;&gt; shortStr;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                m_BValues[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = boost::lexical_cast&lt;BValueScalarType&gt; (shortStr);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                ++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                m_BValues[i] = boost::lexical_cast&lt;BValueScalarType&gt; (shortStr);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                ++i;</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            }</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordflow">while</span> (!iss.eof());</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        }</div>
@@ -356,8 +356,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                <span class="keywordflow">if</span> (strcmp(tmpStr,<span class="stringliteral">&quot;&quot;</span>) == 0)</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                    <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                m_BValues[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = boost::lexical_cast&lt;BValueScalarType&gt; (tmpStr);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                ++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                m_BValues[i] = boost::lexical_cast&lt;BValueScalarType&gt; (tmpStr);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                ++i;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            }</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        }</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
@@ -365,8 +365,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    }</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;} <span class="comment">// end namespace anima</span></div>
-<div class="ttc" id="reslice__nii_8m_html_abf2bc2545a4a5f5683d9ef3ed0d977e0"><div class="ttname"><a href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a></div><div class="ttdeci">j</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00231">reslice_nii.m:231</a></div></div>
-<div class="ttc" id="load__lbeig_8m_html_a338951b7e7607b65262fb051e7804d91"><div class="ttname"><a href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">string</a></div><div class="ttdeci">string</div><div class="ttdef"><b>Definition:</b> <a href="load__lbeig_8m_source.html#l00008">load_lbeig.m:8</a></div></div>
 <div class="ttc" id="classanima_1_1GradientFileReader_html_a1457d8e3467a509049012b13765fe9ea"><div class="ttname"><a href="classanima_1_1GradientFileReader.html#a1457d8e3467a509049012b13765fe9ea">anima::GradientFileReader::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="animaGradientFileReader_8hxx_source.html#l00087">animaGradientFileReader.hxx:87</a></div></div>
 <div class="ttc" id="classanima_1_1GradientFileReader_html_afa33863bb3beb7a8ad02cd93f8e7b6b4"><div class="ttname"><a href="classanima_1_1GradientFileReader.html#afa33863bb3beb7a8ad02cd93f8e7b6b4">anima::GradientFileReader::BValueVectorType</a></div><div class="ttdeci">std::vector&lt; BValueScalarType &gt; BValueVectorType</div><div class="ttdef"><b>Definition:</b> <a href="animaGradientFileReader_8h_source.html#l00018">animaGradientFileReader.h:18</a></div></div>
 <div class="ttc" id="namespaceanima_html_a2e8d718d69cfdb2139dde1768f85f6e2"><div class="ttname"><a href="namespaceanima.html#a2e8d718d69cfdb2139dde1768f85f6e2">anima::ComputeNorm</a></div><div class="ttdeci">double ComputeNorm(const VectorType &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00321">animaVectorOperations.hxx:321</a></div></div>
@@ -380,13 +378,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1GradientFileReader_html_a72628c6ee851fe461047c40b372948b8"><div class="ttname"><a href="classanima_1_1GradientFileReader.html#a72628c6ee851fe461047c40b372948b8">anima::GradientFileReader::GetBValues</a></div><div class="ttdeci">BValueVectorType &amp; GetBValues()</div><div class="ttdef"><b>Definition:</b> <a href="animaGradientFileReader_8hxx_source.html#l00065">animaGradientFileReader.hxx:65</a></div></div>
 <div class="ttc" id="classanima_1_1GradientFileReader_html_aaf7d68ad9b8a69443329d612aab1ba0d"><div class="ttname"><a href="classanima_1_1GradientFileReader.html#aaf7d68ad9b8a69443329d612aab1ba0d">anima::GradientFileReader::GetTotalNumberOfDirections</a></div><div class="ttdeci">unsigned int GetTotalNumberOfDirections()</div><div class="ttdef"><b>Definition:</b> <a href="animaGradientFileReader_8hxx_source.html#l00076">animaGradientFileReader.hxx:76</a></div></div>
 <div class="ttc" id="classanima_1_1GradientFileReader_html_a35f9b359c3ff1320bdcb532a29da99a7"><div class="ttname"><a href="classanima_1_1GradientFileReader.html#a35f9b359c3ff1320bdcb532a29da99a7">anima::GradientFileReader::GradientFileReader</a></div><div class="ttdeci">GradientFileReader()</div><div class="ttdef"><b>Definition:</b> <a href="animaGradientFileReader_8hxx_source.html#l00020">animaGradientFileReader.hxx:20</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:48 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

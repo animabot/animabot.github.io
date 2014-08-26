@@ -2,7 +2,6 @@ var searchData=
 [
   ['x',['x',['../structanima_1_1ODFProbabilisticTractographyImageFilter_1_1XYZ.html#ab8b03ee4265390fad2aa5db1677fbe2a',1,'anima::ODFProbabilisticTractographyImageFilter::XYZ']]],
   ['xdirindex',['XDirIndex',['../namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a43a2d2252425882e429c938c6541c025',1,'anima']]],
-  ['xform_5fnii_2em',['xform_nii.m',['../xform__nii_8m.html',1,'']]],
   ['xi',['xi',['../namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60',1,'anima::xi(const T &amp;k)'],['../namespaceanima.html#aa155a8ad28d67b1309795a4b72d5a2d2',1,'anima::xi(const T &amp;k)']]],
   ['xml',['Xml',['../classGenericArguments.html#ae1ae5e4889e22054da5ffdf1b96bc014',1,'GenericArguments']]],
   ['xml_5fcan_5fnot_5fconvert_5ftext',['XML_CAN_NOT_CONVERT_TEXT',['../namespacetinyxml2.html#a1fbf88509c3ac88c09117b1947414e08afdb8840395a7c13dfe6a3e104401c095',1,'tinyxml2']]],
@@ -42,16 +41,15 @@ var searchData=
   ['xmlescape',['XmlEscape',['../Arguments_8h.html#a45a44447605855cd14137d6ac7a95a76',1,'Arguments.h']]],
   ['xmlhandle',['XMLHandle',['../classtinyxml2_1_1XMLHandle.html#a9c240a35c18f053509b4b97ddccd9793',1,'tinyxml2::XMLHandle::XMLHandle(XMLNode *node)'],['../classtinyxml2_1_1XMLHandle.html#aa2edbc1c0d3e3e8259bd98de7f1cf500',1,'tinyxml2::XMLHandle::XMLHandle(XMLNode &amp;node)'],['../classtinyxml2_1_1XMLHandle.html#afd8e01e6018c07347b8e6d80272466aa',1,'tinyxml2::XMLHandle::XMLHandle(const XMLHandle &amp;ref)']]],
   ['xmlhandle',['XMLHandle',['../classtinyxml2_1_1XMLHandle.html',1,'tinyxml2']]],
-  ['xmlnode',['XMLNode',['../classtinyxml2_1_1XMLNode.html#a29868df6ca383d574f584dfdd15105b6',1,'tinyxml2::XMLNode::XMLNode(XMLDocument *)'],['../classtinyxml2_1_1XMLNode.html#a78be01384518a969da905548f318d75b',1,'tinyxml2::XMLNode::XMLNode(const XMLNode &amp;)']]],
   ['xmlnode',['XMLNode',['../classtinyxml2_1_1XMLNode.html',1,'tinyxml2']]],
-  ['xmlprinter',['XMLPrinter',['../classtinyxml2_1_1XMLPrinter.html',1,'tinyxml2']]],
+  ['xmlnode',['XMLNode',['../classtinyxml2_1_1XMLNode.html#a29868df6ca383d574f584dfdd15105b6',1,'tinyxml2::XMLNode::XMLNode(XMLDocument *)'],['../classtinyxml2_1_1XMLNode.html#a78be01384518a969da905548f318d75b',1,'tinyxml2::XMLNode::XMLNode(const XMLNode &amp;)']]],
   ['xmlprinter',['XMLPrinter',['../classtinyxml2_1_1XMLPrinter.html#ad1eb8de568ceac1429cf04c66a349bd6',1,'tinyxml2::XMLPrinter']]],
-  ['xmltext',['XMLText',['../classtinyxml2_1_1XMLText.html#ad9f46d70e61e5386ead93728d8b90267',1,'tinyxml2::XMLText::XMLText(XMLDocument *doc)'],['../classtinyxml2_1_1XMLText.html#a002156e1f61ee6d48e5368b7cca25582',1,'tinyxml2::XMLText::XMLText(const XMLText &amp;)']]],
+  ['xmlprinter',['XMLPrinter',['../classtinyxml2_1_1XMLPrinter.html',1,'tinyxml2']]],
   ['xmltext',['XMLText',['../classtinyxml2_1_1XMLText.html',1,'tinyxml2']]],
-  ['xmlunknown',['XMLUnknown',['../classtinyxml2_1_1XMLUnknown.html',1,'tinyxml2']]],
+  ['xmltext',['XMLText',['../classtinyxml2_1_1XMLText.html#ad9f46d70e61e5386ead93728d8b90267',1,'tinyxml2::XMLText::XMLText(XMLDocument *doc)'],['../classtinyxml2_1_1XMLText.html#a002156e1f61ee6d48e5368b7cca25582',1,'tinyxml2::XMLText::XMLText(const XMLText &amp;)']]],
   ['xmlunknown',['XMLUnknown',['../classtinyxml2_1_1XMLUnknown.html#a9391eb679598d50baba424e6f1aa367b',1,'tinyxml2::XMLUnknown::XMLUnknown(XMLDocument *doc)'],['../classtinyxml2_1_1XMLUnknown.html#aab31a93c95a7cedc9597cea7caffa73f',1,'tinyxml2::XMLUnknown::XMLUnknown(const XMLUnknown &amp;)']]],
+  ['xmlunknown',['XMLUnknown',['../classtinyxml2_1_1XMLUnknown.html',1,'tinyxml2']]],
   ['xmlutil',['XMLUtil',['../classtinyxml2_1_1XMLUtil.html',1,'tinyxml2']]],
   ['xmlvisitor',['XMLVisitor',['../classtinyxml2_1_1XMLVisitor.html',1,'tinyxml2']]],
-  ['xyz',['XYZ',['../structanima_1_1ODFProbabilisticTractographyImageFilter_1_1XYZ.html',1,'anima::ODFProbabilisticTractographyImageFilter']]],
-  ['xyzt_5funits',['xyzt_units',['../xform__nii_8m.html#a2b76768e294588fbdaf82b55a8273f6a',1,'xform_nii.m']]]
+  ['xyz',['XYZ',['../structanima_1_1ODFProbabilisticTractographyImageFilter_1_1XYZ.html',1,'anima::ODFProbabilisticTractographyImageFilter']]]
 ];

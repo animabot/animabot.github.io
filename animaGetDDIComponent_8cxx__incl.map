@@ -1,7 +1,6 @@
 <map id="animaGetDDIComponent.cxx" name="animaGetDDIComponent.cxx">
 <area shape="rect" id="node10" href="$animaDDIDistribution_8h.html" title="animaDDIDistribution.h" alt="" coords="1303,80,1456,107"/>
 <area shape="rect" id="node28" href="$animaHyperbolicFunctions_8h.html" title="animaHyperbolicFunctions.h" alt="" coords="2401,237,2583,264"/>
-<area shape="rect" id="node11" href="$AnimaStatisticsExport_8h.html" title="AnimaStatisticsExport.h" alt="" coords="1158,155,1316,181"/>
 <area shape="rect" id="node14" href="$animaDDIDistribution_8hxx.html" title="animaDDIDistribution.hxx" alt="" coords="1539,155,1703,181"/>
 <area shape="rect" id="node15" href="$animaVectorOperations_8h.html" title="animaVectorOperations.h" alt="" coords="1443,237,1609,264"/>
 <area shape="rect" id="node25" href="$animaTrigonometricFunctions_8h.html" title="animaTrigonometricFunctions.h" alt="" coords="1988,237,2191,264"/>
@@ -9,7 +8,6 @@
 <area shape="rect" id="node19" href="$animaVectorOperations_8hxx.html" title="animaVectorOperations.hxx" alt="" coords="1437,320,1616,347"/>
 <area shape="rect" id="node20" href="$animaLogarithmFunctions_8h.html" title="animaLogarithmFunctions.h" alt="" coords="1251,395,1431,421"/>
 <area shape="rect" id="node21" href="$animaLogarithmFunctions_8hxx.html" title="animaLogarithmFunctions.hxx" alt="" coords="1245,469,1437,496"/>
-<area shape="rect" id="node26" href="$AnimaSpecialFunctionsExport_8h.html" title="AnimaSpecialFunctionsExport.h" alt="" coords="2221,320,2424,347"/>
 <area shape="rect" id="node27" href="$animaTrigonometricFunctions_8hxx.html" title="animaTrigonometricFunctions.hxx" alt="" coords="1982,320,2196,347"/>
 <area shape="rect" id="node29" href="$animaHyperbolicFunctions_8hxx.html" title="animaHyperbolicFunctions.hxx" alt="" coords="2449,320,2644,347"/>
 </map>

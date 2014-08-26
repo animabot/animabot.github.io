@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_a378dc9af426dd8223a65e1788193c6b.html">diffusion</a></li><li class="navelem"><a class="el" href="dir_b5b9aebead8914e2f3aee6daf03f61d7.html">tractography</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_07ebd98e1841996e654b05628ce7f9e4.html">diffusion</a></li><li class="navelem"><a class="el" href="dir_f8547c436fa2f1c50a14ab9e9eca2066.html">tractography</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -101,11 +101,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vtkPolyData.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="AnimaTractographyExport_8h.html">AnimaTractographyExport.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;AnimaTractographyExport.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>anima {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classanima_1_1FibersWriter.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="AnimaTractographyExport_8h.html#a826946ab6ebb137659e8cffa1ec83337">ANIMATRACTOGRAPHY_EXPORT</a> <a class="code" href="classanima_1_1FibersWriter.html">FibersWriter</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classanima_1_1FibersWriter.html">   11</a></span>&#160;<span class="keyword">class </span>ANIMATRACTOGRAPHY_EXPORT <a class="code" href="classanima_1_1FibersWriter.html">FibersWriter</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classanima_1_1FibersWriter.html#ac5952314459b5e3e7629e53d70c1b4ce">   14</a></span>&#160;    <a class="code" href="classanima_1_1FibersWriter.html#ac5952314459b5e3e7629e53d70c1b4ce">FibersWriter</a>()</div>
@@ -117,7 +117,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classanima_1_1FibersWriter.html#a8f9cd30544c0f9bf05f2958a0afffd91">   20</a></span>&#160;    <a class="code" href="classanima_1_1FibersWriter.html#a8f9cd30544c0f9bf05f2958a0afffd91">~FibersWriter</a>() {}</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classanima_1_1FibersWriter.html#aebbea5a716e0697d843b23142c2c7f8c">   22</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classanima_1_1FibersWriter.html#aebbea5a716e0697d843b23142c2c7f8c">SetInputData</a>(vtkPolyData *data) {m_InputData = data;}</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classanima_1_1FibersWriter.html#aa0dba8fbb27f0e3e33a47baafdae5ea6">   23</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classanima_1_1FibersWriter.html#aa0dba8fbb27f0e3e33a47baafdae5ea6">SetFileName</a>(<a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a> &amp;name) {m_FileName = name;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classanima_1_1FibersWriter.html#aa0dba8fbb27f0e3e33a47baafdae5ea6">   23</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classanima_1_1FibersWriter.html#aa0dba8fbb27f0e3e33a47baafdae5ea6">SetFileName</a>(std::string &amp;name) {m_FileName = name;}</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> Update();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
@@ -128,13 +128,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    vtkSmartPointer &lt;vtkPolyData&gt; m_InputData;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a> m_FileName;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::string m_FileName;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;} <span class="comment">// end namespace anima</span></div>
-<div class="ttc" id="load__lbeig_8m_html_a338951b7e7607b65262fb051e7804d91"><div class="ttname"><a href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">string</a></div><div class="ttdeci">string</div><div class="ttdef"><b>Definition:</b> <a href="load__lbeig_8m_source.html#l00008">load_lbeig.m:8</a></div></div>
-<div class="ttc" id="AnimaTractographyExport_8h_html_a826946ab6ebb137659e8cffa1ec83337"><div class="ttname"><a href="AnimaTractographyExport_8h.html#a826946ab6ebb137659e8cffa1ec83337">ANIMATRACTOGRAPHY_EXPORT</a></div><div class="ttdeci">#define ANIMATRACTOGRAPHY_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="AnimaTractographyExport_8h_source.html#l00015">AnimaTractographyExport.h:15</a></div></div>
-<div class="ttc" id="AnimaTractographyExport_8h_html"><div class="ttname"><a href="AnimaTractographyExport_8h.html">AnimaTractographyExport.h</a></div></div>
 <div class="ttc" id="classanima_1_1FibersWriter_html_ac5952314459b5e3e7629e53d70c1b4ce"><div class="ttname"><a href="classanima_1_1FibersWriter.html#ac5952314459b5e3e7629e53d70c1b4ce">anima::FibersWriter::FibersWriter</a></div><div class="ttdeci">FibersWriter()</div><div class="ttdef"><b>Definition:</b> <a href="animaFibersWriter_8h_source.html#l00014">animaFibersWriter.h:14</a></div></div>
 <div class="ttc" id="classanima_1_1FibersWriter_html"><div class="ttname"><a href="classanima_1_1FibersWriter.html">anima::FibersWriter</a></div><div class="ttdef"><b>Definition:</b> <a href="animaFibersWriter_8h_source.html#l00011">animaFibersWriter.h:11</a></div></div>
 <div class="ttc" id="classanima_1_1FibersWriter_html_aa0dba8fbb27f0e3e33a47baafdae5ea6"><div class="ttname"><a href="classanima_1_1FibersWriter.html#aa0dba8fbb27f0e3e33a47baafdae5ea6">anima::FibersWriter::SetFileName</a></div><div class="ttdeci">void SetFileName(std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="animaFibersWriter_8h_source.html#l00023">animaFibersWriter.h:23</a></div></div>
@@ -143,9 +140,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:48 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

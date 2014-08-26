@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_a378dc9af426dd8223a65e1788193c6b.html">diffusion</a></li><li class="navelem"><a class="el" href="dir_b78f2621635c39ea00209570b876a1a5.html">odf</a></li><li class="navelem"><a class="el" href="dir_db9c03b4bcba1f8f22334bb8698def41.html">odf_estimator</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_07ebd98e1841996e654b05628ce7f9e4.html">diffusion</a></li><li class="navelem"><a class="el" href="dir_decccc74500bc96ee9688dea50984902.html">odf</a></li><li class="navelem"><a class="el" href="dir_6a9eb20ebcb9fcb1de4bea2bceb22a61.html">odf_estimator</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -129,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        cmd.parse(argc,argv);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; <a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; e)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; e.error() &lt;&lt; <span class="stringliteral">&quot;for argument &quot;</span> &lt;&lt; e.argId() &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span>(1);</div>
@@ -223,8 +223,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    </div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    GFReaderType::GradientVectorType directions = gfReader.GetGradients();</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; directions.size();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        mainFilter-&gt;AddGradientDirection(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,directions[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; directions.size();++i)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        mainFilter-&gt;AddGradientDirection(i,directions[i]);</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    </div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    itk::TimeProbe tmpTime;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    tmpTime.Start();</div>
@@ -245,20 +245,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
-<div class="ttc" id="xform__nii_8m_html_a5389c938d8f439f89bc6549e6a18285d"><div class="ttname"><a href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a></div><div class="ttdeci">hdr.dime.xyzt_units, 7 e()</div></div>
 <div class="ttc" id="animaODFEstimator_8cxx_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="animaODFEstimator_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="animaODFEstimator_8cxx_source.html#l00009">animaODFEstimator.cxx:9</a></div></div>
 <div class="ttc" id="classanima_1_1GradientFileReader_html_a7d5049c6aa9bc52333386c0c264fb9c7"><div class="ttname"><a href="classanima_1_1GradientFileReader.html#a7d5049c6aa9bc52333386c0c264fb9c7">anima::GradientFileReader::SetGradientFileName</a></div><div class="ttdeci">void SetGradientFileName(std::string fName)</div><div class="ttdef"><b>Definition:</b> <a href="animaGradientFileReader_8h_source.html#l00023">animaGradientFileReader.h:23</a></div></div>
 <div class="ttc" id="classanima_1_1GradientFileReader_html"><div class="ttname"><a href="classanima_1_1GradientFileReader.html">anima::GradientFileReader</a></div><div class="ttdef"><b>Definition:</b> <a href="animaGradientFileReader_8h_source.html#l00013">animaGradientFileReader.h:13</a></div></div>
 <div class="ttc" id="animaGradientFileReader_8h_html"><div class="ttname"><a href="animaGradientFileReader_8h.html">animaGradientFileReader.h</a></div></div>
 <div class="ttc" id="classanima_1_1ODFEstimatorImageFilter_html"><div class="ttname"><a href="classanima_1_1ODFEstimatorImageFilter.html">anima::ODFEstimatorImageFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="animaODFEstimatorImageFilter_8h_source.html#l00011">animaODFEstimatorImageFilter.h:11</a></div></div>
 <div class="ttc" id="animaODFEstimatorImageFilter_8h_html"><div class="ttname"><a href="animaODFEstimatorImageFilter_8h.html">animaODFEstimatorImageFilter.h</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:48 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:20 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_71f172cff22fb3cfc623ca581070520d.html">interpolator</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_77a1a0af1427334be1898bd9af1793fb.html">interpolator</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -139,11 +139,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        </div>
 <div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#ae42df213d9727f5dea762be3b24cc89b">   58</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#ae42df213d9727f5dea762be3b24cc89b">IsInsideBuffer</a>(<span class="keyword">const</span> <a class="code" href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#a1c39afa8df3218d2ccd9c4791a853a5d">ContinuousIndexType</a> &amp; index)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0; <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; ImageDimension; <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>++ )</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; ImageDimension; j++ )</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="comment">/* Test for negative of a positive so we can catch NaN&#39;s. */</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">if</span> ( ! (index[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] &gt;= this-&gt;m_StartIndex[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] &amp;&amp;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        index[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] &lt;= this-&gt;m_EndIndex[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>] ) )</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">if</span> ( ! (index[j] &gt;= this-&gt;m_StartIndex[j] &amp;&amp;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        index[j] &lt;= this-&gt;m_EndIndex[j] ) )</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                }</div>
@@ -153,9 +153,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        </div>
 <div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#a6391c12d9f8a6a0c849037bbd8f4203e">   72</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#a6391c12d9f8a6a0c849037bbd8f4203e">isZero</a>(<span class="keyword">const</span> <a class="code" href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#a2f10d45cff4c2bfa6a4765e704674dd2">PixelType</a> &amp;value)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; value.GetNumberOfElements();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; value.GetNumberOfElements();++i)</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordflow">if</span> (value[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] != 0)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordflow">if</span> (value[i] != 0)</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                {</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                }</div>
@@ -177,7 +177,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor"></span><span class="preprocessor"># include &quot;<a class="code" href="animaVectorModelLinearInterpolateImageFunction_8hxx.html">animaVectorModelLinearInterpolateImageFunction.hxx</a>&quot;</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classanima_1_1VectorModelLinearInterpolateImageFunction_html_a6689499636daea7e46ffec467b1ea5bb"><div class="ttname"><a href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#a6689499636daea7e46ffec467b1ea5bb">anima::VectorModelLinearInterpolateImageFunction::Self</a></div><div class="ttdeci">VectorModelLinearInterpolateImageFunction Self</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorModelLinearInterpolateImageFunction_8h_source.html#l00014">animaVectorModelLinearInterpolateImageFunction.h:14</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_abf2bc2545a4a5f5683d9ef3ed0d977e0"><div class="ttname"><a href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a></div><div class="ttdeci">j</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00231">reslice_nii.m:231</a></div></div>
 <div class="ttc" id="classanima_1_1VectorModelLinearInterpolateImageFunction_html_ae42df213d9727f5dea762be3b24cc89b"><div class="ttname"><a href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#ae42df213d9727f5dea762be3b24cc89b">anima::VectorModelLinearInterpolateImageFunction::IsInsideBuffer</a></div><div class="ttdeci">virtual bool IsInsideBuffer(const ContinuousIndexType &amp;index) const </div><div class="ttdef"><b>Definition:</b> <a href="animaVectorModelLinearInterpolateImageFunction_8h_source.html#l00058">animaVectorModelLinearInterpolateImageFunction.h:58</a></div></div>
 <div class="ttc" id="classanima_1_1VectorModelLinearInterpolateImageFunction_html_ace1679de5e8f8a534ee49cbc382a4d1a"><div class="ttname"><a href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#ace1679de5e8f8a534ee49cbc382a4d1a">anima::VectorModelLinearInterpolateImageFunction::RealType</a></div><div class="ttdeci">Superclass::RealType RealType</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorModelLinearInterpolateImageFunction_8h_source.html#l00029">animaVectorModelLinearInterpolateImageFunction.h:29</a></div></div>
 <div class="ttc" id="classanima_1_1VectorModelLinearInterpolateImageFunction_html_ae7f09a3033c20e7f4372e0d43ec842a9"><div class="ttname"><a href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#ae7f09a3033c20e7f4372e0d43ec842a9">anima::VectorModelLinearInterpolateImageFunction::IndexType</a></div><div class="ttdeci">Superclass::IndexType IndexType</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorModelLinearInterpolateImageFunction_8h_source.html#l00035">animaVectorModelLinearInterpolateImageFunction.h:35</a></div></div>
@@ -193,13 +192,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1VectorModelLinearInterpolateImageFunction_html_a28f4dc5fa32f2439a45c68dfa8400666"><div class="ttname"><a href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#a28f4dc5fa32f2439a45c68dfa8400666">anima::VectorModelLinearInterpolateImageFunction::IndexValueType</a></div><div class="ttdeci">Superclass::IndexValueType IndexValueType</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorModelLinearInterpolateImageFunction_8h_source.html#l00036">animaVectorModelLinearInterpolateImageFunction.h:36</a></div></div>
 <div class="ttc" id="classanima_1_1VectorModelLinearInterpolateImageFunction_html"><div class="ttname"><a href="classanima_1_1VectorModelLinearInterpolateImageFunction.html">anima::VectorModelLinearInterpolateImageFunction</a></div><div class="ttdef"><b>Definition:</b> <a href="animaVectorModelLinearInterpolateImageFunction_8h_source.html#l00009">animaVectorModelLinearInterpolateImageFunction.h:9</a></div></div>
 <div class="ttc" id="classanima_1_1VectorModelLinearInterpolateImageFunction_html_a1c39afa8df3218d2ccd9c4791a853a5d"><div class="ttname"><a href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#a1c39afa8df3218d2ccd9c4791a853a5d">anima::VectorModelLinearInterpolateImageFunction::ContinuousIndexType</a></div><div class="ttdeci">Superclass::ContinuousIndexType ContinuousIndexType</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorModelLinearInterpolateImageFunction_8h_source.html#l00039">animaVectorModelLinearInterpolateImageFunction.h:39</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:21 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

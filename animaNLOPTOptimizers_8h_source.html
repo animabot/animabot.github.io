@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_51e3291a7a6553fd1a91abcb1b3d36a4.html">optimizers</a></li><li class="navelem"><a class="el" href="dir_5ef7028a9d0cd0df356eaa0e4dc61dad.html">nlopt_optimizers</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_4b8637a08b46ddef05ef2c04b31564d6.html">optimizers</a></li><li class="navelem"><a class="el" href="dir_1b18ed1615de1080e7b30e47fe78e1da.html">nlopt_optimizers</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -103,11 +103,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;nlopt.h&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//#include &quot;nlopt-2.2/util/nlopt-util.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="AnimaOptimizersExport_8h.html">AnimaOptimizersExport.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;AnimaOptimizersExport.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>anima</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classanima_1_1NLOPTOptimizers.html">   95</a></span>&#160;    <span class="keyword">class </span><a class="code" href="AnimaOptimizersExport_8h.html#afb7ff6fe68a3904c03dffa327fae649c">ANIMAOPTIMIZERS_EXPORT</a> <a class="code" href="classanima_1_1NLOPTOptimizers.html">NLOPTOptimizers</a>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classanima_1_1NLOPTOptimizers.html">   95</a></span>&#160;    <span class="keyword">class </span>ANIMAOPTIMIZERS_EXPORT <a class="code" href="classanima_1_1NLOPTOptimizers.html">NLOPTOptimizers</a>:</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">public</span> itk::SingleValuedNonLinearOptimizer</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">public</span>:</div>
@@ -195,7 +195,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        itkSetMacro( ErrorCode, <a class="code" href="classanima_1_1NLOPTOptimizers.html#ad56e6b315eb012700248e763ea231065">nlopt_result</a> );</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        itkGetConstReferenceMacro( ErrorCode, <a class="code" href="classanima_1_1NLOPTOptimizers.html#ad56e6b315eb012700248e763ea231065">nlopt_result</a> );</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a> GetErrorCodeDescription() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        std::string GetErrorCodeDescription() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordtype">bool</span>    isSuccessful() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
@@ -250,9 +250,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        itkGetMacro(VerboseLevel, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        itkSetMacro(VerboseLevel, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keywordtype">void</span> AddInequalityConstraint(nlopt_func fct, <span class="keywordtype">double</span> <a class="code" href="emgm_8m.html#a1bdcfc0498996872a24dabb51e5f2121">tol</a>);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keywordtype">void</span> AddInequalityConstraint(nlopt_func fct, <span class="keywordtype">double</span> tol);</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <span class="keywordtype">void</span> ClearInequalityConstraints();</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="keywordtype">void</span> AddEqualityConstraint(nlopt_func fct, <span class="keywordtype">double</span> <a class="code" href="emgm_8m.html#a1bdcfc0498996872a24dabb51e5f2121">tol</a>);</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="keywordtype">void</span> AddEqualityConstraint(nlopt_func fct, <span class="keywordtype">double</span> tol);</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keywordtype">void</span> ClearEqualityConstraints();</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
@@ -296,7 +296,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">struct</span></div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        {</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;            nlopt_func fct;</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;            <span class="keywordtype">double</span> <a class="code" href="emgm_8m.html#a1bdcfc0498996872a24dabb51e5f2121">tol</a>;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;            <span class="keywordtype">double</span> tol;</div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        } ConstraintType;</div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        std::vector&lt;ConstraintType&gt; m_InequalityConstaint;</div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        std::vector&lt;ConstraintType&gt; m_EqualityConstaint;</div>
@@ -308,23 +308,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;</div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;</div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2a5ba4e7cae2488f3497cdb1ec1daba430"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2a5ba4e7cae2488f3497cdb1ec1daba430">anima::NLOPTOptimizers::NLOPT_LD_VAR1</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00140">animaNLOPTOptimizers.h:140</a></div></div>
-<div class="ttc" id="emgm_8m_html_a1bdcfc0498996872a24dabb51e5f2121"><div class="ttname"><a href="emgm_8m.html#a1bdcfc0498996872a24dabb51e5f2121">tol</a></div><div class="ttdeci">tol</div><div class="ttdef"><b>Definition:</b> <a href="emgm_8m_source.html#l00014">emgm.m:14</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2a047b42a9a631e1b6611f648a85eff0c6"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2a047b42a9a631e1b6611f648a85eff0c6">anima::NLOPTOptimizers::NLOPT_LN_NELDERMEAD</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00162">animaNLOPTOptimizers.h:162</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2a939a135c391c24bd63c83ed9b0182bb2"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2a939a135c391c24bd63c83ed9b0182bb2">anima::NLOPTOptimizers::NLOPT_LD_TNEWTON_PRECOND_RESTART</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00146">animaNLOPTOptimizers.h:146</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2ae401ac2b3f48c6f34e5a06ffb390d596"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2ae401ac2b3f48c6f34e5a06ffb390d596">anima::NLOPTOptimizers::NLOPT_LN_NEWUOA_BOUND</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00160">animaNLOPTOptimizers.h:160</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_a3e00a00c6f57623f26fb92af92304454"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#a3e00a00c6f57623f26fb92af92304454">anima::NLOPTOptimizers::Pointer</a></div><div class="ttdeci">itk::SmartPointer&lt; Self &gt; Pointer</div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00102">animaNLOPTOptimizers.h:102</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2ab1764dcdd7ca92fab58c7cc5d214ef14"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2ab1764dcdd7ca92fab58c7cc5d214ef14">anima::NLOPTOptimizers::NLOPT_LN_COBYLA</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00157">animaNLOPTOptimizers.h:157</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2a5dcd5cc852c3d6fc222ae14ba13825a3"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2a5dcd5cc852c3d6fc222ae14ba13825a3">anima::NLOPTOptimizers::NLOPT_GN_DIRECT_L_NOSCAL</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00125">animaNLOPTOptimizers.h:125</a></div></div>
-<div class="ttc" id="load__lbeig_8m_html_a338951b7e7607b65262fb051e7804d91"><div class="ttname"><a href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">string</a></div><div class="ttdeci">string</div><div class="ttdef"><b>Definition:</b> <a href="load__lbeig_8m_source.html#l00008">load_lbeig.m:8</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2abb164007771283ed6e20669e6c00e6aa"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2abb164007771283ed6e20669e6c00e6aa">anima::NLOPTOptimizers::NLOPT_GN_CRS2_LM</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00148">animaNLOPTOptimizers.h:148</a></div></div>
-<div class="ttc" id="AnimaOptimizersExport_8h_html_afb7ff6fe68a3904c03dffa327fae649c"><div class="ttname"><a href="AnimaOptimizersExport_8h.html#afb7ff6fe68a3904c03dffa327fae649c">ANIMAOPTIMIZERS_EXPORT</a></div><div class="ttdeci">#define ANIMAOPTIMIZERS_EXPORT</div><div class="ttdef"><b>Definition:</b> <a href="AnimaOptimizersExport_8h_source.html#l00015">AnimaOptimizersExport.h:15</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2a276b773c5e8a3a4d4c52c298a4b85585"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2a276b773c5e8a3a4d4c52c298a4b85585">anima::NLOPTOptimizers::NLOPT_GN_ISRES</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00172">animaNLOPTOptimizers.h:172</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_aececca5789a02c35217c6a02d897c6c1"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#aececca5789a02c35217c6a02d897c6c1">anima::NLOPTOptimizers::Self</a></div><div class="ttdeci">NLOPTOptimizers Self</div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00100">animaNLOPTOptimizers.h:100</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html">anima::NLOPTOptimizers</a></div><div class="ttdoc">Implements an ITK wrapper for the NLOPT library. </div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00095">animaNLOPTOptimizers.h:95</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2ae6820304154b5fceca9e3e848a890758"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2ae6820304154b5fceca9e3e848a890758">anima::NLOPTOptimizers::NLOPT_GN_ORIG_DIRECT</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00128">animaNLOPTOptimizers.h:128</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2ae2867d346fae3bfc5b30f1f005dc3a61"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2ae2867d346fae3bfc5b30f1f005dc3a61">anima::NLOPTOptimizers::NLOPT_GD_MLSL_LDS</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00153">animaNLOPTOptimizers.h:153</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2ab55dca9ee6d10a10ec562514073481c9"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2ab55dca9ee6d10a10ec562514073481c9">anima::NLOPTOptimizers::NLOPT_LD_TNEWTON_RESTART</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00144">animaNLOPTOptimizers.h:144</a></div></div>
-<div class="ttc" id="AnimaOptimizersExport_8h_html"><div class="ttname"><a href="AnimaOptimizersExport_8h.html">AnimaOptimizersExport.h</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2a3f9327688e1904f5d025291a510c707a"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2a3f9327688e1904f5d025291a510c707a">anima::NLOPTOptimizers::NLOPT_LD_LBFGS</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00136">animaNLOPTOptimizers.h:136</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2a9fba6e45388a78c85cc352e8fd4bda60"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2a9fba6e45388a78c85cc352e8fd4bda60">anima::NLOPTOptimizers::NLOPT_LN_PRAXIS</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00138">animaNLOPTOptimizers.h:138</a></div></div>
 <div class="ttc" id="classanima_1_1NLOPTOptimizers_html_af699d8413c9939f585420fa4115923b2a9744f0daa212d2d6818f2ecac19ee54b"><div class="ttname"><a href="classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2a9744f0daa212d2d6818f2ecac19ee54b">anima::NLOPTOptimizers::NLOPT_LN_NEWUOA</a></div><div class="ttdef"><b>Definition:</b> <a href="animaNLOPTOptimizers_8h_source.html#l00159">animaNLOPTOptimizers.h:159</a></div></div>
@@ -366,9 +362,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:48 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:20 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

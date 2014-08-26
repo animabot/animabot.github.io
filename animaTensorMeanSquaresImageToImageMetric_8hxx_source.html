@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_3553dd7649db2abadc30239e41176615.html">registration</a></li><li class="navelem"><a class="el" href="dir_b23bf097591d04294e0a6c58e98ed928.html">similarity-measures</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_42156ca842fecd25315aaaaf78422bef.html">registration</a></li><li class="navelem"><a class="el" href="dir_c75b01df70757afb8ceb074781db0053.html">similarity-measures</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -180,9 +180,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keyword">const</span> <a class="code" href="classanima_1_1TensorMeanSquaresImageToImageMetric.html#ab33674cf1144f107a5bdfd5d935581f8">PixelType</a> fixedValue = ti.Get();</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            this-&gt;m_NumberOfPixelsCounted++;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; vectorSize;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; vectorSize;++i)</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">double</span> diff = movingValue[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - fixedValue[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">double</span> diff = movingValue[i] - fixedValue[i];</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                measure += diff * diff;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
@@ -217,13 +217,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1TensorMeanSquaresImageToImageMetric_html_afadff20c7aaade974b65327c269db096"><div class="ttname"><a href="classanima_1_1TensorMeanSquaresImageToImageMetric.html#afadff20c7aaade974b65327c269db096">anima::TensorMeanSquaresImageToImageMetric::MeasureType</a></div><div class="ttdeci">Superclass::MeasureType MeasureType</div><div class="ttdef"><b>Definition:</b> <a href="animaTensorMeanSquaresImageToImageMetric_8h_source.html#l00039">animaTensorMeanSquaresImageToImageMetric.h:39</a></div></div>
 <div class="ttc" id="classanima_1_1TensorMeanSquaresImageToImageMetric_html_aab79c5291d322b1eb3f843f021b03a2e"><div class="ttname"><a href="classanima_1_1TensorMeanSquaresImageToImageMetric.html#aab79c5291d322b1eb3f843f021b03a2e">anima::TensorMeanSquaresImageToImageMetric::TensorMeanSquaresImageToImageMetric</a></div><div class="ttdeci">TensorMeanSquaresImageToImageMetric()</div><div class="ttdef"><b>Definition:</b> <a href="animaTensorMeanSquaresImageToImageMetric_8hxx_source.html#l00013">animaTensorMeanSquaresImageToImageMetric.hxx:13</a></div></div>
 <div class="ttc" id="classanima_1_1TensorMeanSquaresImageToImageMetric_html_a3c72184635839d234a62ef226b204829"><div class="ttname"><a href="classanima_1_1TensorMeanSquaresImageToImageMetric.html#a3c72184635839d234a62ef226b204829">anima::TensorMeanSquaresImageToImageMetric::OutputPointType</a></div><div class="ttdeci">Superclass::OutputPointType OutputPointType</div><div class="ttdef"><b>Definition:</b> <a href="animaTensorMeanSquaresImageToImageMetric_8h_source.html#l00037">animaTensorMeanSquaresImageToImageMetric.h:37</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:21 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

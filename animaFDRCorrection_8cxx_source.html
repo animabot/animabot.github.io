@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_ed3368f26f16f15399ac33d4f4eb1680.html">statistics</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_c8b7036025fdd15a286ad6e57754d006.html">statistics</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -105,41 +105,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    std::vector &lt; std::pair &lt;unsigned int, double&gt; &gt; indexedPvalues;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numData = pvalues.size();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; numData;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        indexedPvalues.push_back(std::pair &lt;unsigned int, double&gt; (<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,pvalues[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]));</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numData;++i)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        indexedPvalues.push_back(std::pair &lt;unsigned int, double&gt; (i,pvalues[i]));</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::sort(indexedPvalues.begin(),indexedPvalues.end(),<a class="code" href="structanima_1_1pair__decreasing__comparator.html">pair_decreasing_comparator</a>());</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">// Update p-values</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numData;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numData;++i)</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">double</span> newPvalue = std::min(1.0,indexedPvalues[i].<a class="code" href="xform__nii_8m.html#acfd440223f806c44323dbd1053b99123">second</a> * numData / (numData - i));</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">double</span> newPvalue = std::min(1.0,indexedPvalues[i].second * numData / (numData - i));</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">if</span> (i &gt; 0)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">if</span> (newPvalue &gt; indexedPvalues[i-1].<a class="code" href="xform__nii_8m.html#acfd440223f806c44323dbd1053b99123">second</a>)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">if</span> (newPvalue &gt; indexedPvalues[i-1].second)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                newPvalue = indexedPvalues[i-1].second;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        indexedPvalues[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>].second = newPvalue;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        indexedPvalues[i].second = newPvalue;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// Now put back values to their places</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numData;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        pvalues[indexedPvalues[i].first] = indexedPvalues[i].<a class="code" href="xform__nii_8m.html#acfd440223f806c44323dbd1053b99123">second</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numData;++i)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        pvalues[indexedPvalues[i].first] = indexedPvalues[i].second;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;} <span class="comment">// end of namespace anima</span></div>
 <div class="ttc" id="namespaceanima_html_a327c296db4609ce6b2821507f6c030d1"><div class="ttname"><a href="namespaceanima.html#a327c296db4609ce6b2821507f6c030d1">anima::BHCorrection</a></div><div class="ttdeci">void BHCorrection(std::vector&lt; double &gt; &amp;pvalues)</div><div class="ttdoc">In place correction of p-values according to Benjamini Hochberg FDR method. </div><div class="ttdef"><b>Definition:</b> <a href="animaFDRCorrection_8cxx_source.html#l00007">animaFDRCorrection.cxx:7</a></div></div>
-<div class="ttc" id="xform__nii_8m_html_acfd440223f806c44323dbd1053b99123"><div class="ttname"><a href="xform__nii_8m.html#acfd440223f806c44323dbd1053b99123">second</a></div><div class="ttdeci">second</div><div class="ttdef"><b>Definition:</b> <a href="xform__nii_8m_source.html#l00517">xform_nii.m:517</a></div></div>
 <div class="ttc" id="animaFDRCorrection_8h_html"><div class="ttname"><a href="animaFDRCorrection_8h.html">animaFDRCorrection.h</a></div></div>
 <div class="ttc" id="structanima_1_1pair__decreasing__comparator_html"><div class="ttname"><a href="structanima_1_1pair__decreasing__comparator.html">anima::pair_decreasing_comparator</a></div><div class="ttdef"><b>Definition:</b> <a href="animaFDRCorrection_8h_source.html#l00010">animaFDRCorrection.h:10</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:48 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

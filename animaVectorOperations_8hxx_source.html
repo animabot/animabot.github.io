@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_cd4d95685d4cbee0b9dbf23f92e916d9.html">matrix_operations</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_73eaca8a1c78e75e2135cc879f8581a1.html">matrix_operations</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -116,9 +116,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">double</span> resVal = 0;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; NDimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; NDimension;++i)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        resVal += (x1[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - x2[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]) * (x1[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - x2[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        resVal += (x1[i] - x2[i]) * (x1[i] - x2[i]);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> std::sqrt(resVal);</div>
@@ -172,15 +172,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">/******************************************************/</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">// Function ComputePointToSetDistance</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="namespaceanima.html#a685f2539948c2e0bf13c44f937e330d7">   78</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> VectorType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a685f2539948c2e0bf13c44f937e330d7">ComputePointToSetDistance</a>(<span class="keyword">const</span> VectorType &amp;x, <span class="keyword">const</span> std::vector &lt;VectorType&gt; &amp;<a class="code" href="load__lbeig_8m.html#a1af5497f0d80ec2d3e57945765f73d8c">s</a>)</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="namespaceanima.html#a685f2539948c2e0bf13c44f937e330d7">   78</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> VectorType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a685f2539948c2e0bf13c44f937e330d7">ComputePointToSetDistance</a>(<span class="keyword">const</span> VectorType &amp;x, <span class="keyword">const</span> std::vector &lt;VectorType&gt; &amp;s)</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NDimension = s.size();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">double</span> resVal = <a class="code" href="namespaceanima.html#a476effcbf130e81def4a87731cb93cde">ComputeEuclideanDistance</a>(x, s[0]);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 1;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; NDimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1;i &lt; NDimension;++i)</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">double</span> tmpVal = <a class="code" href="namespaceanima.html#a476effcbf130e81def4a87731cb93cde">ComputeEuclideanDistance</a>(x, s[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">double</span> tmpVal = <a class="code" href="namespaceanima.html#a476effcbf130e81def4a87731cb93cde">ComputeEuclideanDistance</a>(x, s[i]);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">if</span> (tmpVal &lt; resVal)</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            resVal = tmpVal;</div>
@@ -196,9 +196,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">double</span> resVal = <a class="code" href="namespaceanima.html#a685f2539948c2e0bf13c44f937e330d7">ComputePointToSetDistance</a>(s1[0], s2);</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 1;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; NDimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1;i &lt; NDimension;++i)</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">double</span> tmpVal = <a class="code" href="namespaceanima.html#a685f2539948c2e0bf13c44f937e330d7">ComputePointToSetDistance</a>(s1[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>], s2);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">double</span> tmpVal = <a class="code" href="namespaceanima.html#a685f2539948c2e0bf13c44f937e330d7">ComputePointToSetDistance</a>(s1[i], s2);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">if</span> (tmpVal &gt; resVal)</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            resVal = tmpVal;</div>
@@ -223,8 +223,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">double</span> resVal = <a class="code" href="namespaceanima.html#a685f2539948c2e0bf13c44f937e330d7">ComputePointToSetDistance</a>(s1[0], s2);</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 1;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; NDimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        resVal += <a class="code" href="namespaceanima.html#a685f2539948c2e0bf13c44f937e330d7">ComputePointToSetDistance</a>(s1[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>], s2);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1;i &lt; NDimension;++i)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        resVal += <a class="code" href="namespaceanima.html#a685f2539948c2e0bf13c44f937e330d7">ComputePointToSetDistance</a>(s1[i], s2);</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> resVal / NDimension;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
@@ -244,15 +244,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">double</span> maxVal = x[0];</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 1;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; NDimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">if</span> (x[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] &gt; maxVal)</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            maxVal = x[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1;i &lt; NDimension;++i)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">if</span> (x[i] &gt; maxVal)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            maxVal = x[i];</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">double</span> sum = 0;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; NDimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        sum += std::exp(x[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - maxVal);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; NDimension;++i)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        sum += std::exp(x[i] - maxVal);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span> (sum &lt; 1.0<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-6)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span> (sum &lt; 1.0e-6)</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    {</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        std::cout &lt;&lt; NDimension &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; sum &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">throw</span> itk::ExceptionObject(__FILE__, __LINE__,<span class="stringliteral">&quot;Exponential sum cannot be computed because requires to take the log of a non-positive value.&quot;</span>,ITK_LOCATION);</div>
@@ -301,8 +301,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;{</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">double</span> resVal = 0;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; NDimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        resVal += v1[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] * v2[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; NDimension;++i)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        resVal += v1[i] * v2[i];</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">return</span> resVal;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
@@ -419,7 +419,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;{</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">double</span> n = <a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">ComputeScalarProduct</a>(v, v);</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordflow">if</span> (n &lt; 1.0<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-6)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordflow">if</span> (n &lt; 1.0e-6)</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordflow">return</span> std::sqrt(n);</div>
@@ -433,11 +433,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordtype">double</span> n = <a class="code" href="namespaceanima.html#a2e8d718d69cfdb2139dde1768f85f6e2">ComputeNorm</a>(v);</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordflow">if</span> (n &lt; 1.0<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-6)</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordflow">if</span> (n &lt; 1.0e-6)</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; NDimension;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        resVec[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] /= n;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; NDimension;++i)</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        resVec[i] /= n;</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">// For itkVector</span></div>
 <div class="line"><a name="l00346"></a><span class="lineno"><a class="line" href="namespaceanima.html#abc9d4210b1d557d89197e3d12b92bdc0">  346</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> ScalarType, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NDimension&gt; <span class="keywordtype">void</span> <a class="code" href="namespaceanima.html#a75307a7eb3fa0266ae6134d2c65dba63">Normalize</a>(<span class="keyword">const</span> itk::Vector &lt;ScalarType,NDimension&gt; &amp;v, itk::Vector &lt;ScalarType,NDimension&gt; &amp;resVec)</div>
@@ -479,7 +479,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordtype">double</span> normV1 = <a class="code" href="namespaceanima.html#a2e8d718d69cfdb2139dde1768f85f6e2">ComputeNorm</a>(v1);</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordtype">double</span> normV2 = <a class="code" href="namespaceanima.html#a2e8d718d69cfdb2139dde1768f85f6e2">ComputeNorm</a>(v2);</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a> = <a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">ComputeScalarProduct</a>(v1, v2) / (normV1 * normV2);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordtype">double</span> t = <a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">ComputeScalarProduct</a>(v1, v2) / (normV1 * normV2);</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordflow">if</span> (t &lt; -1.0)</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        t = -1.0;</div>
@@ -494,7 +494,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordtype">double</span> normV1 = <a class="code" href="namespaceanima.html#a2e8d718d69cfdb2139dde1768f85f6e2">ComputeNorm</a>(v1);</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordtype">double</span> normV2 = <a class="code" href="namespaceanima.html#a2e8d718d69cfdb2139dde1768f85f6e2">ComputeNorm</a>(v2);</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a> = std::abs(<a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">ComputeScalarProduct</a>(v1, v2)) / (normV1 * normV2);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordtype">double</span> t = std::abs(<a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">ComputeScalarProduct</a>(v1, v2)) / (normV1 * normV2);</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordflow">if</span> (t &gt; 1.0)</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        t = 1.0;</div>
@@ -507,7 +507,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordtype">double</span> normV1 = <a class="code" href="namespaceanima.html#a2e8d718d69cfdb2139dde1768f85f6e2">ComputeNorm</a>(v1);</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keywordtype">double</span> normV2 = <a class="code" href="namespaceanima.html#a2e8d718d69cfdb2139dde1768f85f6e2">ComputeNorm</a>(v2);</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a> = std::abs(<a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">ComputeScalarProduct</a>(v1, v2)) / (normV1 * normV2);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordtype">double</span> t = std::abs(<a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">ComputeScalarProduct</a>(v1, v2)) / (normV1 * normV2);</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keywordflow">if</span> (t &gt; 1.0)</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        t = 1.0;</div>
@@ -517,19 +517,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
 <div class="line"><a name="l00421"></a><span class="lineno"><a class="line" href="namespaceanima.html#a3ddf2c4c202d4d3d3d44041fbc416bcf">  421</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> VectorType&gt; <span class="keywordtype">void</span> <a class="code" href="namespaceanima.html#a3ddf2c4c202d4d3d3d44041fbc416bcf">Revert</a>(<span class="keyword">const</span> VectorType &amp;v, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> vSize, VectorType &amp;resVec)</div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;{</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; vSize;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        resVec[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = -v[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; vSize;++i)</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        resVec[i] = -v[i];</div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;}</div>
 <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;</div>
 <div class="line"><a name="l00427"></a><span class="lineno"><a class="line" href="namespaceanima.html#a5d76bf8e39a3627a50d66fbea946ea8f">  427</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> ScalarType&gt; <span class="keywordtype">void</span> <a class="code" href="namespaceanima.html#a3ddf2c4c202d4d3d3d44041fbc416bcf">Revert</a>(<span class="keyword">const</span> std::vector &lt;ScalarType&gt; &amp;v, std::vector&lt;ScalarType&gt; &amp;resVec)</div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;{</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="load__nii__img_8m.html#a706b80f8d6a58d25b3b0e0821fd2d2a1">length</a> = v.size();</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> length = v.size();</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <a class="code" href="namespaceanima.html#a3ddf2c4c202d4d3d3d44041fbc416bcf">Revert</a>(v, length, resVec);</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;}</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
 <div class="line"><a name="l00433"></a><span class="lineno"><a class="line" href="namespaceanima.html#acfaa92c627253c88639fe8f0166faae2">  433</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> ScalarType&gt; <span class="keywordtype">void</span> <a class="code" href="namespaceanima.html#a3ddf2c4c202d4d3d3d44041fbc416bcf">Revert</a>(<span class="keyword">const</span> itk::Point &lt;ScalarType&gt; &amp;v, itk::Point &lt;ScalarType&gt; &amp;resVec)</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;{</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="load__nii__img_8m.html#a706b80f8d6a58d25b3b0e0821fd2d2a1">length</a> = v.GetPointDimension();</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> length = v.GetPointDimension();</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <a class="code" href="namespaceanima.html#a3ddf2c4c202d4d3d3d44041fbc416bcf">Revert</a>(v, length, resVec);</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;}</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div>
@@ -572,7 +572,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;{</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    <span class="keywordtype">double</span> tmpVal = std::cos(v[0]);</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="keywordflow">if</span> (std::abs(tmpVal) &lt; 1<a class="code" href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a>-4)</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="keywordflow">if</span> (std::abs(tmpVal) &lt; 1e-4)</div>
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    {</div>
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        resVec[0] = std::cos(v[1]);</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        resVec[1] = std::sin(v[1]);</div>
@@ -585,35 +585,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        resVec[2] = tmpVal;</div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    }</div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        resVec[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] *= v[2];</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; 3;++i)</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        resVec[i] *= v[2];</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;}</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;</div>
 <div class="line"><a name="l00495"></a><span class="lineno"><a class="line" href="namespaceanima.html#a2ca200d132f4925847e0da50b5990c91">  495</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T1, <span class="keyword">class</span> T2, <span class="keyword">class</span> T3&gt; <span class="keywordtype">void</span> <a class="code" href="namespaceanima.html#a2ca200d132f4925847e0da50b5990c91">ProjectOnOrthogonalPlane</a>(<span class="keyword">const</span> std::vector &lt;T1&gt; &amp;v, <span class="keyword">const</span> std::vector &lt;T2&gt; &amp;normalVec, std::vector &lt;T3&gt; &amp;resVec)</div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;{</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="load__nii__img_8m.html#a706b80f8d6a58d25b3b0e0821fd2d2a1">length</a> = v.size();</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> length = v.size();</div>
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="keywordflow">if</span> (normalVec.size() != <a class="code" href="load__nii__img_8m.html#a706b80f8d6a58d25b3b0e0821fd2d2a1">length</a>)</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="keywordflow">if</span> (normalVec.size() != length)</div>
 <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        <span class="keywordflow">throw</span> itk::ExceptionObject(__FILE__, __LINE__,<span class="stringliteral">&quot;Projection on orthogonal plane requires a normal vector of the same size as the input vector.&quot;</span>,ITK_LOCATION);</div>
 <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;</div>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    resVec.resize(length);</div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a> = <a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">ComputeScalarProduct</a>(normalVec, v);</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <span class="keywordtype">double</span> t = <a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">ComputeScalarProduct</a>(normalVec, v);</div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; <a class="code" href="load__nii__img_8m.html#a706b80f8d6a58d25b3b0e0821fd2d2a1">length</a>;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        resVec[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = v[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - t * normalVec[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; length;++i)</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        resVec[i] = v[i] - t * normalVec[i];</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;</div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <a class="code" href="namespaceanima.html#a75307a7eb3fa0266ae6134d2c65dba63">Normalize</a>(resVec, resVec);</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;}</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;</div>
 <div class="line"><a name="l00512"></a><span class="lineno"><a class="line" href="namespaceanima.html#ac0d65927d95db9f250d029d90fd9157b">  512</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T1, <span class="keyword">class</span> T2, <span class="keyword">class</span> T3, <span class="keyword">class</span> T4&gt; <span class="keywordtype">void</span> <a class="code" href="namespaceanima.html#ac0d65927d95db9f250d029d90fd9157b">RotateAroundAxis</a>(<span class="keyword">const</span> std::vector &lt;T1&gt; &amp;v, <span class="keyword">const</span> T2 &amp;phi, <span class="keyword">const</span> std::vector &lt;T3&gt; &amp;normalVec, std::vector &lt;T4&gt; &amp;resVec)</div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;{</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="load__nii__img_8m.html#a706b80f8d6a58d25b3b0e0821fd2d2a1">length</a> = v.size();</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> length = v.size();</div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    <span class="keywordflow">if</span> (length != 3)</div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        <span class="keywordflow">throw</span> itk::ExceptionObject(__FILE__, __LINE__,<span class="stringliteral">&quot;Rotation around axis requires 3D input vector.&quot;</span>,ITK_LOCATION);</div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordflow">if</span> (normalVec.size() != <a class="code" href="load__nii__img_8m.html#a706b80f8d6a58d25b3b0e0821fd2d2a1">length</a>)</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordflow">if</span> (normalVec.size() != length)</div>
 <div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        <span class="keywordflow">throw</span> itk::ExceptionObject(__FILE__, __LINE__,<span class="stringliteral">&quot;Rotation around axis requires a normal vector of the same size as the input vector.&quot;</span>,ITK_LOCATION);</div>
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;</div>
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    resVec.resize(3);</div>
@@ -627,19 +627,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    A -= A.transpose();</div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    vnl_matrix &lt;double&gt; N(3,3);</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; 3; ++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0; <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; 3; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;            N(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) = normalVec[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] * normalVec[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 3; ++i)</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; 3; ++j)</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;            N(i,j) = normalVec[i] * normalVec[j];</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    vnl_matrix &lt;double&gt; <a class="code" href="emgm_8m.html#a6b45d48125a6b8b1ee140eed24a0419f">R</a>(3,3);</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    vnl_matrix &lt;double&gt; R(3,3);</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    R.fill(0.0);</div>
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    R.fill_diagonal(cos(phi));</div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    R += N * (1.0 - cos(phi)) + A * sin(phi);</div>
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; 3;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0; <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; 3; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;            resVec[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] += <a class="code" href="emgm_8m.html#a6b45d48125a6b8b1ee140eed24a0419f">R</a>(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) * v[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; 3;++i)</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; 3; ++j)</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;            resVec[i] += R(i,j) * v[j];</div>
 <div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;}</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;</div>
 <div class="line"><a name="l00548"></a><span class="lineno"><a class="line" href="namespaceanima.html#a53ffe221b648389554de189bafd3db65">  548</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Vector3DType, <span class="keyword">class</span> ScalarType&gt; <span class="keywordtype">void</span> <a class="code" href="namespaceanima.html#ac0d65927d95db9f250d029d90fd9157b">RotateAroundAxis</a>(<span class="keyword">const</span> Vector3DType &amp;v, <span class="keyword">const</span> ScalarType &amp;phi, <span class="keyword">const</span> Vector3DType &amp;normalVec, Vector3DType &amp;resVec)</div>
@@ -654,11 +654,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    A -= A.transpose();</div>
 <div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;</div>
 <div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    vnl_matrix_fixed &lt;ScalarType,3,3&gt; N;</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0; <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; 3; ++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> = 0; <a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a> &lt; 3; ++<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>)</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;            N(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>) = normalVec[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] * normalVec[<a class="code" href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a>];</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 3; ++i)</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; 3; ++j)</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;            N(i,j) = normalVec[i] * normalVec[j];</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    vnl_matrix_fixed &lt;ScalarType,3,3&gt; <a class="code" href="emgm_8m.html#a6b45d48125a6b8b1ee140eed24a0419f">R</a>;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    vnl_matrix_fixed &lt;ScalarType,3,3&gt; R;</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    R.fill(0.0);</div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    R.fill_diagonal(std::cos(phi));</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;</div>
@@ -669,13 +669,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;</div>
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;} <span class="comment">// end of namespace anima</span></div>
 <div class="ttc" id="namespaceanima_html_a3ddf2c4c202d4d3d3d44041fbc416bcf"><div class="ttname"><a href="namespaceanima.html#a3ddf2c4c202d4d3d3d44041fbc416bcf">anima::Revert</a></div><div class="ttdeci">void Revert(const VectorType &amp;v, const unsigned int vSize, VectorType &amp;resVec)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00421">animaVectorOperations.hxx:421</a></div></div>
-<div class="ttc" id="load__lbeig_8m_html_a1af5497f0d80ec2d3e57945765f73d8c"><div class="ttname"><a href="load__lbeig_8m.html#a1af5497f0d80ec2d3e57945765f73d8c">s</a></div><div class="ttdeci">s</div><div class="ttdef"><b>Definition:</b> <a href="load__lbeig_8m_source.html#l00005">load_lbeig.m:5</a></div></div>
 <div class="ttc" id="namespaceanima_html_a03af47f59093be5ad7d2e4633df906a1"><div class="ttname"><a href="namespaceanima.html#a03af47f59093be5ad7d2e4633df906a1">anima::ExponentialSum</a></div><div class="ttdeci">double ExponentialSum(const VectorType &amp;x, const unsigned int NDimension)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00146">animaVectorOperations.hxx:146</a></div></div>
 <div class="ttc" id="namespaceanima_html_a2f16079f3ed3a2305740284f0861e42a"><div class="ttname"><a href="namespaceanima.html#a2f16079f3ed3a2305740284f0861e42a">anima::TransformSphericalToCartesianCoordinates</a></div><div class="ttdeci">void TransformSphericalToCartesianCoordinates(const VectorType &amp;v, VectorType &amp;resVec)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00474">animaVectorOperations.hxx:474</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_abf2bc2545a4a5f5683d9ef3ed0d977e0"><div class="ttname"><a href="reslice__nii_8m.html#abf2bc2545a4a5f5683d9ef3ed0d977e0">j</a></div><div class="ttdeci">j</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00231">reslice_nii.m:231</a></div></div>
-<div class="ttc" id="xform__nii_8m_html_a5389c938d8f439f89bc6549e6a18285d"><div class="ttname"><a href="xform__nii_8m.html#a5389c938d8f439f89bc6549e6a18285d">e</a></div><div class="ttdeci">hdr.dime.xyzt_units, 7 e()</div></div>
 <div class="ttc" id="namespaceanima_html_a476effcbf130e81def4a87731cb93cde"><div class="ttname"><a href="namespaceanima.html#a476effcbf130e81def4a87731cb93cde">anima::ComputeEuclideanDistance</a></div><div class="ttdeci">double ComputeEuclideanDistance(const VectorType &amp;x1, const VectorType &amp;x2, const unsigned int NDimension)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00018">animaVectorOperations.hxx:18</a></div></div>
-<div class="ttc" id="load__nii__img_8m_html_a706b80f8d6a58d25b3b0e0821fd2d2a1"><div class="ttname"><a href="load__nii__img_8m.html#a706b80f8d6a58d25b3b0e0821fd2d2a1">length</a></div><div class="ttdeci">end if length(unique(img_idx))~</div></div>
 <div class="ttc" id="namespaceanima_html_ab77fa6ab20ee70c23ed549ac6954471c"><div class="ttname"><a href="namespaceanima.html#ab77fa6ab20ee70c23ed549ac6954471c">anima::ComputeOrientationAngle</a></div><div class="ttdeci">double ComputeOrientationAngle(const std::vector&lt; T1 &gt; &amp;v1, const std::vector&lt; T2 &gt; &amp;v2)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00395">animaVectorOperations.hxx:395</a></div></div>
 <div class="ttc" id="namespaceanima_html_a2e8d718d69cfdb2139dde1768f85f6e2"><div class="ttname"><a href="namespaceanima.html#a2e8d718d69cfdb2139dde1768f85f6e2">anima::ComputeNorm</a></div><div class="ttdeci">double ComputeNorm(const VectorType &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00321">animaVectorOperations.hxx:321</a></div></div>
 <div class="ttc" id="namespaceanima_html_ac0d65927d95db9f250d029d90fd9157b"><div class="ttname"><a href="namespaceanima.html#ac0d65927d95db9f250d029d90fd9157b">anima::RotateAroundAxis</a></div><div class="ttdeci">void RotateAroundAxis(const std::vector&lt; T1 &gt; &amp;v, const T2 &amp;phi, const std::vector&lt; T3 &gt; &amp;normalVec, std::vector&lt; T4 &gt; &amp;resVec)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00512">animaVectorOperations.hxx:512</a></div></div>
@@ -687,7 +683,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespaceanima_html_a75307a7eb3fa0266ae6134d2c65dba63"><div class="ttname"><a href="namespaceanima.html#a75307a7eb3fa0266ae6134d2c65dba63">anima::Normalize</a></div><div class="ttdeci">void Normalize(const VectorType &amp;v, const unsigned int NDimension, VectorType &amp;resVec)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00333">animaVectorOperations.hxx:333</a></div></div>
 <div class="ttc" id="animaNyulStandardization_8cpp_html_a09dff3d9a89874939fa7cc9d056b114c"><div class="ttname"><a href="animaNyulStandardization_8cpp.html#a09dff3d9a89874939fa7cc9d056b114c">s1</a></div><div class="ttdeci">#define s1</div><div class="ttdef"><b>Definition:</b> <a href="animaNyulStandardization_8cpp_source.html#l00033">animaNyulStandardization.cpp:33</a></div></div>
 <div class="ttc" id="animaLogarithmFunctions_8h_html"><div class="ttname"><a href="animaLogarithmFunctions_8h.html">animaLogarithmFunctions.h</a></div></div>
-<div class="ttc" id="emgm_8m_html_aaccc9105df5383111407fd5b41255e23"><div class="ttname"><a href="emgm_8m.html#aaccc9105df5383111407fd5b41255e23">t</a></div><div class="ttdeci">t</div><div class="ttdef"><b>Definition:</b> <a href="emgm_8m_source.html#l00018">emgm.m:18</a></div></div>
 <div class="ttc" id="namespaceanima_html_a59fd4d8babab5faba073a392a576b2aa"><div class="ttname"><a href="namespaceanima.html#a59fd4d8babab5faba073a392a576b2aa">anima::ComputeModifiedDirectedHausdorffDistance</a></div><div class="ttdeci">double ComputeModifiedDirectedHausdorffDistance(const std::vector&lt; VectorType &gt; &amp;s1, const std::vector&lt; VectorType &gt; &amp;s2)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00123">animaVectorOperations.hxx:123</a></div></div>
 <div class="ttc" id="namespaceanima_html_a915d422842a706cfeeb74fa6361b6ee2"><div class="ttname"><a href="namespaceanima.html#a915d422842a706cfeeb74fa6361b6ee2">anima::ComputeDirectedHausdorffDistance</a></div><div class="ttdeci">double ComputeDirectedHausdorffDistance(const std::vector&lt; VectorType &gt; &amp;s1, const std::vector&lt; VectorType &gt; &amp;s2)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00096">animaVectorOperations.hxx:96</a></div></div>
 <div class="ttc" id="namespaceanima_html_aeee6e80d3716e1da776bdc937185aea5"><div class="ttname"><a href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">anima::ComputeScalarProduct</a></div><div class="ttdeci">double ComputeScalarProduct(const VectorType &amp;v1, const VectorType &amp;v2, const unsigned int NDimension)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00203">animaVectorOperations.hxx:203</a></div></div>
@@ -695,14 +690,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespaceanima_html_a2ca200d132f4925847e0da50b5990c91"><div class="ttname"><a href="namespaceanima.html#a2ca200d132f4925847e0da50b5990c91">anima::ProjectOnOrthogonalPlane</a></div><div class="ttdeci">void ProjectOnOrthogonalPlane(const std::vector&lt; T1 &gt; &amp;v, const std::vector&lt; T2 &gt; &amp;normalVec, std::vector&lt; T3 &gt; &amp;resVec)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00495">animaVectorOperations.hxx:495</a></div></div>
 <div class="ttc" id="namespaceanima_html_a0e17f6ba4f125172b60869b0080dd6c5"><div class="ttname"><a href="namespaceanima.html#a0e17f6ba4f125172b60869b0080dd6c5">anima::TransformCartesianToSphericalCoordinates</a></div><div class="ttdeci">void TransformCartesianToSphericalCoordinates(const VectorType &amp;v, VectorType &amp;resVec)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00445">animaVectorOperations.hxx:445</a></div></div>
 <div class="ttc" id="namespaceanima_html_ac0b6729b87f851b1d12ef924c87832fc"><div class="ttname"><a href="namespaceanima.html#ac0b6729b87f851b1d12ef924c87832fc">anima::ComputeCrossProduct</a></div><div class="ttdeci">void ComputeCrossProduct(const VectorType &amp;v1, const VectorType &amp;v2, const unsigned int NDimension, VectorType &amp;resVec)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00261">animaVectorOperations.hxx:261</a></div></div>
-<div class="ttc" id="emgm_8m_html_a6b45d48125a6b8b1ee140eed24a0419f"><div class="ttname"><a href="emgm_8m.html#a6b45d48125a6b8b1ee140eed24a0419f">R</a></div><div class="ttdeci">R</div><div class="ttdef"><b>Definition:</b> <a href="emgm_8m_source.html#l00011">emgm.m:11</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:21 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

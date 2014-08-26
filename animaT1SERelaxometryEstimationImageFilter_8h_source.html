@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_51f6d94a1d7ee6f99a886fa26632c272.html">quantitative-mri</a></li><li class="navelem"><a class="el" href="dir_6becb0b39eae59acbd986df0df417203.html">estimation</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_c4abb40ef761a7d0f7be931d0aa470c1.html">quantitative-mri</a></li><li class="navelem"><a class="el" href="dir_d02e7a1ace4d7374d13bddba647b6714.html">estimation</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -145,8 +145,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">// There are 2 outputs: M0, T1</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        this-&gt;SetNumberOfRequiredOutputs(2);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; 2;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            this-&gt;SetNthOutput(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>, this-&gt;MakeOutput(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; 2;++i)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            this-&gt;SetNthOutput(i, this-&gt;MakeOutput(i));</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        m_AverageSignalThreshold = 0;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        m_TRValues.clear();</div>
@@ -219,13 +219,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1T1SERelaxometryEstimationImageFilter_html_af7fb248814c8757c6e07fca5aac0332f"><div class="ttname"><a href="classanima_1_1T1SERelaxometryEstimationImageFilter.html#af7fb248814c8757c6e07fca5aac0332f">anima::T1SERelaxometryEstimationImageFilter::~T1SERelaxometryEstimationImageFilter</a></div><div class="ttdeci">virtual ~T1SERelaxometryEstimationImageFilter()</div><div class="ttdef"><b>Definition:</b> <a href="animaT1SERelaxometryEstimationImageFilter_8h_source.html#l00070">animaT1SERelaxometryEstimationImageFilter.h:70</a></div></div>
 <div class="ttc" id="classanima_1_1T1SERelaxometryEstimationImageFilter_html_a3389ebb0afc879924781afdf4a992452"><div class="ttname"><a href="classanima_1_1T1SERelaxometryEstimationImageFilter.html#a3389ebb0afc879924781afdf4a992452">anima::T1SERelaxometryEstimationImageFilter::OutputImageType</a></div><div class="ttdeci">TOutputImage OutputImageType</div><div class="ttdef"><b>Definition:</b> <a href="animaT1SERelaxometryEstimationImageFilter_8h_source.html#l00030">animaT1SERelaxometryEstimationImageFilter.h:30</a></div></div>
 <div class="ttc" id="classanima_1_1T1SERelaxometryEstimationImageFilter_html_acb618cf0411c2216a86c625f03b6d4d1"><div class="ttname"><a href="classanima_1_1T1SERelaxometryEstimationImageFilter.html#acb618cf0411c2216a86c625f03b6d4d1">anima::T1SERelaxometryEstimationImageFilter::Self</a></div><div class="ttdeci">T1SERelaxometryEstimationImageFilter Self</div><div class="ttdef"><b>Definition:</b> <a href="animaT1SERelaxometryEstimationImageFilter_8h_source.html#l00017">animaT1SERelaxometryEstimationImageFilter.h:17</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:20 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

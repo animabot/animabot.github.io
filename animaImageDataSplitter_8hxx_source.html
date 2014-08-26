@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_01d93c55e44f62523a4587a039f06361.html">common</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_a264e99ecc3555b099d40c4b89fe71b5.html">common</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -113,16 +113,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    m_Block.Fill (0);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    m_Margin.Fill (0);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_GlobalRegionOfInterest.GetImageDimension();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_GlobalRegionOfInterest.GetImageDimension();++i)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        m_GlobalRegionOfInterest.SetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,0);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        m_GlobalRegionOfInterest.SetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,0);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        m_GlobalRegionOfInterest.SetIndex(i,0);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        m_GlobalRegionOfInterest.SetSize(i,0);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        m_BlockRegion.SetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,0);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        m_BlockRegion.SetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,0);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        m_BlockRegion.SetIndex(i,0);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        m_BlockRegion.SetSize(i,0);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        m_BlockRegionWithMargin.SetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,0);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        m_BlockRegionWithMargin.SetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,0);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        m_BlockRegionWithMargin.SetIndex(i,0);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        m_BlockRegionWithMargin.SetSize(i,0);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    m_Images.clear();</div>
@@ -135,20 +135,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    m_FileNames.clear();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classanima_1_1ImageDataSplitter.html#a3b950f164c42c5148115a86db0ca03e8">   41</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt; <span class="keywordtype">void</span> <a class="code" href="classanima_1_1ImageDataSplitter.html#a3b950f164c42c5148115a86db0ca03e8">ImageDataSplitter&lt;TInputImage&gt;::SetUniqueFileName</a>(<a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a> &amp;inputFileName)</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classanima_1_1ImageDataSplitter.html#a3b950f164c42c5148115a86db0ca03e8">   41</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt; <span class="keywordtype">void</span> <a class="code" href="classanima_1_1ImageDataSplitter.html#a3b950f164c42c5148115a86db0ca03e8">ImageDataSplitter&lt;TInputImage&gt;::SetUniqueFileName</a>(std::string &amp;inputFileName)</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    m_FileNames.clear();</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    m_FileNames.push_back(inputFileName);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    m_NbImages = 1;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classanima_1_1ImageDataSplitter.html#a5f1107905e07909d40305bd05a4757f2">   48</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt; <span class="keywordtype">void</span> <a class="code" href="classanima_1_1ImageDataSplitter.html#a5f1107905e07909d40305bd05a4757f2">ImageDataSplitter&lt;TInputImage&gt;::SetFileNames</a>(<a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a> &amp;inputFileList)</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classanima_1_1ImageDataSplitter.html#a5f1107905e07909d40305bd05a4757f2">   48</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt; <span class="keywordtype">void</span> <a class="code" href="classanima_1_1ImageDataSplitter.html#a5f1107905e07909d40305bd05a4757f2">ImageDataSplitter&lt;TInputImage&gt;::SetFileNames</a>(std::string &amp;inputFileList)</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::ifstream fileIn(inputFileList.c_str());</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (!fileIn.is_open())</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a> <a class="code" href="load__nii__ext_8m.html#aef5461a34124216ffeadd235c3f81324">error</a>(<span class="stringliteral">&quot;Invalid input file list. &quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        std::string error(<span class="stringliteral">&quot;Invalid input file list. &quot;</span>);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        error += inputFileList;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        error += <span class="stringliteral">&quot; could not be opened...&quot;</span>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
@@ -163,7 +163,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        fileIn.getline(tmpStr,2048);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span> (strcmp(tmpStr,<span class="stringliteral">&quot;&quot;</span>) != 0)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            m_FileNames.push_back(<a class="code" href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">std::string</a>(tmpStr));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            m_FileNames.push_back(std::string(tmpStr));</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    fileIn.close();</div>
@@ -189,28 +189,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> (foundOneNonNull)</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; MaskImageType::GetImageDimension();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; MaskImageType::GetImageDimension();++i)</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">if</span> (m_GlobalRegionOfInterest.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] &gt; maskIterator.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>])</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">if</span> (m_GlobalRegionOfInterest.GetIndex()[i] &gt; maskIterator.GetIndex()[i])</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> newSize = m_GlobalRegionOfInterest.GetSize()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - maskIterator.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] + m_GlobalRegionOfInterest.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    m_GlobalRegionOfInterest.SetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,newSize);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    m_GlobalRegionOfInterest.SetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,maskIterator.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> newSize = m_GlobalRegionOfInterest.GetSize()[i] - maskIterator.GetIndex()[i] + m_GlobalRegionOfInterest.GetIndex()[i];</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    m_GlobalRegionOfInterest.SetSize(i,newSize);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    m_GlobalRegionOfInterest.SetIndex(i,maskIterator.GetIndex()[i]);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                }</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; MaskImageType::GetImageDimension();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; MaskImageType::GetImageDimension();++i)</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tmpNum = m_GlobalRegionOfInterest.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] + m_GlobalRegionOfInterest.GetSize()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keywordflow">if</span> (tmpNum &lt;= maskIterator.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>])</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    m_GlobalRegionOfInterest.SetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,maskIterator.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - m_GlobalRegionOfInterest.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] + 1);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tmpNum = m_GlobalRegionOfInterest.GetIndex()[i] + m_GlobalRegionOfInterest.GetSize()[i];</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keywordflow">if</span> (tmpNum &lt;= maskIterator.GetIndex()[i])</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    m_GlobalRegionOfInterest.SetSize(i,maskIterator.GetIndex()[i] - m_GlobalRegionOfInterest.GetIndex()[i] + 1);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            }</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        {</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            m_GlobalRegionOfInterest.SetIndex(maskIterator.GetIndex());</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_GlobalRegionOfInterest.GetImageDimension();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                m_GlobalRegionOfInterest.SetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,1);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_GlobalRegionOfInterest.GetImageDimension();++i)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                m_GlobalRegionOfInterest.SetSize(i,1);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            foundOneNonNull = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
@@ -252,11 +252,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="classanima_1_1ImageDataSplitter.html#ad25bd9bcdbaf082be55bb8669b7eb029">TInputRegionType</a> tmpBlock;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_GlobalRegionOfInterest.GetImageDimension();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_GlobalRegionOfInterest.GetImageDimension();++i)</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        tmpBlock.SetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,m_GlobalRegionOfInterest.GetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>) + m_GlobalRegionOfInterest.GetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)*block[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]/m_NbBlocks[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tmpMax = m_GlobalRegionOfInterest.GetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>) + m_GlobalRegionOfInterest.GetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)*(1+block[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>])/m_NbBlocks[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - tmpBlock.GetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        tmpBlock.SetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,tmpMax);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        tmpBlock.SetIndex(i,m_GlobalRegionOfInterest.GetIndex(i) + m_GlobalRegionOfInterest.GetSize(i)*block[i]/m_NbBlocks[i]);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tmpMax = m_GlobalRegionOfInterest.GetIndex(i) + m_GlobalRegionOfInterest.GetSize(i)*(1+block[i])/m_NbBlocks[i] - tmpBlock.GetIndex(i);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        tmpBlock.SetSize(i,tmpMax);</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> tmpBlock;</div>
@@ -295,33 +295,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">if</span> (!m_MaskImage)</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">throw</span> itk::ExceptionObject(__FILE__, __LINE__,<span class="stringliteral">&quot;No mask input. This is required. Exiting...&quot;</span>,ITK_LOCATION);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_GlobalRegionOfInterest.GetImageDimension();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_GlobalRegionOfInterest.GetImageDimension();++i)</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        m_BlockRegion.SetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,m_GlobalRegionOfInterest.GetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>) + m_GlobalRegionOfInterest.GetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)*m_Block[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]/m_NbBlocks[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tmpMax = m_GlobalRegionOfInterest.GetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>) + m_GlobalRegionOfInterest.GetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)*(1+m_Block[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>])/m_NbBlocks[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - m_BlockRegion.GetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        m_BlockRegion.SetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,tmpMax);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        m_BlockRegion.SetIndex(i,m_GlobalRegionOfInterest.GetIndex(i) + m_GlobalRegionOfInterest.GetSize(i)*m_Block[i]/m_NbBlocks[i]);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tmpMax = m_GlobalRegionOfInterest.GetIndex(i) + m_GlobalRegionOfInterest.GetSize(i)*(1+m_Block[i])/m_NbBlocks[i] - m_BlockRegion.GetIndex(i);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        m_BlockRegion.SetSize(i,tmpMax);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    m_BlockRegionWithMargin = m_BlockRegion;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_GlobalRegionOfInterest.GetImageDimension();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_GlobalRegionOfInterest.GetImageDimension();++i)</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    {</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">if</span> (m_Margin[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] != 0)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">if</span> (m_Margin[i] != 0)</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tmpMin = m_BlockRegion.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - m_Margin[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">if</span> (tmpMin &lt; m_MaskImage-&gt;GetLargestPossibleRegion().GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>])</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                tmpMin = m_MaskImage-&gt;GetLargestPossibleRegion().GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tmpMax = m_BlockRegion.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] + m_BlockRegion.GetSize()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] + m_Margin[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - 1;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordflow">if</span> (tmpMax &gt;= m_MaskImage-&gt;GetLargestPossibleRegion().GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] + m_MaskImage-&gt;GetLargestPossibleRegion().GetSize()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>])</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                tmpMax = m_MaskImage-&gt;GetLargestPossibleRegion().GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] + m_MaskImage-&gt;GetLargestPossibleRegion().GetSize()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - 1;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tmpMin = m_BlockRegion.GetIndex()[i] - m_Margin[i];</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">if</span> (tmpMin &lt; m_MaskImage-&gt;GetLargestPossibleRegion().GetIndex()[i])</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                tmpMin = m_MaskImage-&gt;GetLargestPossibleRegion().GetIndex()[i];</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tmpMax = m_BlockRegion.GetIndex()[i] + m_BlockRegion.GetSize()[i] + m_Margin[i] - 1;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordflow">if</span> (tmpMax &gt;= m_MaskImage-&gt;GetLargestPossibleRegion().GetIndex()[i] + m_MaskImage-&gt;GetLargestPossibleRegion().GetSize()[i])</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                tmpMax = m_MaskImage-&gt;GetLargestPossibleRegion().GetIndex()[i] + m_MaskImage-&gt;GetLargestPossibleRegion().GetSize()[i] - 1;</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            m_BlockRegionWithMargin.SetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,tmpMin);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            m_BlockRegionWithMargin.SetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,tmpMax - tmpMin + 1);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            m_BlockRegionWithMargin.SetIndex(i,tmpMin);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            m_BlockRegionWithMargin.SetSize(i,tmpMax - tmpMin + 1);</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        }</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    MaskImageType::RegionType tmpRegion = m_BlockRegion;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; MaskImageType::GetImageDimension();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        tmpRegion.SetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,0);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; MaskImageType::GetImageDimension();++i)</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        tmpRegion.SetIndex(i,0);</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    m_SmallMask = MaskImageType::New();</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    m_SmallMask-&gt;Initialize();</div>
@@ -341,8 +341,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        ++maskIt;</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; MaskImageType::GetImageDimension();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        tmpRegion.SetSize(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,m_BlockRegionWithMargin.GetSize()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; MaskImageType::GetImageDimension();++i)</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        tmpRegion.SetSize(i,m_BlockRegionWithMargin.GetSize()[i]);</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    m_SmallMaskWithMargin = MaskImageType::New();</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    m_SmallMaskWithMargin-&gt;Initialize();</div>
@@ -362,23 +362,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        ++maskItWM;</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    }</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; m_FileNames.size();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_FileNames.size();++i)</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Processing image file &quot;</span> &lt;&lt; m_FileNames[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] &lt;&lt; <span class="stringliteral">&quot;...&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Processing image file &quot;</span> &lt;&lt; m_FileNames[i] &lt;&lt; <span class="stringliteral">&quot;...&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <a class="code" href="classanima_1_1ImageDataSplitter.html#a339b990f39533a35617369ce5a3ed1cd">InputReaderPointer</a> tmpImReader = InputReaderType::New();</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        tmpImReader-&gt;SetFileName(m_FileNames[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        tmpImReader-&gt;SetFileName(m_FileNames[i]);</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        tmpImReader-&gt;Update();</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        m_Images.push_back(TInputImage::New());</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        m_Images[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]-&gt;Initialize();</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        m_Images[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]-&gt;SetRegions(tmpRegion);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        m_Images[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]-&gt;SetOrigin(m_MaskImage-&gt;GetOrigin());</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        m_Images[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]-&gt;SetDirection(m_MaskImage-&gt;GetDirection());</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        m_Images[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]-&gt;SetSpacing(m_MaskImage-&gt;GetSpacing());</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        m_Images[i]-&gt;Initialize();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        m_Images[i]-&gt;SetRegions(tmpRegion);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        m_Images[i]-&gt;SetOrigin(m_MaskImage-&gt;GetOrigin());</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        m_Images[i]-&gt;SetDirection(m_MaskImage-&gt;GetDirection());</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        m_Images[i]-&gt;SetSpacing(m_MaskImage-&gt;GetSpacing());</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        m_Images[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]-&gt;SetNumberOfComponentsPerPixel(tmpImReader-&gt;GetOutput()-&gt;GetNumberOfComponentsPerPixel());</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        m_Images[i]-&gt;SetNumberOfComponentsPerPixel(tmpImReader-&gt;GetOutput()-&gt;GetNumberOfComponentsPerPixel());</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        m_Images[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]-&gt;Allocate();</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        m_Images[i]-&gt;Allocate();</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        itk::ImageRegionIterator &lt;TInputImage&gt; cropImIt(m_Images[i],tmpRegion);</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        itk::ImageRegionConstIterator &lt;TInputImage&gt; reImIt(tmpImReader-&gt;GetOutput(),m_BlockRegionWithMargin);</div>
@@ -402,19 +402,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <a class="code" href="classanima_1_1ImageDataSplitter.html#ad25bd9bcdbaf082be55bb8669b7eb029">TInputRegionType</a> bRegInsideMargin = m_BlockRegion;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; TInputImage::GetImageDimension();++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        bRegInsideMargin.SetIndex(<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>,m_BlockRegion.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] - m_BlockRegionWithMargin.GetIndex()[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TInputImage::GetImageDimension();++i)</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        bRegInsideMargin.SetIndex(i,m_BlockRegion.GetIndex()[i] - m_BlockRegionWithMargin.GetIndex()[i]);</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">return</span> bRegInsideMargin;</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;}</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;} <span class="comment">// end namespace anima</span></div>
 <div class="ttc" id="classanima_1_1ImageDataSplitter_html_a3b950f164c42c5148115a86db0ca03e8"><div class="ttname"><a href="classanima_1_1ImageDataSplitter.html#a3b950f164c42c5148115a86db0ca03e8">anima::ImageDataSplitter::SetUniqueFileName</a></div><div class="ttdeci">void SetUniqueFileName(std::string &amp;inputFileName)</div><div class="ttdef"><b>Definition:</b> <a href="animaImageDataSplitter_8hxx_source.html#l00041">animaImageDataSplitter.hxx:41</a></div></div>
-<div class="ttc" id="load__lbeig_8m_html_a338951b7e7607b65262fb051e7804d91"><div class="ttname"><a href="load__lbeig_8m.html#a338951b7e7607b65262fb051e7804d91">string</a></div><div class="ttdeci">string</div><div class="ttdef"><b>Definition:</b> <a href="load__lbeig_8m_source.html#l00008">load_lbeig.m:8</a></div></div>
 <div class="ttc" id="classanima_1_1ImageDataSplitter_html_ae92fbb652d14b70f08d192949eed282d"><div class="ttname"><a href="classanima_1_1ImageDataSplitter.html#ae92fbb652d14b70f08d192949eed282d">anima::ImageDataSplitter::GetBlockRegionInsideMargin</a></div><div class="ttdeci">TInputRegionType GetBlockRegionInsideMargin()</div><div class="ttdef"><b>Definition:</b> <a href="animaImageDataSplitter_8hxx_source.html#l00301">animaImageDataSplitter.hxx:301</a></div></div>
 <div class="ttc" id="classanima_1_1ImageDataSplitter_html_ad25bd9bcdbaf082be55bb8669b7eb029"><div class="ttname"><a href="classanima_1_1ImageDataSplitter.html#ad25bd9bcdbaf082be55bb8669b7eb029">anima::ImageDataSplitter::TInputRegionType</a></div><div class="ttdeci">TInputImage::RegionType TInputRegionType</div><div class="ttdef"><b>Definition:</b> <a href="animaImageDataSplitter_8h_source.html#l00016">animaImageDataSplitter.h:16</a></div></div>
 <div class="ttc" id="classanima_1_1ImageDataSplitter_html_a5f1107905e07909d40305bd05a4757f2"><div class="ttname"><a href="classanima_1_1ImageDataSplitter.html#a5f1107905e07909d40305bd05a4757f2">anima::ImageDataSplitter::SetFileNames</a></div><div class="ttdeci">void SetFileNames(std::string &amp;inputFileList)</div><div class="ttdef"><b>Definition:</b> <a href="animaImageDataSplitter_8hxx_source.html#l00048">animaImageDataSplitter.hxx:48</a></div></div>
-<div class="ttc" id="load__nii__ext_8m_html_aef5461a34124216ffeadd235c3f81324"><div class="ttname"><a href="load__nii__ext_8m.html#aef5461a34124216ffeadd235c3f81324">error</a></div><div class="ttdeci">error(msg)</div></div>
 <div class="ttc" id="classanima_1_1ImageDataSplitter_html_a31c49f30745d12434493d5f8e5734be4"><div class="ttname"><a href="classanima_1_1ImageDataSplitter.html#a31c49f30745d12434493d5f8e5734be4">anima::ImageDataSplitter::SetComputationMask</a></div><div class="ttdeci">void SetComputationMask(MaskImageType::Pointer &amp;maskIm)</div><div class="ttdef"><b>Definition:</b> <a href="animaImageDataSplitter_8hxx_source.html#l00077">animaImageDataSplitter.hxx:77</a></div></div>
 <div class="ttc" id="classanima_1_1ImageDataSplitter_html_a24e09a2e4661ec983c2ee60c1d3b7d96"><div class="ttname"><a href="classanima_1_1ImageDataSplitter.html#a24e09a2e4661ec983c2ee60c1d3b7d96">anima::ImageDataSplitter::SetBlockMargin</a></div><div class="ttdeci">void SetBlockMargin(TInputIndexType &amp;bMargin)</div><div class="ttdef"><b>Definition:</b> <a href="animaImageDataSplitter_8hxx_source.html#l00145">animaImageDataSplitter.hxx:145</a></div></div>
 <div class="ttc" id="classanima_1_1ImageDataSplitter_html_a30fa2081f8f1ec2ff0d469d90be36365"><div class="ttname"><a href="classanima_1_1ImageDataSplitter.html#a30fa2081f8f1ec2ff0d469d90be36365">anima::ImageDataSplitter::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="animaImageDataSplitter_8hxx_source.html#l00191">animaImageDataSplitter.hxx:191</a></div></div>
@@ -425,14 +423,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1ImageDataSplitter_html_acd125d184d1f71a68ee4d28ed066c8e5"><div class="ttname"><a href="classanima_1_1ImageDataSplitter.html#acd125d184d1f71a68ee4d28ed066c8e5">anima::ImageDataSplitter::GetSpecificBlockRegion</a></div><div class="ttdeci">TInputRegionType GetSpecificBlockRegion(TInputIndexType &amp;block)</div><div class="ttdef"><b>Definition:</b> <a href="animaImageDataSplitter_8hxx_source.html#l00154">animaImageDataSplitter.hxx:154</a></div></div>
 <div class="ttc" id="classanima_1_1ImageDataSplitter_html_af0a887e265db4923c494633bdf857710"><div class="ttname"><a href="classanima_1_1ImageDataSplitter.html#af0a887e265db4923c494633bdf857710">anima::ImageDataSplitter::EmptyMask</a></div><div class="ttdeci">bool EmptyMask(TInputIndexType &amp;bIndex)</div><div class="ttdef"><b>Definition:</b> <a href="animaImageDataSplitter_8hxx_source.html#l00168">animaImageDataSplitter.hxx:168</a></div></div>
 <div class="ttc" id="classanima_1_1ImageDataSplitter_html_ad33ee30c9de28b03be457b48c593ee1a"><div class="ttname"><a href="classanima_1_1ImageDataSplitter.html#ad33ee30c9de28b03be457b48c593ee1a">anima::ImageDataSplitter::ImageDataSplitter</a></div><div class="ttdeci">ImageDataSplitter()</div><div class="ttdef"><b>Definition:</b> <a href="animaImageDataSplitter_8hxx_source.html#l00010">animaImageDataSplitter.hxx:10</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 <div class="ttc" id="classanima_1_1ImageDataSplitter_html_a7723272cf08d61387f2a42726b3f530b"><div class="ttname"><a href="classanima_1_1ImageDataSplitter.html#a7723272cf08d61387f2a42726b3f530b">anima::ImageDataSplitter::TInputIndexType</a></div><div class="ttdeci">TInputImage::IndexType TInputIndexType</div><div class="ttdef"><b>Definition:</b> <a href="animaImageDataSplitter_8h_source.html#l00015">animaImageDataSplitter.h:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:48 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_3553dd7649db2abadc30239e41176615.html">registration</a></li><li class="navelem"><a class="el" href="dir_523ff7f575eef423bbcc27abc7030220.html">resamplers</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_42156ca842fecd25315aaaaf78422bef.html">registration</a></li><li class="navelem"><a class="el" href="dir_bdc6bbbe3b4796939576a864bf504316.html">resamplers</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -154,7 +154,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classanima_1_1ResampleImageFilter.html#abdc4455394fda91703d18a4771553897">ResampleImageFilter&lt;TInputImage,TOutputImage,TInterpolatorPrecisionType&gt;</a></div>
 <div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classanima_1_1ResampleImageFilter.html#abdc4455394fda91703d18a4771553897">   69</a></span>&#160;<a class="code" href="classanima_1_1ResampleImageFilter.html#abdc4455394fda91703d18a4771553897">    ::SetOutputSpacing</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>* spacing)</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="classanima_1_1ResampleImageFilter.html#a217410ad20ee9d1e09040990b037c33c">SpacingType</a> <a class="code" href="load__lbeig_8m.html#a1af5497f0d80ec2d3e57945765f73d8c">s</a>(spacing);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="classanima_1_1ResampleImageFilter.html#a217410ad20ee9d1e09040990b037c33c">SpacingType</a> s(spacing);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        this-&gt;SetOutputSpacing( s );</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div>
@@ -320,7 +320,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> TInputImage, <span class="keyword">class</span> TOutputImage, <span class="keyword">class</span> TInterpolatorPrecisionType&gt;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordtype">void</span></div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <a class="code" href="classanima_1_1ResampleImageFilter.html#a89853a78f79404ac26a644225214ca78">ResampleImageFilter&lt;TInputImage,TOutputImage,TInterpolatorPrecisionType&gt;</a></div>
-<div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="classanima_1_1ResampleImageFilter.html#a89853a78f79404ac26a644225214ca78">  266</a></span>&#160;<a class="code" href="classanima_1_1ResampleImageFilter.html#a89853a78f79404ac26a644225214ca78">    ::SetReferenceImage</a>( <span class="keyword">const</span> TOutputImage *<a class="code" href="load__untouch__nii_8m.html#a76db606ebe66b1a54d0e3425521586f4">image</a> )</div>
+<div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="classanima_1_1ResampleImageFilter.html#a89853a78f79404ac26a644225214ca78">  266</a></span>&#160;<a class="code" href="classanima_1_1ResampleImageFilter.html#a89853a78f79404ac26a644225214ca78">    ::SetReferenceImage</a>( <span class="keyword">const</span> TOutputImage *image )</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    {</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        itkDebugMacro(<span class="stringliteral">&quot;setting input ReferenceImage to &quot;</span> &lt;&lt; image);</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">if</span>( image != static_cast&lt;const TOutputImage *&gt;(this-&gt;itk::ProcessObject::GetInput( 1 )) )</div>
@@ -333,7 +333,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> TInputImage, <span class="keyword">class</span> TOutputImage, <span class="keyword">class</span> TInterpolatorPrecisionType&gt;</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">void</span> </div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="classanima_1_1ResampleImageFilter.html#ad15e64a45c956f5ec49cad05eaed1464">ResampleImageFilter&lt;TInputImage,TOutputImage,TInterpolatorPrecisionType&gt;</a></div>
-<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="classanima_1_1ResampleImageFilter.html#ad15e64a45c956f5ec49cad05eaed1464">  280</a></span>&#160;<a class="code" href="classanima_1_1ResampleImageFilter.html#ad15e64a45c956f5ec49cad05eaed1464">    ::SetOutputParametersFromImage</a> ( <span class="keyword">const</span> <a class="code" href="classanima_1_1ResampleImageFilter.html#a7113b0fe0dbd7604a1dd14508712abda">ImageBaseType</a> * <a class="code" href="load__untouch__nii_8m.html#a76db606ebe66b1a54d0e3425521586f4">image</a> )</div>
+<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="classanima_1_1ResampleImageFilter.html#ad15e64a45c956f5ec49cad05eaed1464">  280</a></span>&#160;<a class="code" href="classanima_1_1ResampleImageFilter.html#ad15e64a45c956f5ec49cad05eaed1464">    ::SetOutputParametersFromImage</a> ( <span class="keyword">const</span> <a class="code" href="classanima_1_1ResampleImageFilter.html#a7113b0fe0dbd7604a1dd14508712abda">ImageBaseType</a> * image )</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    {</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        this-&gt;SetOutputOrigin ( image-&gt;GetOrigin() );</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        this-&gt;SetOutputSpacing ( image-&gt;GetSpacing() );</div>
@@ -341,96 +341,82 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        this-&gt;SetOutputStartIndex ( image-&gt;GetLargestPossibleRegion().GetIndex() );</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        this-&gt;SetSize ( image-&gt;GetLargestPossibleRegion().GetSize() );</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    }</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    </div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor">#if !defined(ITK_LEGACY_REMOVE)</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor"></span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> TInputImage, <span class="keyword">class</span> TOutputImage, <span class="keyword">class</span> TInterpolatorPrecisionType&gt;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordtype">void</span> </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="classanima_1_1ResampleImageFilter.html">ResampleImageFilter&lt;TInputImage,TOutputImage,TInterpolatorPrecisionType&gt;</a></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<a class="code" href="classanima_1_1ResampleImageFilter.html">    ::SetOutputParametersFromConstImage</a> ( <span class="keyword">const</span> ImageBaseType * <a class="code" href="load__untouch__nii_8m.html#a76db606ebe66b1a54d0e3425521586f4">image</a> )</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        itkGenericLegacyReplaceBodyMacro(itk::ResampleImageFilter::SetOutputParametersFromConstImage, </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                                         3.14, </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                                         itk::ResampleImageFilter::SetOutputParametersFromImage);</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        this-&gt;SetOutputParametersFromImage(image);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor"></span>    </div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> TInputImage, <span class="keyword">class</span> TOutputImage, <span class="keyword">class</span> TInterpolatorPrecisionType&gt;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">void</span> </div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <a class="code" href="classanima_1_1ResampleImageFilter.html#a2d28508973e6aa56d28d7b6831154947">ResampleImageFilter&lt;TInputImage,TOutputImage,TInterpolatorPrecisionType&gt;</a></div>
-<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="classanima_1_1ResampleImageFilter.html#a2d28508973e6aa56d28d7b6831154947">  308</a></span>&#160;<a class="code" href="classanima_1_1ResampleImageFilter.html#a2d28508973e6aa56d28d7b6831154947">    ::GenerateOutputInformation</a>()</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="comment">// call the superclass&#39; implementation of this method</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        Superclass::GenerateOutputInformation();</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        </div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="comment">// get pointers to the input and output</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <a class="code" href="classanima_1_1ResampleImageFilter.html#af13d6f27ae95c3ce8e0ec40c2dc79985">OutputImagePointer</a> outputPtr = this-&gt;GetOutput();</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">if</span> ( !outputPtr )</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        }</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keyword">const</span> <a class="code" href="classanima_1_1ResampleImageFilter.html#a1b01f73aec00be8cb8f62dd36bd7ec07">OutputImageType</a> * referenceImage = this-&gt;GetReferenceImage();</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> TInputImage, <span class="keyword">class</span> TOutputImage, <span class="keyword">class</span> TInterpolatorPrecisionType&gt;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordtype">void</span> </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <a class="code" href="classanima_1_1ResampleImageFilter.html#a2d28508973e6aa56d28d7b6831154947">ResampleImageFilter&lt;TInputImage,TOutputImage,TInterpolatorPrecisionType&gt;</a></div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="classanima_1_1ResampleImageFilter.html#a2d28508973e6aa56d28d7b6831154947">  295</a></span>&#160;<a class="code" href="classanima_1_1ResampleImageFilter.html#a2d28508973e6aa56d28d7b6831154947">    ::GenerateOutputInformation</a>()</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="comment">// call the superclass&#39; implementation of this method</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        Superclass::GenerateOutputInformation();</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="comment">// get pointers to the input and output</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <a class="code" href="classanima_1_1ResampleImageFilter.html#af13d6f27ae95c3ce8e0ec40c2dc79985">OutputImagePointer</a> outputPtr = this-&gt;GetOutput();</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">if</span> ( !outputPtr )</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keyword">const</span> <a class="code" href="classanima_1_1ResampleImageFilter.html#a1b01f73aec00be8cb8f62dd36bd7ec07">OutputImageType</a> * referenceImage = this-&gt;GetReferenceImage();</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="comment">// Set the size of the output region</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">if</span>( m_UseReferenceImage &amp;&amp; referenceImage )</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        {</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            outputPtr-&gt;SetLargestPossibleRegion( referenceImage-&gt;GetLargestPossibleRegion() );</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        }</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keyword">typename</span> TOutputImage::RegionType outputLargestPossibleRegion;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            outputLargestPossibleRegion.SetSize( m_Size );</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            outputLargestPossibleRegion.SetIndex( m_OutputStartIndex );</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            outputPtr-&gt;SetLargestPossibleRegion( outputLargestPossibleRegion );</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        }</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        </div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="comment">// Set the size of the output region</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">if</span>( m_UseReferenceImage &amp;&amp; referenceImage )</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="comment">// Set spacing and origin</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">if</span> (m_UseReferenceImage &amp;&amp; referenceImage)</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        {</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            outputPtr-&gt;SetLargestPossibleRegion( referenceImage-&gt;GetLargestPossibleRegion() );</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        }</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        {</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="keyword">typename</span> TOutputImage::RegionType outputLargestPossibleRegion;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            outputLargestPossibleRegion.SetSize( m_Size );</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            outputLargestPossibleRegion.SetIndex( m_OutputStartIndex );</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            outputPtr-&gt;SetLargestPossibleRegion( outputLargestPossibleRegion );</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        }</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        </div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="comment">// Set spacing and origin</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordflow">if</span> (m_UseReferenceImage &amp;&amp; referenceImage)</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        {</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            outputPtr-&gt;SetOrigin( referenceImage-&gt;GetOrigin() );</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            outputPtr-&gt;SetSpacing( referenceImage-&gt;GetSpacing() );</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            outputPtr-&gt;SetDirection( referenceImage-&gt;GetDirection() );</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        }</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        {</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            outputPtr-&gt;SetOrigin( m_OutputOrigin );</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            outputPtr-&gt;SetSpacing( m_OutputSpacing );</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            outputPtr-&gt;SetDirection( m_OutputDirection );</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        }</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    }</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    </div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> TInputImage, <span class="keyword">class</span> TOutputImage, <span class="keyword">class</span> TInterpolatorPrecisionType&gt;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> </div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <a class="code" href="classanima_1_1ResampleImageFilter.html#a56176614470025d0d97269b44cffa66f">ResampleImageFilter&lt;TInputImage,TOutputImage,TInterpolatorPrecisionType&gt;</a></div>
-<div class="line"><a name="l00357"></a><span class="lineno"><a class="line" href="classanima_1_1ResampleImageFilter.html#a56176614470025d0d97269b44cffa66f">  357</a></span>&#160;<a class="code" href="classanima_1_1ResampleImageFilter.html#a56176614470025d0d97269b44cffa66f">    ::GetMTime</a>( <span class="keywordtype">void</span> )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> latestTime = itk::Object::GetMTime();</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        </div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordflow">if</span>( m_Transform )</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        {</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            <span class="keywordflow">if</span>( latestTime &lt; m_Transform-&gt;GetMTime() )</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            {</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                latestTime = m_Transform-&gt;GetMTime();</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            }</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        }</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        </div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordflow">if</span>( m_Interpolator )</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        {</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            <span class="keywordflow">if</span>( latestTime &lt; m_Interpolator-&gt;GetMTime() )</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            {</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                latestTime = m_Interpolator-&gt;GetMTime();</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            }</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        }</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        </div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordflow">return</span> latestTime;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    }</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    </div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;} <span class="comment">// end namespace itk</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            outputPtr-&gt;SetOrigin( referenceImage-&gt;GetOrigin() );</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            outputPtr-&gt;SetSpacing( referenceImage-&gt;GetSpacing() );</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            outputPtr-&gt;SetDirection( referenceImage-&gt;GetDirection() );</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            outputPtr-&gt;SetOrigin( m_OutputOrigin );</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            outputPtr-&gt;SetSpacing( m_OutputSpacing );</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            outputPtr-&gt;SetDirection( m_OutputDirection );</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> TInputImage, <span class="keyword">class</span> TOutputImage, <span class="keyword">class</span> TInterpolatorPrecisionType&gt;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <a class="code" href="classanima_1_1ResampleImageFilter.html#a56176614470025d0d97269b44cffa66f">ResampleImageFilter&lt;TInputImage,TOutputImage,TInterpolatorPrecisionType&gt;</a></div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="classanima_1_1ResampleImageFilter.html#a56176614470025d0d97269b44cffa66f">  344</a></span>&#160;<a class="code" href="classanima_1_1ResampleImageFilter.html#a56176614470025d0d97269b44cffa66f">    ::GetMTime</a>( <span class="keywordtype">void</span> )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> latestTime = itk::Object::GetMTime();</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">if</span>( m_Transform )</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            <span class="keywordflow">if</span>( latestTime &lt; m_Transform-&gt;GetMTime() )</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                latestTime = m_Transform-&gt;GetMTime();</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            }</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        }</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        </div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordflow">if</span>( m_Interpolator )</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        {</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <span class="keywordflow">if</span>( latestTime &lt; m_Interpolator-&gt;GetMTime() )</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            {</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                latestTime = m_Interpolator-&gt;GetMTime();</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            }</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        }</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordflow">return</span> latestTime;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    </div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;} <span class="comment">// end namespace itk</span></div>
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_a9e0fe2b75715aca0adb8870d5711b4eb"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#a9e0fe2b75715aca0adb8870d5711b4eb">anima::ResampleImageFilter::InputImageConstPointer</a></div><div class="ttdeci">InputImageType::ConstPointer InputImageConstPointer</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8h_source.html#l00029">animaResampleImageFilter.h:29</a></div></div>
-<div class="ttc" id="load__lbeig_8m_html_a1af5497f0d80ec2d3e57945765f73d8c"><div class="ttname"><a href="load__lbeig_8m.html#a1af5497f0d80ec2d3e57945765f73d8c">s</a></div><div class="ttdeci">s</div><div class="ttdef"><b>Definition:</b> <a href="load__lbeig_8m_source.html#l00005">load_lbeig.m:5</a></div></div>
-<div class="ttc" id="classanima_1_1ResampleImageFilter_html_a2d28508973e6aa56d28d7b6831154947"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#a2d28508973e6aa56d28d7b6831154947">anima::ResampleImageFilter::GenerateOutputInformation</a></div><div class="ttdeci">virtual void GenerateOutputInformation(void)</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8hxx_source.html#l00308">animaResampleImageFilter.hxx:308</a></div></div>
+<div class="ttc" id="classanima_1_1ResampleImageFilter_html_a2d28508973e6aa56d28d7b6831154947"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#a2d28508973e6aa56d28d7b6831154947">anima::ResampleImageFilter::GenerateOutputInformation</a></div><div class="ttdeci">virtual void GenerateOutputInformation(void)</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8hxx_source.html#l00295">animaResampleImageFilter.hxx:295</a></div></div>
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_a669404b446be8f3f3b686070ba5b932b"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#a669404b446be8f3f3b686070ba5b932b">anima::ResampleImageFilter::GenerateInputRequestedRegion</a></div><div class="ttdeci">virtual void GenerateInputRequestedRegion(void)</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8hxx_source.html#l00221">animaResampleImageFilter.hxx:221</a></div></div>
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_a1cb49e6714183da0701ede30b19c867d"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#a1cb49e6714183da0701ede30b19c867d">anima::ResampleImageFilter::PointType</a></div><div class="ttdeci">InterpolatorType::PointType PointType</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8h_source.html#l00062">animaResampleImageFilter.h:62</a></div></div>
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_a4aa7082e014eb67649ef4afa5661abe3"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#a4aa7082e014eb67649ef4afa5661abe3">anima::ResampleImageFilter::InputImagePointer</a></div><div class="ttdeci">InputImageType::Pointer InputImagePointer</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8h_source.html#l00028">animaResampleImageFilter.h:28</a></div></div>
@@ -443,7 +429,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html">anima::ResampleImageFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8h_source.html#l00016">animaResampleImageFilter.h:16</a></div></div>
 <div class="ttc" id="animaResampleImageFilter_8h_html"><div class="ttname"><a href="animaResampleImageFilter_8h.html">animaResampleImageFilter.h</a></div></div>
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_abe123873309b494fd5d641ad05d71cc1"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#abe123873309b494fd5d641ad05d71cc1">anima::ResampleImageFilter::PixelType</a></div><div class="ttdeci">TOutputImage::PixelType PixelType</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8h_source.html#l00066">animaResampleImageFilter.h:66</a></div></div>
-<div class="ttc" id="load__untouch__nii_8m_html_a76db606ebe66b1a54d0e3425521586f4"><div class="ttname"><a href="load__untouch__nii_8m.html#a76db606ebe66b1a54d0e3425521586f4">image</a></div><div class="ttdeci">Load NIFTI or ANALYZE but not applying any appropriate affine geometric transform or voxel intensity scaling Although according to NIFTI all those header information are supposed to be applied to the loaded NIFTI image</div><div class="ttdef"><b>Definition:</b> <a href="load__untouch__nii_8m_source.html#l00001">load_untouch_nii.m:1</a></div></div>
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_a217410ad20ee9d1e09040990b037c33c"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#a217410ad20ee9d1e09040990b037c33c">anima::ResampleImageFilter::SpacingType</a></div><div class="ttdeci">TOutputImage::SpacingType SpacingType</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8h_source.html#l00073">animaResampleImageFilter.h:73</a></div></div>
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_a12b359161d0832928b1f73dd86892ad0"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#a12b359161d0832928b1f73dd86892ad0">anima::ResampleImageFilter::OutputImageRegionType</a></div><div class="ttdeci">TOutputImage::RegionType OutputImageRegionType</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8h_source.html#l00070">animaResampleImageFilter.h:70</a></div></div>
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_abdc4455394fda91703d18a4771553897"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#abdc4455394fda91703d18a4771553897">anima::ResampleImageFilter::SetOutputSpacing</a></div><div class="ttdeci">virtual void SetOutputSpacing(const double *values)</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8hxx_source.html#l00069">animaResampleImageFilter.hxx:69</a></div></div>
@@ -451,7 +436,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_a89853a78f79404ac26a644225214ca78"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#a89853a78f79404ac26a644225214ca78">anima::ResampleImageFilter::SetReferenceImage</a></div><div class="ttdeci">void SetReferenceImage(const TOutputImage *image)</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8hxx_source.html#l00266">animaResampleImageFilter.hxx:266</a></div></div>
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_ad59cff53e4ed37f4970792da1398de52"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#ad59cff53e4ed37f4970792da1398de52">anima::ResampleImageFilter::ThreadedGenerateData</a></div><div class="ttdeci">void ThreadedGenerateData(const OutputImageRegionType &amp;outputRegionForThread, itk::ThreadIdType threadId)</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8hxx_source.html#l00134">animaResampleImageFilter.hxx:134</a></div></div>
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_ab0990e98117336490c4c2fbb65426db9"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#ab0990e98117336490c4c2fbb65426db9">anima::ResampleImageFilter::GetReferenceImage</a></div><div class="ttdeci">const TOutputImage * GetReferenceImage(void) const </div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8hxx_source.html#l00250">animaResampleImageFilter.hxx:250</a></div></div>
-<div class="ttc" id="classanima_1_1ResampleImageFilter_html_a56176614470025d0d97269b44cffa66f"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#a56176614470025d0d97269b44cffa66f">anima::ResampleImageFilter::GetMTime</a></div><div class="ttdeci">unsigned long GetMTime(void) const </div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8hxx_source.html#l00357">animaResampleImageFilter.hxx:357</a></div></div>
+<div class="ttc" id="classanima_1_1ResampleImageFilter_html_a56176614470025d0d97269b44cffa66f"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#a56176614470025d0d97269b44cffa66f">anima::ResampleImageFilter::GetMTime</a></div><div class="ttdeci">unsigned long GetMTime(void) const </div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8hxx_source.html#l00344">animaResampleImageFilter.hxx:344</a></div></div>
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_abd2ffd5ac25ed356a28c501bcf69b89e"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#abd2ffd5ac25ed356a28c501bcf69b89e">anima::ResampleImageFilter::ResampleImageFilter</a></div><div class="ttdeci">ResampleImageFilter(void)</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8hxx_source.html#l00020">animaResampleImageFilter.hxx:20</a></div></div>
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_ac5a922e6ae5df50f811d32c60f206ea6"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#ac5a922e6ae5df50f811d32c60f206ea6">anima::ResampleImageFilter::SetOutputOrigin</a></div><div class="ttdeci">virtual void SetOutputOrigin(const double *values)</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8hxx_source.html#l00082">animaResampleImageFilter.hxx:82</a></div></div>
 <div class="ttc" id="classanima_1_1ResampleImageFilter_html_ad15e64a45c956f5ec49cad05eaed1464"><div class="ttname"><a href="classanima_1_1ResampleImageFilter.html#ad15e64a45c956f5ec49cad05eaed1464">anima::ResampleImageFilter::SetOutputParametersFromImage</a></div><div class="ttdeci">void SetOutputParametersFromImage(const ImageBaseType *image)</div><div class="ttdef"><b>Definition:</b> <a href="animaResampleImageFilter_8hxx_source.html#l00280">animaResampleImageFilter.hxx:280</a></div></div>
@@ -459,9 +444,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:20 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

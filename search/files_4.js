@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['get_5fnii_5fframe_2em',['get_nii_frame.m',['../get__nii__frame_8m.html',1,'']]],
-  ['guiarguments_2eh',['GuiArguments.h',['../GuiArguments_8h.html',1,'']]]
+  ['tinyxml2_2ecxx',['tinyxml2.cxx',['../tinyxml2_8cxx.html',1,'']]],
+  ['tinyxml2_2eh',['tinyxml2.h',['../tinyxml2_8h.html',1,'']]]
 ];

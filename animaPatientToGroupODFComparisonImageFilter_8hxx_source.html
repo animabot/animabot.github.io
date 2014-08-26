@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_6609a53da0c95e3ec63ef3282697f28c.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_ed3368f26f16f15399ac33d4f4eb1680.html">statistics</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_c8b7036025fdd15a286ad6e57754d006.html">statistics</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -124,8 +124,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">return</span> patientVectorValue.GetSize();</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numItems = databaseValues.size();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; numItems;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        databaseValues[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>] = m_ShData-&gt;GetSampleValues(databaseValues[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>],m_SampleDirections);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numItems;++i)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        databaseValues[i] = m_ShData-&gt;GetSampleValues(databaseValues[i],m_SampleDirections);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    patientVectorValue = m_ShData-&gt;GetSampleValues(patientVectorValue,m_SampleDirections);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
@@ -137,13 +137,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1PatientToGroupComparisonImageFilter_html_ac34e3dedf0e3be8ec9c721528813aa26"><div class="ttname"><a href="classanima_1_1PatientToGroupComparisonImageFilter.html#ac34e3dedf0e3be8ec9c721528813aa26">anima::PatientToGroupComparisonImageFilter::VectorType</a></div><div class="ttdeci">InputImageType::PixelType VectorType</div><div class="ttdef"><b>Definition:</b> <a href="animaPatientToGroupComparisonImageFilter_8h_source.html#l00041">animaPatientToGroupComparisonImageFilter.h:41</a></div></div>
 <div class="ttc" id="classanima_1_1PatientToGroupODFComparisonImageFilter_html_adfe8425c0eb315cdb77b2540f630ea96"><div class="ttname"><a href="classanima_1_1PatientToGroupODFComparisonImageFilter.html#adfe8425c0eb315cdb77b2540f630ea96">anima::PatientToGroupODFComparisonImageFilter::SampleFromDiffusionModels</a></div><div class="ttdeci">unsigned int SampleFromDiffusionModels(std::vector&lt; VectorType &gt; &amp;databaseValues, VectorType &amp;patientVectorValue)</div><div class="ttdef"><b>Definition:</b> <a href="animaPatientToGroupODFComparisonImageFilter_8hxx_source.html#l00023">animaPatientToGroupODFComparisonImageFilter.hxx:23</a></div></div>
 <div class="ttc" id="classanima_1_1PatientToGroupODFComparisonImageFilter_html_a97aac677e710f7e4eb7eefd50ca52c0e"><div class="ttname"><a href="classanima_1_1PatientToGroupODFComparisonImageFilter.html#a97aac677e710f7e4eb7eefd50ca52c0e">anima::PatientToGroupODFComparisonImageFilter::BeforeThreadedGenerateData</a></div><div class="ttdeci">virtual void BeforeThreadedGenerateData()</div><div class="ttdef"><b>Definition:</b> <a href="animaPatientToGroupODFComparisonImageFilter_8hxx_source.html#l00007">animaPatientToGroupODFComparisonImageFilter.hxx:7</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:20 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

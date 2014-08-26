@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['old_5faffine',['old_affine',['../reslice__nii_8m.html#a7a252e0f4bf7885d8d4789b1b1066aab',1,'reslice_nii.m']]],
-  ['old_5fm',['old_M',['../reslice__nii_8m.html#ad1349df6d6065df3ebe2a83d8353382d',1,'reslice_nii.m']]],
-  ['old_5frgb',['old_RGB',['../reslice__nii_8m.html#a03aea36f3a345d73b3b70f70a1efaa89',1,'reslice_nii.m']]],
-  ['orient',['orient',['../xform__nii_8m.html#a3e2df7a11ee5b0b768b870c65b42e33f',1,'xform_nii.m']]],
-  ['orientation',['orientation',['../load__untouch__nii_8m.html#ad601cae513dcbc91f7b5ccb0101bac22',1,'load_untouch_nii.m']]],
-  ['originator',['originator',['../xform__nii_8m.html#a5c64f97f406d865a23cef0e15368a61f',1,'xform_nii.m']]]
+  ['s_5fmapstringvalues',['s_mapStringValues',['../animaGetScalarMapFromDDI_8cxx.html#ade41d120cbbb08b186c5eccda230b71f',1,'animaGetScalarMapFromDDI.cxx']]],
+  ['scalefactor',['ScaleFactor',['../structGlyphStructure.html#afe090b7d091b815b6f038e41ba299627',1,'GlyphStructure']]],
+  ['single_5fquote',['SINGLE_QUOTE',['../tinyxml2_8cxx.html#a65992cb0c2d3fc4eb9d13641f2e6e0f1',1,'tinyxml2.cxx']]],
+  ['sqrtfa',['sqrtFA',['../structanima_1_1DDICostFunction_1_1DTData.html#a0e5e42e3308ba6c3af1eb4a11e8956e2',1,'anima::DDICostFunction::DTData']]],
+  ['startblocks',['startBlocks',['../structanima_1_1BlockMatchingInitializer_1_1BlockGeneratorThreadStruct.html#a73724880df4362bcf6d90ff5a7f176e7',1,'anima::BlockMatchingInitializer::BlockGeneratorThreadStruct']]],
+  ['stoppedparticles',['stoppedParticles',['../structanima_1_1BaseProbabilisticTractographyImageFilter_1_1FiberWorkType.html#a80fa779470e03dc5330077a621758943',1,'anima::BaseProbabilisticTractographyImageFilter::FiberWorkType']]]
 ];

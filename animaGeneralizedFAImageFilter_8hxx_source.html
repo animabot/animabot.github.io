@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5ce0a585544ccf90f6c4541b827e0dfc.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_a378dc9af426dd8223a65e1788193c6b.html">diffusion</a></li><li class="navelem"><a class="el" href="dir_b78f2621635c39ea00209570b876a1a5.html">odf</a></li><li class="navelem"><a class="el" href="dir_1d138ff7da7b0209cfea68668dddc092.html">generalized_fa</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_07ebd98e1841996e654b05628ce7f9e4.html">diffusion</a></li><li class="navelem"><a class="el" href="dir_decccc74500bc96ee9688dea50984902.html">odf</a></li><li class="navelem"><a class="el" href="dir_a4a9918925a93c86fcb7eed8513237b6.html">generalized_fa</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -140,8 +140,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">double</span> sumSquares = 0;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> = 0;<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a> &lt; vdim;++<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            sumSquares += tmpCoefs[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>]*tmpCoefs[<a class="code" href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a>];</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; vdim;++i)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            sumSquares += tmpCoefs[i]*tmpCoefs[i];</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        outIt.Set(sqrt(1 - tmpCoefs[0]*tmpCoefs[0]/sumSquares));</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        ++inputIt;</div>
@@ -154,13 +154,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1GeneralizedFAImageFilter_html_aacd5c9d1d7940525cdf46bb0b2beb843"><div class="ttname"><a href="classanima_1_1GeneralizedFAImageFilter.html#aacd5c9d1d7940525cdf46bb0b2beb843">anima::GeneralizedFAImageFilter::ThreadedGenerateData</a></div><div class="ttdeci">void ThreadedGenerateData(const OutputImageRegionType &amp;outputRegionForThread, itk::ThreadIdType threadId)</div><div class="ttdef"><b>Definition:</b> <a href="animaGeneralizedFAImageFilter_8hxx_source.html#l00022">animaGeneralizedFAImageFilter.hxx:22</a></div></div>
 <div class="ttc" id="classanima_1_1GeneralizedFAImageFilter_html_a90a160b3a726de914ab0db38888b8e4b"><div class="ttname"><a href="classanima_1_1GeneralizedFAImageFilter.html#a90a160b3a726de914ab0db38888b8e4b">anima::GeneralizedFAImageFilter::InputImagePixel</a></div><div class="ttdeci">TInputImage::PixelType InputImagePixel</div><div class="ttdef"><b>Definition:</b> <a href="animaGeneralizedFAImageFilter_8h_source.html#l00039">animaGeneralizedFAImageFilter.h:39</a></div></div>
 <div class="ttc" id="animaGeneralizedFAImageFilter_8h_html"><div class="ttname"><a href="animaGeneralizedFAImageFilter_8h.html">animaGeneralizedFAImageFilter.h</a></div></div>
-<div class="ttc" id="reslice__nii_8m_html_a6f6ccfcf58b31cb6412107d9d5281426"><div class="ttname"><a href="reslice__nii_8m.html#a6f6ccfcf58b31cb6412107d9d5281426">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> <a href="reslice__nii_8m_source.html#l00230">reslice_nii.m:230</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 11 2014 15:55:48 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 26 2014 06:20:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-36582801-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>
