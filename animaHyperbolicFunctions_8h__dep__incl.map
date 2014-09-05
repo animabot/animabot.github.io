@@ -1,0 +1,25 @@
+<map id="animaHyperbolicFunctions.h" name="animaHyperbolicFunctions.h">
+<area shape="rect" id="node2" href="$animaDDIModelAveragingImageFilter_8hxx.html" title="animaDDIModelAveragingImage\lFilter.hxx" alt="" coords="5,155,211,197"/>
+<area shape="rect" id="node5" href="$animaDDIModelEstimatorImageFilter_8hxx.html" title="animaDDIModelEstimatorImage\lFilter.hxx" alt="" coords="235,155,439,197"/>
+<area shape="rect" id="node8" href="$ddiCostFunction_8cxx.html" title="ddiCostFunction.cxx" alt="" coords="455,344,592,371"/>
+<area shape="rect" id="node9" href="$animaGenerateIsoradiusDDISurface_8cxx.html" title="animaGenerateIsoradiusDDISurface.cxx" alt="" coords="1251,253,1501,280"/>
+<area shape="rect" id="node10" href="$animaGetDDIComponent_8cxx.html" title="animaGetDDIComponent.cxx" alt="" coords="1526,253,1713,280"/>
+<area shape="rect" id="node11" href="$animaGetScalarMapFromDDI_8cxx.html" title="animaGetScalarMapFromDDI.cxx" alt="" coords="1738,253,1952,280"/>
+<area shape="rect" id="node12" href="$animaHyperbolicFunctions_8hxx.html" title="animaHyperbolicFunctions.hxx" alt="" coords="1112,80,1307,107"/>
+<area shape="rect" id="node13" href="$animaDDIDistribution_8hxx.html" title="animaDDIDistribution.hxx" alt="" coords="771,80,935,107"/>
+<area shape="rect" id="node3" href="$animaDDIModelAveragingImageFilter_8h.html" title="animaDDIModelAveragingImage\lFilter.h" alt="" coords="5,246,211,287"/>
+<area shape="rect" id="node4" href="$animaDDIModelAveraging_8cxx.html" title="animaDDIModelAveraging.cxx" alt="" coords="10,344,203,371"/>
+<area shape="rect" id="node6" href="$animaDDIModelEstimatorImageFilter_8h.html" title="animaDDIModelEstimatorImage\lFilter.h" alt="" coords="227,337,431,378"/>
+<area shape="rect" id="node7" href="$animaDDIModelEstimator_8cxx.html" title="animaDDIModelEstimator.cxx" alt="" coords="133,435,323,461"/>
+<area shape="rect" id="node14" href="$animaDDIDistribution_8h.html" title="animaDDIDistribution.h" alt="" coords="777,163,929,189"/>
+<area shape="rect" id="node15" href="$ddiCostFunction_8h.html" title="ddiCostFunction.h" alt="" coords="515,253,640,280"/>
+<area shape="rect" id="node16" href="$animaMCMSliceVisualization_8cxx.html" title="animaMCMSliceVisualization.cxx" alt="" coords="1016,253,1225,280"/>
+<area shape="rect" id="node17" href="$animaDDIProbabilisticTractographyImageFilter_8h.html" title="animaDDIProbabilisticTractography\lImageFilter.h" alt="" coords="617,337,840,378"/>
+<area shape="rect" id="node20" href="$animaDDILinearInterpolateImageFunction_8h.html" title="animaDDILinearInterpolate\lImageFunction.h" alt="" coords="766,246,940,287"/>
+<area shape="rect" id="node22" href="$animaFiniteStrainDDIResampleImageFilter_8hxx.html" title="animaFiniteStrainDDIResample\lImageFilter.hxx" alt="" coords="1116,337,1319,378"/>
+<area shape="rect" id="node18" href="$animaDDIProbabilisticTractographyImageFilter_8cxx.html" title="animaDDIProbabilisticTractography\lImageFilter.cxx" alt="" coords="617,427,840,469"/>
+<area shape="rect" id="node19" href="$animaDDIProbabilisticTractography_8cxx.html" title="animaDDIProbabilisticTractography.cxx" alt="" coords="347,435,593,461"/>
+<area shape="rect" id="node21" href="$animaDDILinearInterpolateImageFunction_8hxx.html" title="animaDDILinearInterpolate\lImageFunction.hxx" alt="" coords="917,337,1091,378"/>
+<area shape="rect" id="node24" href="$animaDDIApplyTransformSerie_8cxx.html" title="animaDDIApplyTransformSerie.cxx" alt="" coords="887,517,1108,544"/>
+<area shape="rect" id="node23" href="$animaFiniteStrainDDIResampleImageFilter_8h.html" title="animaFiniteStrainDDIResample\lImageFilter.h" alt="" coords="1016,427,1219,469"/>
+</map>
