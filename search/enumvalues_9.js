@@ -1,8 +1,0 @@
-var searchData=
-[
-  ['m0',['M0',['../classanima_1_1CombinedRelaxometryCostFunction.html#afd96d3859a715da2c6ef29df474327b7a1d91a98aa0fba842fe4ea5ece02b0b42',1,'anima::CombinedRelaxometryCostFunction']]],
-  ['meansquares',['MeanSquares',['../classanima_1_1BlockMatchingBaseRegistrationMethod.html#a492ae9040d6cc28755bed1694a07f605ad94784e4682c0c7c9f64c230a044bb83',1,'anima::BlockMatchingBaseRegistrationMethod::MeanSquares()'],['../animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9',1,'MeanSquares():&#160;animaPyramidalDenseSVFMatchingBridge.h'],['../animaPyramidalBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9',1,'MeanSquares():&#160;animaPyramidalBlockMatchingBridge.h'],['../animaPyramidalSymmetryBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9',1,'MeanSquares():&#160;animaPyramidalSymmetryBridge.h']]],
-  ['mestimation',['MEstimation',['../animaPyramidalBlockMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dca7014ac4a3f66fd1e81e610083f3958bc',1,'animaPyramidalBlockMatchingBridge.h']]],
-  ['msmoother',['MSmoother',['../animaPyramidalDenseSVFMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dca589cdeef2edcddee7e8b502ac9158b73',1,'MSmoother():&#160;animaPyramidalDenseSVFMatchingBridge.h'],['../animaPyramidalDenseTensorSVFMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dca589cdeef2edcddee7e8b502ac9158b73',1,'MSmoother():&#160;animaPyramidalDenseTensorSVFMatchingBridge.h']]],
-  ['mutualinformation',['MutualInformation',['../animaPyramidalSymmetryBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403eae962bacf2be5867b202f59d30667be2a',1,'animaPyramidalSymmetryBridge.h']]]
-];

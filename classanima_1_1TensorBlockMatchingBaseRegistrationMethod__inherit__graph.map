@@ -1,5 +1,0 @@
-<map id="anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;" name="anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;">
-<area shape="rect" id="node3" href="$classanima_1_1TensorAsymmetricBlockMatchingRegistrationMethod.html" title="anima::TensorAsymmetricBlock\lMatchingRegistrationMethod\l\&lt; TInputImage \&gt;" alt="" coords="405,5,608,61"/>
-<area shape="rect" id="node4" href="$classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html" title="anima::TensorKissingSymmetric\lBlockMatchingRegistrationMethod\l\&lt; TInputImage \&gt;" alt="" coords="397,85,616,141"/>
-<area shape="rect" id="node5" href="$classanima_1_1TensorSymmetricBlockMatchingRegistrationMethod.html" title="anima::TensorSymmetricBlock\lMatchingRegistrationMethod\l\&lt; TInputImage \&gt;" alt="" coords="408,165,605,221"/>
-</map>
