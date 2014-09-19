@@ -9,5 +9,7 @@ var searchData=
   ['updatememberships',['UpdateMemberships',['../classanima_1_1KMeansFilter.html#a3662233968da721fbfe478f9f7b51d39',1,'anima::KMeansFilter']]],
   ['updateoutputfrompvalues',['UpdateOutputFromPValues',['../classanima_1_1BackgroundNoiseVarianceEstimationImageFilter.html#ac48de0c86bb1552f373eb50e23ed417e',1,'anima::BackgroundNoiseVarianceEstimationImageFilter']]],
   ['updatet1kfactorm0',['UpdateT1KFactorM0',['../classanima_1_1CombinedRelaxometryEstimationImageFilter.html#a258c9874a8e2cfb79aaf58b404582e90',1,'anima::CombinedRelaxometryEstimationImageFilter']]],
-  ['usage',['usage',['../classGenericArguments.html#a50be1135ecd3de4c63baf2d1e96d1128',1,'GenericArguments']]]
+  ['usage',['usage',['../classGenericArguments.html#a50be1135ecd3de4c63baf2d1e96d1128',1,'GenericArguments']]],
+  ['usereferenceimageoff',['UseReferenceImageOff',['../classanima_1_1ResampleImageFilter.html#acf42f00facc293dda2507abc5328d37c',1,'anima::ResampleImageFilter']]],
+  ['usereferenceimageon',['UseReferenceImageOn',['../classanima_1_1ResampleImageFilter.html#ab66bfe1b549d757f6c9787ec761bbd59',1,'anima::ResampleImageFilter']]]
 ];

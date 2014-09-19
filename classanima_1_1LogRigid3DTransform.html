@@ -96,6 +96,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classanima_1_1LogRigid3DTransform-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -186,34 +188,42 @@ itk::MatrixOffsetTransformBase<br class="typebreak"/>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a0dd73793fe7b4a170922221e73386ec4"><td class="memItemLeft" align="right" valign="top">virtual ::itk::LightObject::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#a0dd73793fe7b4a170922221e73386ec4">CreateAnother</a> (void) const </td></tr>
+<tr class="separator:a0dd73793fe7b4a170922221e73386ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622a39751202031cdb71bc3ec236105d"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classanima_1_1LogRigid3DTransform.html#ae148bc274e69172f1ba0554bb4bb5661">AngleVectorType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#a622a39751202031cdb71bc3ec236105d">GetAngles</a> () const </td></tr>
+<tr class="separator:a622a39751202031cdb71bc3ec236105d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbf6c5001599afa8bccb3d803cf25626"><td class="memItemLeft" align="right" valign="top">virtual const vnl_matrix<br class="typebreak"/>
 &lt; TScalarType &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#afbf6c5001599afa8bccb3d803cf25626">GetLogTransform</a> () const </td></tr>
 <tr class="separator:afbf6c5001599afa8bccb3d803cf25626"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53bd05386fb1c472a37aaa091a0adc93"><td class="memItemLeft" align="right" valign="top">virtual const itk::Vector<br class="typebreak"/>
 &lt; TScalarType, 6 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#a53bd05386fb1c472a37aaa091a0adc93">GetLogVector</a> () const </td></tr>
 <tr class="separator:a53bd05386fb1c472a37aaa091a0adc93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f388baece0f6ff05a5fa98e1617da7f"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#a4f388baece0f6ff05a5fa98e1617da7f">GetNameOfClass</a> () const </td></tr>
+<tr class="separator:a4f388baece0f6ff05a5fa98e1617da7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc8b0294348de7170da484ade60f2669"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classanima_1_1LogRigid3DTransform.html#af2294ec74554237b174248e2cdb26f6b">ParametersType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#adc8b0294348de7170da484ade60f2669">GetParameters</a> () const </td></tr>
 <tr class="separator:adc8b0294348de7170da484ade60f2669"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba8262eb30e3424bd126cf94e22da0f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#aba8262eb30e3424bd126cf94e22da0f2">itkGetConstReferenceMacro</a> (Angles, <a class="el" href="classanima_1_1LogRigid3DTransform.html#ae148bc274e69172f1ba0554bb4bb5661">AngleVectorType</a>)</td></tr>
-<tr class="separator:aba8262eb30e3424bd126cf94e22da0f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9a4a7689c6c4e9d8353a8606be40721"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#ae9a4a7689c6c4e9d8353a8606be40721">itkNewMacro</a> (<a class="el" href="classanima_1_1LogRigid3DTransform.html#ac577188cf9716f331a5077823f10ad20">Self</a>)</td></tr>
-<tr class="separator:ae9a4a7689c6c4e9d8353a8606be40721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad76a67c0ecbd519517291c340ee90f3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#ad76a67c0ecbd519517291c340ee90f3d">itkStaticConstMacro</a> (SpaceDimension, unsigned int, 3)</td></tr>
-<tr class="separator:ad76a67c0ecbd519517291c340ee90f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad121814ffff6d39e5234232cddff4e06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#ad121814ffff6d39e5234232cddff4e06">itkStaticConstMacro</a> (InputSpaceDimension, unsigned int, 3)</td></tr>
-<tr class="separator:ad121814ffff6d39e5234232cddff4e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0a1b1b62e91c401d06f70ca38da0548"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#ab0a1b1b62e91c401d06f70ca38da0548">itkStaticConstMacro</a> (OutputSpaceDimension, unsigned int, 3)</td></tr>
-<tr class="separator:ab0a1b1b62e91c401d06f70ca38da0548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59db5e892eb01968ed80ee3f70ed1c2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#a59db5e892eb01968ed80ee3f70ed1c2c">itkStaticConstMacro</a> (ParametersDimension, unsigned int, 6)</td></tr>
-<tr class="separator:a59db5e892eb01968ed80ee3f70ed1c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6f05e95ee364fecfbdb4dbd7ae6229f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#af6f05e95ee364fecfbdb4dbd7ae6229f">itkTypeMacro</a> (<a class="el" href="classanima_1_1LogRigid3DTransform.html">LogRigid3DTransform</a>, MatrixOffsetTransformBase)</td></tr>
-<tr class="separator:af6f05e95ee364fecfbdb4dbd7ae6229f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bdaa4c5850f9e285b949a5914b3664a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#a3bdaa4c5850f9e285b949a5914b3664a">SetAngles</a> (const <a class="el" href="classanima_1_1LogRigid3DTransform.html#ae148bc274e69172f1ba0554bb4bb5661">AngleVectorType</a> &amp;logAngle)</td></tr>
 <tr class="separator:a3bdaa4c5850f9e285b949a5914b3664a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86240f245f0b86f13f62b210134103c0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#a86240f245f0b86f13f62b210134103c0">SetIdentity</a> ()</td></tr>
 <tr class="separator:a86240f245f0b86f13f62b210134103c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04d4bec83373bf9486a81eb67686dadf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#a04d4bec83373bf9486a81eb67686dadf">SetParameters</a> (const <a class="el" href="classanima_1_1LogRigid3DTransform.html#af2294ec74554237b174248e2cdb26f6b">ParametersType</a> &amp;parameters)</td></tr>
 <tr class="separator:a04d4bec83373bf9486a81eb67686dadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a939c69d3ce12f74ed1cae36e0eddb3b6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classanima_1_1LogRigid3DTransform.html#a935a4fe95f33e48e74b6d3b967ceb44d">Pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#a939c69d3ce12f74ed1cae36e0eddb3b6">New</a> ()</td></tr>
+<tr class="separator:a939c69d3ce12f74ed1cae36e0eddb3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a75985648cbee186fce9da647e4befe49"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#a75985648cbee186fce9da647e4befe49">InputSpaceDimension</a> = 3</td></tr>
+<tr class="separator:a75985648cbee186fce9da647e4befe49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96385e555096f1b7d8d9fd033583e75e"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#a96385e555096f1b7d8d9fd033583e75e">OutputSpaceDimension</a> = 3</td></tr>
+<tr class="separator:a96385e555096f1b7d8d9fd033583e75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ffa4cea61c2847f0671ed2e3eda185c"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#a0ffa4cea61c2847f0671ed2e3eda185c">ParametersDimension</a> = 6</td></tr>
+<tr class="separator:a0ffa4cea61c2847f0671ed2e3eda185c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc5eaaa6edb1a5222a0a156b7344781"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1LogRigid3DTransform.html#a4bc5eaaa6edb1a5222a0a156b7344781">SpaceDimension</a> = 3</td></tr>
+<tr class="separator:a4bc5eaaa6edb1a5222a0a156b7344781"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -716,6 +726,49 @@ template&lt;class TScalarType &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a0dd73793fe7b4a170922221e73386ec4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType = double&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual::itk::LightObject::Pointer <a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::CreateAnother </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a622a39751202031cdb71bc3ec236105d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType = double&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classanima_1_1LogRigid3DTransform.html#ae148bc274e69172f1ba0554bb4bb5661">AngleVectorType</a>&amp; <a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::GetAngles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="afbf6c5001599afa8bccb3d803cf25626"></a>
 <div class="memitem">
 <div class="memproto">
@@ -770,6 +823,32 @@ template&lt;class TScalarType = double&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a4f388baece0f6ff05a5fa98e1617da7f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType = double&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char* <a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::GetNameOfClass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Run-time type information (and related methods). </p>
+
+</div>
+</div>
 <a class="anchor" id="adc8b0294348de7170da484ade60f2669"></a>
 <div class="memitem">
 <div class="memproto">
@@ -797,216 +876,29 @@ template&lt;class TScalarType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aba8262eb30e3424bd126cf94e22da0f2"></a>
+<a class="anchor" id="a939c69d3ce12f74ed1cae36e0eddb3b6"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class TScalarType = double&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::itkGetConstReferenceMacro </td>
+          <td class="memname">static <a class="el" href="classanima_1_1LogRigid3DTransform.html#a935a4fe95f33e48e74b6d3b967ceb44d">Pointer</a> <a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::New </td>
           <td>(</td>
-          <td class="paramtype">Angles&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classanima_1_1LogRigid3DTransform.html#ae148bc274e69172f1ba0554bb4bb5661">AngleVectorType</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae9a4a7689c6c4e9d8353a8606be40721"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TScalarType = double&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::itkNewMacro </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classanima_1_1LogRigid3DTransform.html#ac577188cf9716f331a5077823f10ad20">Self</a>&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>New macro for creation of through a Smart Pointer. </p>
-
-</div>
-</div>
-<a class="anchor" id="ad76a67c0ecbd519517291c340ee90f3d"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TScalarType = double&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::itkStaticConstMacro </td>
-          <td>(</td>
-          <td class="paramtype">SpaceDimension&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>int</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">3&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Dimension of the space. </p>
-
-</div>
-</div>
-<a class="anchor" id="ad121814ffff6d39e5234232cddff4e06"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TScalarType = double&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::itkStaticConstMacro </td>
-          <td>(</td>
-          <td class="paramtype">InputSpaceDimension&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>int</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">3&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab0a1b1b62e91c401d06f70ca38da0548"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TScalarType = double&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::itkStaticConstMacro </td>
-          <td>(</td>
-          <td class="paramtype">OutputSpaceDimension&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>int</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">3&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a59db5e892eb01968ed80ee3f70ed1c2c"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TScalarType = double&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::itkStaticConstMacro </td>
-          <td>(</td>
-          <td class="paramtype">ParametersDimension&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>int</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">6&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af6f05e95ee364fecfbdb4dbd7ae6229f"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TScalarType = double&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::itkTypeMacro </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classanima_1_1LogRigid3DTransform.html">LogRigid3DTransform</a>&lt; TScalarType &gt;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">MatrixOffsetTransformBase&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Run-time type information (and related methods). </p>
 
 </div>
 </div>
@@ -1122,6 +1014,104 @@ template&lt;class TScalarType &gt; </div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a75985648cbee186fce9da647e4befe49"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType = double&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int <a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::InputSpaceDimension = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaLogRigid3DTransform_8h_source.html#l00028">28</a> of file <a class="el" href="animaLogRigid3DTransform_8h_source.html">animaLogRigid3DTransform.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a96385e555096f1b7d8d9fd033583e75e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType = double&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int <a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::OutputSpaceDimension = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaLogRigid3DTransform_8h_source.html#l00029">29</a> of file <a class="el" href="animaLogRigid3DTransform_8h_source.html">animaLogRigid3DTransform.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ffa4cea61c2847f0671ed2e3eda185c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType = double&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int <a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::ParametersDimension = 6</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaLogRigid3DTransform_8h_source.html#l00030">30</a> of file <a class="el" href="animaLogRigid3DTransform_8h_source.html">animaLogRigid3DTransform.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4bc5eaaa6edb1a5222a0a156b7344781"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType = double&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int <a class="el" href="classanima_1_1LogRigid3DTransform.html">anima::LogRigid3DTransform</a>&lt; TScalarType &gt;::SpaceDimension = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Dimension of the space. </p>
+
+<p>Definition at line <a class="el" href="animaLogRigid3DTransform_8h_source.html#l00027">27</a> of file <a class="el" href="animaLogRigid3DTransform_8h_source.html">animaLogRigid3DTransform.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="animaLogRigid3DTransform_8h_source.html">animaLogRigid3DTransform.h</a></li>
 <li><a class="el" href="animaLogRigid3DTransform_8hxx_source.html">animaLogRigid3DTransform.hxx</a></li>
@@ -1129,7 +1119,7 @@ template&lt;class TScalarType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 11 2014 06:20:01 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 19 2014 06:20:05 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

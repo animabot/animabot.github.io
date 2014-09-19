@@ -96,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classanima_1_1ExpTensorImageFilter-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -160,12 +161,17 @@ itk::ImageToImageFilter<br class="typebreak"/>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6c7e4bb78265a258ffc7c4db40db298d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1ExpTensorImageFilter.html#a6c7e4bb78265a258ffc7c4db40db298d">itkNewMacro</a> (<a class="el" href="classanima_1_1ExpTensorImageFilter.html#a66352c97442b6928795bd0a2025d28f9">Self</a>)</td></tr>
-<tr class="separator:a6c7e4bb78265a258ffc7c4db40db298d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89cdde49c2102700aac9285790abd577"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1ExpTensorImageFilter.html#a89cdde49c2102700aac9285790abd577">itkSetMacro</a> (ScaleNonDiagonal, bool)</td></tr>
-<tr class="separator:a89cdde49c2102700aac9285790abd577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae18b5f925b67317f9e6d9abaf309b5e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1ExpTensorImageFilter.html#ae18b5f925b67317f9e6d9abaf309b5e7">itkTypeMacro</a> (<a class="el" href="classanima_1_1ExpTensorImageFilter.html">ExpTensorImageFilter</a>, ImageToImageFilter)</td></tr>
-<tr class="separator:ae18b5f925b67317f9e6d9abaf309b5e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad43c9bee79a5ac11a12f4047b6ac9cdf"><td class="memItemLeft" align="right" valign="top">virtual ::itk::LightObject::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1ExpTensorImageFilter.html#ad43c9bee79a5ac11a12f4047b6ac9cdf">CreateAnother</a> (void) const </td></tr>
+<tr class="separator:ad43c9bee79a5ac11a12f4047b6ac9cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60152588f2a3b5b9d32d0e86b6a31764"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1ExpTensorImageFilter.html#a60152588f2a3b5b9d32d0e86b6a31764">GetNameOfClass</a> () const </td></tr>
+<tr class="separator:a60152588f2a3b5b9d32d0e86b6a31764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab70b9bae1fedbf7d844e753a07891f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1ExpTensorImageFilter.html#aab70b9bae1fedbf7d844e753a07891f4">SetScaleNonDiagonal</a> (bool _arg)</td></tr>
+<tr class="separator:aab70b9bae1fedbf7d844e753a07891f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7b46d64357108a94065efa719e44e519"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classanima_1_1ExpTensorImageFilter.html#ad10adf5e7c104b30decc96c5b6fee148">Pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1ExpTensorImageFilter.html#a7b46d64357108a94065efa719e44e519">New</a> ()</td></tr>
+<tr class="separator:a7b46d64357108a94065efa719e44e519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -313,7 +319,7 @@ template&lt;class TScalarType , unsigned int NDimensions = 3&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaExpTensorImageFilter_8h_source.html#l00029">29</a> of file <a class="el" href="animaExpTensorImageFilter_8h_source.html">animaExpTensorImageFilter.h</a>.</p>
+<p>Definition at line <a class="el" href="animaExpTensorImageFilter_8h_source.html#l00027">27</a> of file <a class="el" href="animaExpTensorImageFilter_8h_source.html">animaExpTensorImageFilter.h</a>.</p>
 
 </div>
 </div>
@@ -482,6 +488,24 @@ template&lt;class TScalarType , unsigned int NDimensions&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ad43c9bee79a5ac11a12f4047b6ac9cdf"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType , unsigned int NDimensions = 3&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual::itk::LightObject::Pointer <a class="el" href="classanima_1_1ExpTensorImageFilter.html">anima::ExpTensorImageFilter</a>&lt; TScalarType, NDimensions &gt;::CreateAnother </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a7bf30ac758f7400e7ddef7bb8407c280"></a>
 <div class="memitem">
 <div class="memproto">
@@ -510,79 +534,81 @@ template&lt;class TScalarType , unsigned int NDimensions&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a6c7e4bb78265a258ffc7c4db40db298d"></a>
+<a class="anchor" id="a60152588f2a3b5b9d32d0e86b6a31764"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class TScalarType , unsigned int NDimensions = 3&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classanima_1_1ExpTensorImageFilter.html">anima::ExpTensorImageFilter</a>&lt; TScalarType, NDimensions &gt;::itkNewMacro </td>
+          <td class="memname">virtual const char* <a class="el" href="classanima_1_1ExpTensorImageFilter.html">anima::ExpTensorImageFilter</a>&lt; TScalarType, NDimensions &gt;::GetNameOfClass </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classanima_1_1ExpTensorImageFilter.html#a66352c97442b6928795bd0a2025d28f9">Self</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Run-time type information (and related methods) </p>
+
+</div>
+</div>
+<a class="anchor" id="a7b46d64357108a94065efa719e44e519"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType , unsigned int NDimensions = 3&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classanima_1_1ExpTensorImageFilter.html#ad10adf5e7c104b30decc96c5b6fee148">Pointer</a> <a class="el" href="classanima_1_1ExpTensorImageFilter.html">anima::ExpTensorImageFilter</a>&lt; TScalarType, NDimensions &gt;::New </td>
+          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Method for creation through the object factory. </p>
 
 </div>
 </div>
-<a class="anchor" id="a89cdde49c2102700aac9285790abd577"></a>
+<a class="anchor" id="aab70b9bae1fedbf7d844e753a07891f4"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class TScalarType , unsigned int NDimensions = 3&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classanima_1_1ExpTensorImageFilter.html">anima::ExpTensorImageFilter</a>&lt; TScalarType, NDimensions &gt;::itkSetMacro </td>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1ExpTensorImageFilter.html">anima::ExpTensorImageFilter</a>&lt; TScalarType, NDimensions &gt;::SetScaleNonDiagonal </td>
           <td>(</td>
-          <td class="paramtype">ScaleNonDiagonal&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae18b5f925b67317f9e6d9abaf309b5e7"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TScalarType , unsigned int NDimensions = 3&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1ExpTensorImageFilter.html">anima::ExpTensorImageFilter</a>&lt; TScalarType, NDimensions &gt;::itkTypeMacro </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classanima_1_1ExpTensorImageFilter.html">ExpTensorImageFilter</a>&lt; TScalarType, NDimensions &gt;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ImageToImageFilter&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Run-time type information (and related methods) </p>
 
 </div>
 </div>
@@ -633,7 +659,7 @@ template&lt;class TScalarType , unsigned int NDimensions&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 11 2014 06:20:01 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 19 2014 06:20:05 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

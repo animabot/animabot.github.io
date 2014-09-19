@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['tixml2_5fmajor_5fversion',['TIXML2_MAJOR_VERSION',['../tinyxml2_8h.html#a53acdb84a871ed12b99d5f4aff209bf4',1,'tinyxml2.h']]],
-  ['tixml2_5fminor_5fversion',['TIXML2_MINOR_VERSION',['../tinyxml2_8h.html#ac94d4b856d14f3c3a8c1dcdbd6ee13b4',1,'tinyxml2.h']]],
-  ['tixml2_5fpatch_5fversion',['TIXML2_PATCH_VERSION',['../tinyxml2_8h.html#a1406cb43e9d84251509e069b6cb21781',1,'tinyxml2.h']]],
-  ['tixml_5futf_5flead_5f0',['TIXML_UTF_LEAD_0',['../tinyxml2_8cxx.html#a37999e32163e2a3280bc0b8e1999774e',1,'tinyxml2.cxx']]],
-  ['tixml_5futf_5flead_5f1',['TIXML_UTF_LEAD_1',['../tinyxml2_8cxx.html#a3cda92a178036c812663a7b75c5e04d0',1,'tinyxml2.cxx']]],
-  ['tixml_5futf_5flead_5f2',['TIXML_UTF_LEAD_2',['../tinyxml2_8cxx.html#a8e36ce25f81f009c066037e937da3a6a',1,'tinyxml2.cxx']]],
-  ['tmpoutput',['tmpOutput',['../structanima_1_1BlockMatchingInitializer_1_1BlockGeneratorThreadStruct.html#a6ecaf27528ee53b024f20b5649629dd6',1,'anima::BlockMatchingInitializer::BlockGeneratorThreadStruct']]],
-  ['totalnumberofblocks',['totalNumberOfBlocks',['../structanima_1_1BlockMatchingInitializer_1_1BlockGeneratorThreadStruct.html#a8b03582d7f3704005cc3645403453284',1,'anima::BlockMatchingInitializer::BlockGeneratorThreadStruct']]],
-  ['trackerptr',['trackerPtr',['../structanima_1_1BaseProbabilisticTractographyImageFilter_1_1trackerArguments.html#ad5fc2376ce4bcd3b72d6c87a673ce1b7',1,'anima::BaseProbabilisticTractographyImageFilter::trackerArguments::trackerPtr()'],['../structanima_1_1dtiTractographyImageFilter_1_1trackerArguments.html#a30e1b943acd09327b9a4fc65ea05a12d',1,'anima::dtiTractographyImageFilter::trackerArguments::trackerPtr()']]],
-  ['trtype',['trType',['../structanima_1_1TransformSeriesReader_1_1TransformInformation.html#a855ac034bb7e6823798f189ad64bc483',1,'anima::TransformSeriesReader::TransformInformation']]]
+  ['s_5fmapstringvalues',['s_mapStringValues',['../animaGetScalarMapFromDDI_8cxx.html#ade41d120cbbb08b186c5eccda230b71f',1,'animaGetScalarMapFromDDI.cxx']]],
+  ['scalefactor',['ScaleFactor',['../structGlyphStructure.html#afe090b7d091b815b6f038e41ba299627',1,'GlyphStructure']]],
+  ['single_5fquote',['SINGLE_QUOTE',['../tinyxml2_8cxx.html#a65992cb0c2d3fc4eb9d13641f2e6e0f1',1,'tinyxml2.cxx']]],
+  ['spacedimension',['SpaceDimension',['../classanima_1_1LogRigid3DTransform.html#a4bc5eaaa6edb1a5222a0a156b7344781',1,'anima::LogRigid3DTransform::SpaceDimension()'],['../classanima_1_1SymmetryConstrainedTransform.html#a7066d5fcc94fca57763cfa1dfbd16885',1,'anima::SymmetryConstrainedTransform::SpaceDimension()'],['../classanima_1_1SymmetryPlaneTransform.html#a623468c325e9796d1f4336c2f3ae47f4',1,'anima::SymmetryPlaneTransform::SpaceDimension()']]],
+  ['sqrtfa',['sqrtFA',['../structanima_1_1DDICostFunction_1_1DTData.html#a0e5e42e3308ba6c3af1eb4a11e8956e2',1,'anima::DDICostFunction::DTData']]],
+  ['startblocks',['startBlocks',['../structanima_1_1BlockMatchingInitializer_1_1BlockGeneratorThreadStruct.html#a73724880df4362bcf6d90ff5a7f176e7',1,'anima::BlockMatchingInitializer::BlockGeneratorThreadStruct']]],
+  ['stoppedparticles',['stoppedParticles',['../structanima_1_1BaseProbabilisticTractographyImageFilter_1_1FiberWorkType.html#a80fa779470e03dc5330077a621758943',1,'anima::BaseProbabilisticTractographyImageFilter::FiberWorkType']]]
 ];

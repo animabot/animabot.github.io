@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['z',['z',['../structanima_1_1ODFProbabilisticTractographyImageFilter_1_1XYZ.html#a8eed56d9663fb8a2d2842f9f16b456b2',1,'anima::ODFProbabilisticTractographyImageFilter::XYZ']]],
-  ['zeroweight',['zeroWeight',['../namespaceanima.html#ad2a73c5d99ff7b3631bbb14553882089',1,'anima']]]
+  ['y',['y',['../structanima_1_1ODFProbabilisticTractographyImageFilter_1_1XYZ.html#aa1bb81056fe82bf55d22954383e776ca',1,'anima::ODFProbabilisticTractographyImageFilter::XYZ']]]
 ];

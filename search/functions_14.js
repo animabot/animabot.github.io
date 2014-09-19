@@ -44,5 +44,6 @@ var searchData=
   ['transformsphericaltocartesiancoordinates',['TransformSphericalToCartesianCoordinates',['../namespaceanima.html#a2f16079f3ed3a2305740284f0861e42a',1,'anima']]],
   ['treatregionwithnoisevariance',['TreatRegionWithNoiseVariance',['../classanima_1_1GaussianNoiseGeneratorImageFilter.html#a04d720a3a2e4f8d6fab3d95babc1f1e2',1,'anima::GaussianNoiseGeneratorImageFilter::TreatRegionWithNoiseVariance()'],['../classanima_1_1NonCentralChiNoiseGeneratorImageFilter.html#a5669ece2725dfcf726b8215be4b0fe93',1,'anima::NonCentralChiNoiseGeneratorImageFilter::TreatRegionWithNoiseVariance()']]],
   ['trsapp_5f',['trsapp_',['../classanima_1_1NewuoaOptimizer.html#a93960f4276452292d96193cfdbf93a00',1,'anima::NewuoaOptimizer']]],
-  ['trsbox_5f',['trsbox_',['../classanima_1_1BobyqaOptimizer.html#ab7ad985149c90f5b292779fba38a3906',1,'anima::BobyqaOptimizer']]]
+  ['trsbox_5f',['trsbox_',['../classanima_1_1BobyqaOptimizer.html#ab7ad985149c90f5b292779fba38a3906',1,'anima::BobyqaOptimizer']]],
+  ['typedef',['typedef',['../classanima_1_1MeanAndVarianceImagesFilter.html#a723f9b92513da946a324c5c5389c5d89',1,'anima::MeanAndVarianceImagesFilter::typedef()'],['../classanima_1_1VarianceImageFilter.html#ac84c0abf7100a19a7c9f58b1b9631464',1,'anima::VarianceImageFilter::typedef()']]]
 ];

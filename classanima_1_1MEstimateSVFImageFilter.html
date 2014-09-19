@@ -96,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classanima_1_1MEstimateSVFImageFilter-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -169,24 +170,29 @@ NDegreesOfFreedom &gt;<br class="typebreak"/>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0df73e49dd80125a825f3b30dd7e716f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#a0df73e49dd80125a825f3b30dd7e716f">itkNewMacro</a> (<a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#a25957c25d0b3adbaa66515e8a05894a1">Self</a>)</td></tr>
-<tr class="separator:a0df73e49dd80125a825f3b30dd7e716f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a212d06d527feef4713bb2980c26e0301"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#a212d06d527feef4713bb2980c26e0301">itkSetMacro</a> (WeightImage, <a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#aea06c4593ab74fabfd2b334f6afc6910">WeightImagePointer</a>)</td></tr>
-<tr class="separator:a212d06d527feef4713bb2980c26e0301"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a51aa873426d92e53c2b0a4ef5ec37a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#a9a51aa873426d92e53c2b0a4ef5ec37a">itkSetMacro</a> (FluidSigma, double)</td></tr>
-<tr class="separator:a9a51aa873426d92e53c2b0a4ef5ec37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab22fbffded3b813b5cf2172f8a6ce514"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#ab22fbffded3b813b5cf2172f8a6ce514">itkSetMacro</a> (MEstimateFactor, double)</td></tr>
-<tr class="separator:ab22fbffded3b813b5cf2172f8a6ce514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad692e982860a39d980194020c8efc7c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#ad692e982860a39d980194020c8efc7c2">itkSetMacro</a> (NeighborhoodHalfSize, unsigned int)</td></tr>
-<tr class="separator:ad692e982860a39d980194020c8efc7c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5d4718f0a0b7a07b6f38594c52faea5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#aa5d4718f0a0b7a07b6f38594c52faea5">itkSetMacro</a> (ConvergenceThreshold, double)</td></tr>
-<tr class="separator:aa5d4718f0a0b7a07b6f38594c52faea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51b3c530f7907bddaa02d3ce807755ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#a51b3c530f7907bddaa02d3ce807755ca">itkSetMacro</a> (MaxNumIterations, unsigned int)</td></tr>
-<tr class="separator:a51b3c530f7907bddaa02d3ce807755ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9708d628fbfc6a99a7977aa939271f9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#a9708d628fbfc6a99a7977aa939271f9b">itkTypeMacro</a> (<a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">MEstimateSVFImageFilter</a>, ImageToImageFilter)</td></tr>
-<tr class="separator:a9708d628fbfc6a99a7977aa939271f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9cff22cb9ff028431cc40d0d6546356"><td class="memItemLeft" align="right" valign="top">virtual ::itk::LightObject::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#ac9cff22cb9ff028431cc40d0d6546356">CreateAnother</a> (void) const </td></tr>
+<tr class="separator:ac9cff22cb9ff028431cc40d0d6546356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add007b5bbf201bc2921118f8c1072a01"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#add007b5bbf201bc2921118f8c1072a01">GetNameOfClass</a> () const </td></tr>
+<tr class="separator:add007b5bbf201bc2921118f8c1072a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac26d596dcfb169a3fd906b4927eba196"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#ac26d596dcfb169a3fd906b4927eba196">SetConvergenceThreshold</a> (double _arg)</td></tr>
+<tr class="separator:ac26d596dcfb169a3fd906b4927eba196"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dcb1ccca0450d3f220255b86f7343cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#a6dcb1ccca0450d3f220255b86f7343cd">SetDistanceBoundary</a> (double num)</td></tr>
 <tr class="separator:a6dcb1ccca0450d3f220255b86f7343cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc09e4b11bbc7e4b9023f06fe01b9267"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#afc09e4b11bbc7e4b9023f06fe01b9267">SetFluidSigma</a> (double _arg)</td></tr>
+<tr class="separator:afc09e4b11bbc7e4b9023f06fe01b9267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3540b8961e8cf10e63269fc14eeebeac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#a3540b8961e8cf10e63269fc14eeebeac">SetMaxNumIterations</a> (unsigned int _arg)</td></tr>
+<tr class="separator:a3540b8961e8cf10e63269fc14eeebeac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e43f913d1daf86b0f7c892a3e5879a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#a0e43f913d1daf86b0f7c892a3e5879a0">SetMEstimateFactor</a> (double _arg)</td></tr>
+<tr class="separator:a0e43f913d1daf86b0f7c892a3e5879a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d2a3e3d6cea1e7d928e3f297685ef06"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#a8d2a3e3d6cea1e7d928e3f297685ef06">SetNeighborhoodHalfSize</a> (unsigned int _arg)</td></tr>
+<tr class="separator:a8d2a3e3d6cea1e7d928e3f297685ef06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac92d6d17280de0a3bf81ef0c4193778"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#aac92d6d17280de0a3bf81ef0c4193778">SetWeightImage</a> (<a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#aea06c4593ab74fabfd2b334f6afc6910">WeightImagePointer</a> _arg)</td></tr>
+<tr class="separator:aac92d6d17280de0a3bf81ef0c4193778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7f3d11e944a43fba2c6e95a0a6d78484"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#ab5ff73ca2f787f4ef890886e3cf065e3">Pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#a7f3d11e944a43fba2c6e95a0a6d78484">New</a> ()</td></tr>
+<tr class="separator:a7f3d11e944a43fba2c6e95a0a6d78484"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -332,7 +338,7 @@ template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDi
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaMEstimateSVFImageFilter_8h_source.html#l00030">30</a> of file <a class="el" href="animaMEstimateSVFImageFilter_8h_source.html">animaMEstimateSVFImageFilter.h</a>.</p>
+<p>Definition at line <a class="el" href="animaMEstimateSVFImageFilter_8h_source.html#l00028">28</a> of file <a class="el" href="animaMEstimateSVFImageFilter_8h_source.html">animaMEstimateSVFImageFilter.h</a>.</p>
 
 </div>
 </div>
@@ -533,219 +539,99 @@ template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDi
 
 </div>
 </div>
-<a class="anchor" id="a0df73e49dd80125a825f3b30dd7e716f"></a>
+<a class="anchor" id="ac9cff22cb9ff028431cc40d0d6546356"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::itkNewMacro </td>
+          <td class="memname">virtual::itk::LightObject::Pointer <a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::CreateAnother </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#a25957c25d0b3adbaa66515e8a05894a1">Self</a>&#160;</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="add007b5bbf201bc2921118f8c1072a01"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char* <a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::GetNameOfClass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Run-time type information (and related methods) </p>
+
+</div>
+</div>
+<a class="anchor" id="a7f3d11e944a43fba2c6e95a0a6d78484"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#ab5ff73ca2f787f4ef890886e3cf065e3">Pointer</a> <a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::New </td>
+          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Method for creation through the object factory. </p>
 
 </div>
 </div>
-<a class="anchor" id="a212d06d527feef4713bb2980c26e0301"></a>
+<a class="anchor" id="ac26d596dcfb169a3fd906b4927eba196"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::itkSetMacro </td>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::SetConvergenceThreshold </td>
           <td>(</td>
-          <td class="paramtype">WeightImage&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#aea06c4593ab74fabfd2b334f6afc6910">WeightImagePointer</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a9a51aa873426d92e53c2b0a4ef5ec37a"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::itkSetMacro </td>
-          <td>(</td>
-          <td class="paramtype">FluidSigma&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab22fbffded3b813b5cf2172f8a6ce514"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::itkSetMacro </td>
-          <td>(</td>
-          <td class="paramtype">MEstimateFactor&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ad692e982860a39d980194020c8efc7c2"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::itkSetMacro </td>
-          <td>(</td>
-          <td class="paramtype">NeighborhoodHalfSize&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>int</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aa5d4718f0a0b7a07b6f38594c52faea5"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::itkSetMacro </td>
-          <td>(</td>
-          <td class="paramtype">ConvergenceThreshold&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a51b3c530f7907bddaa02d3ce807755ca"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::itkSetMacro </td>
-          <td>(</td>
-          <td class="paramtype">MaxNumIterations&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>int</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a9708d628fbfc6a99a7977aa939271f9b"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::itkTypeMacro </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ImageToImageFilter&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Run-time type information (and related methods) </p>
 
 </div>
 </div>
@@ -774,6 +660,136 @@ template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDi
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="animaMEstimateSVFImageFilter_8h_source.html#l00047">47</a> of file <a class="el" href="animaMEstimateSVFImageFilter_8h_source.html">animaMEstimateSVFImageFilter.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afc09e4b11bbc7e4b9023f06fe01b9267"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::SetFluidSigma </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3540b8961e8cf10e63269fc14eeebeac"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::SetMaxNumIterations </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0e43f913d1daf86b0f7c892a3e5879a0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::SetMEstimateFactor </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8d2a3e3d6cea1e7d928e3f297685ef06"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::SetNeighborhoodHalfSize </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aac92d6d17280de0a3bf81ef0c4193778"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDimensions = 3&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1MEstimateSVFImageFilter.html">anima::MEstimateSVFImageFilter</a>&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;::SetWeightImage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#aea06c4593ab74fabfd2b334f6afc6910">WeightImagePointer</a>&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -824,7 +840,7 @@ template&lt;class TScalarType , unsigned int NDegreesOfFreedom, unsigned int NDi
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 11 2014 06:20:01 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 19 2014 06:20:05 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

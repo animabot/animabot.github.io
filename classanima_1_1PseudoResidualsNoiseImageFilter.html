@@ -96,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classanima_1_1PseudoResidualsNoiseImageFilter-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -156,12 +157,17 @@ itk::ImageToImageFilter<br class="typebreak"/>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeb7a0ce1960cf2c25aa830b7af0cbc4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html#aeb7a0ce1960cf2c25aa830b7af0cbc4d">itkNewMacro</a> (<a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html#a69da9647f8974af518609de05ec88445">Self</a>)</td></tr>
-<tr class="separator:aeb7a0ce1960cf2c25aa830b7af0cbc4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e22b898217a4ef30b6eb883d94323bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html#a2e22b898217a4ef30b6eb883d94323bd">itkSetMacro</a> (PatchHalfSize, unsigned int)</td></tr>
-<tr class="separator:a2e22b898217a4ef30b6eb883d94323bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88946b65518a44c463f8501d11d10528"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html#a88946b65518a44c463f8501d11d10528">itkTypeMacro</a> (<a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html">PseudoResidualsNoiseImageFilter</a>, ImageToImageFilter)</td></tr>
-<tr class="separator:a88946b65518a44c463f8501d11d10528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf5d9ebdb96799e1073c9dffc40659df"><td class="memItemLeft" align="right" valign="top">virtual ::itk::LightObject::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html#aaf5d9ebdb96799e1073c9dffc40659df">CreateAnother</a> (void) const </td></tr>
+<tr class="separator:aaf5d9ebdb96799e1073c9dffc40659df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a861250b74d24a24f1ffc30f5fb6e82a5"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html#a861250b74d24a24f1ffc30f5fb6e82a5">GetNameOfClass</a> () const </td></tr>
+<tr class="separator:a861250b74d24a24f1ffc30f5fb6e82a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a248e3fbbb23141665eb7856c3653aa6b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html#a248e3fbbb23141665eb7856c3653aa6b">SetPatchHalfSize</a> (unsigned int _arg)</td></tr>
+<tr class="separator:a248e3fbbb23141665eb7856c3653aa6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:af3767d612f30031815ac2fabe1c406ab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html#a35222286604b64ddb07cc85609961888">Pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html#af3767d612f30031815ac2fabe1c406ab">New</a> ()</td></tr>
+<tr class="separator:af3767d612f30031815ac2fabe1c406ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -259,7 +265,7 @@ template&lt;typename TInputImage , typename TOutputImage &gt; </div>
 </div><div class="memdoc">
 <p>Image typedef support </p>
 
-<p>Definition at line <a class="el" href="animaPseudoResidualsNoiseImageFilter_8h_source.html#l00026">26</a> of file <a class="el" href="animaPseudoResidualsNoiseImageFilter_8h_source.html">animaPseudoResidualsNoiseImageFilter.h</a>.</p>
+<p>Definition at line <a class="el" href="animaPseudoResidualsNoiseImageFilter_8h_source.html#l00023">23</a> of file <a class="el" href="animaPseudoResidualsNoiseImageFilter_8h_source.html">animaPseudoResidualsNoiseImageFilter.h</a>.</p>
 
 </div>
 </div>
@@ -416,79 +422,73 @@ template&lt;typename TInputImage , typename TOutputImage &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aeb7a0ce1960cf2c25aa830b7af0cbc4d"></a>
+<a class="anchor" id="aaf5d9ebdb96799e1073c9dffc40659df"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename TInputImage , typename TOutputImage &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html">anima::PseudoResidualsNoiseImageFilter</a>&lt; TInputImage, TOutputImage &gt;::itkNewMacro </td>
+          <td class="memname">virtual::itk::LightObject::Pointer <a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html">anima::PseudoResidualsNoiseImageFilter</a>&lt; TInputImage, TOutputImage &gt;::CreateAnother </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html#a69da9647f8974af518609de05ec88445">Self</a>&#160;</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a861250b74d24a24f1ffc30f5fb6e82a5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TInputImage , typename TOutputImage &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char* <a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html">anima::PseudoResidualsNoiseImageFilter</a>&lt; TInputImage, TOutputImage &gt;::GetNameOfClass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Run-time type information (and related methods) </p>
+
+</div>
+</div>
+<a class="anchor" id="af3767d612f30031815ac2fabe1c406ab"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TInputImage , typename TOutputImage &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html#a35222286604b64ddb07cc85609961888">Pointer</a> <a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html">anima::PseudoResidualsNoiseImageFilter</a>&lt; TInputImage, TOutputImage &gt;::New </td>
+          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Method for creation through the object factory. </p>
-
-</div>
-</div>
-<a class="anchor" id="a2e22b898217a4ef30b6eb883d94323bd"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TInputImage , typename TOutputImage &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html">anima::PseudoResidualsNoiseImageFilter</a>&lt; TInputImage, TOutputImage &gt;::itkSetMacro </td>
-          <td>(</td>
-          <td class="paramtype">PatchHalfSize&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>int</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a88946b65518a44c463f8501d11d10528"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TInputImage , typename TOutputImage &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html">anima::PseudoResidualsNoiseImageFilter</a>&lt; TInputImage, TOutputImage &gt;::itkTypeMacro </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html">PseudoResidualsNoiseImageFilter</a>&lt; TInputImage, TOutputImage &gt;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ImageToImageFilter&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Run-time type information (and related methods) </p>
 
 </div>
 </div>
@@ -527,6 +527,32 @@ template&lt;typename TInputImage , typename TOutputImage &gt; </div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="animaPseudoResidualsNoiseImageFilter_8h_source.html#l00050">50</a> of file <a class="el" href="animaPseudoResidualsNoiseImageFilter_8h_source.html">animaPseudoResidualsNoiseImageFilter.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a248e3fbbb23141665eb7856c3653aa6b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TInputImage , typename TOutputImage &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html">anima::PseudoResidualsNoiseImageFilter</a>&lt; TInputImage, TOutputImage &gt;::SetPatchHalfSize </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -575,7 +601,7 @@ template&lt;typename TInputImage , typename TOutputImage &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 11 2014 06:20:02 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 19 2014 06:20:06 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

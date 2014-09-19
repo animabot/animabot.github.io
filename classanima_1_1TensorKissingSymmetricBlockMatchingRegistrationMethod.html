@@ -96,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -300,25 +301,29 @@ itk::DataObjectDecorator<br class="typebreak"/>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a50a58609a3094e806827146006f20084"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a50a58609a3094e806827146006f20084">itkNewMacro</a> (<a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a0eeb1afccfc1a1c77ec0b1bb0b49aea6">Self</a>)</td></tr>
-<tr class="separator:a50a58609a3094e806827146006f20084"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1a22be86a382218f6bff728cc9c1da7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#ab1a22be86a382218f6bff728cc9c1da7">itkSetMacro</a> (BlockPercentageKept, double)</td></tr>
-<tr class="separator:ab1a22be86a382218f6bff728cc9c1da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae170eece7d9164f220c1a59234a931b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#ae170eece7d9164f220c1a59234a931b3">itkSetMacro</a> (BlockSize, unsigned int)</td></tr>
-<tr class="separator:ae170eece7d9164f220c1a59234a931b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fc1f119f2201c5d4215ec9b4c520125"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a8fc1f119f2201c5d4215ec9b4c520125">itkSetMacro</a> (BlockSpacing, unsigned int)</td></tr>
-<tr class="separator:a8fc1f119f2201c5d4215ec9b4c520125"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06eade01aa70f052e0283784c68fa7d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a06eade01aa70f052e0283784c68fa7d1">itkSetMacro</a> (BlockTensorVarianceThreshold, double)</td></tr>
-<tr class="separator:a06eade01aa70f052e0283784c68fa7d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71cee14d5ae99ec42a4ab7ad21814cd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a71cee14d5ae99ec42a4ab7ad21814cd4">itkSetMacro</a> (UseTransformationDam, bool)</td></tr>
-<tr class="separator:a71cee14d5ae99ec42a4ab7ad21814cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19e49a5a5e10e900551dc79134151728"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a19e49a5a5e10e900551dc79134151728">itkSetMacro</a> (DamDistance, double)</td></tr>
-<tr class="separator:a19e49a5a5e10e900551dc79134151728"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a238681b4cbee99467fb7510bcb772a6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a238681b4cbee99467fb7510bcb772a6f">itkTypeMacro</a> (<a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">TensorKissingSymmetricBlockMatchingRegistrationMethod</a>, <a class="el" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html">BlockMatchingBaseRegistrationMethod</a>)</td></tr>
-<tr class="separator:a238681b4cbee99467fb7510bcb772a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae89c620a57f66c85373041915fde3526"><td class="memItemLeft" align="right" valign="top">virtual ::itk::LightObject::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#ae89c620a57f66c85373041915fde3526">CreateAnother</a> (void) const </td></tr>
+<tr class="separator:ae89c620a57f66c85373041915fde3526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c1db57999706c1623423aef0e2f4d10"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a9c1db57999706c1623423aef0e2f4d10">GetNameOfClass</a> () const </td></tr>
+<tr class="separator:a9c1db57999706c1623423aef0e2f4d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2be3cd2e493d492282c80c247badbde2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a2be3cd2e493d492282c80c247badbde2">SetBlockPercentageKept</a> (double _arg)</td></tr>
+<tr class="separator:a2be3cd2e493d492282c80c247badbde2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba1b9ab752a1e8f9e80ac7a97ed8a9d7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#aba1b9ab752a1e8f9e80ac7a97ed8a9d7">SetBlockSize</a> (unsigned int _arg)</td></tr>
+<tr class="separator:aba1b9ab752a1e8f9e80ac7a97ed8a9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93802dbfbbaad9c0ca56a904e43b75aa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a93802dbfbbaad9c0ca56a904e43b75aa">SetBlockSpacing</a> (unsigned int _arg)</td></tr>
+<tr class="separator:a93802dbfbbaad9c0ca56a904e43b75aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14a02dba9726848ea73c8fc4b0b51836"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a14a02dba9726848ea73c8fc4b0b51836">SetBlockTensorVarianceThreshold</a> (double _arg)</td></tr>
+<tr class="separator:a14a02dba9726848ea73c8fc4b0b51836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a973e37475fc0796918d5c04c1981e5e8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a973e37475fc0796918d5c04c1981e5e8">SetDamDistance</a> (double _arg)</td></tr>
+<tr class="separator:a973e37475fc0796918d5c04c1981e5e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab20e80c023692b67b433f1ff1b4c708a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#ab20e80c023692b67b433f1ff1b4c708a">SetUseTransformationDam</a> (bool _arg)</td></tr>
+<tr class="separator:ab20e80c023692b67b433f1ff1b4c708a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a></td></tr>
 <tr class="memitem:a7af3d817f5e806986d3dc95744c0df99 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a7af3d817f5e806986d3dc95744c0df99">Abort</a> (void)</td></tr>
 <tr class="separator:a7af3d817f5e806986d3dc95744c0df99 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b89746766c973a76b1e005564e928f7 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aabf942e18a0ccf9f7ec2571c8a787fd9">AgregatorType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a8b89746766c973a76b1e005564e928f7">GetAgregator</a> ()</td></tr>
+<tr class="separator:a8b89746766c973a76b1e005564e928f7 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecfcdb06fb7f542c448209d0d886b71d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aecfcdb06fb7f542c448209d0d886b71d">GetAngleMax</a> () const </td></tr>
+<tr class="separator:aecfcdb06fb7f542c448209d0d886b71d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81cd900bdb37acf082f18e4d9e96b884 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">BaseInputTransformType::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a81cd900bdb37acf082f18e4d9e96b884">GetBaseTransformPointer</a> (unsigned int i)</td></tr>
 <tr class="separator:a81cd900bdb37acf082f18e4d9e96b884 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3871ccee844ed82cf1fef747dfbaa1a inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">std::vector&lt; typename <br class="typebreak"/>
@@ -328,110 +333,110 @@ BaseInputTransformType::Pointer &gt; &amp;&#160;</td><td class="memItemRight" va
 <tr class="separator:a6b45c80e2e5a60af07c14342f502bcc2 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a403fda583ba35c146409b8ab7a74a9a0 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a403fda583ba35c146409b8ab7a74a9a0">GetBlockWeights</a> ()</td></tr>
 <tr class="separator:a403fda583ba35c146409b8ab7a74a9a0 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1c5e8243e59faccea7b885567d543d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#acd1c5e8243e59faccea7b885567d543d">GetFinalRadius</a> () const </td></tr>
+<tr class="separator:acd1c5e8243e59faccea7b885567d543d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aaaa1d09eb791c16e107c86195aea27 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a2a1122298be38558ce53e868d6a5cbfb">InputImageType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a8aaaa1d09eb791c16e107c86195aea27">GetFixedImage</a> ()</td></tr>
+<tr class="separator:a8aaaa1d09eb791c16e107c86195aea27 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a5198d5564ff0bae9812053375b09e inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const vnl_matrix<br class="typebreak"/>
+&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a40a5198d5564ff0bae9812053375b09e">GetGeometry</a> () const </td></tr>
+<tr class="separator:a40a5198d5564ff0bae9812053375b09e inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c41e4e1232975d56bbc24d429885356 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a9c41e4e1232975d56bbc24d429885356">GetMaximizeMetric</a> () const </td></tr>
+<tr class="separator:a9c41e4e1232975d56bbc24d429885356 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c968e5ebc826b4b29993ddef6b26df inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const unsigned int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a32c968e5ebc826b4b29993ddef6b26df">GetMaximumIterations</a> () const </td></tr>
+<tr class="separator:a32c968e5ebc826b4b29993ddef6b26df inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8ea6950aaab8e7fb6c91da522c35b5 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a1a635c2ff62c6d39be1b61d2f2504edf">SimilarityDefinition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a0d8ea6950aaab8e7fb6c91da522c35b5">GetMetricKind</a> () const </td></tr>
+<tr class="separator:a0d8ea6950aaab8e7fb6c91da522c35b5 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3cd0ab9beaa9fa0f5ea185710380e12 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aa3cd0ab9beaa9fa0f5ea185710380e12">GetMinimalTransformError</a> () const </td></tr>
+<tr class="separator:aa3cd0ab9beaa9fa0f5ea185710380e12 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a177efd11fb7ee82e3d6154aa9c429ae9 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a2a1122298be38558ce53e868d6a5cbfb">InputImageType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a177efd11fb7ee82e3d6154aa9c429ae9">GetMovingImage</a> ()</td></tr>
+<tr class="separator:a177efd11fb7ee82e3d6154aa9c429ae9 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af421a75508c320a1b05e9bc3e0015346 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">itk::ModifiedTimeType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#af421a75508c320a1b05e9bc3e0015346">GetMTime</a> () const </td></tr>
 <tr class="separator:af421a75508c320a1b05e9bc3e0015346 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e009a1a88d0d98a202dc87df25feeae inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a88e8c627e639f730cb61ce860199fc9c">OptimizerDefinition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a1e009a1a88d0d98a202dc87df25feeae">GetOptimizerKind</a> () const </td></tr>
+<tr class="separator:a1e009a1a88d0d98a202dc87df25feeae inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab804b166c06bf93e6fee9af87511b252 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const unsigned int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ab804b166c06bf93e6fee9af87511b252">GetOptimizerMaximumIterations</a> () const </td></tr>
+<tr class="separator:ab804b166c06bf93e6fee9af87511b252 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaef4012339108eb6d8bfc0d04b42daa7 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a52facf62c6f5485f34709c391b547696">TransformOutputType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aaef4012339108eb6d8bfc0d04b42daa7">GetOutput</a> ()</td></tr>
 <tr class="separator:aaef4012339108eb6d8bfc0d04b42daa7 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9170279e439aa61108f0dcddbfba838 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#af9170279e439aa61108f0dcddbfba838">GetScaleMax</a> () const </td></tr>
+<tr class="separator:af9170279e439aa61108f0dcddbfba838 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62d07b3d75eb9c3036ec6cce44fd3035 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a62d07b3d75eb9c3036ec6cce44fd3035">GetSearchAngleRadius</a> () const </td></tr>
+<tr class="separator:a62d07b3d75eb9c3036ec6cce44fd3035 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19563245cd68437641ce4bef2a772cc9 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a19563245cd68437641ce4bef2a772cc9">GetSearchRadius</a> () const </td></tr>
+<tr class="separator:a19563245cd68437641ce4bef2a772cc9 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b42c5e2aaa128f9f0053f9a3cd3c87 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a28b42c5e2aaa128f9f0053f9a3cd3c87">GetSearchScaleRadius</a> () const </td></tr>
+<tr class="separator:a28b42c5e2aaa128f9f0053f9a3cd3c87 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac613fb937d499c9e93fde433cd33e672 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ac613fb937d499c9e93fde433cd33e672">GetSearchSkewRadius</a> () const </td></tr>
+<tr class="separator:ac613fb937d499c9e93fde433cd33e672 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab58ab8921e548f69fae40475eb56a631 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ab58ab8921e548f69fae40475eb56a631">GetSkewMax</a> () const </td></tr>
+<tr class="separator:ab58ab8921e548f69fae40475eb56a631 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75872a24c34fbfcb7b511893833cb9b1 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a75872a24c34fbfcb7b511893833cb9b1">GetStepSize</a> () const </td></tr>
+<tr class="separator:a75872a24c34fbfcb7b511893833cb9b1 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39cfd3031925550b14f248d60164a762 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a39cfd3031925550b14f248d60164a762">GetStopConditionDescription</a> () const </td></tr>
 <tr class="separator:a39cfd3031925550b14f248d60164a762 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe62ce14fb51dc960923e48d6a8b59cb inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#afe62ce14fb51dc960923e48d6a8b59cb">GetSVFElasticRegSigma</a> () const </td></tr>
+<tr class="separator:afe62ce14fb51dc960923e48d6a8b59cb inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45e6f029033b099d6e82482d6ec1d7f0 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a5c775e09188bdc5458ec9c42c95d8f8e">TransformationDefinition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a45e6f029033b099d6e82482d6ec1d7f0">GetTransformKind</a> () const </td></tr>
+<tr class="separator:a45e6f029033b099d6e82482d6ec1d7f0 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa64052a30a889767a64e1ca3cc7fbd36 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aa64052a30a889767a64e1ca3cc7fbd36">GetTranslateMax</a> () const </td></tr>
+<tr class="separator:aa64052a30a889767a64e1ca3cc7fbd36 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc089943c12554f1b833908695cfb95b inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#adc089943c12554f1b833908695cfb95b">Initialize</a> ()  throw (itk::ExceptionObject)</td></tr>
 <tr class="separator:adc089943c12554f1b833908695cfb95b inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f979b919858be3fe7ce4231bc40979e inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a6f979b919858be3fe7ce4231bc40979e">itkGetConstReferenceMacro</a> (MaximumIterations, unsigned int)</td></tr>
-<tr class="separator:a6f979b919858be3fe7ce4231bc40979e inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d1b72e7817b46598957f6f5b5526722 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a4d1b72e7817b46598957f6f5b5526722">itkGetConstReferenceMacro</a> (OptimizerMaximumIterations, unsigned int)</td></tr>
-<tr class="separator:a4d1b72e7817b46598957f6f5b5526722 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9e7ee7667924c070cad31fb6a6abae8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ad9e7ee7667924c070cad31fb6a6abae8">itkGetConstReferenceMacro</a> (MinimalTransformError, double)</td></tr>
-<tr class="separator:ad9e7ee7667924c070cad31fb6a6abae8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afead6e2d03cdf2deeac3faaba17dee0f inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#afead6e2d03cdf2deeac3faaba17dee0f">itkGetConstReferenceMacro</a> (SearchRadius, double)</td></tr>
-<tr class="separator:afead6e2d03cdf2deeac3faaba17dee0f inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2812676dfb91db2649f7def28f3f9b2 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#af2812676dfb91db2649f7def28f3f9b2">itkGetConstReferenceMacro</a> (SearchAngleRadius, double)</td></tr>
-<tr class="separator:af2812676dfb91db2649f7def28f3f9b2 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f1ede3b4e71ad4688d5b9bba0bf36a8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a2f1ede3b4e71ad4688d5b9bba0bf36a8">itkGetConstReferenceMacro</a> (SearchSkewRadius, double)</td></tr>
-<tr class="separator:a2f1ede3b4e71ad4688d5b9bba0bf36a8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae84ac5b5c186f5cdb93cc5fefe24180 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aae84ac5b5c186f5cdb93cc5fefe24180">itkGetConstReferenceMacro</a> (SearchScaleRadius, double)</td></tr>
-<tr class="separator:aae84ac5b5c186f5cdb93cc5fefe24180 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab81fa7b574f646c54f8e82abec7922df inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ab81fa7b574f646c54f8e82abec7922df">itkGetConstReferenceMacro</a> (FinalRadius, double)</td></tr>
-<tr class="separator:ab81fa7b574f646c54f8e82abec7922df inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b8530e3bffc7945ea954e46701378a8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a0b8530e3bffc7945ea954e46701378a8">itkGetConstReferenceMacro</a> (StepSize, double)</td></tr>
-<tr class="separator:a0b8530e3bffc7945ea954e46701378a8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f7e1571d84dad5adce5ff5be2d6661f inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a9f7e1571d84dad5adce5ff5be2d6661f">itkGetConstReferenceMacro</a> (AngleMax, double)</td></tr>
-<tr class="separator:a9f7e1571d84dad5adce5ff5be2d6661f inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b6ade0b7a80af7b807b78ebe4f748b4 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a2b6ade0b7a80af7b807b78ebe4f748b4">itkGetConstReferenceMacro</a> (SkewMax, double)</td></tr>
-<tr class="separator:a2b6ade0b7a80af7b807b78ebe4f748b4 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa426d2fda59a2a54ab788f0429a6372e inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aa426d2fda59a2a54ab788f0429a6372e">itkGetConstReferenceMacro</a> (ScaleMax, double)</td></tr>
-<tr class="separator:aa426d2fda59a2a54ab788f0429a6372e inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4682af8038b7e21055942380af99ce69 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a4682af8038b7e21055942380af99ce69">itkGetConstReferenceMacro</a> (TranslateMax, double)</td></tr>
-<tr class="separator:a4682af8038b7e21055942380af99ce69 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad884cce4c8e21d17284107c98014306d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ad884cce4c8e21d17284107c98014306d">itkGetConstReferenceMacro</a> (SVFElasticRegSigma, double)</td></tr>
-<tr class="separator:ad884cce4c8e21d17284107c98014306d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae68266cc413adbf248a72790e0b2c80 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aae68266cc413adbf248a72790e0b2c80">itkGetConstReferenceMacro</a> (MaximizeMetric, bool)</td></tr>
-<tr class="separator:aae68266cc413adbf248a72790e0b2c80 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10a844a59d23debb0c943be4fbec4117 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a10a844a59d23debb0c943be4fbec4117">itkGetConstReferenceMacro</a> (Geometry, vnl_matrix&lt; double &gt;)</td></tr>
-<tr class="separator:a10a844a59d23debb0c943be4fbec4117 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6466d10b6a842e4a2c7ae17b52aa0fee inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a6466d10b6a842e4a2c7ae17b52aa0fee">itkGetEnumMacro</a> (OptimizerKind, <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a88e8c627e639f730cb61ce860199fc9c">OptimizerDefinition</a>)</td></tr>
-<tr class="separator:a6466d10b6a842e4a2c7ae17b52aa0fee inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7032b0a4705d6f3f0389eb76a29362ee inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a7032b0a4705d6f3f0389eb76a29362ee">itkGetEnumMacro</a> (TransformKind, <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a5c775e09188bdc5458ec9c42c95d8f8e">TransformationDefinition</a>)</td></tr>
-<tr class="separator:a7032b0a4705d6f3f0389eb76a29362ee inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afda38ca601cf82ba975e731c44b63584 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#afda38ca601cf82ba975e731c44b63584">itkGetEnumMacro</a> (MetricKind, <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a1a635c2ff62c6d39be1b61d2f2504edf">SimilarityDefinition</a>)</td></tr>
-<tr class="separator:afda38ca601cf82ba975e731c44b63584 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c10d20b1ba757f98993c94b1eb0aad5 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a1c10d20b1ba757f98993c94b1eb0aad5">itkGetMacro</a> (FixedImage, <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a2a1122298be38558ce53e868d6a5cbfb">InputImageType</a> *)</td></tr>
-<tr class="separator:a1c10d20b1ba757f98993c94b1eb0aad5 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77c72168bb392e069de9f30e684dd1fa inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a77c72168bb392e069de9f30e684dd1fa">itkGetMacro</a> (MovingImage, <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a2a1122298be38558ce53e868d6a5cbfb">InputImageType</a> *)</td></tr>
-<tr class="separator:a77c72168bb392e069de9f30e684dd1fa inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd680a85594f6194dc4a754ceb0b2359 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#afd680a85594f6194dc4a754ceb0b2359">itkGetMacro</a> (<a class="el" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dc">Agregator</a>, <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aabf942e18a0ccf9f7ec2571c8a787fd9">AgregatorType</a> *)</td></tr>
-<tr class="separator:afd680a85594f6194dc4a754ceb0b2359 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef522ea1d2041861f41799882f4fa118 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aef522ea1d2041861f41799882f4fa118">itkSetEnumMacro</a> (OptimizerKind, <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a88e8c627e639f730cb61ce860199fc9c">OptimizerDefinition</a>)</td></tr>
-<tr class="separator:aef522ea1d2041861f41799882f4fa118 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3423375482120c857835c2eeaf413aa inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ad3423375482120c857835c2eeaf413aa">itkSetEnumMacro</a> (TransformKind, <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a5c775e09188bdc5458ec9c42c95d8f8e">TransformationDefinition</a>)</td></tr>
-<tr class="separator:ad3423375482120c857835c2eeaf413aa inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaf6ecbe71c6c83de27da98ee43a3242 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aeaf6ecbe71c6c83de27da98ee43a3242">itkSetEnumMacro</a> (MetricKind, <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a1a635c2ff62c6d39be1b61d2f2504edf">SimilarityDefinition</a>)</td></tr>
-<tr class="separator:aeaf6ecbe71c6c83de27da98ee43a3242 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8101f638c928376755748f6d1bc9b698 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a8101f638c928376755748f6d1bc9b698">itkSetMacro</a> (MaximumIterations, unsigned int)</td></tr>
-<tr class="separator:a8101f638c928376755748f6d1bc9b698 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42ab6d353098ccba0fe299d504f7e376 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a42ab6d353098ccba0fe299d504f7e376">itkSetMacro</a> (OptimizerMaximumIterations, unsigned int)</td></tr>
-<tr class="separator:a42ab6d353098ccba0fe299d504f7e376 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29ab0b9f97f3640b171b1aee412f978a inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a29ab0b9f97f3640b171b1aee412f978a">itkSetMacro</a> (MinimalTransformError, double)</td></tr>
-<tr class="separator:a29ab0b9f97f3640b171b1aee412f978a inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a416e8da44ade2a3317d460c862e4888d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a416e8da44ade2a3317d460c862e4888d">itkSetMacro</a> (SearchRadius, double)</td></tr>
-<tr class="separator:a416e8da44ade2a3317d460c862e4888d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dfa431124322c14ad7eba26fb3d27a3 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a3dfa431124322c14ad7eba26fb3d27a3">itkSetMacro</a> (SearchAngleRadius, double)</td></tr>
-<tr class="separator:a3dfa431124322c14ad7eba26fb3d27a3 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc53c214fcb275c3291a80dfa202046d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#adc53c214fcb275c3291a80dfa202046d">itkSetMacro</a> (SearchSkewRadius, double)</td></tr>
-<tr class="separator:adc53c214fcb275c3291a80dfa202046d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac68a2c8fd123649dbaefceb8c3b5553d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ac68a2c8fd123649dbaefceb8c3b5553d">itkSetMacro</a> (SearchScaleRadius, double)</td></tr>
-<tr class="separator:ac68a2c8fd123649dbaefceb8c3b5553d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab476f84c468448f1bd4dfe97962aa1f6 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ab476f84c468448f1bd4dfe97962aa1f6">itkSetMacro</a> (FinalRadius, double)</td></tr>
-<tr class="separator:ab476f84c468448f1bd4dfe97962aa1f6 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04ed2b0127e3c814dc91ad30c7ee97a0 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a04ed2b0127e3c814dc91ad30c7ee97a0">itkSetMacro</a> (StepSize, double)</td></tr>
-<tr class="separator:a04ed2b0127e3c814dc91ad30c7ee97a0 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1efb09962efc2ff9e6f952323fd3cc2b inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a1efb09962efc2ff9e6f952323fd3cc2b">itkSetMacro</a> (AngleMax, double)</td></tr>
-<tr class="separator:a1efb09962efc2ff9e6f952323fd3cc2b inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c93a56a2c348cf8006ae02c5c166ee3 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a9c93a56a2c348cf8006ae02c5c166ee3">itkSetMacro</a> (SkewMax, double)</td></tr>
-<tr class="separator:a9c93a56a2c348cf8006ae02c5c166ee3 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f8d40aa0e9a45ecd31311c2355bc6d9 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a2f8d40aa0e9a45ecd31311c2355bc6d9">itkSetMacro</a> (ScaleMax, double)</td></tr>
-<tr class="separator:a2f8d40aa0e9a45ecd31311c2355bc6d9 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a772873d20f2c6386dcb627d6d3b5ebe5 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a772873d20f2c6386dcb627d6d3b5ebe5">itkSetMacro</a> (TranslateMax, double)</td></tr>
-<tr class="separator:a772873d20f2c6386dcb627d6d3b5ebe5 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7153e7b7f72fba9ca44e40bc342b8d7 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#af7153e7b7f72fba9ca44e40bc342b8d7">itkSetMacro</a> (SVFElasticRegSigma, double)</td></tr>
-<tr class="separator:af7153e7b7f72fba9ca44e40bc342b8d7 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ba19d60c0a4180224343042b2a0e030 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a7ba19d60c0a4180224343042b2a0e030">itkSetMacro</a> (InitialTransform, <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a516b15f6faed1e59a91660d71dd50a1e">TransformPointer</a>)</td></tr>
-<tr class="separator:a7ba19d60c0a4180224343042b2a0e030 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f572977702de432c0a9624609b810a8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a3f572977702de432c0a9624609b810a8">itkSetObjectMacro</a> (<a class="el" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dc">Agregator</a>, <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aabf942e18a0ccf9f7ec2571c8a787fd9">AgregatorType</a>)</td></tr>
-<tr class="separator:a3f572977702de432c0a9624609b810a8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afeeb5c11d4e0a7ec010996783e918368 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#afeeb5c11d4e0a7ec010996783e918368">itkTypeMacro</a> (<a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html">TensorBlockMatchingBaseRegistrationMethod</a>, itk::ProcessObject)</td></tr>
-<tr class="separator:afeeb5c11d4e0a7ec010996783e918368 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9955b9b98358cff44629f7df1cc97af inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aaef4b3d36e12b262374406b140cbcf72">DataObjectPointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#af9955b9b98358cff44629f7df1cc97af">MakeOutput</a> (<a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ab8a0c811fbd41897af05d98b3e6c73e6">DataObjectPointerArraySizeType</a> idx)</td></tr>
 <tr class="separator:af9955b9b98358cff44629f7df1cc97af inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa718c908d169bef040ccfb9e4285dee8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aa718c908d169bef040ccfb9e4285dee8">SetAgregator</a> (<a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aabf942e18a0ccf9f7ec2571c8a787fd9">AgregatorType</a> *_arg)</td></tr>
+<tr class="separator:aa718c908d169bef040ccfb9e4285dee8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24ff3f6d409f482f56c5d1c63d4fc349 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a24ff3f6d409f482f56c5d1c63d4fc349">SetAngleMax</a> (double _arg)</td></tr>
+<tr class="separator:a24ff3f6d409f482f56c5d1c63d4fc349 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96c613df57a0362a9dc2dd8bf023ff51 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a96c613df57a0362a9dc2dd8bf023ff51">SetBaseTransform</a> (unsigned int i, <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a4a6f856a92d52d2ec876a16f2227bb63">BaseInputTransformType</a> *trsf)</td></tr>
 <tr class="separator:a96c613df57a0362a9dc2dd8bf023ff51 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17477c4cbeb84fe5c53af9631d57d98d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a17477c4cbeb84fe5c53af9631d57d98d">SetBlockRegions</a> (std::vector&lt; <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a15259bccc62282f01f981182498dec0e">ImageRegionType</a> &gt; &amp;origins)</td></tr>
 <tr class="separator:a17477c4cbeb84fe5c53af9631d57d98d inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c3e6aaf91087c0531306af8a62b79f inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a76c3e6aaf91087c0531306af8a62b79f">SetFinalRadius</a> (double _arg)</td></tr>
+<tr class="separator:a76c3e6aaf91087c0531306af8a62b79f inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32de6edb1e94a63040ab2942c30badab inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a32de6edb1e94a63040ab2942c30badab">SetFixedImage</a> (<a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a2a1122298be38558ce53e868d6a5cbfb">InputImageType</a> *fixedImage)</td></tr>
 <tr class="separator:a32de6edb1e94a63040ab2942c30badab inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a291aa6ff022e50959fd560ddf9f836b3 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a291aa6ff022e50959fd560ddf9f836b3">SetInitialTransform</a> (<a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a516b15f6faed1e59a91660d71dd50a1e">TransformPointer</a> _arg)</td></tr>
+<tr class="separator:a291aa6ff022e50959fd560ddf9f836b3 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa37f58e22e60aa3f785bdffee5210677 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aa37f58e22e60aa3f785bdffee5210677">SetMaximumIterations</a> (unsigned int _arg)</td></tr>
+<tr class="separator:aa37f58e22e60aa3f785bdffee5210677 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad09a49ee1cc6c37bcb9b1c4075185ac3 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ad09a49ee1cc6c37bcb9b1c4075185ac3">SetMetricKind</a> (const <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a1a635c2ff62c6d39be1b61d2f2504edf">SimilarityDefinition</a> _arg)</td></tr>
+<tr class="separator:ad09a49ee1cc6c37bcb9b1c4075185ac3 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4119c00b17f517d9d19b7ee86d8b1927 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a4119c00b17f517d9d19b7ee86d8b1927">SetMinimalTransformError</a> (double _arg)</td></tr>
+<tr class="separator:a4119c00b17f517d9d19b7ee86d8b1927 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16c9421f5ec4fd8f150c3fc301b7f697 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a16c9421f5ec4fd8f150c3fc301b7f697">SetMovingImage</a> (<a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a2a1122298be38558ce53e868d6a5cbfb">InputImageType</a> *movingImage)</td></tr>
 <tr class="separator:a16c9421f5ec4fd8f150c3fc301b7f697 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad53996b46524a56937bbfa0f7ba38685 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ad53996b46524a56937bbfa0f7ba38685">SetOptimizerKind</a> (const <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a88e8c627e639f730cb61ce860199fc9c">OptimizerDefinition</a> _arg)</td></tr>
+<tr class="separator:ad53996b46524a56937bbfa0f7ba38685 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e80979f9d1d5e17533dd9fe40bc798f inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a6e80979f9d1d5e17533dd9fe40bc798f">SetOptimizerMaximumIterations</a> (unsigned int _arg)</td></tr>
+<tr class="separator:a6e80979f9d1d5e17533dd9fe40bc798f inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7aea8b6e4e6e569afadbb021c10bcc8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aa7aea8b6e4e6e569afadbb021c10bcc8">SetScaleMax</a> (double _arg)</td></tr>
+<tr class="separator:aa7aea8b6e4e6e569afadbb021c10bcc8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9f42365ee7583326410114fdf1245c inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a2e9f42365ee7583326410114fdf1245c">SetSearchAngleRadius</a> (double _arg)</td></tr>
+<tr class="separator:a2e9f42365ee7583326410114fdf1245c inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8e04c660467d2bfcd26e89936ac2e20 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ab8e04c660467d2bfcd26e89936ac2e20">SetSearchRadius</a> (double _arg)</td></tr>
+<tr class="separator:ab8e04c660467d2bfcd26e89936ac2e20 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085d23b3daf732c07d8197b65a63fc48 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a085d23b3daf732c07d8197b65a63fc48">SetSearchScaleRadius</a> (double _arg)</td></tr>
+<tr class="separator:a085d23b3daf732c07d8197b65a63fc48 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1842318ded53fe1055ee7642b866550 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ac1842318ded53fe1055ee7642b866550">SetSearchSkewRadius</a> (double _arg)</td></tr>
+<tr class="separator:ac1842318ded53fe1055ee7642b866550 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a686a19cc97f9f74f08af18b3b33c9264 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a686a19cc97f9f74f08af18b3b33c9264">SetSkewMax</a> (double _arg)</td></tr>
+<tr class="separator:a686a19cc97f9f74f08af18b3b33c9264 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d8262e6093722cfb91581cfc7015ec9 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a7d8262e6093722cfb91581cfc7015ec9">SetStepSize</a> (double _arg)</td></tr>
+<tr class="separator:a7d8262e6093722cfb91581cfc7015ec9 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2ba23807cd3c9be79b910e3ba678689 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ad2ba23807cd3c9be79b910e3ba678689">SetSVFElasticRegSigma</a> (double _arg)</td></tr>
+<tr class="separator:ad2ba23807cd3c9be79b910e3ba678689 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f08c3405eb558308daaf264880850d8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a2f08c3405eb558308daaf264880850d8">SetTransformKind</a> (const <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a5c775e09188bdc5458ec9c42c95d8f8e">TransformationDefinition</a> _arg)</td></tr>
+<tr class="separator:a2f08c3405eb558308daaf264880850d8 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dd4395fe91965d8b41ad7ab543c78a3 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a7dd4395fe91965d8b41ad7ab543c78a3">SetTranslateMax</a> (double _arg)</td></tr>
+<tr class="separator:a7dd4395fe91965d8b41ad7ab543c78a3 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e4ed228cd409d0a6bb7d763eb42cb51 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a8e4ed228cd409d0a6bb7d763eb42cb51">StartOptimization</a> (void)</td></tr>
 <tr class="separator:a8e4ed228cd409d0a6bb7d763eb42cb51 inherit pub_methods_classanima_1_1TensorBlockMatchingBaseRegistrationMethod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4a6174c9c4346755ce43966657ecaaa8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a47861cec880422ca2308a055b1e8a417">Pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a4a6174c9c4346755ce43966657ecaaa8">New</a> ()</td></tr>
+<tr class="separator:a4a6174c9c4346755ce43966657ecaaa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -797,6 +802,52 @@ template&lt;typename TInputImage &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae89c620a57f66c85373041915fde3526"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TInputImage &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual::itk::LightObject::Pointer <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::CreateAnother </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9c1db57999706c1623423aef0e2f4d10"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TInputImage &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char* <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::GetNameOfClass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Run-time type information (and related methods). </p>
+
+<p>Reimplemented from <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a29f3ae01e41e60dd81237d385d1ec87e">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aedd29f2d5bfde0868a19486c62c49e39"></a>
 <div class="memitem">
 <div class="memproto">
@@ -835,219 +886,29 @@ template&lt;typename TInputImage &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a50a58609a3094e806827146006f20084"></a>
+<a class="anchor" id="a4a6174c9c4346755ce43966657ecaaa8"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename TInputImage &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::itkNewMacro </td>
+          <td class="memname">static <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a47861cec880422ca2308a055b1e8a417">Pointer</a> <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::New </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a0eeb1afccfc1a1c77ec0b1bb0b49aea6">Self</a>&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Method for creation through the object factory. </p>
-
-</div>
-</div>
-<a class="anchor" id="ab1a22be86a382218f6bff728cc9c1da7"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TInputImage &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::itkSetMacro </td>
-          <td>(</td>
-          <td class="paramtype">BlockPercentageKept&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae170eece7d9164f220c1a59234a931b3"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TInputImage &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::itkSetMacro </td>
-          <td>(</td>
-          <td class="paramtype">BlockSize&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>int</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a8fc1f119f2201c5d4215ec9b4c520125"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TInputImage &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::itkSetMacro </td>
-          <td>(</td>
-          <td class="paramtype">BlockSpacing&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>int</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a06eade01aa70f052e0283784c68fa7d1"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TInputImage &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::itkSetMacro </td>
-          <td>(</td>
-          <td class="paramtype">BlockTensorVarianceThreshold&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a71cee14d5ae99ec42a4ab7ad21814cd4"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TInputImage &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::itkSetMacro </td>
-          <td>(</td>
-          <td class="paramtype">UseTransformationDam&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a19e49a5a5e10e900551dc79134151728"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TInputImage &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::itkSetMacro </td>
-          <td>(</td>
-          <td class="paramtype">DamDistance&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a238681b4cbee99467fb7510bcb772a6f"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TInputImage &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::itkTypeMacro </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html">BlockMatchingBaseRegistrationMethod</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Run-time type information (and related methods). </p>
 
 </div>
 </div>
@@ -1099,6 +960,162 @@ template&lt;typename TInputImage &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a2be3cd2e493d492282c80c247badbde2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TInputImage &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::SetBlockPercentageKept </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aba1b9ab752a1e8f9e80ac7a97ed8a9d7"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TInputImage &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::SetBlockSize </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a93802dbfbbaad9c0ca56a904e43b75aa"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TInputImage &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::SetBlockSpacing </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a14a02dba9726848ea73c8fc4b0b51836"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TInputImage &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::SetBlockTensorVarianceThreshold </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a973e37475fc0796918d5c04c1981e5e8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TInputImage &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::SetDamDistance </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab20e80c023692b67b433f1ff1b4c708a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TInputImage &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod</a>&lt; TInputImage &gt;::SetUseTransformationDam </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="animaTensorKissingSymmetricBlockMatchingRegistrationMethod_8h_source.html">animaTensorKissingSymmetricBlockMatchingRegistrationMethod.h</a></li>
 <li><a class="el" href="animaTensorKissingSymmetricBlockMatchingRegistrationMethod_8hxx_source.html">animaTensorKissingSymmetricBlockMatchingRegistrationMethod.hxx</a></li>
@@ -1106,7 +1123,7 @@ template&lt;typename TInputImage &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 11 2014 06:20:02 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 19 2014 06:20:06 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
