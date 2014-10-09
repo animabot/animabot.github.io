@@ -122,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a39206fc23f552b54950475785bc4f3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54f0ea3dc562d4c42f9dbbe39a87bf3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classanima_1_1EPGSignalSimulator.html#abe5b8d8d73ea02f9f71bc5096ecae48e">RealVectorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1EPGSignalSimulator.html#a54f0ea3dc562d4c42f9dbbe39a87bf3f">GetValue</a> (double t1Value, double t2Value, double b1Value, double m0Value)</td></tr>
 <tr class="separator:a54f0ea3dc562d4c42f9dbbe39a87bf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9895a8dd842ed8e46eb41074c69ceb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1EPGSignalSimulator.html#a0e9895a8dd842ed8e46eb41074c69ceb">SetB1OnExcitationAngle</a> (bool val)</td></tr>
+<tr class="separator:a0e9895a8dd842ed8e46eb41074c69ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c5ec24d375400de2970b1432c652178"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1EPGSignalSimulator.html#a7c5ec24d375400de2970b1432c652178">SetEchoSpacing</a> (double val)</td></tr>
 <tr class="separator:a7c5ec24d375400de2970b1432c652178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3281fcd6d31e32be02b7286f64769408"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1EPGSignalSimulator.html#a3281fcd6d31e32be02b7286f64769408">SetExcitationFlipAngle</a> (double val)</td></tr>
@@ -266,9 +268,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaEPGSignalSimulator_8cxx_source.html#l00073">73</a> of file <a class="el" href="animaEPGSignalSimulator_8cxx_source.html">animaEPGSignalSimulator.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaEPGSignalSimulator_8cxx_source.html#l00080">80</a> of file <a class="el" href="animaEPGSignalSimulator_8cxx_source.html">animaEPGSignalSimulator.cxx</a>.</p>
 
-<p>Referenced by <a class="el" href="animaEPGSignalSimulator_8cxx_source.html#l00017">GetValue()</a>.</p>
+<p>Referenced by <a class="el" href="animaEPGSignalSimulator_8cxx_source.html#l00018">GetValue()</a>.</p>
 
 </div>
 </div>
@@ -308,11 +310,39 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaEPGSignalSimulator_8cxx_source.html#l00017">17</a> of file <a class="el" href="animaEPGSignalSimulator_8cxx_source.html">animaEPGSignalSimulator.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaEPGSignalSimulator_8cxx_source.html#l00018">18</a> of file <a class="el" href="animaEPGSignalSimulator_8cxx_source.html">animaEPGSignalSimulator.cxx</a>.</p>
 
-<p>References <a class="el" href="animaEPGSignalSimulator_8cxx_source.html#l00073">ComputeT2SignalMatrices()</a>.</p>
+<p>References <a class="el" href="animaEPGSignalSimulator_8cxx_source.html#l00080">ComputeT2SignalMatrices()</a>.</p>
 
-<p>Referenced by <a class="el" href="animaCombinedRelaxometryCostFunction_8cxx_source.html#l00008">anima::CombinedRelaxometryCostFunction::GetValue()</a>, <a class="el" href="animaT2EPGRelaxometryCostFunction_8cxx_source.html#l00008">anima::T2EPGRelaxometryCostFunction::GetValue()</a>, and <a class="el" href="animaStimulatedSpinEchoImageFilter_8hxx_source.html#l00131">anima::StimulatedSpinEchoImageFilter&lt; TImage, TOutputImage &gt;::ThreadedGenerateData()</a>.</p>
+<p>Referenced by <a class="el" href="animaCombinedRelaxometryCostFunction_8cxx_source.html#l00008">anima::CombinedRelaxometryCostFunction::GetValue()</a>, <a class="el" href="animaT2EPGRelaxometryCostFunction_8cxx_source.html#l00008">anima::T2EPGRelaxometryCostFunction::GetValue()</a>, and <a class="el" href="animaStimulatedSpinEchoImageFilter_8hxx_source.html#l00133">anima::StimulatedSpinEchoImageFilter&lt; TImage, TOutputImage &gt;::ThreadedGenerateData()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e9895a8dd842ed8e46eb41074c69ceb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void anima::EPGSignalSimulator::SetB1OnExcitationAngle </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaEPGSignalSimulator_8h_source.html#l00030">30</a> of file <a class="el" href="animaEPGSignalSimulator_8h_source.html">animaEPGSignalSimulator.h</a>.</p>
+
+<p>Referenced by <a class="el" href="animaCombinedRelaxometryCostFunction_8cxx_source.html#l00008">anima::CombinedRelaxometryCostFunction::GetValue()</a>, <a class="el" href="animaT2EPGRelaxometryCostFunction_8cxx_source.html#l00008">anima::T2EPGRelaxometryCostFunction::GetValue()</a>, and <a class="el" href="animaStimulatedSpinEchoImageFilter_8hxx_source.html#l00133">anima::StimulatedSpinEchoImageFilter&lt; TImage, TOutputImage &gt;::ThreadedGenerateData()</a>.</p>
 
 </div>
 </div>
@@ -340,7 +370,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="animaEPGSignalSimulator_8h_source.html#l00024">24</a> of file <a class="el" href="animaEPGSignalSimulator_8h_source.html">animaEPGSignalSimulator.h</a>.</p>
 
-<p>Referenced by <a class="el" href="animaCombinedRelaxometryCostFunction_8cxx_source.html#l00008">anima::CombinedRelaxometryCostFunction::GetValue()</a>, <a class="el" href="animaT2EPGRelaxometryCostFunction_8cxx_source.html#l00008">anima::T2EPGRelaxometryCostFunction::GetValue()</a>, and <a class="el" href="animaStimulatedSpinEchoImageFilter_8hxx_source.html#l00131">anima::StimulatedSpinEchoImageFilter&lt; TImage, TOutputImage &gt;::ThreadedGenerateData()</a>.</p>
+<p>Referenced by <a class="el" href="animaCombinedRelaxometryCostFunction_8cxx_source.html#l00008">anima::CombinedRelaxometryCostFunction::GetValue()</a>, <a class="el" href="animaT2EPGRelaxometryCostFunction_8cxx_source.html#l00008">anima::T2EPGRelaxometryCostFunction::GetValue()</a>, and <a class="el" href="animaStimulatedSpinEchoImageFilter_8hxx_source.html#l00133">anima::StimulatedSpinEchoImageFilter&lt; TImage, TOutputImage &gt;::ThreadedGenerateData()</a>.</p>
 
 </div>
 </div>
@@ -368,7 +398,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="animaEPGSignalSimulator_8h_source.html#l00025">25</a> of file <a class="el" href="animaEPGSignalSimulator_8h_source.html">animaEPGSignalSimulator.h</a>.</p>
 
-<p>Referenced by <a class="el" href="animaCombinedRelaxometryCostFunction_8cxx_source.html#l00008">anima::CombinedRelaxometryCostFunction::GetValue()</a>, <a class="el" href="animaT2EPGRelaxometryCostFunction_8cxx_source.html#l00008">anima::T2EPGRelaxometryCostFunction::GetValue()</a>, and <a class="el" href="animaStimulatedSpinEchoImageFilter_8hxx_source.html#l00131">anima::StimulatedSpinEchoImageFilter&lt; TImage, TOutputImage &gt;::ThreadedGenerateData()</a>.</p>
+<p>Referenced by <a class="el" href="animaCombinedRelaxometryCostFunction_8cxx_source.html#l00008">anima::CombinedRelaxometryCostFunction::GetValue()</a>, <a class="el" href="animaT2EPGRelaxometryCostFunction_8cxx_source.html#l00008">anima::T2EPGRelaxometryCostFunction::GetValue()</a>, and <a class="el" href="animaStimulatedSpinEchoImageFilter_8hxx_source.html#l00133">anima::StimulatedSpinEchoImageFilter&lt; TImage, TOutputImage &gt;::ThreadedGenerateData()</a>.</p>
 
 </div>
 </div>
@@ -396,7 +426,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="animaEPGSignalSimulator_8h_source.html#l00026">26</a> of file <a class="el" href="animaEPGSignalSimulator_8h_source.html">animaEPGSignalSimulator.h</a>.</p>
 
-<p>Referenced by <a class="el" href="animaCombinedRelaxometryCostFunction_8cxx_source.html#l00008">anima::CombinedRelaxometryCostFunction::GetValue()</a>, <a class="el" href="animaT2EPGRelaxometryCostFunction_8cxx_source.html#l00008">anima::T2EPGRelaxometryCostFunction::GetValue()</a>, and <a class="el" href="animaStimulatedSpinEchoImageFilter_8hxx_source.html#l00131">anima::StimulatedSpinEchoImageFilter&lt; TImage, TOutputImage &gt;::ThreadedGenerateData()</a>.</p>
+<p>Referenced by <a class="el" href="animaCombinedRelaxometryCostFunction_8cxx_source.html#l00008">anima::CombinedRelaxometryCostFunction::GetValue()</a>, <a class="el" href="animaT2EPGRelaxometryCostFunction_8cxx_source.html#l00008">anima::T2EPGRelaxometryCostFunction::GetValue()</a>, and <a class="el" href="animaStimulatedSpinEchoImageFilter_8hxx_source.html#l00133">anima::StimulatedSpinEchoImageFilter&lt; TImage, TOutputImage &gt;::ThreadedGenerateData()</a>.</p>
 
 </div>
 </div>
@@ -424,7 +454,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="animaEPGSignalSimulator_8h_source.html#l00028">28</a> of file <a class="el" href="animaEPGSignalSimulator_8h_source.html">animaEPGSignalSimulator.h</a>.</p>
 
-<p>Referenced by <a class="el" href="animaCombinedRelaxometryCostFunction_8cxx_source.html#l00008">anima::CombinedRelaxometryCostFunction::GetValue()</a>, <a class="el" href="animaT2EPGRelaxometryCostFunction_8cxx_source.html#l00008">anima::T2EPGRelaxometryCostFunction::GetValue()</a>, and <a class="el" href="animaStimulatedSpinEchoImageFilter_8hxx_source.html#l00131">anima::StimulatedSpinEchoImageFilter&lt; TImage, TOutputImage &gt;::ThreadedGenerateData()</a>.</p>
+<p>Referenced by <a class="el" href="animaCombinedRelaxometryCostFunction_8cxx_source.html#l00008">anima::CombinedRelaxometryCostFunction::GetValue()</a>, <a class="el" href="animaT2EPGRelaxometryCostFunction_8cxx_source.html#l00008">anima::T2EPGRelaxometryCostFunction::GetValue()</a>, and <a class="el" href="animaStimulatedSpinEchoImageFilter_8hxx_source.html#l00133">anima::StimulatedSpinEchoImageFilter&lt; TImage, TOutputImage &gt;::ThreadedGenerateData()</a>.</p>
 
 </div>
 </div>
@@ -435,7 +465,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 27 2014 06:20:06 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 9 2014 06:20:22 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

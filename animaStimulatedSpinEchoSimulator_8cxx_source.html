@@ -121,86 +121,89 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    TCLAP::ValueArg&lt;double&gt; xfaArg(<span class="stringliteral">&quot;x&quot;</span>,<span class="stringliteral">&quot;excite-fa&quot;</span>,<span class="stringliteral">&quot;Excitation flip angle (degrees), default: 90 degrees&quot;</span>, <span class="keyword">false</span>, 90,<span class="stringliteral">&quot;excitation flip angle value&quot;</span>,cmd);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    TCLAP::ValueArg&lt;double&gt; faArg(<span class="stringliteral">&quot;f&quot;</span>,<span class="stringliteral">&quot;fa&quot;</span>,<span class="stringliteral">&quot;Flip angle (degrees), default: 180 degrees&quot;</span>, <span class="keyword">false</span>, 180,<span class="stringliteral">&quot;flip angle value&quot;</span>,cmd);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    TCLAP::ValueArg&lt;unsigned int&gt; nbpArg(<span class="stringliteral">&quot;T&quot;</span>,<span class="stringliteral">&quot;numberofthreads&quot;</span>,<span class="stringliteral">&quot;Number of threads to run on (default : all cores)&quot;</span>,<span class="keyword">false</span>,itk::MultiThreader::GetGlobalDefaultNumberOfThreads(),<span class="stringliteral">&quot;number of threads&quot;</span>,cmd);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    TCLAP::SwitchArg b1OnExcAngleArg(<span class="stringliteral">&quot;B&quot;</span>, <span class="stringliteral">&quot;b1-exc&quot;</span>, <span class="stringliteral">&quot;B1 is also applied to excitation angle&quot;</span>,cmd,<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        cmd.parse(argc,argv);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; e)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; e.error() &lt;&lt; <span class="stringliteral">&quot;for argument &quot;</span> &lt;&lt; e.argId() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Parse arguments</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::string input1FileName = t1MapArg.getValue();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::string input2FileName = t2MapArg.getValue();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::string input3FileName = m0ImageArg.getValue();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::string outputFileName = resArg.getValue();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// Setup types</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">typedef</span> itk::Image&lt;double, 3&gt; ImageType;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">typedef</span> itk::VectorImage&lt;double, 3&gt; OutputImageType;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classanima_1_1StimulatedSpinEchoImageFilter.html">anima::StimulatedSpinEchoImageFilter&lt;ImageType,OutputImageType&gt;</a> FilterType;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// Read T1 map</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileReader&lt;ImageType&gt; ReaderType;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    ReaderType::Pointer reader1 = ReaderType::New();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    reader1-&gt;SetFileName(input1FileName);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    reader1-&gt;Update();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// Read T2s map</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    ReaderType::Pointer reader2 = ReaderType::New();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    reader2-&gt;SetFileName(input2FileName);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    reader2-&gt;Update();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// Read M0 map</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    ReaderType::Pointer reader3 = ReaderType::New();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    reader3-&gt;SetFileName(input3FileName);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    reader3-&gt;Update();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    FilterType::Pointer filter = FilterType::New();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    filter-&gt;SetInput(0,reader1-&gt;GetOutput());</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    filter-&gt;SetInput(1,reader2-&gt;GetOutput());</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    filter-&gt;SetInput(2,reader3-&gt;GetOutput());</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    filter-&gt;SetNumberOfThreads(nbpArg.getValue());</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// Read B1 map</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (b1ImageArg.getValue() != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        ReaderType::Pointer readerB1 = ReaderType::New();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        readerB1-&gt;SetFileName(b1ImageArg.getValue().c_str());</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        readerB1-&gt;Update();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        filter-&gt;SetInput(3,readerB1-&gt;GetOutput());</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    filter-&gt;SetEchoSpacing(teArg.getValue());</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    filter-&gt;SetFlipAngle(faArg.getValue() * M_PI / 180.0);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    filter-&gt;SetNumberOfEchoes(neArg.getValue());</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    filter-&gt;SetExcitationFlipAngle(xfaArg.getValue() * M_PI / 180.0);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    filter-&gt;Update();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// Save the output image</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileWriter &lt;FilterType::Image4DType&gt; WriterType;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    WriterType::Pointer writer = WriterType::New();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    writer-&gt;SetFileName(outputFileName);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    writer-&gt;SetInput(filter-&gt;GetOutputAs4DImage());</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    writer-&gt;Update();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">// return</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    TCLAP::ValueArg&lt;unsigned int&gt; nbpArg(<span class="stringliteral">&quot;T&quot;</span>,<span class="stringliteral">&quot;numberofthreads&quot;</span>,<span class="stringliteral">&quot;Number of threads to run on (default : all cores)&quot;</span>,<span class="keyword">false</span>,itk::MultiThreader::GetGlobalDefaultNumberOfThreads(),<span class="stringliteral">&quot;number of threads&quot;</span>,cmd);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        cmd.parse(argc,argv);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; e)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; e.error() &lt;&lt; <span class="stringliteral">&quot;for argument &quot;</span> &lt;&lt; e.argId() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// Parse arguments</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::string input1FileName = t1MapArg.getValue();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::string input2FileName = t2MapArg.getValue();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::string input3FileName = m0ImageArg.getValue();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::string outputFileName = resArg.getValue();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// Setup types</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">typedef</span> itk::Image&lt;double, 3&gt; ImageType;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">typedef</span> itk::VectorImage&lt;double, 3&gt; OutputImageType;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classanima_1_1StimulatedSpinEchoImageFilter.html">anima::StimulatedSpinEchoImageFilter&lt;ImageType,OutputImageType&gt;</a> FilterType;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// Read T1 map</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileReader&lt;ImageType&gt; ReaderType;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ReaderType::Pointer reader1 = ReaderType::New();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    reader1-&gt;SetFileName(input1FileName);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    reader1-&gt;Update();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// Read T2s map</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ReaderType::Pointer reader2 = ReaderType::New();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    reader2-&gt;SetFileName(input2FileName);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    reader2-&gt;Update();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// Read M0 map</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    ReaderType::Pointer reader3 = ReaderType::New();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    reader3-&gt;SetFileName(input3FileName);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    reader3-&gt;Update();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    FilterType::Pointer filter = FilterType::New();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    filter-&gt;SetInput(0,reader1-&gt;GetOutput());</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    filter-&gt;SetInput(1,reader2-&gt;GetOutput());</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    filter-&gt;SetInput(2,reader3-&gt;GetOutput());</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    filter-&gt;SetNumberOfThreads(nbpArg.getValue());</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// Read B1 map</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (b1ImageArg.getValue() != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        ReaderType::Pointer readerB1 = ReaderType::New();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        readerB1-&gt;SetFileName(b1ImageArg.getValue().c_str());</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        readerB1-&gt;Update();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        filter-&gt;SetInput(3,readerB1-&gt;GetOutput());</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    filter-&gt;SetEchoSpacing(teArg.getValue());</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    filter-&gt;SetFlipAngle(faArg.getValue() * M_PI / 180.0);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    filter-&gt;SetNumberOfEchoes(neArg.getValue());</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    filter-&gt;SetExcitationFlipAngle(xfaArg.getValue() * M_PI / 180.0);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    filter-&gt;SetB1OnExcitationAngle(b1OnExcAngleArg.isSet());</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    filter-&gt;Update();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// Save the output image</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileWriter &lt;FilterType::Image4DType&gt; WriterType;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    WriterType::Pointer writer = WriterType::New();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    writer-&gt;SetFileName(outputFileName);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    writer-&gt;SetInput(filter-&gt;GetOutputAs4DImage());</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    writer-&gt;Update();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// return</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
 <div class="ttc" id="animaStimulatedSpinEchoImageFilter_8h_html"><div class="ttname"><a href="animaStimulatedSpinEchoImageFilter_8h.html">animaStimulatedSpinEchoImageFilter.h</a></div></div>
 <div class="ttc" id="classanima_1_1StimulatedSpinEchoImageFilter_html"><div class="ttname"><a href="classanima_1_1StimulatedSpinEchoImageFilter.html">anima::StimulatedSpinEchoImageFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="animaStimulatedSpinEchoImageFilter_8h_source.html#l00011">animaStimulatedSpinEchoImageFilter.h:11</a></div></div>
 <div class="ttc" id="animaStimulatedSpinEchoSimulator_8cxx_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="animaStimulatedSpinEchoSimulator_8cxx.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="animaStimulatedSpinEchoSimulator_8cxx_source.html#l00012">animaStimulatedSpinEchoSimulator.cxx:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 27 2014 06:20:05 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 9 2014 06:20:21 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
