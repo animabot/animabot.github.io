@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['faimagetype',['FAImageType',['../classanima_1_1DTIScalarMapsImageFilter.html#a0b567be6452b2e8ee18fe9f07f80c0a5',1,'anima::DTIScalarMapsImageFilter']]],
   ['fiberprocessvectortype',['FiberProcessVectorType',['../classanima_1_1BaseProbabilisticTractographyImageFilter.html#a8b3a91d8268a02165f345ac4edccb53b',1,'anima::BaseProbabilisticTractographyImageFilter::FiberProcessVectorType()'],['../classanima_1_1dtiTractographyImageFilter.html#a5927842fbdb1096f42cad2b0a78bdf72',1,'anima::dtiTractographyImageFilter::FiberProcessVectorType()']]],
   ['fibertype',['FiberType',['../classanima_1_1BaseProbabilisticTractographyImageFilter.html#a780a23cb385a71082c38c1d70ff9521b',1,'anima::BaseProbabilisticTractographyImageFilter::FiberType()'],['../classanima_1_1dtiTractographyImageFilter.html#ae37099a1867253c64945edf804175893',1,'anima::dtiTractographyImageFilter::FiberType()']]],
   ['firstgaussianfilterpointer',['FirstGaussianFilterPointer',['../classanima_1_1SmoothingRecursiveYvvGaussianImageFilter.html#a4b2c07aa27e1172377ce6fa2bd408b76',1,'anima::SmoothingRecursiveYvvGaussianImageFilter']]],

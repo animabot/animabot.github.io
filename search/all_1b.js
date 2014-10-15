@@ -23,6 +23,7 @@ var searchData=
   ['_7edtinoncentralchicostfunction',['~DTINonCentralChiCostFunction',['../classanima_1_1DTINonCentralChiCostFunction.html#a625d2f2d69528c32107db69510637a80',1,'anima::DTINonCentralChiCostFunction']]],
   ['_7edtinoncentralchiestimationimagefilter',['~DTINonCentralChiEstimationImageFilter',['../classanima_1_1DTINonCentralChiEstimationImageFilter.html#a172c04d661d86f301c6ab1fa8c75b87f',1,'anima::DTINonCentralChiEstimationImageFilter']]],
   ['_7edtiprobabilistictractographyimagefilter',['~DTIProbabilisticTractographyImageFilter',['../classanima_1_1DTIProbabilisticTractographyImageFilter.html#a69282099cf58205ee8d0442f21199a89',1,'anima::DTIProbabilisticTractographyImageFilter']]],
+  ['_7edtiscalarmapsimagefilter',['~DTIScalarMapsImageFilter',['../classanima_1_1DTIScalarMapsImageFilter.html#af0bbbe37ba03d4dec1c38fd6f74f89af',1,'anima::DTIScalarMapsImageFilter']]],
   ['_7edtitractographyimagefilter',['~dtiTractographyImageFilter',['../classanima_1_1dtiTractographyImageFilter.html#a6c9f9075c9ad898af888c7dfc5e6ba13',1,'anima::dtiTractographyImageFilter']]],
   ['_7edwisimulatorfromdtiimagefilter',['~DWISimulatorFromDTIImageFilter',['../classanima_1_1DWISimulatorFromDTIImageFilter.html#a7c5e269de672920c266384c9f10efe5c',1,'anima::DWISimulatorFromDTIImageFilter']]],
   ['_7edynarray',['~DynArray',['../classtinyxml2_1_1DynArray.html#ac7c2dc82db9010d09041ea6bfd921fdc',1,'tinyxml2::DynArray']]],

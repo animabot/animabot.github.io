@@ -92,16 +92,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">animaConnectedComponents.cxx File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;itkConnectedComponentImageFilter.h&gt;</code><br/>
+<code>#include &lt;itkRelabelComponentImageFilter.h&gt;</code><br/>
 <code>#include &lt;itkImageFileReader.h&gt;</code><br/>
 <code>#include &lt;itkImageFileWriter.h&gt;</code><br/>
 <code>#include &lt;itkImageRegionIterator.h&gt;</code><br/>
 <code>#include &lt;tclap/CmdLine.h&gt;</code><br/>
+<code>#include &lt;<a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for animaConnectedComponents.cxx:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -109,17 +112,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="animaConnectedComponents_8cxx__incl.png" border="0" usemap="#animaConnectedComponents_8cxx" alt=""/></div>
 <map name="animaConnectedComponents_8cxx" id="animaConnectedComponents_8cxx">
-</map>
+<area shape="rect" id="node8" href="animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="486,88,668,115"/></map>
 </div>
 </div>
 <p><a href="animaConnectedComponents_8cxx_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structarguments.html">arguments</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a15c47287d428575a160a91c3c12546a3"><td class="memTemplParams" colspan="2">template&lt;unsigned int Dimension&gt; </td></tr>
+<tr class="memitem:a15c47287d428575a160a91c3c12546a3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaConnectedComponents_8cxx.html#a15c47287d428575a160a91c3c12546a3">connectedComponent</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
+<tr class="separator:a15c47287d428575a160a91c3c12546a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaConnectedComponents_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef3b0f4003591b1e624ee66e4abf4cce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaConnectedComponents_8cxx.html#aef3b0f4003591b1e624ee66e4abf4cce">retrieveDimension</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args, itk::ImageIOBase::Pointer imageIO)</td></tr>
+<tr class="separator:aef3b0f4003591b1e624ee66e4abf4cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a15c47287d428575a160a91c3c12546a3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int Dimension&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void connectedComponent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaConnectedComponents_8cxx_source.html#l00021">21</a> of file <a class="el" href="animaConnectedComponents_8cxx_source.html">animaConnectedComponents.cxx</a>.</p>
+
+<p>References <a class="el" href="animaConnectedComponents_8cxx_source.html#l00016">arguments::full</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00021">arguments::input</a>, <a class="el" href="animaConnectedComponents_8cxx_source.html#l00015">arguments::min</a>, <a class="el" href="animaConcatenateImages_8cxx_source.html#l00014">arguments::output</a>, and <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00020">arguments::pthread</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 <div class="memitem">
 <div class="memproto">
@@ -144,14 +179,46 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaConnectedComponents_8cxx_source.html#l00008">8</a> of file <a class="el" href="animaConnectedComponents_8cxx_source.html">animaConnectedComponents.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaConnectedComponents_8cxx_source.html#l00094">94</a> of file <a class="el" href="animaConnectedComponents_8cxx_source.html">animaConnectedComponents.cxx</a>.</p>
+
+<p>References <a class="el" href="animaConnectedComponents_8cxx_source.html#l00016">arguments::full</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00021">arguments::input</a>, <a class="el" href="animaConnectedComponents_8cxx_source.html#l00015">arguments::min</a>, <a class="el" href="animaConcatenateImages_8cxx_source.html#l00014">arguments::output</a>, <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00020">arguments::pthread</a>, and <a class="el" href="animaConnectedComponents_8cxx_source.html#l00071">retrieveDimension()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aef3b0f4003591b1e624ee66e4abf4cce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void retrieveDimension </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
+          <td class="paramname"><em>imageIO</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaConnectedComponents_8cxx_source.html#l00071">71</a> of file <a class="el" href="animaConnectedComponents_8cxx_source.html">animaConnectedComponents.cxx</a>.</p>
+
+<p>Referenced by <a class="el" href="animaConnectedComponents_8cxx_source.html#l00094">main()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 9 2014 06:20:21 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 15 2014 06:27:24 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

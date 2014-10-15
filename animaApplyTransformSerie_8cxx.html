@@ -92,6 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">animaApplyTransformSerie.cxx File Reference</div>  </div>
@@ -101,11 +102,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;itkImageFileReader.h&gt;</code><br/>
 <code>#include &lt;itkImageFileWriter.h&gt;</code><br/>
 <code>#include &lt;itkResampleImageFilter.h&gt;</code><br/>
-<code>#include &lt;<a class="el" href="animaTransformSeriesReader_8h_source.html">animaTransformSeriesReader.h</a>&gt;</code><br/>
 <code>#include &lt;itkNearestNeighborInterpolateImageFunction.h&gt;</code><br/>
 <code>#include &lt;itkLinearInterpolateImageFunction.h&gt;</code><br/>
+<code>#include &lt;itkExtractImageFilter.h&gt;</code><br/>
 <code>#include &lt;<a class="el" href="animaFasterLinearInterpolateImageFunction_8h_source.html">animaFasterLinearInterpolateImageFunction.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="animaResampleImageFilter_8h_source.html">animaResampleImageFilter.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="animaTransformSeriesReader_8h_source.html">animaTransformSeriesReader.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for animaApplyTransformSerie.cxx:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -113,17 +116,75 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="animaApplyTransformSerie_8cxx__incl.png" border="0" usemap="#animaApplyTransformSerie_8cxx" alt=""/></div>
 <map name="animaApplyTransformSerie_8cxx" id="animaApplyTransformSerie_8cxx">
-<area shape="rect" id="node6" href="animaTransformSeriesReader_8h.html" title="animaTransformSeriesReader.h" alt="" coords="667,88,869,115"/><area shape="rect" id="node26" href="animaFasterLinearInterpolateImageFunction_8h.html" title="animaFasterLinearInterpolate\lImageFunction.h" alt="" coords="1160,81,1349,122"/><area shape="rect" id="node29" href="animaResampleImageFilter_8h.html" title="animaResampleImageFilter.h" alt="" coords="1820,88,2009,115"/><area shape="rect" id="node8" href="animaTransformSeriesReader_8hxx.html" title="animaTransformSeriesReader.hxx" alt="" coords="661,171,875,197"/><area shape="rect" id="node9" href="tinyxml2_8h.html" title="tinyxml2.h" alt="" coords="833,253,911,280"/><area shape="rect" id="node21" href="animaVelocityUtils_8h.html" title="animaVelocityUtils.h" alt="" coords="554,253,691,280"/><area shape="rect" id="node22" href="animaVelocityUtils_8hxx.html" title="animaVelocityUtils.hxx" alt="" coords="548,344,696,371"/><area shape="rect" id="node36" href="animaResampleImageFilter_8hxx.html" title="animaResampleImageFilter.hxx" alt="" coords="2387,171,2588,197"/></map>
+<area shape="rect" id="node9" href="animaFasterLinearInterpolateImageFunction_8h.html" title="animaFasterLinearInterpolate\lImageFunction.h" alt="" coords="861,81,1051,122"/><area shape="rect" id="node14" href="animaResampleImageFilter_8h.html" title="animaResampleImageFilter.h" alt="" coords="1673,88,1863,115"/><area shape="rect" id="node28" href="animaTransformSeriesReader_8h.html" title="animaTransformSeriesReader.h" alt="" coords="2568,88,2771,115"/><area shape="rect" id="node46" href="animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="195,88,377,115"/><area shape="rect" id="node12" href="animaFasterLinearInterpolateImageFunction_8hxx.html" title="animaFasterLinearInterpolate\lImageFunction.hxx" alt="" coords="811,171,1000,213"/><area shape="rect" id="node21" href="animaResampleImageFilter_8hxx.html" title="animaResampleImageFilter.hxx" alt="" coords="1969,179,2169,205"/><area shape="rect" id="node30" href="animaTransformSeriesReader_8hxx.html" title="animaTransformSeriesReader.hxx" alt="" coords="2562,179,2776,205"/><area shape="rect" id="node31" href="tinyxml2_8h.html" title="tinyxml2.h" alt="" coords="2974,269,3052,296"/><area shape="rect" id="node43" href="animaVelocityUtils_8h.html" title="animaVelocityUtils.h" alt="" coords="2601,269,2737,296"/><area shape="rect" id="node44" href="animaVelocityUtils_8hxx.html" title="animaVelocityUtils.hxx" alt="" coords="2595,360,2743,387"/></map>
 </div>
 </div>
 <p><a href="animaApplyTransformSerie_8cxx_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structarguments.html">arguments</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aa4faa4edcbfcfc96447f1d0db28a6658"><td class="memTemplParams" colspan="2">template&lt;class ImageType &gt; </td></tr>
+<tr class="memitem:aa4faa4edcbfcfc96447f1d0db28a6658"><td class="memTemplItemLeft" align="right" valign="top">itk::SmartPointer&lt; ImageType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaApplyTransformSerie_8cxx.html#aa4faa4edcbfcfc96447f1d0db28a6658">applyScalarTransfo</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args, typename itk::SmartPointer&lt; ImageType &gt; geometryImage, typename itk::SmartPointer&lt; ImageType &gt; inputImage)</td></tr>
+<tr class="separator:aa4faa4edcbfcfc96447f1d0db28a6658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace7f414039e764f5229a85f450521d1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaApplyTransformSerie_8cxx.html#ace7f414039e764f5229a85f450521d1c">main</a> (int ac, const char **av)</td></tr>
 <tr class="separator:ace7f414039e764f5229a85f450521d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad12bc1b1f205e3a42fceb7825bd9594e"><td class="memTemplParams" colspan="2">template&lt;class PixelType &gt; </td></tr>
+<tr class="memitem:ad12bc1b1f205e3a42fceb7825bd9594e"><td class="memTemplItemLeft" align="right" valign="top">itk::Image&lt; PixelType, 3 &gt;::Pointer&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaApplyTransformSerie_8cxx.html#ad12bc1b1f205e3a42fceb7825bd9594e">process3DForGeometry3D</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
+<tr class="separator:ad12bc1b1f205e3a42fceb7825bd9594e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646081193b79022f5e03719dc35df2f1"><td class="memTemplParams" colspan="2">template&lt;class PixelType &gt; </td></tr>
+<tr class="memitem:a646081193b79022f5e03719dc35df2f1"><td class="memTemplItemLeft" align="right" valign="top">itk::Image&lt; PixelType, 4 &gt;::Pointer&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaApplyTransformSerie_8cxx.html#a646081193b79022f5e03719dc35df2f1">process4DForGeometry3D</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
+<tr class="separator:a646081193b79022f5e03719dc35df2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d9b8923ca5b4f6296ed32eacfa586c3"><td class="memTemplParams" colspan="2">template&lt;class PixelType &gt; </td></tr>
+<tr class="memitem:a4d9b8923ca5b4f6296ed32eacfa586c3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaApplyTransformSerie_8cxx.html#a4d9b8923ca5b4f6296ed32eacfa586c3">retrieveGeometryDimensions</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args, itk::ImageIOBase::Pointer inputImageIO, itk::ImageIOBase::Pointer geometryImageIO)</td></tr>
+<tr class="separator:a4d9b8923ca5b4f6296ed32eacfa586c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd33f68304f054ed3f9b3a1031124b0b"><td class="memTemplParams" colspan="2">template&lt;class PixelType &gt; </td></tr>
+<tr class="memitem:afd33f68304f054ed3f9b3a1031124b0b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaApplyTransformSerie_8cxx.html#afd33f68304f054ed3f9b3a1031124b0b">retrieveInputDimensionForGeometry3D</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args, itk::ImageIOBase::Pointer inputImageIO)</td></tr>
+<tr class="separator:afd33f68304f054ed3f9b3a1031124b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="aa4faa4edcbfcfc96447f1d0db28a6658"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ImageType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">itk::SmartPointer&lt;ImageType&gt; applyScalarTransfo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename itk::SmartPointer&lt; ImageType &gt;&#160;</td>
+          <td class="paramname"><em>geometryImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename itk::SmartPointer&lt; ImageType &gt;&#160;</td>
+          <td class="paramname"><em>inputImage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00028">28</a> of file <a class="el" href="animaApplyTransformSerie_8cxx_source.html">animaApplyTransformSerie.cxx</a>.</p>
+
+<p>References <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00019">arguments::invert</a>, <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00019">arguments::nearest</a>, <a class="el" href="classanima_1_1FasterLinearInterpolateImageFunction.html#abf17b89a6b48b3d70e9dc5fe7a2fe68a">anima::FasterLinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;::New()</a>, <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00020">arguments::pthread</a>, and <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00021">arguments::transfo</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ace7f414039e764f5229a85f450521d1c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -148,16 +209,128 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00013">13</a> of file <a class="el" href="animaApplyTransformSerie_8cxx_source.html">animaApplyTransformSerie.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00278">278</a> of file <a class="el" href="animaApplyTransformSerie_8cxx_source.html">animaApplyTransformSerie.cxx</a>.</p>
 
-<p>References <a class="el" href="classanima_1_1FasterLinearInterpolateImageFunction.html#abf17b89a6b48b3d70e9dc5fe7a2fe68a">anima::FasterLinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;::New()</a>.</p>
+<p>References <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00021">arguments::geometry</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00021">arguments::input</a>, <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00019">arguments::invert</a>, <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00019">arguments::nearest</a>, <a class="el" href="animaConcatenateImages_8cxx_source.html#l00014">arguments::output</a>, <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00020">arguments::pthread</a>, and <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00021">arguments::transfo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad12bc1b1f205e3a42fceb7825bd9594e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class PixelType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">itk::Image&lt;PixelType, 3&gt;::Pointer process3DForGeometry3D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00117">117</a> of file <a class="el" href="animaApplyTransformSerie_8cxx_source.html">animaApplyTransformSerie.cxx</a>.</p>
+
+<p>References <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00021">arguments::geometry</a>, and <a class="el" href="animaCropImage_8cxx_source.html#l00021">arguments::input</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a646081193b79022f5e03719dc35df2f1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class PixelType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">itk::Image&lt;PixelType, 4&gt;::Pointer process4DForGeometry3D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00134">134</a> of file <a class="el" href="animaApplyTransformSerie_8cxx_source.html">animaApplyTransformSerie.cxx</a>.</p>
+
+<p>References <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00021">arguments::geometry</a>, and <a class="el" href="animaCropImage_8cxx_source.html#l00021">arguments::input</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d9b8923ca5b4f6296ed32eacfa586c3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class PixelType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void retrieveGeometryDimensions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
+          <td class="paramname"><em>inputImageIO</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
+          <td class="paramname"><em>geometryImageIO</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00262">262</a> of file <a class="el" href="animaApplyTransformSerie_8cxx_source.html">animaApplyTransformSerie.cxx</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afd33f68304f054ed3f9b3a1031124b0b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class PixelType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void retrieveInputDimensionForGeometry3D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
+          <td class="paramname"><em>inputImageIO</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00234">234</a> of file <a class="el" href="animaApplyTransformSerie_8cxx_source.html">animaApplyTransformSerie.cxx</a>.</p>
+
+<p>References <a class="el" href="animaConcatenateImages_8cxx_source.html#l00014">arguments::output</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 9 2014 06:20:21 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 15 2014 06:27:24 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

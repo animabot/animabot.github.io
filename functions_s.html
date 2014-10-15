@@ -229,6 +229,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1DTINonCentralChiCostFunction.html#a58a3298151b6e8c94168d74cfa84c245">anima::DTINonCentralChiCostFunction</a>
 , <a class="el" href="classanima_1_1DTINonCentralChiEstimationImageFilter.html#a88965a3dc4fa5687ec30f4989b227a22">anima::DTINonCentralChiEstimationImageFilter&lt; PixelScalarType &gt;</a>
 , <a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#a6190af0a11d39bda8fd96917792d85c2">anima::DTIProbabilisticTractographyImageFilter</a>
+, <a class="el" href="classanima_1_1DTIScalarMapsImageFilter.html#a355cd7a87e04d327319bdc18c9c8c9db">anima::DTIScalarMapsImageFilter&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1dtiTractographyImageFilter.html#a2bf6fe8c628fb4cc6e63345fa4034082">anima::dtiTractographyImageFilter</a>
 , <a class="el" href="classanima_1_1DWISimulatorFromDTIImageFilter.html#a06c7563358ed9f59cba7177b0ee182bf">anima::DWISimulatorFromDTIImageFilter&lt; PixelScalarType &gt;</a>
 , <a class="el" href="classanima_1_1ExpTensorImageFilter.html#a66352c97442b6928795bd0a2025d28f9">anima::ExpTensorImageFilter&lt; TScalarType, NDimensions &gt;</a>
@@ -515,6 +516,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetComputationRegion()
 : <a class="el" href="classanima_1_1MaskedImageToImageFilter.html#a5881195451f0f0cea9f5b45a6641a83c">anima::MaskedImageToImageFilter&lt; TInputImage, TOutputImage &gt;</a>
+</li>
+<li>SetComputeFAImage()
+: <a class="el" href="classanima_1_1DTIScalarMapsImageFilter.html#a6637d82059c40685ccada1e2e533f6ed">anima::DTIScalarMapsImageFilter&lt; ImageDimension &gt;</a>
 </li>
 <li>SetComputeLocalColors()
 : <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a3a1dc9497e11ed9d8e707a3860446d41">anima::BaseProbabilisticTractographyImageFilter</a>
@@ -1348,7 +1352,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetOutputOrigin()
 : <a class="el" href="classanima_1_1OrientedModelBaseResampleImageFilter.html#a87ed10771b32a159c04e825907ac54e1">anima::OrientedModelBaseResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
-, <a class="el" href="classanima_1_1ResampleImageFilter.html#a5451e680bed7da397b9c1e13982a90da">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
+, <a class="el" href="classanima_1_1ResampleImageFilter.html#ac5a922e6ae5df50f811d32c60f206ea6">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
 </li>
 <li>SetOutputParametersFromImage()
 : <a class="el" href="classanima_1_1ResampleImageFilter.html#ad15e64a45c956f5ec49cad05eaed1464">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
@@ -1369,7 +1373,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetOutputSpacing()
 : <a class="el" href="classanima_1_1OrientedModelBaseResampleImageFilter.html#a94181f0e14c15b9eb822f11a1edf4dda">anima::OrientedModelBaseResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
-, <a class="el" href="classanima_1_1ResampleImageFilter.html#abdc4455394fda91703d18a4771553897">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
+, <a class="el" href="classanima_1_1ResampleImageFilter.html#a009e33fdbbd948aca15618e29115957c">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
 </li>
 <li>SetOutputStartIndex()
 : <a class="el" href="classanima_1_1ResampleImageFilter.html#a7350b6c24500749f10c7318d257bc442">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
@@ -1992,6 +1996,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1SymmetryConstrainedTransform.html#a7066d5fcc94fca57763cfa1dfbd16885">anima::SymmetryConstrainedTransform&lt; TScalarType &gt;</a>
 , <a class="el" href="classanima_1_1SymmetryPlaneTransform.html#a623468c325e9796d1f4336c2f3ae47f4">anima::SymmetryPlaneTransform&lt; TScalarType &gt;</a>
 </li>
+<li>spacing
+: <a class="el" href="structarguments.html#adb803d975cfa1d3b5faa64fc63c9cc29">arguments</a>
+</li>
 <li>SpacingType
 : <a class="el" href="classanima_1_1OrientedModelBaseResampleImageFilter.html#a260c6234cb4453d163651a22927bbcf2">anima::OrientedModelBaseResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidImageFilter.html#a8cce811ce2fbe047beb6ca064885640b">anima::PyramidImageFilter&lt; TInputImage, TOutputImage &gt;</a>
@@ -2001,7 +2008,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1SPANClusteringFilter.html#a1986a5d9def3904a3c048ab3fc35265c">anima::SPANClusteringFilter&lt; DataType, DataDimension &gt;</a>
 </li>
 <li>SphericalHarmonic()
-: <a class="el" href="classanima_1_1SphericalHarmonic.html#a165dfa5ccabddf3f4fa9b913e250ff35">anima::SphericalHarmonic</a>
+: <a class="el" href="classanima_1_1SphericalHarmonic.html#a56919ac678c549ad8145d5146e377942">anima::SphericalHarmonic</a>
 </li>
 <li>SplitAffine3DTransform()
 : <a class="el" href="classanima_1_1SplitAffine3DTransform.html#aec63313f251328d254e15ef85165af4c">anima::SplitAffine3DTransform&lt; TScalarType &gt;</a>
@@ -2072,6 +2079,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1DTINonCentralChiCostFunction.html#a35aafc9bdbd094041411f2b1e36f8f66">anima::DTINonCentralChiCostFunction</a>
 , <a class="el" href="classanima_1_1DTINonCentralChiEstimationImageFilter.html#a7af1d39168ddb6aff8bf6b542eabd49a">anima::DTINonCentralChiEstimationImageFilter&lt; PixelScalarType &gt;</a>
 , <a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#aab082c0bfce0314fb16866fcd9f8ea71">anima::DTIProbabilisticTractographyImageFilter</a>
+, <a class="el" href="classanima_1_1DTIScalarMapsImageFilter.html#a047c5aa5faef575caf7bfe1a8d3d6e74">anima::DTIScalarMapsImageFilter&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1dtiTractographyImageFilter.html#a9fdb1bdeebbd8914c688c72badebf4ab">anima::dtiTractographyImageFilter</a>
 , <a class="el" href="classanima_1_1DWISimulatorFromDTIImageFilter.html#a8db65331ea4c69ba0c5348f34b5da612">anima::DWISimulatorFromDTIImageFilter&lt; PixelScalarType &gt;</a>
 , <a class="el" href="classanima_1_1ExpTensorImageFilter.html#a13b6bac524c5f0023830a632252de97e">anima::ExpTensorImageFilter&lt; TScalarType, NDimensions &gt;</a>
@@ -2174,13 +2182,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1SymmetryConstrainedTransform.html#af93a0dc76e8643e7de19c0bab88e31d7">anima::SymmetryConstrainedTransform&lt; TScalarType &gt;</a>
 </li>
 <li>SymmetryPlaneTransform()
-: <a class="el" href="classanima_1_1SymmetryPlaneTransform.html#a109a191a842aebcec892a1edb8c82bc9">anima::SymmetryPlaneTransform&lt; TScalarType &gt;</a>
+: <a class="el" href="classanima_1_1SymmetryPlaneTransform.html#a60dd6f80cc12017ece8cba3d492ba302">anima::SymmetryPlaneTransform&lt; TScalarType &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 9 2014 06:20:23 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 15 2014 06:27:26 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

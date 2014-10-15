@@ -1,6 +1,7 @@
 var searchData=
 [
   ['whitespacemode',['WhitespaceMode',['../classtinyxml2_1_1XMLDocument.html#a94b3ea2f77c9ac831723984df5a02d01',1,'tinyxml2::XMLDocument']]],
+  ['write',['write',['../namespaceanima.html#ae71e9af9b33f466111c273ee92572b2a',1,'anima']]],
   ['writefileasmedinriafibers',['WriteFileAsMedinriaFibers',['../classanima_1_1FibersWriter.html#af3119d4aa6634539ef49829cebd5e0cd',1,'anima::FibersWriter']]],
   ['writefileasvtkascii',['WriteFileAsVTKAscii',['../classanima_1_1FibersWriter.html#a08ea6ccd86e0b213f4317c20799d2ecc',1,'anima::FibersWriter']]],
   ['writefileasvtkxml',['WriteFileAsVTKXML',['../classanima_1_1FibersWriter.html#ace5ac060878a4ca01ee5fa47e71b74fa',1,'anima::FibersWriter']]],

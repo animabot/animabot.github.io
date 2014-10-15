@@ -12,6 +12,7 @@ var searchData=
   ['dtinoncentralchicostfunction',['DTINonCentralChiCostFunction',['../classanima_1_1DTINonCentralChiCostFunction.html',1,'anima']]],
   ['dtinoncentralchiestimationimagefilter',['DTINonCentralChiEstimationImageFilter',['../classanima_1_1DTINonCentralChiEstimationImageFilter.html',1,'anima']]],
   ['dtiprobabilistictractographyimagefilter',['DTIProbabilisticTractographyImageFilter',['../classanima_1_1DTIProbabilisticTractographyImageFilter.html',1,'anima']]],
+  ['dtiscalarmapsimagefilter',['DTIScalarMapsImageFilter',['../classanima_1_1DTIScalarMapsImageFilter.html',1,'anima']]],
   ['dtitractographyimagefilter',['dtiTractographyImageFilter',['../classanima_1_1dtiTractographyImageFilter.html',1,'anima']]],
   ['dwisimulatorfromdtiimagefilter',['DWISimulatorFromDTIImageFilter',['../classanima_1_1DWISimulatorFromDTIImageFilter.html',1,'anima']]],
   ['dynarray',['DynArray',['../classtinyxml2_1_1DynArray.html',1,'tinyxml2']]],
