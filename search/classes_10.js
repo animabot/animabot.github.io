@@ -10,6 +10,7 @@ var searchData=
   ['simublochspgre',['SimuBlochSPGRE',['../classanima_1_1SimuBlochSPGRE.html',1,'anima']]],
   ['smoothingrecursiveyvvgaussianimagefilter',['SmoothingRecursiveYvvGaussianImageFilter',['../classanima_1_1SmoothingRecursiveYvvGaussianImageFilter.html',1,'anima']]],
   ['spanclusteringfilter',['SPANClusteringFilter',['../classanima_1_1SPANClusteringFilter.html',1,'anima']]],
+  ['spectralclusteringfilter',['SpectralClusteringFilter',['../classanima_1_1SpectralClusteringFilter.html',1,'anima']]],
   ['sphericalharmonic',['SphericalHarmonic',['../classanima_1_1SphericalHarmonic.html',1,'anima']]],
   ['splitaffine3dtransform',['SplitAffine3DTransform',['../classanima_1_1SplitAffine3DTransform.html',1,'anima']]],
   ['stimulatedspinechoimagefilter',['StimulatedSpinEchoImageFilter',['../classanima_1_1StimulatedSpinEchoImageFilter.html',1,'anima']]],

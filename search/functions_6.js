@@ -20,5 +20,6 @@ var searchData=
   ['floatattribute',['FloatAttribute',['../classtinyxml2_1_1XMLElement.html#a33b69f123f995aff966d2e351bc51b1f',1,'tinyxml2::XMLElement']]],
   ['floatvalue',['FloatValue',['../classtinyxml2_1_1XMLAttribute.html#ae3d51ff98eacc1dc46efcfdaee5c84ad',1,'tinyxml2::XMLAttribute']]],
   ['free',['Free',['../classtinyxml2_1_1MemPool.html#a49e3bfac2cba2ebd6776b31e571f64f7',1,'tinyxml2::MemPool::Free()'],['../classtinyxml2_1_1MemPoolT.html#a4f1a0c434e9e3d7391e5c16ed4ee8c70',1,'tinyxml2::MemPoolT::Free()']]],
-  ['fromstring',['fromString',['../classGenericArguments.html#a92e42100ca3da23ab5afe4e2c1fd0142',1,'GenericArguments']]]
+  ['fromstring',['fromString',['../classGenericArguments.html#a92e42100ca3da23ab5afe4e2c1fd0142',1,'GenericArguments']]],
+  ['fuzzycmeansfilter',['FuzzyCMeansFilter',['../classanima_1_1FuzzyCMeansFilter.html#aef521262d1981982a4d82549e99f2c10',1,'anima::FuzzyCMeansFilter']]]
 ];

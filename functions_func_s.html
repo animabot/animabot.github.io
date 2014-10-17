@@ -591,6 +591,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>SetFixedImageRegion()
 : <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#a179b023a3f7918549955756939099b4e">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
 </li>
+<li>SetFlagSpectralClustering()
+: <a class="el" href="classanima_1_1FuzzyCMeansFilter.html#a7825f0940d02cf56fd566aff12fae8d0">anima::FuzzyCMeansFilter&lt; ScalarType &gt;</a>
+</li>
 <li>SetFlipAngle()
 : <a class="el" href="classanima_1_1EPGSignalSimulator.html#ac906d85f396d34eb24e95159055ea9f2">anima::EPGSignalSimulator</a>
 , <a class="el" href="classanima_1_1StimulatedSpinEchoImageFilter.html#a96f9c3c0b6f83df24f1c2cd2a856e3cd">anima::StimulatedSpinEchoImageFilter&lt; TImage, TOutputImage &gt;</a>
@@ -706,9 +709,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetInputData()
 : <a class="el" href="classanima_1_1FibersWriter.html#aebbea5a716e0697d843b23142c2c7f8c">anima::FibersWriter</a>
+, <a class="el" href="classanima_1_1FuzzyCMeansFilter.html#a7ad74ab6833463049ba1147a1cdd49fb">anima::FuzzyCMeansFilter&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1KMeansFilter.html#af0b4820cfd28e368abc4590e523788e8">anima::KMeansFilter&lt; DataType, PointDimension &gt;</a>
 , <a class="el" href="classanima_1_1ModularityClusteringFilter.html#a271604f53f6bf2dec745db434cb0245d">anima::ModularityClusteringFilter&lt; DataType &gt;</a>
 , <a class="el" href="classanima_1_1SPANClusteringFilter.html#aed625bca7b737547eeb74082b90fa93d">anima::SPANClusteringFilter&lt; DataType, DataDimension &gt;</a>
+, <a class="el" href="classanima_1_1SpectralClusteringFilter.html#a36b95f03b6c644f47e8be83893e9f6f0">anima::SpectralClusteringFilter&lt; ScalarType &gt;</a>
 </li>
 <li>SetInputFileNames()
 : <a class="el" href="classanima_1_1LowMemoryCramersTestBridge.html#a85a09f8b87b81661005d86cf237604e3">anima::LowMemoryCramersTestBridge</a>
@@ -909,7 +914,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1T2EPGRelaxometryEstimationImageFilter.html#ad5091c4d064370ca3f61dba27500dbdc">anima::T2EPGRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 </li>
 <li>SetMaxIterations()
-: <a class="el" href="classanima_1_1KMeansFilter.html#af5b45263cb5c552f0238a5d60d90c636">anima::KMeansFilter&lt; DataType, PointDimension &gt;</a>
+: <a class="el" href="classanima_1_1FuzzyCMeansFilter.html#ab8a242e2b42785d929c366a9216778eb">anima::FuzzyCMeansFilter&lt; ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1KMeansFilter.html#af5b45263cb5c552f0238a5d60d90c636">anima::KMeansFilter&lt; DataType, PointDimension &gt;</a>
+, <a class="el" href="classanima_1_1SpectralClusteringFilter.html#a90626a51f232bbffdd64d96f4c5d49e1">anima::SpectralClusteringFilter&lt; ScalarType &gt;</a>
 </li>
 <li>SetMaxLengthFiber()
 : <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a7701724e193d4d443bd5d120c50e2576">anima::BaseProbabilisticTractographyImageFilter</a>
@@ -997,8 +1004,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>SetMovingImageMask()
 : <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#ac52857795f2c653c000f97232d764282">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
 </li>
+<li>SetMValue()
+: <a class="el" href="classanima_1_1FuzzyCMeansFilter.html#a6595c963012759637efc7ff5bca1dba6">anima::FuzzyCMeansFilter&lt; ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1SpectralClusteringFilter.html#a1be373b9c31e42f923be69189bbc6897">anima::SpectralClusteringFilter&lt; ScalarType &gt;</a>
+</li>
 <li>SetName()
 : <a class="el" href="classtinyxml2_1_1XMLElement.html#a97712009a530d8cb8a63bf705f02b4f1">tinyxml2::XMLElement</a>
+</li>
+<li>SetNbClass()
+: <a class="el" href="classanima_1_1FuzzyCMeansFilter.html#ae2d985171b058c3fc812c8cc0c40819a">anima::FuzzyCMeansFilter&lt; ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1SpectralClusteringFilter.html#afcd2240fdfffa35932b424af266a9c82">anima::SpectralClusteringFilter&lt; ScalarType &gt;</a>
 </li>
 <li>SetNbFibres()
 : <a class="el" href="classanima_1_1DDICostFunction.html#a9f124fa634a9ed3b689c32b46e3b5ff8">anima::DDICostFunction</a>
@@ -1219,7 +1234,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetOutputSpacing()
 : <a class="el" href="classanima_1_1OrientedModelBaseResampleImageFilter.html#a94181f0e14c15b9eb822f11a1edf4dda">anima::OrientedModelBaseResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
-, <a class="el" href="classanima_1_1ResampleImageFilter.html#abdc4455394fda91703d18a4771553897">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
+, <a class="el" href="classanima_1_1ResampleImageFilter.html#a009e33fdbbd948aca15618e29115957c">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
 </li>
 <li>SetOutputStartIndex()
 : <a class="el" href="classanima_1_1ResampleImageFilter.html#a7350b6c24500749f10c7318d257bc442">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
@@ -1284,6 +1299,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>SetProximityThreshold()
 : <a class="el" href="classanima_1_1PickLesionSeedImageFilter.html#a839082e1e2e6ef4ffb68385d45d3e9aa">anima::PickLesionSeedImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 </li>
+<li>SetPseudoSphericalDistance()
+: <a class="el" href="classanima_1_1FuzzyCMeansFilter.html#a2a807588515f65f1494a771930258b02">anima::FuzzyCMeansFilter&lt; ScalarType &gt;</a>
+</li>
 <li>SetPValueThreshold()
 : <a class="el" href="classanima_1_1BackgroundNoiseVarianceEstimationImageFilter.html#a763fee1aafd649fffcf12bba4a40fdff">anima::BackgroundNoiseVarianceEstimationImageFilter&lt; TInputImage &gt;</a>
 , <a class="el" href="classanima_1_1DTINonCentralChiEstimationImageFilter.html#ad7ca8fa68a9f41d472b82af5d8db42f0">anima::DTINonCentralChiEstimationImageFilter&lt; PixelScalarType &gt;</a>
@@ -1321,6 +1339,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>SetRelStdDevGaussianNoise()
 : <a class="el" href="classanima_1_1GaussianNoiseGeneratorImageFilter.html#a81b49a03f8f64a2d4997f19d93cc7a5c">anima::GaussianNoiseGeneratorImageFilter&lt; Dimension &gt;</a>
 , <a class="el" href="classanima_1_1NonCentralChiNoiseGeneratorImageFilter.html#a6893cf3621910177c7f15ccf20b581aa">anima::NonCentralChiNoiseGeneratorImageFilter&lt; Dimension &gt;</a>
+</li>
+<li>SetRelStopCriterion()
+: <a class="el" href="classanima_1_1FuzzyCMeansFilter.html#a18308cc806b0aa12f09b8e4a7518f262">anima::FuzzyCMeansFilter&lt; ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1SpectralClusteringFilter.html#a171ae3e06bb31a1eddc8a065762bc780">anima::SpectralClusteringFilter&lt; ScalarType &gt;</a>
 </li>
 <li>SetRemoveDegeneratedTensors()
 : <a class="el" href="classanima_1_1DTIEstimationImageFilter.html#a24721ba582b68f8197dc323441a299ec">anima::DTIEstimationImageFilter&lt; PixelScalarType &gt;</a>
@@ -1452,6 +1474,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>SetSigmaArray()
 : <a class="el" href="classanima_1_1SmoothingRecursiveYvvGaussianImageFilter.html#a4cf6c4a0eb98337e39d34b585da51633">anima::SmoothingRecursiveYvvGaussianImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 </li>
+<li>SetSigmaWeighting()
+: <a class="el" href="classanima_1_1SpectralClusteringFilter.html#a18cf177f57120a25e7f81aa6f6563421">anima::SpectralClusteringFilter&lt; ScalarType &gt;</a>
+</li>
 <li>SetSimilarity()
 : <a class="el" href="classanima_1_1DDIModelAveragingImageFilter.html#a8aade74cfb0ad36d9d314ad874a41455">anima::DDIModelAveragingImageFilter&lt; PixelScalarType &gt;</a>
 </li>
@@ -1530,7 +1555,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetT1FlipAngles()
 : <a class="el" href="classanima_1_1CombinedRelaxometryCostFunction.html#ab13472d27a880ea82d693b32e8855541">anima::CombinedRelaxometryCostFunction</a>
-, <a class="el" href="classanima_1_1CombinedRelaxometryEstimationImageFilter.html#af8d3d6ed4fe9c905b0eef7114e40c839">anima::CombinedRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
+, <a class="el" href="classanima_1_1CombinedRelaxometryEstimationImageFilter.html#a8ae060e5f0096976accfc95d1db48b5a">anima::CombinedRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 </li>
 <li>SetT1Map()
 : <a class="el" href="classanima_1_1T2EPGRelaxometryEstimationImageFilter.html#aececdd40cfc418f7a85c43527746d9df">anima::T2EPGRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
@@ -1734,7 +1759,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1NonLocalMeansTemporalImageFilter.html#a14895996505556dfae526f16b5e5224a">anima::NonLocalMeansTemporalImageFilter&lt; TInputImage &gt;</a>
 </li>
 <li>SetVerbose()
-: <a class="el" href="classanima_1_1KMeansFilter.html#acd9c29b79638d1dc175a35676a0b6b13">anima::KMeansFilter&lt; DataType, PointDimension &gt;</a>
+: <a class="el" href="classanima_1_1FuzzyCMeansFilter.html#aa0301af16f760325a757fe75559eb9d4">anima::FuzzyCMeansFilter&lt; ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1KMeansFilter.html#acd9c29b79638d1dc175a35676a0b6b13">anima::KMeansFilter&lt; DataType, PointDimension &gt;</a>
+, <a class="el" href="classanima_1_1SpectralClusteringFilter.html#a1561947a54e5e037c513e00f9e72d231">anima::SpectralClusteringFilter&lt; ScalarType &gt;</a>
 </li>
 <li>SetVerboseLevel()
 : <a class="el" href="classanima_1_1NLOPTOptimizers.html#a21880d0db2db7c31be0c2c8a8e94d2a7">anima::NLOPTOptimizers</a>
@@ -1824,6 +1851,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>SPANClusteringFilter()
 : <a class="el" href="classanima_1_1SPANClusteringFilter.html#a1986a5d9def3904a3c048ab3fc35265c">anima::SPANClusteringFilter&lt; DataType, DataDimension &gt;</a>
 </li>
+<li>SpectralClusteringFilter()
+: <a class="el" href="classanima_1_1SpectralClusteringFilter.html#a194648fc81eda8d54119c22eee8329d0">anima::SpectralClusteringFilter&lt; ScalarType &gt;</a>
+</li>
 <li>SphericalHarmonic()
 : <a class="el" href="classanima_1_1SphericalHarmonic.html#a165dfa5ccabddf3f4fa9b913e250ff35">anima::SphericalHarmonic</a>
 </li>
@@ -1865,13 +1895,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1SymmetryConstrainedTransform.html#af93a0dc76e8643e7de19c0bab88e31d7">anima::SymmetryConstrainedTransform&lt; TScalarType &gt;</a>
 </li>
 <li>SymmetryPlaneTransform()
-: <a class="el" href="classanima_1_1SymmetryPlaneTransform.html#a60dd6f80cc12017ece8cba3d492ba302">anima::SymmetryPlaneTransform&lt; TScalarType &gt;</a>
+: <a class="el" href="classanima_1_1SymmetryPlaneTransform.html#a19cb6a75566ea8f71c0a3fcb69b10a1b">anima::SymmetryPlaneTransform&lt; TScalarType &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 15 2014 06:27:26 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 17 2014 06:22:34 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
