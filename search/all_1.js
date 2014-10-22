@@ -63,6 +63,7 @@ var searchData=
   ['animabootstrap4dvolume_2ecxx',['animaBootstrap4DVolume.cxx',['../animaBootstrap4DVolume_8cxx.html',1,'']]],
   ['animabootstrap4dvolumeimagefilter_2eh',['animaBootstrap4DVolumeImageFilter.h',['../animaBootstrap4DVolumeImageFilter_8h.html',1,'']]],
   ['animabootstrap4dvolumeimagefilter_2ehxx',['animaBootstrap4DVolumeImageFilter.hxx',['../animaBootstrap4DVolumeImageFilter_8hxx.html',1,'']]],
+  ['animacollapseimage_2ecxx',['animaCollapseImage.cxx',['../animaCollapseImage_8cxx.html',1,'']]],
   ['animacombinedrelaxometrycostfunction_2ecxx',['animaCombinedRelaxometryCostFunction.cxx',['../animaCombinedRelaxometryCostFunction_8cxx.html',1,'']]],
   ['animacombinedrelaxometrycostfunction_2eh',['animaCombinedRelaxometryCostFunction.h',['../animaCombinedRelaxometryCostFunction_8h.html',1,'']]],
   ['animacombinedrelaxometryestimation_2ecxx',['animaCombinedRelaxometryEstimation.cxx',['../animaCombinedRelaxometryEstimation_8cxx.html',1,'']]],

@@ -1,7 +1,7 @@
 <map id="commands" name="commands">
 <area shape="rect" id="node2" href="dir_2a9767ec868500287b9b31b0e836587e.html" title="connected_components" alt="" coords="859,63,1017,111"/>
 <area shape="rect" id="node9" href="dir_cba819e852300327c79ea2428eabdb99.html" title="math&#45;tools" alt="" coords="897,159,979,207"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000030_000006.html" title="1" alt="" coords="943,133,951,148"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000031_000006.html" title="1" alt="" coords="943,133,951,148"/>
 <area shape="rect" id="node3" href="dir_7dc02f2aa1f2534e085db3924977a72a.html" title="dice_measure" alt="" coords="733,63,835,111"/>
 <area shape="rect" id="node4" href="dir_3acf2dd521355377603a8cd888528915.html" title="distance_map" alt="" coords="606,63,708,111"/>
 <area shape="rect" id="node5" href="dir_98c8146a7892eff4447e1fc257c47f33.html" title="kmeans_clustering" alt="" coords="453,63,581,111"/>

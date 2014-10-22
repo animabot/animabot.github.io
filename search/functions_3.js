@@ -14,6 +14,7 @@ var searchData=
   ['clearinequalityconstraints',['ClearInequalityConstraints',['../classanima_1_1NLOPTOptimizers.html#ad6a3b4b502f4786e4573aeaaf4741300',1,'anima::NLOPTOptimizers']]],
   ['closeelement',['CloseElement',['../classtinyxml2_1_1XMLPrinter.html#aed6cce4bd414a78b3e2a824803c3ec42',1,'tinyxml2::XMLPrinter']]],
   ['closingtype',['ClosingType',['../classtinyxml2_1_1XMLElement.html#a2e3d9f938307a05963d7c4b8cd55754e',1,'tinyxml2::XMLElement']]],
+  ['collapse',['collapse',['../animaCollapseImage_8cxx.html#aca4077d95c4c3f16fe063a4cdd519942',1,'animaCollapseImage.cxx']]],
   ['combinedrelaxometrycostfunction',['CombinedRelaxometryCostFunction',['../classanima_1_1CombinedRelaxometryCostFunction.html#a032d511d5ce5fc5bb7a731a05379bef3',1,'anima::CombinedRelaxometryCostFunction']]],
   ['combinedrelaxometryestimationimagefilter',['CombinedRelaxometryEstimationImageFilter',['../classanima_1_1CombinedRelaxometryEstimationImageFilter.html#a98601c019a6c2d822ef53456554de92a',1,'anima::CombinedRelaxometryEstimationImageFilter']]],
   ['commanditerationupdate',['CommandIterationUpdate',['../classCommandIterationUpdate.html#a3b6dc4b6e947779a656ce69152377a70',1,'CommandIterationUpdate::CommandIterationUpdate()'],['../classCommandIterationUpdate.html#a3b6dc4b6e947779a656ce69152377a70',1,'CommandIterationUpdate::CommandIterationUpdate()']]],

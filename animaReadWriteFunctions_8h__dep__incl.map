@@ -1,7 +1,8 @@
 <map id="animaReadWriteFunctions.h" name="animaReadWriteFunctions.h">
 <area shape="rect" id="node2" href="$animaComputeDTIScalarMaps_8cxx.html" title="animaComputeDTIScalarMaps.cxx" alt="" coords="5,80,224,107"/>
-<area shape="rect" id="node3" href="$animaConcatenateImages_8cxx.html" title="animaConcatenateImages.cxx" alt="" coords="249,80,444,107"/>
-<area shape="rect" id="node4" href="$animaCropImage_8cxx.html" title="animaCropImage.cxx" alt="" coords="469,80,611,107"/>
-<area shape="rect" id="node5" href="$animaApplyTransformSerie_8cxx.html" title="animaApplyTransformSerie.cxx" alt="" coords="635,80,833,107"/>
-<area shape="rect" id="node6" href="$animaConnectedComponents_8cxx.html" title="animaConnectedComponents.cxx" alt="" coords="859,80,1072,107"/>
+<area shape="rect" id="node3" href="$animaCollapseImage_8cxx.html" title="animaCollapseImage.cxx" alt="" coords="249,80,412,107"/>
+<area shape="rect" id="node4" href="$animaConcatenateImages_8cxx.html" title="animaConcatenateImages.cxx" alt="" coords="437,80,632,107"/>
+<area shape="rect" id="node5" href="$animaCropImage_8cxx.html" title="animaCropImage.cxx" alt="" coords="657,80,799,107"/>
+<area shape="rect" id="node6" href="$animaApplyTransformSerie_8cxx.html" title="animaApplyTransformSerie.cxx" alt="" coords="823,80,1021,107"/>
+<area shape="rect" id="node7" href="$animaConnectedComponents_8cxx.html" title="animaConnectedComponents.cxx" alt="" coords="1047,80,1260,107"/>
 </map>
