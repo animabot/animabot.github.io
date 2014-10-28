@@ -124,20 +124,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        itk::TimeProbe tmpTime;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        tmpTime.Start();</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        threader-&gt;SetNumberOfThreads(this-&gt;GetNumberOfThreads());</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        threader-&gt;SetSingleMethod(this-&gt;ThreadedMatching, &amp;data);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        threader-&gt;SingleMethodExecute();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        tmpTime.Stop();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Matching performed in &quot;</span> &lt;&lt; tmpTime.GetTotal() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        this-&gt;GetAgregator()-&gt;SetInputWeights(this-&gt;GetBlockWeights());</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        this-&gt;GetAgregator()-&gt;SetInputTransforms(this-&gt;GetBaseTransformsPointers());</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        addOn = this-&gt;GetAgregator()-&gt;GetOutput();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;} <span class="comment">// end namespace anima</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numThreads = std::min(this-&gt;GetNumberOfThreads(),(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)this-&gt;GetBlockRegions().size());</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        threader-&gt;SetNumberOfThreads(numThreads);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        threader-&gt;SetSingleMethod(this-&gt;ThreadedMatching, &amp;data);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        threader-&gt;SingleMethodExecute();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        tmpTime.Stop();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Matching performed in &quot;</span> &lt;&lt; tmpTime.GetTotal() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        this-&gt;GetAgregator()-&gt;SetInputWeights(this-&gt;GetBlockWeights());</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        this-&gt;GetAgregator()-&gt;SetInputTransforms(this-&gt;GetBaseTransformsPointers());</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        addOn = this-&gt;GetAgregator()-&gt;GetOutput();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <span class="comment">// end namespace anima</span></div>
 <div class="ttc" id="structanima_1_1BlockMatchingBaseRegistrationMethod_1_1ThreadedMatchData_html_af5d0fa64f5f3480ff6e7213efdf57265"><div class="ttname"><a href="structanima_1_1BlockMatchingBaseRegistrationMethod_1_1ThreadedMatchData.html#af5d0fa64f5f3480ff6e7213efdf57265">anima::BlockMatchingBaseRegistrationMethod::ThreadedMatchData::BlockMatch</a></div><div class="ttdeci">Self * BlockMatch</div><div class="ttdef"><b>Definition:</b> <a href="animaBlockMatchingBaseRegistrationMethod_8h_source.html#l00234">animaBlockMatchingBaseRegistrationMethod.h:234</a></div></div>
 <div class="ttc" id="structanima_1_1BlockMatchingBaseRegistrationMethod_1_1ThreadedMatchData_html_a96d7cb513428c6e44cad7b73b22b98ff"><div class="ttname"><a href="structanima_1_1BlockMatchingBaseRegistrationMethod_1_1ThreadedMatchData.html#a96d7cb513428c6e44cad7b73b22b98ff">anima::BlockMatchingBaseRegistrationMethod::ThreadedMatchData::fixedImage</a></div><div class="ttdeci">InputImageType * fixedImage</div><div class="ttdef"><b>Definition:</b> <a href="animaBlockMatchingBaseRegistrationMethod_8h_source.html#l00235">animaBlockMatchingBaseRegistrationMethod.h:235</a></div></div>
 <div class="ttc" id="classanima_1_1AsymmetricBlockMatchingRegistrationMethod_html_a5eb77a3912e0962ad2515f8d2d00d9bb"><div class="ttname"><a href="classanima_1_1AsymmetricBlockMatchingRegistrationMethod.html#a5eb77a3912e0962ad2515f8d2d00d9bb">anima::AsymmetricBlockMatchingRegistrationMethod::AsymmetricBlockMatchingRegistrationMethod</a></div><div class="ttdeci">AsymmetricBlockMatchingRegistrationMethod()</div><div class="ttdef"><b>Definition:</b> <a href="animaAsymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00010">animaAsymmetricBlockMatchingRegistrationMethod.hxx:10</a></div></div>
@@ -149,7 +151,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 22 2014 06:23:11 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 28 2014 06:23:01 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
