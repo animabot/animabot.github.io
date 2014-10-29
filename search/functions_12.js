@@ -9,7 +9,7 @@ var searchData=
   ['recursivelineyvvgaussianimagefilter',['RecursiveLineYvvGaussianImageFilter',['../classanima_1_1RecursiveLineYvvGaussianImageFilter.html#a8eb3bdd3a8159c7866fc7404701c8323',1,'anima::RecursiveLineYvvGaussianImageFilter']]],
   ['regionblockgenerator',['RegionBlockGenerator',['../classanima_1_1BlockMatchingInitializer.html#a95e3b015859a5cf069077c26066a734f',1,'anima::BlockMatchingInitializer']]],
   ['removeextension',['removeExtension',['../animaGetDDIComponent_8cxx.html#af7528b069bd6fc877bcb57d9ba0b4792',1,'animaGetDDIComponent.cxx']]],
-  ['resampleimagefilter',['ResampleImageFilter',['../classanima_1_1ResampleImageFilter.html#abd2ffd5ac25ed356a28c501bcf69b89e',1,'anima::ResampleImageFilter']]],
+  ['resampleimagefilter',['ResampleImageFilter',['../classanima_1_1ResampleImageFilter.html#aff53b662ca63c51001d601ba0acc110f',1,'anima::ResampleImageFilter']]],
   ['resampleimages',['ResampleImages',['../classanima_1_1BlockMatchingBaseRegistrationMethod.html#a692d1ac7ad8335a5eda1123aa040f098',1,'anima::BlockMatchingBaseRegistrationMethod::ResampleImages()'],['../classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a717734945478a8a039a6d8fa02134e15',1,'anima::TensorBlockMatchingBaseRegistrationMethod::ResampleImages()']]],
   ['rescue_5f',['rescue_',['../classanima_1_1BobyqaOptimizer.html#addf664887e6b24fa0967161565620617',1,'anima::BobyqaOptimizer']]],
   ['resetclassesmemberships',['ResetClassesMemberships',['../classanima_1_1FuzzyCMeansFilter.html#a3854de17e566f679f4671bbe4f8fb091',1,'anima::FuzzyCMeansFilter::ResetClassesMemberships()'],['../classanima_1_1KMeansFilter.html#acf4634153b2aa7618a39d706c8aba66c',1,'anima::KMeansFilter::ResetClassesMemberships()']]],
