@@ -120,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">typedef</span> itk::VectorImage&lt;ComponentType, InputDim&gt; InputImageType;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">typedef</span> itk::Image&lt;ComponentType, InputDim+1&gt; OutputImageType;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">typename</span> InputImageType::Pointer inputImg = anima::read&lt;InputImageType&gt;(args.<a class="code" href="structarguments.html#a78d8f68365158fe74fa2e64da230beaa">input</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">typename</span> InputImageType::Pointer inputImg = anima::readImage&lt;InputImageType&gt;(args.<a class="code" href="structarguments.html#a78d8f68365158fe74fa2e64da230beaa">input</a>);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbComp = imageIO-&gt;GetNumberOfComponents();</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;number of dimension : &quot;</span> &lt;&lt; InputDim &lt;&lt; std::endl;</div>
@@ -184,7 +184,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        ++fillItr; ++srcItr;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    anima::write&lt;OutputImageType&gt;(args.<a class="code" href="structarguments.html#a62af88ecd8390f94a17b625718a941a0">output</a>, outputImg);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    anima::writeImage&lt;OutputImageType&gt;(args.<a class="code" href="structarguments.html#a62af88ecd8390f94a17b625718a941a0">output</a>, outputImg);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> ComponentType &gt;</div>
@@ -337,7 +337,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 29 2014 06:23:09 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 10 2014 06:29:24 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

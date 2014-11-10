@@ -759,9 +759,9 @@ Functions</h2></td></tr>
 <tr class="separator:a2ca200d132f4925847e0da50b5990c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4a6130a6d21d1eac906fb5bf24bbbb5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanima.html#af4a6130a6d21d1eac906fb5bf24bbbb5">psi_function</a> (unsigned int n, double emc)</td></tr>
 <tr class="separator:af4a6130a6d21d1eac906fb5bf24bbbb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a460153baad6d2c913e28a6f26e235b98"><td class="memTemplParams" colspan="2">template&lt;class ImageType &gt; </td></tr>
-<tr class="memitem:a460153baad6d2c913e28a6f26e235b98"><td class="memTemplItemLeft" align="right" valign="top">itk::SmartPointer&lt; ImageType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a460153baad6d2c913e28a6f26e235b98">read</a> (std::string filename)</td></tr>
-<tr class="separator:a460153baad6d2c913e28a6f26e235b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61459188ca4bdb80490feb50696afdbd"><td class="memTemplParams" colspan="2">template&lt;class ImageType &gt; </td></tr>
+<tr class="memitem:a61459188ca4bdb80490feb50696afdbd"><td class="memTemplItemLeft" align="right" valign="top">itk::SmartPointer&lt; ImageType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a61459188ca4bdb80490feb50696afdbd">readImage</a> (std::string filename)</td></tr>
+<tr class="separator:a61459188ca4bdb80490feb50696afdbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9855e18846dcc42ff426c7e75f77555"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 &gt; </td></tr>
 <tr class="memitem:ad9855e18846dcc42ff426c7e75f77555"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#ad9855e18846dcc42ff426c7e75f77555">RecomposeTensor</a> (vnl_diag_matrix&lt; T1 &gt; &amp;eigs, vnl_matrix&lt; T1 &gt; &amp;eigVecs, vnl_matrix&lt; T2 &gt; &amp;resMatrix)</td></tr>
 <tr class="memdesc:ad9855e18846dcc42ff426c7e75f77555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recompose tensor from values extracted using SymmetricEigenAnalysis (vnl_symmetric_eigensystem transposes all this)  <a href="#ad9855e18846dcc42ff426c7e75f77555">More...</a><br/></td></tr>
@@ -855,9 +855,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a0d58d8f97c2c8d07f7bb4527ae67a921"><td class="memTemplParams" colspan="2">template&lt;class ScalarType , unsigned int Dimension&gt; </td></tr>
 <tr class="memitem:a0d58d8f97c2c8d07f7bb4527ae67a921"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a0d58d8f97c2c8d07f7bb4527ae67a921">VMFDistance</a> (const itk::Point&lt; ScalarType, Dimension &gt; &amp;muFirst, const double &amp;kappaFirst, const itk::Point&lt; ScalarType, Dimension &gt; &amp;muSec, const double &amp;kappaSec)</td></tr>
 <tr class="separator:a0d58d8f97c2c8d07f7bb4527ae67a921"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae71e9af9b33f466111c273ee92572b2a"><td class="memTemplParams" colspan="2">template&lt;class OutputImageType &gt; </td></tr>
-<tr class="memitem:ae71e9af9b33f466111c273ee92572b2a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#ae71e9af9b33f466111c273ee92572b2a">write</a> (std::string filename, OutputImageType *img)</td></tr>
-<tr class="separator:ae71e9af9b33f466111c273ee92572b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf60e54c58de5a86189e969a4cb5b610"><td class="memTemplParams" colspan="2">template&lt;class OutputImageType &gt; </td></tr>
+<tr class="memitem:acf60e54c58de5a86189e969a4cb5b610"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#acf60e54c58de5a86189e969a4cb5b610">writeImage</a> (std::string filename, OutputImageType *img)</td></tr>
+<tr class="separator:acf60e54c58de5a86189e969a4cb5b610"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac341bd69a70af69030fcf86cac5cbc60"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:ac341bd69a70af69030fcf86cac5cbc60"><td class="memTemplItemLeft" align="right" valign="top">ANIMASPECIALFUNCTIONS_EXPORT double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">xi</a> (const T &amp;k)</td></tr>
 <tr class="separator:ac341bd69a70af69030fcf86cac5cbc60"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5540,14 +5540,14 @@ template&lt;class T1 , class T2 , class T3 &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a460153baad6d2c913e28a6f26e235b98"></a>
+<a class="anchor" id="a61459188ca4bdb80490feb50696afdbd"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class ImageType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">itk::SmartPointer&lt;ImageType&gt; anima::read </td>
+          <td class="memname">itk::SmartPointer&lt;ImageType&gt; anima::readImage </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>filename</em></td><td>)</td>
@@ -5557,8 +5557,6 @@ template&lt;class ImageType &gt; </div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="animaReadWriteFunctions_8h_source.html#l00011">11</a> of file <a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>.</p>
-
-<p>Referenced by <a class="el" href="tinyxml2_8cxx_source.html#l01602">tinyxml2::XMLDocument::LoadFile()</a>.</p>
 
 </div>
 </div>
@@ -6746,14 +6744,14 @@ template&lt;class ScalarType , unsigned int Dimension&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ae71e9af9b33f466111c273ee92572b2a"></a>
+<a class="anchor" id="acf60e54c58de5a86189e969a4cb5b610"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class OutputImageType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void anima::write </td>
+          <td class="memname">void anima::writeImage </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>filename</em>, </td>
@@ -6772,7 +6770,7 @@ template&lt;class OutputImageType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaReadWriteFunctions_8h_source.html#l00029">29</a> of file <a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>.</p>
+<p>Definition at line <a class="el" href="animaReadWriteFunctions_8h_source.html#l00027">27</a> of file <a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>.</p>
 
 </div>
 </div>
@@ -6866,7 +6864,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 29 2014 06:23:12 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 10 2014 06:29:27 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

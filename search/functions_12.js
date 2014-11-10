@@ -2,8 +2,8 @@ var searchData=
 [
   ['randomgeometryinitialization',['RandomGeometryInitialization',['../classanima_1_1DDICostFunction.html#a74905634b32afd13c6e19a5dd0a3aa13',1,'anima::DDICostFunction']]],
   ['randomorientationinitializationfromdti',['RandomOrientationInitializationFromDTI',['../classanima_1_1DDICostFunction.html#a81420116dabe05b197446c70498857d0',1,'anima::DDICostFunction']]],
-  ['read',['read',['../namespaceanima.html#a460153baad6d2c913e28a6f26e235b98',1,'anima']]],
   ['readbom',['ReadBOM',['../classtinyxml2_1_1XMLUtil.html#ae9bcb2bc3cd6475fdc644c8c17790555',1,'tinyxml2::XMLUtil']]],
+  ['readimage',['readImage',['../namespaceanima.html#a61459188ca4bdb80490feb50696afdbd',1,'anima']]],
   ['readlesionsizesdistributions',['ReadLesionSizesDistributions',['../classanima_1_1QMRISampleCreationImageFilter.html#a5fe051b51ae8a4d5c309f1863d83ed59',1,'anima::QMRISampleCreationImageFilter']]],
   ['recomposetensor',['RecomposeTensor',['../namespaceanima.html#ad9855e18846dcc42ff426c7e75f77555',1,'anima']]],
   ['recursivelineyvvgaussianimagefilter',['RecursiveLineYvvGaussianImageFilter',['../classanima_1_1RecursiveLineYvvGaussianImageFilter.html#a8eb3bdd3a8159c7866fc7404701c8323',1,'anima::RecursiveLineYvvGaussianImageFilter']]],

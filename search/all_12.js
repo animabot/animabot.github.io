@@ -2,8 +2,8 @@ var searchData=
 [
   ['randomgeometryinitialization',['RandomGeometryInitialization',['../classanima_1_1DDICostFunction.html#a74905634b32afd13c6e19a5dd0a3aa13',1,'anima::DDICostFunction']]],
   ['randomorientationinitializationfromdti',['RandomOrientationInitializationFromDTI',['../classanima_1_1DDICostFunction.html#a81420116dabe05b197446c70498857d0',1,'anima::DDICostFunction']]],
-  ['read',['read',['../namespaceanima.html#a460153baad6d2c913e28a6f26e235b98',1,'anima']]],
   ['readbom',['ReadBOM',['../classtinyxml2_1_1XMLUtil.html#ae9bcb2bc3cd6475fdc644c8c17790555',1,'tinyxml2::XMLUtil']]],
+  ['readimage',['readImage',['../namespaceanima.html#a61459188ca4bdb80490feb50696afdbd',1,'anima']]],
   ['readlesionsizesdistributions',['ReadLesionSizesDistributions',['../classanima_1_1QMRISampleCreationImageFilter.html#a5fe051b51ae8a4d5c309f1863d83ed59',1,'anima::QMRISampleCreationImageFilter']]],
   ['realcastingfiltertype',['RealCastingFilterType',['../classanima_1_1InhomogeneousDiffusionImageFilter.html#abac8fc5925de753c0ff9792057829e54',1,'anima::InhomogeneousDiffusionImageFilter']]],
   ['realimagetype',['RealImageType',['../classanima_1_1InhomogeneousDiffusionImageFilter.html#afc4365cc0f9ae534130cc0ea3d47181a',1,'anima::InhomogeneousDiffusionImageFilter::RealImageType()'],['../classanima_1_1SmoothingRecursiveYvvGaussianImageFilter.html#a8649036511f4756bfdefdebe9f2ca28d',1,'anima::SmoothingRecursiveYvvGaussianImageFilter::RealImageType()']]],
