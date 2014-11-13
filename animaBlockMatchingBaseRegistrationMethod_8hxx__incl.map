@@ -1,20 +1,20 @@
 <map id="animaBlockMatchingBaseRegistrationMethod.hxx" name="animaBlockMatchingBaseRegistrationMethod.hxx">
-<area shape="rect" id="node2" href="$animaSmoothingRecursiveYvvGaussianImageFilter_8h.html" title="animaSmoothingRecursiveYvv\lGaussianImageFilter.h" alt="" coords="405,97,600,138"/>
-<area shape="rect" id="node10" href="$animaResampleImageFilter_8h.html" title="animaResampleImageFilter.h" alt="" coords="1572,104,1761,131"/>
-<area shape="rect" id="node19" href="$animaFasterLinearInterpolateImageFunction_8h.html" title="animaFasterLinearInterpolate\lImageFunction.h" alt="" coords="2291,97,2480,138"/>
-<area shape="rect" id="node22" href="$animaVoxelExhaustiveOptimizer_8h.html" title="animaVoxelExhaustiveOptimizer.h" alt="" coords="2595,104,2809,131"/>
-<area shape="rect" id="node26" href="$animaBobyqaOptimizer_8h.html" title="animaBobyqaOptimizer.h" alt="" coords="2897,104,3061,131"/>
-<area shape="rect" id="node29" href="$animaFastCorrelationImageToImageMetric_8h.html" title="animaFastCorrelationImage\lToImageMetric.h" alt="" coords="3187,97,3367,138"/>
-<area shape="rect" id="node36" href="$animaLogRigid3DTransform_8h.html" title="animaLogRigid3DTransform.h" alt="" coords="3921,104,4111,131"/>
-<area shape="rect" id="node40" href="$animaMatrixLogExp_8h.html" title="animaMatrixLogExp.h" alt="" coords="3628,277,3772,304"/>
-<area shape="rect" id="node45" href="$animaSplitAffine3DTransform_8h.html" title="animaSplitAffine3DTransform.h" alt="" coords="4189,277,4387,304"/>
-<area shape="rect" id="node47" href="$animaVelocityUtils_8h.html" title="animaVelocityUtils.h" alt="" coords="4247,104,4384,131"/>
+<area shape="rect" id="node2" href="$animaSmoothingRecursiveYvvGaussianImageFilter_8h.html" title="animaSmoothingRecursiveYvv\lGaussianImageFilter.h" alt="" coords="434,97,629,138"/>
+<area shape="rect" id="node11" href="$animaResampleImageFilter_8h.html" title="animaResampleImageFilter.h" alt="" coords="1583,104,1772,131"/>
+<area shape="rect" id="node20" href="$animaFasterLinearInterpolateImageFunction_8h.html" title="animaFasterLinearInterpolate\lImageFunction.h" alt="" coords="2292,97,2481,138"/>
+<area shape="rect" id="node23" href="$animaVoxelExhaustiveOptimizer_8h.html" title="animaVoxelExhaustiveOptimizer.h" alt="" coords="2875,104,3089,131"/>
+<area shape="rect" id="node27" href="$animaBobyqaOptimizer_8h.html" title="animaBobyqaOptimizer.h" alt="" coords="2664,104,2828,131"/>
+<area shape="rect" id="node29" href="$animaFastCorrelationImageToImageMetric_8h.html" title="animaFastCorrelationImage\lToImageMetric.h" alt="" coords="3134,97,3313,138"/>
+<area shape="rect" id="node36" href="$animaLogRigid3DTransform_8h.html" title="animaLogRigid3DTransform.h" alt="" coords="3934,104,4124,131"/>
+<area shape="rect" id="node40" href="$animaMatrixLogExp_8h.html" title="animaMatrixLogExp.h" alt="" coords="3477,277,3621,304"/>
+<area shape="rect" id="node45" href="$animaSplitAffine3DTransform_8h.html" title="animaSplitAffine3DTransform.h" alt="" coords="4021,277,4219,304"/>
+<area shape="rect" id="node47" href="$animaVelocityUtils_8h.html" title="animaVelocityUtils.h" alt="" coords="4210,104,4347,131"/>
 <area shape="rect" id="node3" href="$animaRecursiveLineYvvGaussianImageFilter_8h.html" title="animaRecursiveLineYvvGaussian\lImageFilter.h" alt="" coords="625,187,835,229"/>
-<area shape="rect" id="node9" href="$animaSmoothingRecursiveYvvGaussianImageFilter_8hxx.html" title="animaSmoothingRecursiveYvv\lGaussianImageFilter.hxx" alt="" coords="405,187,600,229"/>
-<area shape="rect" id="node17" href="$animaResampleImageFilter_8hxx.html" title="animaResampleImageFilter.hxx" alt="" coords="1797,195,1997,221"/>
-<area shape="rect" id="node21" href="$animaFasterLinearInterpolateImageFunction_8hxx.html" title="animaFasterLinearInterpolate\lImageFunction.hxx" alt="" coords="2291,187,2480,229"/>
-<area shape="rect" id="node33" href="$animaFastCorrelationImageToImageMetric_8hxx.html" title="animaFastCorrelationImage\lToImageMetric.hxx" alt="" coords="3606,187,3785,229"/>
-<area shape="rect" id="node39" href="$animaLogRigid3DTransform_8hxx.html" title="animaLogRigid3DTransform.hxx" alt="" coords="3861,195,4064,221"/>
-<area shape="rect" id="node44" href="$animaMatrixLogExp_8hxx.html" title="animaMatrixLogExp.hxx" alt="" coords="3539,360,3695,387"/>
-<area shape="rect" id="node46" href="$animaSplitAffine3DTransform_8hxx.html" title="animaSplitAffine3DTransform.hxx" alt="" coords="4240,360,4449,387"/>
+<area shape="rect" id="node10" href="$animaSmoothingRecursiveYvvGaussianImageFilter_8hxx.html" title="animaSmoothingRecursiveYvv\lGaussianImageFilter.hxx" alt="" coords="243,187,439,229"/>
+<area shape="rect" id="node18" href="$animaResampleImageFilter_8hxx.html" title="animaResampleImageFilter.hxx" alt="" coords="1121,195,1321,221"/>
+<area shape="rect" id="node22" href="$animaFasterLinearInterpolateImageFunction_8hxx.html" title="animaFasterLinearInterpolate\lImageFunction.hxx" alt="" coords="2292,187,2481,229"/>
+<area shape="rect" id="node33" href="$animaFastCorrelationImageToImageMetric_8hxx.html" title="animaFastCorrelationImage\lToImageMetric.hxx" alt="" coords="3553,187,3732,229"/>
+<area shape="rect" id="node39" href="$animaLogRigid3DTransform_8hxx.html" title="animaLogRigid3DTransform.hxx" alt="" coords="3859,195,4061,221"/>
+<area shape="rect" id="node44" href="$animaMatrixLogExp_8hxx.html" title="animaMatrixLogExp.hxx" alt="" coords="3279,360,3435,387"/>
+<area shape="rect" id="node46" href="$animaSplitAffine3DTransform_8hxx.html" title="animaSplitAffine3DTransform.hxx" alt="" coords="4015,360,4224,387"/>
 </map>
