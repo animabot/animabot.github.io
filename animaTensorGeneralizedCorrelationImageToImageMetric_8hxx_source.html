@@ -296,69 +296,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    FixedIteratorType ti( fixedImage, this-&gt;GetFixedImageRegion() );</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    this-&gt;m_NumberOfPixelsCounted = this-&gt;GetFixedImageRegion().GetSize()[0];</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1;i &lt; TFixedImage::GetImageDimension();++i)</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        this-&gt;m_NumberOfPixelsCounted *= this-&gt;GetFixedImageRegion().GetSize()[i];</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    m_FixedImagePoints.resize(this-&gt;m_NumberOfPixelsCounted);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    m_FixedImageValues.resize(this-&gt;m_NumberOfPixelsCounted);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    this-&gt;m_NumberOfPixelsCounted = this-&gt;GetFixedImageRegion().GetNumberOfPixels();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    m_FixedImagePoints.resize(this-&gt;m_NumberOfPixelsCounted);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    m_FixedImageValues.resize(this-&gt;m_NumberOfPixelsCounted);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <a class="code" href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#a660035f58ee670315ac84ecbc37a6001">InputPointType</a> inputPoint;</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <a class="code" href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#a660035f58ee670315ac84ecbc37a6001">InputPointType</a> inputPoint;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">while</span>(!ti.IsAtEnd())</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        fixedImage-&gt;TransformIndexToPhysicalPoint( ti.GetIndex(), inputPoint );</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        m_FixedImagePoints[pos] = inputPoint;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        m_FixedImageValues[pos] = ti.Get();</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; vectorSize;++i)</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            m_FixedMean[i] += m_FixedImageValues[pos][i];</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i;j &lt; vectorSize;++j)</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                covarianceMatrix(i,j) += m_FixedImageValues[pos][i] * m_FixedImageValues[pos][j];</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        ++ti;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        ++pos;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; vectorSize;++i)</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i;j &lt; vectorSize;++j)</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            covarianceMatrix(i,j) = (covarianceMatrix(i,j) - m_FixedMean[i] * m_FixedMean[j] / this-&gt;m_NumberOfPixelsCounted) / (this-&gt;m_NumberOfPixelsCounted - 1.0);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; vectorSize;++i)</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    {</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        m_FixedMean[i] /= this-&gt;m_NumberOfPixelsCounted;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i+1;j &lt; vectorSize;++j)</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            covarianceMatrix(j,i) = covarianceMatrix(i,j);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    itk::SymmetricEigenAnalysis &lt; vnl_matrix &lt;double&gt;, vnl_diag_matrix&lt;double&gt;, vnl_matrix &lt;double&gt; &gt; eigenComputer(vectorSize);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    vnl_matrix &lt;double&gt; eVec(vectorSize,vectorSize);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    vnl_diag_matrix &lt;double&gt; eVals(vectorSize);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    eigenComputer.ComputeEigenValuesAndVectors(covarianceMatrix, eVals, eVec);</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; vectorSize;++i)</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        eVals[i] = pow(eVals[i], -0.5);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <a class="code" href="namespaceanima.html#ad9855e18846dcc42ff426c7e75f77555">anima::RecomposeTensor</a>(eVals,eVec,m_FixedHalfInvCovarianceMatrix);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="keyword">template</span> &lt; <span class="keyword">class</span> TFixedImagePixelType, <span class="keyword">class</span> TMovingImagePixelType, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ImageDimension &gt;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<a class="code" href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#ae7138b83faebb0b36da46ad8443751a8">TensorGeneralizedCorrelationImageToImageMetric&lt;TFixedImagePixelType,TMovingImagePixelType,ImageDimension&gt;</a></div>
-<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#ae7138b83faebb0b36da46ad8443751a8">  263</a></span>&#160;<a class="code" href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#ae7138b83faebb0b36da46ad8443751a8">::PrintSelf</a>(std::ostream&amp; os, itk::Indent indent)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    Superclass::PrintSelf(os, indent);</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    os &lt;&lt; indent &lt;&lt; m_FixedMean &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    os &lt;&lt; indent &lt;&lt; m_FixedHalfInvCovarianceMatrix &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;} <span class="comment">// end of namespace anima</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">while</span>(!ti.IsAtEnd())</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        fixedImage-&gt;TransformIndexToPhysicalPoint( ti.GetIndex(), inputPoint );</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        m_FixedImagePoints[pos] = inputPoint;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        m_FixedImageValues[pos] = ti.Get();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; vectorSize;++i)</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            m_FixedMean[i] += m_FixedImageValues[pos][i];</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i;j &lt; vectorSize;++j)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                covarianceMatrix(i,j) += m_FixedImageValues[pos][i] * m_FixedImageValues[pos][j];</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        ++ti;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        ++pos;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; vectorSize;++i)</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i;j &lt; vectorSize;++j)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            covarianceMatrix(i,j) = (covarianceMatrix(i,j) - m_FixedMean[i] * m_FixedMean[j] / this-&gt;m_NumberOfPixelsCounted) / (this-&gt;m_NumberOfPixelsCounted - 1.0);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; vectorSize;++i)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        m_FixedMean[i] /= this-&gt;m_NumberOfPixelsCounted;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i+1;j &lt; vectorSize;++j)</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            covarianceMatrix(j,i) = covarianceMatrix(i,j);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    itk::SymmetricEigenAnalysis &lt; vnl_matrix &lt;double&gt;, vnl_diag_matrix&lt;double&gt;, vnl_matrix &lt;double&gt; &gt; eigenComputer(vectorSize);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    vnl_matrix &lt;double&gt; eVec(vectorSize,vectorSize);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    vnl_diag_matrix &lt;double&gt; eVals(vectorSize);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    eigenComputer.ComputeEigenValuesAndVectors(covarianceMatrix, eVals, eVec);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; vectorSize;++i)</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        eVals[i] = pow(eVals[i], -0.5);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <a class="code" href="namespaceanima.html#ad9855e18846dcc42ff426c7e75f77555">anima::RecomposeTensor</a>(eVals,eVec,m_FixedHalfInvCovarianceMatrix);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;}</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="keyword">template</span> &lt; <span class="keyword">class</span> TFixedImagePixelType, <span class="keyword">class</span> TMovingImagePixelType, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ImageDimension &gt;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<a class="code" href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#ae7138b83faebb0b36da46ad8443751a8">TensorGeneralizedCorrelationImageToImageMetric&lt;TFixedImagePixelType,TMovingImagePixelType,ImageDimension&gt;</a></div>
+<div class="line"><a name="l00261"></a><span class="lineno"><a class="line" href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#ae7138b83faebb0b36da46ad8443751a8">  261</a></span>&#160;<a class="code" href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#ae7138b83faebb0b36da46ad8443751a8">::PrintSelf</a>(std::ostream&amp; os, itk::Indent indent)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    Superclass::PrintSelf(os, indent);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    os &lt;&lt; indent &lt;&lt; m_FixedMean &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    os &lt;&lt; indent &lt;&lt; m_FixedHalfInvCovarianceMatrix &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;} <span class="comment">// end of namespace anima</span></div>
 <div class="ttc" id="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric_html_ae5ba8301a618377571f41138fcc74077"><div class="ttname"><a href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#ae5ba8301a618377571f41138fcc74077">anima::TensorGeneralizedCorrelationImageToImageMetric::FixedImageConstPointer</a></div><div class="ttdeci">Superclass::FixedImageConstPointer FixedImageConstPointer</div><div class="ttdef"><b>Definition:</b> <a href="animaTensorGeneralizedCorrelationImageToImageMetric_8h_source.html#l00057">animaTensorGeneralizedCorrelationImageToImageMetric.h:57</a></div></div>
 <div class="ttc" id="animaBackgroundNoiseVarianceEstimationImageFilter_8h_html_afa99ec4acc4ecb2dc3c2d05da15d0e3f"><div class="ttname"><a href="animaBackgroundNoiseVarianceEstimationImageFilter_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a></div><div class="ttdeci">#define MAX(a, b)</div><div class="ttdef"><b>Definition:</b> <a href="animaBackgroundNoiseVarianceEstimationImageFilter_8h_source.html#l00015">animaBackgroundNoiseVarianceEstimationImageFilter.h:15</a></div></div>
 <div class="ttc" id="namespaceanima_html_aa4473f4d26359aa733d23a615e6bf652"><div class="ttname"><a href="namespaceanima.html#aa4473f4d26359aa733d23a615e6bf652">anima::ovlScore</a></div><div class="ttdeci">double ovlScore(vnl_diag_matrix&lt; T1 &gt; &amp;eigsX, vnl_matrix&lt; T1 &gt; &amp;eigVecsX, vnl_diag_matrix&lt; T1 &gt; &amp;eigsY, vnl_matrix&lt; T1 &gt; &amp;eigVecsY)</div><div class="ttdef"><b>Definition:</b> <a href="animaBaseTensorTools_8hxx_source.html#l00214">animaBaseTensorTools.hxx:214</a></div></div>
@@ -370,7 +368,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespaceanima_html_a5531bbc22467dd42d8faa25d8121dc9e"><div class="ttname"><a href="namespaceanima.html#a5531bbc22467dd42d8faa25d8121dc9e">anima::RotateSymmetricMatrix</a></div><div class="ttdeci">void RotateSymmetricMatrix(vnl_matrix&lt; T1 &gt; &amp;tensor, vnl_matrix&lt; T2 &gt; &amp;rotationMatrix, vnl_matrix&lt; T2 &gt; &amp;rotated_tensor)</div><div class="ttdef"><b>Definition:</b> <a href="animaBaseTensorTools_8hxx_source.html#l00186">animaBaseTensorTools.hxx:186</a></div></div>
 <div class="ttc" id="namespaceanima_html_a3e0c95cf3b70dde9b0d8acdaffdd8dcc"><div class="ttname"><a href="namespaceanima.html#a3e0c95cf3b70dde9b0d8acdaffdd8dcc">anima::GetTensorFromVectorRepresentation</a></div><div class="ttdeci">void GetTensorFromVectorRepresentation(const itk::VariableLengthVector&lt; T1 &gt; &amp;vector, vnl_matrix&lt; T2 &gt; &amp;tensor, unsigned int tensDim=0, bool scale=false)</div><div class="ttdef"><b>Definition:</b> <a href="animaBaseTensorTools_8hxx_source.html#l00096">animaBaseTensorTools.hxx:96</a></div></div>
 <div class="ttc" id="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric_html_aa225a9d70bce8734380da2ade02f00e8"><div class="ttname"><a href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#aa225a9d70bce8734380da2ade02f00e8">anima::TensorGeneralizedCorrelationImageToImageMetric::TransformParametersType</a></div><div class="ttdeci">Superclass::TransformParametersType TransformParametersType</div><div class="ttdef"><b>Definition:</b> <a href="animaTensorGeneralizedCorrelationImageToImageMetric_8h_source.html#l00047">animaTensorGeneralizedCorrelationImageToImageMetric.h:47</a></div></div>
-<div class="ttc" id="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric_html_ae7138b83faebb0b36da46ad8443751a8"><div class="ttname"><a href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#ae7138b83faebb0b36da46ad8443751a8">anima::TensorGeneralizedCorrelationImageToImageMetric::PrintSelf</a></div><div class="ttdeci">void PrintSelf(std::ostream &amp;os, itk::Indent indent) const </div><div class="ttdef"><b>Definition:</b> <a href="animaTensorGeneralizedCorrelationImageToImageMetric_8hxx_source.html#l00263">animaTensorGeneralizedCorrelationImageToImageMetric.hxx:263</a></div></div>
+<div class="ttc" id="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric_html_ae7138b83faebb0b36da46ad8443751a8"><div class="ttname"><a href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#ae7138b83faebb0b36da46ad8443751a8">anima::TensorGeneralizedCorrelationImageToImageMetric::PrintSelf</a></div><div class="ttdeci">void PrintSelf(std::ostream &amp;os, itk::Indent indent) const </div><div class="ttdef"><b>Definition:</b> <a href="animaTensorGeneralizedCorrelationImageToImageMetric_8hxx_source.html#l00261">animaTensorGeneralizedCorrelationImageToImageMetric.hxx:261</a></div></div>
 <div class="ttc" id="namespaceanima_html_ad9855e18846dcc42ff426c7e75f77555"><div class="ttname"><a href="namespaceanima.html#ad9855e18846dcc42ff426c7e75f77555">anima::RecomposeTensor</a></div><div class="ttdeci">void RecomposeTensor(vnl_diag_matrix&lt; T1 &gt; &amp;eigs, vnl_matrix&lt; T1 &gt; &amp;eigVecs, vnl_matrix&lt; T2 &gt; &amp;resMatrix)</div><div class="ttdoc">Recompose tensor from values extracted using SymmetricEigenAnalysis (vnl_symmetric_eigensystem transp...</div><div class="ttdef"><b>Definition:</b> <a href="animaBaseTensorTools_8hxx_source.html#l00165">animaBaseTensorTools.hxx:165</a></div></div>
 <div class="ttc" id="animaTensorGeneralizedCorrelationImageToImageMetric_8h_html"><div class="ttname"><a href="animaTensorGeneralizedCorrelationImageToImageMetric_8h.html">animaTensorGeneralizedCorrelationImageToImageMetric.h</a></div></div>
 <div class="ttc" id="namespaceanima_html_a74d0c8fefb8ce8dc21068833d7fab0d9"><div class="ttname"><a href="namespaceanima.html#a74d0c8fefb8ce8dc21068833d7fab0d9">anima::ExtractRotationFromMatrixTransform</a></div><div class="ttdeci">void ExtractRotationFromMatrixTransform(itk::MatrixOffsetTransformBase&lt; PixelRawType, ImageDimension, ImageDimension &gt; *trsf, vnl_matrix&lt; double &gt; &amp;rotationMatrix, vnl_matrix&lt; double &gt; &amp;tmpMat)</div><div class="ttdef"><b>Definition:</b> <a href="animaBaseTensorTools_8hxx_source.html#l00126">animaBaseTensorTools.hxx:126</a></div></div>
@@ -384,7 +382,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 13 2014 06:23:13 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 15 2014 06:22:53 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
