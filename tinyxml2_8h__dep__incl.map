@@ -1,8 +1,9 @@
 <map id="tinyxml2.h" name="tinyxml2.h">
-<area shape="rect" id="node2" href="$tinyxml2_8cxx.html" title="tinyxml2.cxx" alt="" coords="116,80,207,107"/>
-<area shape="rect" id="node3" href="$animaTransformSeriesReader_8hxx.html" title="animaTransformSeriesReader.hxx" alt="" coords="231,80,445,107"/>
-<area shape="rect" id="node4" href="$animaTransformSeriesReader_8h.html" title="animaTransformSeriesReader.h" alt="" coords="237,155,440,181"/>
+<area shape="rect" id="node2" href="$tinyxml2_8cxx.html" title="tinyxml2.cxx" alt="" coords="240,80,331,107"/>
+<area shape="rect" id="node3" href="$animaTransformSeriesReader_8hxx.html" title="animaTransformSeriesReader.hxx" alt="" coords="355,80,569,107"/>
+<area shape="rect" id="node4" href="$animaTransformSeriesReader_8h.html" title="animaTransformSeriesReader.h" alt="" coords="361,155,564,181"/>
 <area shape="rect" id="node5" href="$animaApplyTransformSerie_8cxx.html" title="animaApplyTransformSerie.cxx" alt="" coords="5,237,203,264"/>
 <area shape="rect" id="node6" href="$animaDDIApplyTransformSerie_8cxx.html" title="animaDDIApplyTransformSerie.cxx" alt="" coords="228,237,449,264"/>
-<area shape="rect" id="node7" href="$animaTensorApplyTransformSerie_8cxx.html" title="animaTensorApplyTransform\lSerie.cxx" alt="" coords="473,230,660,271"/>
+<area shape="rect" id="node7" href="$animaODFApplyTransformSerie_8cxx.html" title="animaODFApplyTransformSerie.cxx" alt="" coords="473,237,700,264"/>
+<area shape="rect" id="node8" href="$animaTensorApplyTransformSerie_8cxx.html" title="animaTensorApplyTransform\lSerie.cxx" alt="" coords="724,230,911,271"/>
 </map>

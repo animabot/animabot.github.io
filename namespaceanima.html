@@ -170,6 +170,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1FiniteStrainDDIResampleImageFilter.html">FiniteStrainDDIResampleImageFilter</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1FiniteStrainODFResampleImageFilter.html">FiniteStrainODFResampleImageFilter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1FiniteStrainTensorResampleImageFilter.html">FiniteStrainTensorResampleImageFilter</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1FuzzyCMeansFilter.html">FuzzyCMeansFilter</a></td></tr>
@@ -623,8 +625,8 @@ Functions</h2></td></tr>
 <tr class="separator:ae219b09b9e80591c1338ab7312c1d485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed1606b651f468444fa651e028471c0c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanima.html#aed1606b651f468444fa651e028471c0c">GetDValue</a> (unsigned int l, int m, int mp, double angle)</td></tr>
 <tr class="separator:aed1606b651f468444fa651e028471c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b0d3d96c2f12f97b868243d695fccda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a8b0d3d96c2f12f97b868243d695fccda">GetEulerAnglesFromJacobianMatrix</a> (vnl_matrix&lt; double &gt; &amp;J, std::vector&lt; double &gt; &amp;resVal)</td></tr>
-<tr class="separator:a8b0d3d96c2f12f97b868243d695fccda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef5b5e6753a8a7996e43e7194d0415df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanima.html#aef5b5e6753a8a7996e43e7194d0415df">GetEulerAnglesFromRotationMatrix</a> (vnl_matrix&lt; double &gt; &amp;R, std::vector&lt; double &gt; &amp;resVal)</td></tr>
+<tr class="separator:aef5b5e6753a8a7996e43e7194d0415df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56005f620363d6e825943faa42fdfd89"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a56005f620363d6e825943faa42fdfd89"><td class="memTemplItemLeft" align="right" valign="top">vnl_matrix&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a56005f620363d6e825943faa42fdfd89">GetExponential</a> (const vnl_matrix&lt; T &gt; &amp;m, const int numApprox=1)</td></tr>
 <tr class="memdesc:a56005f620363d6e825943faa42fdfd89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computation of the matrix exponential. Algo: classical scaling and squaring, as in Matlab. See Higham, SIAM Matr. Anal., 2004.  <a href="#a56005f620363d6e825943faa42fdfd89">More...</a><br/></td></tr>
@@ -3328,9 +3330,11 @@ template&lt;class VectorType , class ScalarType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaODFFunctions_8cxx_source.html#l00172">172</a> of file <a class="el" href="animaODFFunctions_8cxx_source.html">animaODFFunctions.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaODFFunctions_8cxx_source.html#l00155">155</a> of file <a class="el" href="animaODFFunctions_8cxx_source.html">animaODFFunctions.cxx</a>.</p>
 
-<p>References <a class="el" href="animaODFFunctions_8cxx_source.html#l00117">GetDValue()</a>.</p>
+<p>References <a class="el" href="animaODFFunctions_8cxx_source.html#l00100">GetDValue()</a>.</p>
+
+<p>Referenced by <a class="el" href="animaFiniteStrainODFResampleImageFilter_8hxx_source.html#l00020">anima::FiniteStrainODFResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;::RotateInterpolatedModel()</a>.</p>
 
 </div>
 </div>
@@ -3972,21 +3976,21 @@ template&lt;class ScalarType , unsigned int NDimensions, unsigned int NDegreesOf
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaODFFunctions_8cxx_source.html#l00117">117</a> of file <a class="el" href="animaODFFunctions_8cxx_source.html">animaODFFunctions.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaODFFunctions_8cxx_source.html#l00100">100</a> of file <a class="el" href="animaODFFunctions_8cxx_source.html">animaODFFunctions.cxx</a>.</p>
 
-<p>Referenced by <a class="el" href="animaODFFunctions_8cxx_source.html#l00172">EstimateLocalODFRotationMatrix()</a>.</p>
+<p>Referenced by <a class="el" href="animaODFFunctions_8cxx_source.html#l00155">EstimateLocalODFRotationMatrix()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8b0d3d96c2f12f97b868243d695fccda"></a>
+<a class="anchor" id="aef5b5e6753a8a7996e43e7194d0415df"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ANIMASHTOOLS_EXPORT void anima::GetEulerAnglesFromJacobianMatrix </td>
+          <td class="memname">ANIMASHTOOLS_EXPORT void anima::GetEulerAnglesFromRotationMatrix </td>
           <td>(</td>
           <td class="paramtype">vnl_matrix&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>J</em>, </td>
+          <td class="paramname"><em>R</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -4004,7 +4008,7 @@ template&lt;class ScalarType , unsigned int NDimensions, unsigned int NDegreesOf
 
 <p>Definition at line <a class="el" href="animaODFFunctions_8cxx_source.html#l00075">75</a> of file <a class="el" href="animaODFFunctions_8cxx_source.html">animaODFFunctions.cxx</a>.</p>
 
-<p>References <a class="el" href="animaBaseTensorTools_8hxx_source.html#l00165">RecomposeTensor()</a>.</p>
+<p>Referenced by <a class="el" href="animaFiniteStrainODFResampleImageFilter_8hxx_source.html#l00020">anima::FiniteStrainODFResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;::RotateInterpolatedModel()</a>.</p>
 
 </div>
 </div>
@@ -5596,7 +5600,7 @@ template&lt;class T1 , class T2 &gt; </div>
 
 <p>Definition at line <a class="el" href="animaBaseTensorTools_8hxx_source.html#l00165">165</a> of file <a class="el" href="animaBaseTensorTools_8hxx_source.html">animaBaseTensorTools.hxx</a>.</p>
 
-<p>Referenced by <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00183">anima::OrientedModelBaseResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;::ComputeLocalRotationMatrix()</a>, <a class="el" href="animaBaseTensorTools_8hxx_source.html#l00126">ExtractRotationFromMatrixTransform()</a>, <a class="el" href="animaODFFunctions_8cxx_source.html#l00075">GetEulerAnglesFromJacobianMatrix()</a>, <a class="el" href="animaBaseTensorTools_8hxx_source.html#l00053">GetTensorExponential()</a>, <a class="el" href="animaBaseTensorTools_8hxx_source.html#l00010">GetTensorLogarithm()</a>, <a class="el" href="animaBaseTensorTools_8hxx_source.html#l00034">GetTensorPower()</a>, <a class="el" href="animaTensorGeneralizedCorrelationImageToImageMetric_8hxx_source.html#l00033">anima::TensorGeneralizedCorrelationImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;::GetValue()</a>, <a class="el" href="animaTensorGeneralizedCorrelationImageToImageMetric_8hxx_source.html#l00190">anima::TensorGeneralizedCorrelationImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;::PreComputeFixedValues()</a>, <a class="el" href="animaDistributionSampling_8hxx_source.html#l00061">SampleFromMultivariateGaussianDistribution()</a>, and <a class="el" href="animaSampleImageFromDistributionImageFilter_8hxx_source.html#l00048">anima::SampleImageFromDistributionImageFilter&lt; TInputPixelType &gt;::ThreadedGenerateData()</a>.</p>
+<p>Referenced by <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00183">anima::OrientedModelBaseResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;::ComputeLocalRotationMatrix()</a>, <a class="el" href="animaBaseTensorTools_8hxx_source.html#l00126">ExtractRotationFromMatrixTransform()</a>, <a class="el" href="animaBaseTensorTools_8hxx_source.html#l00053">GetTensorExponential()</a>, <a class="el" href="animaBaseTensorTools_8hxx_source.html#l00010">GetTensorLogarithm()</a>, <a class="el" href="animaBaseTensorTools_8hxx_source.html#l00034">GetTensorPower()</a>, <a class="el" href="animaTensorGeneralizedCorrelationImageToImageMetric_8hxx_source.html#l00033">anima::TensorGeneralizedCorrelationImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;::GetValue()</a>, <a class="el" href="animaTensorGeneralizedCorrelationImageToImageMetric_8hxx_source.html#l00190">anima::TensorGeneralizedCorrelationImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;::PreComputeFixedValues()</a>, <a class="el" href="animaDistributionSampling_8hxx_source.html#l00061">SampleFromMultivariateGaussianDistribution()</a>, and <a class="el" href="animaSampleImageFromDistributionImageFilter_8hxx_source.html#l00048">anima::SampleImageFromDistributionImageFilter&lt; TInputPixelType &gt;::ThreadedGenerateData()</a>.</p>
 
 </div>
 </div>
@@ -6864,7 +6868,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 15 2014 06:22:54 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 18 2014 06:23:10 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
