@@ -264,15 +264,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    std::vector &lt;double&gt; integrand(integrandSize,0);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> modelDimension = modelValue.size();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfCompartments = (modelDimension - 2) / <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfCompartments = (modelDimension - 4) / <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a>;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    VectorType compDir;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; 3;++i)</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        compDir[i] = 0;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    compDir[2] = 1.0;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">double</span> d = 1.0;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">double</span> w = modelValue[modelDimension - 1];</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">double</span> d = modelValue[modelDimension - 4];</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">double</span> w = modelValue[modelDimension - 3];</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">double</span> kappa = 0;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">double</span> nu = 0;</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
@@ -289,252 +289,253 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        kappa = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">KappaIndex</a>];</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        nu = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">AIndex</a>];</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">if</span> (nu &gt;= 1.0)</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            nu = 1.0 - 1e-4;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        w = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">WIndex</a>];</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">if</span> (w &gt; 0)</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            resVal += w * <a class="code" href="namespaceanima.html#ac9197e41f0321df0fddf98069017dade">ComputeSymmetricPDF</a>(direction, compDir, kappa, d, nu, step, integrand);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">return</span> resVal;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="namespaceanima.html#a2a976f77a2ffe37b09475396accc221f">  208</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T1, <span class="keyword">class</span> VectorType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a13945730c196f08752960462bfe9f64b">ComputeSymmetricCDF</a>(<span class="keyword">const</span> VectorType &amp;direction, <span class="keyword">const</span> T1 &amp;kappa, <span class="keyword">const</span> T1 &amp;lambda, <span class="keyword">const</span> T1 &amp;nu,</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                                                                 <span class="keyword">const</span> T1 &amp;bvalue, <span class="keyword">const</span> VectorType &amp;gradient)</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;{</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">double</span> resVal;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">double</span> vmfLambda = nu * lambda;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">double</span> gaussLambda = (1.0 - nu) * lambda;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordtype">double</span> muG = <a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">anima::ComputeScalarProduct</a>(direction, gradient);</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    resVal = std::exp( -bvalue * gaussLambda * (1 + kappa * muG * muG) / (kappa + 1) );</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordtype">double</span> sqrt2bLambda = std::sqrt(2.0 * bvalue * vmfLambda);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">double</span> kappaSq = kappa * kappa;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">double</span> ReZ = kappaSq - sqrt2bLambda * sqrt2bLambda;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">double</span> ImZ = 2.0 * kappa * sqrt2bLambda * muG;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordtype">double</span> condition = ReZ + std::sqrt(ReZ*ReZ + ImZ*ImZ);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">if</span> (condition &lt; 0)</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        condition = 0;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">bool</span> omega = condition &lt; 1e-2;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">if</span> (omega)</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    {</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">if</span> (ReZ &gt; 0)</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            ReZ = 0;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        resVal *= (<a class="code" href="namespaceanima.html#a58c784ba84aee4e214ef9d582dac4628">anima::SinOverId</a>(sqrt(-ReZ)) / <a class="code" href="namespaceanima.html#a546b11905751e6de497ca20586193836">anima::ShOverId</a>(kappa));</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordtype">double</span> alpha = std::sqrt(condition / 2.0);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordtype">double</span> beta = ImZ / std::sqrt(2.0 * condition);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordtype">double</span> tmp = <a class="code" href="namespaceanima.html#a12de5574fa5ea868a1ed8b4c64eff799">anima::ShRatio</a>(kappa, alpha, beta);</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        resVal *= tmp;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">return</span> resVal;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="namespaceanima.html#a9092951c4d46c694b81451f48b3dfa2a">  248</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> VectorType, <span class="keyword">class</span> ScalarType, <span class="keyword">class</span> Vector3DType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a7dd45bb8c44e21e096d31f7e7aa24517">ComputeDDICdf</a>(<span class="keyword">const</span> VectorType &amp;modelValue, <span class="keyword">const</span> ScalarType &amp;b, <span class="keyword">const</span> Vector3DType &amp;grad, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NDimension)</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;{</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfCompartments = (NDimension - 4) / <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a>;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordtype">double</span> w0 = modelValue[NDimension - 3];</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">double</span> lambda_iso = modelValue[NDimension - 4];</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">double</span> resVal = w0 * exp(- b * lambda_iso);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    Vector3DType direction;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">/* Other NbComponents component(s) of the mixture */</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; numberOfCompartments; ++i)</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    {</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; 3;++j)</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            direction[j] = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + j];</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordtype">double</span> kappa = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">KappaIndex</a>];</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordtype">double</span> d     = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">DIndex</a>];</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordtype">double</span> nu    = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">AIndex</a>];</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordtype">double</span> w     = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">WIndex</a>];</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">if</span> (w &gt; 0)</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        {</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="keywordtype">double</span> DDISingle = 0;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <span class="keywordflow">if</span> (nu == 0)</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                <span class="keywordtype">double</span> cosAngle = <a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">anima::ComputeScalarProduct</a>(grad,direction);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                DDISingle = std::exp( -b * d / (kappa + 1.0) * (1.0 + cosAngle * cosAngle * kappa) );</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            {</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                DDISingle = <a class="code" href="namespaceanima.html#a13945730c196f08752960462bfe9f64b">ComputeSymmetricCDF</a>(direction, kappa, d, nu, b, grad);</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            }</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            resVal += w * DDISingle;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        }</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    }</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">return</span> std::abs(resVal);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;}</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
-<div class="line"><a name="l00292"></a><span class="lineno"><a class="line" href="namespaceanima.html#a506853eaa08bb156beea04631bb2adc8">  292</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> ScalarType, <span class="keyword">class</span> Vector3DType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a7dd45bb8c44e21e096d31f7e7aa24517">ComputeDDICdf</a>(<span class="keyword">const</span> itk::VariableLengthVector &lt;ScalarType&gt; &amp;modelValue, <span class="keyword">const</span> ScalarType &amp;b, <span class="keyword">const</span> Vector3DType &amp;grad)</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;{</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NDimension = modelValue.GetSize();</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceanima.html#a7dd45bb8c44e21e096d31f7e7aa24517">ComputeDDICdf</a>(modelValue, b, grad, NDimension);</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
-<div class="line"><a name="l00298"></a><span class="lineno"><a class="line" href="namespaceanima.html#aa9a2e148617ae3693738d06c8ff9eba1">  298</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T1, <span class="keyword">class</span> T2, <span class="keyword">class</span> VectorType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a93f402a824a08bd50a922a4a8aeb939f">ComputeMixtureSymmetricCDF</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp;NbComponents,</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                                                                                  <span class="keyword">const</span> T2 *Directions, <span class="keyword">const</span> T1 *Kappa,</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                                                                                  <span class="keyword">const</span> T1 *Lambda, <span class="keyword">const</span> T1 *Nu, <span class="keyword">const</span> T1 *W,</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                                                                                  <span class="keyword">const</span> T1 &amp;b, <span class="keyword">const</span> VectorType &amp;grad)</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;{</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">/* Isotropic component */</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">double</span> w0 = W[NbComponents];</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordtype">double</span> lambda_iso = Lambda[NbComponents];</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">double</span> nu_iso = Nu[NbComponents];</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordtype">double</span> resVal = 0;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">if</span> (nu_iso == 0)</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        resVal += w0 * std::exp(-b * lambda_iso);</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        resVal += w0 * std::exp(-b * (1.0 - nu_iso) * lambda_iso) * <a class="code" href="namespaceanima.html#a58c784ba84aee4e214ef9d582dac4628">anima::SinOverId</a>(sqrt(2.0 * b * nu_iso * lambda_iso));</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="comment">/* Other NbComponents component(s) of the mixture */</span></div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; NbComponents; ++i)</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordtype">double</span> w = W[i];</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">if</span> (w &gt; 0)</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        {</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <span class="keywordtype">double</span> DDISingle = 0;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <span class="keywordflow">if</span> (Nu[i] == 0)</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                <span class="keywordtype">double</span> cosAngle = <a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">anima::ComputeScalarProduct</a>(grad,Directions[i]);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                <span class="keywordtype">double</span> kVal = Kappa[i];</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                DDISingle = std::exp( -b * Lambda[i] / (kVal + 1.0) * (1.0 + cosAngle * cosAngle * kVal) );</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            }</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            {</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                DDISingle = <a class="code" href="namespaceanima.html#a13945730c196f08752960462bfe9f64b">ComputeSymmetricCDF</a>(Directions[i], Kappa[i], Lambda[i], Nu[i], b, grad);</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            }</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            resVal += w * DDISingle;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        }</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    }</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordflow">return</span> std::abs(resVal);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;}</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
-<div class="line"><a name="l00342"></a><span class="lineno"><a class="line" href="namespaceanima.html#a2ee15057d1c494009f6e1ed243378e61">  342</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> VectorType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a736a25e08555a62d29644b9a7cf2e336">GetFascicleFA</a>(<span class="keyword">const</span> VectorType &amp;modelValue, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m)</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;{</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordtype">double</span> kappaVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">KappaIndex</a>];</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">double</span> xiVal = <a class="code" href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">anima::xi</a>(kappaVal);</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordtype">double</span> dVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">DIndex</a>];</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">double</span> aVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">AIndex</a>];</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordtype">double</span> wVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">WIndex</a>];</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordflow">if</span> (wVal &lt; 1.0e-6)</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordtype">double</span> voxelAxialDiffusivity = dVal * (1.0 - 2.0 * aVal * xiVal);</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">double</span> voxelRadialDiffusivity = dVal * ((1.0 - aVal) / (kappaVal + 1.0) + aVal * xiVal);</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">double</span> diffVal = voxelAxialDiffusivity - voxelRadialDiffusivity;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordtype">double</span> normVal = std::sqrt(voxelAxialDiffusivity * voxelAxialDiffusivity + 2.0 * voxelRadialDiffusivity * voxelRadialDiffusivity);</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordflow">return</span> diffVal / normVal;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;}</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
-<div class="line"><a name="l00363"></a><span class="lineno"><a class="line" href="namespaceanima.html#a466cf4ad95af787fcef19bb1c03d9d6b">  363</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> VectorType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a1d2edd62753f1ceca6fa2c33ee1bcd27">GetVoxelFA</a>(<span class="keyword">const</span> VectorType &amp;modelValue)</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;{</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> modelDimension = modelValue.GetSize();</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NbComponents = (modelDimension - 4) / <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordtype">double</span> w0 = modelValue[modelDimension-3];</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordtype">double</span> d0 = modelValue[modelDimension-4];</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordtype">double</span> voxelAxialDiffusivity = w0*d0, voxelRadialDiffusivity = w0*d0;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = 0;m &lt; NbComponents;++m)</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    {</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordtype">double</span> kappaVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">KappaIndex</a>];</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordtype">double</span> xiVal = <a class="code" href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">anima::xi</a>(kappaVal);</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordtype">double</span> dVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">DIndex</a>];</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordtype">double</span> aVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">AIndex</a>];</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="keywordtype">double</span> wVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">WIndex</a>];</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordflow">if</span> (wVal &gt; 0)</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        {</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            voxelAxialDiffusivity += wVal * dVal * (1.0 - 2.0 * aVal * xiVal);</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            voxelRadialDiffusivity += wVal * dVal * ((1.0 - aVal) / (kappaVal + 1.0) + aVal * xiVal);</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        }</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    }</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordtype">double</span> diffVal = voxelAxialDiffusivity - voxelRadialDiffusivity;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">double</span> normVal = std::sqrt(voxelAxialDiffusivity * voxelAxialDiffusivity + 2.0 * voxelRadialDiffusivity * voxelRadialDiffusivity);</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordflow">return</span> diffVal / normVal;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;}</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
-<div class="line"><a name="l00394"></a><span class="lineno"><a class="line" href="namespaceanima.html#af2d489d99e7ad75ce6ec5343db9f0569">  394</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> VectorType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a109b6e28e59f5ac1fbe32d3056195739">GetWhiteMatterFA</a>(<span class="keyword">const</span> VectorType &amp;modelValue, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NDimension)</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;{</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfCompartments = (NDimension - 4) / <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordtype">double</span> wIso = modelValue[NDimension - 3];</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordtype">double</span> sumWeights = 1.0 - wIso;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordflow">if</span> (sumWeights &lt; 1.0e-8)</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keywordtype">double</span> voxelAxialDiffusivity = 0;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordtype">double</span> voxelRadialDiffusivity = 0;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = 0;m &lt; numberOfCompartments;++m)</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    {</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <span class="keywordtype">double</span> kappaVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">KappaIndex</a>];</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordtype">double</span> xiVal = <a class="code" href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">anima::xi</a>(kappaVal);</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keywordtype">double</span> dVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">DIndex</a>];</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        <span class="keywordtype">double</span> aVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">AIndex</a>];</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        <span class="keywordtype">double</span> wVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">WIndex</a>];</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        <span class="keywordflow">if</span> (wVal &gt; 0)</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        {</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            voxelAxialDiffusivity += wVal * dVal * (1.0 - 2.0 * aVal * xiVal);</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            voxelRadialDiffusivity += wVal * dVal * ((1.0 - aVal) / (kappaVal + 1.0) + aVal * xiVal);</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        }</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    }</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    voxelAxialDiffusivity /= sumWeights;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    voxelRadialDiffusivity /= sumWeights;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <span class="keywordtype">double</span> diffVal = voxelAxialDiffusivity - voxelRadialDiffusivity;</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordtype">double</span> normVal = std::sqrt(voxelAxialDiffusivity * voxelAxialDiffusivity + 2.0 * voxelRadialDiffusivity * voxelRadialDiffusivity);</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordflow">return</span> diffVal / normVal;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;}</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> ScalarType&gt;</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="keywordtype">double</span></div>
-<div class="line"><a name="l00434"></a><span class="lineno"><a class="line" href="namespaceanima.html#a70dcbce0e30c39b2221cfb39679ac08a">  434</a></span>&#160;<a class="code" href="namespaceanima.html#a109b6e28e59f5ac1fbe32d3056195739">GetWhiteMatterFA</a>(<span class="keyword">const</span> itk::VariableLengthVector &lt;ScalarType&gt; &amp;modelValue)</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;{</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NDimension = modelValue.GetSize();</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceanima.html#a109b6e28e59f5ac1fbe32d3056195739">GetWhiteMatterFA</a>(modelValue, NDimension);</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;}</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;} <span class="comment">// end namespace ddi_distribution</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        d = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">DIndex</a>];</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">if</span> (nu &gt;= 1.0)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            nu = 1.0 - 1e-4;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        w = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">WIndex</a>];</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">if</span> (w &gt; 0)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            resVal += w * <a class="code" href="namespaceanima.html#ac9197e41f0321df0fddf98069017dade">ComputeSymmetricPDF</a>(direction, compDir, kappa, d, nu, step, integrand);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> resVal;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="namespaceanima.html#a2a976f77a2ffe37b09475396accc221f">  209</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T1, <span class="keyword">class</span> VectorType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a13945730c196f08752960462bfe9f64b">ComputeSymmetricCDF</a>(<span class="keyword">const</span> VectorType &amp;direction, <span class="keyword">const</span> T1 &amp;kappa, <span class="keyword">const</span> T1 &amp;lambda, <span class="keyword">const</span> T1 &amp;nu,</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                                                                 <span class="keyword">const</span> T1 &amp;bvalue, <span class="keyword">const</span> VectorType &amp;gradient)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;{</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordtype">double</span> resVal;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">double</span> vmfLambda = nu * lambda;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">double</span> gaussLambda = (1.0 - nu) * lambda;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">double</span> muG = <a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">anima::ComputeScalarProduct</a>(direction, gradient);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    resVal = std::exp( -bvalue * gaussLambda * (1 + kappa * muG * muG) / (kappa + 1) );</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">double</span> sqrt2bLambda = std::sqrt(2.0 * bvalue * vmfLambda);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">double</span> kappaSq = kappa * kappa;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">double</span> ReZ = kappaSq - sqrt2bLambda * sqrt2bLambda;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">double</span> ImZ = 2.0 * kappa * sqrt2bLambda * muG;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordtype">double</span> condition = ReZ + std::sqrt(ReZ*ReZ + ImZ*ImZ);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">if</span> (condition &lt; 0)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        condition = 0;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">bool</span> omega = condition &lt; 1e-2;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">if</span> (omega)</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">if</span> (ReZ &gt; 0)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            ReZ = 0;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        resVal *= (<a class="code" href="namespaceanima.html#a58c784ba84aee4e214ef9d582dac4628">anima::SinOverId</a>(sqrt(-ReZ)) / <a class="code" href="namespaceanima.html#a546b11905751e6de497ca20586193836">anima::ShOverId</a>(kappa));</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordtype">double</span> alpha = std::sqrt(condition / 2.0);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordtype">double</span> beta = ImZ / std::sqrt(2.0 * condition);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordtype">double</span> tmp = <a class="code" href="namespaceanima.html#a12de5574fa5ea868a1ed8b4c64eff799">anima::ShRatio</a>(kappa, alpha, beta);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        resVal *= tmp;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">return</span> resVal;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="namespaceanima.html#a9092951c4d46c694b81451f48b3dfa2a">  249</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> VectorType, <span class="keyword">class</span> ScalarType, <span class="keyword">class</span> Vector3DType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a7dd45bb8c44e21e096d31f7e7aa24517">ComputeDDICdf</a>(<span class="keyword">const</span> VectorType &amp;modelValue, <span class="keyword">const</span> ScalarType &amp;b, <span class="keyword">const</span> Vector3DType &amp;grad, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NDimension)</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;{</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfCompartments = (NDimension - 4) / <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a>;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">double</span> w0 = modelValue[NDimension - 3];</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordtype">double</span> lambda_iso = modelValue[NDimension - 4];</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordtype">double</span> resVal = w0 * exp(- b * lambda_iso);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    Vector3DType direction;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="comment">/* Other NbComponents component(s) of the mixture */</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; numberOfCompartments; ++i)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; 3;++j)</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            direction[j] = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + j];</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordtype">double</span> kappa = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">KappaIndex</a>];</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordtype">double</span> d     = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">DIndex</a>];</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordtype">double</span> nu    = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">AIndex</a>];</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordtype">double</span> w     = modelValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">WIndex</a>];</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">if</span> (w &gt; 0)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordtype">double</span> DDISingle = 0;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="keywordflow">if</span> (nu == 0)</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                <span class="keywordtype">double</span> cosAngle = <a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">anima::ComputeScalarProduct</a>(grad,direction);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                DDISingle = std::exp( -b * d / (kappa + 1.0) * (1.0 + cosAngle * cosAngle * kappa) );</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                DDISingle = <a class="code" href="namespaceanima.html#a13945730c196f08752960462bfe9f64b">ComputeSymmetricCDF</a>(direction, kappa, d, nu, b, grad);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            resVal += w * DDISingle;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">return</span> std::abs(resVal);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="namespaceanima.html#a506853eaa08bb156beea04631bb2adc8">  293</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> ScalarType, <span class="keyword">class</span> Vector3DType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a7dd45bb8c44e21e096d31f7e7aa24517">ComputeDDICdf</a>(<span class="keyword">const</span> itk::VariableLengthVector &lt;ScalarType&gt; &amp;modelValue, <span class="keyword">const</span> ScalarType &amp;b, <span class="keyword">const</span> Vector3DType &amp;grad)</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;{</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NDimension = modelValue.GetSize();</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceanima.html#a7dd45bb8c44e21e096d31f7e7aa24517">ComputeDDICdf</a>(modelValue, b, grad, NDimension);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="namespaceanima.html#aa9a2e148617ae3693738d06c8ff9eba1">  299</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T1, <span class="keyword">class</span> T2, <span class="keyword">class</span> VectorType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a93f402a824a08bd50a922a4a8aeb939f">ComputeMixtureSymmetricCDF</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp;NbComponents,</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                                                                                  <span class="keyword">const</span> T2 *Directions, <span class="keyword">const</span> T1 *Kappa,</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                                                                                  <span class="keyword">const</span> T1 *Lambda, <span class="keyword">const</span> T1 *Nu, <span class="keyword">const</span> T1 *W,</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                                                                                  <span class="keyword">const</span> T1 &amp;b, <span class="keyword">const</span> VectorType &amp;grad)</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;{</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="comment">/* Isotropic component */</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordtype">double</span> w0 = W[NbComponents];</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">double</span> lambda_iso = Lambda[NbComponents];</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordtype">double</span> nu_iso = Nu[NbComponents];</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordtype">double</span> resVal = 0;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">if</span> (nu_iso == 0)</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        resVal += w0 * std::exp(-b * lambda_iso);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        resVal += w0 * std::exp(-b * (1.0 - nu_iso) * lambda_iso) * <a class="code" href="namespaceanima.html#a58c784ba84aee4e214ef9d582dac4628">anima::SinOverId</a>(sqrt(2.0 * b * nu_iso * lambda_iso));</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="comment">/* Other NbComponents component(s) of the mixture */</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; NbComponents; ++i)</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordtype">double</span> w = W[i];</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordflow">if</span> (w &gt; 0)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="keywordtype">double</span> DDISingle = 0;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="keywordflow">if</span> (Nu[i] == 0)</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                <span class="keywordtype">double</span> cosAngle = <a class="code" href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">anima::ComputeScalarProduct</a>(grad,Directions[i]);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                <span class="keywordtype">double</span> kVal = Kappa[i];</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                DDISingle = std::exp( -b * Lambda[i] / (kVal + 1.0) * (1.0 + cosAngle * cosAngle * kVal) );</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                DDISingle = <a class="code" href="namespaceanima.html#a13945730c196f08752960462bfe9f64b">ComputeSymmetricCDF</a>(Directions[i], Kappa[i], Lambda[i], Nu[i], b, grad);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            resVal += w * DDISingle;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        }</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">return</span> std::abs(resVal);</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;}</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno"><a class="line" href="namespaceanima.html#a2ee15057d1c494009f6e1ed243378e61">  343</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> VectorType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a736a25e08555a62d29644b9a7cf2e336">GetFascicleFA</a>(<span class="keyword">const</span> VectorType &amp;modelValue, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m)</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;{</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">double</span> kappaVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">KappaIndex</a>];</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">double</span> xiVal = <a class="code" href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">anima::xi</a>(kappaVal);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">double</span> dVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">DIndex</a>];</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordtype">double</span> aVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">AIndex</a>];</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">double</span> wVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">WIndex</a>];</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordflow">if</span> (wVal &lt; 1.0e-6)</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">double</span> voxelAxialDiffusivity = dVal * (1.0 - 2.0 * aVal * xiVal);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordtype">double</span> voxelRadialDiffusivity = dVal * ((1.0 - aVal) / (kappaVal + 1.0) + aVal * xiVal);</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordtype">double</span> diffVal = voxelAxialDiffusivity - voxelRadialDiffusivity;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordtype">double</span> normVal = std::sqrt(voxelAxialDiffusivity * voxelAxialDiffusivity + 2.0 * voxelRadialDiffusivity * voxelRadialDiffusivity);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordflow">return</span> diffVal / normVal;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;}</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
+<div class="line"><a name="l00364"></a><span class="lineno"><a class="line" href="namespaceanima.html#a466cf4ad95af787fcef19bb1c03d9d6b">  364</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> VectorType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a1d2edd62753f1ceca6fa2c33ee1bcd27">GetVoxelFA</a>(<span class="keyword">const</span> VectorType &amp;modelValue)</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;{</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> modelDimension = modelValue.GetSize();</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NbComponents = (modelDimension - 4) / <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordtype">double</span> w0 = modelValue[modelDimension-3];</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordtype">double</span> d0 = modelValue[modelDimension-4];</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordtype">double</span> voxelAxialDiffusivity = w0*d0, voxelRadialDiffusivity = w0*d0;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = 0;m &lt; NbComponents;++m)</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    {</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordtype">double</span> kappaVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">KappaIndex</a>];</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keywordtype">double</span> xiVal = <a class="code" href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">anima::xi</a>(kappaVal);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordtype">double</span> dVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">DIndex</a>];</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="keywordtype">double</span> aVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">AIndex</a>];</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordtype">double</span> wVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">WIndex</a>];</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">if</span> (wVal &gt; 0)</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        {</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            voxelAxialDiffusivity += wVal * dVal * (1.0 - 2.0 * aVal * xiVal);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            voxelRadialDiffusivity += wVal * dVal * ((1.0 - aVal) / (kappaVal + 1.0) + aVal * xiVal);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        }</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    }</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">double</span> diffVal = voxelAxialDiffusivity - voxelRadialDiffusivity;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordtype">double</span> normVal = std::sqrt(voxelAxialDiffusivity * voxelAxialDiffusivity + 2.0 * voxelRadialDiffusivity * voxelRadialDiffusivity);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordflow">return</span> diffVal / normVal;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;}</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
+<div class="line"><a name="l00395"></a><span class="lineno"><a class="line" href="namespaceanima.html#af2d489d99e7ad75ce6ec5343db9f0569">  395</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> VectorType&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a109b6e28e59f5ac1fbe32d3056195739">GetWhiteMatterFA</a>(<span class="keyword">const</span> VectorType &amp;modelValue, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NDimension)</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;{</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfCompartments = (NDimension - 4) / <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordtype">double</span> wIso = modelValue[NDimension - 3];</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordtype">double</span> sumWeights = 1.0 - wIso;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordflow">if</span> (sumWeights &lt; 1.0e-8)</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordtype">double</span> voxelAxialDiffusivity = 0;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordtype">double</span> voxelRadialDiffusivity = 0;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = 0;m &lt; numberOfCompartments;++m)</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    {</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordtype">double</span> kappaVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">KappaIndex</a>];</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keywordtype">double</span> xiVal = <a class="code" href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">anima::xi</a>(kappaVal);</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        <span class="keywordtype">double</span> dVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">DIndex</a>];</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        <span class="keywordtype">double</span> aVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">AIndex</a>];</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="keywordtype">double</span> wVal = modelValue[<a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">CompartmentSize</a>*m + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">WIndex</a>];</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keywordflow">if</span> (wVal &gt; 0)</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        {</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            voxelAxialDiffusivity += wVal * dVal * (1.0 - 2.0 * aVal * xiVal);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            voxelRadialDiffusivity += wVal * dVal * ((1.0 - aVal) / (kappaVal + 1.0) + aVal * xiVal);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    }</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    voxelAxialDiffusivity /= sumWeights;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    voxelRadialDiffusivity /= sumWeights;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordtype">double</span> diffVal = voxelAxialDiffusivity - voxelRadialDiffusivity;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keywordtype">double</span> normVal = std::sqrt(voxelAxialDiffusivity * voxelAxialDiffusivity + 2.0 * voxelRadialDiffusivity * voxelRadialDiffusivity);</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="keywordflow">return</span> diffVal / normVal;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;}</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> ScalarType&gt;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="keywordtype">double</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno"><a class="line" href="namespaceanima.html#a70dcbce0e30c39b2221cfb39679ac08a">  435</a></span>&#160;<a class="code" href="namespaceanima.html#a109b6e28e59f5ac1fbe32d3056195739">GetWhiteMatterFA</a>(<span class="keyword">const</span> itk::VariableLengthVector &lt;ScalarType&gt; &amp;modelValue)</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;{</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NDimension = modelValue.GetSize();</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceanima.html#a109b6e28e59f5ac1fbe32d3056195739">GetWhiteMatterFA</a>(modelValue, NDimension);</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;}</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;} <span class="comment">// end namespace ddi_distribution</span></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2a20bcd0eb16f3d968e06fec38c14cc7a4"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a20bcd0eb16f3d968e06fec38c14cc7a4">anima::ZDirIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00048">animaDDIDistribution.h:48</a></div></div>
 <div class="ttc" id="namespaceanima_html_a8a423b3dfc53510bf62cd6a0138a625a"><div class="ttname"><a href="namespaceanima.html#a8a423b3dfc53510bf62cd6a0138a625a">anima::ComputeDDIPdf</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double ComputeDDIPdf(const VectorType &amp;direction, const std::vector&lt; ScalarType &gt; &amp;modelValue)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00163">animaDDIDistribution.hxx:163</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">anima::WIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00052">animaDDIDistribution.h:52</a></div></div>
@@ -542,32 +543,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="animaDDIDistribution_8h_html"><div class="ttname"><a href="animaDDIDistribution_8h.html">animaDDIDistribution.h</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">anima::AIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00051">animaDDIDistribution.h:51</a></div></div>
 <div class="ttc" id="namespaceanima_html_a05abe09681186cd0dba9537d06193437"><div class="ttname"><a href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a></div><div class="ttdeci">static const unsigned int CompartmentSize</div><div class="ttdoc">A DDI compartment is composed of six components. </div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00042">animaDDIDistribution.h:42</a></div></div>
-<div class="ttc" id="namespaceanima_html_a1d2edd62753f1ceca6fa2c33ee1bcd27"><div class="ttname"><a href="namespaceanima.html#a1d2edd62753f1ceca6fa2c33ee1bcd27">anima::GetVoxelFA</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double GetVoxelFA(const VectorType &amp;modelValue)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00363">animaDDIDistribution.hxx:363</a></div></div>
+<div class="ttc" id="namespaceanima_html_a1d2edd62753f1ceca6fa2c33ee1bcd27"><div class="ttname"><a href="namespaceanima.html#a1d2edd62753f1ceca6fa2c33ee1bcd27">anima::GetVoxelFA</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double GetVoxelFA(const VectorType &amp;modelValue)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00364">animaDDIDistribution.hxx:364</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">anima::DIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00050">animaDDIDistribution.h:50</a></div></div>
 <div class="ttc" id="namespaceanima_html_a2e8d718d69cfdb2139dde1768f85f6e2"><div class="ttname"><a href="namespaceanima.html#a2e8d718d69cfdb2139dde1768f85f6e2">anima::ComputeNorm</a></div><div class="ttdeci">double ComputeNorm(const VectorType &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00321">animaVectorOperations.hxx:321</a></div></div>
 <div class="ttc" id="animaHyperbolicFunctions_8h_html"><div class="ttname"><a href="animaHyperbolicFunctions_8h.html">animaHyperbolicFunctions.h</a></div></div>
 <div class="ttc" id="namespaceanima_html_a9f4a74d774c927408be5cc45c94ee733"><div class="ttname"><a href="namespaceanima.html#a9f4a74d774c927408be5cc45c94ee733">anima::ComputeAsymmetricPDF</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double ComputeAsymmetricPDF(const std::vector&lt; ScalarType &gt; &amp;w, const std::vector&lt; ScalarType &gt; &amp;mu, const ScalarType &amp;kappa, const ScalarType &amp;d, const ScalarType &amp;nu, const ScalarType &amp;step, std::vector&lt; ScalarType &gt; &amp;integrand)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00016">animaDDIDistribution.hxx:16</a></div></div>
 <div class="ttc" id="namespaceanima_html_a546b11905751e6de497ca20586193836"><div class="ttname"><a href="namespaceanima.html#a546b11905751e6de497ca20586193836">anima::ShOverId</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double ShOverId(const T &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00008">animaHyperbolicFunctions.hxx:8</a></div></div>
-<div class="ttc" id="namespaceanima_html_a13945730c196f08752960462bfe9f64b"><div class="ttname"><a href="namespaceanima.html#a13945730c196f08752960462bfe9f64b">anima::ComputeSymmetricCDF</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double ComputeSymmetricCDF(const VectorType &amp;direction, const T1 &amp;kappa, const T1 &amp;lambda, const T1 &amp;nu, const T1 &amp;bvalue, const VectorType &amp;gradient)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00208">animaDDIDistribution.hxx:208</a></div></div>
+<div class="ttc" id="namespaceanima_html_a13945730c196f08752960462bfe9f64b"><div class="ttname"><a href="namespaceanima.html#a13945730c196f08752960462bfe9f64b">anima::ComputeSymmetricCDF</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double ComputeSymmetricCDF(const VectorType &amp;direction, const T1 &amp;kappa, const T1 &amp;lambda, const T1 &amp;nu, const T1 &amp;bvalue, const VectorType &amp;gradient)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00209">animaDDIDistribution.hxx:209</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2a43a2d2252425882e429c938c6541c025"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a43a2d2252425882e429c938c6541c025">anima::XDirIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00046">animaDDIDistribution.h:46</a></div></div>
 <div class="ttc" id="animaTrigonometricFunctions_8h_html"><div class="ttname"><a href="animaTrigonometricFunctions_8h.html">animaTrigonometricFunctions.h</a></div></div>
-<div class="ttc" id="namespaceanima_html_a93f402a824a08bd50a922a4a8aeb939f"><div class="ttname"><a href="namespaceanima.html#a93f402a824a08bd50a922a4a8aeb939f">anima::ComputeMixtureSymmetricCDF</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double ComputeMixtureSymmetricCDF(const unsigned int &amp;NbComponents, const T2 *Directions, const T1 *Kappa, const T1 *Lambda, const T1 *Nu, const T1 *W, const T1 &amp;b, const VectorType &amp;grad)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00298">animaDDIDistribution.hxx:298</a></div></div>
+<div class="ttc" id="namespaceanima_html_a93f402a824a08bd50a922a4a8aeb939f"><div class="ttname"><a href="namespaceanima.html#a93f402a824a08bd50a922a4a8aeb939f">anima::ComputeMixtureSymmetricCDF</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double ComputeMixtureSymmetricCDF(const unsigned int &amp;NbComponents, const T2 *Directions, const T1 *Kappa, const T1 *Lambda, const T1 *Nu, const T1 *W, const T1 &amp;b, const VectorType &amp;grad)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00299">animaDDIDistribution.hxx:299</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2adb6f1caf8c98b620d698f922cfeeaccc"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2adb6f1caf8c98b620d698f922cfeeaccc">anima::YDirIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00047">animaDDIDistribution.h:47</a></div></div>
 <div class="ttc" id="animaVectorOperations_8h_html"><div class="ttname"><a href="animaVectorOperations_8h.html">animaVectorOperations.h</a></div></div>
 <div class="ttc" id="namespaceanima_html_ac341bd69a70af69030fcf86cac5cbc60"><div class="ttname"><a href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">anima::xi</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double xi(const T &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00029">animaHyperbolicFunctions.hxx:29</a></div></div>
-<div class="ttc" id="namespaceanima_html_a7dd45bb8c44e21e096d31f7e7aa24517"><div class="ttname"><a href="namespaceanima.html#a7dd45bb8c44e21e096d31f7e7aa24517">anima::ComputeDDICdf</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double ComputeDDICdf(const VectorType &amp;modelValue, const ScalarType &amp;b, const Vector3DType &amp;grad, unsigned int NDimension)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00248">animaDDIDistribution.hxx:248</a></div></div>
+<div class="ttc" id="namespaceanima_html_a7dd45bb8c44e21e096d31f7e7aa24517"><div class="ttname"><a href="namespaceanima.html#a7dd45bb8c44e21e096d31f7e7aa24517">anima::ComputeDDICdf</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double ComputeDDICdf(const VectorType &amp;modelValue, const ScalarType &amp;b, const Vector3DType &amp;grad, unsigned int NDimension)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00249">animaDDIDistribution.hxx:249</a></div></div>
 <div class="ttc" id="namespaceanima_html_a58c784ba84aee4e214ef9d582dac4628"><div class="ttname"><a href="namespaceanima.html#a58c784ba84aee4e214ef9d582dac4628">anima::SinOverId</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double SinOverId(const T &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="animaTrigonometricFunctions_8hxx_source.html#l00008">animaTrigonometricFunctions.hxx:8</a></div></div>
 <div class="ttc" id="namespaceanima_html_a12de5574fa5ea868a1ed8b4c64eff799"><div class="ttname"><a href="namespaceanima.html#a12de5574fa5ea868a1ed8b4c64eff799">anima::ShRatio</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double ShRatio(const T1 &amp;k, const T2 &amp;alpha, const T3 &amp;beta)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00020">animaHyperbolicFunctions.hxx:20</a></div></div>
 <div class="ttc" id="namespaceanima_html_aeee6e80d3716e1da776bdc937185aea5"><div class="ttname"><a href="namespaceanima.html#aeee6e80d3716e1da776bdc937185aea5">anima::ComputeScalarProduct</a></div><div class="ttdeci">double ComputeScalarProduct(const VectorType &amp;v1, const VectorType &amp;v2, const unsigned int NDimension)</div><div class="ttdef"><b>Definition:</b> <a href="animaVectorOperations_8hxx_source.html#l00203">animaVectorOperations.hxx:203</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">anima::KappaIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00049">animaDDIDistribution.h:49</a></div></div>
-<div class="ttc" id="namespaceanima_html_a109b6e28e59f5ac1fbe32d3056195739"><div class="ttname"><a href="namespaceanima.html#a109b6e28e59f5ac1fbe32d3056195739">anima::GetWhiteMatterFA</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double GetWhiteMatterFA(const VectorType &amp;modelValue, unsigned int NDimension)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00394">animaDDIDistribution.hxx:394</a></div></div>
-<div class="ttc" id="namespaceanima_html_a736a25e08555a62d29644b9a7cf2e336"><div class="ttname"><a href="namespaceanima.html#a736a25e08555a62d29644b9a7cf2e336">anima::GetFascicleFA</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double GetFascicleFA(const VectorType &amp;modelValue, const unsigned int m)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00342">animaDDIDistribution.hxx:342</a></div></div>
+<div class="ttc" id="namespaceanima_html_a109b6e28e59f5ac1fbe32d3056195739"><div class="ttname"><a href="namespaceanima.html#a109b6e28e59f5ac1fbe32d3056195739">anima::GetWhiteMatterFA</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double GetWhiteMatterFA(const VectorType &amp;modelValue, unsigned int NDimension)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00395">animaDDIDistribution.hxx:395</a></div></div>
+<div class="ttc" id="namespaceanima_html_a736a25e08555a62d29644b9a7cf2e336"><div class="ttname"><a href="namespaceanima.html#a736a25e08555a62d29644b9a7cf2e336">anima::GetFascicleFA</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double GetFascicleFA(const VectorType &amp;modelValue, const unsigned int m)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00343">animaDDIDistribution.hxx:343</a></div></div>
 <div class="ttc" id="namespaceanima_html_ac9197e41f0321df0fddf98069017dade"><div class="ttname"><a href="namespaceanima.html#ac9197e41f0321df0fddf98069017dade">anima::ComputeSymmetricPDF</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double ComputeSymmetricPDF(const VectorType &amp;w, const VectorType &amp;mu, const ScalarType &amp;kappa, const ScalarType &amp;d, const ScalarType &amp;nu, const ScalarType &amp;step, std::vector&lt; ScalarType &gt; &amp;integrand)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00087">animaDDIDistribution.hxx:87</a></div></div>
 <div class="ttc" id="animaBesselFunctions_8h_html"><div class="ttname"><a href="animaBesselFunctions_8h.html">animaBesselFunctions.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 22 2014 06:23:25 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 15 2014 06:23:31 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
