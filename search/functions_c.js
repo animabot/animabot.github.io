@@ -13,7 +13,6 @@ var searchData=
   ['localpatchmeandistanceimagefilter',['LocalPatchMeanDistanceImageFilter',['../classanima_1_1LocalPatchMeanDistanceImageFilter.html#a642594fe9a7004d50d9ec4d91181a37c',1,'anima::LocalPatchMeanDistanceImageFilter']]],
   ['log_5fbessel_5fi',['log_bessel_i',['../namespaceanima.html#a949de832f68b737513a4e18dc0cb46dd',1,'anima']]],
   ['log_5fbessel_5forderderivative_5fi',['log_bessel_orderDerivative_i',['../namespaceanima.html#a8250e9ef8eea64471690aa52138f1d91',1,'anima']]],
-  ['log_5fmap',['log_map',['../namespaceanima.html#a96e5415da0c6562338e585cd2645d459',1,'anima']]],
   ['logrigid3dtransform',['LogRigid3DTransform',['../classanima_1_1LogRigid3DTransform.html#a6a250e3cf30de2edc543bf1787f1d96a',1,'anima::LogRigid3DTransform']]],
   ['logtensorimagefilter',['LogTensorImageFilter',['../classanima_1_1LogTensorImageFilter.html#a6dbb15e5eb0eca8d09eb4d6ba1a7d099',1,'anima::LogTensorImageFilter']]],
   ['lowmemorycramerstestbridge',['LowMemoryCramersTestBridge',['../classanima_1_1LowMemoryCramersTestBridge.html#add30008ece2e9125451199b5a3a90a9c',1,'anima::LowMemoryCramersTestBridge']]],

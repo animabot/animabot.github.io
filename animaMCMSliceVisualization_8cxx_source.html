@@ -348,17 +348,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="comment">// Write cones in output file</span></div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    vtkSmartPointer &lt;vtkXMLPolyDataWriter&gt; vtkWriter = vtkXMLPolyDataWriter::New();</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    vtkWriter-&gt;SetInputConnection(cones-&gt;GetOutputPort());</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    vtkWriter-&gt;SetFileName(outputFileArg.getValue().c_str());</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    vtkWriter-&gt;SetDataModeToBinary();</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    vtkWriter-&gt;EncodeAppendedDataOff();</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    vtkWriter-&gt;SetCompressorTypeToZLib();</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    vtkWriter-&gt;SetHeaderTypeToUInt64();</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    vtkWriter-&gt;Update();</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    vtkWriter-&gt;SetInputConnection(cones-&gt;GetOutputPort());</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    vtkWriter-&gt;SetFileName(outputFileArg.getValue().c_str());</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    vtkWriter-&gt;SetDataModeToBinary();</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    vtkWriter-&gt;EncodeAppendedDataOff();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    vtkWriter-&gt;SetCompressorTypeToZLib();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    vtkWriter-&gt;Update();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2a20bcd0eb16f3d968e06fec38c14cc7a4"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a20bcd0eb16f3d968e06fec38c14cc7a4">anima::ZDirIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00048">animaDDIDistribution.h:48</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">anima::WIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00052">animaDDIDistribution.h:52</a></div></div>
 <div class="ttc" id="animaDDIDistribution_8h_html"><div class="ttname"><a href="animaDDIDistribution_8h.html">animaDDIDistribution.h</a></div></div>
@@ -374,7 +372,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 15 2014 06:23:32 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 16 2014 06:23:30 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
