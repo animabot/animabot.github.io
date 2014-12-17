@@ -171,7 +171,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        - rNu*(kappa + 1.0)/2.0;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordflow">if</span> (std::abs((kappa + rNu*wpara) * t) &gt; 50)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    integrand[i] += (kappa + rNu*wpara) * t - std::log(2.0);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    integrand[i] += std::abs((kappa + rNu*wpara) * t) - std::log(2.0);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    integrand[i] += std::log(std::cosh((kappa + rNu*wpara) * t));</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
@@ -254,12 +254,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                        - rNu*(kappa + 1.0)/2.0;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="keywordflow">if</span> (std::abs(rNu*wpara*t) &gt; 50)</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                    integrand[i] += rNu*wpara*t - std::log(2.0);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                    integrand[i] += std::abs(rNu*wpara*t) - std::log(2.0);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                    integrand[i] += std::log(std::cosh(rNu*wpara*t));</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="keywordflow">if</span> (std::abs(kappa*t) &gt; 50)</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                    integrand[i] += kappa*t - std::log(2.0);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                    integrand[i] += std::abs(kappa*t) - std::log(2.0);</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                    integrand[i] += std::log(std::cosh(kappa*t));</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
@@ -588,7 +588,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 16 2014 06:23:29 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 17 2014 06:23:30 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
