@@ -36,6 +36,7 @@ var searchData=
   ['_7efinitestrainddiresampleimagefilter',['~FiniteStrainDDIResampleImageFilter',['../classanima_1_1FiniteStrainDDIResampleImageFilter.html#a06971b5ccf8f3a72b1b4f7eb59952225',1,'anima::FiniteStrainDDIResampleImageFilter']]],
   ['_7efinitestrainodfresampleimagefilter',['~FiniteStrainODFResampleImageFilter',['../classanima_1_1FiniteStrainODFResampleImageFilter.html#a8860374a5e34ca1be41828fc6e0cf328',1,'anima::FiniteStrainODFResampleImageFilter']]],
   ['_7efinitestraintensorresampleimagefilter',['~FiniteStrainTensorResampleImageFilter',['../classanima_1_1FiniteStrainTensorResampleImageFilter.html#a27d27b8bda96326f83997d8f2ebb8588',1,'anima::FiniteStrainTensorResampleImageFilter']]],
+  ['_7eflipddidirectionsimagefilter',['~FlipDDIDirectionsImageFilter',['../classanima_1_1FlipDDIDirectionsImageFilter.html#a6960633103121361f134b88a5287f759',1,'anima::FlipDDIDirectionsImageFilter']]],
   ['_7efuzzycmeansfilter',['~FuzzyCMeansFilter',['../classanima_1_1FuzzyCMeansFilter.html#aa3280762d4462e1e75f08496bb75061b',1,'anima::FuzzyCMeansFilter']]],
   ['_7egaussiannoisegeneratorimagefilter',['~GaussianNoiseGeneratorImageFilter',['../classanima_1_1GaussianNoiseGeneratorImageFilter.html#ae6056eed9bf1254b8a5b645b605ac955',1,'anima::GaussianNoiseGeneratorImageFilter']]],
   ['_7egeneralizedfaimagefilter',['~GeneralizedFAImageFilter',['../classanima_1_1GeneralizedFAImageFilter.html#a7d03d1c1ab5a867e3283a708ba1cd1e9',1,'anima::GeneralizedFAImageFilter']]],

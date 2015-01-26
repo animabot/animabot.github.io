@@ -8,5 +8,6 @@ var searchData=
   ['finitestrainddiresampleimagefilter',['FiniteStrainDDIResampleImageFilter',['../classanima_1_1FiniteStrainDDIResampleImageFilter.html',1,'anima']]],
   ['finitestrainodfresampleimagefilter',['FiniteStrainODFResampleImageFilter',['../classanima_1_1FiniteStrainODFResampleImageFilter.html',1,'anima']]],
   ['finitestraintensorresampleimagefilter',['FiniteStrainTensorResampleImageFilter',['../classanima_1_1FiniteStrainTensorResampleImageFilter.html',1,'anima']]],
+  ['flipddidirectionsimagefilter',['FlipDDIDirectionsImageFilter',['../classanima_1_1FlipDDIDirectionsImageFilter.html',1,'anima']]],
   ['fuzzycmeansfilter',['FuzzyCMeansFilter',['../classanima_1_1FuzzyCMeansFilter.html',1,'anima']]]
 ];

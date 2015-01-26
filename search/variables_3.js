@@ -7,7 +7,6 @@ var searchData=
   ['classsizes',['classSizes',['../structanima_1_1BaseProbabilisticTractographyImageFilter_1_1FiberWorkType.html#a75ef0d439bcadb95924d4dc2483ebb00',1,'anima::BaseProbabilisticTractographyImageFilter::FiberWorkType']]],
   ['classweights',['classWeights',['../structanima_1_1BaseProbabilisticTractographyImageFilter_1_1FiberWorkType.html#a7ccbbfa503abcb52bad8f91919b84c8a',1,'anima::BaseProbabilisticTractographyImageFilter::FiberWorkType']]],
   ['compartmentsize',['CompartmentSize',['../namespaceanima.html#a05abe09681186cd0dba9537d06193437',1,'anima']]],
-  ['conesdata',['conesData',['../structGlyphStructure.html#a47dfb6d8ac25de9fdf74e4dde98eefdb',1,'GlyphStructure']]],
   ['count',['count',['../classGenericArguments.html#a7bafb66d0b644bc406b379cf3ad1acbf',1,'GenericArguments']]],
   ['cr',['CR',['../tinyxml2_8cxx.html#ad3136d2f1f34e592c66e09ba8a852812',1,'tinyxml2.cxx']]]
 ];

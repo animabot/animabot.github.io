@@ -196,9 +196,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1SymmetryConstrainedTransform.html#a9c0a82b2eaf6b22308735175bbf893d8">anima::SymmetryConstrainedTransform&lt; TScalarType &gt;</a>
 , <a class="el" href="classanima_1_1SymmetryPlaneTransform.html#a82374dc2d0bfc07d114a717fa772cefd">anima::SymmetryPlaneTransform&lt; TScalarType &gt;</a>
 </li>
-<li>ScaleFactor
-: <a class="el" href="structGlyphStructure.html#afe090b7d091b815b6f038e41ba299627">GlyphStructure</a>
-</li>
 <li>ScalesType
 : <a class="el" href="classanima_1_1BobyqaOptimizer.html#a1392e63eb3a0eb79bf806ec28512d2de">anima::BobyqaOptimizer</a>
 </li>
@@ -239,6 +236,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1FiniteStrainDDIResampleImageFilter.html#a538a97738210f9a56c5f83dbc121f7eb">anima::FiniteStrainDDIResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
 , <a class="el" href="classanima_1_1FiniteStrainODFResampleImageFilter.html#a94e999a4c442cac4d0c9bb915fa645b9">anima::FiniteStrainODFResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
 , <a class="el" href="classanima_1_1FiniteStrainTensorResampleImageFilter.html#a715088c413e03b82eb17d9bcbe66f325">anima::FiniteStrainTensorResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
+, <a class="el" href="classanima_1_1FlipDDIDirectionsImageFilter.html#abc5bc6c6273f5a91fe4da24646c35e39">anima::FlipDDIDirectionsImageFilter&lt; TInputPixelType &gt;</a>
 , <a class="el" href="classanima_1_1GaussianNoiseGeneratorImageFilter.html#aef7514a6fb4a06d036d8b6e4e60e06d2">anima::GaussianNoiseGeneratorImageFilter&lt; Dimension &gt;</a>
 , <a class="el" href="classanima_1_1GeneralizedFAImageFilter.html#a49e6404e552ea6090a2ef186c91cfe9f">anima::GeneralizedFAImageFilter&lt; TInputPixelType &gt;</a>
 , <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#af9e390dc8826462ee058cbf79e4b3204">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
@@ -755,6 +753,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetFlipAngles()
 : <a class="el" href="classanima_1_1T1RelaxometryEstimationImageFilter.html#a2d938a5cdf66183b04b4c7f7a77770cf">anima::T1RelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
+</li>
+<li>SetFlipX()
+: <a class="el" href="classanima_1_1FlipDDIDirectionsImageFilter.html#ab97b0442976561bf7767b007671a38d2">anima::FlipDDIDirectionsImageFilter&lt; TInputPixelType &gt;</a>
+</li>
+<li>SetFlipY()
+: <a class="el" href="classanima_1_1FlipDDIDirectionsImageFilter.html#a61d0bece636e852c33c924c3a6a4bf9e">anima::FlipDDIDirectionsImageFilter&lt; TInputPixelType &gt;</a>
+</li>
+<li>SetFlipZ()
+: <a class="el" href="classanima_1_1FlipDDIDirectionsImageFilter.html#ac5a83829b16439db3f04589d0bb4a223">anima::FlipDDIDirectionsImageFilter&lt; TInputPixelType &gt;</a>
 </li>
 <li>SetFloatingImage()
 : <a class="el" href="classanima_1_1PyramidalBlockMatchingBridge.html#acc4680fe4557af21756544da871372c7">anima::PyramidalBlockMatchingBridge&lt; ImageDimension &gt;</a>
@@ -1389,7 +1396,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetOutputSpacing()
 : <a class="el" href="classanima_1_1OrientedModelBaseResampleImageFilter.html#a94181f0e14c15b9eb822f11a1edf4dda">anima::OrientedModelBaseResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
-, <a class="el" href="classanima_1_1ResampleImageFilter.html#abdc4455394fda91703d18a4771553897">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
+, <a class="el" href="classanima_1_1ResampleImageFilter.html#a009e33fdbbd948aca15618e29115957c">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
 </li>
 <li>SetOutputStartIndex()
 : <a class="el" href="classanima_1_1ResampleImageFilter.html#a7350b6c24500749f10c7318d257bc442">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
@@ -1710,7 +1717,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetT1FlipAngles()
 : <a class="el" href="classanima_1_1CombinedRelaxometryCostFunction.html#ab13472d27a880ea82d693b32e8855541">anima::CombinedRelaxometryCostFunction</a>
-, <a class="el" href="classanima_1_1CombinedRelaxometryEstimationImageFilter.html#a8ae060e5f0096976accfc95d1db48b5a">anima::CombinedRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
+, <a class="el" href="classanima_1_1CombinedRelaxometryEstimationImageFilter.html#af8d3d6ed4fe9c905b0eef7114e40c839">anima::CombinedRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 </li>
 <li>SetT1Map()
 : <a class="el" href="classanima_1_1T2EPGRelaxometryEstimationImageFilter.html#aececdd40cfc418f7a85c43527746d9df">anima::T2EPGRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
@@ -1743,7 +1750,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetT2FlipAngles()
 : <a class="el" href="classanima_1_1CombinedRelaxometryCostFunction.html#a4b3df14d12844746ca2b0d754d90c45e">anima::CombinedRelaxometryCostFunction</a>
-, <a class="el" href="classanima_1_1CombinedRelaxometryEstimationImageFilter.html#ae8a01c5e10d4efd7f7e71fbeadcfe42b">anima::CombinedRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
+, <a class="el" href="classanima_1_1CombinedRelaxometryEstimationImageFilter.html#ab87dcc649150e35549020afe398b6b52">anima::CombinedRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1T2EPGRelaxometryCostFunction.html#aeb35517dd68f5d66fd34ae4d99bac4dd">anima::T2EPGRelaxometryCostFunction</a>
 , <a class="el" href="classanima_1_1T2EPGRelaxometryEstimationImageFilter.html#ac1a4dbca3b1a1a2ba9132528e1ecdd94">anima::T2EPGRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 </li>
@@ -2120,6 +2127,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1FiniteStrainDDIResampleImageFilter.html#a076b380c1eb7c9ab32b0c4e886a1b0b0">anima::FiniteStrainDDIResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
 , <a class="el" href="classanima_1_1FiniteStrainODFResampleImageFilter.html#a68c3d75b588b914e4b7a257fb2b6e185">anima::FiniteStrainODFResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
 , <a class="el" href="classanima_1_1FiniteStrainTensorResampleImageFilter.html#a24970c0da0f28224bdd66d468c5dac1b">anima::FiniteStrainTensorResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
+, <a class="el" href="classanima_1_1FlipDDIDirectionsImageFilter.html#a919de36b16ab9e6e2939cd93b5c74c99">anima::FlipDDIDirectionsImageFilter&lt; TInputPixelType &gt;</a>
 , <a class="el" href="classanima_1_1GaussianNoiseGeneratorImageFilter.html#a4ec9b2f909bec01cd1054d1c012da06a">anima::GaussianNoiseGeneratorImageFilter&lt; Dimension &gt;</a>
 , <a class="el" href="classanima_1_1GeneralizedFAImageFilter.html#a82c59cb0fbe7937406fb12db1136ad4f">anima::GeneralizedFAImageFilter&lt; TInputPixelType &gt;</a>
 , <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#a0e3566160f85e5eda2a937b4f4f0e3be">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
@@ -2214,13 +2222,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1SymmetryConstrainedTransform.html#af93a0dc76e8643e7de19c0bab88e31d7">anima::SymmetryConstrainedTransform&lt; TScalarType &gt;</a>
 </li>
 <li>SymmetryPlaneTransform()
-: <a class="el" href="classanima_1_1SymmetryPlaneTransform.html#a60dd6f80cc12017ece8cba3d492ba302">anima::SymmetryPlaneTransform&lt; TScalarType &gt;</a>
+: <a class="el" href="classanima_1_1SymmetryPlaneTransform.html#a109a191a842aebcec892a1edb8c82bc9">anima::SymmetryPlaneTransform&lt; TScalarType &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 24 2015 06:23:02 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 26 2015 06:22:55 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
