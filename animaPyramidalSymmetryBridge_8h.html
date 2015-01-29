@@ -117,7 +117,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="animaPyramidalSymmetryBridge_8h__incl.png" border="0" usemap="#animaPyramidalSymmetryBridge_8h" alt=""/></div>
 <map name="animaPyramidalSymmetryBridge_8h" id="animaPyramidalSymmetryBridge_8h">
-<area shape="rect" id="node7" href="animaSymmetryPlaneTransform_8h.html" title="animaSymmetryPlaneTransform.h" alt="" coords="2839,80,3055,107"/><area shape="rect" id="node13" href="animaPyramidalSymmetryBridge_8txx.html" title="animaPyramidalSymmetryBridge.txx" alt="" coords="1487,80,1715,107"/><area shape="rect" id="node10" href="animaSymmetryPlaneTransform_8hxx.html" title="animaSymmetryPlaneTransform.hxx" alt="" coords="3571,163,3799,189"/><area shape="rect" id="node20" href="animaNewuoaOptimizer_8h.html" title="animaNewuoaOptimizer.h" alt="" coords="2707,163,2875,189"/><area shape="rect" id="node30" href="animaVectorOperations_8h.html" title="animaVectorOperations.h" alt="" coords="2515,163,2681,189"/><area shape="rect" id="node40" href="animaResampleImageFilter_8h.html" title="animaResampleImageFilter.h" alt="" coords="1664,163,1853,189"/><area shape="rect" id="node36" href="animaVectorOperations_8hxx.html" title="animaVectorOperations.hxx" alt="" coords="2715,253,2893,280"/><area shape="rect" id="node37" href="animaLogarithmFunctions_8h.html" title="animaLogarithmFunctions.h" alt="" coords="2714,344,2893,371"/><area shape="rect" id="node48" href="animaResampleImageFilter_8hxx.html" title="animaResampleImageFilter.hxx" alt="" coords="1974,253,2175,280"/></map>
+<area shape="rect" id="node7" href="animaSymmetryPlaneTransform_8h.html" title="animaSymmetryPlaneTransform.h" alt="" coords="1416,80,1632,107"/><area shape="rect" id="node13" href="animaPyramidalSymmetryBridge_8txx.html" title="animaPyramidalSymmetryBridge.txx" alt="" coords="1163,80,1391,107"/><area shape="rect" id="node10" href="animaSymmetryPlaneTransform_8hxx.html" title="animaSymmetryPlaneTransform.hxx" alt="" coords="3609,163,3836,189"/><area shape="rect" id="node20" href="animaNewuoaOptimizer_8h.html" title="animaNewuoaOptimizer.h" alt="" coords="2321,163,2489,189"/><area shape="rect" id="node30" href="animaVectorOperations_8h.html" title="animaVectorOperations.h" alt="" coords="2587,163,2753,189"/><area shape="rect" id="node40" href="animaResampleImageFilter_8h.html" title="animaResampleImageFilter.h" alt="" coords="1273,163,1463,189"/><area shape="rect" id="node36" href="animaVectorOperations_8hxx.html" title="animaVectorOperations.hxx" alt="" coords="3487,253,3665,280"/><area shape="rect" id="node37" href="animaLogarithmFunctions_8h.html" title="animaLogarithmFunctions.h" alt="" coords="3301,344,3480,371"/><area shape="rect" id="node48" href="animaResampleImageFilter_8hxx.html" title="animaResampleImageFilter.hxx" alt="" coords="887,253,1088,280"/></map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -149,6 +149,12 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:abf74dfd688b4203cefa6d49f8d14403e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaPyramidalSymmetryBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403e">Metric</a> { <br/>
+&#160;&#160;<a class="el" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403eacd7d443ade48c2da7f72e90eb7cf352f">Correlation</a> = 0, 
+<br/>
+&#160;&#160;<a class="el" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47">SquaredCorrelation</a>, 
+<br/>
+&#160;&#160;<a class="el" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9">MeanSquares</a>, 
+<br/>
 &#160;&#160;<a class="el" href="animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47">SquaredCorrelation</a> = 0, 
 <br/>
 &#160;&#160;<a class="el" href="animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403eacd7d443ade48c2da7f72e90eb7cf352f">Correlation</a>, 
@@ -204,12 +210,18 @@ Enumerations</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403e">Metric</a></td>
+          <td class="memname">enum <a class="el" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403e">Metric</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47"></a>SquaredCorrelation</em>&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="abf74dfd688b4203cefa6d49f8d14403eacd7d443ade48c2da7f72e90eb7cf352f"></a>Correlation</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47"></a>SquaredCorrelation</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9"></a>MeanSquares</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47"></a>SquaredCorrelation</em>&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="abf74dfd688b4203cefa6d49f8d14403eacd7d443ade48c2da7f72e90eb7cf352f"></a>Correlation</em>&#160;</td><td class="fielddoc">
 </td></tr>
@@ -262,7 +274,7 @@ Enumerations</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 28 2015 06:23:08 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 29 2015 06:24:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

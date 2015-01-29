@@ -226,14 +226,14 @@ Static Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a22ea8a0a3cd45143dd5a52ebc7ca2b73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1BlockMatchingInitializer.html#a22ea8a0a3cd45143dd5a52ebc7ca2b73">BlockMatchingInitializer</a> ()</td></tr>
 <tr class="separator:a22ea8a0a3cd45143dd5a52ebc7ca2b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0759b53ab3c061e5474a1a70f4d22e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1BlockMatchingInitializer.html#aa0759b53ab3c061e5474a1a70f4d22e6">CheckBlockConditions</a> (<a class="el" href="classanima_1_1BlockMatchingInitializer.html#ac4c4179b2eb960aa97f6af471b220fd2">ImageRegionType</a> &amp;region, double &amp;blockVariance)</td></tr>
+<tr class="separator:aa0759b53ab3c061e5474a1a70f4d22e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a427bd7f410f16f2e5f85ccf23741b0ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1BlockMatchingInitializer.html#a427bd7f410f16f2e5f85ccf23741b0ab">CheckScalarVariance</a> (<a class="el" href="classanima_1_1BlockMatchingInitializer.html#a6bede800ea89b5adc54ffd86a3d578ad">ScalarImageType</a> *refImage, <a class="el" href="classanima_1_1BlockMatchingInitializer.html#ac4c4179b2eb960aa97f6af471b220fd2">ImageRegionType</a> &amp;region, double &amp;blockVariance)</td></tr>
 <tr class="separator:a427bd7f410f16f2e5f85ccf23741b0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24d8857940427723d19357d1f258ed6f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1BlockMatchingInitializer.html#a24d8857940427723d19357d1f258ed6f">CheckTensorVariance</a> (<a class="el" href="classanima_1_1BlockMatchingInitializer.html#ac8a3f66e3515456b37e0996a33a10ce5">VectorImageType</a> *refImage, <a class="el" href="classanima_1_1BlockMatchingInitializer.html#ac4c4179b2eb960aa97f6af471b220fd2">ImageRegionType</a> &amp;region, double &amp;blockVariance)</td></tr>
 <tr class="separator:a24d8857940427723d19357d1f258ed6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fadd6592b16c90bfb8170ed5b0c5249"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1BlockMatchingInitializer.html#a7fadd6592b16c90bfb8170ed5b0c5249">ComputeOuterDamFromBlocks</a> ()</td></tr>
 <tr class="separator:a7fadd6592b16c90bfb8170ed5b0c5249"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7ed38a302d451a54c31cec9432ace06"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1BlockMatchingInitializer.html#ad7ed38a302d451a54c31cec9432ace06">TestBlockInImage</a> (<a class="el" href="classanima_1_1BlockMatchingInitializer.html#ac4c4179b2eb960aa97f6af471b220fd2">ImageRegionType</a> &amp;region, double &amp;blockVariance)</td></tr>
-<tr class="separator:ad7ed38a302d451a54c31cec9432ace06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acee417664f3012e4d3897bda94ad9588"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1BlockMatchingInitializer.html#acee417664f3012e4d3897bda94ad9588">~BlockMatchingInitializer</a> ()</td></tr>
 <tr class="separator:acee417664f3012e4d3897bda94ad9588"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -480,6 +480,44 @@ template&lt;class PixelType , unsigned int NDimensions&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aa0759b53ab3c061e5474a1a70f4d22e6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class PixelType , unsigned int NDimensions&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classanima_1_1BlockMatchingInitializer.html">anima::BlockMatchingInitializer</a>&lt; PixelType, NDimensions &gt;::CheckBlockConditions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classanima_1_1BlockMatchingInitializer.html#ac4c4179b2eb960aa97f6af471b220fd2">ImageRegionType</a> &amp;&#160;</td>
+          <td class="paramname"><em>region</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>blockVariance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaBlockMatchInitializer_8hxx_source.html#l00362">362</a> of file <a class="el" href="animaBlockMatchInitializer_8hxx_source.html">animaBlockMatchInitializer.hxx</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a427bd7f410f16f2e5f85ccf23741b0ab"></a>
 <div class="memitem">
 <div class="memproto">
@@ -520,7 +558,7 @@ template&lt;class PixelType , unsigned int NDimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaBlockMatchInitializer_8hxx_source.html#l00455">455</a> of file <a class="el" href="animaBlockMatchInitializer_8hxx_source.html">animaBlockMatchInitializer.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaBlockMatchInitializer_8hxx_source.html#l00454">454</a> of file <a class="el" href="animaBlockMatchInitializer_8hxx_source.html">animaBlockMatchInitializer.hxx</a>.</p>
 
 </div>
 </div>
@@ -564,7 +602,7 @@ template&lt;class PixelType , unsigned int NDimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaBlockMatchInitializer_8hxx_source.html#l00403">403</a> of file <a class="el" href="animaBlockMatchInitializer_8hxx_source.html">animaBlockMatchInitializer.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaBlockMatchInitializer_8hxx_source.html#l00402">402</a> of file <a class="el" href="animaBlockMatchInitializer_8hxx_source.html">animaBlockMatchInitializer.hxx</a>.</p>
 
 </div>
 </div>
@@ -591,7 +629,7 @@ template&lt;class PixelType , unsigned int NDimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaBlockMatchInitializer_8hxx_source.html#l00241">241</a> of file <a class="el" href="animaBlockMatchInitializer_8hxx_source.html">animaBlockMatchInitializer.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaBlockMatchInitializer_8hxx_source.html#l00240">240</a> of file <a class="el" href="animaBlockMatchInitializer_8hxx_source.html">animaBlockMatchInitializer.hxx</a>.</p>
 
 </div>
 </div>
@@ -1237,44 +1275,6 @@ template&lt;class PixelType , unsigned int NDimensions = 3&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ad7ed38a302d451a54c31cec9432ace06"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class PixelType , unsigned int NDimensions&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classanima_1_1BlockMatchingInitializer.html">anima::BlockMatchingInitializer</a>&lt; PixelType, NDimensions &gt;::TestBlockInImage </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classanima_1_1BlockMatchingInitializer.html#ac4c4179b2eb960aa97f6af471b220fd2">ImageRegionType</a> &amp;&#160;</td>
-          <td class="paramname"><em>region</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>blockVariance</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="animaBlockMatchInitializer_8hxx_source.html#l00363">363</a> of file <a class="el" href="animaBlockMatchInitializer_8hxx_source.html">animaBlockMatchInitializer.hxx</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a439cf3dff2866bccbf2078e31d5b02d2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1333,7 +1333,7 @@ template&lt;class PixelType , unsigned int NDimensions&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 28 2015 06:23:08 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 29 2015 06:24:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

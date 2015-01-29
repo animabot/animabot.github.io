@@ -134,7 +134,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    m_SymmetryType = <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa481657d3c33ac77e7b7a1cebbdd6fe4a6e74a5698138537567b16b16e18a8ea4">Asymmetric</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    m_Transform = <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a73bc7c8bbc76cb531c28de8d12bd61f4">Translation</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    m_Metric = <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47">SquaredCorrelation</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    m_Metric = <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47">SquaredCorrelation</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    m_Optimizer = <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0ee9c402d8d6f00739696465daa4822da320d3dc8311ac24fa27e5f31ec3e6539">Bobyqa</a>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    m_MaximumIterations = 10;</div>
@@ -150,7 +150,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    m_AngleUpperBound = 180;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    m_SkewUpperBound = 45;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    m_ScaleUpperBound = 3;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    m_Agregator = <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dca128e13809440305952ce3ed8ed1403db">Baloo</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    m_Agregator = <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dca128e13809440305952ce3ed8ed1403db">Baloo</a>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    m_ExtrapolationSigma = 3;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    m_ElasticSigma = 3;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    m_OutlierSigma = 3;</div>
@@ -271,7 +271,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="comment">// Init agregator mean shift parameters</span></div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <a class="code" href="classanima_1_1BaseTransformAgregator.html">BaseAgregatorType</a>* agregPtr = NULL;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">if</span> (m_Agregator == <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dca589cdeef2edcddee7e8b502ac9158b73">MSmoother</a>)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">if</span> (m_Agregator == <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dca589cdeef2edcddee7e8b502ac9158b73">MSmoother</a>)</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        {</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <a class="code" href="classanima_1_1DenseSVFTransformAgregator.html">MEstimateAgregatorType</a> *agreg = <span class="keyword">new</span> <a class="code" href="classanima_1_1DenseSVFTransformAgregator.html">MEstimateAgregatorType</a>;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            agreg-&gt;<a class="code" href="classanima_1_1DenseSVFTransformAgregator.html#a4d1c59231446fa4a3a6124b827e6276c">SetExtrapolationSigma</a>(m_ExtrapolationSigma * meanSpacing);</div>
@@ -316,7 +316,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                this-&gt;InitializeBlocksOnImage(initPtr, refImage);</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                m_bmreg-&gt;SetBlockRegions(initPtr-&gt;GetOutput());</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                <span class="keywordflow">if</span> (m_Agregator == <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dca589cdeef2edcddee7e8b502ac9158b73">MSmoother</a>)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                <span class="keywordflow">if</span> (m_Agregator == <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dca589cdeef2edcddee7e8b502ac9158b73">MSmoother</a>)</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                {</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                    <a class="code" href="classanima_1_1DenseSVFTransformAgregator.html">MEstimateAgregatorType</a> *agreg = dynamic_cast &lt;<a class="code" href="classanima_1_1DenseSVFTransformAgregator.html">MEstimateAgregatorType</a> *&gt; (agregPtr);</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    agreg-&gt;<a class="code" href="classanima_1_1DenseSVFTransformAgregator.html#aeae79665c26d1078befd883686bb9e2e">SetDamIndexes</a>(initPtr-&gt;GetDamIndexes());</div>
@@ -370,291 +370,290 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        }</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">if</span> (m_progressCallback)</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        {</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <span class="comment">// we cannot connect directly bmreg to m_progressCallback</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <span class="comment">// we need to create a new progressReporter with more iterations (m_progressReporter),</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="comment">// to listen to progress events from bmreg and to send new ones to m_progressCallback</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            m_bmreg-&gt;AddObserver(itk::ProgressEvent(), m_callback);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        }</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        m_bmreg-&gt;SetAgregator(agregPtr);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">if</span> (this-&gt;GetNumberOfThreads() != 0)</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            m_bmreg-&gt;SetNumberOfThreads(this-&gt;GetNumberOfThreads());</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        m_bmreg-&gt;SetFixedImage(refImage);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        m_bmreg-&gt;SetMovingImage(floImage);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        m_bmreg-&gt;SetSVFElasticRegSigma(m_ElasticSigma * meanSpacing);</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordflow">switch</span> (m_Transform)</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        {</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a73bc7c8bbc76cb531c28de8d12bd61f4">Translation</a>:</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                m_bmreg-&gt;SetTransformKind(<a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a73bc7c8bbc76cb531c28de8d12bd61f4">BaseBlockMatchRegistrationType::Translation</a>);</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                agregPtr-&gt;<a class="code" href="classanima_1_1BaseTransformAgregator.html#a431bb1b5f6d8bc8fa88a8ca70f9ce4d2">SetInputTransformType</a>(BaseAgregatorType::TRANSLATION);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a92ee78916f31ff05ad4ae0fd4efd3309">Rigid</a>:</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                m_bmreg-&gt;SetTransformKind(<a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a92ee78916f31ff05ad4ae0fd4efd3309">BaseBlockMatchRegistrationType::Rigid</a>);</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                agregPtr-&gt;<a class="code" href="classanima_1_1BaseTransformAgregator.html#a431bb1b5f6d8bc8fa88a8ca70f9ce4d2">SetInputTransformType</a>(BaseAgregatorType::RIGID);</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836ac0984f0c0fc7cdcea1c0bde170f9c925">Affine</a>:</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                m_bmreg-&gt;SetTransformKind(<a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836ac0984f0c0fc7cdcea1c0bde170f9c925">BaseBlockMatchRegistrationType::Affine</a>);</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                agregPtr-&gt;<a class="code" href="classanima_1_1BaseTransformAgregator.html#a431bb1b5f6d8bc8fa88a8ca70f9ce4d2">SetInputTransformType</a>(BaseAgregatorType::AFFINE);</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        }</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">switch</span> (m_Optimizer)</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        {</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0ee9c402d8d6f00739696465daa4822dac435ebb2721d1fd5fffac503d0fd6328">Exhaustive</a>:</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                m_bmreg-&gt;SetOptimizerKind(<a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0ee9c402d8d6f00739696465daa4822dac435ebb2721d1fd5fffac503d0fd6328">BaseBlockMatchRegistrationType::Exhaustive</a>);</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0ee9c402d8d6f00739696465daa4822da320d3dc8311ac24fa27e5f31ec3e6539">Bobyqa</a>:</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                m_bmreg-&gt;SetOptimizerKind(<a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0ee9c402d8d6f00739696465daa4822da320d3dc8311ac24fa27e5f31ec3e6539">BaseBlockMatchRegistrationType::Bobyqa</a>);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        }</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">switch</span> (m_Metric)</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        {</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47">SquaredCorrelation</a>:</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                m_bmreg-&gt;SetMetricKind(<a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47">BaseBlockMatchRegistrationType::SquaredCorrelation</a>);</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403eacd7d443ade48c2da7f72e90eb7cf352f">Correlation</a>:</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                m_bmreg-&gt;SetMetricKind(<a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403eacd7d443ade48c2da7f72e90eb7cf352f">BaseBlockMatchRegistrationType::Correlation</a>);</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9">MeanSquares</a>:</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                m_bmreg-&gt;SetMetricKind(<a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9">BaseBlockMatchRegistrationType::MeanSquares</a>);</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        }</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        m_bmreg-&gt;SetMaximumIterations(m_MaximumIterations);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        m_bmreg-&gt;SetMinimalTransformError(m_MinimalTransformError);</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        m_bmreg-&gt;SetOptimizerMaximumIterations(m_OptimizerMaximumIterations);</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        m_bmreg-&gt;SetInitialTransform(m_OutputTransform.GetPointer());</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keywordtype">double</span> sr = m_SearchRadius;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        m_bmreg-&gt;SetSearchRadius(sr);</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordtype">double</span> sar = m_SearchAngleRadius;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        m_bmreg-&gt;SetSearchAngleRadius(sar);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordtype">double</span> skr = m_SearchSkewRadius;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        m_bmreg-&gt;SetSearchSkewRadius(skr);</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordtype">double</span> scr = m_SearchScaleRadius;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        m_bmreg-&gt;SetSearchScaleRadius(scr);</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keywordtype">double</span> fr = m_FinalRadius;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        m_bmreg-&gt;SetFinalRadius(fr);</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordtype">double</span> ss = m_StepSize;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        m_bmreg-&gt;SetStepSize(ss);</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordtype">double</span> tub = m_TranslateUpperBound;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        m_bmreg-&gt;SetTranslateMax(tub);</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keywordtype">double</span> aub = m_AngleUpperBound;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        m_bmreg-&gt;SetAngleMax(aub);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordtype">double</span> skub = m_SkewUpperBound;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        m_bmreg-&gt;SetSkewMax(skub);</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keywordtype">double</span> scub = m_ScaleUpperBound;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        m_bmreg-&gt;SetScaleMax(scub);</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        {</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            m_bmreg-&gt;Update();</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Block Matching Registration stop condition &quot;</span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                      &lt;&lt; m_bmreg-&gt;GetStopConditionDescription()</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                      &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        }</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">catch</span>( itk::ExceptionObject &amp; err )</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        {</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;ExceptionObject caught !&quot;</span> &lt;&lt; err &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            exit(-1);</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        }</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keyword">const</span> <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#ad830e439f993d0eb657ced11670572af">BaseTransformType</a> *resTrsf = dynamic_cast &lt;<span class="keyword">const</span> <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#ad830e439f993d0eb657ced11670572af">BaseTransformType</a> *&gt; (m_bmreg-&gt;GetOutput()-&gt;Get());</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        m_OutputTransform-&gt;SetParametersAsVectorField(resTrsf-&gt;GetParametersAsVectorField());</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    }</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordflow">if</span> (m_Abort)</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Process aborted&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    this-&gt;InvokeEvent(itk::EndEvent());</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">if</span> (m_SymmetryType == <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa481657d3c33ac77e7b7a1cebbdd6fe4afc33eeb7ad64405749e928ac6f3caa3e">Kissing</a>)</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    {</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a46b4da66c0cc1f7f3918a8f489fc9b15">VelocityFieldType</a> *finalTrsfField = const_cast &lt;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a46b4da66c0cc1f7f3918a8f489fc9b15">VelocityFieldType</a> *&gt; (m_OutputTransform-&gt;GetParametersAsVectorField());</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <span class="keyword">typedef</span> itk::MultiplyImageFilter &lt;VelocityFieldType,itk::Image &lt;float,ImageDimension&gt;, <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a46b4da66c0cc1f7f3918a8f489fc9b15">VelocityFieldType</a>&gt; MultiplyFilterType;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keyword">typename</span> MultiplyFilterType::Pointer fieldMultiplier = MultiplyFilterType::New();</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        fieldMultiplier-&gt;SetInput(finalTrsfField);</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        fieldMultiplier-&gt;SetConstant(2.0);</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        fieldMultiplier-&gt;SetNumberOfThreads(GetNumberOfThreads());</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        fieldMultiplier-&gt;Update();</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a46b4da66c0cc1f7f3918a8f489fc9b15">VelocityFieldType</a> *outputField = fieldMultiplier-&gt;GetOutput();</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        m_OutputTransform-&gt;SetParametersAsVectorField(fieldMultiplier-&gt;GetOutput());</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        outputField-&gt;DisconnectPipeline();</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    }</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a9e803d30fb9d880b135b9319f6682276">DisplacementFieldTransformPointer</a> outputDispTrsf = DisplacementFieldTransformType::New();</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <a class="code" href="namespaceanima.html#a3bea3f085f8a59d580435c0850b77b60">anima::GetSVFExponential</a>(m_OutputTransform.GetPointer(), outputDispTrsf.GetPointer(), <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> itk::ResampleImageFilter&lt;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#aa21c35b21fa108e3dbfa8db1d06d2c07">InputImageType</a>, InputImageType,</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                                              <span class="keyword">typename</span> <a class="code" href="classanima_1_1BaseTransformAgregator.html#aa9d09f94b9a804c706a2e8a1a4af8048">BaseAgregatorType::ScalarType</a>&gt; ResampleFilterType;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keyword">typename</span> ResampleFilterType::Pointer tmpResample = ResampleFilterType::New();</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    tmpResample-&gt;SetTransform(outputDispTrsf);</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    tmpResample-&gt;SetInput(m_FloatingImage);</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    tmpResample-&gt;SetSize(m_ReferenceImage-&gt;GetLargestPossibleRegion().GetSize());</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    tmpResample-&gt;SetOutputOrigin(m_ReferenceImage-&gt;GetOrigin());</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    tmpResample-&gt;SetOutputSpacing(m_ReferenceImage-&gt;GetSpacing());</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    tmpResample-&gt;SetOutputDirection(m_ReferenceImage-&gt;GetDirection());</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    tmpResample-&gt;SetDefaultPixelValue(0);</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    tmpResample-&gt;Update();</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    m_OutputImage = tmpResample-&gt;GetOutput();</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    m_OutputImage-&gt;DisconnectPipeline();</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;}</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ImageDimension&gt;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="keyword">typename</span> <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a9e803d30fb9d880b135b9319f6682276">PyramidalDenseSVFMatchingBridge&lt;ImageDimension&gt;::DisplacementFieldTransformPointer</a></div>
-<div class="line"><a name="l00436"></a><span class="lineno"><a class="line" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#abbc36dec1f01c601e0c3df1b384cf0b0">  436</a></span>&#160;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#abbc36dec1f01c601e0c3df1b384cf0b0">PyramidalDenseSVFMatchingBridge&lt;ImageDimension&gt;::GetOutputDisplacementFieldTransform</a>()</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;{</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a9e803d30fb9d880b135b9319f6682276">DisplacementFieldTransformPointer</a> outputDispTrsf = DisplacementFieldTransformType::New();</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <a class="code" href="namespaceanima.html#a3bea3f085f8a59d580435c0850b77b60">anima::GetSVFExponential</a>(m_OutputTransform.GetPointer(), outputDispTrsf.GetPointer(), <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keywordflow">return</span> outputDispTrsf;</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;}</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ImageDimension&gt;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00447"></a><span class="lineno"><a class="line" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a7ea1c300fdeb4678f5a3fce0f18d3369">  447</a></span>&#160;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a7ea1c300fdeb4678f5a3fce0f18d3369">PyramidalDenseSVFMatchingBridge&lt;ImageDimension&gt;::EmitProgress</a>(<span class="keywordtype">int</span> prog)</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;{</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordflow">if</span> (m_progressReporter)</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        m_progressReporter-&gt;CompletedPixel();</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;}</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ImageDimension&gt;</div>
-<div class="line"><a name="l00454"></a><span class="lineno"><a class="line" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a8d4abdbe58e3b9674ef599521a4e0e4f">  454</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a8d4abdbe58e3b9674ef599521a4e0e4f">PyramidalDenseSVFMatchingBridge&lt;ImageDimension&gt;::ManageProgress</a> (itk::Object* caller, <span class="keyword">const</span> itk::EventObject&amp; event, <span class="keywordtype">void</span>* clientData)</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;{</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html">PyramidalDenseSVFMatchingBridge</a> * source = <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html">PyramidalDenseSVFMatchingBridge</a> *<span class="keyword">&gt;</span> (clientData);</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    itk::ProcessObject *processObject = (itk::ProcessObject *) caller;</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keywordflow">if</span> (source &amp;&amp; processObject)</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        source-&gt;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a7ea1c300fdeb4678f5a3fce0f18d3369">EmitProgress</a>(processObject-&gt;GetProgress() * 100);</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;}</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ImageDimension&gt;</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00465"></a><span class="lineno"><a class="line" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a91e504896d140f39de4908b7498969dd">  465</a></span>&#160;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a91e504896d140f39de4908b7498969dd">PyramidalDenseSVFMatchingBridge&lt;ImageDimension&gt;::WriteOutputs</a>()</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;{</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Writing output image to: &quot;</span> &lt;&lt; m_resultFile &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keyword">typename</span> itk::ImageFileWriter &lt;InputImageType&gt;::Pointer imageWriter = itk::ImageFileWriter &lt;InputImageType&gt;::New();</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    imageWriter-&gt;SetUseCompression(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    imageWriter-&gt;SetInput(m_OutputImage);</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    imageWriter-&gt;SetFileName(m_resultFile);</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    imageWriter-&gt;Update();</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    <span class="keywordflow">if</span> (m_outputTransformFile != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    {</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Writing output SVF to: &quot;</span> &lt;&lt; m_outputTransformFile &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        <span class="keyword">typename</span> itk::ImageFileWriter &lt;VelocityFieldType&gt;::Pointer writer = itk::ImageFileWriter &lt;VelocityFieldType&gt;::New();</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        writer-&gt;SetInput(m_OutputTransform-&gt;GetParametersAsVectorField());</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        writer-&gt;SetFileName(m_outputTransformFile);</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        writer-&gt;Update();</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    }</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;}</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ImageDimension&gt;</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00488"></a><span class="lineno"><a class="line" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#af4aa92f67cbe713902158a809db3b2a3">  488</a></span>&#160;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#af4aa92f67cbe713902158a809db3b2a3">PyramidalDenseSVFMatchingBridge&lt;ImageDimension&gt;::SetupPyramids</a>()</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;{</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    <span class="comment">// Create pyramid here, check images actually are of the same size.</span></div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    m_ReferencePyramid = PyramidType::New();</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    m_ReferencePyramid-&gt;SetInput(m_ReferenceImage);</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    m_ReferencePyramid-&gt;SetNumberOfLevels(m_NumberOfPyramidLevels);</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <span class="keywordflow">if</span> (this-&gt;GetNumberOfThreads() != 0)</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        m_ReferencePyramid-&gt;SetNumberOfThreads(this-&gt;GetNumberOfThreads());</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    m_ReferencePyramid-&gt;Update();</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    <span class="comment">// Create pyramid for floating image</span></div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    m_FloatingPyramid = PyramidType::New();</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    m_FloatingPyramid-&gt;SetInput(m_FloatingImage);</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    m_FloatingPyramid-&gt;SetNumberOfLevels(m_NumberOfPyramidLevels);</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="keywordflow">if</span> (this-&gt;GetNumberOfThreads() != 0)</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        m_FloatingPyramid-&gt;SetNumberOfThreads(this-&gt;GetNumberOfThreads());</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    m_FloatingPyramid-&gt;Update();</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;}</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;} <span class="comment">// end of namespace</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">if</span> (m_progressCallback)</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="comment">// we cannot connect directly bmreg to m_progressCallback</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <span class="comment">// we need to create a new progressReporter with more iterations (m_progressReporter),</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <span class="comment">// to listen to progress events from bmreg and to send new ones to m_progressCallback</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            m_bmreg-&gt;AddObserver(itk::ProgressEvent(), m_callback);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        m_bmreg-&gt;SetAgregator(agregPtr);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">if</span> (this-&gt;GetNumberOfThreads() != 0)</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            m_bmreg-&gt;SetNumberOfThreads(this-&gt;GetNumberOfThreads());</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        m_bmreg-&gt;SetFixedImage(refImage);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        m_bmreg-&gt;SetMovingImage(floImage);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        m_bmreg-&gt;SetSVFElasticRegSigma(m_ElasticSigma * meanSpacing);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">switch</span> (m_Transform)</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a73bc7c8bbc76cb531c28de8d12bd61f4">Translation</a>:</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                m_bmreg-&gt;SetTransformKind(<a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a73bc7c8bbc76cb531c28de8d12bd61f4">BaseBlockMatchRegistrationType::Translation</a>);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                agregPtr-&gt;<a class="code" href="classanima_1_1BaseTransformAgregator.html#a431bb1b5f6d8bc8fa88a8ca70f9ce4d2">SetInputTransformType</a>(BaseAgregatorType::TRANSLATION);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a92ee78916f31ff05ad4ae0fd4efd3309">Rigid</a>:</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                m_bmreg-&gt;SetTransformKind(<a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a92ee78916f31ff05ad4ae0fd4efd3309">BaseBlockMatchRegistrationType::Rigid</a>);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                agregPtr-&gt;<a class="code" href="classanima_1_1BaseTransformAgregator.html#a431bb1b5f6d8bc8fa88a8ca70f9ce4d2">SetInputTransformType</a>(BaseAgregatorType::RIGID);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836ac0984f0c0fc7cdcea1c0bde170f9c925">Affine</a>:</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                m_bmreg-&gt;SetTransformKind(<a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836ac0984f0c0fc7cdcea1c0bde170f9c925">BaseBlockMatchRegistrationType::Affine</a>);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                agregPtr-&gt;<a class="code" href="classanima_1_1BaseTransformAgregator.html#a431bb1b5f6d8bc8fa88a8ca70f9ce4d2">SetInputTransformType</a>(BaseAgregatorType::AFFINE);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordflow">switch</span> (m_Optimizer)</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0ee9c402d8d6f00739696465daa4822dac435ebb2721d1fd5fffac503d0fd6328">Exhaustive</a>:</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                m_bmreg-&gt;SetOptimizerKind(<a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0ee9c402d8d6f00739696465daa4822dac435ebb2721d1fd5fffac503d0fd6328">BaseBlockMatchRegistrationType::Exhaustive</a>);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0ee9c402d8d6f00739696465daa4822da320d3dc8311ac24fa27e5f31ec3e6539">Bobyqa</a>:</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                m_bmreg-&gt;SetOptimizerKind(<a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0ee9c402d8d6f00739696465daa4822da320d3dc8311ac24fa27e5f31ec3e6539">BaseBlockMatchRegistrationType::Bobyqa</a>);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        }</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordflow">switch</span> (m_Metric)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47">SquaredCorrelation</a>:</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                m_bmreg-&gt;SetMetricKind(<a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47">BaseBlockMatchRegistrationType::SquaredCorrelation</a>);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403eacd7d443ade48c2da7f72e90eb7cf352f">Correlation</a>:</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                m_bmreg-&gt;SetMetricKind(<a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403eacd7d443ade48c2da7f72e90eb7cf352f">BaseBlockMatchRegistrationType::Correlation</a>);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9">MeanSquares</a>:</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                m_bmreg-&gt;SetMetricKind(<a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9">BaseBlockMatchRegistrationType::MeanSquares</a>);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        m_bmreg-&gt;SetMaximumIterations(m_MaximumIterations);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        m_bmreg-&gt;SetMinimalTransformError(m_MinimalTransformError);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        m_bmreg-&gt;SetOptimizerMaximumIterations(m_OptimizerMaximumIterations);</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        m_bmreg-&gt;SetInitialTransform(m_OutputTransform.GetPointer());</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="keywordtype">double</span> sr = m_SearchRadius;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        m_bmreg-&gt;SetSearchRadius(sr);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordtype">double</span> sar = m_SearchAngleRadius;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        m_bmreg-&gt;SetSearchAngleRadius(sar);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="keywordtype">double</span> skr = m_SearchSkewRadius;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        m_bmreg-&gt;SetSearchSkewRadius(skr);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordtype">double</span> scr = m_SearchScaleRadius;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        m_bmreg-&gt;SetSearchScaleRadius(scr);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordtype">double</span> fr = m_FinalRadius;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        m_bmreg-&gt;SetFinalRadius(fr);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordtype">double</span> ss = m_StepSize;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        m_bmreg-&gt;SetStepSize(ss);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keywordtype">double</span> tub = m_TranslateUpperBound;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        m_bmreg-&gt;SetTranslateMax(tub);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="keywordtype">double</span> aub = m_AngleUpperBound;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        m_bmreg-&gt;SetAngleMax(aub);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="keywordtype">double</span> skub = m_SkewUpperBound;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        m_bmreg-&gt;SetSkewMax(skub);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordtype">double</span> scub = m_ScaleUpperBound;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        m_bmreg-&gt;SetScaleMax(scub);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        {</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            m_bmreg-&gt;Update();</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Block Matching Registration stop condition &quot;</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                      &lt;&lt; m_bmreg-&gt;GetStopConditionDescription()</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                      &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        }</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordflow">catch</span>( itk::ExceptionObject &amp; err )</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;ExceptionObject caught !&quot;</span> &lt;&lt; err &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            exit(-1);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        }</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="keyword">const</span> <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#ad830e439f993d0eb657ced11670572af">BaseTransformType</a> *resTrsf = dynamic_cast &lt;<span class="keyword">const</span> <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#ad830e439f993d0eb657ced11670572af">BaseTransformType</a> *&gt; (m_bmreg-&gt;GetOutput()-&gt;Get());</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        m_OutputTransform-&gt;SetParametersAsVectorField(resTrsf-&gt;GetParametersAsVectorField());</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    }</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordflow">if</span> (m_Abort)</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Process aborted&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    this-&gt;InvokeEvent(itk::EndEvent());</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordflow">if</span> (m_SymmetryType == <a class="code" href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa481657d3c33ac77e7b7a1cebbdd6fe4afc33eeb7ad64405749e928ac6f3caa3e">Kissing</a>)</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    {</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a46b4da66c0cc1f7f3918a8f489fc9b15">VelocityFieldType</a> *finalTrsfField = const_cast &lt;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a46b4da66c0cc1f7f3918a8f489fc9b15">VelocityFieldType</a> *&gt; (m_OutputTransform-&gt;GetParametersAsVectorField());</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keyword">typedef</span> itk::MultiplyImageFilter &lt;VelocityFieldType,itk::Image &lt;float,ImageDimension&gt;, <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a46b4da66c0cc1f7f3918a8f489fc9b15">VelocityFieldType</a>&gt; MultiplyFilterType;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="keyword">typename</span> MultiplyFilterType::Pointer fieldMultiplier = MultiplyFilterType::New();</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        fieldMultiplier-&gt;SetInput(finalTrsfField);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        fieldMultiplier-&gt;SetConstant(2.0);</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        fieldMultiplier-&gt;SetNumberOfThreads(GetNumberOfThreads());</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        fieldMultiplier-&gt;Update();</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a46b4da66c0cc1f7f3918a8f489fc9b15">VelocityFieldType</a> *outputField = fieldMultiplier-&gt;GetOutput();</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        m_OutputTransform-&gt;SetParametersAsVectorField(fieldMultiplier-&gt;GetOutput());</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        outputField-&gt;DisconnectPipeline();</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    }</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a9e803d30fb9d880b135b9319f6682276">DisplacementFieldTransformPointer</a> outputDispTrsf = DisplacementFieldTransformType::New();</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <a class="code" href="namespaceanima.html#a3bea3f085f8a59d580435c0850b77b60">anima::GetSVFExponential</a>(m_OutputTransform.GetPointer(), outputDispTrsf.GetPointer(), <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> itk::ResampleImageFilter&lt;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#aa21c35b21fa108e3dbfa8db1d06d2c07">InputImageType</a>, InputImageType,</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                                              <span class="keyword">typename</span> <a class="code" href="classanima_1_1BaseTransformAgregator.html#aa9d09f94b9a804c706a2e8a1a4af8048">BaseAgregatorType::ScalarType</a>&gt; ResampleFilterType;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keyword">typename</span> ResampleFilterType::Pointer tmpResample = ResampleFilterType::New();</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    tmpResample-&gt;SetTransform(outputDispTrsf);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    tmpResample-&gt;SetInput(m_FloatingImage);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    tmpResample-&gt;SetSize(m_ReferenceImage-&gt;GetLargestPossibleRegion().GetSize());</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    tmpResample-&gt;SetOutputOrigin(m_ReferenceImage-&gt;GetOrigin());</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    tmpResample-&gt;SetOutputSpacing(m_ReferenceImage-&gt;GetSpacing());</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    tmpResample-&gt;SetOutputDirection(m_ReferenceImage-&gt;GetDirection());</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    tmpResample-&gt;SetDefaultPixelValue(0);</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    tmpResample-&gt;Update();</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    m_OutputImage = tmpResample-&gt;GetOutput();</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    m_OutputImage-&gt;DisconnectPipeline();</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;}</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ImageDimension&gt;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="keyword">typename</span> <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a9e803d30fb9d880b135b9319f6682276">PyramidalDenseSVFMatchingBridge&lt;ImageDimension&gt;::DisplacementFieldTransformPointer</a></div>
+<div class="line"><a name="l00435"></a><span class="lineno"><a class="line" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#abbc36dec1f01c601e0c3df1b384cf0b0">  435</a></span>&#160;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#abbc36dec1f01c601e0c3df1b384cf0b0">PyramidalDenseSVFMatchingBridge&lt;ImageDimension&gt;::GetOutputDisplacementFieldTransform</a>()</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;{</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a9e803d30fb9d880b135b9319f6682276">DisplacementFieldTransformPointer</a> outputDispTrsf = DisplacementFieldTransformType::New();</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <a class="code" href="namespaceanima.html#a3bea3f085f8a59d580435c0850b77b60">anima::GetSVFExponential</a>(m_OutputTransform.GetPointer(), outputDispTrsf.GetPointer(), <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="keywordflow">return</span> outputDispTrsf;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;}</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ImageDimension&gt;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno"><a class="line" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a7ea1c300fdeb4678f5a3fce0f18d3369">  446</a></span>&#160;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a7ea1c300fdeb4678f5a3fce0f18d3369">PyramidalDenseSVFMatchingBridge&lt;ImageDimension&gt;::EmitProgress</a>(<span class="keywordtype">int</span> prog)</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;{</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keywordflow">if</span> (m_progressReporter)</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        m_progressReporter-&gt;CompletedPixel();</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;}</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ImageDimension&gt;</div>
+<div class="line"><a name="l00453"></a><span class="lineno"><a class="line" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a8d4abdbe58e3b9674ef599521a4e0e4f">  453</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a8d4abdbe58e3b9674ef599521a4e0e4f">PyramidalDenseSVFMatchingBridge&lt;ImageDimension&gt;::ManageProgress</a> (itk::Object* caller, <span class="keyword">const</span> itk::EventObject&amp; event, <span class="keywordtype">void</span>* clientData)</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;{</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html">PyramidalDenseSVFMatchingBridge</a> * source = <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html">PyramidalDenseSVFMatchingBridge</a> *<span class="keyword">&gt;</span> (clientData);</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    itk::ProcessObject *processObject = (itk::ProcessObject *) caller;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <span class="keywordflow">if</span> (source &amp;&amp; processObject)</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        source-&gt;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a7ea1c300fdeb4678f5a3fce0f18d3369">EmitProgress</a>(processObject-&gt;GetProgress() * 100);</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;}</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ImageDimension&gt;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno"><a class="line" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a91e504896d140f39de4908b7498969dd">  464</a></span>&#160;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a91e504896d140f39de4908b7498969dd">PyramidalDenseSVFMatchingBridge&lt;ImageDimension&gt;::WriteOutputs</a>()</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;{</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Writing output image to: &quot;</span> &lt;&lt; m_resultFile &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keyword">typename</span> itk::ImageFileWriter &lt;InputImageType&gt;::Pointer imageWriter = itk::ImageFileWriter &lt;InputImageType&gt;::New();</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    imageWriter-&gt;SetUseCompression(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    imageWriter-&gt;SetInput(m_OutputImage);</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    imageWriter-&gt;SetFileName(m_resultFile);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    imageWriter-&gt;Update();</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    <span class="keywordflow">if</span> (m_outputTransformFile != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    {</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Writing output SVF to: &quot;</span> &lt;&lt; m_outputTransformFile &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        <span class="keyword">typename</span> itk::ImageFileWriter &lt;VelocityFieldType&gt;::Pointer writer = itk::ImageFileWriter &lt;VelocityFieldType&gt;::New();</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        writer-&gt;SetInput(m_OutputTransform-&gt;GetParametersAsVectorField());</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        writer-&gt;SetFileName(m_outputTransformFile);</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        writer-&gt;Update();</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    }</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;}</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ImageDimension&gt;</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00487"></a><span class="lineno"><a class="line" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#af4aa92f67cbe713902158a809db3b2a3">  487</a></span>&#160;<a class="code" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#af4aa92f67cbe713902158a809db3b2a3">PyramidalDenseSVFMatchingBridge&lt;ImageDimension&gt;::SetupPyramids</a>()</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;{</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    <span class="comment">// Create pyramid here, check images actually are of the same size.</span></div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    m_ReferencePyramid = PyramidType::New();</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    m_ReferencePyramid-&gt;SetInput(m_ReferenceImage);</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    m_ReferencePyramid-&gt;SetNumberOfLevels(m_NumberOfPyramidLevels);</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="keywordflow">if</span> (this-&gt;GetNumberOfThreads() != 0)</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        m_ReferencePyramid-&gt;SetNumberOfThreads(this-&gt;GetNumberOfThreads());</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    m_ReferencePyramid-&gt;Update();</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    <span class="comment">// Create pyramid for floating image</span></div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    m_FloatingPyramid = PyramidType::New();</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    m_FloatingPyramid-&gt;SetInput(m_FloatingImage);</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    m_FloatingPyramid-&gt;SetNumberOfLevels(m_NumberOfPyramidLevels);</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    <span class="keywordflow">if</span> (this-&gt;GetNumberOfThreads() != 0)</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        m_FloatingPyramid-&gt;SetNumberOfThreads(this-&gt;GetNumberOfThreads());</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    m_FloatingPyramid-&gt;Update();</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;}</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;} <span class="comment">// end of namespace</span></div>
 <div class="ttc" id="classanima_1_1DenseSVFTransformAgregator_html_a24ffd4d2ac90d8b21144ac52da9d680e"><div class="ttname"><a href="classanima_1_1DenseSVFTransformAgregator.html#a24ffd4d2ac90d8b21144ac52da9d680e">anima::DenseSVFTransformAgregator::SetNumberOfThreads</a></div><div class="ttdeci">void SetNumberOfThreads(unsigned int num)</div><div class="ttdef"><b>Definition:</b> <a href="animaDenseSVFTransformAgregator_8h_source.html#l00045">animaDenseSVFTransformAgregator.h:45</a></div></div>
 <div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a193c928f16526923a8c5ca1e49ec6401"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a193c928f16526923a8c5ca1e49ec6401">anima::PyramidalDenseSVFMatchingBridge::PyramidalDenseSVFMatchingBridge</a></div><div class="ttdeci">PyramidalDenseSVFMatchingBridge()</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00022">animaPyramidalDenseSVFMatchingBridge.hxx:22</a></div></div>
+<div class="ttc" id="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_html_abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9"><div class="ttname"><a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9">MeanSquares</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_source.html#l00014">animaPyramidalDistortionCorrectionBlockMatchingBridge.h:14</a></div></div>
 <div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_aa481657d3c33ac77e7b7a1cebbdd6fe4afc33eeb7ad64405749e928ac6f3caa3e"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa481657d3c33ac77e7b7a1cebbdd6fe4afc33eeb7ad64405749e928ac6f3caa3e">Kissing</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00018">animaPyramidalDenseSVFMatchingBridge.h:18</a></div></div>
 <div class="ttc" id="classanima_1_1DenseSVFTransformAgregator_html_a4d1c59231446fa4a3a6124b827e6276c"><div class="ttname"><a href="classanima_1_1DenseSVFTransformAgregator.html#a4d1c59231446fa4a3a6124b827e6276c">anima::DenseSVFTransformAgregator::SetExtrapolationSigma</a></div><div class="ttdeci">void SetExtrapolationSigma(double sigma)</div><div class="ttdef"><b>Definition:</b> <a href="animaDenseSVFTransformAgregator_8h_source.html#l00042">animaDenseSVFTransformAgregator.h:42</a></div></div>
 <div class="ttc" id="classanima_1_1BalooSVFTransformAgregator_html_a865feb8caadeda3afa12e37f41ed5862"><div class="ttname"><a href="classanima_1_1BalooSVFTransformAgregator.html#a865feb8caadeda3afa12e37f41ed5862">anima::BalooSVFTransformAgregator::SetExtrapolationSigma</a></div><div class="ttdeci">void SetExtrapolationSigma(double sigma)</div><div class="ttdef"><b>Definition:</b> <a href="animaBalooSVFTransformAgregator_8h_source.html#l00043">animaBalooSVFTransformAgregator.h:43</a></div></div>
 <div class="ttc" id="animaKissingSymmetricBlockMatchingRegistrationMethod_8h_html"><div class="ttname"><a href="animaKissingSymmetricBlockMatchingRegistrationMethod_8h.html">animaKissingSymmetricBlockMatchingRegistrationMethod.h</a></div></div>
-<div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9">MeanSquares</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00032">animaPyramidalDenseSVFMatchingBridge.h:32</a></div></div>
 <div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a37493241dec01f4aa9bb95594c9ce445"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a37493241dec01f4aa9bb95594c9ce445">anima::PyramidalDenseSVFMatchingBridge::~PyramidalDenseSVFMatchingBridge</a></div><div class="ttdeci">virtual ~PyramidalDenseSVFMatchingBridge()</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00077">animaPyramidalDenseSVFMatchingBridge.hxx:77</a></div></div>
-<div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a7ea1c300fdeb4678f5a3fce0f18d3369"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a7ea1c300fdeb4678f5a3fce0f18d3369">anima::PyramidalDenseSVFMatchingBridge::EmitProgress</a></div><div class="ttdeci">void EmitProgress(int prog)</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00447">animaPyramidalDenseSVFMatchingBridge.hxx:447</a></div></div>
+<div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a7ea1c300fdeb4678f5a3fce0f18d3369"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a7ea1c300fdeb4678f5a3fce0f18d3369">anima::PyramidalDenseSVFMatchingBridge::EmitProgress</a></div><div class="ttdeci">void EmitProgress(int prog)</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00446">animaPyramidalDenseSVFMatchingBridge.hxx:446</a></div></div>
 <div class="ttc" id="classanima_1_1BalooSVFTransformAgregator_html_a9ae94dcf7ddaa4633322a36e033d07f3"><div class="ttname"><a href="classanima_1_1BalooSVFTransformAgregator.html#a9ae94dcf7ddaa4633322a36e033d07f3">anima::BalooSVFTransformAgregator::SetDamIndexes</a></div><div class="ttdeci">void SetDamIndexes(std::vector&lt; IndexType &gt; &amp;indexes)</div><div class="ttdef"><b>Definition:</b> <a href="animaBalooSVFTransformAgregator_8h_source.html#l00052">animaBalooSVFTransformAgregator.h:52</a></div></div>
 <div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_ab36c268f854fff4ff81d15979d5673cb"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#ab36c268f854fff4ff81d15979d5673cb">anima::PyramidalDenseSVFMatchingBridge::InitializerPointer</a></div><div class="ttdeci">InitializerType::Pointer InitializerPointer</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00081">animaPyramidalDenseSVFMatchingBridge.h:81</a></div></div>
 <div class="ttc" id="classanima_1_1DenseSVFTransformAgregator_html_a2e91b1d424724234d8ef94b1b9fca4bd"><div class="ttname"><a href="classanima_1_1DenseSVFTransformAgregator.html#a2e91b1d424724234d8ef94b1b9fca4bd">anima::DenseSVFTransformAgregator::SetMEstimateConvergenceThreshold</a></div><div class="ttdeci">void SetMEstimateConvergenceThreshold(double num)</div><div class="ttdef"><b>Definition:</b> <a href="animaDenseSVFTransformAgregator_8h_source.html#l00049">animaDenseSVFTransformAgregator.h:49</a></div></div>
+<div class="ttc" id="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_html_a0836f0ad88bc1041ae2d8c20592874dca589cdeef2edcddee7e8b502ac9158b73"><div class="ttname"><a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dca589cdeef2edcddee7e8b502ac9158b73">MSmoother</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_source.html#l00027">animaPyramidalDistortionCorrectionBlockMatchingBridge.h:27</a></div></div>
 <div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a317da6a6ba0ed8e4572f9ef517869cee"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a317da6a6ba0ed8e4572f9ef517869cee">anima::PyramidalDenseSVFMatchingBridge::InitializeBlocksOnImage</a></div><div class="ttdeci">void InitializeBlocksOnImage(InitializerPointer &amp;initPtr, InputImageType *image)</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00093">animaPyramidalDenseSVFMatchingBridge.hxx:93</a></div></div>
 <div class="ttc" id="classanima_1_1BalooSVFTransformAgregator_html_ac3c5d009be9f6450f3feca8ef2be2762"><div class="ttname"><a href="classanima_1_1BalooSVFTransformAgregator.html#ac3c5d009be9f6450f3feca8ef2be2762">anima::BalooSVFTransformAgregator::SetNumberOfThreads</a></div><div class="ttdeci">void SetNumberOfThreads(unsigned int num)</div><div class="ttdef"><b>Definition:</b> <a href="animaBalooSVFTransformAgregator_8h_source.html#l00049">animaBalooSVFTransformAgregator.h:49</a></div></div>
 <div class="ttc" id="classanima_1_1BalooSVFTransformAgregator_html"><div class="ttname"><a href="classanima_1_1BalooSVFTransformAgregator.html">anima::BalooSVFTransformAgregator</a></div><div class="ttdef"><b>Definition:</b> <a href="animaBalooSVFTransformAgregator_8h_source.html#l00011">animaBalooSVFTransformAgregator.h:11</a></div></div>
 <div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a46b4da66c0cc1f7f3918a8f489fc9b15"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a46b4da66c0cc1f7f3918a8f489fc9b15">anima::PyramidalDenseSVFMatchingBridge::VelocityFieldType</a></div><div class="ttdeci">BaseTransformType::VectorFieldType VelocityFieldType</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00065">animaPyramidalDenseSVFMatchingBridge.h:65</a></div></div>
 <div class="ttc" id="classanima_1_1BaseTransformAgregator_html"><div class="ttname"><a href="classanima_1_1BaseTransformAgregator.html">anima::BaseTransformAgregator</a></div><div class="ttdef"><b>Definition:</b> <a href="animaBaseTransformAgregator_8h_source.html#l00016">animaBaseTransformAgregator.h:16</a></div></div>
 <div class="ttc" id="classanima_1_1BaseTransformAgregator_html_aa9d09f94b9a804c706a2e8a1a4af8048"><div class="ttname"><a href="classanima_1_1BaseTransformAgregator.html#aa9d09f94b9a804c706a2e8a1a4af8048">anima::BaseTransformAgregator::ScalarType</a></div><div class="ttdeci">double ScalarType</div><div class="ttdef"><b>Definition:</b> <a href="animaBaseTransformAgregator_8h_source.html#l00019">animaBaseTransformAgregator.h:19</a></div></div>
+<div class="ttc" id="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_html_a0836f0ad88bc1041ae2d8c20592874dca128e13809440305952ce3ed8ed1403db"><div class="ttname"><a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dca128e13809440305952ce3ed8ed1403db">Baloo</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_source.html#l00026">animaPyramidalDistortionCorrectionBlockMatchingBridge.h:26</a></div></div>
 <div class="ttc" id="classanima_1_1BalooSVFTransformAgregator_html_a3848f3fc3e4ac92091673bc12a3dbf51"><div class="ttname"><a href="classanima_1_1BalooSVFTransformAgregator.html#a3848f3fc3e4ac92091673bc12a3dbf51">anima::BalooSVFTransformAgregator::SetOutlierRejectionSigma</a></div><div class="ttdeci">void SetOutlierRejectionSigma(double sigma)</div><div class="ttdef"><b>Definition:</b> <a href="animaBalooSVFTransformAgregator_8h_source.html#l00046">animaBalooSVFTransformAgregator.h:46</a></div></div>
 <div class="ttc" id="classanima_1_1DenseSVFTransformAgregator_html_a13dc710ebceb88d8565815ccaca3bce8"><div class="ttname"><a href="classanima_1_1DenseSVFTransformAgregator.html#a13dc710ebceb88d8565815ccaca3bce8">anima::DenseSVFTransformAgregator::SetGeometryInformation</a></div><div class="ttdeci">void SetGeometryInformation(const TInputImageType *geomImage)</div><div class="ttdef"><b>Definition:</b> <a href="animaDenseSVFTransformAgregator_8h_source.html#l00053">animaDenseSVFTransformAgregator.h:53</a></div></div>
 <div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_aa1cc1190aa1b958d686d46e0860bc836a73bc7c8bbc76cb531c28de8d12bd61f4"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a73bc7c8bbc76cb531c28de8d12bd61f4">Translation</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00023">animaPyramidalDenseSVFMatchingBridge.h:23</a></div></div>
-<div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a8d4abdbe58e3b9674ef599521a4e0e4f"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a8d4abdbe58e3b9674ef599521a4e0e4f">anima::PyramidalDenseSVFMatchingBridge::ManageProgress</a></div><div class="ttdeci">static void ManageProgress(itk::Object *caller, const itk::EventObject &amp;event, void *clientData)</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00454">animaPyramidalDenseSVFMatchingBridge.hxx:454</a></div></div>
+<div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a8d4abdbe58e3b9674ef599521a4e0e4f"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a8d4abdbe58e3b9674ef599521a4e0e4f">anima::PyramidalDenseSVFMatchingBridge::ManageProgress</a></div><div class="ttdeci">static void ManageProgress(itk::Object *caller, const itk::EventObject &amp;event, void *clientData)</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00453">animaPyramidalDenseSVFMatchingBridge.hxx:453</a></div></div>
 <div class="ttc" id="namespaceanima_html_a3bea3f085f8a59d580435c0850b77b60"><div class="ttname"><a href="namespaceanima.html#a3bea3f085f8a59d580435c0850b77b60">anima::GetSVFExponential</a></div><div class="ttdeci">void GetSVFExponential(itk::StationaryVelocityFieldTransform&lt; ScalarType, NDimensions &gt; *baseTrsf, rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt; *resultTransform, bool invert)</div><div class="ttdef"><b>Definition:</b> <a href="animaVelocityUtils_8hxx_source.html#l00041">animaVelocityUtils.hxx:41</a></div></div>
 <div class="ttc" id="classanima_1_1SymmetricBlockMatchingRegistrationMethod_html"><div class="ttname"><a href="classanima_1_1SymmetricBlockMatchingRegistrationMethod.html">anima::SymmetricBlockMatchingRegistrationMethod</a></div><div class="ttdef"><b>Definition:</b> <a href="animaSymmetricBlockMatchingRegistrationMethod_8h_source.html#l00009">animaSymmetricBlockMatchingRegistrationMethod.h:9</a></div></div>
 <div class="ttc" id="classanima_1_1BalooSVFTransformAgregator_html_a24b3aca0bf18bd81d2552725e44dc606"><div class="ttname"><a href="classanima_1_1BalooSVFTransformAgregator.html#a24b3aca0bf18bd81d2552725e44dc606">anima::BalooSVFTransformAgregator::SetGeometryInformation</a></div><div class="ttdeci">void SetGeometryInformation(const TInputImageType *geomImage)</div><div class="ttdef"><b>Definition:</b> <a href="animaBalooSVFTransformAgregator_8h_source.html#l00054">animaBalooSVFTransformAgregator.h:54</a></div></div>
 <div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a0a8644e680ee9e4c34138e0e9860407f"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a0a8644e680ee9e4c34138e0e9860407f">anima::PyramidalDenseSVFMatchingBridge::AffineTransformPointer</a></div><div class="ttdeci">AffineTransformType::Pointer AffineTransformPointer</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00069">animaPyramidalDenseSVFMatchingBridge.h:69</a></div></div>
 <div class="ttc" id="classanima_1_1BaseTransformAgregator_html_aad0e8a0f8c2f1a8b517cc1fc2525b68a"><div class="ttname"><a href="classanima_1_1BaseTransformAgregator.html#aad0e8a0f8c2f1a8b517cc1fc2525b68a">anima::BaseTransformAgregator::SetOutputTransformType</a></div><div class="ttdeci">void SetOutputTransformType(TRANSFORM_TYPE name)</div><div class="ttdef"><b>Definition:</b> <a href="animaBaseTransformAgregator_8hxx_source.html#l00046">animaBaseTransformAgregator.hxx:46</a></div></div>
 <div class="ttc" id="animaLinearTransformEstimationTools_8h_html"><div class="ttname"><a href="animaLinearTransformEstimationTools_8h.html">animaLinearTransformEstimationTools.h</a></div></div>
-<div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_abf74dfd688b4203cefa6d49f8d14403eacd7d443ade48c2da7f72e90eb7cf352f"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403eacd7d443ade48c2da7f72e90eb7cf352f">Correlation</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00031">animaPyramidalDenseSVFMatchingBridge.h:31</a></div></div>
 <div class="ttc" id="animaAsymmetricBlockMatchingRegistrationMethod_8h_html"><div class="ttname"><a href="animaAsymmetricBlockMatchingRegistrationMethod_8h.html">animaAsymmetricBlockMatchingRegistrationMethod.h</a></div></div>
 <div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_aa1cc1190aa1b958d686d46e0860bc836ac0984f0c0fc7cdcea1c0bde170f9c925"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836ac0984f0c0fc7cdcea1c0bde170f9c925">Affine</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00025">animaPyramidalDenseSVFMatchingBridge.h:25</a></div></div>
 <div class="ttc" id="classanima_1_1DenseSVFTransformAgregator_html"><div class="ttname"><a href="classanima_1_1DenseSVFTransformAgregator.html">anima::DenseSVFTransformAgregator</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDenseSVFTransformAgregator_8h_source.html#l00010">animaDenseSVFTransformAgregator.h:10</a></div></div>
 <div class="ttc" id="classanima_1_1AsymmetricBlockMatchingRegistrationMethod_html"><div class="ttname"><a href="classanima_1_1AsymmetricBlockMatchingRegistrationMethod.html">anima::AsymmetricBlockMatchingRegistrationMethod</a></div><div class="ttdef"><b>Definition:</b> <a href="animaAsymmetricBlockMatchingRegistrationMethod_8h_source.html#l00009">animaAsymmetricBlockMatchingRegistrationMethod.h:9</a></div></div>
 <div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a9e803d30fb9d880b135b9319f6682276"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a9e803d30fb9d880b135b9319f6682276">anima::PyramidalDenseSVFMatchingBridge::DisplacementFieldTransformPointer</a></div><div class="ttdeci">DisplacementFieldTransformType::Pointer DisplacementFieldTransformPointer</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00072">animaPyramidalDenseSVFMatchingBridge.h:72</a></div></div>
-<div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47">SquaredCorrelation</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00030">animaPyramidalDenseSVFMatchingBridge.h:30</a></div></div>
 <div class="ttc" id="classanima_1_1DenseSVFTransformAgregator_html_a52ff528193f438c5cb0bc67a6adce25e"><div class="ttname"><a href="classanima_1_1DenseSVFTransformAgregator.html#a52ff528193f438c5cb0bc67a6adce25e">anima::DenseSVFTransformAgregator::SetDistanceBoundary</a></div><div class="ttdeci">void SetDistanceBoundary(double num)</div><div class="ttdef"><b>Definition:</b> <a href="animaDenseSVFTransformAgregator_8h_source.html#l00048">animaDenseSVFTransformAgregator.h:48</a></div></div>
+<div class="ttc" id="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_html_abf74dfd688b4203cefa6d49f8d14403eacd7d443ade48c2da7f72e90eb7cf352f"><div class="ttname"><a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403eacd7d443ade48c2da7f72e90eb7cf352f">Correlation</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_source.html#l00012">animaPyramidalDistortionCorrectionBlockMatchingBridge.h:12</a></div></div>
 <div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_a0ee9c402d8d6f00739696465daa4822da320d3dc8311ac24fa27e5f31ec3e6539"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0ee9c402d8d6f00739696465daa4822da320d3dc8311ac24fa27e5f31ec3e6539">Bobyqa</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00038">animaPyramidalDenseSVFMatchingBridge.h:38</a></div></div>
 <div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a800c35cc1b65e4832d01c205cd6cec52"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a800c35cc1b65e4832d01c205cd6cec52">anima::PyramidalDenseSVFMatchingBridge::Abort</a></div><div class="ttdeci">void Abort()</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00083">animaPyramidalDenseSVFMatchingBridge.hxx:83</a></div></div>
 <div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_aa481657d3c33ac77e7b7a1cebbdd6fe4a33e94d2249181e0e1f815e7c0affc69b"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa481657d3c33ac77e7b7a1cebbdd6fe4a33e94d2249181e0e1f815e7c0affc69b">Symmetric</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00017">animaPyramidalDenseSVFMatchingBridge.h:17</a></div></div>
 <div class="ttc" id="classanima_1_1KissingSymmetricBlockMatchingRegistrationMethod_html"><div class="ttname"><a href="classanima_1_1KissingSymmetricBlockMatchingRegistrationMethod.html">anima::KissingSymmetricBlockMatchingRegistrationMethod</a></div><div class="ttdef"><b>Definition:</b> <a href="animaKissingSymmetricBlockMatchingRegistrationMethod_8h_source.html#l00010">animaKissingSymmetricBlockMatchingRegistrationMethod.h:10</a></div></div>
-<div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_abbc36dec1f01c601e0c3df1b384cf0b0"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#abbc36dec1f01c601e0c3df1b384cf0b0">anima::PyramidalDenseSVFMatchingBridge::GetOutputDisplacementFieldTransform</a></div><div class="ttdeci">DisplacementFieldTransformPointer GetOutputDisplacementFieldTransform()</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00436">animaPyramidalDenseSVFMatchingBridge.hxx:436</a></div></div>
+<div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_abbc36dec1f01c601e0c3df1b384cf0b0"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#abbc36dec1f01c601e0c3df1b384cf0b0">anima::PyramidalDenseSVFMatchingBridge::GetOutputDisplacementFieldTransform</a></div><div class="ttdeci">DisplacementFieldTransformPointer GetOutputDisplacementFieldTransform()</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00435">animaPyramidalDenseSVFMatchingBridge.hxx:435</a></div></div>
 <div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_a0ee9c402d8d6f00739696465daa4822dac435ebb2721d1fd5fffac503d0fd6328"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0ee9c402d8d6f00739696465daa4822dac435ebb2721d1fd5fffac503d0fd6328">Exhaustive</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00037">animaPyramidalDenseSVFMatchingBridge.h:37</a></div></div>
 <div class="ttc" id="classanima_1_1BlockMatchingInitializer_html_a677f798541928696d0e5ea52cdb7c39f"><div class="ttname"><a href="classanima_1_1BlockMatchingInitializer.html#a677f798541928696d0e5ea52cdb7c39f">anima::BlockMatchingInitializer::Pointer</a></div><div class="ttdeci">itk::SmartPointer&lt; Self &gt; Pointer</div><div class="ttdef"><b>Definition:</b> <a href="animaBlockMatchInitializer_8h_source.html#l00020">animaBlockMatchInitializer.h:20</a></div></div>
 <div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a54f9831e84af8a000ae74c0883f14a70"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a54f9831e84af8a000ae74c0883f14a70">anima::PyramidalDenseSVFMatchingBridge::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00114">animaPyramidalDenseSVFMatchingBridge.hxx:114</a></div></div>
-<div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_a0836f0ad88bc1041ae2d8c20592874dca128e13809440305952ce3ed8ed1403db"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dca128e13809440305952ce3ed8ed1403db">Baloo</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00043">animaPyramidalDenseSVFMatchingBridge.h:43</a></div></div>
-<div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a91e504896d140f39de4908b7498969dd"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a91e504896d140f39de4908b7498969dd">anima::PyramidalDenseSVFMatchingBridge::WriteOutputs</a></div><div class="ttdeci">void WriteOutputs()</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00465">animaPyramidalDenseSVFMatchingBridge.hxx:465</a></div></div>
-<div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_a0836f0ad88bc1041ae2d8c20592874dca589cdeef2edcddee7e8b502ac9158b73"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#a0836f0ad88bc1041ae2d8c20592874dca589cdeef2edcddee7e8b502ac9158b73">MSmoother</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00044">animaPyramidalDenseSVFMatchingBridge.h:44</a></div></div>
+<div class="ttc" id="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_html_abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47"><div class="ttname"><a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47">SquaredCorrelation</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_source.html#l00013">animaPyramidalDistortionCorrectionBlockMatchingBridge.h:13</a></div></div>
+<div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_a91e504896d140f39de4908b7498969dd"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a91e504896d140f39de4908b7498969dd">anima::PyramidalDenseSVFMatchingBridge::WriteOutputs</a></div><div class="ttdeci">void WriteOutputs()</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00464">animaPyramidalDenseSVFMatchingBridge.hxx:464</a></div></div>
 <div class="ttc" id="classanima_1_1BaseTransformAgregator_html_a431bb1b5f6d8bc8fa88a8ca70f9ce4d2"><div class="ttname"><a href="classanima_1_1BaseTransformAgregator.html#a431bb1b5f6d8bc8fa88a8ca70f9ce4d2">anima::BaseTransformAgregator::SetInputTransformType</a></div><div class="ttdeci">void SetInputTransformType(TRANSFORM_TYPE name)</div><div class="ttdef"><b>Definition:</b> <a href="animaBaseTransformAgregator_8hxx_source.html#l00029">animaBaseTransformAgregator.hxx:29</a></div></div>
 <div class="ttc" id="classanima_1_1DenseSVFTransformAgregator_html_aeae79665c26d1078befd883686bb9e2e"><div class="ttname"><a href="classanima_1_1DenseSVFTransformAgregator.html#aeae79665c26d1078befd883686bb9e2e">anima::DenseSVFTransformAgregator::SetDamIndexes</a></div><div class="ttdeci">void SetDamIndexes(std::vector&lt; IndexType &gt; &amp;indexes)</div><div class="ttdef"><b>Definition:</b> <a href="animaDenseSVFTransformAgregator_8h_source.html#l00051">animaDenseSVFTransformAgregator.h:51</a></div></div>
 <div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_aa481657d3c33ac77e7b7a1cebbdd6fe4a6e74a5698138537567b16b16e18a8ea4"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa481657d3c33ac77e7b7a1cebbdd6fe4a6e74a5698138537567b16b16e18a8ea4">Asymmetric</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00016">animaPyramidalDenseSVFMatchingBridge.h:16</a></div></div>
@@ -664,13 +663,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_aa21c35b21fa108e3dbfa8db1d06d2c07"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#aa21c35b21fa108e3dbfa8db1d06d2c07">anima::PyramidalDenseSVFMatchingBridge::InputImageType</a></div><div class="ttdeci">itk::Image&lt; float, ImageDimension &gt; InputImageType</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00054">animaPyramidalDenseSVFMatchingBridge.h:54</a></div></div>
 <div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html">anima::PyramidalDenseSVFMatchingBridge</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00051">animaPyramidalDenseSVFMatchingBridge.h:51</a></div></div>
 <div class="ttc" id="classanima_1_1DenseSVFTransformAgregator_html_a9e80952607a66be1a76c871a8389d49a"><div class="ttname"><a href="classanima_1_1DenseSVFTransformAgregator.html#a9e80952607a66be1a76c871a8389d49a">anima::DenseSVFTransformAgregator::SetNeighborhoodHalfSize</a></div><div class="ttdeci">void SetNeighborhoodHalfSize(unsigned int num)</div><div class="ttdef"><b>Definition:</b> <a href="animaDenseSVFTransformAgregator_8h_source.html#l00047">animaDenseSVFTransformAgregator.h:47</a></div></div>
-<div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_af4aa92f67cbe713902158a809db3b2a3"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#af4aa92f67cbe713902158a809db3b2a3">anima::PyramidalDenseSVFMatchingBridge::SetupPyramids</a></div><div class="ttdeci">void SetupPyramids()</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00488">animaPyramidalDenseSVFMatchingBridge.hxx:488</a></div></div>
+<div class="ttc" id="classanima_1_1PyramidalDenseSVFMatchingBridge_html_af4aa92f67cbe713902158a809db3b2a3"><div class="ttname"><a href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#af4aa92f67cbe713902158a809db3b2a3">anima::PyramidalDenseSVFMatchingBridge::SetupPyramids</a></div><div class="ttdeci">void SetupPyramids()</div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00487">animaPyramidalDenseSVFMatchingBridge.hxx:487</a></div></div>
 <div class="ttc" id="animaVelocityUtils_8h_html"><div class="ttname"><a href="animaVelocityUtils_8h.html">animaVelocityUtils.h</a></div></div>
 <div class="ttc" id="animaPyramidalDenseSVFMatchingBridge_8h_html_aa1cc1190aa1b958d686d46e0860bc836a92ee78916f31ff05ad4ae0fd4efd3309"><div class="ttname"><a href="animaPyramidalDenseSVFMatchingBridge_8h.html#aa1cc1190aa1b958d686d46e0860bc836a92ee78916f31ff05ad4ae0fd4efd3309">Rigid</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDenseSVFMatchingBridge_8h_source.html#l00024">animaPyramidalDenseSVFMatchingBridge.h:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 28 2015 06:23:07 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 29 2015 06:24:17 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

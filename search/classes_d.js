@@ -13,6 +13,7 @@ var searchData=
   ['pyramidalblockmatchingbridge',['PyramidalBlockMatchingBridge',['../classanima_1_1PyramidalBlockMatchingBridge.html',1,'anima']]],
   ['pyramidaldensesvfmatchingbridge',['PyramidalDenseSVFMatchingBridge',['../classanima_1_1PyramidalDenseSVFMatchingBridge.html',1,'anima']]],
   ['pyramidaldensetensorsvfmatchingbridge',['PyramidalDenseTensorSVFMatchingBridge',['../classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html',1,'anima']]],
+  ['pyramidaldistortioncorrectionblockmatchingbridge',['PyramidalDistortionCorrectionBlockMatchingBridge',['../classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html',1,'anima']]],
   ['pyramidalregistrationbridge',['PyramidalRegistrationBridge',['../classPyramidalRegistrationBridge.html',1,'']]],
   ['pyramidalsymmetrybridge',['PyramidalSymmetryBridge',['../classanima_1_1PyramidalSymmetryBridge.html',1,'anima']]],
   ['pyramidalsymmetryconstrainedregistrationbridge',['PyramidalSymmetryConstrainedRegistrationBridge',['../classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html',1,'anima']]],

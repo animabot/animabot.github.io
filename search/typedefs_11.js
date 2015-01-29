@@ -1,6 +1,7 @@
 var searchData=
 [
   ['vector3dtype',['Vector3DType',['../classanima_1_1BaseProbabilisticTractographyImageFilter.html#a42caeddb781e1b47c0b5673fff012dd3',1,'anima::BaseProbabilisticTractographyImageFilter']]],
+  ['vectorfieldtype',['VectorFieldType',['../classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html#a82229e609425fe29b273fa36c1f042cf',1,'anima::PyramidalDistortionCorrectionBlockMatchingBridge']]],
   ['vectorimagepointer',['VectorImagePointer',['../classanima_1_1BackgroundNoiseVarianceEstimationImageFilter.html#aa7d826004ec89df04df57bb51c9d92e0',1,'anima::BackgroundNoiseVarianceEstimationImageFilter::VectorImagePointer()'],['../classanima_1_1BlockMatchingInitializer.html#a6c3377dc80efb01ba85ac1c223bebe37',1,'anima::BlockMatchingInitializer::VectorImagePointer()']]],
   ['vectorimagetype',['VectorImageType',['../classanima_1_1BackgroundNoiseVarianceEstimationImageFilter.html#a5ecd0ca5726d2b9f5b88bcb04bb62b98',1,'anima::BackgroundNoiseVarianceEstimationImageFilter::VectorImageType()'],['../classanima_1_1BlockMatchingInitializer.html#ac8a3f66e3515456b37e0996a33a10ce5',1,'anima::BlockMatchingInitializer::VectorImageType()']]],
   ['vectorinputimagetype',['VectorInputImageType',['../classanima_1_1PyramidImageFilter.html#a67909931c80b50c7a765a20a33f1e92d',1,'anima::PyramidImageFilter']]],
