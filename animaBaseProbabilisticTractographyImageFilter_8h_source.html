@@ -281,76 +281,76 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    FiberProcessVectorType FilterOutputFibers(FiberProcessVectorType &amp;fibers, ListType &amp;weights);</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">virtual</span> Vector3DType ProposeNewDirection(Vector3DType &amp;oldDirection, VectorType &amp;modelValue,</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                                          Vector3DType &amp;sampling_direction, <span class="keywordtype">double</span> &amp;log_prior, <span class="keywordtype">double</span> &amp;log_proposal,</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                                          boost::mt19937 &amp;random_generator) = 0;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> ComputeLogWeightUpdate(<span class="keywordtype">double</span> b0Value, Vector3DType &amp;newDirection, Vector3DType &amp;sampling_direction,</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                                          VectorType &amp;modelValue, VectorType &amp;dwiValue,</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                                          <span class="keywordtype">double</span> &amp;log_prior, <span class="keywordtype">double</span> &amp;log_proposal) = 0;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> ComputeModelEstimation(DWIInterpolatorPointerVectorType &amp;dwiInterpolators, ContinuousIndexType &amp;index,</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                                          VectorType &amp;dwiValue, VectorType &amp;modelValue) = 0;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> ExtractOrientations(<span class="keyword">const</span> VectorType &amp;modelValue, DirectionVectorType &amp;diffusionOrientations) = 0;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keyword">virtual</span> Vector3DType InitializeFirstIterationFromModel(Vector3DType &amp;colinearDir, VectorType &amp;modelValue,</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                                                           boost::mt19937 &amp;random_generator) = 0;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> CheckModelProperties(<span class="keywordtype">double</span> estimatedB0Value, VectorType &amp;modelValue) = 0;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="comment">//Internal variable for model vector dimension, has to be set by child class !</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_ModelDimension;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_NumberOfParticles;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_NumberOfThreads;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_NumberOfFibersPerPixel;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_MinimalNumberOfParticlesPerClass;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">double</span> m_StepProgression;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">double</span> m_MinLengthFiber;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">double</span> m_MaxLengthFiber;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordtype">double</span> m_FiberTrashThreshold;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">double</span> m_ResamplingThreshold;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">double</span> m_KappaOfPriorDistribution;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">virtual</span> Vector3DType ProposeNewDirection(Vector3DType &amp;oldDirection, VectorType &amp;modelValue,</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                                          Vector3DType &amp;sampling_direction, <span class="keywordtype">double</span> &amp;log_prior, <span class="keywordtype">double</span> &amp;log_proposal,</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                                          boost::mt19937 &amp;random_generator) = 0;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> ComputeLogWeightUpdate(<span class="keywordtype">double</span> b0Value, Vector3DType &amp;newDirection, Vector3DType &amp;sampling_direction,</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                                          VectorType &amp;modelValue, VectorType &amp;dwiValue,</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                                          <span class="keywordtype">double</span> &amp;log_prior, <span class="keywordtype">double</span> &amp;log_proposal) = 0;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">double</span> ComputeModelEstimation(DWIInterpolatorPointerVectorType &amp;dwiInterpolators, ContinuousIndexType &amp;index,</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                                          VectorType &amp;dwiValue, VectorType &amp;modelValue) = 0;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> ExtractOrientations(<span class="keyword">const</span> VectorType &amp;modelValue, DirectionVectorType &amp;diffusionOrientations) = 0;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keyword">virtual</span> Vector3DType InitializeFirstIterationFromModel(Vector3DType &amp;colinearDir, VectorType &amp;modelValue,</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                                                           boost::mt19937 &amp;random_generator) = 0;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> CheckModelProperties(<span class="keywordtype">double</span> estimatedB0Value, VectorType &amp;modelValue) = 0;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">//Internal variable for model vector dimension, has to be set by child class !</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_ModelDimension;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_NumberOfParticles;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_NumberOfThreads;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_NumberOfFibersPerPixel;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_MinimalNumberOfParticlesPerClass;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordtype">double</span> m_StepProgression;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">double</span> m_MinLengthFiber;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">double</span> m_MaxLengthFiber;</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    InputImagePointerVectorType m_InputImages;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">double</span> m_FiberTrashThreshold;</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    MaskImagePointer m_SeedMask;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    MaskImagePointer m_FilterMask;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    MaskImagePointer m_CutMask;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    MaskImagePointer m_ForbiddenMask;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    std::vector &lt;boost::mt19937&gt; m_Generators;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    DirectionVectorType m_DiffusionGradients;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    ListType m_BValuesList;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    ColinearityDirectionType m_InitialColinearityDirection;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    InitialDirectionModeType m_InitialDirectionMode;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    Vector3DType m_DWIGravityCenter;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    FiberProcessVectorType m_PointsToProcess;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    MembershipType m_FilteringValues;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">// Multimodal splitting and merging thresholds</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">double</span> m_PositionDistanceFuseThreshold;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordtype">double</span> m_KappaSplitThreshold;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_ClusterDistance;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">double</span> m_ResamplingThreshold;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">double</span> m_KappaOfPriorDistribution;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    InputImagePointerVectorType m_InputImages;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    MaskImagePointer m_SeedMask;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    MaskImagePointer m_FilterMask;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    MaskImagePointer m_CutMask;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    MaskImagePointer m_ForbiddenMask;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    std::vector &lt;boost::mt19937&gt; m_Generators;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    DirectionVectorType m_DiffusionGradients;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    ListType m_BValuesList;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    ColinearityDirectionType m_InitialColinearityDirection;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    InitialDirectionModeType m_InitialDirectionMode;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    Vector3DType m_DWIGravityCenter;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    FiberProcessVectorType m_PointsToProcess;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    MembershipType m_FilteringValues;</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">bool</span> m_MAPMergeFibers;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">bool</span> m_ComputeLocalColors;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    vtkSmartPointer&lt;vtkPolyData&gt; m_Output;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;};</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="comment">// Multimodal splitting and merging thresholds</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">double</span> m_PositionDistanceFuseThreshold;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">double</span> m_KappaSplitThreshold;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_ClusterDistance;</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}<span class="comment">//end of namesapce</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">bool</span> m_MAPMergeFibers;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">bool</span> m_ComputeLocalColors;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    vtkSmartPointer&lt;vtkPolyData&gt; m_Output;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;};</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}<span class="comment">//end of namesapce</span></div>
 <div class="ttc" id="classanima_1_1BaseProbabilisticTractographyImageFilter_html_a6e6e89ba59fc2bf9df7dc7ac661b0239a720ab6043c4f44d4884d8c874d299626"><div class="ttname"><a href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a6e6e89ba59fc2bf9df7dc7ac661b0239a720ab6043c4f44d4884d8c874d299626">anima::BaseProbabilisticTractographyImageFilter::Outward</a></div><div class="ttdef"><b>Definition:</b> <a href="animaBaseProbabilisticTractographyImageFilter_8h_source.html#l00091">animaBaseProbabilisticTractographyImageFilter.h:91</a></div></div>
 <div class="ttc" id="classanima_1_1BaseProbabilisticTractographyImageFilter_html_a6e6e89ba59fc2bf9df7dc7ac661b0239a33317ce91cbfc1077dfb65dbf60cb730"><div class="ttname"><a href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a6e6e89ba59fc2bf9df7dc7ac661b0239a33317ce91cbfc1077dfb65dbf60cb730">anima::BaseProbabilisticTractographyImageFilter::Right</a></div><div class="ttdef"><b>Definition:</b> <a href="animaBaseProbabilisticTractographyImageFilter_8h_source.html#l00095">animaBaseProbabilisticTractographyImageFilter.h:95</a></div></div>
 <div class="ttc" id="animaFasterLinearInterpolateImageFunction_8h_html"><div class="ttname"><a href="animaFasterLinearInterpolateImageFunction_8h.html">animaFasterLinearInterpolateImageFunction.h</a></div></div>
@@ -414,7 +414,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 29 2015 06:24:16 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 2 2015 06:24:18 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

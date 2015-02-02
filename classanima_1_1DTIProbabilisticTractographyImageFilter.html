@@ -334,14 +334,18 @@ Static Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a44514b2ab52e6ef4a0e9ded7930d1630"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#a44514b2ab52e6ef4a0e9ded7930d1630">CheckModelProperties</a> (double estimatedB0Value, <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a5231f31c80ebbc3db551419d078e1207">VectorType</a> &amp;modelValue)</td></tr>
+<tr class="memdesc:a44514b2ab52e6ef4a0e9ded7930d1630"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check stopping criterions to stop a particle (model dependent, not implemented here)  <a href="#a44514b2ab52e6ef4a0e9ded7930d1630">More...</a><br/></td></tr>
 <tr class="separator:a44514b2ab52e6ef4a0e9ded7930d1630"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d4ba632f581a7fb2bae7d15ef8f4f15"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#a4d4ba632f581a7fb2bae7d15ef8f4f15">ComputeLogWeightUpdate</a> (double b0Value, <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a42caeddb781e1b47c0b5673fff012dd3">Vector3DType</a> &amp;newDirection, <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a42caeddb781e1b47c0b5673fff012dd3">Vector3DType</a> &amp;sampling_direction, <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a5231f31c80ebbc3db551419d078e1207">VectorType</a> &amp;modelValue, <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a5231f31c80ebbc3db551419d078e1207">VectorType</a> &amp;dwiValue, double &amp;log_prior, double &amp;log_proposal)</td></tr>
+<tr class="memdesc:a4d4ba632f581a7fb2bae7d15ef8f4f15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update particle weight based on an underlying model and the chosen direction (model dependent, not implemented here)  <a href="#a4d4ba632f581a7fb2bae7d15ef8f4f15">More...</a><br/></td></tr>
 <tr class="separator:a4d4ba632f581a7fb2bae7d15ef8f4f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a0704d334f4b7274d8d655feffebd56"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#a2a0704d334f4b7274d8d655feffebd56">ComputeModelEstimation</a> (<a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#ad069b6657ae581d623cd4b5a688ab96f">DWIInterpolatorPointerVectorType</a> &amp;dwiInterpolators, <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a077ca2b00d6670ed4fd061cff647ae4a">ContinuousIndexType</a> &amp;index, <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a5231f31c80ebbc3db551419d078e1207">VectorType</a> &amp;dwiValue, <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a5231f31c80ebbc3db551419d078e1207">VectorType</a> &amp;modelValue)</td></tr>
+<tr class="memdesc:a2a0704d334f4b7274d8d655feffebd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimate model from raw diffusion data (model dependent, not implemented here)  <a href="#a2a0704d334f4b7274d8d655feffebd56">More...</a><br/></td></tr>
 <tr class="separator:a2a0704d334f4b7274d8d655feffebd56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae51d9e7cd6b116f24b65534273592403"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#ae51d9e7cd6b116f24b65534273592403">DTIProbabilisticTractographyImageFilter</a> ()</td></tr>
 <tr class="separator:ae51d9e7cd6b116f24b65534273592403"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64ccdf328aa62d9125c1d0b68006be3f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#a64ccdf328aa62d9125c1d0b68006be3f">ExtractOrientations</a> (const <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a5231f31c80ebbc3db551419d078e1207">VectorType</a> &amp;modelValue, <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a0c515a87115508875c60e1906c842dde">DirectionVectorType</a> &amp;diffusionOrientations)</td></tr>
+<tr class="memdesc:a64ccdf328aa62d9125c1d0b68006be3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract diffusion directions from model (model dependent, not implemented here)  <a href="#a64ccdf328aa62d9125c1d0b68006be3f">More...</a><br/></td></tr>
 <tr class="separator:a64ccdf328aa62d9125c1d0b68006be3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77a45646a14dd058fa0e173f0453174d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#a77a45646a14dd058fa0e173f0453174d">GetDTIMinorDirection</a> (<a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a5231f31c80ebbc3db551419d078e1207">VectorType</a> &amp;modelValue, <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a42caeddb781e1b47c0b5673fff012dd3">Vector3DType</a> &amp;resVec)</td></tr>
 <tr class="separator:a77a45646a14dd058fa0e173f0453174d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -356,11 +360,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1d09e4dc4d2fcb89c623cdf62e5a8e53"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#a1d09e4dc4d2fcb89c623cdf62e5a8e53">GetLinearCoefficient</a> (<a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a5231f31c80ebbc3db551419d078e1207">VectorType</a> &amp;modelValue)</td></tr>
 <tr class="separator:a1d09e4dc4d2fcb89c623cdf62e5a8e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a884c231691458f69f219a06393beb4ff"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a42caeddb781e1b47c0b5673fff012dd3">Vector3DType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#a884c231691458f69f219a06393beb4ff">InitializeFirstIterationFromModel</a> (<a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a42caeddb781e1b47c0b5673fff012dd3">Vector3DType</a> &amp;colinearDir, <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a5231f31c80ebbc3db551419d078e1207">VectorType</a> &amp;modelValue, boost::mt19937 &amp;random_generator)</td></tr>
+<tr class="memdesc:a884c231691458f69f219a06393beb4ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize first direction from user input (model dependent, not implemented here)  <a href="#a884c231691458f69f219a06393beb4ff">More...</a><br/></td></tr>
 <tr class="separator:a884c231691458f69f219a06393beb4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a88b94968adabbbfdcf1176a6affc06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#a0a88b94968adabbbfdcf1176a6affc06">PrepareTractography</a> ()</td></tr>
 <tr class="memdesc:a0a88b94968adabbbfdcf1176a6affc06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate seed points.  <a href="#a0a88b94968adabbbfdcf1176a6affc06">More...</a><br/></td></tr>
 <tr class="separator:a0a88b94968adabbbfdcf1176a6affc06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdc1c9aab7fc08c3eb05de33024461f8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a42caeddb781e1b47c0b5673fff012dd3">Vector3DType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#abdc1c9aab7fc08c3eb05de33024461f8">ProposeNewDirection</a> (<a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a42caeddb781e1b47c0b5673fff012dd3">Vector3DType</a> &amp;oldDirection, <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a5231f31c80ebbc3db551419d078e1207">VectorType</a> &amp;modelValue, <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a42caeddb781e1b47c0b5673fff012dd3">Vector3DType</a> &amp;sampling_direction, double &amp;log_prior, double &amp;log_proposal, boost::mt19937 &amp;random_generator)</td></tr>
+<tr class="memdesc:abdc1c9aab7fc08c3eb05de33024461f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propose new direction for a particle, given the old direction, and a model (model dependent, not implemented here)  <a href="#abdc1c9aab7fc08c3eb05de33024461f8">More...</a><br/></td></tr>
 <tr class="separator:abdc1c9aab7fc08c3eb05de33024461f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69282099cf58205ee8d0442f21199a89"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#a69282099cf58205ee8d0442f21199a89">~DTIProbabilisticTractographyImageFilter</a> ()</td></tr>
 <tr class="separator:a69282099cf58205ee8d0442f21199a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -553,6 +559,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Check stopping criterions to stop a particle (model dependent, not implemented here) </p>
+
 <p>Implements <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a8c27425c04a270ccbfd14859dc0fc767">anima::BaseProbabilisticTractographyImageFilter</a>.</p>
 
 <p>Definition at line <a class="el" href="animaDTIProbabilisticTractographyImageFilter_8cxx_source.html#l00172">172</a> of file <a class="el" href="animaDTIProbabilisticTractographyImageFilter_8cxx_source.html">animaDTIProbabilisticTractographyImageFilter.cxx</a>.</p>
@@ -623,6 +631,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Update particle weight based on an underlying model and the chosen direction (model dependent, not implemented here) </p>
+
 <p>Implements <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#ac6b105bf710d95ea4254af397ac7d78c">anima::BaseProbabilisticTractographyImageFilter</a>.</p>
 
 <p>Definition at line <a class="el" href="animaDTIProbabilisticTractographyImageFilter_8cxx_source.html#l00197">197</a> of file <a class="el" href="animaDTIProbabilisticTractographyImageFilter_8cxx_source.html">animaDTIProbabilisticTractographyImageFilter.cxx</a>.</p>
@@ -674,6 +684,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Estimate model from raw diffusion data (model dependent, not implemented here) </p>
 
 <p>Implements <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#aba3bfa314867f2cf98872582e4c012f8">anima::BaseProbabilisticTractographyImageFilter</a>.</p>
 
@@ -730,6 +742,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Extract diffusion directions from model (model dependent, not implemented here) </p>
 
 <p>Implements <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a72f12bff58398abced9faed3a2e00d3e">anima::BaseProbabilisticTractographyImageFilter</a>.</p>
 
@@ -1012,6 +1026,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initialize first direction from user input (model dependent, not implemented here) </p>
+
 <p>Implements <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#ade9a5acac24f892cbe837212b0522a36">anima::BaseProbabilisticTractographyImageFilter</a>.</p>
 
 <p>Definition at line <a class="el" href="animaDTIProbabilisticTractographyImageFilter_8cxx_source.html#l00100">100</a> of file <a class="el" href="animaDTIProbabilisticTractographyImageFilter_8cxx_source.html">animaDTIProbabilisticTractographyImageFilter.cxx</a>.</p>
@@ -1129,6 +1145,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Propose new direction for a particle, given the old direction, and a model (model dependent, not implemented here) </p>
 
 <p>Implements <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a7399b5b9a6b9a89cdb943fb82b5b313e">anima::BaseProbabilisticTractographyImageFilter</a>.</p>
 
@@ -1275,7 +1293,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 29 2015 06:24:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 2 2015 06:24:21 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
