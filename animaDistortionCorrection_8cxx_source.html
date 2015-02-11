@@ -114,8 +114,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    TCLAP::ValueArg&lt;std::string&gt; backwardArg(<span class="stringliteral">&quot;b&quot;</span>, <span class="stringliteral">&quot;backwardImage&quot;</span>, <span class="stringliteral">&quot;Backward image&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;Backward image&quot;</span>, cmd);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    TCLAP::ValueArg&lt;unsigned int&gt; distortionDirection(<span class="stringliteral">&quot;d&quot;</span>, <span class="stringliteral">&quot;dir&quot;</span>, <span class="stringliteral">&quot;Direction of distortion (0,1,2)&quot;</span>, <span class="keyword">false</span>, 1, <span class="stringliteral">&quot;number of the direction of distortion&quot;</span>, cmd);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    TCLAP::ValueArg&lt;std::string&gt; outArg(<span class="stringliteral">&quot;o&quot;</span>, <span class="stringliteral">&quot;outputVectorField&quot;</span>, <span class="stringliteral">&quot;Distortion vector field&quot;</span>, <span class="keyword">true</span>, <span class="stringliteral">&quot;&quot;</span>,<span class="stringliteral">&quot;Output vector field&quot;</span>, cmd );</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    TCLAP::ValueArg&lt;double&gt; sigmaArg(<span class="stringliteral">&quot;s&quot;</span>, <span class="stringliteral">&quot;sigma-smooth&quot;</span>, <span class="stringliteral">&quot;Sigma for gaussian smoothing of the transformation (in pixels, default: 2)&quot;</span>,<span class="keyword">false</span>,2,<span class="stringliteral">&quot;gaussian smoothing sigma&quot;</span>, cmd );</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    TCLAP::ValueArg&lt;double&gt; sigmaArg(<span class="stringliteral">&quot;s&quot;</span>, <span class="stringliteral">&quot;sigma-smooth&quot;</span>, <span class="stringliteral">&quot;Sigma for gaussian smoothing of the transformation (in pixels, default: 2)&quot;</span>,<span class="keyword">false</span>,1,<span class="stringliteral">&quot;gaussian smoothing sigma&quot;</span>, cmd );</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    TCLAP::ValueArg&lt;unsigned int&gt; nbpArg(<span class="stringliteral">&quot;T&quot;</span>,<span class="stringliteral">&quot;numberofthreads&quot;</span>,<span class="stringliteral">&quot;Number of threads to run on (default : all cores)&quot;</span>,<span class="keyword">false</span>,itk::MultiThreader::GetGlobalDefaultNumberOfThreads(),<span class="stringliteral">&quot;number of threads&quot;</span>,cmd);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">try</span></div>
@@ -139,18 +139,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classanima_1_1DistortionCorrectionImageFilter.html">anima::DistortionCorrectionImageFilter &lt; ImageType &gt;</a> FilterType;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ImageType::Pointer forwardImage = anima::readImage&lt;ImageType&gt;(backwardArg.getValue());</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    forwardImage-&gt;DisconnectPipeline();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ImageType::Pointer backwardImage = anima::readImage&lt;ImageType&gt;(backwardArg.getValue());</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    backwardImage-&gt;DisconnectPipeline();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">double</span> meanSpacing = 0;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; Dimension;++i)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        meanSpacing += forwardImage-&gt;GetSpacing()[i];</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        meanSpacing += backwardImage-&gt;GetSpacing()[i];</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    meanSpacing /= Dimension;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    FilterType::Pointer filter = FilterType::New();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    filter-&gt;SetInput(0, anima::readImage&lt;ImageType&gt;(forwardArg.getValue()));</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    filter-&gt;SetInput(1, forwardImage);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    filter-&gt;SetInput(1, backwardImage);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    filter-&gt;SetDirection(distortionDirection.getValue());</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    filter-&gt;SetFieldSmoothingSigma(sigmaArg.getValue() * meanSpacing);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    filter-&gt;SetNumberOfThreads(nbpArg.getValue());</div>
@@ -167,7 +167,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 2 2015 06:24:18 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 11 2015 06:24:16 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
