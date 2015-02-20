@@ -210,6 +210,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1AsymmetricBlockMatchingRegistrationMethod.html#a2bbc736224400bde519de6628a77724e">anima::AsymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
 , <a class="el" href="classanima_1_1BackgroundNoiseVarianceEstimationImageFilter.html#a0d486236cdfd70d4fb028d21d5300cb8">anima::BackgroundNoiseVarianceEstimationImageFilter&lt; TInputImage &gt;</a>
 , <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#ae754d0476c5a55a7d79111a38b745bbf">anima::BaseProbabilisticTractographyImageFilter</a>
+, <a class="el" href="classanima_1_1BaseTensorImageToImageMetric.html#a21b651304f3d5a931b0959fb22bcdb39">anima::BaseTensorImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
 , <a class="el" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#ab4485acc96c42e7e96fd5f90fad343bc">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 , <a class="el" href="classanima_1_1BlockMatchingInitializer.html#a54b52f8f95f7f0409a485dcdb037c052">anima::BlockMatchingInitializer&lt; PixelType, NDimensions &gt;</a>
 , <a class="el" href="classanima_1_1BobyqaOptimizer.html#af85390bef50e541eb38f24511639a2fc">anima::BobyqaOptimizer</a>
@@ -246,7 +247,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1FlipDDIDirectionsImageFilter.html#abc5bc6c6273f5a91fe4da24646c35e39">anima::FlipDDIDirectionsImageFilter&lt; TInputPixelType &gt;</a>
 , <a class="el" href="classanima_1_1GaussianNoiseGeneratorImageFilter.html#aef7514a6fb4a06d036d8b6e4e60e06d2">anima::GaussianNoiseGeneratorImageFilter&lt; Dimension &gt;</a>
 , <a class="el" href="classanima_1_1GeneralizedFAImageFilter.html#a49e6404e552ea6090a2ef186c91cfe9f">anima::GeneralizedFAImageFilter&lt; TInputPixelType &gt;</a>
-, <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#af9e390dc8826462ee058cbf79e4b3204">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
 , <a class="el" href="classanima_1_1ImageRegionSplitterMask.html#abc68a87233e9f12bc8da8b19a2d53c81">anima::ImageRegionSplitterMask&lt; TMaskImage &gt;</a>
 , <a class="el" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a92b3f1879c1d0ec1638c7f1625725c74">anima::InhomogeneousAOSLineDiffusionImageFilter&lt; TInputImage, TDiffusionScalarImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1InhomogeneousDiffusionImageFilter.html#abd5c5e79f52cec2ea0ba7f920d47287a">anima::InhomogeneousDiffusionImageFilter&lt; TInputImage, TDiffusionScalarImage, TOutputImage &gt;</a>
@@ -456,8 +456,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a17477c4cbeb84fe5c53af9631d57d98d">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SetBlockScalarVarianceThreshold()
-: <a class="el" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a78047bc4e7155df2b8bf3a6699bcdf36">anima::DistortionCorrectionRegistrationMethod&lt; TInputImage &gt;</a>
-, <a class="el" href="classanima_1_1KissingSymmetricBlockMatchingRegistrationMethod.html#ada06e9abf184c7a3a2eb1e937776279e">anima::KissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
+: <a class="el" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#a0d66b20d2f529a0f508347ab1d0dec07">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
+, <a class="el" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a78047bc4e7155df2b8bf3a6699bcdf36">anima::DistortionCorrectionRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SetBlockSize()
 : <a class="el" href="classanima_1_1BlockMatchingInitializer.html#a7d981e53877158c58c5b9755b2821e05">anima::BlockMatchingInitializer&lt; PixelType, NDimensions &gt;</a>
@@ -480,7 +480,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a93802dbfbbaad9c0ca56a904e43b75aa">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SetBlockTensorVarianceThreshold()
-: <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a14a02dba9726848ea73c8fc4b0b51836">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
+: <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aae3d61b9c4b3f4327e62c17eadf437fc">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SetBOM()
 : <a class="el" href="classtinyxml2_1_1XMLDocument.html#a14419b698f7c4b140df4e80f3f0c93b0">tinyxml2::XMLDocument</a>
@@ -769,15 +769,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#aae0651f9c231f6571e480b10523e3bd5">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
 </li>
 <li>SetFixedImage()
-: <a class="el" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#a2b5f3b33573c5f2918c70cc5b91dc8f6">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
-, <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#a876634331b2ee81521966eaa66c451b3">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
+: <a class="el" href="classanima_1_1BaseTensorImageToImageMetric.html#a7681870d5ab672d6179a98098e86510c">anima::BaseTensorImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
+, <a class="el" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#a2b5f3b33573c5f2918c70cc5b91dc8f6">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 , <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a32de6edb1e94a63040ab2942c30badab">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SetFixedImageMask()
-: <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#a83c13067315366b5075152b402f9db99">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
+: <a class="el" href="classanima_1_1BaseTensorImageToImageMetric.html#ab1f689da945ee9f0bb4e6192f5a24fd9">anima::BaseTensorImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
 </li>
 <li>SetFixedImageRegion()
-: <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#a179b023a3f7918549955756939099b4e">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
+: <a class="el" href="classanima_1_1BaseTensorImageToImageMetric.html#aacae17037edf2c8d080a335d6f565e41">anima::BaseTensorImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
 </li>
 <li>SetFlagSpectralClustering()
 : <a class="el" href="classanima_1_1FuzzyCMeansFilter.html#a7825f0940d02cf56fd566aff12fae8d0">anima::FuzzyCMeansFilter&lt; ScalarType &gt;</a>
@@ -992,7 +992,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classtinyxml2_1_1StrPair.html#a2baf6230e18333e02ab65d0897ee3941">tinyxml2::StrPair</a>
 </li>
 <li>SetInterpolator()
-: <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#a19004e4de8bb21a14069f0ef850c233b">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
+: <a class="el" href="classanima_1_1BaseTensorImageToImageMetric.html#a74e4205726c0684e02595524cc75b1d3">anima::BaseTensorImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
 , <a class="el" href="classanima_1_1OrientedModelBaseResampleImageFilter.html#a4eddd12485281ca4868ebecd5ab40e01">anima::OrientedModelBaseResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
 , <a class="el" href="classanima_1_1ResampleImageFilter.html#abd161398bc2a7ceb25a2b931441b8d6c">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
 </li>
@@ -1220,12 +1220,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1TensorSymmetricBlockMatchingRegistrationMethod.html#a8cf8bb702914d1195e37a3d96d0c1df8">anima::TensorSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SetMovingImage()
-: <a class="el" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#abdf1918d3239f39529458b497f1c545d">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
-, <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#a7e81f1708165b29655ecb0a285723aaa">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
+: <a class="el" href="classanima_1_1BaseTensorImageToImageMetric.html#aa825a14982f335a45d2a9530ddfaaeea">anima::BaseTensorImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
+, <a class="el" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#abdf1918d3239f39529458b497f1c545d">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 , <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a16c9421f5ec4fd8f150c3fc301b7f697">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SetMovingImageMask()
-: <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#ac52857795f2c653c000f97232d764282">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
+: <a class="el" href="classanima_1_1BaseTensorImageToImageMetric.html#a7a991331f138b3ac1729012a82bb7354">anima::BaseTensorImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
 </li>
 <li>SetMValue()
 : <a class="el" href="classanima_1_1FuzzyCMeansFilter.html#a6595c963012759637efc7ff5bca1dba6">anima::FuzzyCMeansFilter&lt; ScalarType &gt;</a>
@@ -1603,9 +1603,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1NewuoaOptimizer.html#a978dd03269f08f7eb264bdb2db309601">anima::NewuoaOptimizer</a>
 </li>
 <li>SetRotateTensors()
-: <a class="el" href="classanima_1_1TensorCorrelationImageToImageMetric.html#a3b7158425436e881fab3cf1109f494c3">anima::TensorCorrelationImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;</a>
-, <a class="el" href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#a3d82aa6895fab2ae0902aae405fedb81">anima::TensorGeneralizedCorrelationImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;</a>
-, <a class="el" href="classanima_1_1TensorMeanSquaresImageToImageMetric.html#a233317649b1241ee7c507ce8cf92bb53">anima::TensorMeanSquaresImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;</a>
+: <a class="el" href="classanima_1_1BaseTensorImageToImageMetric.html#a7848f0e40033f1af7ab7c4db7d1c9661">anima::BaseTensorImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
 </li>
 <li>SetRotationCenter()
 : <a class="el" href="classanima_1_1SymmetryConstrainedTransform.html#a2d883da7d38479f896d642a5b4362410">anima::SymmetryConstrainedTransform&lt; TScalarType &gt;</a>
@@ -1842,9 +1840,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetT2FlipAngles()
 : <a class="el" href="classanima_1_1CombinedRelaxometryCostFunction.html#a4b3df14d12844746ca2b0d754d90c45e">anima::CombinedRelaxometryCostFunction</a>
-, <a class="el" href="classanima_1_1CombinedRelaxometryEstimationImageFilter.html#ab87dcc649150e35549020afe398b6b52">anima::CombinedRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
+, <a class="el" href="classanima_1_1CombinedRelaxometryEstimationImageFilter.html#ae8a01c5e10d4efd7f7e71fbeadcfe42b">anima::CombinedRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1T2EPGRelaxometryCostFunction.html#aeb35517dd68f5d66fd34ae4d99bac4dd">anima::T2EPGRelaxometryCostFunction</a>
-, <a class="el" href="classanima_1_1T2EPGRelaxometryEstimationImageFilter.html#ac1a4dbca3b1a1a2ba9132528e1ecdd94">anima::T2EPGRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
+, <a class="el" href="classanima_1_1T2EPGRelaxometryEstimationImageFilter.html#a2022c9ed839ff2b17c254ee7baa5a42b">anima::T2EPGRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 </li>
 <li>SetT2RelaxometrySignals()
 : <a class="el" href="classanima_1_1CombinedRelaxometryCostFunction.html#abbf9f38f014ee97516015305525153b9">anima::CombinedRelaxometryCostFunction</a>
@@ -1916,7 +1914,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html#aa0cb8c18bbec4195c5c56999dd38e181">anima::PyramidalDistortionCorrectionBlockMatchingBridge&lt; ImageDimension &gt;</a>
 </li>
 <li>SetTransform()
-: <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#accd22481df0c954dc7245ac48c0aab6d">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
+: <a class="el" href="classanima_1_1BaseTensorImageToImageMetric.html#af29a0c7e8511f503b7362917b6548707">anima::BaseTensorImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
 , <a class="el" href="classanima_1_1OrientedModelBaseResampleImageFilter.html#abfdefec3cdeb572ef0dd47aa5f35bfaf">anima::OrientedModelBaseResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalBlockMatchingBridge.html#a3d4d1a6cc4fa15b7c205e08fd9406917">anima::PyramidalBlockMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#ab509e44e623e165ba7c170f5cc534d50">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
@@ -1936,7 +1934,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a2f08c3405eb558308daaf264880850d8">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SetTransformParameters()
-: <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#acb5bffec61ccbdcfca12abc28a069d5b">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
+: <a class="el" href="classanima_1_1BaseTensorImageToImageMetric.html#ab02e403a0fd6927f092ef7cdbb95c826">anima::BaseTensorImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
 </li>
 <li>SetTranslateMax()
 : <a class="el" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#a09855c4ba0f28b21d29421f75933ffec">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
@@ -2028,8 +2026,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classtinyxml2_1_1XMLNode.html#a09dd68cf9eae137579f6e50f36487513">tinyxml2::XMLNode</a>
 </li>
 <li>SetVarianceThreshold()
-: <a class="el" href="classanima_1_1LowMemoryNLMeansPatientToGroupComparisonBridge.html#a96ff76b5584b4c9557b9cfa9f96aa2f9">anima::LowMemoryNLMeansPatientToGroupComparisonBridge</a>
+: <a class="el" href="classanima_1_1FastCorrelationImageToImageMetric.html#a51aea04d50eaf00034a23d0b7e04bacc">anima::FastCorrelationImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
+, <a class="el" href="classanima_1_1LowMemoryNLMeansPatientToGroupComparisonBridge.html#a96ff76b5584b4c9557b9cfa9f96aa2f9">anima::LowMemoryNLMeansPatientToGroupComparisonBridge</a>
 , <a class="el" href="classanima_1_1NLMeansPatientToGroupComparisonImageFilter.html#a0e8d7f0c94f0fe6c31da7b9565ee8099">anima::NLMeansPatientToGroupComparisonImageFilter&lt; PixelScalarType &gt;</a>
+, <a class="el" href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#a93a7a0bb3de0792b3e5ef3bea762e9a8">anima::TensorGeneralizedCorrelationImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;</a>
 </li>
 <li>SetVarMinThreshold()
 : <a class="el" href="classanima_1_1NonLocalMeansImageFilter.html#a1843f6588abcdee8a4fb5676a7fc69ef">anima::NonLocalMeansImageFilter&lt; TInputImage &gt;</a>
@@ -2138,7 +2138,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1SplitAffine3DTransform.html#a3a7519f8fc0c3552948454d0b925d671">anima::SplitAffine3DTransform&lt; TScalarType &gt;</a>
 </li>
 <li>SkipWhiteSpace()
-: <a class="el" href="classtinyxml2_1_1XMLUtil.html#a9333d20f2a34325b5115ca45849c4b2a">tinyxml2::XMLUtil</a>
+: <a class="el" href="classtinyxml2_1_1XMLUtil.html#aa48025be8843ec5a79b65579d31bd8fc">tinyxml2::XMLUtil</a>
 </li>
 <li>SmoothB1Field()
 : <a class="el" href="classanima_1_1CombinedRelaxometryEstimationImageFilter.html#aa292f54d073f947363c6740355e8de19">anima::CombinedRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
@@ -2222,6 +2222,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1BackgroundNoiseVarianceEstimationImageFilter.html#ad3561c0635cd24b3ee7673bd2d57a527">anima::BackgroundNoiseVarianceEstimationImageFilter&lt; TInputImage &gt;</a>
 , <a class="el" href="classanima_1_1BalooSVFTransformAgregator.html#a4827c04966752d5d64abefe4fb007883">anima::BalooSVFTransformAgregator&lt; NDimensions &gt;</a>
 , <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a8fec01ca4e3739585478b4783be5864d">anima::BaseProbabilisticTractographyImageFilter</a>
+, <a class="el" href="classanima_1_1BaseTensorImageToImageMetric.html#a654a5c403361f43b80495805edc9a9e7">anima::BaseTensorImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
 , <a class="el" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#ad25097219595470c7f01bace8a2116e9">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 , <a class="el" href="classanima_1_1BlockMatchingInitializer.html#a6f73502e6a618db062953e8c83bfcadf">anima::BlockMatchingInitializer&lt; PixelType, NDimensions &gt;</a>
 , <a class="el" href="classanima_1_1BobyqaOptimizer.html#a766572dfa75dc80abb70a8a60fba94bb">anima::BobyqaOptimizer</a>
@@ -2259,7 +2260,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1FlipDDIDirectionsImageFilter.html#a919de36b16ab9e6e2939cd93b5c74c99">anima::FlipDDIDirectionsImageFilter&lt; TInputPixelType &gt;</a>
 , <a class="el" href="classanima_1_1GaussianNoiseGeneratorImageFilter.html#a4ec9b2f909bec01cd1054d1c012da06a">anima::GaussianNoiseGeneratorImageFilter&lt; Dimension &gt;</a>
 , <a class="el" href="classanima_1_1GeneralizedFAImageFilter.html#a82c59cb0fbe7937406fb12db1136ad4f">anima::GeneralizedFAImageFilter&lt; TInputPixelType &gt;</a>
-, <a class="el" href="classanima_1_1GradientFreeImageToImageMetric.html#a0e3566160f85e5eda2a937b4f4f0e3be">anima::GradientFreeImageToImageMetric&lt; TFixedImage, TMovingImage &gt;</a>
 , <a class="el" href="classanima_1_1ImageRegionSplitterMask.html#a330726f9a007fda1a4553b3d1335a463">anima::ImageRegionSplitterMask&lt; TMaskImage &gt;</a>
 , <a class="el" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a1f36f11b720f8f74277bb1308940b2a9">anima::InhomogeneousAOSLineDiffusionImageFilter&lt; TInputImage, TDiffusionScalarImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1InhomogeneousDiffusionImageFilter.html#a8b4d809b0009a0a2fe10fb94b9c4321c">anima::InhomogeneousDiffusionImageFilter&lt; TInputImage, TDiffusionScalarImage, TOutputImage &gt;</a>
@@ -2316,10 +2316,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1T2RelaxometryEstimationImageFilter.html#addde1de2bcbf448b92dc7f73dde8a8ed">anima::T2RelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1TensorAsymmetricBlockMatchingRegistrationMethod.html#ac9161c8156ad418f57a48dac7fd6bf74">anima::TensorAsymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
 , <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a6ec711b87ee325a49a1f5499ebea06fe">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
-, <a class="el" href="classanima_1_1TensorCorrelationImageToImageMetric.html#aafd394dca1f7a21e19f9c8e11c583c08">anima::TensorCorrelationImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;</a>
-, <a class="el" href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#aaecf85c4fa4e4b033e245a3827dcc087">anima::TensorGeneralizedCorrelationImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1TensorCorrelationImageToImageMetric.html#aa2fe071d347452d034a9279f268599bd">anima::TensorCorrelationImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1TensorGeneralizedCorrelationImageToImageMetric.html#a47e2508bd5dcfe361af18d7aef7e2420">anima::TensorGeneralizedCorrelationImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#ae69e0a5d328d0bcb937561422cf09e02">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
-, <a class="el" href="classanima_1_1TensorMeanSquaresImageToImageMetric.html#aca555985a405158d990b2c448b88cb48">anima::TensorMeanSquaresImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1TensorMeanSquaresImageToImageMetric.html#a1e242cc6267baffd4afeb6a20bdca48a">anima::TensorMeanSquaresImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1TensorSymmetricBlockMatchingRegistrationMethod.html#a7494cdb8faa923638f3d5567695be45d">anima::TensorSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
 , <a class="el" href="classanima_1_1VarianceImageFilter.html#a4b2a1e1fa813076604d6be843241006d">anima::VarianceImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#ad5cbc77c5cc1cc8c455e5ea3e73b7c5e">anima::VectorModelLinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;</a>
@@ -2350,16 +2350,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1SymmetricBlockMatchingRegistrationMethod.html#a73293e0d9d4c8eaa57f1681a0c3916bc">anima::SymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SymmetryConstrainedTransform()
-: <a class="el" href="classanima_1_1SymmetryConstrainedTransform.html#a1976febab24b787c36ab0f7cba1932c5">anima::SymmetryConstrainedTransform&lt; TScalarType &gt;</a>
+: <a class="el" href="classanima_1_1SymmetryConstrainedTransform.html#af93a0dc76e8643e7de19c0bab88e31d7">anima::SymmetryConstrainedTransform&lt; TScalarType &gt;</a>
 </li>
 <li>SymmetryPlaneTransform()
-: <a class="el" href="classanima_1_1SymmetryPlaneTransform.html#a19cb6a75566ea8f71c0a3fcb69b10a1b">anima::SymmetryPlaneTransform&lt; TScalarType &gt;</a>
+: <a class="el" href="classanima_1_1SymmetryPlaneTransform.html#a60dd6f80cc12017ece8cba3d492ba302">anima::SymmetryPlaneTransform&lt; TScalarType &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 11 2015 06:24:20 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 20 2015 06:18:29 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

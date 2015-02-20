@@ -1,7 +1,7 @@
 var searchData=
 [
   ['a0r_5fsupport',['a0r_support',['../namespaceanima.html#a435b5b8d3242fc59f36ae2580d1988c8',1,'anima']]],
-  ['abort',['Abort',['../classanima_1_1BlockMatchingBaseRegistrationMethod.html#a3e5667a894ff94f58a504198dc1a8024',1,'anima::BlockMatchingBaseRegistrationMethod::Abort()'],['../classanima_1_1DistortionCorrectionRegistrationMethod.html#a22a86feade17df460635ea6701a2eeed',1,'anima::DistortionCorrectionRegistrationMethod::Abort()'],['../classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a7af3d817f5e806986d3dc95744c0df99',1,'anima::TensorBlockMatchingBaseRegistrationMethod::Abort()'],['../classanima_1_1PyramidalDenseSVFMatchingBridge.html#a800c35cc1b65e4832d01c205cd6cec52',1,'anima::PyramidalDenseSVFMatchingBridge::Abort()'],['../classanima_1_1PyramidalBlockMatchingBridge.html#aed902bd9955bd59848de017d1b5ae4da',1,'anima::PyramidalBlockMatchingBridge::Abort()']]],
+  ['abort',['Abort',['../classanima_1_1BlockMatchingBaseRegistrationMethod.html#ab18cd1c400e35544c3ded5e5e0870bec',1,'anima::BlockMatchingBaseRegistrationMethod::Abort()'],['../classanima_1_1DistortionCorrectionRegistrationMethod.html#a22a86feade17df460635ea6701a2eeed',1,'anima::DistortionCorrectionRegistrationMethod::Abort()'],['../classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#aa607881bf889aa25487f3d43f096607c',1,'anima::TensorBlockMatchingBaseRegistrationMethod::Abort()'],['../classanima_1_1PyramidalDenseSVFMatchingBridge.html#a800c35cc1b65e4832d01c205cd6cec52',1,'anima::PyramidalDenseSVFMatchingBridge::Abort()'],['../classanima_1_1PyramidalBlockMatchingBridge.html#aed902bd9955bd59848de017d1b5ae4da',1,'anima::PyramidalBlockMatchingBridge::Abort()']]],
   ['accept',['Accept',['../classtinyxml2_1_1XMLNode.html#a81e66df0a44c67a7af17f3b77a152785',1,'tinyxml2::XMLNode::Accept()'],['../classtinyxml2_1_1XMLText.html#ae659d4fc7351a7df11c111cbe1ade46f',1,'tinyxml2::XMLText::Accept()'],['../classtinyxml2_1_1XMLComment.html#aa382b1be6a8b0650c16a2d88bb499335',1,'tinyxml2::XMLComment::Accept()'],['../classtinyxml2_1_1XMLDeclaration.html#a953a7359cc312d15218eb5843a4ca108',1,'tinyxml2::XMLDeclaration::Accept()'],['../classtinyxml2_1_1XMLUnknown.html#a0d341ab804a1438a474810bb5bd29dd5',1,'tinyxml2::XMLUnknown::Accept()'],['../classtinyxml2_1_1XMLElement.html#a36d65438991a1e85096caf39ad13a099',1,'tinyxml2::XMLElement::Accept()'],['../classtinyxml2_1_1XMLDocument.html#aa08503d24898bf9992ae5e5fb8b0cf87',1,'tinyxml2::XMLDocument::Accept()']]],
   ['adcimagetype',['ADCImageType',['../classanima_1_1DTIScalarMapsImageFilter.html#a81d2fbb01d14a45f58f3364b07ffa443',1,'anima::DTIScalarMapsImageFilter']]],
   ['adddatabaseinput',['AddDatabaseInput',['../classanima_1_1NLMeansPatientToGroupComparisonImageFilter.html#a6ab0447b2fe241f8f0a1e4ad9168d7db',1,'anima::NLMeansPatientToGroupComparisonImageFilter::AddDatabaseInput()'],['../classanima_1_1PatientToGroupComparisonImageFilter.html#aaf8b1923a5b353a7359ed6c1137db195',1,'anima::PatientToGroupComparisonImageFilter::AddDatabaseInput()']]],
@@ -50,6 +50,8 @@ var searchData=
   ['animabaloosvftransformagregator_2ehxx',['animaBalooSVFTransformAgregator.hxx',['../animaBalooSVFTransformAgregator_8hxx.html',1,'']]],
   ['animabaseprobabilistictractographyimagefilter_2ecxx',['animaBaseProbabilisticTractographyImageFilter.cxx',['../animaBaseProbabilisticTractographyImageFilter_8cxx.html',1,'']]],
   ['animabaseprobabilistictractographyimagefilter_2eh',['animaBaseProbabilisticTractographyImageFilter.h',['../animaBaseProbabilisticTractographyImageFilter_8h.html',1,'']]],
+  ['animabasetensorimagetoimagemetric_2eh',['animaBaseTensorImageToImageMetric.h',['../animaBaseTensorImageToImageMetric_8h.html',1,'']]],
+  ['animabasetensorimagetoimagemetric_2ehxx',['animaBaseTensorImageToImageMetric.hxx',['../animaBaseTensorImageToImageMetric_8hxx.html',1,'']]],
   ['animabasetensortools_2eh',['animaBaseTensorTools.h',['../animaBaseTensorTools_8h.html',1,'']]],
   ['animabasetensortools_2ehxx',['animaBaseTensorTools.hxx',['../animaBaseTensorTools_8hxx.html',1,'']]],
   ['animabasetransformagregator_2eh',['animaBaseTransformAgregator.h',['../animaBaseTransformAgregator_8h.html',1,'']]],
@@ -178,8 +180,6 @@ var searchData=
   ['animagetscalarmapfromddi_2ecxx',['animaGetScalarMapFromDDI.cxx',['../animaGetScalarMapFromDDI_8cxx.html',1,'']]],
   ['animagradientfilereader_2eh',['animaGradientFileReader.h',['../animaGradientFileReader_8h.html',1,'']]],
   ['animagradientfilereader_2ehxx',['animaGradientFileReader.hxx',['../animaGradientFileReader_8hxx.html',1,'']]],
-  ['animagradientfreeimagetoimagemetric_2eh',['animaGradientFreeImageToImageMetric.h',['../animaGradientFreeImageToImageMetric_8h.html',1,'']]],
-  ['animagradientfreeimagetoimagemetric_2ehxx',['animaGradientFreeImageToImageMetric.hxx',['../animaGradientFreeImageToImageMetric_8hxx.html',1,'']]],
   ['animagrowlesionseeds_2ecxx',['animaGrowLesionSeeds.cxx',['../animaGrowLesionSeeds_8cxx.html',1,'']]],
   ['animahyperbolicfunctions_2eh',['animaHyperbolicFunctions.h',['../animaHyperbolicFunctions_8h.html',1,'']]],
   ['animahyperbolicfunctions_2ehxx',['animaHyperbolicFunctions.hxx',['../animaHyperbolicFunctions_8hxx.html',1,'']]],

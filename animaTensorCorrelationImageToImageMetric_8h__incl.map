@@ -1,7 +1,7 @@
 <map id="animaTensorCorrelationImageToImageMetric.h" name="animaTensorCorrelationImageToImageMetric.h">
-<area shape="rect" id="node2" href="$animaGradientFreeImageToImageMetric_8h.html" title="animaGradientFreeImageTo\lImageMetric.h" alt="" coords="683,97,865,138"/>
-<area shape="rect" id="node14" href="$animaTensorCorrelationImageToImageMetric_8hxx.html" title="animaTensorCorrelationImage\lToImageMetric.hxx" alt="" coords="1295,97,1489,138"/>
-<area shape="rect" id="node9" href="$animaGradientFreeImageToImageMetric_8hxx.html" title="animaGradientFreeImageTo\lImageMetric.hxx" alt="" coords="1021,187,1203,229"/>
-<area shape="rect" id="node16" href="$animaBaseTensorTools_8h.html" title="animaBaseTensorTools.h" alt="" coords="1507,195,1673,221"/>
-<area shape="rect" id="node21" href="$animaBaseTensorTools_8hxx.html" title="animaBaseTensorTools.hxx" alt="" coords="1879,285,2057,312"/>
+<area shape="rect" id="node2" href="$animaBaseTensorImageToImageMetric_8h.html" title="animaBaseTensorImageToImage\lMetric.h" alt="" coords="546,97,757,138"/>
+<area shape="rect" id="node13" href="$animaTensorCorrelationImageToImageMetric_8hxx.html" title="animaTensorCorrelationImage\lToImageMetric.hxx" alt="" coords="1253,97,1448,138"/>
+<area shape="rect" id="node9" href="$animaBaseTensorImageToImageMetric_8hxx.html" title="animaBaseTensorImageToImage\lMetric.hxx" alt="" coords="1021,187,1232,229"/>
+<area shape="rect" id="node15" href="$animaBaseTensorTools_8h.html" title="animaBaseTensorTools.h" alt="" coords="1469,195,1635,221"/>
+<area shape="rect" id="node20" href="$animaBaseTensorTools_8hxx.html" title="animaBaseTensorTools.hxx" alt="" coords="1752,285,1931,312"/>
 </map>

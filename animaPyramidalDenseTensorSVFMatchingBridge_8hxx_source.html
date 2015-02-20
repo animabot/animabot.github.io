@@ -339,17 +339,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                tmpReg-&gt;SetBlockPercentageKept(GetPercentageKept());</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                tmpReg-&gt;SetBlockSize(GetBlockSize());</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                tmpReg-&gt;SetBlockSpacing(GetBlockSpacing());</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                tmpReg-&gt;SetBlockTensorVarianceThreshold(GetStDevThreshold() * GetStDevThreshold());</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                tmpReg-&gt;SetUseTransformationDam(m_UseTransformationDam);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                tmpReg-&gt;SetDamDistance(m_DamDistance * m_ExtrapolationSigma);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                m_bmreg = tmpReg;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            }</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        m_bmreg-&gt;SetAgregator(agregPtr);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                tmpReg-&gt;SetUseTransformationDam(m_UseTransformationDam);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                tmpReg-&gt;SetDamDistance(m_DamDistance * m_ExtrapolationSigma);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                m_bmreg = tmpReg;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        m_bmreg-&gt;SetAgregator(agregPtr);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        m_bmreg-&gt;SetBlockTensorVarianceThreshold(GetStDevThreshold() * GetStDevThreshold());</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">if</span> (this-&gt;GetNumberOfThreads() != 0)</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            m_bmreg-&gt;SetNumberOfThreads(this-&gt;GetNumberOfThreads());</div>
@@ -626,7 +626,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 11 2015 06:24:17 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 20 2015 06:18:27 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
