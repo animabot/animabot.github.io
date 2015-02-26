@@ -105,6 +105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;itkCommand.h&gt;</code><br/>
 <code>#include &lt;itkExtractImageFilter.h&gt;</code><br/>
 <code>#include &lt;<a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="animaRetrieveImageTypeMacros_8h_source.html">animaRetrieveImageTypeMacros.h</a>&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for animaCropImage.cxx:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -112,7 +113,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="animaCropImage_8cxx__incl.png" border="0" usemap="#animaCropImage_8cxx" alt=""/></div>
 <map name="animaCropImage_8cxx" id="animaCropImage_8cxx">
-<area shape="rect" id="node8" href="animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="302,80,484,107"/></map>
+<area shape="rect" id="node8" href="animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="195,80,377,107"/><area shape="rect" id="node9" href="animaRetrieveImageTypeMacros_8h.html" title="animaRetrieveImageTypeMacros.h" alt="" coords="831,80,1051,107"/></map>
 </div>
 </div>
 <p><a href="animaCropImage_8cxx_source.html">Go to the source code of this file.</a></p>
@@ -124,23 +125,82 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a8017fe3c0a3c50ced784a6950b320d83"><td class="memTemplParams" colspan="2">template&lt;class ComponentType , int dimension&gt; </td></tr>
+<tr class="memitem:a8017fe3c0a3c50ced784a6950b320d83"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaCropImage_8cxx.html#a8017fe3c0a3c50ced784a6950b320d83">checkIfComponentsAreVectors</a> (itk::ImageIOBase::Pointer imageIO, const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
+<tr class="separator:a8017fe3c0a3c50ced784a6950b320d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd513c6011a5522620fc075eda18dbe"><td class="memTemplParams" colspan="2">template&lt;class InputImageType &gt; </td></tr>
+<tr class="memitem:a4cd513c6011a5522620fc075eda18dbe"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaCropImage_8cxx.html#a4cd513c6011a5522620fc075eda18dbe">evaluateOutputType</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
+<tr class="separator:a4cd513c6011a5522620fc075eda18dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a999abe8cc847c5e232d0b10bf361e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaCropImage_8cxx.html#a7a999abe8cc847c5e232d0b10bf361e2">eventCallback</a> (itk::Object *caller, const itk::EventObject &amp;event, void *clientData)</td></tr>
 <tr class="separator:a7a999abe8cc847c5e232d0b10bf361e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87fedf8e5ea4866396d6584df65885c4"><td class="memTemplParams" colspan="2">template&lt;class InputImageType , unsigned int InputDim, class OutputImageType &gt; </td></tr>
-<tr class="memitem:a87fedf8e5ea4866396d6584df65885c4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaCropImage_8cxx.html#a87fedf8e5ea4866396d6584df65885c4">extract</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
-<tr class="separator:a87fedf8e5ea4866396d6584df65885c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d71380814ddfca8fbc19bbcf92b8048"><td class="memTemplParams" colspan="2">template&lt;class InputImageType , unsigned int OutputDimension&gt; </td></tr>
+<tr class="memitem:a0d71380814ddfca8fbc19bbcf92b8048"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaCropImage_8cxx.html#a0d71380814ddfca8fbc19bbcf92b8048">extract</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
+<tr class="separator:a0d71380814ddfca8fbc19bbcf92b8048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace7f414039e764f5229a85f450521d1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaCropImage_8cxx.html#ace7f414039e764f5229a85f450521d1c">main</a> (int ac, const char **av)</td></tr>
 <tr class="separator:ace7f414039e764f5229a85f450521d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bd51c15c392b796790ea4e2fd45e111"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaCropImage_8cxx.html#a2bd51c15c392b796790ea4e2fd45e111">retrieveComponentType</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args, itk::ImageIOBase::Pointer imageIO)</td></tr>
-<tr class="separator:a2bd51c15c392b796790ea4e2fd45e111"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fde9157770a1c59ebce49cb0d6d31ac"><td class="memTemplParams" colspan="2">template&lt;class ComponentType , unsigned int InputDim, unsigned int OutputDim&gt; </td></tr>
-<tr class="memitem:a7fde9157770a1c59ebce49cb0d6d31ac"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaCropImage_8cxx.html#a7fde9157770a1c59ebce49cb0d6d31ac">retrieveNbComponent</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args, itk::ImageIOBase::Pointer imageIO)</td></tr>
-<tr class="separator:a7fde9157770a1c59ebce49cb0d6d31ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a351d4038c9cddba5e6a2799f9f43bb43"><td class="memTemplParams" colspan="2">template&lt;class ComponentType &gt; </td></tr>
-<tr class="memitem:a351d4038c9cddba5e6a2799f9f43bb43"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaCropImage_8cxx.html#a351d4038c9cddba5e6a2799f9f43bb43">retrieveNbDimensions</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args, itk::ImageIOBase::Pointer imageIO)</td></tr>
-<tr class="separator:a351d4038c9cddba5e6a2799f9f43bb43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712ca32394448241d1457782abc03675"><td class="memTemplParams" colspan="2">template&lt;class ComponentType &gt; </td></tr>
+<tr class="memitem:a712ca32394448241d1457782abc03675"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaCropImage_8cxx.html#a712ca32394448241d1457782abc03675">retrieveNbDimensions</a> (itk::ImageIOBase::Pointer imageIO, const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
+<tr class="separator:a712ca32394448241d1457782abc03675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a8017fe3c0a3c50ced784a6950b320d83"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ComponentType , int dimension&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkIfComponentsAreVectors </td>
+          <td>(</td>
+          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
+          <td class="paramname"><em>imageIO</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaCropImage_8cxx_source.html#l00185">185</a> of file <a class="el" href="animaCropImage_8cxx_source.html">animaCropImage.cxx</a>.</p>
+
+<p>References <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00088">ANIMA_CHECK_IF_COMPONENTS_ARE_VECTORS</a>, and <a class="el" href="animaCropImage_8cxx_source.html#l00103">evaluateOutputType()</a>.</p>
+
+<p>Referenced by <a class="el" href="animaCropImage_8cxx_source.html#l00193">retrieveNbDimensions()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4cd513c6011a5522620fc075eda18dbe"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class InputImageType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void evaluateOutputType </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaCropImage_8cxx_source.html#l00103">103</a> of file <a class="el" href="animaCropImage_8cxx_source.html">animaCropImage.cxx</a>.</p>
+
+<p>References <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::tsize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::xsize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::ysize</a>, and <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::zsize</a>.</p>
+
+<p>Referenced by <a class="el" href="animaCropImage_8cxx_source.html#l00185">checkIfComponentsAreVectors()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7a999abe8cc847c5e232d0b10bf361e2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -171,17 +231,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaCropImage_8cxx_source.html#l00012">12</a> of file <a class="el" href="animaCropImage_8cxx_source.html">animaCropImage.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaCropImage_8cxx_source.html#l00014">14</a> of file <a class="el" href="animaCropImage_8cxx_source.html">animaCropImage.cxx</a>.</p>
 
-<p>Referenced by <a class="el" href="animaCropImage_8cxx_source.html#l00027">extract()</a>.</p>
+<p>Referenced by <a class="el" href="animaCropImage_8cxx_source.html#l00029">extract()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a87fedf8e5ea4866396d6584df65885c4"></a>
+<a class="anchor" id="a0d71380814ddfca8fbc19bbcf92b8048"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class InputImageType , unsigned int InputDim, class OutputImageType &gt; </div>
+template&lt;class InputImageType , unsigned int OutputDimension&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void extract </td>
@@ -193,9 +253,9 @@ template&lt;class InputImageType , unsigned int InputDim, class OutputImageType 
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaCropImage_8cxx_source.html#l00027">27</a> of file <a class="el" href="animaCropImage_8cxx_source.html">animaCropImage.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaCropImage_8cxx_source.html#l00029">29</a> of file <a class="el" href="animaCropImage_8cxx_source.html">animaCropImage.cxx</a>.</p>
 
-<p>References <a class="el" href="animaCropImage_8cxx_source.html#l00012">eventCallback()</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00014">arguments::input</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00014">arguments::output</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::tindex</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::tsize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::xindex</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::xsize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::yindex</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::ysize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::zindex</a>, and <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::zsize</a>.</p>
+<p>References <a class="el" href="animaCropImage_8cxx_source.html#l00014">eventCallback()</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::input</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::output</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::tindex</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::tsize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::xindex</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::xsize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::yindex</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::ysize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::zindex</a>, and <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::zsize</a>.</p>
 
 </div>
 </div>
@@ -223,73 +283,13 @@ template&lt;class InputImageType , unsigned int InputDim, class OutputImageType 
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaCropImage_8cxx_source.html#l00217">217</a> of file <a class="el" href="animaCropImage_8cxx_source.html">animaCropImage.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaCropImage_8cxx_source.html#l00198">198</a> of file <a class="el" href="animaCropImage_8cxx_source.html">animaCropImage.cxx</a>.</p>
 
-<p>References <a class="el" href="animaCollapseImage_8cxx_source.html#l00014">arguments::input</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00014">arguments::output</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00188">retrieveComponentType()</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::tindex</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::tsize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::xindex</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::xsize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::yindex</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::ysize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::zindex</a>, and <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::zsize</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2bd51c15c392b796790ea4e2fd45e111"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void retrieveComponentType </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
-          <td class="paramname"><em>args</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
-          <td class="paramname"><em>imageIO</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="animaCropImage_8cxx_source.html#l00188">188</a> of file <a class="el" href="animaCropImage_8cxx_source.html">animaCropImage.cxx</a>.</p>
-
-<p>Referenced by <a class="el" href="animaCropImage_8cxx_source.html#l00217">main()</a>.</p>
+<p>References <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00016">ANIMA_RETRIEVE_COMPONENT_TYPE</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::input</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::output</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00193">retrieveNbDimensions()</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::tindex</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::tsize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::xindex</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::xsize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::yindex</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::ysize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::zindex</a>, and <a class="el" href="animaCropImage_8cxx_source.html#l00022">arguments::zsize</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a7fde9157770a1c59ebce49cb0d6d31ac"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class ComponentType , unsigned int InputDim, unsigned int OutputDim&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void retrieveNbComponent </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
-          <td class="paramname"><em>args</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
-          <td class="paramname"><em>imageIO</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="animaCropImage_8cxx_source.html#l00080">80</a> of file <a class="el" href="animaCropImage_8cxx_source.html">animaCropImage.cxx</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a351d4038c9cddba5e6a2799f9f43bb43"></a>
+<a class="anchor" id="a712ca32394448241d1457782abc03675"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -298,14 +298,14 @@ template&lt;class ComponentType &gt; </div>
         <tr>
           <td class="memname">void retrieveNbDimensions </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
-          <td class="paramname"><em>args</em>, </td>
+          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
+          <td class="paramname"><em>imageIO</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
-          <td class="paramname"><em>imageIO</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -315,16 +315,18 @@ template&lt;class ComponentType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaCropImage_8cxx_source.html#l00104">104</a> of file <a class="el" href="animaCropImage_8cxx_source.html">animaCropImage.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaCropImage_8cxx_source.html#l00193">193</a> of file <a class="el" href="animaCropImage_8cxx_source.html">animaCropImage.cxx</a>.</p>
 
-<p>References <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::tsize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::xsize</a>, <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::ysize</a>, and <a class="el" href="animaCropImage_8cxx_source.html#l00020">arguments::zsize</a>.</p>
+<p>References <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00057">ANIMA_RETRIEVE_NUMBER_OF_DIMENSIONS</a>, and <a class="el" href="animaCropImage_8cxx_source.html#l00185">checkIfComponentsAreVectors()</a>.</p>
+
+<p>Referenced by <a class="el" href="animaCropImage_8cxx_source.html#l00198">main()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 25 2015 06:18:24 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 26 2015 06:21:30 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

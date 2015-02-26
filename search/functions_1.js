@@ -23,7 +23,8 @@ var searchData=
   ['altmov_5f',['altmov_',['../classanima_1_1BobyqaOptimizer.html#a5804692a9a3bd129d69a54fe98c6bfa5',1,'anima::BobyqaOptimizer']]],
   ['anisotropymeasure',['AnisotropyMeasure',['../classanima_1_1PyramidImageFilter.html#a96e774d573b1aa41e5f99af436d8d6a1',1,'anima::PyramidImageFilter']]],
   ['applygeometrytovectorfield',['ApplyGeometryToVectorField',['../animaApplyDistortionCorrection_8cxx.html#a9314663b5bec561ebbe2a81bb388e486',1,'animaApplyDistortionCorrection.cxx']]],
-  ['applyscalartransfo',['applyScalarTransfo',['../animaApplyTransformSerie_8cxx.html#aa4faa4edcbfcfc96447f1d0db28a6658',1,'animaApplyTransformSerie.cxx']]],
+  ['applyscalartransfo',['applyScalarTransfo',['../animaApplyTransformSerie_8cxx.html#a91f00ebb23c96c736611be689ed67ae4',1,'animaApplyTransformSerie.cxx']]],
+  ['applyvectortransfo',['applyVectorTransfo',['../animaApplyTransformSerie_8cxx.html#afa47644a1d8bd3e3bf1f4976a479b3cf',1,'animaApplyTransformSerie.cxx']]],
   ['argname0',['ArgName0',['../classGenericArguments.html#a415cb26c22c0b9d945c797f6f87132fc',1,'GenericArguments']]],
   ['asymmetricblockmatchingregistrationmethod',['AsymmetricBlockMatchingRegistrationMethod',['../classanima_1_1AsymmetricBlockMatchingRegistrationMethod.html#a5eb77a3912e0962ad2515f8d2d00d9bb',1,'anima::AsymmetricBlockMatchingRegistrationMethod']]],
   ['attribute',['Attribute',['../classtinyxml2_1_1XMLElement.html#a7bdebdf1888074087237f3dd03912740',1,'tinyxml2::XMLElement']]]

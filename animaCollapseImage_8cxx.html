@@ -106,6 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;itkCommand.h&gt;</code><br/>
 <code>#include &lt;itkExtractImageFilter.h&gt;</code><br/>
 <code>#include &lt;<a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="animaRetrieveImageTypeMacros_8h_source.html">animaRetrieveImageTypeMacros.h</a>&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for animaCollapseImage.cxx:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -113,7 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="animaCollapseImage_8cxx__incl.png" border="0" usemap="#animaCollapseImage_8cxx" alt=""/></div>
 <map name="animaCollapseImage_8cxx" id="animaCollapseImage_8cxx">
-<area shape="rect" id="node9" href="animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="445,80,627,107"/></map>
+<area shape="rect" id="node9" href="animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="657,80,839,107"/><area shape="rect" id="node10" href="animaRetrieveImageTypeMacros_8h.html" title="animaRetrieveImageTypeMacros.h" alt="" coords="361,80,580,107"/></map>
 </div>
 </div>
 <p><a href="animaCollapseImage_8cxx_source.html">Go to the source code of this file.</a></p>
@@ -125,19 +126,17 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aca4077d95c4c3f16fe063a4cdd519942"><td class="memTemplParams" colspan="2">template&lt;class ComponentType , unsigned int InputDim&gt; </td></tr>
-<tr class="memitem:aca4077d95c4c3f16fe063a4cdd519942"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaCollapseImage_8cxx.html#aca4077d95c4c3f16fe063a4cdd519942">collapse</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args, itk::ImageIOBase::Pointer imageIO)</td></tr>
-<tr class="separator:aca4077d95c4c3f16fe063a4cdd519942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7e54afedf77b9ef317249cabcb0aa8"><td class="memTemplParams" colspan="2">template&lt;class ComponentType , unsigned int InputDim&gt; </td></tr>
+<tr class="memitem:a9f7e54afedf77b9ef317249cabcb0aa8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaCollapseImage_8cxx.html#a9f7e54afedf77b9ef317249cabcb0aa8">collapse</a> (itk::ImageIOBase::Pointer imageIO, const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
+<tr class="separator:a9f7e54afedf77b9ef317249cabcb0aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace7f414039e764f5229a85f450521d1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaCollapseImage_8cxx.html#ace7f414039e764f5229a85f450521d1c">main</a> (int ac, const char **av)</td></tr>
 <tr class="separator:ace7f414039e764f5229a85f450521d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bd51c15c392b796790ea4e2fd45e111"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaCollapseImage_8cxx.html#a2bd51c15c392b796790ea4e2fd45e111">retrieveComponentType</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args, itk::ImageIOBase::Pointer imageIO)</td></tr>
-<tr class="separator:a2bd51c15c392b796790ea4e2fd45e111"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a351d4038c9cddba5e6a2799f9f43bb43"><td class="memTemplParams" colspan="2">template&lt;class ComponentType &gt; </td></tr>
-<tr class="memitem:a351d4038c9cddba5e6a2799f9f43bb43"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaCollapseImage_8cxx.html#a351d4038c9cddba5e6a2799f9f43bb43">retrieveNbDimensions</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args, itk::ImageIOBase::Pointer imageIO)</td></tr>
-<tr class="separator:a351d4038c9cddba5e6a2799f9f43bb43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712ca32394448241d1457782abc03675"><td class="memTemplParams" colspan="2">template&lt;class ComponentType &gt; </td></tr>
+<tr class="memitem:a712ca32394448241d1457782abc03675"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaCollapseImage_8cxx.html#a712ca32394448241d1457782abc03675">retrieveNbDimensions</a> (itk::ImageIOBase::Pointer imageIO, const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
+<tr class="separator:a712ca32394448241d1457782abc03675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="aca4077d95c4c3f16fe063a4cdd519942"></a>
+<a class="anchor" id="a9f7e54afedf77b9ef317249cabcb0aa8"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -146,14 +145,14 @@ template&lt;class ComponentType , unsigned int InputDim&gt; </div>
         <tr>
           <td class="memname">void collapse </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
-          <td class="paramname"><em>args</em>, </td>
+          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
+          <td class="paramname"><em>imageIO</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
-          <td class="paramname"><em>imageIO</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -163,9 +162,11 @@ template&lt;class ComponentType , unsigned int InputDim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaCollapseImage_8cxx_source.html#l00020">20</a> of file <a class="el" href="animaCollapseImage_8cxx_source.html">animaCollapseImage.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaCollapseImage_8cxx_source.html#l00021">21</a> of file <a class="el" href="animaCollapseImage_8cxx_source.html">animaCollapseImage.cxx</a>.</p>
 
-<p>References <a class="el" href="animaCollapseImage_8cxx_source.html#l00014">arguments::input</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::origin</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00014">arguments::output</a>, and <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::spacing</a>.</p>
+<p>References <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::input</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00016">arguments::origin</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::output</a>, and <a class="el" href="animaCollapseImage_8cxx_source.html#l00016">arguments::spacing</a>.</p>
+
+<p>Referenced by <a class="el" href="animaCollapseImage_8cxx_source.html#l00096">retrieveNbDimensions()</a>.</p>
 
 </div>
 </div>
@@ -193,43 +194,13 @@ template&lt;class ComponentType , unsigned int InputDim&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaCollapseImage_8cxx_source.html#l00144">144</a> of file <a class="el" href="animaCollapseImage_8cxx_source.html">animaCollapseImage.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaCollapseImage_8cxx_source.html#l00102">102</a> of file <a class="el" href="animaCollapseImage_8cxx_source.html">animaCollapseImage.cxx</a>.</p>
 
-<p>References <a class="el" href="animaCollapseImage_8cxx_source.html#l00014">arguments::input</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::origin</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00014">arguments::output</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00115">retrieveComponentType()</a>, and <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::spacing</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2bd51c15c392b796790ea4e2fd45e111"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void retrieveComponentType </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
-          <td class="paramname"><em>args</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
-          <td class="paramname"><em>imageIO</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="animaCollapseImage_8cxx_source.html#l00115">115</a> of file <a class="el" href="animaCollapseImage_8cxx_source.html">animaCollapseImage.cxx</a>.</p>
-
-<p>Referenced by <a class="el" href="animaCollapseImage_8cxx_source.html#l00144">main()</a>.</p>
+<p>References <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00016">ANIMA_RETRIEVE_COMPONENT_TYPE</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::input</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00016">arguments::origin</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::output</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00096">retrieveNbDimensions()</a>, and <a class="el" href="animaCollapseImage_8cxx_source.html#l00016">arguments::spacing</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a351d4038c9cddba5e6a2799f9f43bb43"></a>
+<a class="anchor" id="a712ca32394448241d1457782abc03675"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -238,14 +209,14 @@ template&lt;class ComponentType &gt; </div>
         <tr>
           <td class="memname">void retrieveNbDimensions </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
-          <td class="paramname"><em>args</em>, </td>
+          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
+          <td class="paramname"><em>imageIO</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">itk::ImageIOBase::Pointer&#160;</td>
-          <td class="paramname"><em>imageIO</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -255,14 +226,18 @@ template&lt;class ComponentType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaCollapseImage_8cxx_source.html#l00095">95</a> of file <a class="el" href="animaCollapseImage_8cxx_source.html">animaCollapseImage.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaCollapseImage_8cxx_source.html#l00096">96</a> of file <a class="el" href="animaCollapseImage_8cxx_source.html">animaCollapseImage.cxx</a>.</p>
+
+<p>References <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00057">ANIMA_RETRIEVE_NUMBER_OF_DIMENSIONS</a>, and <a class="el" href="animaCollapseImage_8cxx_source.html#l00021">collapse()</a>.</p>
+
+<p>Referenced by <a class="el" href="animaCollapseImage_8cxx_source.html#l00102">main()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 25 2015 06:18:24 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 26 2015 06:21:30 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
