@@ -210,8 +210,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        {</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;\tDIM &quot;</span> &lt;&lt; dir &lt;&lt; <span class="stringliteral">&quot; : [&quot;</span>;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dim = 0; dim &lt; imageIO-&gt;GetNumberOfDimensions() -1; ++dim)</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                std::cout &lt;&lt; imageIO-&gt;GetDirection(dir)[dim] &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            std::cout &lt;&lt; imageIO-&gt;GetDirection(dir)[imageIO-&gt;GetNumberOfDimensions() - 1] &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                std::cout &lt;&lt; imageIO-&gt;GetDirection(dim)[dir] &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            std::cout &lt;&lt; imageIO-&gt;GetDirection(imageIO-&gt;GetNumberOfDimensions() - 1)[dir] &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;NUMBER OF COMPONENTS: &quot;</span>&lt;&lt; imageIO-&gt;GetNumberOfComponents()&lt;&lt; std::endl;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;COMPONENT TYPE: &quot;</span>&lt;&lt; itk::ImageIOBase::GetComponentTypeAsString(imageIO-&gt;GetComponentType()) &lt;&lt; std::endl;</div>
@@ -249,7 +249,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 28 2015 06:27:04 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 5 2015 06:28:51 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
