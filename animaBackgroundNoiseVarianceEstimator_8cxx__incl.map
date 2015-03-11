@@ -1,11 +1,12 @@
 <map id="animaBackgroundNoiseVarianceEstimator.cxx" name="animaBackgroundNoiseVarianceEstimator.cxx">
-<area shape="rect" id="node3" href="$animaBackgroundNoiseVarianceEstimationImageFilter_8h.html" title="animaBackgroundNoiseVariance\lEstimationImageFilter.h" alt="" coords="920,97,1128,138"/>
-<area shape="rect" id="node23" href="$animaGradientFileReader_8h.html" title="animaGradientFileReader.h" alt="" coords="2008,104,2187,131"/>
-<area shape="rect" id="node10" href="$animaBackgroundNoiseVarianceEstimationImageFilter_8hxx.html" title="animaBackgroundNoiseVariance\lEstimationImageFilter.hxx" alt="" coords="920,187,1128,229"/>
-<area shape="rect" id="node19" href="$animaFDRCorrection_8h.html" title="animaFDRCorrection.h" alt="" coords="176,285,328,312"/>
-<area shape="rect" id="node28" href="$animaGradientFileReader_8hxx.html" title="animaGradientFileReader.hxx" alt="" coords="2002,195,2192,221"/>
-<area shape="rect" id="node32" href="$animaVectorOperations_8h.html" title="animaVectorOperations.h" alt="" coords="2559,285,2725,312"/>
-<area shape="rect" id="node35" href="$animaVectorOperations_8hxx.html" title="animaVectorOperations.hxx" alt="" coords="2111,368,2289,395"/>
-<area shape="rect" id="node36" href="$animaLogarithmFunctions_8h.html" title="animaLogarithmFunctions.h" alt="" coords="1918,443,2097,469"/>
-<area shape="rect" id="node37" href="$animaLogarithmFunctions_8hxx.html" title="animaLogarithmFunctions.hxx" alt="" coords="977,517,1169,544"/>
+<area shape="rect" id="node3" href="$animaBackgroundNoiseVarianceEstimationImageFilter_8h.html" title="animaBackgroundNoiseVariance\lEstimationImageFilter.h" alt="" coords="1096,97,1304,138"/>
+<area shape="rect" id="node23" href="$animaGradientFileReader_8h.html" title="animaGradientFileReader.h" alt="" coords="2683,104,2861,131"/>
+<area shape="rect" id="node42" href="$animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="2961,104,3143,131"/>
+<area shape="rect" id="node10" href="$animaBackgroundNoiseVarianceEstimationImageFilter_8hxx.html" title="animaBackgroundNoiseVariance\lEstimationImageFilter.hxx" alt="" coords="791,187,999,229"/>
+<area shape="rect" id="node19" href="$animaFDRCorrection_8h.html" title="animaFDRCorrection.h" alt="" coords="464,285,616,312"/>
+<area shape="rect" id="node28" href="$animaGradientFileReader_8hxx.html" title="animaGradientFileReader.hxx" alt="" coords="2255,195,2445,221"/>
+<area shape="rect" id="node32" href="$animaVectorOperations_8h.html" title="animaVectorOperations.h" alt="" coords="2037,285,2203,312"/>
+<area shape="rect" id="node35" href="$animaVectorOperations_8hxx.html" title="animaVectorOperations.hxx" alt="" coords="2031,368,2209,395"/>
+<area shape="rect" id="node36" href="$animaLogarithmFunctions_8h.html" title="animaLogarithmFunctions.h" alt="" coords="1899,443,2079,469"/>
+<area shape="rect" id="node37" href="$animaLogarithmFunctions_8hxx.html" title="animaLogarithmFunctions.hxx" alt="" coords="968,517,1160,544"/>
 </map>

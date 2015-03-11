@@ -659,6 +659,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a2ee15057d1c494009f6e1ed243378e61"><td class="memTemplParams" colspan="2">template&lt;class VectorType &gt; </td></tr>
 <tr class="memitem:a2ee15057d1c494009f6e1ed243378e61"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a2ee15057d1c494009f6e1ed243378e61">GetFascicleFA</a> (const VectorType &amp;modelValue, const unsigned int m)</td></tr>
 <tr class="separator:a2ee15057d1c494009f6e1ed243378e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8bf0c423cb7e2ab7c1b0b66515c8b25"><td class="memTemplParams" colspan="2">template&lt;class InputImageType , class OutputImageType &gt; </td></tr>
+<tr class="memitem:aa8bf0c423cb7e2ab7c1b0b66515c8b25"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; itk::SmartPointer<br class="typebreak"/>
+&lt; OutputImageType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#aa8bf0c423cb7e2ab7c1b0b66515c8b25">getImagesFromHigherDimensionImage</a> (InputImageType *inputImage)</td></tr>
+<tr class="memdesc:aa8bf0c423cb7e2ab7c1b0b66515c8b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a vector of input images from a higher dimensional image.  <a href="#aa8bf0c423cb7e2ab7c1b0b66515c8b25">More...</a><br/></td></tr>
+<tr class="separator:aa8bf0c423cb7e2ab7c1b0b66515c8b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fcd63d3c884d70f4b05017ce3ee1c5d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a9fcd63d3c884d70f4b05017ce3ee1c5d"><td class="memTemplItemLeft" align="right" valign="top">vnl_matrix&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a9fcd63d3c884d70f4b05017ce3ee1c5d">GetLogarithm</a> (const vnl_matrix&lt; T &gt; &amp;m, const double precision=0.00000000001, const int numApprox=1)</td></tr>
 <tr class="memdesc:a9fcd63d3c884d70f4b05017ce3ee1c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computation of the matrix logarithm. Algo: inverse scaling and squaring, variant proposed by Cheng et al., SIAM Matrix Anal., 2001.  <a href="#a9fcd63d3c884d70f4b05017ce3ee1c5d">More...</a><br/></td></tr>
@@ -844,6 +849,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a7ac669021df8a4af8d0c555c41964f12"><td class="memTemplParams" colspan="2">template&lt;class ScalarType , unsigned int DataDimension&gt; </td></tr>
 <tr class="memitem:a7ac669021df8a4af8d0c555c41964f12"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a7ac669021df8a4af8d0c555c41964f12">SampleFromWatsonDistribution</a> (const ScalarType &amp;kappa, const itk::Vector&lt; ScalarType, DataDimension &gt; &amp;meanDirection, itk::Vector&lt; ScalarType, DataDimension &gt; &amp;resVec, boost::mt19937 &amp;generator)</td></tr>
 <tr class="separator:a7ac669021df8a4af8d0c555c41964f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa2723feae01b7610ff4288dec4c235"><td class="memTemplParams" colspan="2">template&lt;class InputImageType , class HigherDimImageType , class ImageFilterType &gt; </td></tr>
+<tr class="memitem:a5fa2723feae01b7610ff4288dec4c235"><td class="memTemplItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a5fa2723feae01b7610ff4288dec4c235">setMultipleImageFilterInputsFromFileName</a> (std::string &amp;fileName, ImageFilterType *filter)</td></tr>
+<tr class="memdesc:a5fa2723feae01b7610ff4288dec4c235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set inputs of an image to image filter from a file name containing either a list of files or a higher dimensional image.  <a href="#a5fa2723feae01b7610ff4288dec4c235">More...</a><br/></td></tr>
+<tr class="separator:a5fa2723feae01b7610ff4288dec4c235"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aa9fd33a6f72b5f65a217c2848432ac"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a2aa9fd33a6f72b5f65a217c2848432ac"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a2aa9fd33a6f72b5f65a217c2848432ac">ShOverId</a> (const T &amp;x)</td></tr>
 <tr class="separator:a2aa9fd33a6f72b5f65a217c2848432ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1058,7 +1067,7 @@ Variables</h2></td></tr>
 
 <p>References <a class="el" href="animaBesselFunctions_8cxx_source.html#l00103">a0r_support()</a>, and <a class="el" href="animaBesselFunctions_8cxx_source.html#l00108">ak_support()</a>.</p>
 
-<p>Referenced by <a class="el" href="animaDTINonCentralChiEstimationImageFilter_8hxx_source.html#l00525">anima::DTINonCentralChiEstimationImageFilter&lt; PixelScalarType &gt;::ComputeLocalSigma()</a>, <a class="el" href="animaDTINonCentralChiCostFunction_8cxx_source.html#l00049">anima::DTINonCentralChiCostFunction::GetDerivative()</a>, and <a class="el" href="animaBesselFunctions_8cxx_source.html#l00014">log_bessel_i()</a>.</p>
+<p>Referenced by <a class="el" href="animaDTINonCentralChiEstimationImageFilter_8hxx_source.html#l00466">anima::DTINonCentralChiEstimationImageFilter&lt; PixelScalarType &gt;::ComputeLocalSigma()</a>, <a class="el" href="animaDTINonCentralChiCostFunction_8cxx_source.html#l00049">anima::DTINonCentralChiCostFunction::GetDerivative()</a>, and <a class="el" href="animaBesselFunctions_8cxx_source.html#l00014">log_bessel_i()</a>.</p>
 
 </div>
 </div>
@@ -1080,7 +1089,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="animaFDRCorrection_8cxx_source.html#l00007">7</a> of file <a class="el" href="animaFDRCorrection_8cxx_source.html">animaFDRCorrection.cxx</a>.</p>
 
-<p>Referenced by <a class="el" href="animaFDRCorrectImageFilter_8hxx_source.html#l00012">anima::FDRCorrectImageFilter&lt; PixelScalarType &gt;::GenerateData()</a>, and <a class="el" href="animaBackgroundNoiseVarianceEstimationImageFilter_8hxx_source.html#l00375">anima::BackgroundNoiseVarianceEstimationImageFilter&lt; TInputImage &gt;::UpdateOutputFromPValues()</a>.</p>
+<p>Referenced by <a class="el" href="animaFDRCorrectImageFilter_8hxx_source.html#l00012">anima::FDRCorrectImageFilter&lt; PixelScalarType &gt;::GenerateData()</a>, and <a class="el" href="animaBackgroundNoiseVarianceEstimationImageFilter_8hxx_source.html#l00316">anima::BackgroundNoiseVarianceEstimationImageFilter&lt; TInputImage &gt;::UpdateOutputFromPValues()</a>.</p>
 
 </div>
 </div>
@@ -2544,7 +2553,7 @@ template&lt;class VectorType &gt; </div>
 
 <p>References <a class="el" href="animaVectorOperations_8hxx_source.html#l00203">ComputeScalarProduct()</a>.</p>
 
-<p>Referenced by <a class="el" href="animaDTIEstimationImageFilter_8hxx_source.html#l00143">anima::DTIEstimationImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00380">ComputeAngle()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00016">ComputeAsymmetricPDF()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00301">anima::ODFProbabilisticTractographyImageFilter::ComputeLogWeightUpdate()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00523">anima::ODFProbabilisticTractographyImageFilter::ComputeModelEstimation()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00395">ComputeOrientationAngle()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00095">ComputeSymmetricPDF()</a>, <a class="el" href="animaVMFDistribution_8hxx_source.html#l00020">ComputeVMFPdf()</a>, <a class="el" href="animaPickLesionSeedImageFilter_8hxx_source.html#l00012">anima::PickLesionSeedImageFilter&lt; TInputImage, TOutputImage &gt;::GenerateData()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00333">Normalize()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00052">anima::ODFProbabilisticTractographyImageFilter::PrepareTractography()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00445">TransformCartesianToSphericalCoordinates()</a>, and <a class="el" href="animaGradientFileReader_8hxx_source.html#l00087">anima::GradientFileReader&lt; GradientType, BValueScalarType &gt;::Update()</a>.</p>
+<p>Referenced by <a class="el" href="animaDTIEstimationImageFilter_8hxx_source.html#l00084">anima::DTIEstimationImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00380">ComputeAngle()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00016">ComputeAsymmetricPDF()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00301">anima::ODFProbabilisticTractographyImageFilter::ComputeLogWeightUpdate()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00523">anima::ODFProbabilisticTractographyImageFilter::ComputeModelEstimation()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00395">ComputeOrientationAngle()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00095">ComputeSymmetricPDF()</a>, <a class="el" href="animaVMFDistribution_8hxx_source.html#l00020">ComputeVMFPdf()</a>, <a class="el" href="animaPickLesionSeedImageFilter_8hxx_source.html#l00012">anima::PickLesionSeedImageFilter&lt; TInputImage, TOutputImage &gt;::GenerateData()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00333">Normalize()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00052">anima::ODFProbabilisticTractographyImageFilter::PrepareTractography()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00445">TransformCartesianToSphericalCoordinates()</a>, and <a class="el" href="animaGradientFileReader_8hxx_source.html#l00087">anima::GradientFileReader&lt; GradientType, BValueScalarType &gt;::Update()</a>.</p>
 
 </div>
 </div>
@@ -2792,7 +2801,7 @@ template&lt;class VectorType &gt; </div>
 
 <p>Definition at line <a class="el" href="animaVectorOperations_8hxx_source.html#l00203">203</a> of file <a class="el" href="animaVectorOperations_8hxx_source.html">animaVectorOperations.hxx</a>.</p>
 
-<p>Referenced by <a class="el" href="animaDTIEstimationImageFilter_8hxx_source.html#l00143">anima::DTIEstimationImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00380">ComputeAngle()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00016">ComputeAsymmetricPDF()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00269">ComputeDDICdf()</a>, <a class="el" href="animaDTITractographyImageFilter_8cxx_source.html#l00298">anima::dtiTractographyImageFilter::ComputeFiber()</a>, <a class="el" href="animaDTIProbabilisticTractographyImageFilter_8cxx_source.html#l00197">anima::DTIProbabilisticTractographyImageFilter::ComputeLogWeightUpdate()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00319">ComputeMixtureSymmetricCDF()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00321">ComputeNorm()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00395">ComputeOrientationAngle()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00213">ComputeScalarProduct()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00229">ComputeSymmetricCDF()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00095">ComputeSymmetricPDF()</a>, <a class="el" href="animaVMFDistribution_8hxx_source.html#l00020">ComputeVMFPdf()</a>, <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html#l00048">anima::DDILinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;::EvaluateAtContinuousIndex()</a>, <a class="el" href="animaWatsonDistribution_8hxx_source.html#l00019">EvaluateWatsonPDF()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00218">anima::ODFProbabilisticTractographyImageFilter::InitializeFirstIterationFromModel()</a>, <a class="el" href="animaDTIProbabilisticTractographyImageFilter_8cxx_source.html#l00100">anima::DTIProbabilisticTractographyImageFilter::InitializeFirstIterationFromModel()</a>, <a class="el" href="animaDDIProbabilisticTractographyImageFilter_8cxx_source.html#l00137">anima::DDIProbabilisticTractographyImageFilter::InitializeFirstIterationFromModel()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00495">ProjectOnOrthogonalPlane()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00131">anima::ODFProbabilisticTractographyImageFilter::ProposeNewDirection()</a>, <a class="el" href="animaDTIProbabilisticTractographyImageFilter_8cxx_source.html#l00042">anima::DTIProbabilisticTractographyImageFilter::ProposeNewDirection()</a>, <a class="el" href="animaDDIProbabilisticTractographyImageFilter_8cxx_source.html#l00029">anima::DDIProbabilisticTractographyImageFilter::ProposeNewDirection()</a>, and <a class="el" href="animaDDIModelAveragingImageFilter_8hxx_source.html#l00240">anima::DDIModelAveragingImageFilter&lt; PixelScalarType &gt;::ThreadedGenerateData()</a>.</p>
+<p>Referenced by <a class="el" href="animaDTIEstimationImageFilter_8hxx_source.html#l00084">anima::DTIEstimationImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00380">ComputeAngle()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00016">ComputeAsymmetricPDF()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00269">ComputeDDICdf()</a>, <a class="el" href="animaDTITractographyImageFilter_8cxx_source.html#l00298">anima::dtiTractographyImageFilter::ComputeFiber()</a>, <a class="el" href="animaDTIProbabilisticTractographyImageFilter_8cxx_source.html#l00197">anima::DTIProbabilisticTractographyImageFilter::ComputeLogWeightUpdate()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00319">ComputeMixtureSymmetricCDF()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00321">ComputeNorm()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00395">ComputeOrientationAngle()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00213">ComputeScalarProduct()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00229">ComputeSymmetricCDF()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00095">ComputeSymmetricPDF()</a>, <a class="el" href="animaVMFDistribution_8hxx_source.html#l00020">ComputeVMFPdf()</a>, <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html#l00048">anima::DDILinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;::EvaluateAtContinuousIndex()</a>, <a class="el" href="animaWatsonDistribution_8hxx_source.html#l00019">EvaluateWatsonPDF()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00218">anima::ODFProbabilisticTractographyImageFilter::InitializeFirstIterationFromModel()</a>, <a class="el" href="animaDTIProbabilisticTractographyImageFilter_8cxx_source.html#l00100">anima::DTIProbabilisticTractographyImageFilter::InitializeFirstIterationFromModel()</a>, <a class="el" href="animaDDIProbabilisticTractographyImageFilter_8cxx_source.html#l00137">anima::DDIProbabilisticTractographyImageFilter::InitializeFirstIterationFromModel()</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00495">ProjectOnOrthogonalPlane()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00131">anima::ODFProbabilisticTractographyImageFilter::ProposeNewDirection()</a>, <a class="el" href="animaDTIProbabilisticTractographyImageFilter_8cxx_source.html#l00042">anima::DTIProbabilisticTractographyImageFilter::ProposeNewDirection()</a>, <a class="el" href="animaDDIProbabilisticTractographyImageFilter_8cxx_source.html#l00029">anima::DDIProbabilisticTractographyImageFilter::ProposeNewDirection()</a>, and <a class="el" href="animaDDIModelAveragingImageFilter_8hxx_source.html#l00240">anima::DDIModelAveragingImageFilter&lt; PixelScalarType &gt;::ThreadedGenerateData()</a>.</p>
 
 </div>
 </div>
@@ -4232,7 +4241,7 @@ template&lt;class VectorType &gt; </div>
 
 <p>References <a class="el" href="animaDDIDistribution_8h_source.html#l00051">AIndex</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00042">CompartmentSize</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00050">DIndex</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00049">KappaIndex</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00052">WIndex</a>, and <a class="el" href="animaHyperbolicFunctions_8hxx_source.html#l00029">xi()</a>.</p>
 
-<p>Referenced by <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00237">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>, and <a class="el" href="animaDDIProbabilisticTractographyImageFilter_8cxx_source.html#l00029">anima::DDIProbabilisticTractographyImageFilter::ProposeNewDirection()</a>.</p>
+<p>Referenced by <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00178">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>, and <a class="el" href="animaDDIProbabilisticTractographyImageFilter_8cxx_source.html#l00029">anima::DDIProbabilisticTractographyImageFilter::ProposeNewDirection()</a>.</p>
 
 </div>
 </div>
@@ -4266,7 +4275,29 @@ template&lt;class VectorType &gt; </div>
 
 <p>References <a class="el" href="animaDDIDistribution_8h_source.html#l00051">AIndex</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00042">CompartmentSize</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00050">DIndex</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00049">KappaIndex</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00052">WIndex</a>, and <a class="el" href="animaHyperbolicFunctions_8hxx_source.html#l00029">xi()</a>.</p>
 
-<p>Referenced by <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00237">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>, and <a class="el" href="animaDDIProbabilisticTractographyImageFilter_8cxx_source.html#l00029">anima::DDIProbabilisticTractographyImageFilter::ProposeNewDirection()</a>.</p>
+<p>Referenced by <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00178">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>, and <a class="el" href="animaDDIProbabilisticTractographyImageFilter_8cxx_source.html#l00029">anima::DDIProbabilisticTractographyImageFilter::ProposeNewDirection()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa8bf0c423cb7e2ab7c1b0b66515c8b25"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class InputImageType , class OutputImageType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; itk::SmartPointer &lt;OutputImageType&gt; &gt; anima::getImagesFromHigherDimensionImage </td>
+          <td>(</td>
+          <td class="paramtype">InputImageType *&#160;</td>
+          <td class="paramname"><em>inputImage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a vector of input images from a higher dimensional image. </p>
+
+<p>Definition at line <a class="el" href="animaReadWriteFunctions_8h_source.html#l00042">42</a> of file <a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>.</p>
 
 </div>
 </div>
@@ -4804,7 +4835,7 @@ template&lt;class VectorType &gt; </div>
 
 <p>References <a class="el" href="animaDDIDistribution_8h_source.html#l00051">AIndex</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00042">CompartmentSize</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00050">DIndex</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00049">KappaIndex</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00052">WIndex</a>, and <a class="el" href="animaHyperbolicFunctions_8hxx_source.html#l00029">xi()</a>.</p>
 
-<p>Referenced by <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00237">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>.</p>
+<p>Referenced by <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00178">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>.</p>
 
 </div>
 </div>
@@ -4828,7 +4859,7 @@ template&lt;class VectorType &gt; </div>
 
 <p>References <a class="el" href="animaDDIDistribution_8h_source.html#l00051">AIndex</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00042">CompartmentSize</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00050">DIndex</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00049">KappaIndex</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00052">WIndex</a>, and <a class="el" href="animaHyperbolicFunctions_8hxx_source.html#l00029">xi()</a>.</p>
 
-<p>Referenced by <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00237">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>.</p>
+<p>Referenced by <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00178">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>.</p>
 
 </div>
 </div>
@@ -5724,7 +5755,7 @@ template&lt;class ImageType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaReadWriteFunctions_8h_source.html#l00011">11</a> of file <a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>.</p>
+<p>Definition at line <a class="el" href="animaReadWriteFunctions_8h_source.html#l00012">12</a> of file <a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>.</p>
 
 </div>
 </div>
@@ -6546,6 +6577,38 @@ SampleFromWatsonDistribution(const ScalarType &amp;kappa,
 
 </div>
 </div>
+<a class="anchor" id="a5fa2723feae01b7610ff4288dec4c235"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class InputImageType , class HigherDimImageType , class ImageFilterType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int anima::setMultipleImageFilterInputsFromFileName </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ImageFilterType *&#160;</td>
+          <td class="paramname"><em>filter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set inputs of an image to image filter from a file name containing either a list of files or a higher dimensional image. </p>
+
+<p>Definition at line <a class="el" href="animaReadWriteFunctions_8h_source.html#l00079">79</a> of file <a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a2aa9fd33a6f72b5f65a217c2848432ac"></a>
 <div class="memitem">
 <div class="memproto">
@@ -6804,7 +6867,7 @@ template&lt;class VectorType &gt; </div>
 
 <p>References <a class="el" href="animaVectorOperations_8hxx_source.html#l00321">ComputeNorm()</a>, and <a class="el" href="animaVectorOperations_8hxx_source.html#l00333">Normalize()</a>.</p>
 
-<p>Referenced by <a class="el" href="animaODFEstimatorImageFilter_8hxx_source.html#l00021">anima::ODFEstimatorImageFilter&lt; TInputPixelType, TOutputPixelType &gt;::AddGradientDirection()</a>, <a class="el" href="animaODFEstimatorImageFilter_8hxx_source.html#l00113">anima::ODFEstimatorImageFilter&lt; TInputPixelType, TOutputPixelType &gt;::BeforeThreadedGenerateData()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00301">anima::ODFProbabilisticTractographyImageFilter::ComputeLogWeightUpdate()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00382">anima::ODFProbabilisticTractographyImageFilter::FindODFMaxima()</a>, <a class="el" href="animaODFFunctions_8cxx_source.html#l00018">InitializeSampleDirections()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00052">anima::ODFProbabilisticTractographyImageFilter::PrepareTractography()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00131">anima::ODFProbabilisticTractographyImageFilter::ProposeNewDirection()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00160">anima::DDICostFunction::RandomOrientationInitializationFromDTI()</a>, <a class="el" href="animaDistributionSampling_8hxx_source.html#l00095">SampleFromVMFDistribution()</a>, <a class="el" href="animaDistributionSampling_8hxx_source.html#l00145">SampleFromVMFDistributionNumericallyStable()</a>, <a class="el" href="animaDistributionSampling_8hxx_source.html#l00179">SampleFromWatsonDistribution()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00249">anima::DDICostFunction::SetOrientationsFromSimplerMCM()</a>, and <a class="el" href="animaPyramidalSymmetryBridge_8txx_source.html#l00026">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;::Update()</a>.</p>
+<p>Referenced by <a class="el" href="animaODFEstimatorImageFilter_8hxx_source.html#l00021">anima::ODFEstimatorImageFilter&lt; TInputPixelType, TOutputPixelType &gt;::AddGradientDirection()</a>, <a class="el" href="animaODFEstimatorImageFilter_8hxx_source.html#l00054">anima::ODFEstimatorImageFilter&lt; TInputPixelType, TOutputPixelType &gt;::BeforeThreadedGenerateData()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00301">anima::ODFProbabilisticTractographyImageFilter::ComputeLogWeightUpdate()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00382">anima::ODFProbabilisticTractographyImageFilter::FindODFMaxima()</a>, <a class="el" href="animaODFFunctions_8cxx_source.html#l00018">InitializeSampleDirections()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00052">anima::ODFProbabilisticTractographyImageFilter::PrepareTractography()</a>, <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00131">anima::ODFProbabilisticTractographyImageFilter::ProposeNewDirection()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00160">anima::DDICostFunction::RandomOrientationInitializationFromDTI()</a>, <a class="el" href="animaDistributionSampling_8hxx_source.html#l00095">SampleFromVMFDistribution()</a>, <a class="el" href="animaDistributionSampling_8hxx_source.html#l00145">SampleFromVMFDistributionNumericallyStable()</a>, <a class="el" href="animaDistributionSampling_8hxx_source.html#l00179">SampleFromWatsonDistribution()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00249">anima::DDICostFunction::SetOrientationsFromSimplerMCM()</a>, and <a class="el" href="animaPyramidalSymmetryBridge_8txx_source.html#l00026">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;::Update()</a>.</p>
 
 </div>
 </div>
@@ -6836,7 +6899,7 @@ template&lt;class VectorType &gt; </div>
 
 <p>Definition at line <a class="el" href="animaVectorOperations_8hxx_source.html#l00474">474</a> of file <a class="el" href="animaVectorOperations_8hxx_source.html">animaVectorOperations.hxx</a>.</p>
 
-<p>Referenced by <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00382">anima::ODFProbabilisticTractographyImageFilter::FindODFMaxima()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00315">anima::DDICostFunction::GetValue()</a>, and <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00517">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::ThreadedGenerateData()</a>.</p>
+<p>Referenced by <a class="el" href="animaODFProbabilisticTractographyImageFilter_8cxx_source.html#l00382">anima::ODFProbabilisticTractographyImageFilter::FindODFMaxima()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00315">anima::DDICostFunction::GetValue()</a>, and <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00458">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::ThreadedGenerateData()</a>.</p>
 
 </div>
 </div>
@@ -7002,7 +7065,7 @@ template&lt;class OutputImageType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaReadWriteFunctions_8h_source.html#l00027">27</a> of file <a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>.</p>
+<p>Definition at line <a class="el" href="animaReadWriteFunctions_8h_source.html#l00028">28</a> of file <a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>.</p>
 
 </div>
 </div>
@@ -7024,7 +7087,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="animaHyperbolicFunctions_8hxx_source.html#l00029">29</a> of file <a class="el" href="animaHyperbolicFunctions_8hxx_source.html">animaHyperbolicFunctions.hxx</a>.</p>
 
-<p>Referenced by <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00237">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>, <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html#l00048">anima::DDILinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;::EvaluateAtContinuousIndex()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00199">anima::DDICostFunction::FixedGeometryInitialization()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00363">GetFascicleFA()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00315">anima::DDICostFunction::GetValue()</a>, <a class="el" href="animaGetDDIComponent_8cxx_source.html#l00026">getVectorImage()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00384">GetVoxelFA()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00415">GetWhiteMatterFA()</a>, <a class="el" href="animaGenerateIsoradiusDDISurface_8cxx_source.html#l00010">main()</a>, <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00033">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::KappaUpperBoundSolverCostFunction::operator()()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00265">anima::DDICostFunction::RandomGeometryInitialization()</a>, <a class="el" href="animaDistributionSampling_8hxx_source.html#l00145">SampleFromVMFDistributionNumericallyStable()</a>, and <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00517">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::ThreadedGenerateData()</a>.</p>
+<p>Referenced by <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00178">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>, <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html#l00048">anima::DDILinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;::EvaluateAtContinuousIndex()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00199">anima::DDICostFunction::FixedGeometryInitialization()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00363">GetFascicleFA()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00315">anima::DDICostFunction::GetValue()</a>, <a class="el" href="animaGetDDIComponent_8cxx_source.html#l00026">getVectorImage()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00384">GetVoxelFA()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00415">GetWhiteMatterFA()</a>, <a class="el" href="animaGenerateIsoradiusDDISurface_8cxx_source.html#l00010">main()</a>, <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00033">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::KappaUpperBoundSolverCostFunction::operator()()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00265">anima::DDICostFunction::RandomGeometryInitialization()</a>, <a class="el" href="animaDistributionSampling_8hxx_source.html#l00145">SampleFromVMFDistributionNumericallyStable()</a>, and <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00458">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::ThreadedGenerateData()</a>.</p>
 
 </div>
 </div>
@@ -7046,7 +7109,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="animaHyperbolicFunctions_8hxx_source.html#l00029">29</a> of file <a class="el" href="animaHyperbolicFunctions_8hxx_source.html">animaHyperbolicFunctions.hxx</a>.</p>
 
-<p>Referenced by <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00237">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>, <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html#l00048">anima::DDILinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;::EvaluateAtContinuousIndex()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00199">anima::DDICostFunction::FixedGeometryInitialization()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00363">GetFascicleFA()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00315">anima::DDICostFunction::GetValue()</a>, <a class="el" href="animaGetDDIComponent_8cxx_source.html#l00026">getVectorImage()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00384">GetVoxelFA()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00415">GetWhiteMatterFA()</a>, <a class="el" href="animaGenerateIsoradiusDDISurface_8cxx_source.html#l00010">main()</a>, <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00033">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::KappaUpperBoundSolverCostFunction::operator()()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00265">anima::DDICostFunction::RandomGeometryInitialization()</a>, <a class="el" href="animaDistributionSampling_8hxx_source.html#l00145">SampleFromVMFDistributionNumericallyStable()</a>, and <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00517">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::ThreadedGenerateData()</a>.</p>
+<p>Referenced by <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00178">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::BeforeThreadedGenerateData()</a>, <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html#l00048">anima::DDILinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;::EvaluateAtContinuousIndex()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00199">anima::DDICostFunction::FixedGeometryInitialization()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00363">GetFascicleFA()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00315">anima::DDICostFunction::GetValue()</a>, <a class="el" href="animaGetDDIComponent_8cxx_source.html#l00026">getVectorImage()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00384">GetVoxelFA()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00415">GetWhiteMatterFA()</a>, <a class="el" href="animaGenerateIsoradiusDDISurface_8cxx_source.html#l00010">main()</a>, <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00033">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::KappaUpperBoundSolverCostFunction::operator()()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00265">anima::DDICostFunction::RandomGeometryInitialization()</a>, <a class="el" href="animaDistributionSampling_8hxx_source.html#l00145">SampleFromVMFDistributionNumericallyStable()</a>, and <a class="el" href="animaDDIModelEstimatorImageFilter_8hxx_source.html#l00458">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::ThreadedGenerateData()</a>.</p>
 
 </div>
 </div>
@@ -7073,7 +7136,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="animaDDIDistribution_8h_source.html#l00042">42</a> of file <a class="el" href="animaDDIDistribution_8h_source.html">animaDDIDistribution.h</a>.</p>
 
-<p>Referenced by <a class="el" href="animaDDIDistribution_8hxx_source.html#l00269">ComputeDDICdf()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00183">ComputeDDIPdf()</a>, <a class="el" href="animaDDIModelEstimatorImageFilter_8h_source.html#l00095">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::DDIModelEstimatorImageFilter()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00363">GetFascicleFA()</a>, <a class="el" href="animaGetDDIComponent_8cxx_source.html#l00087">getImage()</a>, <a class="el" href="animaGetDDIComponent_8cxx_source.html#l00026">getVectorImage()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00384">GetVoxelFA()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00415">GetWhiteMatterFA()</a>, <a class="el" href="animaGetDDIComponent_8cxx_source.html#l00195">main()</a>, <a class="el" href="animaFiniteStrainDDIResampleImageFilter_8hxx_source.html#l00023">anima::FiniteStrainDDIResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;::RotateInterpolatedModel()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00249">anima::DDICostFunction::SetOrientationsFromSimplerMCM()</a>, and <a class="el" href="animaFlipDDIDirectionsImageFilter_8hxx_source.html#l00012">anima::FlipDDIDirectionsImageFilter&lt; TInputPixelType &gt;::ThreadedGenerateData()</a>.</p>
+<p>Referenced by <a class="el" href="animaDDIDistribution_8hxx_source.html#l00269">ComputeDDICdf()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00183">ComputeDDIPdf()</a>, <a class="el" href="animaDDIModelEstimatorImageFilter_8h_source.html#l00094">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;::DDIModelEstimatorImageFilter()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00363">GetFascicleFA()</a>, <a class="el" href="animaGetDDIComponent_8cxx_source.html#l00087">getImage()</a>, <a class="el" href="animaGetDDIComponent_8cxx_source.html#l00026">getVectorImage()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00384">GetVoxelFA()</a>, <a class="el" href="animaDDIDistribution_8hxx_source.html#l00415">GetWhiteMatterFA()</a>, <a class="el" href="animaGetDDIComponent_8cxx_source.html#l00195">main()</a>, <a class="el" href="animaFiniteStrainDDIResampleImageFilter_8hxx_source.html#l00023">anima::FiniteStrainDDIResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;::RotateInterpolatedModel()</a>, <a class="el" href="ddiCostFunction_8cxx_source.html#l00249">anima::DDICostFunction::SetOrientationsFromSimplerMCM()</a>, and <a class="el" href="animaFlipDDIDirectionsImageFilter_8hxx_source.html#l00012">anima::FlipDDIDirectionsImageFilter&lt; TInputPixelType &gt;::ThreadedGenerateData()</a>.</p>
 
 </div>
 </div>
@@ -7096,7 +7159,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 5 2015 06:28:55 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 11 2015 06:29:22 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
