@@ -170,9 +170,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionIterator &lt;MaskImageType&gt; MaskIteratorType;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    MaskIteratorType maskItr(this-&gt;GetComputationMask(),outputRegionForThread);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    ImageIteratorType t1MapItr;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    OutImageIteratorType t1MapItr;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (m_T1Map)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        t1MapItr = ImageIteratorType(m_T1Map,outputRegionForThread);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        t1MapItr = OutImageIteratorType(m_T1Map,outputRegionForThread);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// some variables for T2 initialization</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">double</span> sumSquaredEchos = 0;</div>
@@ -274,7 +274,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 11 2015 06:29:21 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 12 2015 06:29:14 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

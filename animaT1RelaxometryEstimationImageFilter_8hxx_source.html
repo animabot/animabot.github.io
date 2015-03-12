@@ -176,9 +176,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    ImageIteratorType firstInputIterator(this-&gt;GetInput(0),outputRegionForThread);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    ImageIteratorType secondInputIterator(this-&gt;GetInput(1),outputRegionForThread);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    ImageIteratorType b1MapItr;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    OutImageIteratorType b1MapItr;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (m_B1Map)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        b1MapItr = ImageIteratorType (m_B1Map,outputRegionForThread);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        b1MapItr = OutImageIteratorType (m_B1Map,outputRegionForThread);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionIterator &lt;MaskImageType&gt; MaskIteratorType;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    MaskIteratorType maskItr(this-&gt;GetComputationMask(),outputRegionForThread);</div>
@@ -269,7 +269,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 11 2015 06:29:21 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 12 2015 06:29:14 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
