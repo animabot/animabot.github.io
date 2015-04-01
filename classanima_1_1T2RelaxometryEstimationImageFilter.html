@@ -194,8 +194,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0766cc4b4601928c8701b3fc803d54af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7127cd6a921887ef29ce2817ad2ac754"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1T2RelaxometryEstimationImageFilter.html#a7127cd6a921887ef29ce2817ad2ac754">SetAverageSignalThreshold</a> (double _arg)</td></tr>
 <tr class="separator:a7127cd6a921887ef29ce2817ad2ac754"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6558601f95eaa032ff6255b8392deeec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1T2RelaxometryEstimationImageFilter.html#a6558601f95eaa032ff6255b8392deeec">SetEchoSpacing</a> (double _arg)</td></tr>
-<tr class="separator:a6558601f95eaa032ff6255b8392deeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2862c07723125f19f68c47bbd65fa849"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1T2RelaxometryEstimationImageFilter.html#a2862c07723125f19f68c47bbd65fa849">SetEchoTime</a> (const std::vector&lt; double &gt; &amp;echoTime)</td></tr>
+<tr class="separator:a2862c07723125f19f68c47bbd65fa849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65393453b25ddc49d577d5c0d87a0c39"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1T2RelaxometryEstimationImageFilter.html#a65393453b25ddc49d577d5c0d87a0c39">SetM0UpperBoundValue</a> (double _arg)</td></tr>
 <tr class="separator:a65393453b25ddc49d577d5c0d87a0c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48880ff2930f0b94dc9960c701c739a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1T2RelaxometryEstimationImageFilter.html#a48880ff2930f0b94dc9960c701c739a5">SetT1Map</a> (<a class="el" href="classanima_1_1T2RelaxometryEstimationImageFilter.html#ac3531dbb490be6ee83fff4cd6394d70e">OutputImageType</a> *map)</td></tr>
@@ -526,7 +526,7 @@ template&lt;typename TInputImage , typename TOutputImage &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classanima_1_1MaskedImageToImageFilter.html#a0699522e410bec271b7dad8998622ab8">anima::MaskedImageToImageFilter&lt; TInputImage, TOutputImage &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="animaT2RelaxometryEstimationImageFilter_8hxx_source.html#l00012">12</a> of file <a class="el" href="animaT2RelaxometryEstimationImageFilter_8hxx_source.html">animaT2RelaxometryEstimationImageFilter.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaT2RelaxometryEstimationImageFilter_8hxx_source.html#l00013">13</a> of file <a class="el" href="animaT2RelaxometryEstimationImageFilter_8hxx_source.html">animaT2RelaxometryEstimationImageFilter.hxx</a>.</p>
 
 </div>
 </div>
@@ -670,7 +670,7 @@ template&lt;typename TInputImage , typename TOutputImage &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a6558601f95eaa032ff6255b8392deeec"></a>
+<a class="anchor" id="a2862c07723125f19f68c47bbd65fa849"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -680,19 +680,22 @@ template&lt;typename TInputImage , typename TOutputImage &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="classanima_1_1T2RelaxometryEstimationImageFilter.html">anima::T2RelaxometryEstimationImageFilter</a>&lt; TInputImage, TOutputImage &gt;::SetEchoSpacing </td>
+          <td class="memname">void <a class="el" href="classanima_1_1T2RelaxometryEstimationImageFilter.html">anima::T2RelaxometryEstimationImageFilter</a>&lt; TInputImage, TOutputImage &gt;::SetEchoTime </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>echoTime</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Setter </p>
+
+<p>Definition at line <a class="el" href="animaT2RelaxometryEstimationImageFilter_8h_source.html#l00041">41</a> of file <a class="el" href="animaT2RelaxometryEstimationImageFilter_8h_source.html">animaT2RelaxometryEstimationImageFilter.h</a>.</p>
 
 </div>
 </div>
@@ -836,7 +839,7 @@ template&lt;typename TInputImage , typename TOutputImage &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaT2RelaxometryEstimationImageFilter_8hxx_source.html#l00060">60</a> of file <a class="el" href="animaT2RelaxometryEstimationImageFilter_8hxx_source.html">animaT2RelaxometryEstimationImageFilter.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaT2RelaxometryEstimationImageFilter_8hxx_source.html#l00061">61</a> of file <a class="el" href="animaT2RelaxometryEstimationImageFilter_8hxx_source.html">animaT2RelaxometryEstimationImageFilter.hxx</a>.</p>
 
 </div>
 </div>
@@ -847,7 +850,7 @@ template&lt;typename TInputImage , typename TOutputImage &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 19 2015 06:29:53 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 1 2015 06:39:30 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

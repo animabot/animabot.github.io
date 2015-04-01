@@ -1,19 +1,18 @@
 <map id="animaCombinedRelaxometryEstimation.cxx" name="animaCombinedRelaxometryEstimation.cxx">
-<area shape="rect" id="node7" href="$animaCombinedRelaxometryEstimationImageFilter_8h.html" title="animaCombinedRelaxometry\lEstimationImageFilter.h" alt="" coords="2560,97,2747,138"/>
-<area shape="rect" id="node47" href="$animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="3285,104,3467,131"/>
-<area shape="rect" id="node8" href="$animaMaskedImageToImageFilter_8h.html" title="animaMaskedImageToImageFilter.h" alt="" coords="1685,376,1912,403"/>
-<area shape="rect" id="node10" href="$animaImageRegionSplitterMask_8h.html" title="animaImageRegionSplitter\lMask.h" alt="" coords="2368,459,2542,501"/>
-<area shape="rect" id="node22" href="$animaCombinedRelaxometryEstimationImageFilter_8hxx.html" title="animaCombinedRelaxometry\lEstimationImageFilter.hxx" alt="" coords="2231,187,2418,229"/>
-<area shape="rect" id="node17" href="$animaMaskedImageToImageFilter_8hxx.html" title="animaMaskedImageToImageFilter.hxx" alt="" coords="1720,557,1960,584"/>
-<area shape="rect" id="node13" href="$animaImageRegionSplitterMask_8hxx.html" title="animaImageRegionSplitter\lMask.hxx" alt="" coords="2488,550,2662,591"/>
-<area shape="rect" id="node24" href="$animaCombinedRelaxometryCostFunction_8h.html" title="animaCombinedRelaxometry\lCostFunction.h" alt="" coords="2742,278,2928,319"/>
-<area shape="rect" id="node25" href="$animaBobyqaOptimizer_8h.html" title="animaBobyqaOptimizer.h" alt="" coords="176,285,340,312"/>
-<area shape="rect" id="node30" href="$animaT1RelaxometryEstimationImageFilter_8h.html" title="animaT1RelaxometryEstimation\lImageFilter.h" alt="" coords="2292,278,2495,319"/>
-<area shape="rect" id="node32" href="$animaT2RelaxometryEstimationImageFilter_8h.html" title="animaT2RelaxometryEstimation\lImageFilter.h" alt="" coords="1836,278,2039,319"/>
-<area shape="rect" id="node35" href="$animaSmoothingRecursiveYvvGaussianImageFilter_8h.html" title="animaSmoothingRecursiveYvv\lGaussianImageFilter.h" alt="" coords="1109,278,1304,319"/>
-<area shape="rect" id="node31" href="$animaT1RelaxometryEstimationImageFilter_8hxx.html" title="animaT1RelaxometryEstimation\lImageFilter.hxx" alt="" coords="2215,369,2418,410"/>
-<area shape="rect" id="node33" href="$animaT2RelaxometryEstimationImageFilter_8hxx.html" title="animaT2RelaxometryEstimation\lImageFilter.hxx" alt="" coords="1938,369,2140,410"/>
-<area shape="rect" id="node36" href="$animaRecursiveLineYvvGaussianImageFilter_8h.html" title="animaRecursiveLineYvvGaussian\lImageFilter.h" alt="" coords="738,369,947,410"/>
-<area shape="rect" id="node44" href="$animaSmoothingRecursiveYvvGaussianImageFilter_8hxx.html" title="animaSmoothingRecursiveYvv\lGaussianImageFilter.hxx" alt="" coords="517,369,712,410"/>
-<area shape="rect" id="node39" href="$animaRecursiveLineYvvGaussianImageFilter_8hxx.html" title="animaRecursiveLineYvvGaussian\lImageFilter.hxx" alt="" coords="694,459,903,501"/>
+<area shape="rect" id="node7" href="$animaCombinedRelaxometryEstimationImageFilter_8h.html" title="animaCombinedRelaxometry\lEstimationImageFilter.h" alt="" coords="1683,97,1869,138"/>
+<area shape="rect" id="node47" href="$animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="2649,104,2831,131"/>
+<area shape="rect" id="node8" href="$animaMaskedImageToImageFilter_8h.html" title="animaMaskedImageToImageFilter.h" alt="" coords="1677,376,1904,403"/>
+<area shape="rect" id="node10" href="$animaImageRegionSplitterMask_8h.html" title="animaImageRegionSplitter\lMask.h" alt="" coords="1959,459,2133,501"/>
+<area shape="rect" id="node22" href="$animaCombinedRelaxometryEstimationImageFilter_8hxx.html" title="animaCombinedRelaxometry\lEstimationImageFilter.hxx" alt="" coords="2053,187,2240,229"/>
+<area shape="rect" id="node17" href="$animaMaskedImageToImageFilter_8hxx.html" title="animaMaskedImageToImageFilter.hxx" alt="" coords="1604,557,1844,584"/>
+<area shape="rect" id="node13" href="$animaImageRegionSplitterMask_8hxx.html" title="animaImageRegionSplitter\lMask.hxx" alt="" coords="2167,550,2341,591"/>
+<area shape="rect" id="node24" href="$animaCombinedRelaxometryCostFunction_8h.html" title="animaCombinedRelaxometry\lCostFunction.h" alt="" coords="355,278,541,319"/>
+<area shape="rect" id="node25" href="$animaBobyqaOptimizer_8h.html" title="animaBobyqaOptimizer.h" alt="" coords="2688,285,2852,312"/>
+<area shape="rect" id="node30" href="$animaT1RelaxometryEstimationImageFilter_8h.html" title="animaT1RelaxometryEstimation\lImageFilter.h" alt="" coords="1675,278,1877,319"/>
+<area shape="rect" id="node33" href="$animaT2RelaxometryEstimationImageFilter_8h.html" title="animaT2RelaxometryEstimation\lImageFilter.h" alt="" coords="1952,278,2155,319"/>
+<area shape="rect" id="node37" href="$animaSmoothingRecursiveYvvGaussianImageFilter_8h.html" title="animaSmoothingRecursiveYvv\lGaussianImageFilter.h" alt="" coords="1187,278,1383,319"/>
+<area shape="rect" id="node31" href="$animaT1RelaxometryEstimationImageFilter_8hxx.html" title="animaT1RelaxometryEstimation\lImageFilter.hxx" alt="" coords="2276,369,2479,410"/>
+<area shape="rect" id="node34" href="$animaT2RelaxometryEstimationImageFilter_8hxx.html" title="animaT2RelaxometryEstimation\lImageFilter.hxx" alt="" coords="2503,369,2705,410"/>
+<area shape="rect" id="node38" href="$animaRecursiveLineYvvGaussianImageFilter_8h.html" title="animaRecursiveLineYvvGaussian\lImageFilter.h" alt="" coords="560,369,769,410"/>
+<area shape="rect" id="node45" href="$animaSmoothingRecursiveYvvGaussianImageFilter_8hxx.html" title="animaSmoothingRecursiveYvv\lGaussianImageFilter.hxx" alt="" coords="1187,369,1383,410"/>
 </map>
