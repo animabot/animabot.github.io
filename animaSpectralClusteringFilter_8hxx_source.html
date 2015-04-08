@@ -207,8 +207,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classanima_1_1SpectralClusteringFilter.html#a8ecfa0269682f1588ccd64b18cc75df9">  110</a></span>&#160;::ComputeSpectralVectors()</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> inputSize = m_InputData.rows();</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="classanima_1_1SpectralClusteringFilter.html#a1bc80b32dba7d43760760a8ac43953db">MatrixType</a> W(inputSize,inputSize);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    std::vector &lt;double&gt; dValues(inputSize);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="classanima_1_1SpectralClusteringFilter.html#a1bc80b32dba7d43760760a8ac43953db">MatrixType</a> W(inputSize,inputSize,0);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    std::vector &lt;double&gt; dValues(inputSize,0);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; inputSize;++i)</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i+1;j &lt; inputSize;++j)</div>
@@ -346,7 +346,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2015 06:30:07 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 8 2015 06:42:28 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

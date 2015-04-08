@@ -1,11 +1,12 @@
 <map id="animaGradientFileReader.hxx" name="animaGradientFileReader.hxx">
-<area shape="rect" id="node2" href="$animaGradientFileReader_8h.html" title="animaGradientFileReader.h" alt="" coords="771,80,949,107"/>
+<area shape="rect" id="node2" href="$animaGradientFileReader_8h.html" title="animaGradientFileReader.h" alt="" coords="901,80,1080,107"/>
 <area shape="rect" id="node3" href="$animaDDIModelEstimator_8cxx.html" title="animaDDIModelEstimator.cxx" alt="" coords="5,163,195,189"/>
-<area shape="rect" id="node4" href="$animaBackgroundNoiseVarianceEstimator_8cxx.html" title="animaBackgroundNoiseVariance\lEstimator.cxx" alt="" coords="220,155,428,197"/>
-<area shape="rect" id="node5" href="$animaDTIEstimator_8cxx.html" title="animaDTIEstimator.cxx" alt="" coords="452,163,605,189"/>
-<area shape="rect" id="node6" href="$animaDTINonCentralChiEstimator_8cxx.html" title="animaDTINonCentralChiEstimator.cxx" alt="" coords="631,163,867,189"/>
-<area shape="rect" id="node7" href="$animaODFEstimator_8cxx.html" title="animaODFEstimator.cxx" alt="" coords="892,163,1051,189"/>
-<area shape="rect" id="node8" href="$animaDDIProbabilisticTractography_8cxx.html" title="animaDDIProbabilisticTractography.cxx" alt="" coords="1075,163,1321,189"/>
-<area shape="rect" id="node9" href="$animaDTIProbabilisticTractography_8cxx.html" title="animaDTIProbabilisticTractography.cxx" alt="" coords="1347,163,1592,189"/>
-<area shape="rect" id="node10" href="$animaODFProbabilisticTractography_8cxx.html" title="animaODFProbabilisticTractography.cxx" alt="" coords="1616,163,1867,189"/>
+<area shape="rect" id="node4" href="$animaDWISimulationFromDDI_8cxx.html" title="animaDWISimulationFromDDI.cxx" alt="" coords="219,163,436,189"/>
+<area shape="rect" id="node5" href="$animaBackgroundNoiseVarianceEstimator_8cxx.html" title="animaBackgroundNoiseVariance\lEstimator.cxx" alt="" coords="461,155,669,197"/>
+<area shape="rect" id="node6" href="$animaDTIEstimator_8cxx.html" title="animaDTIEstimator.cxx" alt="" coords="693,163,847,189"/>
+<area shape="rect" id="node7" href="$animaDTINonCentralChiEstimator_8cxx.html" title="animaDTINonCentralChiEstimator.cxx" alt="" coords="872,163,1108,189"/>
+<area shape="rect" id="node8" href="$animaODFEstimator_8cxx.html" title="animaODFEstimator.cxx" alt="" coords="1133,163,1292,189"/>
+<area shape="rect" id="node9" href="$animaDDIProbabilisticTractography_8cxx.html" title="animaDDIProbabilisticTractography.cxx" alt="" coords="1317,163,1563,189"/>
+<area shape="rect" id="node10" href="$animaDTIProbabilisticTractography_8cxx.html" title="animaDTIProbabilisticTractography.cxx" alt="" coords="1588,163,1833,189"/>
+<area shape="rect" id="node11" href="$animaODFProbabilisticTractography_8cxx.html" title="animaODFProbabilisticTractography.cxx" alt="" coords="1857,163,2108,189"/>
 </map>

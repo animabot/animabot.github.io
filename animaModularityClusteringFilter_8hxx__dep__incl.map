@@ -1,14 +1,6 @@
 <map id="animaModularityClusteringFilter.hxx" name="animaModularityClusteringFilter.hxx">
-<area shape="rect" id="node2" href="$animaModularityClusteringFilter_8h.html" title="animaModularityClustering\lFilter.h" alt="" coords="301,97,475,138"/>
-<area shape="rect" id="node3" href="$animaDDIModelAveragingImageFilter_8hxx.html" title="animaDDIModelAveragingImage\lFilter.hxx" alt="" coords="173,187,379,229"/>
-<area shape="rect" id="node6" href="$animaDDILinearInterpolateImageFunction_8hxx.html" title="animaDDILinearInterpolate\lImageFunction.hxx" alt="" coords="413,187,587,229"/>
-<area shape="rect" id="node4" href="$animaDDIModelAveragingImageFilter_8h.html" title="animaDDIModelAveragingImage\lFilter.h" alt="" coords="169,278,375,319"/>
-<area shape="rect" id="node5" href="$animaDDIModelAveraging_8cxx.html" title="animaDDIModelAveraging.cxx" alt="" coords="49,376,241,403"/>
-<area shape="rect" id="node7" href="$animaDDILinearInterpolateImageFunction_8h.html" title="animaDDILinearInterpolate\lImageFunction.h" alt="" coords="413,278,587,319"/>
-<area shape="rect" id="node8" href="$animaDDIProbabilisticTractographyImageFilter_8h.html" title="animaDDIProbabilisticTractography\lImageFilter.h" alt="" coords="267,369,489,410"/>
-<area shape="rect" id="node11" href="$animaFiniteStrainDDIResampleImageFilter_8hxx.html" title="animaFiniteStrainDDIResample\lImageFilter.hxx" alt="" coords="520,369,723,410"/>
-<area shape="rect" id="node13" href="$animaDDIApplyTransformSerie_8cxx.html" title="animaDDIApplyTransformSerie.cxx" alt="" coords="584,549,805,576"/>
-<area shape="rect" id="node9" href="$animaDDIProbabilisticTractographyImageFilter_8cxx.html" title="animaDDIProbabilisticTractography\lImageFilter.cxx" alt="" coords="5,459,228,501"/>
-<area shape="rect" id="node10" href="$animaDDIProbabilisticTractography_8cxx.html" title="animaDDIProbabilisticTractography.cxx" alt="" coords="253,467,499,493"/>
-<area shape="rect" id="node12" href="$animaFiniteStrainDDIResampleImageFilter_8h.html" title="animaFiniteStrainDDIResample\lImageFilter.h" alt="" coords="524,459,727,501"/>
+<area shape="rect" id="node2" href="$animaModularityClusteringFilter_8h.html" title="animaModularityClustering\lFilter.h" alt="" coords="21,97,195,138"/>
+<area shape="rect" id="node3" href="$animaDDIModelAveragingImageFilter_8hxx.html" title="animaDDIModelAveragingImage\lFilter.hxx" alt="" coords="5,187,211,229"/>
+<area shape="rect" id="node4" href="$animaDDIModelAveragingImageFilter_8h.html" title="animaDDIModelAveragingImage\lFilter.h" alt="" coords="5,278,211,319"/>
+<area shape="rect" id="node5" href="$animaDDIModelAveraging_8cxx.html" title="animaDDIModelAveraging.cxx" alt="" coords="11,368,204,395"/>
 </map>

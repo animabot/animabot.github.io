@@ -169,6 +169,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a06ebc52eec8aea6749aa134bdf0f75dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0a72342e12d101e9882175971d20464"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html#af0a72342e12d101e9882175971d20464">GetNameOfClass</a> () const </td></tr>
 <tr class="separator:af0a72342e12d101e9882175971d20464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58932d477ed03fb75af2a815ecee2a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html#ad58932d477ed03fb75af2a815ecee2a7">SetMethod</a> (int _arg)</td></tr>
+<tr class="separator:ad58932d477ed03fb75af2a815ecee2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a064b2ac681cc3cba5d85745c9c3e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html#a58a064b2ac681cc3cba5d85745c9c3e9">SetNumberOfOutputFascicles</a> (int _arg)</td></tr>
+<tr class="separator:a58a064b2ac681cc3cba5d85745c9c3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31ba07c6fcaa8498ebeaeb70d70712c5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html#a31ba07c6fcaa8498ebeaeb70d70712c5">SetWeightThreshold</a> (double _arg)</td></tr>
 <tr class="separator:a31ba07c6fcaa8498ebeaeb70d70712c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -188,8 +192,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:afb9f3e25c44cc4e1d8b450d0af94c6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad86c6103d3eda4b65df8eb2877bd74ca"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html#ad86c6103d3eda4b65df8eb2877bd74ca">IsInsideBuffer</a> (const <a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html#a72ed7a9c3fe4f6f930baaed6264fd407">ContinuousIndexType</a> &amp;index) const </td></tr>
 <tr class="separator:ad86c6103d3eda4b65df8eb2877bd74ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7c6adbe5d2bf71707355a0ccb847b1c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html#aa7c6adbe5d2bf71707355a0ccb847b1c">isZero</a> (const <a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html#a01ff9f032da36b2f2544873f7a5cba47">PixelType</a> &amp;value) const </td></tr>
-<tr class="separator:aa7c6adbe5d2bf71707355a0ccb847b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f01a54d9684d982069baa2304b5e34f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html#a8f01a54d9684d982069baa2304b5e34f">PrintSelf</a> (std::ostream &amp;os, itk::Indent indent) const </td></tr>
 <tr class="separator:a8f01a54d9684d982069baa2304b5e34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a906864febe83218f1f4f90f8c6151ca4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html#a906864febe83218f1f4f90f8c6151ca4">~DDILinearInterpolateImageFunction</a> ()</td></tr>
@@ -407,7 +409,7 @@ template&lt;class TInputImage , class TCoordRep &gt; </div>
 </div><div class="memdoc">
 <p>Constructor </p>
 
-<p>Definition at line <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html#l00024">24</a> of file <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html">animaDDILinearInterpolateImageFunction.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html#l00022">22</a> of file <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html">animaDDILinearInterpolateImageFunction.hxx</a>.</p>
 
 </div>
 </div>
@@ -434,7 +436,7 @@ template&lt;class TInputImage, class TCoordRep = double&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html#l00058">58</a> of file <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html">animaDDILinearInterpolateImageFunction.h</a>.</p>
+<p>Definition at line <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html#l00060">60</a> of file <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html">animaDDILinearInterpolateImageFunction.h</a>.</p>
 
 </div>
 </div>
@@ -485,9 +487,9 @@ template&lt;class TInputImage , class TCoordRep &gt; </div>
 <p>ImageFunction::IsInsideBuffer() can be used to check bounds before calling the method.</p>
 <p>Evaluate at image index position </p>
 
-<p>Definition at line <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html#l00048">48</a> of file <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html">animaDDILinearInterpolateImageFunction.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html#l00046">46</a> of file <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html">animaDDILinearInterpolateImageFunction.hxx</a>.</p>
 
-<p>References <a class="el" href="animaDDIDistribution_8h_source.html#l00051">anima::AIndex</a>, <a class="el" href="animaVectorOperations_8hxx_source.html#l00203">anima::ComputeScalarProduct()</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00050">anima::DIndex</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00049">anima::KappaIndex</a>, <a class="el" href="animaModularityClusteringFilter_8hxx_source.html#l00043">anima::ModularityClusteringFilter&lt; DataType &gt;::SetInputData()</a>, <a class="el" href="animaDDIDistribution_8h_source.html#l00052">anima::WIndex</a>, and <a class="el" href="animaHyperbolicFunctions_8hxx_source.html#l00029">anima::xi()</a>.</p>
+<p>References <a class="el" href="animaDDIAveragingTools_8hxx_source.html#l00511">anima::ComputeDistanceMatrixBetweenFascicles()</a>, <a class="el" href="animaDDIAveragingTools_8hxx_source.html#l00246">anima::DDIAveraging()</a>, <a class="el" href="animaDDIAveragingTools_8hxx_source.html#l00456">anima::FreeWaterDDIAveraging()</a>, <a class="el" href="animaSpectralClusteringFilter_8h_source.html#l00045">anima::SpectralClusteringFilter&lt; ScalarType &gt;::GetClassesMembership()</a>, <a class="el" href="animaDDIAveragingTools_8hxx_source.html#l00176">anima::RemoveNullFascicles()</a>, <a class="el" href="animaSpectralClusteringFilter_8hxx_source.html#l00047">anima::SpectralClusteringFilter&lt; ScalarType &gt;::SetInputData()</a>, <a class="el" href="animaSpectralClusteringFilter_8h_source.html#l00026">anima::SpectralClusteringFilter&lt; ScalarType &gt;::SetNbClass()</a>, <a class="el" href="animaSpectralClusteringFilter_8h_source.html#l00042">anima::SpectralClusteringFilter&lt; ScalarType &gt;::SetVerbose()</a>, and <a class="el" href="animaSpectralClusteringFilter_8hxx_source.html#l00058">anima::SpectralClusteringFilter&lt; ScalarType &gt;::Update()</a>.</p>
 
 </div>
 </div>
@@ -541,37 +543,9 @@ template&lt;class TInputImage, class TCoordRep = double&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html#l00061">61</a> of file <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html">animaDDILinearInterpolateImageFunction.h</a>.</p>
+<p>Definition at line <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html#l00063">63</a> of file <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html">animaDDILinearInterpolateImageFunction.h</a>.</p>
 
 <p>References <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html#l00033">anima::DDILinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;::ImageDimension</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa7c6adbe5d2bf71707355a0ccb847b1c"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TInputImage, class TCoordRep = double&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html">anima::DDILinearInterpolateImageFunction</a>&lt; TInputImage, TCoordRep &gt;::isZero </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html#a01ff9f032da36b2f2544873f7a5cba47">PixelType</a> &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html#l00075">75</a> of file <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html">animaDDILinearInterpolateImageFunction.h</a>.</p>
 
 </div>
 </div>
@@ -638,7 +612,59 @@ template&lt;class TInputImage , class TCoordRep &gt; </div>
 </div><div class="memdoc">
 <p>PrintSelf </p>
 
-<p>Definition at line <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html#l00035">35</a> of file <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html">animaDDILinearInterpolateImageFunction.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html#l00033">33</a> of file <a class="el" href="animaDDILinearInterpolateImageFunction_8hxx_source.html">animaDDILinearInterpolateImageFunction.hxx</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad58932d477ed03fb75af2a815ecee2a7"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TInputImage, class TCoordRep = double&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html">anima::DDILinearInterpolateImageFunction</a>&lt; TInputImage, TCoordRep &gt;::SetMethod </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58a064b2ac681cc3cba5d85745c9c3e9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TInputImage, class TCoordRep = double&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classanima_1_1DDILinearInterpolateImageFunction.html">anima::DDILinearInterpolateImageFunction</a>&lt; TInputImage, TCoordRep &gt;::SetNumberOfOutputFascicles </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -692,7 +718,7 @@ template&lt;class TInputImage, class TCoordRep = double&gt; </div>
 
 <p>Definition at line <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html#l00033">33</a> of file <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html">animaDDILinearInterpolateImageFunction.h</a>.</p>
 
-<p>Referenced by <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html#l00061">anima::DDILinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;::IsInsideBuffer()</a>.</p>
+<p>Referenced by <a class="el" href="animaDDILinearInterpolateImageFunction_8h_source.html#l00063">anima::DDILinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;::IsInsideBuffer()</a>.</p>
 
 </div>
 </div>
@@ -703,7 +729,7 @@ template&lt;class TInputImage, class TCoordRep = double&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2015 06:30:08 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 8 2015 06:42:30 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

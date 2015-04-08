@@ -1,10 +1,13 @@
 var searchData=
 [
+  ['ddiaverageimagesimagefilter',['DDIAverageImagesImageFilter',['../classanima_1_1DDIAverageImagesImageFilter.html#a9505d52fc80535d1cadff2c74cb8977e',1,'anima::DDIAverageImagesImageFilter']]],
+  ['ddiaveraging',['DDIAveraging',['../namespaceanima.html#ac3c17d4c5ba1b90b1f7615fcffdeb655',1,'anima']]],
   ['ddicostfunction',['DDICostFunction',['../classanima_1_1DDICostFunction.html#ae3ab029878ec418f125c5624fa0f06f3',1,'anima::DDICostFunction']]],
   ['ddilinearinterpolateimagefunction',['DDILinearInterpolateImageFunction',['../classanima_1_1DDILinearInterpolateImageFunction.html#afb9f3e25c44cc4e1d8b450d0af94c6b8',1,'anima::DDILinearInterpolateImageFunction']]],
   ['ddimodelaveragingimagefilter',['DDIModelAveragingImageFilter',['../classanima_1_1DDIModelAveragingImageFilter.html#a3cd8e403c24682fb8ff75566324090f8',1,'anima::DDIModelAveragingImageFilter']]],
   ['ddimodelestimatorimagefilter',['DDIModelEstimatorImageFilter',['../classanima_1_1DDIModelEstimatorImageFilter.html#a12952b4a87f8bb7c9439978a3f9ce6e7',1,'anima::DDIModelEstimatorImageFilter']]],
   ['ddiprobabilistictractographyimagefilter',['DDIProbabilisticTractographyImageFilter',['../classanima_1_1DDIProbabilisticTractographyImageFilter.html#a5ec8a098c79e01ffad3b9a74085665a8',1,'anima::DDIProbabilisticTractographyImageFilter']]],
+  ['dditestaveragingonrealvalueimagefilter',['DDITestAveragingOnRealValueImageFilter',['../classanima_1_1DDITestAveragingOnRealValueImageFilter.html#a25527b0072d17c12e020e550a54da81f',1,'anima::DDITestAveragingOnRealValueImageFilter']]],
   ['defaultvalue0',['DefaultValue0',['../classGenericArguments.html#a8cf45c50c0c8d49371d934dee1fbd1bf',1,'GenericArguments']]],
   ['deleteattribute',['DeleteAttribute',['../classtinyxml2_1_1XMLElement.html#aebd45aa7118964c30b32fe12e944628a',1,'tinyxml2::XMLElement']]],
   ['deletechild',['DeleteChild',['../classtinyxml2_1_1XMLNode.html#a363b6edbd6ebd55f8387d2b89f2b0921',1,'tinyxml2::XMLNode']]],

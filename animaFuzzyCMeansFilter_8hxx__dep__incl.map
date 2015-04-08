@@ -1,5 +1,18 @@
 <map id="animaFuzzyCMeansFilter.hxx" name="animaFuzzyCMeansFilter.hxx">
-<area shape="rect" id="node2" href="$animaFuzzyCMeansFilter_8h.html" title="animaFuzzyCMeansFilter.h" alt="" coords="24,80,200,107"/>
-<area shape="rect" id="node3" href="$animaSpectralClusteringFilter_8hxx.html" title="animaSpectralClusteringFilter.hxx" alt="" coords="5,155,219,181"/>
-<area shape="rect" id="node4" href="$animaSpectralClusteringFilter_8h.html" title="animaSpectralClusteringFilter.h" alt="" coords="11,229,212,256"/>
+<area shape="rect" id="node2" href="$animaFuzzyCMeansFilter_8h.html" title="animaFuzzyCMeansFilter.h" alt="" coords="247,80,423,107"/>
+<area shape="rect" id="node3" href="$animaSpectralClusteringFilter_8hxx.html" title="animaSpectralClusteringFilter.hxx" alt="" coords="228,155,441,181"/>
+<area shape="rect" id="node4" href="$animaSpectralClusteringFilter_8h.html" title="animaSpectralClusteringFilter.h" alt="" coords="234,229,435,256"/>
+<area shape="rect" id="node5" href="$animaDDIAverageImagesImageFilter_8h.html" title="animaDDIAverageImagesImage\lFilter.h" alt="" coords="5,305,208,346"/>
+<area shape="rect" id="node7" href="$animaDDITestAveragingOnRealValueImageFilter_8hxx.html" title="animaDDITestAveragingOnReal\lValueImageFilter.hxx" alt="" coords="233,305,436,346"/>
+<area shape="rect" id="node10" href="$animaDDILinearInterpolateImageFunction_8hxx.html" title="animaDDILinearInterpolate\lImageFunction.hxx" alt="" coords="527,305,701,346"/>
+<area shape="rect" id="node6" href="$animaDDIAverageImages_8cxx.html" title="animaDDIAverageImages.cxx" alt="" coords="11,403,201,429"/>
+<area shape="rect" id="node8" href="$animaDDITestAveragingOnRealValueImageFilter_8h.html" title="animaDDITestAveragingOnReal\lValueImageFilter.h" alt="" coords="229,395,432,437"/>
+<area shape="rect" id="node9" href="$animaDDITestAveragingOnRealValue_8cxx.html" title="animaDDITestAveragingOnReal\lValue.cxx" alt="" coords="162,486,365,527"/>
+<area shape="rect" id="node11" href="$animaDDILinearInterpolateImageFunction_8h.html" title="animaDDILinearInterpolate\lImageFunction.h" alt="" coords="537,395,711,437"/>
+<area shape="rect" id="node12" href="$animaDDIProbabilisticTractographyImageFilter_8h.html" title="animaDDIProbabilisticTractography\lImageFilter.h" alt="" coords="391,486,613,527"/>
+<area shape="rect" id="node15" href="$animaFiniteStrainDDIResampleImageFilter_8hxx.html" title="animaFiniteStrainDDIResample\lImageFilter.hxx" alt="" coords="644,486,847,527"/>
+<area shape="rect" id="node17" href="$animaDDIApplyTransformSerie_8cxx.html" title="animaDDIApplyTransformSerie.cxx" alt="" coords="708,667,929,693"/>
+<area shape="rect" id="node13" href="$animaDDIProbabilisticTractographyImageFilter_8cxx.html" title="animaDDIProbabilisticTractography\lImageFilter.cxx" alt="" coords="129,577,352,618"/>
+<area shape="rect" id="node14" href="$animaDDIProbabilisticTractography_8cxx.html" title="animaDDIProbabilisticTractography.cxx" alt="" coords="377,584,623,611"/>
+<area shape="rect" id="node16" href="$animaFiniteStrainDDIResampleImageFilter_8h.html" title="animaFiniteStrainDDIResample\lImageFilter.h" alt="" coords="648,577,851,618"/>
 </map>
