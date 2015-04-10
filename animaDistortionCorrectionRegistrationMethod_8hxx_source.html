@@ -736,329 +736,328 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    tmpOpt-&gt;SetNumberSamplingPoints(m_BaseTransformsPointers[startBlock]-&gt;GetNumberOfParameters() + 2);</div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <span class="comment">// Maximum sampling of cost function ((Par+1)(Par+2))/2</span></div>
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;    tmpOpt-&gt;SetMaximumIteration(m_OptimizerMaximumIterations);</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;    <span class="keyword">typename</span> InputImageType::SpacingType fixedSpacing = m_BackwardImage-&gt;GetSpacing();</div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    LocalOptimizerType::ScalesType tmpScales(m_BaseTransformsPointers[startBlock]-&gt;GetNumberOfParameters());</div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    LocalOptimizerType::ScalesType lowerBounds(m_BaseTransformsPointers[startBlock]-&gt;GetNumberOfParameters());</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    LocalOptimizerType::ScalesType upperBounds(m_BaseTransformsPointers[startBlock]-&gt;GetNumberOfParameters());</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <span class="comment">// Scale factor to ensure that max translations and skew can be reached</span></div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <span class="comment">// Based on the fact that non diagonal terms log is a = x * log(y) / (exp(y) - 1)</span></div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="comment">// where y is the diagonal scaling factor, x the desired term</span></div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    <span class="keywordtype">double</span> scaleFactor = 1.0;</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    <span class="keywordflow">if</span> ((m_TransformationKind != <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#afd925d64a119671c81c42f09b7507534ab84655226f98204d9d67ebb405d610b2">Direction</a>)&amp;&amp;(m_ScaleMax &gt; 0))</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;        scaleFactor = - m_ScaleMax / (std::exp(- m_ScaleMax) - 1.0);</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    </div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    <span class="keywordflow">switch</span> (m_TransformationKind)</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;    {</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#afd925d64a119671c81c42f09b7507534a27de1ae4e66d2a988d81ac6a136705e7">DirectionScaleSkew</a>:</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;        {</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;            tmpScales[0] = m_SearchRadius / m_SearchScaleRadius;</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;            tmpScales[1] = m_SearchRadius / m_SearchSkewRadius;</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;            tmpScales[2] = m_SearchRadius / m_SearchSkewRadius;</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;            tmpScales[3] = 1.0;</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;</div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;            lowerBounds[0] = - m_ScaleMax;</div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;            upperBounds[0] = m_ScaleMax;</div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;            lowerBounds[1] = - m_SkewMax * scaleFactor;</div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;            upperBounds[1] = m_SkewMax * scaleFactor;</div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;            lowerBounds[2] = - m_SkewMax * scaleFactor;</div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;            upperBounds[2] = m_SkewMax * scaleFactor;</div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;            lowerBounds[3] = - m_TranslateMax * scaleFactor;</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;            upperBounds[3] = m_TranslateMax * scaleFactor;</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        }</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#afd925d64a119671c81c42f09b7507534a44ad9ec44f7a62a416157ca03cae9115">DirectionScale</a>:</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;        {</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;            tmpScales[0] = m_SearchRadius / m_SearchScaleRadius;</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;            tmpScales[1] = 1.0;</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;            lowerBounds[0] = - m_ScaleMax;</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;            upperBounds[0] = m_ScaleMax;</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;            lowerBounds[1] = - m_TranslateMax * scaleFactor;</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            upperBounds[1] = m_TranslateMax * scaleFactor;</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;        }</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;    LocalOptimizerType::ScalesType tmpScales(m_BaseTransformsPointers[startBlock]-&gt;GetNumberOfParameters());</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    LocalOptimizerType::ScalesType lowerBounds(m_BaseTransformsPointers[startBlock]-&gt;GetNumberOfParameters());</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    LocalOptimizerType::ScalesType upperBounds(m_BaseTransformsPointers[startBlock]-&gt;GetNumberOfParameters());</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    <span class="comment">// Scale factor to ensure that max translations and skew can be reached</span></div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <span class="comment">// Based on the fact that non diagonal terms log is a = x * log(y) / (exp(y) - 1)</span></div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <span class="comment">// where y is the diagonal scaling factor, x the desired term</span></div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="keywordtype">double</span> scaleFactor = 1.0;</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    <span class="keywordflow">if</span> ((m_TransformationKind != <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#afd925d64a119671c81c42f09b7507534ab84655226f98204d9d67ebb405d610b2">Direction</a>)&amp;&amp;(m_ScaleMax &gt; 0))</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;        scaleFactor = - m_ScaleMax / (std::exp(- m_ScaleMax) - 1.0);</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    </div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <span class="keywordflow">switch</span> (m_TransformationKind)</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    {</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#afd925d64a119671c81c42f09b7507534a27de1ae4e66d2a988d81ac6a136705e7">DirectionScaleSkew</a>:</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        {</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;            tmpScales[0] = m_SearchRadius / m_SearchScaleRadius;</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;            tmpScales[1] = m_SearchRadius / m_SearchSkewRadius;</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;            tmpScales[2] = m_SearchRadius / m_SearchSkewRadius;</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;            tmpScales[3] = 1.0;</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;            lowerBounds[0] = - m_ScaleMax;</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;            upperBounds[0] = m_ScaleMax;</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;            lowerBounds[1] = - m_SkewMax * scaleFactor;</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;            upperBounds[1] = m_SkewMax * scaleFactor;</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;            lowerBounds[2] = - m_SkewMax * scaleFactor;</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;            upperBounds[2] = m_SkewMax * scaleFactor;</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;            lowerBounds[3] = - m_TranslateMax * scaleFactor;</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;            upperBounds[3] = m_TranslateMax * scaleFactor;</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        }</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#afd925d64a119671c81c42f09b7507534a44ad9ec44f7a62a416157ca03cae9115">DirectionScale</a>:</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;        {</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;            tmpScales[0] = m_SearchRadius / m_SearchScaleRadius;</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;            tmpScales[1] = 1.0;</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;            lowerBounds[0] = - m_ScaleMax;</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;            upperBounds[0] = m_ScaleMax;</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;            lowerBounds[1] = - m_TranslateMax * scaleFactor;</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;            upperBounds[1] = m_TranslateMax * scaleFactor;</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        }</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;</div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;</div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#afd925d64a119671c81c42f09b7507534ab84655226f98204d9d67ebb405d610b2">Direction</a>:</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        {</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;            tmpScales[0] = 1.0;</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;            lowerBounds[0] = - m_TranslateMax;</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;            upperBounds[0] = m_TranslateMax;</div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;        }</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    }</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    tmpOpt-&gt;SetScales(tmpScales);</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    tmpOpt-&gt;SetLowerBounds(lowerBounds);</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    tmpOpt-&gt;SetUpperBounds(upperBounds);</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    tmpOpt-&gt;SetMaximize(m_MaximiseMetric);</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    metric-&gt;ComputeGradientOff();</div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;}</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af7b23ec6eec3f81da63c38ee45dc8650">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
-<div class="line"><a name="l00723"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af7b23ec6eec3f81da63c38ee45dc8650">  723</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af7b23ec6eec3f81da63c38ee45dc8650">::BlockMatch</a>(<span class="keywordtype">unsigned</span> threadId, <span class="keywordtype">unsigned</span> NbThreads, <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a24439a5e1983ef84fba5bc3bd8165657">InputImageType</a> *fixedImage,</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;             <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a24439a5e1983ef84fba5bc3bd8165657">InputImageType</a> *movingImage)</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;{</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;    <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a1820784c405857d2203e4233937bb08f">InterpolatorPointer</a> interpolator;</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;    <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a3bdeea3dd27a013196e1a33c0c3f8e1f">MetricPointer</a>       metric;</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#affa4d9cc2880ec62f665b148492a785f">OptimizerPointer</a>    optimizer;</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;    <span class="keywordtype">unsigned</span> totalRegionSize = m_BlockRegions.size();</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    <span class="keywordtype">unsigned</span> step = totalRegionSize / NbThreads;</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    <span class="keywordtype">unsigned</span> startBlock = threadId*step;</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;    <span class="keywordtype">unsigned</span> endBlock = (1+threadId)*step;</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    <span class="keywordflow">if</span> (threadId+1==NbThreads) <span class="comment">// Ensure we got up to the last block</span></div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;        endBlock = totalRegionSize;</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    setUpParameters(interpolator, metric, optimizer, startBlock, endBlock);</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    metric-&gt;SetFixedImage(fixedImage);</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    metric-&gt;SetMovingImage(movingImage);</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    <span class="keywordflow">if</span> (GetDebug())</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;    {</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;        <a class="code" href="classCommandIterationUpdate.html#a07d09836044e93fd8693d947d77a58a5">CommandIterationUpdate::Pointer</a> observer = <a class="code" href="classCommandIterationUpdate.html#aa26c44791961c86d7a8d51cc1e53293d">CommandIterationUpdate::New</a>();</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;        optimizer-&gt;AddObserver( itk::IterationEvent(), observer );</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    }</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;    itkDebugMacro(&lt;&lt;<span class="stringliteral">&quot;Threaded Block Match &quot;</span> &lt;&lt; threadId &lt;&lt; <span class="stringliteral">&quot; / &quot;</span> &lt;&lt; NbThreads &lt;&lt; <span class="stringliteral">&quot; starting @ &quot;</span> &lt;&lt; startBlock &lt;&lt; <span class="stringliteral">&quot; up to &quot;</span> &lt;&lt; endBlock );</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <span class="comment">// Loop over the desired blocks</span></div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    <span class="keyword">typename</span> BaseInputTransformType::Pointer realTransform;</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> block = startBlock; block &lt; endBlock; ++block)</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    {</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;        metric-&gt;SetFixedImageRegion(m_BlockRegions[block]);</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;        metric-&gt;SetTransform(m_BaseTransformsPointers[block]);</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;        metric-&gt;Initialize();</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        optimizer-&gt;SetCostFunction(metric);</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;        optimizer-&gt;SetInitialPosition(m_InitialTransformParameters);</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;        <span class="keywordflow">if</span> (m_MetricKind != <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9">MeanSquares</a>)</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;            ((<a class="code" href="classanima_1_1FastCorrelationImageToImageMetric.html">anima::FastCorrelationImageToImageMetric&lt;TInputImage, TInputImage&gt;</a> *)metric.GetPointer())-&gt;PreComputeFixedValues();</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;            ((<a class="code" href="classanima_1_1FastMeanSquaresImageToImageMetric.html">anima::FastMeanSquaresImageToImageMetric&lt;TInputImage, TInputImage&gt;</a> *)metric.GetPointer())-&gt;PreComputeFixedValues();</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;        {</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;            optimizer-&gt;StartOptimization();</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;        }</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;        <span class="keywordflow">catch</span>( itk::ExceptionObject &amp; err )</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;        {</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;ExceptionObject caught Image Block Match! &quot;</span> &lt;&lt; err &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;            m_BlockWeights[block] = 0;</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        }</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;        m_BaseTransformsPointers[block]-&gt;SetParameters( optimizer-&gt;GetCurrentPosition() );</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        <span class="keywordflow">if</span> (m_WeightedAgregation &amp;&amp; (m_MetricKind != <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9">MeanSquares</a>))</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;        {</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;            <span class="keywordtype">double</span> val = ((<a class="code" href="classanima_1_1BobyqaOptimizer.html">anima::BobyqaOptimizer</a> *)optimizer.GetPointer())-&gt;GetValue();</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;            m_BlockWeights[block] = (val &gt;= 0) ? val : -val;</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;        }</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;            m_BlockWeights[block] = 1;</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        m_BlockWeights[block] *= this-&gt;ComputeDirectionFilterBlockWeightUpdate(fixedImage,m_BlockRegions[block]);</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        m_BlockWeights[block] = std::pow(m_BlockWeights[block],1/2.0);</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        itkDebugMacro(&lt;&lt;  m_BaseTransformsPointers[block]-&gt;GetParameters() &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; m_BlockWeights[block] &lt;&lt; std::endl);</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    }</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;}</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;<span class="keywordtype">double</span></div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a972d8f21e587f23c6ff92c536f8a0875">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
-<div class="line"><a name="l00798"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a972d8f21e587f23c6ff92c536f8a0875">  798</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a972d8f21e587f23c6ff92c536f8a0875">::ComputeDirectionFilterBlockWeightUpdate</a>(<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a24439a5e1983ef84fba5bc3bd8165657">InputImageType</a> *fixedImage, <span class="keyword">const</span> <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a2a95cd639317190273d363e9b4a29abd">ImageRegionType</a> &amp;region)</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;{</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;    std::vector &lt;double&gt; localGradient(TInputImage::ImageDimension,0);</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;    itk::ImageRegionConstIterator &lt;InputImageType&gt; fixedItr(fixedImage,region);</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;    <span class="keyword">typename</span> ImageRegionType::IndexType currentIndex, modifiedIndex;</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;    <span class="keyword">typename</span> InputImageType::DirectionType orientationMatrix = fixedImage-&gt;GetDirection();</div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;    <span class="keyword">typename</span> InputImageType::SpacingType imageSpacing = fixedImage-&gt;GetSpacing();</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;    <span class="keyword">typename</span> InputImageType::SizeType imageSize = fixedImage-&gt;GetLargestPossibleRegion().GetSize();</div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    std::vector &lt;double&gt; correctionDirection(TInputImage::ImageDimension);</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TInputImage::ImageDimension;++i)</div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;        correctionDirection[i] = fixedImage-&gt;GetDirection()(i,m_TransformDirection);</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    vnl_matrix &lt;double&gt; meanStructureTensor(TInputImage::ImageDimension,TInputImage::ImageDimension);</div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;    meanStructureTensor.fill(0);</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;    <span class="keywordflow">while</span> (!fixedItr.IsAtEnd())</div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;    {</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;        currentIndex = fixedItr.GetIndex();</div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;        std::fill(localGradient.begin(),localGradient.end(),0);</div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TInputImage::ImageDimension;++i)</div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;        {</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;            modifiedIndex = currentIndex;</div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;            modifiedIndex[i] = std::max(0,(<span class="keywordtype">int</span>)(currentIndex[i] - 1));</div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;            <span class="keywordtype">double</span> previousValue = fixedImage-&gt;GetPixel(modifiedIndex);</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;            modifiedIndex[i] = std::min((<span class="keywordtype">int</span>)(imageSize[i] - 1),(<span class="keywordtype">int</span>)(currentIndex[i] + 1));</div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;            <span class="keywordtype">double</span> postValue = fixedImage-&gt;GetPixel(modifiedIndex);</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;</div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; TInputImage::ImageDimension;++j)</div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;                localGradient[j] += (postValue - previousValue) * orientationMatrix(j,i) / (2.0 * imageSpacing[i]);</div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;        }</div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;</div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TInputImage::ImageDimension;++i)</div>
-<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i;j &lt; TInputImage::ImageDimension;++j)</div>
-<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;            {</div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;                meanStructureTensor(i,j) += localGradient[i] * localGradient[j];</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;                <span class="keywordflow">if</span> (j != i)</div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;                    meanStructureTensor(j,i) = meanStructureTensor(i,j);</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;            }</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        ++fixedItr;</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    }</div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;</div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    meanStructureTensor /= region.GetNumberOfPixels();</div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;    itk::SymmetricEigenAnalysis &lt; vnl_matrix &lt;double&gt;, vnl_diag_matrix&lt;double&gt;, vnl_matrix &lt;double&gt; &gt; eigenComputer(TInputImage::ImageDimension);</div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;    vnl_matrix &lt;double&gt; eVec(TInputImage::ImageDimension,TInputImage::ImageDimension);</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;    vnl_diag_matrix &lt;double&gt; eVals(TInputImage::ImageDimension);</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;    eigenComputer.ComputeEigenValuesAndVectors(meanStructureTensor, eVals, eVec);</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;    <span class="keywordtype">double</span> linearCoef = (eVals[TInputImage::ImageDimension - 1] - eVals[TInputImage::ImageDimension - 2]) / eVals[TInputImage::ImageDimension - 1];</div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;</div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;    <span class="keywordtype">double</span> scalarProduct = 0;</div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TInputImage::ImageDimension;++i)</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;        scalarProduct += eVec[TInputImage::ImageDimension - 1][i] * correctionDirection[i];</div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;    <span class="keywordflow">return</span> linearCoef * std::abs(scalarProduct);</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;    <span class="comment">//return std::abs(scalarProduct);</span></div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;}</div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;</div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#ab3a80b57249b5693d5feec7562a91d79">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
-<div class="line"><a name="l00866"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#ab3a80b57249b5693d5feec7562a91d79">  866</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#ab3a80b57249b5693d5feec7562a91d79">::PrintSelf</a>(std::ostream&amp; os, itk::Indent indent)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    Superclass::PrintSelf( os, indent );</div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Backward Image: &quot;</span> &lt;&lt; m_BackwardImage.GetPointer() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Forward Image: &quot;</span> &lt;&lt; m_ForwardImage.GetPointer() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;</div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Search Radius: &quot;</span> &lt;&lt; m_SearchRadius &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Final Radius: &quot;</span> &lt;&lt; m_FinalRadius &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Step Size : &quot;</span> &lt;&lt; m_StepSize &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Weighted Agregation : &quot;</span> &lt;&lt; m_WeightedAgregation &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Maximum Iterations: &quot;</span> &lt;&lt; m_MaximumIterations &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;</div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Optimizer Maximum Iterations: &quot;</span> &lt;&lt; m_OptimizerMaximumIterations &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Initial Transform Parameters: &quot;</span> &lt;&lt; m_InitialTransformParameters &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Last    Transform Parameters: &quot;</span> &lt;&lt; m_LastTransformParameters &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;}</div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;</div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;<span class="comment">     * Generate Data</span></div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a74730d1553068787f342bc71de6bdc91">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
-<div class="line"><a name="l00892"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a74730d1553068787f342bc71de6bdc91">  892</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a74730d1553068787f342bc71de6bdc91">::GenerateData</a>()</div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;{</div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    m_Abort = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;</div>
-<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;    <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a8136e641b4cfb2abd5936ff014c69421">ParametersType</a> empty(1);</div>
-<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    empty.Fill( 0.0 );</div>
-<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;    <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;    {</div>
-<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;        <span class="comment">// initialize the interconnects between components</span></div>
-<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;        this-&gt;Initialize();</div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;</div>
-<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;    }</div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    <span class="keywordflow">catch</span>( itk::ExceptionObject&amp; err )</div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;    {</div>
-<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        m_LastTransformParameters = empty;</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;</div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        <span class="comment">// pass exception to caller</span></div>
-<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;        <span class="keywordflow">throw</span> err;</div>
-<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;    }</div>
-<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;</div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;    this-&gt;StartOptimization();</div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;}</div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;</div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;<span class="keyword">typename</span> <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#aadaf848d466b86384876d6bc806fa279">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;::TransformOutputType</a> *</div>
-<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a7facce6d8bc3331ccf025f5c79d79f4d">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
-<div class="line"><a name="l00921"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a7facce6d8bc3331ccf025f5c79d79f4d">  921</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a7facce6d8bc3331ccf025f5c79d79f4d">::GetOutput</a>()</div>
-<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;{</div>
-<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span> <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#aadaf848d466b86384876d6bc806fa279">TransformOutputType</a> * <span class="keyword">&gt;</span>( this-&gt;ProcessObject::GetOutput(0) );</div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;}</div>
-<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;</div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
-<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;itk::DataObject::Pointer</div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a83961d6cf2be135f4052fbcdf38f3943">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
-<div class="line"><a name="l00929"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a83961d6cf2be135f4052fbcdf38f3943">  929</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a83961d6cf2be135f4052fbcdf38f3943">::MakeOutput</a>(<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a2c025f7a4badc3b2eedab824c84f8fa8">DataObjectPointerArraySizeType</a> output)</div>
-<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;{</div>
-<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    <span class="keywordflow">switch</span> (output)</div>
-<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;    {</div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;        <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>itk::DataObject*<span class="keyword">&gt;</span>(TransformOutputType::New().GetPointer());</div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;            itkExceptionMacro(<span class="stringliteral">&quot;MakeOutput request for an output number larger than the expected number of outputs&quot;</span>);</div>
-<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;    }</div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;}</div>
-<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;</div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
-<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a3f5f75bfa8f162b105665f881d1fa66a">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
-<div class="line"><a name="l00945"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a3f5f75bfa8f162b105665f881d1fa66a">  945</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a3f5f75bfa8f162b105665f881d1fa66a">::SetBackwardImage</a>( <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a24439a5e1983ef84fba5bc3bd8165657">InputImageType</a> * backwardImage )</div>
-<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;{</div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;    itkDebugMacro(<span class="stringliteral">&quot;setting backward Image to &quot;</span> &lt;&lt; backwardImage );</div>
-<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;</div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;    <span class="keywordflow">if</span> (this-&gt;m_BackwardImage.GetPointer() != backwardImage )</div>
-<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;    {</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;        this-&gt;m_BackwardImage = backwardImage;</div>
-<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;        this-&gt;m_BackwardImage-&gt;DisconnectPipeline();</div>
-<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;</div>
-<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;        this-&gt;Modified();</div>
-<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;    }</div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;}</div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;</div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
-<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af5d0fe7f14d31e3aa45cb2cfc509283a">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
-<div class="line"><a name="l00961"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af5d0fe7f14d31e3aa45cb2cfc509283a">  961</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af5d0fe7f14d31e3aa45cb2cfc509283a">::SetForwardImage</a>( <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a24439a5e1983ef84fba5bc3bd8165657">InputImageType</a> * forwardImage )</div>
-<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;{</div>
-<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;    itkDebugMacro(<span class="stringliteral">&quot;setting forward Image to &quot;</span> &lt;&lt; forwardImage );</div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;    <span class="keywordflow">if</span> (this-&gt;m_ForwardImage.GetPointer() != forwardImage )</div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;    {</div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;        this-&gt;m_ForwardImage = forwardImage;</div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;        this-&gt;m_ForwardImage-&gt;DisconnectPipeline();</div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;</div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;        this-&gt;Modified();</div>
-<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;    }</div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;}</div>
-<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;</div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
-<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;<span class="keyword">const</span> std::string</div>
-<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a06f54a86b416c76e7724074d40803375">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
-<div class="line"><a name="l00977"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a06f54a86b416c76e7724074d40803375">  977</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a06f54a86b416c76e7724074d40803375">::GetStopConditionDescription</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;    <span class="keywordflow">return</span> m_StopConditionDescription.str();</div>
-<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;}</div>
-<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;</div>
-<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;} <span class="comment">// end namespace anima</span></div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#afd925d64a119671c81c42f09b7507534ab84655226f98204d9d67ebb405d610b2">Direction</a>:</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        {</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;            tmpScales[0] = 1.0;</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;            lowerBounds[0] = - m_TranslateMax;</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;            upperBounds[0] = m_TranslateMax;</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        }</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    }</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    tmpOpt-&gt;SetScales(tmpScales);</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    tmpOpt-&gt;SetLowerBounds(lowerBounds);</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    tmpOpt-&gt;SetUpperBounds(upperBounds);</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    tmpOpt-&gt;SetMaximize(m_MaximiseMetric);</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    metric-&gt;ComputeGradientOff();</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;}</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af7b23ec6eec3f81da63c38ee45dc8650">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
+<div class="line"><a name="l00722"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af7b23ec6eec3f81da63c38ee45dc8650">  722</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af7b23ec6eec3f81da63c38ee45dc8650">::BlockMatch</a>(<span class="keywordtype">unsigned</span> threadId, <span class="keywordtype">unsigned</span> NbThreads, <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a24439a5e1983ef84fba5bc3bd8165657">InputImageType</a> *fixedImage,</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;             <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a24439a5e1983ef84fba5bc3bd8165657">InputImageType</a> *movingImage)</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;{</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;    <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a1820784c405857d2203e4233937bb08f">InterpolatorPointer</a> interpolator;</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;    <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a3bdeea3dd27a013196e1a33c0c3f8e1f">MetricPointer</a>       metric;</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;    <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#affa4d9cc2880ec62f665b148492a785f">OptimizerPointer</a>    optimizer;</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    <span class="keywordtype">unsigned</span> totalRegionSize = m_BlockRegions.size();</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;    <span class="keywordtype">unsigned</span> step = totalRegionSize / NbThreads;</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    <span class="keywordtype">unsigned</span> startBlock = threadId*step;</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    <span class="keywordtype">unsigned</span> endBlock = (1+threadId)*step;</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordflow">if</span> (threadId+1==NbThreads) <span class="comment">// Ensure we got up to the last block</span></div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        endBlock = totalRegionSize;</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    setUpParameters(interpolator, metric, optimizer, startBlock, endBlock);</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    metric-&gt;SetFixedImage(fixedImage);</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    metric-&gt;SetMovingImage(movingImage);</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    <span class="keywordflow">if</span> (GetDebug())</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    {</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        <a class="code" href="classCommandIterationUpdate.html#a07d09836044e93fd8693d947d77a58a5">CommandIterationUpdate::Pointer</a> observer = <a class="code" href="classCommandIterationUpdate.html#aa26c44791961c86d7a8d51cc1e53293d">CommandIterationUpdate::New</a>();</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;        optimizer-&gt;AddObserver( itk::IterationEvent(), observer );</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    }</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    itkDebugMacro(&lt;&lt;<span class="stringliteral">&quot;Threaded Block Match &quot;</span> &lt;&lt; threadId &lt;&lt; <span class="stringliteral">&quot; / &quot;</span> &lt;&lt; NbThreads &lt;&lt; <span class="stringliteral">&quot; starting @ &quot;</span> &lt;&lt; startBlock &lt;&lt; <span class="stringliteral">&quot; up to &quot;</span> &lt;&lt; endBlock );</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    <span class="comment">// Loop over the desired blocks</span></div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <span class="keyword">typename</span> BaseInputTransformType::Pointer realTransform;</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> block = startBlock; block &lt; endBlock; ++block)</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;    {</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;        metric-&gt;SetFixedImageRegion(m_BlockRegions[block]);</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;        metric-&gt;SetTransform(m_BaseTransformsPointers[block]);</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;        metric-&gt;Initialize();</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        optimizer-&gt;SetCostFunction(metric);</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        optimizer-&gt;SetInitialPosition(m_InitialTransformParameters);</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;        <span class="keywordflow">if</span> (m_MetricKind != <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9">MeanSquares</a>)</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;            ((<a class="code" href="classanima_1_1FastCorrelationImageToImageMetric.html">anima::FastCorrelationImageToImageMetric&lt;TInputImage, TInputImage&gt;</a> *)metric.GetPointer())-&gt;PreComputeFixedValues();</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;            ((<a class="code" href="classanima_1_1FastMeanSquaresImageToImageMetric.html">anima::FastMeanSquaresImageToImageMetric&lt;TInputImage, TInputImage&gt;</a> *)metric.GetPointer())-&gt;PreComputeFixedValues();</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;        {</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;            optimizer-&gt;StartOptimization();</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;        }</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;        <span class="keywordflow">catch</span>( itk::ExceptionObject &amp; err )</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;        {</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;ExceptionObject caught Image Block Match! &quot;</span> &lt;&lt; err &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;            m_BlockWeights[block] = 0;</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        }</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;        m_BaseTransformsPointers[block]-&gt;SetParameters( optimizer-&gt;GetCurrentPosition() );</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;        <span class="keywordflow">if</span> (m_WeightedAgregation &amp;&amp; (m_MetricKind != <a class="code" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9">MeanSquares</a>))</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        {</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;            <span class="keywordtype">double</span> val = ((<a class="code" href="classanima_1_1BobyqaOptimizer.html">anima::BobyqaOptimizer</a> *)optimizer.GetPointer())-&gt;GetValue();</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;            m_BlockWeights[block] = (val &gt;= 0) ? val : -val;</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;        }</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;            m_BlockWeights[block] = 1;</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        m_BlockWeights[block] *= this-&gt;ComputeDirectionFilterBlockWeightUpdate(fixedImage,m_BlockRegions[block]);</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        m_BlockWeights[block] = std::pow(m_BlockWeights[block],1/2.0);</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        itkDebugMacro(&lt;&lt;  m_BaseTransformsPointers[block]-&gt;GetParameters() &lt;&lt; <span class="stringliteral">&quot;  &quot;</span> &lt;&lt; m_BlockWeights[block] &lt;&lt; std::endl);</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    }</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;}</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;<span class="keywordtype">double</span></div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a972d8f21e587f23c6ff92c536f8a0875">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
+<div class="line"><a name="l00797"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a972d8f21e587f23c6ff92c536f8a0875">  797</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a972d8f21e587f23c6ff92c536f8a0875">::ComputeDirectionFilterBlockWeightUpdate</a>(<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a24439a5e1983ef84fba5bc3bd8165657">InputImageType</a> *fixedImage, <span class="keyword">const</span> <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a2a95cd639317190273d363e9b4a29abd">ImageRegionType</a> &amp;region)</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;{</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;    std::vector &lt;double&gt; localGradient(TInputImage::ImageDimension,0);</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;    itk::ImageRegionConstIterator &lt;InputImageType&gt; fixedItr(fixedImage,region);</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;    <span class="keyword">typename</span> ImageRegionType::IndexType currentIndex, modifiedIndex;</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;    <span class="keyword">typename</span> InputImageType::DirectionType orientationMatrix = fixedImage-&gt;GetDirection();</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;    <span class="keyword">typename</span> InputImageType::SpacingType imageSpacing = fixedImage-&gt;GetSpacing();</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;    <span class="keyword">typename</span> InputImageType::SizeType imageSize = fixedImage-&gt;GetLargestPossibleRegion().GetSize();</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;    std::vector &lt;double&gt; correctionDirection(TInputImage::ImageDimension);</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TInputImage::ImageDimension;++i)</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;        correctionDirection[i] = fixedImage-&gt;GetDirection()(i,m_TransformDirection);</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    vnl_matrix &lt;double&gt; meanStructureTensor(TInputImage::ImageDimension,TInputImage::ImageDimension);</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    meanStructureTensor.fill(0);</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;    <span class="keywordflow">while</span> (!fixedItr.IsAtEnd())</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;    {</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        currentIndex = fixedItr.GetIndex();</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;        std::fill(localGradient.begin(),localGradient.end(),0);</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TInputImage::ImageDimension;++i)</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        {</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;            modifiedIndex = currentIndex;</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;            modifiedIndex[i] = std::max(0,(<span class="keywordtype">int</span>)(currentIndex[i] - 1));</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;            <span class="keywordtype">double</span> previousValue = fixedImage-&gt;GetPixel(modifiedIndex);</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;            modifiedIndex[i] = std::min((<span class="keywordtype">int</span>)(imageSize[i] - 1),(<span class="keywordtype">int</span>)(currentIndex[i] + 1));</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;            <span class="keywordtype">double</span> postValue = fixedImage-&gt;GetPixel(modifiedIndex);</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0;j &lt; TInputImage::ImageDimension;++j)</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;                localGradient[j] += (postValue - previousValue) * orientationMatrix(j,i) / (2.0 * imageSpacing[i]);</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;        }</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TInputImage::ImageDimension;++i)</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i;j &lt; TInputImage::ImageDimension;++j)</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;            {</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;                meanStructureTensor(i,j) += localGradient[i] * localGradient[j];</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;                <span class="keywordflow">if</span> (j != i)</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;                    meanStructureTensor(j,i) = meanStructureTensor(i,j);</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;            }</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        ++fixedItr;</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;    }</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    meanStructureTensor /= region.GetNumberOfPixels();</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;    itk::SymmetricEigenAnalysis &lt; vnl_matrix &lt;double&gt;, vnl_diag_matrix&lt;double&gt;, vnl_matrix &lt;double&gt; &gt; eigenComputer(TInputImage::ImageDimension);</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;    vnl_matrix &lt;double&gt; eVec(TInputImage::ImageDimension,TInputImage::ImageDimension);</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;    vnl_diag_matrix &lt;double&gt; eVals(TInputImage::ImageDimension);</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;    eigenComputer.ComputeEigenValuesAndVectors(meanStructureTensor, eVals, eVec);</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;    <span class="keywordtype">double</span> linearCoef = (eVals[TInputImage::ImageDimension - 1] - eVals[TInputImage::ImageDimension - 2]) / eVals[TInputImage::ImageDimension - 1];</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;    <span class="keywordtype">double</span> scalarProduct = 0;</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; TInputImage::ImageDimension;++i)</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        scalarProduct += eVec[TInputImage::ImageDimension - 1][i] * correctionDirection[i];</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;    <span class="keywordflow">return</span> linearCoef * std::abs(scalarProduct);</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;    <span class="comment">//return std::abs(scalarProduct);</span></div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;}</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#ab3a80b57249b5693d5feec7562a91d79">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
+<div class="line"><a name="l00865"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#ab3a80b57249b5693d5feec7562a91d79">  865</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#ab3a80b57249b5693d5feec7562a91d79">::PrintSelf</a>(std::ostream&amp; os, itk::Indent indent)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;    Superclass::PrintSelf( os, indent );</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Backward Image: &quot;</span> &lt;&lt; m_BackwardImage.GetPointer() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Forward Image: &quot;</span> &lt;&lt; m_ForwardImage.GetPointer() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Search Radius: &quot;</span> &lt;&lt; m_SearchRadius &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Final Radius: &quot;</span> &lt;&lt; m_FinalRadius &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Step Size : &quot;</span> &lt;&lt; m_StepSize &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Weighted Agregation : &quot;</span> &lt;&lt; m_WeightedAgregation &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Maximum Iterations: &quot;</span> &lt;&lt; m_MaximumIterations &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Optimizer Maximum Iterations: &quot;</span> &lt;&lt; m_OptimizerMaximumIterations &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Initial Transform Parameters: &quot;</span> &lt;&lt; m_InitialTransformParameters &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Last    Transform Parameters: &quot;</span> &lt;&lt; m_LastTransformParameters &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;}</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;<span class="comment">     * Generate Data</span></div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a74730d1553068787f342bc71de6bdc91">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
+<div class="line"><a name="l00891"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a74730d1553068787f342bc71de6bdc91">  891</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a74730d1553068787f342bc71de6bdc91">::GenerateData</a>()</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;{</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;    m_Abort = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;    <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a8136e641b4cfb2abd5936ff014c69421">ParametersType</a> empty(1);</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;    empty.Fill( 0.0 );</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;    {</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;        <span class="comment">// initialize the interconnects between components</span></div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;        this-&gt;Initialize();</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;</div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;    }</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;    <span class="keywordflow">catch</span>( itk::ExceptionObject&amp; err )</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    {</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        m_LastTransformParameters = empty;</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        <span class="comment">// pass exception to caller</span></div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        <span class="keywordflow">throw</span> err;</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;    }</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;    this-&gt;StartOptimization();</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;}</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;<span class="keyword">typename</span> <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#aadaf848d466b86384876d6bc806fa279">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;::TransformOutputType</a> *</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a7facce6d8bc3331ccf025f5c79d79f4d">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
+<div class="line"><a name="l00920"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a7facce6d8bc3331ccf025f5c79d79f4d">  920</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a7facce6d8bc3331ccf025f5c79d79f4d">::GetOutput</a>()</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;{</div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span> <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#aadaf848d466b86384876d6bc806fa279">TransformOutputType</a> * <span class="keyword">&gt;</span>( this-&gt;ProcessObject::GetOutput(0) );</div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;}</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;itk::DataObject::Pointer</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a83961d6cf2be135f4052fbcdf38f3943">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
+<div class="line"><a name="l00928"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a83961d6cf2be135f4052fbcdf38f3943">  928</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a83961d6cf2be135f4052fbcdf38f3943">::MakeOutput</a>(<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a2c025f7a4badc3b2eedab824c84f8fa8">DataObjectPointerArraySizeType</a> output)</div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;{</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;    <span class="keywordflow">switch</span> (output)</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;    {</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>itk::DataObject*<span class="keyword">&gt;</span>(TransformOutputType::New().GetPointer());</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;            itkExceptionMacro(<span class="stringliteral">&quot;MakeOutput request for an output number larger than the expected number of outputs&quot;</span>);</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;    }</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;}</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a3f5f75bfa8f162b105665f881d1fa66a">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
+<div class="line"><a name="l00944"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a3f5f75bfa8f162b105665f881d1fa66a">  944</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a3f5f75bfa8f162b105665f881d1fa66a">::SetBackwardImage</a>( <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a24439a5e1983ef84fba5bc3bd8165657">InputImageType</a> * backwardImage )</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;{</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;    itkDebugMacro(<span class="stringliteral">&quot;setting backward Image to &quot;</span> &lt;&lt; backwardImage );</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;    <span class="keywordflow">if</span> (this-&gt;m_BackwardImage.GetPointer() != backwardImage )</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;    {</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;        this-&gt;m_BackwardImage = backwardImage;</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;        this-&gt;m_BackwardImage-&gt;DisconnectPipeline();</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;        this-&gt;Modified();</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;    }</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;}</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af5d0fe7f14d31e3aa45cb2cfc509283a">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
+<div class="line"><a name="l00960"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af5d0fe7f14d31e3aa45cb2cfc509283a">  960</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af5d0fe7f14d31e3aa45cb2cfc509283a">::SetForwardImage</a>( <a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a24439a5e1983ef84fba5bc3bd8165657">InputImageType</a> * forwardImage )</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;{</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;    itkDebugMacro(<span class="stringliteral">&quot;setting forward Image to &quot;</span> &lt;&lt; forwardImage );</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;</div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;    <span class="keywordflow">if</span> (this-&gt;m_ForwardImage.GetPointer() != forwardImage )</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;    {</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;        this-&gt;m_ForwardImage = forwardImage;</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;        this-&gt;m_ForwardImage-&gt;DisconnectPipeline();</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;        this-&gt;Modified();</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;    }</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;}</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage&gt;</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;<span class="keyword">const</span> std::string</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a06f54a86b416c76e7724074d40803375">DistortionCorrectionRegistrationMethod&lt;TInputImage&gt;</a></div>
+<div class="line"><a name="l00976"></a><span class="lineno"><a class="line" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a06f54a86b416c76e7724074d40803375">  976</a></span>&#160;<a class="code" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a06f54a86b416c76e7724074d40803375">::GetStopConditionDescription</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;    <span class="keywordflow">return</span> m_StopConditionDescription.str();</div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;}</div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;</div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;} <span class="comment">// end namespace anima</span></div>
 <div class="ttc" id="namespaceanima_html_ac47fd551adf9ce27791e10ec8ecb1bad"><div class="ttname"><a href="namespaceanima.html#ac47fd551adf9ce27791e10ec8ecb1bad">anima::composeDistortionCorrections</a></div><div class="ttdeci">void composeDistortionCorrections(rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt; *baseTrsf, rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt; *positiveAddOn, rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt; *negativeAddOn, unsigned int numThreads)</div><div class="ttdef"><b>Definition:</b> <a href="animaVelocityUtils_8hxx_source.html#l00063">animaVelocityUtils.hxx:63</a></div></div>
 <div class="ttc" id="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_html_afd925d64a119671c81c42f09b7507534a44ad9ec44f7a62a416157ca03cae9115"><div class="ttname"><a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#afd925d64a119671c81c42f09b7507534a44ad9ec44f7a62a416157ca03cae9115">DirectionScale</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_source.html#l00020">animaPyramidalDistortionCorrectionBlockMatchingBridge.h:20</a></div></div>
 <div class="ttc" id="animaBlockMatchInitializer_8h_html"><div class="ttname"><a href="animaBlockMatchInitializer_8h.html">animaBlockMatchInitializer.h</a></div></div>
@@ -1066,8 +1065,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classCommandIterationUpdate_html_a07d09836044e93fd8693d947d77a58a5"><div class="ttname"><a href="classCommandIterationUpdate.html#a07d09836044e93fd8693d947d77a58a5">CommandIterationUpdate::Pointer</a></div><div class="ttdeci">itk::SmartPointer&lt; Self &gt; Pointer</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00043">animaDistortionCorrectionRegistrationMethod.hxx:43</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_afb9662ad156fb14c8f183bce71c22a06"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#afb9662ad156fb14c8f183bce71c22a06">anima::DistortionCorrectionRegistrationMethod::GetMTime</a></div><div class="ttdeci">itk::ModifiedTimeType GetMTime() const </div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00124">animaDistortionCorrectionRegistrationMethod.hxx:124</a></div></div>
 <div class="ttc" id="classanima_1_1DirectionScaleSkewTransform_html_afb2df717d70fed604df50bf3971ff239"><div class="ttname"><a href="classanima_1_1DirectionScaleSkewTransform.html#afb2df717d70fed604df50bf3971ff239">anima::DirectionScaleSkewTransform::SetIdentity</a></div><div class="ttdeci">virtual void SetIdentity(void)</div><div class="ttdef"><b>Definition:</b> <a href="animaDirectionScaleSkewTransform_8hxx_source.html#l00044">animaDirectionScaleSkewTransform.hxx:44</a></div></div>
-<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_ab3a80b57249b5693d5feec7562a91d79"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#ab3a80b57249b5693d5feec7562a91d79">anima::DistortionCorrectionRegistrationMethod::PrintSelf</a></div><div class="ttdeci">void PrintSelf(std::ostream &amp;os, itk::Indent indent) const </div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00866">animaDistortionCorrectionRegistrationMethod.hxx:866</a></div></div>
-<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a83961d6cf2be135f4052fbcdf38f3943"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a83961d6cf2be135f4052fbcdf38f3943">anima::DistortionCorrectionRegistrationMethod::MakeOutput</a></div><div class="ttdeci">virtual DataObjectPointer MakeOutput(DataObjectPointerArraySizeType idx)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00929">animaDistortionCorrectionRegistrationMethod.hxx:929</a></div></div>
+<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_ab3a80b57249b5693d5feec7562a91d79"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#ab3a80b57249b5693d5feec7562a91d79">anima::DistortionCorrectionRegistrationMethod::PrintSelf</a></div><div class="ttdeci">void PrintSelf(std::ostream &amp;os, itk::Indent indent) const </div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00865">animaDistortionCorrectionRegistrationMethod.hxx:865</a></div></div>
+<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a83961d6cf2be135f4052fbcdf38f3943"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a83961d6cf2be135f4052fbcdf38f3943">anima::DistortionCorrectionRegistrationMethod::MakeOutput</a></div><div class="ttdeci">virtual DataObjectPointer MakeOutput(DataObjectPointerArraySizeType idx)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00928">animaDistortionCorrectionRegistrationMethod.hxx:928</a></div></div>
 <div class="ttc" id="classanima_1_1FastMeanSquaresImageToImageMetric_html"><div class="ttname"><a href="classanima_1_1FastMeanSquaresImageToImageMetric.html">anima::FastMeanSquaresImageToImageMetric</a></div><div class="ttdef"><b>Definition:</b> <a href="animaFastMeanSquaresImageToImageMetric_8h_source.html#l00010">animaFastMeanSquaresImageToImageMetric.h:10</a></div></div>
 <div class="ttc" id="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_html_abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9"><div class="ttname"><a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea34d0355cbc3f3af36b0eb3e1c9861ee9">MeanSquares</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_source.html#l00014">animaPyramidalDistortionCorrectionBlockMatchingBridge.h:14</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_af2f66bc45fe7983c28d6dc0a20aee73f"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af2f66bc45fe7983c28d6dc0a20aee73f">anima::DistortionCorrectionRegistrationMethod::InitializeBlocksOnImage</a></div><div class="ttdeci">void InitializeBlocksOnImage(InputImageType *image)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00386">animaDistortionCorrectionRegistrationMethod.hxx:386</a></div></div>
@@ -1083,7 +1082,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="structanima_1_1DistortionCorrectionRegistrationMethod_1_1ThreadedMatchData_html"><div class="ttname"><a href="structanima_1_1DistortionCorrectionRegistrationMethod_1_1ThreadedMatchData.html">anima::DistortionCorrectionRegistrationMethod::ThreadedMatchData</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8h_source.html#l00221">animaDistortionCorrectionRegistrationMethod.h:221</a></div></div>
 <div class="ttc" id="classanima_1_1BaseTransformAgregator_html_aa9d09f94b9a804c706a2e8a1a4af8048"><div class="ttname"><a href="classanima_1_1BaseTransformAgregator.html#aa9d09f94b9a804c706a2e8a1a4af8048">anima::BaseTransformAgregator::ScalarType</a></div><div class="ttdeci">double ScalarType</div><div class="ttdef"><b>Definition:</b> <a href="animaBaseTransformAgregator_8h_source.html#l00019">animaBaseTransformAgregator.h:19</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a24439a5e1983ef84fba5bc3bd8165657"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a24439a5e1983ef84fba5bc3bd8165657">anima::DistortionCorrectionRegistrationMethod::InputImageType</a></div><div class="ttdeci">TInputImage InputImageType</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8h_source.html#l00040">animaDistortionCorrectionRegistrationMethod.h:40</a></div></div>
-<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a06f54a86b416c76e7724074d40803375"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a06f54a86b416c76e7724074d40803375">anima::DistortionCorrectionRegistrationMethod::GetStopConditionDescription</a></div><div class="ttdeci">const std::string GetStopConditionDescription() const </div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00977">animaDistortionCorrectionRegistrationMethod.hxx:977</a></div></div>
+<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a06f54a86b416c76e7724074d40803375"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a06f54a86b416c76e7724074d40803375">anima::DistortionCorrectionRegistrationMethod::GetStopConditionDescription</a></div><div class="ttdeci">const std::string GetStopConditionDescription() const </div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00976">animaDistortionCorrectionRegistrationMethod.hxx:976</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a102be374465e7b4816e24ffc72344136"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a102be374465e7b4816e24ffc72344136">anima::DistortionCorrectionRegistrationMethod::SVFTransformPointer</a></div><div class="ttdeci">SVFTransformType::Pointer SVFTransformPointer</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8h_source.html#l00061">animaDistortionCorrectionRegistrationMethod.h:61</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a67a17b305a4f5c436d6b07618de75011"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a67a17b305a4f5c436d6b07618de75011">anima::DistortionCorrectionRegistrationMethod::InputImagePointer</a></div><div class="ttdeci">InputImageType::Pointer InputImagePointer</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8h_source.html#l00045">animaDistortionCorrectionRegistrationMethod.h:45</a></div></div>
 <div class="ttc" id="classanima_1_1FastCorrelationImageToImageMetric_html"><div class="ttname"><a href="classanima_1_1FastCorrelationImageToImageMetric.html">anima::FastCorrelationImageToImageMetric</a></div><div class="ttdef"><b>Definition:</b> <a href="animaFastCorrelationImageToImageMetric_8h_source.html#l00011">animaFastCorrelationImageToImageMetric.h:11</a></div></div>
@@ -1103,7 +1102,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="animaResampleImageFilter_8h_html"><div class="ttname"><a href="animaResampleImageFilter_8h.html">animaResampleImageFilter.h</a></div></div>
 <div class="ttc" id="animaVoxelExhaustiveOptimizer_8h_html"><div class="ttname"><a href="animaVoxelExhaustiveOptimizer_8h.html">animaVoxelExhaustiveOptimizer.h</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a0901f26ed270af206982f3cc8c55ad85"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a0901f26ed270af206982f3cc8c55ad85">anima::DistortionCorrectionRegistrationMethod::ResampleImages</a></div><div class="ttdeci">void ResampleImages(TransformType *currentTransform, InputImagePointer &amp;refImage, InputImagePointer &amp;floatingImage)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00259">animaDistortionCorrectionRegistrationMethod.hxx:259</a></div></div>
-<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a7facce6d8bc3331ccf025f5c79d79f4d"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a7facce6d8bc3331ccf025f5c79d79f4d">anima::DistortionCorrectionRegistrationMethod::GetOutput</a></div><div class="ttdeci">TransformOutputType * GetOutput()</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00921">animaDistortionCorrectionRegistrationMethod.hxx:921</a></div></div>
+<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a7facce6d8bc3331ccf025f5c79d79f4d"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a7facce6d8bc3331ccf025f5c79d79f4d">anima::DistortionCorrectionRegistrationMethod::GetOutput</a></div><div class="ttdeci">TransformOutputType * GetOutput()</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00920">animaDistortionCorrectionRegistrationMethod.hxx:920</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a6624130d23d66679c0ddd78b39c59818"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a6624130d23d66679c0ddd78b39c59818">anima::DistortionCorrectionRegistrationMethod::TransformType</a></div><div class="ttdeci">DisplacementFieldTransformType TransformType</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8h_source.html#l00066">animaDistortionCorrectionRegistrationMethod.h:66</a></div></div>
 <div class="ttc" id="animaDenseSVFTransformAgregator_8h_html"><div class="ttname"><a href="animaDenseSVFTransformAgregator_8h.html">animaDenseSVFTransformAgregator.h</a></div></div>
 <div class="ttc" id="animaMatrixLogExp_8h_html"><div class="ttname"><a href="animaMatrixLogExp_8h.html">animaMatrixLogExp.h</a></div></div>
@@ -1111,7 +1110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespaceanima_html_a3bea3f085f8a59d580435c0850b77b60"><div class="ttname"><a href="namespaceanima.html#a3bea3f085f8a59d580435c0850b77b60">anima::GetSVFExponential</a></div><div class="ttdeci">void GetSVFExponential(itk::StationaryVelocityFieldTransform&lt; ScalarType, NDimensions &gt; *baseTrsf, rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt; *resultTransform, bool invert)</div><div class="ttdef"><b>Definition:</b> <a href="animaVelocityUtils_8hxx_source.html#l00041">animaVelocityUtils.hxx:41</a></div></div>
 <div class="ttc" id="classCommandIterationUpdate_html_aed2829c5e03b1f7b5e9c862f00f493af"><div class="ttname"><a href="classCommandIterationUpdate.html#aed2829c5e03b1f7b5e9c862f00f493af">CommandIterationUpdate::OptimizerPointer</a></div><div class="ttdeci">const OptimizerType * OptimizerPointer</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00049">animaDistortionCorrectionRegistrationMethod.hxx:49</a></div></div>
 <div class="ttc" id="classCommandIterationUpdate_html_a7321e36a5179cac3cf6dc00de2d5f494"><div class="ttname"><a href="classCommandIterationUpdate.html#a7321e36a5179cac3cf6dc00de2d5f494">CommandIterationUpdate::Superclass</a></div><div class="ttdeci">itk::Command Superclass</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00042">animaDistortionCorrectionRegistrationMethod.hxx:42</a></div></div>
-<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_af5d0fe7f14d31e3aa45cb2cfc509283a"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af5d0fe7f14d31e3aa45cb2cfc509283a">anima::DistortionCorrectionRegistrationMethod::SetForwardImage</a></div><div class="ttdeci">void SetForwardImage(InputImageType *forwardImage)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00961">animaDistortionCorrectionRegistrationMethod.hxx:961</a></div></div>
+<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_af5d0fe7f14d31e3aa45cb2cfc509283a"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af5d0fe7f14d31e3aa45cb2cfc509283a">anima::DistortionCorrectionRegistrationMethod::SetForwardImage</a></div><div class="ttdeci">void SetForwardImage(InputImageType *forwardImage)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00960">animaDistortionCorrectionRegistrationMethod.hxx:960</a></div></div>
 <div class="ttc" id="classanima_1_1DirectionTransform_html"><div class="ttname"><a href="classanima_1_1DirectionTransform.html">anima::DirectionTransform</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDirectionScaleSkewTransform_8h_source.html#l00163">animaDirectionScaleSkewTransform.h:163</a></div></div>
 <div class="ttc" id="classCommandIterationUpdate_html"><div class="ttname"><a href="classCommandIterationUpdate.html">CommandIterationUpdate</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00038">animaDistortionCorrectionRegistrationMethod.hxx:38</a></div></div>
 <div class="ttc" id="classanima_1_1DenseSVFTransformAgregator_html"><div class="ttname"><a href="classanima_1_1DenseSVFTransformAgregator.html">anima::DenseSVFTransformAgregator</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDenseSVFTransformAgregator_8h_source.html#l00010">animaDenseSVFTransformAgregator.h:10</a></div></div>
@@ -1119,24 +1118,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classanima_1_1DirectionScaleTransform_html"><div class="ttname"><a href="classanima_1_1DirectionScaleTransform.html">anima::DirectionScaleTransform</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDirectionScaleSkewTransform_8h_source.html#l00132">animaDirectionScaleSkewTransform.h:132</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a21579b0f35c8c6d93e77dd3ed0e120c8"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a21579b0f35c8c6d93e77dd3ed0e120c8">anima::DistortionCorrectionRegistrationMethod::ThreadedMatching</a></div><div class="ttdeci">static ITK_THREAD_RETURN_TYPE ThreadedMatching(void *arg)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00522">animaDistortionCorrectionRegistrationMethod.hxx:522</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a5908b460334e0ef0e791e86c82230006"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a5908b460334e0ef0e791e86c82230006">anima::DistortionCorrectionRegistrationMethod::BaseTransformType</a></div><div class="ttdeci">MetricType::TransformType BaseTransformType</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8h_source.html#l00088">animaDistortionCorrectionRegistrationMethod.h:88</a></div></div>
-<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a972d8f21e587f23c6ff92c536f8a0875"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a972d8f21e587f23c6ff92c536f8a0875">anima::DistortionCorrectionRegistrationMethod::ComputeDirectionFilterBlockWeightUpdate</a></div><div class="ttdeci">double ComputeDirectionFilterBlockWeightUpdate(InputImageType *fixedImage, const ImageRegionType &amp;region)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00798">animaDistortionCorrectionRegistrationMethod.hxx:798</a></div></div>
+<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a972d8f21e587f23c6ff92c536f8a0875"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a972d8f21e587f23c6ff92c536f8a0875">anima::DistortionCorrectionRegistrationMethod::ComputeDirectionFilterBlockWeightUpdate</a></div><div class="ttdeci">double ComputeDirectionFilterBlockWeightUpdate(InputImageType *fixedImage, const ImageRegionType &amp;region)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00797">animaDistortionCorrectionRegistrationMethod.hxx:797</a></div></div>
 <div class="ttc" id="classCommandIterationUpdate_html_a40c91149eb2b285c7f3d19c199035c8f"><div class="ttname"><a href="classCommandIterationUpdate.html#a40c91149eb2b285c7f3d19c199035c8f">CommandIterationUpdate::Execute</a></div><div class="ttdeci">void Execute(const itk::Object *object, const itk::EventObject &amp;event)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00056">animaDistortionCorrectionRegistrationMethod.hxx:56</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a2c025f7a4badc3b2eedab824c84f8fa8"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a2c025f7a4badc3b2eedab824c84f8fa8">anima::DistortionCorrectionRegistrationMethod::DataObjectPointerArraySizeType</a></div><div class="ttdeci">ProcessObject::DataObjectPointerArraySizeType DataObjectPointerArraySizeType</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8h_source.html#l00191">animaDistortionCorrectionRegistrationMethod.h:191</a></div></div>
 <div class="ttc" id="classanima_1_1BlockMatchingInitializer_html"><div class="ttname"><a href="classanima_1_1BlockMatchingInitializer.html">anima::BlockMatchingInitializer</a></div><div class="ttdef"><b>Definition:</b> <a href="animaBlockMatchInitializer_8h_source.html#l00014">animaBlockMatchInitializer.h:14</a></div></div>
 <div class="ttc" id="structanima_1_1DistortionCorrectionRegistrationMethod_1_1ThreadedMatchData_html_ad1f1ac518f49bd63f4efa96244b40192"><div class="ttname"><a href="structanima_1_1DistortionCorrectionRegistrationMethod_1_1ThreadedMatchData.html#ad1f1ac518f49bd63f4efa96244b40192">anima::DistortionCorrectionRegistrationMethod::ThreadedMatchData::movingImage</a></div><div class="ttdeci">InputImageType * movingImage</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8h_source.html#l00225">animaDistortionCorrectionRegistrationMethod.h:225</a></div></div>
 <div class="ttc" id="classanima_1_1FasterLinearInterpolateImageFunction_html"><div class="ttname"><a href="classanima_1_1FasterLinearInterpolateImageFunction.html">anima::FasterLinearInterpolateImageFunction</a></div><div class="ttdef"><b>Definition:</b> <a href="animaFasterLinearInterpolateImageFunction_8h_source.html#l00010">animaFasterLinearInterpolateImageFunction.h:10</a></div></div>
-<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_af7b23ec6eec3f81da63c38ee45dc8650"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af7b23ec6eec3f81da63c38ee45dc8650">anima::DistortionCorrectionRegistrationMethod::BlockMatch</a></div><div class="ttdeci">void BlockMatch(unsigned threadId, unsigned NbThreads, InputImageType *fixedImage, InputImageType *movingImage)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00723">animaDistortionCorrectionRegistrationMethod.hxx:723</a></div></div>
+<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_af7b23ec6eec3f81da63c38ee45dc8650"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af7b23ec6eec3f81da63c38ee45dc8650">anima::DistortionCorrectionRegistrationMethod::BlockMatch</a></div><div class="ttdeci">void BlockMatch(unsigned threadId, unsigned NbThreads, InputImageType *fixedImage, InputImageType *movingImage)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00722">animaDistortionCorrectionRegistrationMethod.hxx:722</a></div></div>
 <div class="ttc" id="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_html_abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47"><div class="ttname"><a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html#abf74dfd688b4203cefa6d49f8d14403ea550c15fd5a13f9068f866806a556ba47">SquaredCorrelation</a></div><div class="ttdef"><b>Definition:</b> <a href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8h_source.html#l00013">animaPyramidalDistortionCorrectionBlockMatchingBridge.h:13</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a5356cb9e36b6d9c5c0b1edc1e7cd371a"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a5356cb9e36b6d9c5c0b1edc1e7cd371a">anima::DistortionCorrectionRegistrationMethod::SVFTransformType</a></div><div class="ttdeci">itk::StationaryVelocityFieldTransform&lt; typename AgregatorType::ScalarType, InputImageType::ImageDimension &gt; SVFTransformType</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8h_source.html#l00060">animaDistortionCorrectionRegistrationMethod.h:60</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_af4e98f831d2e5b2c7f0564b3de953f10"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#af4e98f831d2e5b2c7f0564b3de953f10">anima::DistortionCorrectionRegistrationMethod::TransformOutputPointer</a></div><div class="ttdeci">TransformOutputType::Pointer TransformOutputPointer</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8h_source.html#l00075">animaDistortionCorrectionRegistrationMethod.h:75</a></div></div>
 <div class="ttc" id="classCommandIterationUpdate_html_a82da0970ef8c14141f85f3465f08242e"><div class="ttname"><a href="classCommandIterationUpdate.html#a82da0970ef8c14141f85f3465f08242e">CommandIterationUpdate::Self</a></div><div class="ttdeci">CommandIterationUpdate Self</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00041">animaDistortionCorrectionRegistrationMethod.hxx:41</a></div></div>
 <div class="ttc" id="classanima_1_1DirectionScaleSkewTransform_html"><div class="ttname"><a href="classanima_1_1DirectionScaleSkewTransform.html">anima::DirectionScaleSkewTransform</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDirectionScaleSkewTransform_8h_source.html#l00010">animaDirectionScaleSkewTransform.h:10</a></div></div>
 <div class="ttc" id="classCommandIterationUpdate_html_af539d5d62269a846518a53f49eb1cff7"><div class="ttname"><a href="classCommandIterationUpdate.html#af539d5d62269a846518a53f49eb1cff7">CommandIterationUpdate::Execute</a></div><div class="ttdeci">void Execute(itk::Object *caller, const itk::EventObject &amp;event)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00051">animaDistortionCorrectionRegistrationMethod.hxx:51</a></div></div>
-<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a3f5f75bfa8f162b105665f881d1fa66a"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a3f5f75bfa8f162b105665f881d1fa66a">anima::DistortionCorrectionRegistrationMethod::SetBackwardImage</a></div><div class="ttdeci">void SetBackwardImage(InputImageType *backwardImage)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00945">animaDistortionCorrectionRegistrationMethod.hxx:945</a></div></div>
+<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a3f5f75bfa8f162b105665f881d1fa66a"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a3f5f75bfa8f162b105665f881d1fa66a">anima::DistortionCorrectionRegistrationMethod::SetBackwardImage</a></div><div class="ttdeci">void SetBackwardImage(InputImageType *backwardImage)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00944">animaDistortionCorrectionRegistrationMethod.hxx:944</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a60f643a8b5ce965fed8ca41ece244bb5"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a60f643a8b5ce965fed8ca41ece244bb5">anima::DistortionCorrectionRegistrationMethod::GlobalParametersSetup</a></div><div class="ttdeci">void GlobalParametersSetup()</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00536">animaDistortionCorrectionRegistrationMethod.hxx:536</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a566140054046bdc96af051527048f1b2"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a566140054046bdc96af051527048f1b2">anima::DistortionCorrectionRegistrationMethod::setUpParameters</a></div><div class="ttdeci">void setUpParameters(InterpolatorPointer &amp;interpolator, MetricPointer &amp;metric, OptimizerPointer &amp;optimizer, unsigned startBlock, unsigned endBlock)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00568">animaDistortionCorrectionRegistrationMethod.hxx:568</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a8136e641b4cfb2abd5936ff014c69421"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a8136e641b4cfb2abd5936ff014c69421">anima::DistortionCorrectionRegistrationMethod::ParametersType</a></div><div class="ttdeci">MetricType::TransformParametersType ParametersType</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8h_source.html#l00090">animaDistortionCorrectionRegistrationMethod.h:90</a></div></div>
-<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a74730d1553068787f342bc71de6bdc91"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a74730d1553068787f342bc71de6bdc91">anima::DistortionCorrectionRegistrationMethod::GenerateData</a></div><div class="ttdeci">void GenerateData()</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00892">animaDistortionCorrectionRegistrationMethod.hxx:892</a></div></div>
+<div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a74730d1553068787f342bc71de6bdc91"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a74730d1553068787f342bc71de6bdc91">anima::DistortionCorrectionRegistrationMethod::GenerateData</a></div><div class="ttdeci">void GenerateData()</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00891">animaDistortionCorrectionRegistrationMethod.hxx:891</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a9ccbe43aa7d1ad3bd86d2be8fb9073bf"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a9ccbe43aa7d1ad3bd86d2be8fb9073bf">anima::DistortionCorrectionRegistrationMethod::StartOptimization</a></div><div class="ttdeci">void StartOptimization(void)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00177">animaDistortionCorrectionRegistrationMethod.hxx:177</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionRegistrationMethod_html_a59611b0709b6b81621c03da279b3655b"><div class="ttname"><a href="classanima_1_1DistortionCorrectionRegistrationMethod.html#a59611b0709b6b81621c03da279b3655b">anima::DistortionCorrectionRegistrationMethod::Initialize</a></div><div class="ttdeci">virtual void Initialize()</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00154">animaDistortionCorrectionRegistrationMethod.hxx:154</a></div></div>
 <div class="ttc" id="animaVelocityUtils_8h_html"><div class="ttname"><a href="animaVelocityUtils_8h.html">animaVelocityUtils.h</a></div></div>
@@ -1146,7 +1145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 8 2015 06:42:26 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 10 2015 06:30:25 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -125,42 +125,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">double</span> residualValue = 0;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numT1Signals = m_T1RelaxometrySignals.size();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numT2Signals = m_T2RelaxometrySignals.size();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (m_OptimizedValue != <a class="code" href="classanima_1_1CombinedRelaxometryCostFunction.html#afd96d3859a715da2c6ef29df474327b7a68ce42d9c4378cbb44121a6009066a1f">T2</a>)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">double</span> expTRT1Value = std::exp(- m_TRValue / m_T1Value);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">double</span> baseSimulatedT1Value = m_KValue * m_M0Value * (1.0 - expTRT1Value);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_T1FlipAngles.size();++i)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordtype">double</span> simulatedValue = baseSimulatedT1Value * std::sin(m_B1Value * m_T1FlipAngles[i]) / (1.0 - expTRT1Value * std::cos(m_B1Value * m_T1FlipAngles[i]));</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            residualValue += (simulatedValue - m_T1RelaxometrySignals[i]) * (simulatedValue - m_T1RelaxometrySignals[i]);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (m_T2RelaxometrySignals.size() &gt; 0)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classanima_1_1EPGSignalSimulator.html">anima::EPGSignalSimulator</a> t2SignalSimulator;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        t2SignalSimulator.<a class="code" href="classanima_1_1EPGSignalSimulator.html#a0e9895a8dd842ed8e46eb41074c69ceb">SetB1OnExcitationAngle</a>(m_B1OnExcitationAngle);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        t2SignalSimulator.<a class="code" href="classanima_1_1EPGSignalSimulator.html#a04b07b8d1f829e7b6fa629a9f95e4031">SetNumberOfEchoes</a>(m_T2RelaxometrySignals.size());</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        t2SignalSimulator.<a class="code" href="classanima_1_1EPGSignalSimulator.html#a7c5ec24d375400de2970b1432c652178">SetEchoSpacing</a>(m_T2EchoSpacing);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        t2SignalSimulator.<a class="code" href="classanima_1_1EPGSignalSimulator.html#a3281fcd6d31e32be02b7286f64769408">SetExcitationFlipAngle</a>(m_T2ExcitationFlipAngle);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        t2SignalSimulator.<a class="code" href="classanima_1_1EPGSignalSimulator.html#ac906d85f396d34eb24e95159055ea9f2">SetFlipAngle</a>(m_T2FlipAngles[0]);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="classanima_1_1EPGSignalSimulator.html#abe5b8d8d73ea02f9f71bc5096ecae48e">anima::EPGSignalSimulator::RealVectorType</a> simulatedT2Values = t2SignalSimulator.<a class="code" href="classanima_1_1EPGSignalSimulator.html#a54f0ea3dc562d4c42f9dbbe39a87bf3f">GetValue</a>(m_T1Value,m_T2Value,m_B1Value,m_M0Value);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">// Loop on all signals to be generated</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numT2Signals;++i)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            residualValue += (simulatedT2Values[i] - m_T2RelaxometrySignals[i]) * (simulatedT2Values[i] - m_T2RelaxometrySignals[i]);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> residualValue;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;} <span class="comment">// end of namespace anima</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numT2Signals = m_T2RelaxometrySignals.size();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (m_OptimizedValue != <a class="code" href="classanima_1_1CombinedRelaxometryCostFunction.html#afd96d3859a715da2c6ef29df474327b7a68ce42d9c4378cbb44121a6009066a1f">T2</a>)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">double</span> expTRT1Value = std::exp(- m_TRValue / m_T1Value);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">double</span> baseSimulatedT1Value = m_KValue * m_M0Value * (1.0 - expTRT1Value);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; m_T1FlipAngles.size();++i)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordtype">double</span> simulatedValue = baseSimulatedT1Value * std::sin(m_B1Value * m_T1FlipAngles[i]) / (1.0 - expTRT1Value * std::cos(m_B1Value * m_T1FlipAngles[i]));</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            residualValue += (simulatedValue - m_T1RelaxometrySignals[i]) * (simulatedValue - m_T1RelaxometrySignals[i]);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (m_T2RelaxometrySignals.size() &gt; 0)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classanima_1_1EPGSignalSimulator.html">anima::EPGSignalSimulator</a> t2SignalSimulator;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        t2SignalSimulator.<a class="code" href="classanima_1_1EPGSignalSimulator.html#a0e9895a8dd842ed8e46eb41074c69ceb">SetB1OnExcitationAngle</a>(m_B1OnExcitationAngle);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        t2SignalSimulator.<a class="code" href="classanima_1_1EPGSignalSimulator.html#a04b07b8d1f829e7b6fa629a9f95e4031">SetNumberOfEchoes</a>(m_T2RelaxometrySignals.size());</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        t2SignalSimulator.<a class="code" href="classanima_1_1EPGSignalSimulator.html#a7c5ec24d375400de2970b1432c652178">SetEchoSpacing</a>(m_T2EchoSpacing);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        t2SignalSimulator.<a class="code" href="classanima_1_1EPGSignalSimulator.html#a3281fcd6d31e32be02b7286f64769408">SetExcitationFlipAngle</a>(m_T2ExcitationFlipAngle);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        t2SignalSimulator.<a class="code" href="classanima_1_1EPGSignalSimulator.html#ac906d85f396d34eb24e95159055ea9f2">SetFlipAngle</a>(m_T2FlipAngles[0]);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classanima_1_1EPGSignalSimulator.html#abe5b8d8d73ea02f9f71bc5096ecae48e">anima::EPGSignalSimulator::RealVectorType</a> simulatedT2Values = t2SignalSimulator.<a class="code" href="classanima_1_1EPGSignalSimulator.html#a54f0ea3dc562d4c42f9dbbe39a87bf3f">GetValue</a>(m_T1Value,m_T2Value,m_B1Value,m_M0Value);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">// Loop on all signals to be generated</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numT2Signals;++i)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            residualValue += (simulatedT2Values[i] - m_T2RelaxometrySignals[i]) * (simulatedT2Values[i] - m_T2RelaxometrySignals[i]);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> residualValue;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;} <span class="comment">// end of namespace anima</span></div>
 <div class="ttc" id="animaEPGSignalSimulator_8h_html"><div class="ttname"><a href="animaEPGSignalSimulator_8h.html">animaEPGSignalSimulator.h</a></div></div>
 <div class="ttc" id="classanima_1_1EPGSignalSimulator_html_a0e9895a8dd842ed8e46eb41074c69ceb"><div class="ttname"><a href="classanima_1_1EPGSignalSimulator.html#a0e9895a8dd842ed8e46eb41074c69ceb">anima::EPGSignalSimulator::SetB1OnExcitationAngle</a></div><div class="ttdeci">void SetB1OnExcitationAngle(bool val)</div><div class="ttdef"><b>Definition:</b> <a href="animaEPGSignalSimulator_8h_source.html#l00030">animaEPGSignalSimulator.h:30</a></div></div>
 <div class="ttc" id="classanima_1_1EPGSignalSimulator_html_a54f0ea3dc562d4c42f9dbbe39a87bf3f"><div class="ttname"><a href="classanima_1_1EPGSignalSimulator.html#a54f0ea3dc562d4c42f9dbbe39a87bf3f">anima::EPGSignalSimulator::GetValue</a></div><div class="ttdeci">RealVectorType GetValue(double t1Value, double t2Value, double b1Value, double m0Value)</div><div class="ttdef"><b>Definition:</b> <a href="animaEPGSignalSimulator_8cxx_source.html#l00018">animaEPGSignalSimulator.cxx:18</a></div></div>
@@ -181,7 +180,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 8 2015 06:42:26 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 10 2015 06:30:25 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
