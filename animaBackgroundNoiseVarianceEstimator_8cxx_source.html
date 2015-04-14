@@ -145,83 +145,82 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">typedef</span> FilterType::OutputImageType MaskImageType;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileReader &lt;InputImageType&gt; InputImageReaderType;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileReader &lt;Image4DType&gt; Input4DImageReaderType;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileReader &lt;VectorImageType&gt; VectorImageReaderType;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileWriter &lt;MaskImageType&gt; OutputImageWriterType;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    FilterType::Pointer mainFilter = FilterType::New();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    anima::setMultipleImageFilterInputsFromFileName&lt;InputImageType,Image4DType,FilterType&gt;(inArg.getValue(), mainFilter);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classanima_1_1GradientFileReader.html">anima::GradientFileReader &lt; std::vector &lt; float &gt;</a>, <span class="keywordtype">float</span> &gt; GFReaderType;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    GFReaderType gfReader;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    gfReader.<a class="code" href="classanima_1_1GradientFileReader.html#a7d5049c6aa9bc52333386c0c264fb9c7">SetGradientFileName</a>(gradsArg.getValue());</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    gfReader.SetBValueBaseString(bvalArg.getValue());</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    gfReader.SetGradientIndependentNormalization(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    gfReader.Update();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    GFReaderType::GradientVectorType directions = gfReader.GetGradients();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; directions.size();++i)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        mainFilter-&gt;AddGradientDirection(i,directions[i]);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    GFReaderType::BValueVectorType mb = gfReader.GetBValues();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    mainFilter-&gt;SetBValuesList(mb);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbCoils = numCoilsArg.getValue();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    std::vector&lt;float&gt; theoreticalSnr(nbCoils,0);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1;i &lt;= nbCoils;++i)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">double</span> beta = sqrt(M_PI/2) * boost::math::double_factorial&lt;double&gt;(2*i-1) / pow((<span class="keywordtype">double</span>)2,(int)i-1) / boost::math::factorial&lt;double&gt;(i-1);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        theoreticalSnr[i-1] = beta / sqrt(2*i-beta*beta);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        std::cout &lt;&lt; theoreticalSnr[i-1] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::cout &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    VectorImageReaderType::Pointer dtiReader = VectorImageReaderType::New();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    dtiReader-&gt;SetFileName(inDTIArg.getValue());</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    dtiReader-&gt;Update();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    mainFilter-&gt;SetDTIImage(dtiReader-&gt;GetOutput());</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    InputImageReaderType::Pointer estB0Reader = InputImageReaderType::New();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    estB0Reader-&gt;SetFileName(inB0Arg.getValue());</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    estB0Reader-&gt;Update();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    mainFilter-&gt;SetEstimatedB0Image(estB0Reader-&gt;GetOutput());</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    mainFilter-&gt;SetNumberOfThreads(nbpArg.getValue());</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    mainFilter-&gt;SetPValueThreshold(pvThrArg.getValue());</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    mainFilter-&gt;SetNumberOfCoils(nbCoils);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    mainFilter-&gt;SetTheoreticalSnr(theoreticalSnr);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    mainFilter-&gt;SetQuantileInitialization(quantileInitArg.getValue());</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">//    mainFilter-&gt;SetMedianInitialization(!quantileInitArg.isSet());</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    itk::TimeProbe tmpTimer;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    tmpTimer.Start();</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    mainFilter-&gt;Update();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    tmpTimer.Stop();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Estimation done in &quot;</span> &lt;&lt; tmpTimer.GetTotal() &lt;&lt; <span class="stringliteral">&quot; s&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Computed Rician variance is: &quot;</span> &lt;&lt; mainFilter-&gt;GetOutputVariance() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Writing result to : &quot;</span> &lt;&lt; resArg.getValue() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    OutputImageWriterType::Pointer maskWriter = OutputImageWriterType::New();</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    maskWriter-&gt;SetInput(mainFilter-&gt;GetOutput());</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    maskWriter-&gt;SetFileName(resArg.getValue());</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    maskWriter-&gt;SetUseCompression(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    maskWriter-&gt;Update();</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileReader &lt;VectorImageType&gt; VectorImageReaderType;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileWriter &lt;MaskImageType&gt; OutputImageWriterType;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    FilterType::Pointer mainFilter = FilterType::New();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    anima::setMultipleImageFilterInputsFromFileName&lt;InputImageType,Image4DType,FilterType&gt;(inArg.getValue(), mainFilter);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classanima_1_1GradientFileReader.html">anima::GradientFileReader &lt; std::vector &lt; float &gt;</a>, <span class="keywordtype">float</span> &gt; GFReaderType;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    GFReaderType gfReader;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    gfReader.<a class="code" href="classanima_1_1GradientFileReader.html#a7d5049c6aa9bc52333386c0c264fb9c7">SetGradientFileName</a>(gradsArg.getValue());</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    gfReader.SetBValueBaseString(bvalArg.getValue());</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    gfReader.SetGradientIndependentNormalization(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    gfReader.Update();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    GFReaderType::GradientVectorType directions = gfReader.GetGradients();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; directions.size();++i)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        mainFilter-&gt;AddGradientDirection(i,directions[i]);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    GFReaderType::BValueVectorType mb = gfReader.GetBValues();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    mainFilter-&gt;SetBValuesList(mb);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbCoils = numCoilsArg.getValue();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::vector&lt;float&gt; theoreticalSnr(nbCoils,0);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1;i &lt;= nbCoils;++i)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">double</span> beta = sqrt(M_PI/2) * boost::math::double_factorial&lt;double&gt;(2*i-1) / pow((<span class="keywordtype">double</span>)2,(int)i-1) / boost::math::factorial&lt;double&gt;(i-1);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        theoreticalSnr[i-1] = beta / sqrt(2*i-beta*beta);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::cout &lt;&lt; theoreticalSnr[i-1] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::cout &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    VectorImageReaderType::Pointer dtiReader = VectorImageReaderType::New();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    dtiReader-&gt;SetFileName(inDTIArg.getValue());</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    dtiReader-&gt;Update();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    mainFilter-&gt;SetDTIImage(dtiReader-&gt;GetOutput());</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    InputImageReaderType::Pointer estB0Reader = InputImageReaderType::New();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    estB0Reader-&gt;SetFileName(inB0Arg.getValue());</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    estB0Reader-&gt;Update();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    mainFilter-&gt;SetEstimatedB0Image(estB0Reader-&gt;GetOutput());</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    mainFilter-&gt;SetNumberOfThreads(nbpArg.getValue());</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    mainFilter-&gt;SetPValueThreshold(pvThrArg.getValue());</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    mainFilter-&gt;SetNumberOfCoils(nbCoils);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    mainFilter-&gt;SetTheoreticalSnr(theoreticalSnr);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    mainFilter-&gt;SetQuantileInitialization(quantileInitArg.getValue());</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">//    mainFilter-&gt;SetMedianInitialization(!quantileInitArg.isSet());</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    itk::TimeProbe tmpTimer;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    tmpTimer.Start();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    mainFilter-&gt;Update();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    tmpTimer.Stop();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Estimation done in &quot;</span> &lt;&lt; tmpTimer.GetTotal() &lt;&lt; <span class="stringliteral">&quot; s&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Computed Rician variance is: &quot;</span> &lt;&lt; mainFilter-&gt;GetOutputVariance() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Writing result to : &quot;</span> &lt;&lt; resArg.getValue() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    OutputImageWriterType::Pointer maskWriter = OutputImageWriterType::New();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    maskWriter-&gt;SetInput(mainFilter-&gt;GetOutput());</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    maskWriter-&gt;SetFileName(resArg.getValue());</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    maskWriter-&gt;SetUseCompression(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    maskWriter-&gt;Update();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
 <div class="ttc" id="animaBackgroundNoiseVarianceEstimator_8cxx_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="animaBackgroundNoiseVarianceEstimator_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="animaBackgroundNoiseVarianceEstimator_8cxx_source.html#l00014">animaBackgroundNoiseVarianceEstimator.cxx:14</a></div></div>
 <div class="ttc" id="classanima_1_1GradientFileReader_html_a7d5049c6aa9bc52333386c0c264fb9c7"><div class="ttname"><a href="classanima_1_1GradientFileReader.html#a7d5049c6aa9bc52333386c0c264fb9c7">anima::GradientFileReader::SetGradientFileName</a></div><div class="ttdeci">void SetGradientFileName(std::string fName)</div><div class="ttdef"><b>Definition:</b> <a href="animaGradientFileReader_8h_source.html#l00023">animaGradientFileReader.h:23</a></div></div>
 <div class="ttc" id="classanima_1_1GradientFileReader_html"><div class="ttname"><a href="classanima_1_1GradientFileReader.html">anima::GradientFileReader</a></div><div class="ttdef"><b>Definition:</b> <a href="animaGradientFileReader_8h_source.html#l00013">animaGradientFileReader.h:13</a></div></div>
@@ -232,7 +231,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 10 2015 06:30:24 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 14 2015 06:30:37 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -186,53 +186,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="structarguments.html">arguments</a> args;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    args.<a class="code" href="structarguments.html#a78d8f68365158fe74fa2e64da230beaa">input</a> = inputArg.getValue(); args.<a class="code" href="structarguments.html#a62af88ecd8390f94a17b625718a941a0">output</a> = outputArg.getValue(); args.<a class="code" href="structarguments.html#a3e7f31b99e312fbcda98b1c574922160">displayInfo</a> = infoArg.getValue();</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span>(args.<a class="code" href="structarguments.html#a3e7f31b99e312fbcda98b1c574922160">displayInfo</a>)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;NUMBER OF DIMENSIONS: &quot;</span> &lt;&lt; imageIO-&gt;GetNumberOfDimensions() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;SIZE : [&quot;</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dim = 0; dim &lt; imageIO-&gt;GetNumberOfDimensions() - 1; ++dim)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            std::cout &lt;&lt; imageIO-&gt;GetDimensions(dim) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        std::cout &lt;&lt; imageIO-&gt;GetDimensions(imageIO-&gt;GetNumberOfDimensions() - 1) &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;ORIGIN : [&quot;</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dim = 0; dim &lt; imageIO-&gt;GetNumberOfDimensions() - 1; ++dim)</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            std::cout &lt;&lt; imageIO-&gt;GetOrigin(dim) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        std::cout &lt;&lt; imageIO-&gt;GetOrigin(imageIO-&gt;GetNumberOfDimensions() - 1) &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;SPACING : [&quot;</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dim = 0; dim &lt; imageIO-&gt;GetNumberOfDimensions() - 1; ++dim)</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            std::cout &lt;&lt; imageIO-&gt;GetSpacing(dim) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        std::cout &lt;&lt; imageIO-&gt;GetSpacing(imageIO-&gt;GetNumberOfDimensions() - 1) &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;DIRECTIONS :&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dir = 0; dir &lt; imageIO-&gt;GetNumberOfDimensions(); ++dir)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;\tDIM &quot;</span> &lt;&lt; dir &lt;&lt; <span class="stringliteral">&quot; : [&quot;</span>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dim = 0; dim &lt; imageIO-&gt;GetNumberOfDimensions() -1; ++dim)</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                std::cout &lt;&lt; imageIO-&gt;GetDirection(dim)[dir] &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            std::cout &lt;&lt; imageIO-&gt;GetDirection(imageIO-&gt;GetNumberOfDimensions() - 1)[dir] &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;NUMBER OF COMPONENTS: &quot;</span>&lt;&lt; imageIO-&gt;GetNumberOfComponents()&lt;&lt; std::endl;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;COMPONENT TYPE: &quot;</span>&lt;&lt; itk::ImageIOBase::GetComponentTypeAsString(imageIO-&gt;GetComponentType()) &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">if</span>(args.<a class="code" href="structarguments.html#a62af88ecd8390f94a17b625718a941a0">output</a> != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <a class="code" href="animaRetrieveImageTypeMacros_8h.html#aec54df9abdb1d96900b3d4634ca65a4d">ANIMA_RETRIEVE_COMPONENT_TYPE</a>(imageIO, <a class="code" href="animaConvertImage_8cxx.html#a712ca32394448241d1457782abc03675">retrieveNbDimensions</a>, imageIO, args)</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">catch</span> ( itk::ExceptionObject &amp; err )</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;Itk cannot convert, be sure to use valid arguments...&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            std::cerr &lt;&lt; err &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">int</span> numDimensions = imageIO-&gt;GetNumberOfDimensions() - 1;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span>(args.<a class="code" href="structarguments.html#a3e7f31b99e312fbcda98b1c574922160">displayInfo</a>)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;NUMBER OF DIMENSIONS: &quot;</span> &lt;&lt; imageIO-&gt;GetNumberOfDimensions() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;SIZE : [&quot;</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dim = 0; dim &lt; numDimensions; ++dim)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            std::cout &lt;&lt; imageIO-&gt;GetDimensions(dim) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        std::cout &lt;&lt; imageIO-&gt;GetDimensions(numDimensions) &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;ORIGIN : [&quot;</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dim = 0; dim &lt; numDimensions; ++dim)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            std::cout &lt;&lt; imageIO-&gt;GetOrigin(dim) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        std::cout &lt;&lt; imageIO-&gt;GetOrigin(numDimensions) &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;SPACING : [&quot;</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dim = 0; dim &lt; numDimensions; ++dim)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            std::cout &lt;&lt; imageIO-&gt;GetSpacing(dim) &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        std::cout &lt;&lt; imageIO-&gt;GetSpacing(numDimensions) &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;DIRECTIONS :&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dir = 0; dir &lt; imageIO-&gt;GetNumberOfDimensions(); ++dir)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;\tDIM &quot;</span> &lt;&lt; dir &lt;&lt; <span class="stringliteral">&quot; : [&quot;</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dim = 0; dim &lt; numDimensions; ++dim)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                std::cout &lt;&lt; imageIO-&gt;GetDirection(dim)[dir] &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            std::cout &lt;&lt; imageIO-&gt;GetDirection(numDimensions)[dir] &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;NUMBER OF COMPONENTS: &quot;</span>&lt;&lt; imageIO-&gt;GetNumberOfComponents()&lt;&lt; std::endl;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;COMPONENT TYPE: &quot;</span>&lt;&lt; itk::ImageIOBase::GetComponentTypeAsString(imageIO-&gt;GetComponentType()) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">if</span>(args.<a class="code" href="structarguments.html#a62af88ecd8390f94a17b625718a941a0">output</a> != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <a class="code" href="animaRetrieveImageTypeMacros_8h.html#aec54df9abdb1d96900b3d4634ca65a4d">ANIMA_RETRIEVE_COMPONENT_TYPE</a>(imageIO, <a class="code" href="animaConvertImage_8cxx.html#a712ca32394448241d1457782abc03675">retrieveNbDimensions</a>, imageIO, args)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">catch</span> ( itk::ExceptionObject &amp; err )</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;Itk cannot convert, be sure to use valid arguments...&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            std::cerr &lt;&lt; err &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
 <div class="ttc" id="structarguments_html_a62af88ecd8390f94a17b625718a941a0"><div class="ttname"><a href="structarguments.html#a62af88ecd8390f94a17b625718a941a0">arguments::output</a></div><div class="ttdeci">std::string output</div><div class="ttdef"><b>Definition:</b> <a href="animaCollapseImage_8cxx_source.html#l00015">animaCollapseImage.cxx:15</a></div></div>
 <div class="ttc" id="animaConvertImage_8cxx_html_a8017fe3c0a3c50ced784a6950b320d83"><div class="ttname"><a href="animaConvertImage_8cxx.html#a8017fe3c0a3c50ced784a6950b320d83">checkIfComponentsAreVectors</a></div><div class="ttdeci">void checkIfComponentsAreVectors(itk::ImageIOBase::Pointer imageIO, const arguments &amp;args)</div><div class="ttdef"><b>Definition:</b> <a href="animaConvertImage_8cxx_source.html#l00027">animaConvertImage.cxx:27</a></div></div>
 <div class="ttc" id="animaRetrieveImageTypeMacros_8h_html_af1890b54a3fbda98f8a8149e5c5f1e03"><div class="ttname"><a href="animaRetrieveImageTypeMacros_8h.html#af1890b54a3fbda98f8a8149e5c5f1e03">ANIMA_CHECK_IF_COMPONENTS_ARE_VECTORS</a></div><div class="ttdeci">#define ANIMA_CHECK_IF_COMPONENTS_ARE_VECTORS(imageIO, ComponentType, Dimension, function, args...)</div><div class="ttdef"><b>Definition:</b> <a href="animaRetrieveImageTypeMacros_8h_source.html#l00088">animaRetrieveImageTypeMacros.h:88</a></div></div>
@@ -249,7 +250,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 10 2015 06:30:25 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 14 2015 06:30:37 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

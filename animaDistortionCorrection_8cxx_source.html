@@ -132,34 +132,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Dimension = 3;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">double</span> PixelType;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">typedef</span> itk::VariableLengthVector&lt; PixelType &gt;  VectorType;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">typedef</span> itk::Image &lt;PixelType, Dimension&gt; ImageType;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">typedef</span> itk::VectorImage &lt;PixelType, Dimension&gt;  VectorFieldType;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classanima_1_1DistortionCorrectionImageFilter.html">anima::DistortionCorrectionImageFilter &lt; ImageType &gt;</a> FilterType;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ImageType::Pointer backwardImage = anima::readImage&lt;ImageType&gt;(backwardArg.getValue());</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    backwardImage-&gt;DisconnectPipeline();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">double</span> meanSpacing = 0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; Dimension;++i)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        meanSpacing += backwardImage-&gt;GetSpacing()[i];</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    meanSpacing /= Dimension;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    FilterType::Pointer filter = FilterType::New();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    filter-&gt;SetInput(0, anima::readImage&lt;ImageType&gt;(forwardArg.getValue()));</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    filter-&gt;SetInput(1, backwardImage);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    filter-&gt;SetDirection(distortionDirection.getValue());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    filter-&gt;SetFieldSmoothingSigma(sigmaArg.getValue() * meanSpacing);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    filter-&gt;SetNumberOfThreads(nbpArg.getValue());</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    filter-&gt;Update();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    anima::writeImage&lt;VectorFieldType&gt;(outArg.getValue(),filter-&gt;GetOutput());</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">typedef</span> itk::Image &lt;PixelType, Dimension&gt; ImageType;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">typedef</span> itk::VectorImage &lt;PixelType, Dimension&gt;  VectorFieldType;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classanima_1_1DistortionCorrectionImageFilter.html">anima::DistortionCorrectionImageFilter &lt; ImageType &gt;</a> FilterType;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    ImageType::Pointer backwardImage = anima::readImage&lt;ImageType&gt;(backwardArg.getValue());</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    backwardImage-&gt;DisconnectPipeline();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">double</span> meanSpacing = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; Dimension;++i)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        meanSpacing += backwardImage-&gt;GetSpacing()[i];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    meanSpacing /= Dimension;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    FilterType::Pointer filter = FilterType::New();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    filter-&gt;SetInput(0, anima::readImage&lt;ImageType&gt;(forwardArg.getValue()));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    filter-&gt;SetInput(1, backwardImage);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    filter-&gt;SetDirection(distortionDirection.getValue());</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    filter-&gt;SetFieldSmoothingSigma(sigmaArg.getValue() * meanSpacing);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    filter-&gt;SetNumberOfThreads(nbpArg.getValue());</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    filter-&gt;Update();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    anima::writeImage&lt;VectorFieldType&gt;(outArg.getValue(),filter-&gt;GetOutput());</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
 <div class="ttc" id="animaDistortionCorrection_8cxx_html_ace7f414039e764f5229a85f450521d1c"><div class="ttname"><a href="animaDistortionCorrection_8cxx.html#ace7f414039e764f5229a85f450521d1c">main</a></div><div class="ttdeci">int main(int ac, const char **av)</div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrection_8cxx_source.html#l00008">animaDistortionCorrection.cxx:8</a></div></div>
 <div class="ttc" id="animaDistortionCorrectionImageFilter_8h_html"><div class="ttname"><a href="animaDistortionCorrectionImageFilter_8h.html">animaDistortionCorrectionImageFilter.h</a></div></div>
 <div class="ttc" id="classanima_1_1DistortionCorrectionImageFilter_html"><div class="ttname"><a href="classanima_1_1DistortionCorrectionImageFilter.html">anima::DistortionCorrectionImageFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDistortionCorrectionImageFilter_8h_source.html#l00013">animaDistortionCorrectionImageFilter.h:13</a></div></div>
@@ -167,7 +166,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 10 2015 06:30:25 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 14 2015 06:30:38 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

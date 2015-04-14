@@ -127,49 +127,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">typedef</span> itk::Image &lt;unsigned short,3&gt; ImageType;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileReader &lt;ImageType&gt; ImageReaderType;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileWriter &lt;ImageType&gt; ImageWriterType;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ImageReaderType::Pointer inputRead = ImageReaderType::New();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    inputRead-&gt;SetFileName(inArg.getValue());</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    inputRead-&gt;Update();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">typedef</span> itk::Image &lt;float,3&gt; ProbaImageType;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileReader &lt;ProbaImageType&gt; ProbaImageReaderType;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileWriter &lt;ProbaImageType&gt; ProbaImageWriterType;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    ProbaImageReaderType::Pointer probaRead = ProbaImageReaderType::New();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    probaRead-&gt;SetFileName(probaArg.getValue());</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    probaRead-&gt;Update();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classanima_1_1InhomogeneousDiffusionImageFilter.html">anima::InhomogeneousDiffusionImageFilter &lt;ImageType, ProbaImageType, ProbaImageType&gt;</a> MainFilterType;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    MainFilterType::Pointer mainFilter = MainFilterType::New();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    mainFilter-&gt;SetInput(inputRead-&gt;GetOutput());</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    mainFilter-&gt;SetNumberOfThreads(nbpArg.getValue());</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    mainFilter-&gt;SetNumberOfSteps(numStepsArg.getValue());</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    mainFilter-&gt;SetStepLength(stepLengthArg.getValue());</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    mainFilter-&gt;SetDiffusionSourceFactor(diffSourceArg.getValue());</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    mainFilter-&gt;SetDiffusionScalarsImage(probaRead-&gt;GetOutput());</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    mainFilter-&gt;Update();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    ProbaImageWriterType::Pointer diffWriter = ProbaImageWriterType::New();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    diffWriter-&gt;SetInput(mainFilter-&gt;GetOutput());</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    diffWriter-&gt;SetFileName(outArg.getValue());</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    diffWriter-&gt;SetUseCompression(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    diffWriter-&gt;Update();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ImageReaderType::Pointer inputRead = ImageReaderType::New();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    inputRead-&gt;SetFileName(inArg.getValue());</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    inputRead-&gt;Update();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">typedef</span> itk::Image &lt;float,3&gt; ProbaImageType;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileReader &lt;ProbaImageType&gt; ProbaImageReaderType;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileWriter &lt;ProbaImageType&gt; ProbaImageWriterType;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ProbaImageReaderType::Pointer probaRead = ProbaImageReaderType::New();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    probaRead-&gt;SetFileName(probaArg.getValue());</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    probaRead-&gt;Update();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classanima_1_1InhomogeneousDiffusionImageFilter.html">anima::InhomogeneousDiffusionImageFilter &lt;ImageType, ProbaImageType, ProbaImageType&gt;</a> MainFilterType;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    MainFilterType::Pointer mainFilter = MainFilterType::New();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    mainFilter-&gt;SetInput(inputRead-&gt;GetOutput());</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    mainFilter-&gt;SetNumberOfThreads(nbpArg.getValue());</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    mainFilter-&gt;SetNumberOfSteps(numStepsArg.getValue());</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    mainFilter-&gt;SetStepLength(stepLengthArg.getValue());</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    mainFilter-&gt;SetDiffusionSourceFactor(diffSourceArg.getValue());</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    mainFilter-&gt;SetDiffusionScalarsImage(probaRead-&gt;GetOutput());</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    mainFilter-&gt;Update();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ProbaImageWriterType::Pointer diffWriter = ProbaImageWriterType::New();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    diffWriter-&gt;SetInput(mainFilter-&gt;GetOutput());</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    diffWriter-&gt;SetFileName(outArg.getValue());</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    diffWriter-&gt;SetUseCompression(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    diffWriter-&gt;Update();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 <div class="ttc" id="animaGrowLesionSeeds_8cxx_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="animaGrowLesionSeeds_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="animaGrowLesionSeeds_8cxx_source.html#l00007">animaGrowLesionSeeds.cxx:7</a></div></div>
 <div class="ttc" id="classanima_1_1InhomogeneousDiffusionImageFilter_html"><div class="ttname"><a href="classanima_1_1InhomogeneousDiffusionImageFilter.html">anima::InhomogeneousDiffusionImageFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="animaInhomogeneousDiffusionImageFilter_8h_source.html#l00013">animaInhomogeneousDiffusionImageFilter.h:13</a></div></div>
 <div class="ttc" id="animaInhomogeneousDiffusionImageFilter_8h_html"><div class="ttname"><a href="animaInhomogeneousDiffusionImageFilter_8h.html">animaInhomogeneousDiffusionImageFilter.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 10 2015 06:30:26 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 14 2015 06:30:38 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

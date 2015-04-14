@@ -112,7 +112,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="animaGradientFileReader_8h.html">animaGradientFileReader.h</a>&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;tclap/CmdLine.h&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="animaDDIDistribution_8hxx.html">animaDDIDistribution.hxx</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="animaDDIDistribution_8h.html">animaDDIDistribution.h</a>&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;itkSingleValuedCostFunction.h&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;itkDiffusionTensor3D.h&gt;</span></div>
@@ -144,114 +144,114 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">double</span> ScalarType;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">typedef</span> std::vector&lt;ScalarType&gt; BValueListType;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">typedef</span> std::vector&lt;ScalarType&gt; ParameterListType;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">typedef</span> vnl_vector_fixed&lt;double,3&gt; GradientType;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> std::vector&lt;GradientType &gt; GradientListType;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classanima_1_1GradientFileReader.html">anima::GradientFileReader &lt; GradientType, double &gt;</a> GFReaderType;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    GFReaderType gfReader;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    gfReader.<a class="code" href="classanima_1_1GradientFileReader.html#a7d5049c6aa9bc52333386c0c264fb9c7">SetGradientFileName</a>(gradsArg.getValue());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    gfReader.SetBValueBaseString(bvalArg.getValue());</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    gfReader.SetGradientIndependentNormalization(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    gfReader.Update();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    GradientListType gradients = gfReader.GetGradients();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    BValueListType bVal = gfReader.GetBValues();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> numberOfDirection = bVal.size();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">typedef</span> itk::VectorImage &lt;ScalarType, 3&gt; TInputImageType;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">typedef</span> itk::VectorImage &lt;ScalarType, 3&gt; TOutputImageType;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">/* Image typedef support */</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typedef</span> TInputImageType::Pointer InputImagePointer;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">typedef</span> TOutputImageType::Pointer OutputImagePointer;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileReader &lt; TInputImageType &gt; ImageReaderType;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    ImageReaderType::Pointer ddiReader = ImageReaderType::New();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    ddiReader-&gt;SetFileName(inArg.getValue());</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    ddiReader-&gt;Update();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    InputImagePointer ddiImage = ddiReader-&gt;GetOutput();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Loading DDI Image&quot;</span> &lt;&lt; inArg.getValue() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionIterator &lt;TInputImageType&gt; InputIteratorType;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionIterator &lt;TOutputImageType&gt; OutputIteratorType;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    OutputImagePointer outImage = TOutputImageType::New();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    outImage-&gt;Initialize();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    outImage-&gt;SetRegions(ddiImage-&gt;GetLargestPossibleRegion());</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    outImage-&gt;SetOrigin(ddiImage-&gt;GetOrigin());</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    outImage-&gt;SetDirection(ddiImage-&gt;GetDirection());</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    outImage-&gt;SetSpacing(ddiImage-&gt;GetSpacing());</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    outImage-&gt;SetVectorLength(numberOfDirection);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    outImage-&gt;Allocate();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">typedef</span> TInputImageType::PixelType InputPixelType;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    InputPixelType ddiValue;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">typedef</span> TOutputImageType::PixelType OutputPixelType;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfComponents = ddiImage-&gt;GetNumberOfComponentsPerPixel();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfCompartments = (numberOfComponents - 4) / <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    InputIteratorType ddiIt (ddiImage, ddiImage-&gt;GetLargestPossibleRegion());</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    OutputIteratorType outIt (outImage, outImage-&gt;GetLargestPossibleRegion());</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">typedef</span> vnl_vector_fixed&lt;double,3&gt; GradientType;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">typedef</span> std::vector&lt;GradientType &gt; GradientListType;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classanima_1_1GradientFileReader.html">anima::GradientFileReader &lt; GradientType, double &gt;</a> GFReaderType;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    GFReaderType gfReader;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    gfReader.<a class="code" href="classanima_1_1GradientFileReader.html#a7d5049c6aa9bc52333386c0c264fb9c7">SetGradientFileName</a>(gradsArg.getValue());</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    gfReader.SetBValueBaseString(bvalArg.getValue());</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    gfReader.SetGradientIndependentNormalization(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    gfReader.Update();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    GradientListType gradients = gfReader.GetGradients();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    BValueListType bVal = gfReader.GetBValues();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> numberOfDirection = bVal.size();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">typedef</span> itk::VectorImage &lt;ScalarType, 3&gt; TInputImageType;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">typedef</span> itk::VectorImage &lt;ScalarType, 3&gt; TOutputImageType;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">/* Image typedef support */</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">typedef</span> TInputImageType::Pointer InputImagePointer;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typedef</span> TOutputImageType::Pointer OutputImagePointer;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileReader &lt; TInputImageType &gt; ImageReaderType;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    ImageReaderType::Pointer ddiReader = ImageReaderType::New();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    ddiReader-&gt;SetFileName(inArg.getValue());</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    ddiReader-&gt;Update();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    InputImagePointer ddiImage = ddiReader-&gt;GetOutput();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Loading DDI Image&quot;</span> &lt;&lt; inArg.getValue() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionIterator &lt;TInputImageType&gt; InputIteratorType;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionIterator &lt;TOutputImageType&gt; OutputIteratorType;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    OutputImagePointer outImage = TOutputImageType::New();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    outImage-&gt;Initialize();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    outImage-&gt;SetRegions(ddiImage-&gt;GetLargestPossibleRegion());</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    outImage-&gt;SetOrigin(ddiImage-&gt;GetOrigin());</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    outImage-&gt;SetDirection(ddiImage-&gt;GetDirection());</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    outImage-&gt;SetSpacing(ddiImage-&gt;GetSpacing());</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    outImage-&gt;SetVectorLength(numberOfDirection);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    outImage-&gt;Allocate();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">typedef</span> TInputImageType::PixelType InputPixelType;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    InputPixelType ddiValue;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">typedef</span> TOutputImageType::PixelType OutputPixelType;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfComponents = ddiImage-&gt;GetNumberOfComponentsPerPixel();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfCompartments = (numberOfComponents - 4) / <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    InputIteratorType ddiIt (ddiImage, ddiImage-&gt;GetLargestPossibleRegion());</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    OutputIteratorType outIt (outImage, outImage-&gt;GetLargestPossibleRegion());</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">//    GradientListType directions;</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    GradientType* directions = <span class="keyword">new</span> GradientType[numberOfCompartments];</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">double</span> *kappa = <span class="keyword">new</span> <span class="keywordtype">double</span>[numberOfCompartments];</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">double</span> *lambda = <span class="keyword">new</span> <span class="keywordtype">double</span>[numberOfCompartments +1 ];</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">double</span> *a = <span class="keyword">new</span> <span class="keywordtype">double</span>[numberOfCompartments +1 ];</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">double</span> *w = <span class="keyword">new</span> <span class="keywordtype">double</span>[numberOfCompartments +1 ];</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    OutputPixelType voxelOutputValue(numberOfDirection);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">while</span>(!outIt.IsAtEnd())</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        w[numberOfCompartments] = 1;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        ddiValue = ddiIt.Get();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numberOfCompartments; ++i)</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j&lt;3; ++j)</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                directions[i][j] = ddiValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a> + j];</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            kappa[i] = ddiValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">anima::KappaIndex</a>];</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            lambda[i] = ddiValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">anima::DIndex</a>];</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            a[i] = ddiValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">anima::AIndex</a>];</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            w[i] = ddiValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">anima::WIndex</a>];</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            w[numberOfCompartments] -= w[i];</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        a[numberOfCompartments] = 0;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        lambda[numberOfCompartments] = 3.0e-3;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dir = 0; dir&lt;numberOfDirection; ++dir)</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            voxelOutputValue[dir] = b0ValueArg.getValue() * <a class="code" href="namespaceanima.html#a93f402a824a08bd50a922a4a8aeb939f">anima::ComputeMixtureSymmetricCDF</a>(numberOfCompartments, directions, kappa,</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                                                                                                    lambda, a, w, bVal[dir], gradients[dir]);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        outIt.Set(voxelOutputValue);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        ++outIt;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        ++ddiIt;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileWriter &lt; TOutputImageType &gt; ImageWriterType;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    ImageWriterType::Pointer outWriter = ImageWriterType::New();</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    outWriter-&gt;SetInput(outImage);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    outWriter-&gt;SetFileName(resArg.getValue());</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    outWriter-&gt;Update();</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Writing DWI Image : &quot;</span> &lt;&lt; resArg.getValue() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">//    GradientListType directions;</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    GradientType* directions = <span class="keyword">new</span> GradientType[numberOfCompartments];</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">double</span> *kappa = <span class="keyword">new</span> <span class="keywordtype">double</span>[numberOfCompartments];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">double</span> *lambda = <span class="keyword">new</span> <span class="keywordtype">double</span>[numberOfCompartments +1 ];</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">double</span> *a = <span class="keyword">new</span> <span class="keywordtype">double</span>[numberOfCompartments +1 ];</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">double</span> *w = <span class="keyword">new</span> <span class="keywordtype">double</span>[numberOfCompartments +1 ];</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    OutputPixelType voxelOutputValue(numberOfDirection);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">while</span>(!outIt.IsAtEnd())</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        w[numberOfCompartments] = 1;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        ddiValue = ddiIt.Get();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; numberOfCompartments; ++i)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j&lt;3; ++j)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                directions[i][j] = ddiValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a> + j];</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            kappa[i] = ddiValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">anima::KappaIndex</a>];</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            lambda[i] = ddiValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">anima::DIndex</a>];</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            a[i] = ddiValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">anima::AIndex</a>];</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            w[i] = ddiValue[i * <a class="code" href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a> + <a class="code" href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">anima::WIndex</a>];</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            w[numberOfCompartments] -= w[i];</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        a[numberOfCompartments] = 0;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        lambda[numberOfCompartments] = 3.0e-3;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dir = 0; dir&lt;numberOfDirection; ++dir)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            voxelOutputValue[dir] = b0ValueArg.getValue() * <a class="code" href="namespaceanima.html#a93f402a824a08bd50a922a4a8aeb939f">anima::ComputeMixtureSymmetricCDF</a>(numberOfCompartments, directions, kappa,</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                                                                                                    lambda, a, w, bVal[dir], gradients[dir]);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        outIt.Set(voxelOutputValue);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        ++outIt;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        ++ddiIt;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">typedef</span> itk::ImageFileWriter &lt; TOutputImageType &gt; ImageWriterType;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    ImageWriterType::Pointer outWriter = ImageWriterType::New();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    outWriter-&gt;SetInput(outImage);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    outWriter-&gt;SetFileName(resArg.getValue());</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    outWriter-&gt;Update();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Writing DWI Image : &quot;</span> &lt;&lt; resArg.getValue() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a5ddc6b76a6b7f1eb0565bbea5989999e">anima::WIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00052">animaDDIDistribution.h:52</a></div></div>
+<div class="ttc" id="animaDDIDistribution_8h_html"><div class="ttname"><a href="animaDDIDistribution_8h.html">animaDDIDistribution.h</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a962a4016ab35eed87e2cc385492388ae">anima::AIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00051">animaDDIDistribution.h:51</a></div></div>
 <div class="ttc" id="namespaceanima_html_a05abe09681186cd0dba9537d06193437"><div class="ttname"><a href="namespaceanima.html#a05abe09681186cd0dba9537d06193437">anima::CompartmentSize</a></div><div class="ttdeci">static const unsigned int CompartmentSize</div><div class="ttdoc">A DDI compartment is composed of six components. </div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00042">animaDDIDistribution.h:42</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2a09756b2934b59f4ce717cade136e3afb">anima::DIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00050">animaDDIDistribution.h:50</a></div></div>
@@ -261,12 +261,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespaceanima_html_a93f402a824a08bd50a922a4a8aeb939f"><div class="ttname"><a href="namespaceanima.html#a93f402a824a08bd50a922a4a8aeb939f">anima::ComputeMixtureSymmetricCDF</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double ComputeMixtureSymmetricCDF(const unsigned int &amp;NbComponents, const T2 *Directions, const T1 *Kappa, const T1 *Lambda, const T1 *Nu, const T1 *W, const T1 &amp;b, const VectorType &amp;grad)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00319">animaDDIDistribution.hxx:319</a></div></div>
 <div class="ttc" id="animaGradientFileReader_8h_html"><div class="ttname"><a href="animaGradientFileReader_8h.html">animaGradientFileReader.h</a></div></div>
 <div class="ttc" id="namespaceanima_html_acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb"><div class="ttname"><a href="namespaceanima.html#acfdf4a7b37b8e1de6fc2e4e7dcc459e2ad327a75e3d09a4645175ed148ffaf1fb">anima::KappaIndex</a></div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8h_source.html#l00049">animaDDIDistribution.h:49</a></div></div>
-<div class="ttc" id="animaDDIDistribution_8hxx_html"><div class="ttname"><a href="animaDDIDistribution_8hxx.html">animaDDIDistribution.hxx</a></div></div>
 <div class="ttc" id="animaDWISimulationFromDDI_8cxx_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="animaDWISimulationFromDDI_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="animaDWISimulationFromDDI_8cxx_source.html#l00024">animaDWISimulationFromDDI.cxx:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 10 2015 06:30:25 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 14 2015 06:30:38 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

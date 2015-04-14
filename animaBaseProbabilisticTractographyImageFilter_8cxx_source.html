@@ -1437,31 +1437,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;    Input4DImageType::RegionType region4d = in4DImage-&gt;GetLargestPossibleRegion();</div>
 <div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;    region4d.SetSize(3,0);</div>
 <div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;</div>
-<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionIterator &lt;InputImageType&gt; ImageIteratorType;</div>
-<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;    <span class="keyword">typedef</span> itk::ImageRegionConstIterator &lt;Input4DImageType&gt; Image4DIteratorType;</div>
-<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;    <span class="keyword">typedef</span> itk::ExtractImageFilter &lt;Input4DImageType,InputImageType&gt; ImageExtractorType;</div>
-<div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;    <span class="keyword">typedef</span> ImageExtractorType::Pointer ImageExtractorPointer;</div>
+<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;    <span class="keyword">typedef</span> itk::ExtractImageFilter &lt;Input4DImageType,InputImageType&gt; ImageExtractorType;</div>
+<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;    <span class="keyword">typedef</span> ImageExtractorType::Pointer ImageExtractorPointer;</div>
+<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;</div>
+<div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Loading &quot;</span> &lt;&lt; ndim &lt;&lt; <span class="stringliteral">&quot; input DWIs from 4D image...&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;</div>
-<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Loading &quot;</span> &lt;&lt; ndim &lt;&lt; <span class="stringliteral">&quot; input DWIs from 4D image...&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;</div>
-<div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;    m_InputImages.resize(ndim);</div>
-<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; ndim;++i)</div>
-<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;    {</div>
-<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;        region4d.SetIndex(3,i);</div>
-<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;</div>
-<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;        ImageExtractorPointer imageExtractor = ImageExtractorType::New();</div>
-<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;        imageExtractor-&gt;SetInput(in4DImage);</div>
-<div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;        imageExtractor-&gt;SetExtractionRegion(region4d);</div>
-<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;        imageExtractor-&gt;SetDirectionCollapseToGuess();</div>
+<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;    m_InputImages.resize(ndim);</div>
+<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; ndim;++i)</div>
+<div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;    {</div>
+<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;        region4d.SetIndex(3,i);</div>
+<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;</div>
+<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;        ImageExtractorPointer imageExtractor = ImageExtractorType::New();</div>
+<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;        imageExtractor-&gt;SetInput(in4DImage);</div>
+<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;        imageExtractor-&gt;SetExtractionRegion(region4d);</div>
+<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;        imageExtractor-&gt;SetDirectionCollapseToGuess();</div>
+<div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;</div>
+<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;        imageExtractor-&gt;Update();</div>
 <div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;</div>
-<div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;        imageExtractor-&gt;Update();</div>
-<div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;</div>
-<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;        m_InputImages[i] = imageExtractor-&gt;GetOutput();</div>
-<div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;        m_InputImages[i]-&gt;DisconnectPipeline();</div>
-<div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;    }</div>
-<div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;}</div>
-<div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;</div>
-<div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;} <span class="comment">// end of namespace anima</span></div>
+<div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;        m_InputImages[i] = imageExtractor-&gt;GetOutput();</div>
+<div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;        m_InputImages[i]-&gt;DisconnectPipeline();</div>
+<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;    }</div>
+<div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;}</div>
+<div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;</div>
+<div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;} <span class="comment">// end of namespace anima</span></div>
 <div class="ttc" id="classanima_1_1BaseProbabilisticTractographyImageFilter_html_a6e6e89ba59fc2bf9df7dc7ac661b0239a720ab6043c4f44d4884d8c874d299626"><div class="ttname"><a href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a6e6e89ba59fc2bf9df7dc7ac661b0239a720ab6043c4f44d4884d8c874d299626">anima::BaseProbabilisticTractographyImageFilter::Outward</a></div><div class="ttdef"><b>Definition:</b> <a href="animaBaseProbabilisticTractographyImageFilter_8h_source.html#l00091">animaBaseProbabilisticTractographyImageFilter.h:91</a></div></div>
 <div class="ttc" id="classanima_1_1BaseProbabilisticTractographyImageFilter_html_a6e6e89ba59fc2bf9df7dc7ac661b0239a33317ce91cbfc1077dfb65dbf60cb730"><div class="ttname"><a href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a6e6e89ba59fc2bf9df7dc7ac661b0239a33317ce91cbfc1077dfb65dbf60cb730">anima::BaseProbabilisticTractographyImageFilter::Right</a></div><div class="ttdef"><b>Definition:</b> <a href="animaBaseProbabilisticTractographyImageFilter_8h_source.html#l00095">animaBaseProbabilisticTractographyImageFilter.h:95</a></div></div>
 <div class="ttc" id="classanima_1_1BaseProbabilisticTractographyImageFilter_html_ade9a5acac24f892cbe837212b0522a36"><div class="ttname"><a href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#ade9a5acac24f892cbe837212b0522a36">anima::BaseProbabilisticTractographyImageFilter::InitializeFirstIterationFromModel</a></div><div class="ttdeci">virtual Vector3DType InitializeFirstIterationFromModel(Vector3DType &amp;colinearDir, VectorType &amp;modelValue, boost::mt19937 &amp;random_generator)=0</div><div class="ttdoc">Initialize first direction from user input (model dependent, not implemented here) ...</div></div>
@@ -1530,7 +1528,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 10 2015 06:30:25 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 14 2015 06:30:37 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

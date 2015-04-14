@@ -8,11 +8,11 @@
 <area shape="rect" id="node19" href="$animaDTIProbabilisticTractographyImageFilter_8cxx.html" title="animaDTIProbabilisticTractography\lImageFilter.cxx" alt="" coords="917,443,1139,485"/>
 <area shape="rect" id="node20" href="$animaDTITractographyImageFilter_8cxx.html" title="animaDTITractographyImage\lFilter.cxx" alt="" coords="4465,81,4655,122"/>
 <area shape="rect" id="node21" href="$animaODFProbabilisticTractographyImageFilter_8cxx.html" title="animaODFProbabilisticTractography\lImageFilter.cxx" alt="" coords="304,443,533,485"/>
-<area shape="rect" id="node22" href="$animaMatrixOperations_8hxx.html" title="animaMatrixOperations.hxx" alt="" coords="603,88,779,115"/>
+<area shape="rect" id="node22" href="$animaMatrixOperations_8hxx.html" title="animaMatrixOperations.hxx" alt="" coords="735,88,911,115"/>
 <area shape="rect" id="node26" href="$animaDistributionSampling_8hxx.html" title="animaDistributionSampling.hxx" alt="" coords="1045,269,1243,296"/>
 <area shape="rect" id="node29" href="$animaVectorOperations_8hxx.html" title="animaVectorOperations.hxx" alt="" coords="4679,88,4857,115"/>
 <area shape="rect" id="node30" href="$animaODFFunctions_8cxx.html" title="animaODFFunctions.cxx" alt="" coords="4881,88,5044,115"/>
-<area shape="rect" id="node31" href="$animaDDIDistribution_8hxx.html" title="animaDDIDistribution.hxx" alt="" coords="2687,88,2851,115"/>
+<area shape="rect" id="node31" href="$animaDDIDistribution_8hxx.html" title="animaDDIDistribution.hxx" alt="" coords="2459,88,2623,115"/>
 <area shape="rect" id="node43" href="$animaVMFDistribution_8hxx.html" title="animaVMFDistribution.hxx" alt="" coords="144,269,315,296"/>
 <area shape="rect" id="node45" href="$animaWatsonDistribution_8hxx.html" title="animaWatsonDistribution.hxx" alt="" coords="835,269,1021,296"/>
 <area shape="rect" id="node47" href="$animaPyramidalSymmetryBridge_8txx.html" title="animaPyramidalSymmetryBridge.txx" alt="" coords="5069,88,5296,115"/>
@@ -28,7 +28,7 @@
 <area shape="rect" id="node12" href="$animaODFProbabilisticTractography_8cxx.html" title="animaODFProbabilisticTractography.cxx" alt="" coords="4823,269,5073,296"/>
 <area shape="rect" id="node14" href="$animaDTIEstimationImageFilter_8h.html" title="animaDTIEstimationImageFilter.h" alt="" coords="4131,179,4344,205"/>
 <area shape="rect" id="node16" href="$animaODFEstimatorImageFilter_8h.html" title="animaODFEstimatorImageFilter.h" alt="" coords="4368,179,4581,205"/>
-<area shape="rect" id="node23" href="$animaMatrixOperations_8h.html" title="animaMatrixOperations.h" alt="" coords="489,179,652,205"/>
+<area shape="rect" id="node23" href="$animaMatrixOperations_8h.html" title="animaMatrixOperations.h" alt="" coords="542,179,705,205"/>
 <area shape="rect" id="node24" href="$animaRandomDDIGenerator_8cxx.html" title="animaRandomDDIGenerator.cxx" alt="" coords="390,269,596,296"/>
 <area shape="rect" id="node25" href="$animaDDIAveragingTools_8hxx.html" title="animaDDIAveragingTools.hxx" alt="" coords="621,269,811,296"/>
 <area shape="rect" id="node27" href="$animaDistributionSampling_8h.html" title="animaDistributionSampling.h" alt="" coords="1046,360,1231,387"/>

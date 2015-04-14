@@ -233,131 +233,128 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a4a7fe0c38b04e2f9d6ec42f0245d4f7f">InhomogeneousAOSLineDiffusionImageFilter&lt;TInputImage,TDiffusionScalarImage,TOutputImage&gt;</a></div>
 <div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a4a7fe0c38b04e2f9d6ec42f0245d4f7f">  146</a></span>&#160;<a class="code" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a4a7fe0c38b04e2f9d6ec42f0245d4f7f">    ::BeforeThreadedGenerateData</a>()</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keyword">typedef</span> itk::ImageRegion&lt; TInputImage::ImageDimension &gt; RegionType;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keyword">typename</span> TInputImage::ConstPointer inputImage(this-&gt;GetInputImage());</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">typename</span> TInputImage::ConstPointer inputImage(this-&gt;GetInputImage());</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keyword">typename</span> TOutputImage::Pointer outputImage(this-&gt;GetOutput());</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> imageDimension = inputImage-&gt;GetImageDimension();</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">if</span>( this-&gt;m_Direction &gt;= imageDimension )</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            itkExceptionMacro(<span class="stringliteral">&quot;Direction selected for filtering is greater than ImageDimension&quot;</span>);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        this-&gt;m_ImageRegionSplitter-&gt;SetDirection(m_Direction);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        m_SquareGradientDelta = (inputImage-&gt;GetSpacing()[m_Direction]) * (inputImage-&gt;GetSpacing()[m_Direction]);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage, <span class="keyword">typename</span> TDiffusionScalarImage, <span class="keyword">typename</span> TOutputImage&gt;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a0f843504578696359312c8eaf89e998e">InhomogeneousAOSLineDiffusionImageFilter&lt;TInputImage,TDiffusionScalarImage,TOutputImage&gt;</a></div>
-<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a0f843504578696359312c8eaf89e998e">  172</a></span>&#160;<a class="code" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a0f843504578696359312c8eaf89e998e">    ::ThreadedGenerateData</a>(<span class="keyword">const</span> <a class="code" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a9bc140ca6541b8237be5c96691216547">OutputImageRegionType</a>&amp; outputRegionForThread, itk::ThreadIdType threadId)</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> TOutputImage::PixelType  OutputPixelType;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keyword">typedef</span> itk::ImageLinearConstIteratorWithIndex&lt; TInputImage &gt;  InputConstIteratorType;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keyword">typedef</span> itk::ImageLinearConstIteratorWithIndex&lt; TDiffusionScalarImage &gt;  DiffusionScalarConstIteratorType;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">typedef</span> itk::ImageLinearIteratorWithIndex&lt; TOutputImage &gt;      OutputIteratorType;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keyword">typedef</span> itk::ImageRegion&lt; TInputImage::ImageDimension &gt; RegionType;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> imageDimension = inputImage-&gt;GetImageDimension();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">if</span>( this-&gt;m_Direction &gt;= imageDimension )</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            itkExceptionMacro(<span class="stringliteral">&quot;Direction selected for filtering is greater than ImageDimension&quot;</span>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        this-&gt;m_ImageRegionSplitter-&gt;SetDirection(m_Direction);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        m_SquareGradientDelta = (inputImage-&gt;GetSpacing()[m_Direction]) * (inputImage-&gt;GetSpacing()[m_Direction]);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage, <span class="keyword">typename</span> TDiffusionScalarImage, <span class="keyword">typename</span> TOutputImage&gt;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a0f843504578696359312c8eaf89e998e">InhomogeneousAOSLineDiffusionImageFilter&lt;TInputImage,TDiffusionScalarImage,TOutputImage&gt;</a></div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a0f843504578696359312c8eaf89e998e">  169</a></span>&#160;<a class="code" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a0f843504578696359312c8eaf89e998e">    ::ThreadedGenerateData</a>(<span class="keyword">const</span> <a class="code" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a9bc140ca6541b8237be5c96691216547">OutputImageRegionType</a>&amp; outputRegionForThread, itk::ThreadIdType threadId)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> TOutputImage::PixelType  OutputPixelType;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">typedef</span> itk::ImageLinearConstIteratorWithIndex&lt; TInputImage &gt;  InputConstIteratorType;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keyword">typedef</span> itk::ImageLinearConstIteratorWithIndex&lt; TDiffusionScalarImage &gt;  DiffusionScalarConstIteratorType;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keyword">typedef</span> itk::ImageLinearIteratorWithIndex&lt; TOutputImage &gt;      OutputIteratorType;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keyword">typedef</span> itk::ImageRegion&lt; TInputImage::ImageDimension &gt; RegionType;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keyword">typename</span> TInputImage::ConstPointer inputImage(this-&gt;GetInputImage ());</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keyword">typename</span> TOutputImage::Pointer outputImage(this-&gt;GetOutput());</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keyword">typename</span> TInputImage::ConstPointer inputImage(this-&gt;GetInputImage ());</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keyword">typename</span> TOutputImage::Pointer outputImage(this-&gt;GetOutput());</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        RegionType region = outputRegionForThread;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        InputConstIteratorType inputIterator(inputImage,  region);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        DiffusionScalarConstIteratorType diffScalarsIterator(m_DiffusionScalarsImage, region);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        OutputIteratorType outputIterator(outputImage, region);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        inputIterator.SetDirection(this-&gt;m_Direction);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        diffScalarsIterator.SetDirection(this-&gt;m_Direction);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        outputIterator.SetDirection(this-&gt;m_Direction);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ln = region.GetSize()[this-&gt;m_Direction];</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        std::vector &lt;RealType&gt; inps(ln);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        std::vector &lt;RealType&gt; diffs(ln);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        std::vector &lt;RealType&gt; outs(ln);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        std::vector &lt;RealType&gt; scratch(ln);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        std::vector &lt;RealType&gt; l_coefs(ln);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        std::vector &lt;RealType&gt; m_coefs(ln);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        std::vector &lt;RealType&gt; r_coefs(ln);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">try</span>  <span class="comment">// this try is intended to catch an eventual AbortException.</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            inputIterator.GoToBegin();</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            diffScalarsIterator.GoToBegin();</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            outputIterator.GoToBegin();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        RegionType region = outputRegionForThread;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        InputConstIteratorType inputIterator(inputImage,  region);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        DiffusionScalarConstIteratorType diffScalarsIterator(m_DiffusionScalarsImage, region);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        OutputIteratorType outputIterator(outputImage, region);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        inputIterator.SetDirection(this-&gt;m_Direction);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        diffScalarsIterator.SetDirection(this-&gt;m_Direction);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        outputIterator.SetDirection(this-&gt;m_Direction);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ln = region.GetSize()[this-&gt;m_Direction];</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        std::vector &lt;RealType&gt; inps(ln);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        std::vector &lt;RealType&gt; diffs(ln);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        std::vector &lt;RealType&gt; outs(ln);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        std::vector &lt;RealType&gt; scratch(ln);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        std::vector &lt;RealType&gt; l_coefs(ln);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        std::vector &lt;RealType&gt; m_coefs(ln);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        std::vector &lt;RealType&gt; r_coefs(ln);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">try</span>  <span class="comment">// this try is intended to catch an eventual AbortException.</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            inputIterator.GoToBegin();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            diffScalarsIterator.GoToBegin();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            outputIterator.GoToBegin();</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfLinesToProcess = outputRegionForThread.GetNumberOfPixels() / outputRegionForThread.GetSize(this-&gt;m_Direction);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            itk::ProgressReporter progress(<span class="keyword">this</span>, threadId, numberOfLinesToProcess, 10);</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numberOfLinesToProcess = outputRegionForThread.GetNumberOfPixels() / outputRegionForThread.GetSize(this-&gt;m_Direction);</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            itk::ProgressReporter progress(<span class="keyword">this</span>, threadId, numberOfLinesToProcess, 10);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">while</span>(!inputIterator.IsAtEnd())</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            {</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                <span class="keywordflow">while</span>(!inputIterator.IsAtEndOfLine())</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                {</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    diffs[i] = diffScalarsIterator.Get();</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                    inps[i++] = inputIterator.Get();</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    ++inputIterator;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                    ++diffScalarsIterator;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                }</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                </div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                this-&gt;FilterDataArray(outs, inps, diffs, scratch, l_coefs, m_coefs, r_coefs);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                <span class="keywordflow">while</span>(!outputIterator.IsAtEndOfLine())</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                    outputIterator.Set(static_cast&lt;OutputPixelType&gt;(outs[j++]));</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                    ++outputIterator;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                }</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                </div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                inputIterator.NextLine();</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                diffScalarsIterator.NextLine();</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                outputIterator.NextLine();</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                <span class="comment">// Although the method name is CompletedPixel(),</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                <span class="comment">// this is being called after each line is processed</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                progress.CompletedPixel();  </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            }</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">catch</span>(itk::ProcessAborted &amp;)</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordflow">throw</span>;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage, <span class="keyword">typename</span> TDiffusionScalarImage, <span class="keyword">typename</span> TOutputImage&gt;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <a class="code" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a25df4176fc84b3e196263e9107445001">InhomogeneousAOSLineDiffusionImageFilter&lt;TInputImage,TDiffusionScalarImage,TOutputImage&gt;</a></div>
-<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a25df4176fc84b3e196263e9107445001">  253</a></span>&#160;<a class="code" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a25df4176fc84b3e196263e9107445001">    ::PrintSelf</a>(std::ostream&amp; os, itk::Indent indent)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        Superclass::PrintSelf(os,indent);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Direction: &quot;</span> &lt;&lt; m_Direction &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        os &lt;&lt; <span class="stringliteral">&quot;Time step: &quot;</span> &lt;&lt; m_TimeStep &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;} <span class="comment">// end namespace anima</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keywordflow">while</span>(!inputIterator.IsAtEnd())</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="keywordflow">while</span>(!inputIterator.IsAtEndOfLine())</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                    diffs[i] = diffScalarsIterator.Get();</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                    inps[i++] = inputIterator.Get();</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    ++inputIterator;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                    ++diffScalarsIterator;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                this-&gt;FilterDataArray(outs, inps, diffs, scratch, l_coefs, m_coefs, r_coefs);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                <span class="keywordflow">while</span>(!outputIterator.IsAtEndOfLine())</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                    outputIterator.Set(static_cast&lt;OutputPixelType&gt;(outs[j++]));</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                    ++outputIterator;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                inputIterator.NextLine();</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                diffScalarsIterator.NextLine();</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                outputIterator.NextLine();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                <span class="comment">// Although the method name is CompletedPixel(),</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                <span class="comment">// this is being called after each line is processed</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                progress.CompletedPixel();  </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">catch</span>(itk::ProcessAborted &amp;)</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">throw</span>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TInputImage, <span class="keyword">typename</span> TDiffusionScalarImage, <span class="keyword">typename</span> TOutputImage&gt;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a25df4176fc84b3e196263e9107445001">InhomogeneousAOSLineDiffusionImageFilter&lt;TInputImage,TDiffusionScalarImage,TOutputImage&gt;</a></div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a25df4176fc84b3e196263e9107445001">  250</a></span>&#160;<a class="code" href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a25df4176fc84b3e196263e9107445001">    ::PrintSelf</a>(std::ostream&amp; os, itk::Indent indent)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        Superclass::PrintSelf(os,indent);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        os &lt;&lt; indent &lt;&lt; <span class="stringliteral">&quot;Direction: &quot;</span> &lt;&lt; m_Direction &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        os &lt;&lt; <span class="stringliteral">&quot;Time step: &quot;</span> &lt;&lt; m_TimeStep &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;} <span class="comment">// end namespace anima</span></div>
 <div class="ttc" id="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter_html_a352671e879073ffdbb6dcb2e94244eec"><div class="ttname"><a href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a352671e879073ffdbb6dcb2e94244eec">anima::InhomogeneousAOSLineDiffusionImageFilter::SetInputImage</a></div><div class="ttdeci">void SetInputImage(const TInputImage *)</div><div class="ttdef"><b>Definition:</b> <a href="animaInhomogeneousAOSLineDiffusionImageFilter_8hxx_source.html#l00034">animaInhomogeneousAOSLineDiffusionImageFilter.hxx:34</a></div></div>
 <div class="ttc" id="animaInhomogeneousAOSLineDiffusionImageFilter_8h_html"><div class="ttname"><a href="animaInhomogeneousAOSLineDiffusionImageFilter_8h.html">animaInhomogeneousAOSLineDiffusionImageFilter.h</a></div></div>
 <div class="ttc" id="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter_html_afa45042431cf6fd537a23f249156962d"><div class="ttname"><a href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#afa45042431cf6fd537a23f249156962d">anima::InhomogeneousAOSLineDiffusionImageFilter::FilterDataArray</a></div><div class="ttdeci">void FilterDataArray(std::vector&lt; RealType &gt; &amp;outs, const std::vector&lt; RealType &gt; &amp;data, std::vector&lt; RealType &gt; &amp;diffs, std::vector&lt; RealType &gt; &amp;scratch, std::vector&lt; RealType &gt; &amp;l_coefs, std::vector&lt; RealType &gt; &amp;m_coefs, std::vector&lt; RealType &gt; &amp;r_coefs)</div><div class="ttdef"><b>Definition:</b> <a href="animaInhomogeneousAOSLineDiffusionImageFilter_8hxx_source.html#l00057">animaInhomogeneousAOSLineDiffusionImageFilter.hxx:57</a></div></div>
 <div class="ttc" id="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter_html_a9bc140ca6541b8237be5c96691216547"><div class="ttname"><a href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a9bc140ca6541b8237be5c96691216547">anima::InhomogeneousAOSLineDiffusionImageFilter::OutputImageRegionType</a></div><div class="ttdeci">TOutputImage::RegionType OutputImageRegionType</div><div class="ttdef"><b>Definition:</b> <a href="animaInhomogeneousAOSLineDiffusionImageFilter_8h_source.html#l00039">animaInhomogeneousAOSLineDiffusionImageFilter.h:39</a></div></div>
-<div class="ttc" id="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter_html_a25df4176fc84b3e196263e9107445001"><div class="ttname"><a href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a25df4176fc84b3e196263e9107445001">anima::InhomogeneousAOSLineDiffusionImageFilter::PrintSelf</a></div><div class="ttdeci">void PrintSelf(std::ostream &amp;os, itk::Indent indent) const </div><div class="ttdef"><b>Definition:</b> <a href="animaInhomogeneousAOSLineDiffusionImageFilter_8hxx_source.html#l00253">animaInhomogeneousAOSLineDiffusionImageFilter.hxx:253</a></div></div>
+<div class="ttc" id="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter_html_a25df4176fc84b3e196263e9107445001"><div class="ttname"><a href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a25df4176fc84b3e196263e9107445001">anima::InhomogeneousAOSLineDiffusionImageFilter::PrintSelf</a></div><div class="ttdeci">void PrintSelf(std::ostream &amp;os, itk::Indent indent) const </div><div class="ttdef"><b>Definition:</b> <a href="animaInhomogeneousAOSLineDiffusionImageFilter_8hxx_source.html#l00250">animaInhomogeneousAOSLineDiffusionImageFilter.hxx:250</a></div></div>
 <div class="ttc" id="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter_html_a4a7fe0c38b04e2f9d6ec42f0245d4f7f"><div class="ttname"><a href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a4a7fe0c38b04e2f9d6ec42f0245d4f7f">anima::InhomogeneousAOSLineDiffusionImageFilter::BeforeThreadedGenerateData</a></div><div class="ttdeci">void BeforeThreadedGenerateData()</div><div class="ttdef"><b>Definition:</b> <a href="animaInhomogeneousAOSLineDiffusionImageFilter_8hxx_source.html#l00146">animaInhomogeneousAOSLineDiffusionImageFilter.hxx:146</a></div></div>
 <div class="ttc" id="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter_html_a8d00fe9f3587d30892aeb391a0835ada"><div class="ttname"><a href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a8d00fe9f3587d30892aeb391a0835ada">anima::InhomogeneousAOSLineDiffusionImageFilter::EnlargeOutputRequestedRegion</a></div><div class="ttdeci">void EnlargeOutputRequestedRegion(itk::DataObject *output)</div><div class="ttdef"><b>Definition:</b> <a href="animaInhomogeneousAOSLineDiffusionImageFilter_8hxx_source.html#l00112">animaInhomogeneousAOSLineDiffusionImageFilter.hxx:112</a></div></div>
 <div class="ttc" id="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter_html_ab9ef347f16eaf78daf6911f3bc38fb06"><div class="ttname"><a href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#ab9ef347f16eaf78daf6911f3bc38fb06">anima::InhomogeneousAOSLineDiffusionImageFilter::InhomogeneousAOSLineDiffusionImageFilter</a></div><div class="ttdeci">InhomogeneousAOSLineDiffusionImageFilter()</div><div class="ttdef"><b>Definition:</b> <a href="animaInhomogeneousAOSLineDiffusionImageFilter_8hxx_source.html#l00016">animaInhomogeneousAOSLineDiffusionImageFilter.hxx:16</a></div></div>
 <div class="ttc" id="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter_html_aa8e39c7ce6d8dc66a9da0b1bcbbca9b4"><div class="ttname"><a href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#aa8e39c7ce6d8dc66a9da0b1bcbbca9b4">anima::InhomogeneousAOSLineDiffusionImageFilter::GetInputImage</a></div><div class="ttdeci">const TInputImage * GetInputImage(void)</div><div class="ttdef"><b>Definition:</b> <a href="animaInhomogeneousAOSLineDiffusionImageFilter_8hxx_source.html#l00046">animaInhomogeneousAOSLineDiffusionImageFilter.hxx:46</a></div></div>
 <div class="ttc" id="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter_html_a17923e5d67612d0d0b2b80bda60d0cf4"><div class="ttname"><a href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a17923e5d67612d0d0b2b80bda60d0cf4">anima::InhomogeneousAOSLineDiffusionImageFilter::GetImageRegionSplitter</a></div><div class="ttdeci">virtual const itk::ImageRegionSplitterBase * GetImageRegionSplitter(void) const </div><div class="ttdef"><b>Definition:</b> <a href="animaInhomogeneousAOSLineDiffusionImageFilter_8hxx_source.html#l00138">animaInhomogeneousAOSLineDiffusionImageFilter.hxx:138</a></div></div>
-<div class="ttc" id="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter_html_a0f843504578696359312c8eaf89e998e"><div class="ttname"><a href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a0f843504578696359312c8eaf89e998e">anima::InhomogeneousAOSLineDiffusionImageFilter::ThreadedGenerateData</a></div><div class="ttdeci">void ThreadedGenerateData(const OutputImageRegionType &amp;outputRegionForThread, itk::ThreadIdType threadId)</div><div class="ttdef"><b>Definition:</b> <a href="animaInhomogeneousAOSLineDiffusionImageFilter_8hxx_source.html#l00172">animaInhomogeneousAOSLineDiffusionImageFilter.hxx:172</a></div></div>
+<div class="ttc" id="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter_html_a0f843504578696359312c8eaf89e998e"><div class="ttname"><a href="classanima_1_1InhomogeneousAOSLineDiffusionImageFilter.html#a0f843504578696359312c8eaf89e998e">anima::InhomogeneousAOSLineDiffusionImageFilter::ThreadedGenerateData</a></div><div class="ttdeci">void ThreadedGenerateData(const OutputImageRegionType &amp;outputRegionForThread, itk::ThreadIdType threadId)</div><div class="ttdef"><b>Definition:</b> <a href="animaInhomogeneousAOSLineDiffusionImageFilter_8hxx_source.html#l00169">animaInhomogeneousAOSLineDiffusionImageFilter.hxx:169</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 10 2015 06:30:26 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 14 2015 06:30:38 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
