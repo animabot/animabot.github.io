@@ -1,5 +1,6 @@
 <map id="animaDistortionCorrectionRegistrationMethod.h" name="animaDistortionCorrectionRegistrationMethod.h">
-<area shape="rect" id="node2" href="$animaPyramidalDistortionCorrectionBlockMatchingBridge_8hxx.html" title="animaPyramidalDistortion\lCorrectionBlockMatchingBridge.hxx" alt="" coords="5,97,232,138"/>
-<area shape="rect" id="node3" href="$animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html" title="animaPyramidalDistortion\lCorrectionBlockMatchingBridge.h" alt="" coords="11,187,225,229"/>
-<area shape="rect" id="node4" href="$animaBMDistortionCorrection_8cxx.html" title="animaBMDistortionCorrection.cxx" alt="" coords="13,277,224,304"/>
+<area shape="rect" id="node2" href="$animaDistortionCorrectionRegistrationMethod_8hxx.html" title="animaDistortionCorrection\lRegistrationMethod.hxx" alt="" coords="5,97,176,138"/>
+<area shape="rect" id="node3" href="$animaPyramidalDistortionCorrectionBlockMatchingBridge_8hxx.html" title="animaPyramidalDistortion\lCorrectionBlockMatchingBridge.hxx" alt="" coords="200,97,427,138"/>
+<area shape="rect" id="node4" href="$animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html" title="animaPyramidalDistortion\lCorrectionBlockMatchingBridge.h" alt="" coords="206,187,420,229"/>
+<area shape="rect" id="node5" href="$animaBMDistortionCorrection_8cxx.html" title="animaBMDistortionCorrection.cxx" alt="" coords="207,277,419,304"/>
 </map>

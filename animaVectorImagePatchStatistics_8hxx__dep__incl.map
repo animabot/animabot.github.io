@@ -1,6 +1,6 @@
 <map id="animaVectorImagePatchStatistics.hxx" name="animaVectorImagePatchStatistics.hxx">
 <area shape="rect" id="node2" href="$animaVectorImagePatchStatistics_8h.html" title="animaVectorImagePatchStatistics.h" alt="" coords="876,80,1103,107"/>
-<area shape="rect" id="node3" href="$animaLocalPatchCovarianceDistanceImageFilter_8hxx.html" title="animaLocalPatchCovariance\lDistanceImageFilter.hxx" alt="" coords="423,155,609,197"/>
+<area shape="rect" id="node3" href="$animaLocalPatchCovarianceDistanceImageFilter_8hxx.html" title="animaLocalPatchCovariance\lDistanceImageFilter.hxx" alt="" coords="283,155,469,197"/>
 <area shape="rect" id="node9" href="$animaLocalPatchMeanDistanceImageFilter_8hxx.html" title="animaLocalPatchMeanDistance\lImageFilter.hxx" alt="" coords="773,155,976,197"/>
 <area shape="rect" id="node15" href="$animaNLMeansPatientToGroupComparisonImageFilter_8hxx.html" title="animaNLMeansPatientToGroup\lComparisonImageFilter.hxx" alt="" coords="1003,155,1205,197"/>
 <area shape="rect" id="node19" href="$animaLowMemNLMeansPatientToGroupComparisonBridge_8cxx.html" title="animaLowMemNLMeansPatient\lToGroupComparisonBridge.cxx" alt="" coords="1299,427,1503,469"/>

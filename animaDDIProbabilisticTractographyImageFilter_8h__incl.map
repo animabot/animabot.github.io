@@ -1,6 +1,6 @@
 <map id="animaDDIProbabilisticTractographyImageFilter.h" name="animaDDIProbabilisticTractographyImageFilter.h">
 <area shape="rect" id="node2" href="$animaBaseProbabilisticTractographyImageFilter_8h.html" title="animaBaseProbabilisticTractography\lImageFilter.h" alt="" coords="2325,97,2555,138"/>
-<area shape="rect" id="node18" href="$animaDDILinearInterpolateImageFunction_8h.html" title="animaDDILinearInterpolate\lImageFunction.h" alt="" coords="1750,97,1924,138"/>
+<area shape="rect" id="node18" href="$animaDDILinearInterpolateImageFunction_8h.html" title="animaDDILinearInterpolate\lImageFunction.h" alt="" coords="1662,97,1836,138"/>
 <area shape="rect" id="node19" href="$animaDDIDistribution_8h.html" title="animaDDIDistribution.h" alt="" coords="1166,285,1319,312"/>
 <area shape="rect" id="node9" href="$animaFasterLinearInterpolateImageFunction_8h.html" title="animaFasterLinearInterpolate\lImageFunction.h" alt="" coords="2635,187,2824,229"/>
 <area shape="rect" id="node12" href="$animaFasterLinearInterpolateImageFunction_8hxx.html" title="animaFasterLinearInterpolate\lImageFunction.hxx" alt="" coords="2632,278,2821,319"/>
@@ -14,7 +14,7 @@
 <area shape="rect" id="node31" href="$animaTrigonometricFunctions_8hxx.html" title="animaTrigonometricFunctions.hxx" alt="" coords="5,533,219,560"/>
 <area shape="rect" id="node33" href="$animaHyperbolicFunctions_8hxx.html" title="animaHyperbolicFunctions.hxx" alt="" coords="472,533,667,560"/>
 <area shape="rect" id="node38" href="$animaDDIAveragingTools_8h.html" title="animaDDIAveragingTools.h" alt="" coords="1943,285,2120,312"/>
-<area shape="rect" id="node48" href="$animaSpectralClusteringFilter_8h.html" title="animaSpectralClusteringFilter.h" alt="" coords="1531,285,1732,312"/>
+<area shape="rect" id="node48" href="$animaSpectralClusteringFilter_8h.html" title="animaSpectralClusteringFilter.h" alt="" coords="1459,285,1660,312"/>
 <area shape="rect" id="node42" href="$animaDDIAveragingTools_8hxx.html" title="animaDDIAveragingTools.hxx" alt="" coords="1937,368,2127,395"/>
 <area shape="rect" id="node43" href="$animaMatrixLogExp_8h.html" title="animaMatrixLogExp.h" alt="" coords="2292,451,2436,477"/>
 <area shape="rect" id="node45" href="$animaMatrixOperations_8h.html" title="animaMatrixOperations.h" alt="" coords="2103,451,2267,477"/>

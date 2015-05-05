@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>ANIMA: animaPyramidalSymmetryConstrainedRegistrationBridge.txx File Reference</title>
+<title>ANIMA: animaPyramidalSymmetryBridge.hxx File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,50 +87,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_42156ca842fecd25315aaaaf78422bef.html">registration</a></li><li class="navelem"><a class="el" href="dir_e017be2860a74b1d3144bb606e5c1690.html">symmetry</a></li><li class="navelem"><a class="el" href="dir_ab9ca007a1ff6824118b79a95c8c8cd4.html">symmetry_constrained_registration</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_42156ca842fecd25315aaaaf78422bef.html">registration</a></li><li class="navelem"><a class="el" href="dir_e017be2860a74b1d3144bb606e5c1690.html">symmetry</a></li><li class="navelem"><a class="el" href="dir_fb48c84ab6debd9d1737df7d86cda5a9.html">symmetry_plane</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">animaPyramidalSymmetryConstrainedRegistrationBridge.txx File Reference</div>  </div>
+<div class="title">animaPyramidalSymmetryBridge.hxx File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="animaPyramidalSymmetryConstrainedRegistrationBridge_8h_source.html">animaPyramidalSymmetryConstrainedRegistrationBridge.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="animaPyramidalSymmetryBridge_8h_source.html">animaPyramidalSymmetryBridge.h</a>&quot;</code><br/>
 <code>#include &lt;itkImageFileReader.h&gt;</code><br/>
 <code>#include &lt;itkImageFileWriter.h&gt;</code><br/>
-<code>#include &lt;itkTransformFactoryBase.h&gt;</code><br/>
 <code>#include &lt;itkTransformFileReader.h&gt;</code><br/>
 <code>#include &lt;itkTransformFileWriter.h&gt;</code><br/>
 <code>#include &lt;itkMultiResolutionPyramidImageFilter.h&gt;</code><br/>
 <code>#include &lt;itkImageRegistrationMethod.h&gt;</code><br/>
 <code>#include &lt;itkLinearInterpolateImageFunction.h&gt;</code><br/>
 <code>#include &lt;<a class="el" href="animaNewuoaOptimizer_8h_source.html">animaNewuoaOptimizer.h</a>&gt;</code><br/>
+<code>#include &lt;itkPowellOptimizer.h&gt;</code><br/>
 <code>#include &lt;itkMeanSquaresImageToImageMetric.h&gt;</code><br/>
 <code>#include &lt;itkMutualInformationHistogramImageToImageMetric.h&gt;</code><br/>
-<code>#include &lt;itkNormalizedMutualInformationHistogramImageToImageMetric.h&gt;</code><br/>
-<code>#include &lt;itkCenteredTransformInitializer.h&gt;</code><br/>
+<code>#include &lt;itkImageMomentsCalculator.h&gt;</code><br/>
+<code>#include &lt;itkProgressReporter.h&gt;</code><br/>
+<code>#include &lt;<a class="el" href="animaVectorOperations_8h_source.html">animaVectorOperations.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="animaResampleImageFilter_8h_source.html">animaResampleImageFilter.h</a>&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for animaPyramidalSymmetryConstrainedRegistrationBridge.txx:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for animaPyramidalSymmetryBridge.hxx:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="animaPyramidalSymmetryConstrainedRegistrationBridge_8txx__incl.png" border="0" usemap="#animaPyramidalSymmetryConstrainedRegistrationBridge_8txx" alt=""/></div>
-<map name="animaPyramidalSymmetryConstrainedRegistrationBridge_8txx" id="animaPyramidalSymmetryConstrainedRegistrationBridge_8txx">
-<area shape="rect" id="node2" href="animaPyramidalSymmetryConstrainedRegistrationBridge_8h.html" title="animaPyramidalSymmetryConstrained\lRegistrationBridge.h" alt="" coords="1388,97,1628,138"/><area shape="rect" id="node41" href="animaNewuoaOptimizer_8h.html" title="animaNewuoaOptimizer.h" alt="" coords="2967,104,3135,131"/><area shape="rect" id="node6" href="animaSymmetryConstrainedTransform_8h.html" title="animaSymmetryConstrained\lTransform.h" alt="" coords="2409,187,2591,229"/><area shape="rect" id="node11" href="Arguments_8h.html" title="Arguments.h" alt="" coords="1550,195,1644,221"/><area shape="rect" id="node9" href="animaSymmetryConstrainedTransform_8hxx.html" title="animaSymmetryConstrained\lTransform.hxx" alt="" coords="2629,278,2811,319"/><area shape="rect" id="node29" href="CliProgress_8h.html" title="CliProgress.h" alt="" coords="2026,285,2123,312"/><area shape="rect" id="node31" href="GuiArguments_8h.html" title="GuiArguments.h" alt="" coords="2148,285,2263,312"/></map>
+<div class="center"><img src="animaPyramidalSymmetryBridge_8hxx__incl.png" border="0" usemap="#animaPyramidalSymmetryBridge_8hxx" alt=""/></div>
+<map name="animaPyramidalSymmetryBridge_8hxx" id="animaPyramidalSymmetryBridge_8hxx">
+<area shape="rect" id="node2" href="animaPyramidalSymmetryBridge_8h.html" title="animaPyramidalSymmetryBridge.h" alt="" coords="615,88,833,115"/><area shape="rect" id="node20" href="animaNewuoaOptimizer_8h.html" title="animaNewuoaOptimizer.h" alt="" coords="3760,88,3928,115"/><area shape="rect" id="node30" href="animaVectorOperations_8h.html" title="animaVectorOperations.h" alt="" coords="3569,88,3735,115"/><area shape="rect" id="node40" href="animaResampleImageFilter_8h.html" title="animaResampleImageFilter.h" alt="" coords="1808,88,1997,115"/><area shape="rect" id="node8" href="animaSymmetryPlaneTransform_8h.html" title="animaSymmetryPlaneTransform.h" alt="" coords="292,179,508,205"/><area shape="rect" id="node11" href="animaSymmetryPlaneTransform_8hxx.html" title="animaSymmetryPlaneTransform.hxx" alt="" coords="314,269,541,296"/><area shape="rect" id="node36" href="animaVectorOperations_8hxx.html" title="animaVectorOperations.hxx" alt="" coords="3581,179,3760,205"/><area shape="rect" id="node37" href="animaLogarithmFunctions_8h.html" title="animaLogarithmFunctions.h" alt="" coords="3395,269,3575,296"/><area shape="rect" id="node48" href="animaResampleImageFilter_8hxx.html" title="animaResampleImageFilter.hxx" alt="" coords="2321,179,2521,205"/></map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="animaPyramidalSymmetryConstrainedRegistrationBridge_8txx__dep__incl.png" border="0" usemap="#animaPyramidalSymmetryConstrainedRegistrationBridge_8txxdep" alt=""/></div>
-<map name="animaPyramidalSymmetryConstrainedRegistrationBridge_8txxdep" id="animaPyramidalSymmetryConstrainedRegistrationBridge_8txxdep">
-<area shape="rect" id="node2" href="animaPyramidalSymmetryConstrainedRegistrationBridge_8h.html" title="animaPyramidalSymmetryConstrained\lRegistrationBridge.h" alt="" coords="5,97,245,138"/><area shape="rect" id="node3" href="animaSymmetryConstrainedRegistration_8cxx.html" title="animaSymmetryConstrained\lRegistration.cxx" alt="" coords="34,187,216,229"/></map>
+<div class="center"><img src="animaPyramidalSymmetryBridge_8hxx__dep__incl.png" border="0" usemap="#animaPyramidalSymmetryBridge_8hxxdep" alt=""/></div>
+<map name="animaPyramidalSymmetryBridge_8hxxdep" id="animaPyramidalSymmetryBridge_8hxxdep">
+<area shape="rect" id="node2" href="animaPyramidalSymmetryBridge_8h.html" title="animaPyramidalSymmetryBridge.h" alt="" coords="11,80,229,107"/><area shape="rect" id="node3" href="animaSymmetryPlane_8cxx.html" title="animaSymmetryPlane.cxx" alt="" coords="35,155,205,181"/></map>
 </div>
 </div>
-<p><a href="animaPyramidalSymmetryConstrainedRegistrationBridge_8txx_source.html">Go to the source code of this file.</a></p>
+<p><a href="animaPyramidalSymmetryBridge_8hxx_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -140,7 +142,7 @@ Namespaces</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 17 2015 06:30:42 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 5 2015 06:22:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

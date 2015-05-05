@@ -1,6 +1,7 @@
 <map id="animaMeanAndVarianceImagesFilter.h" name="animaMeanAndVarianceImagesFilter.h">
 <area shape="rect" id="node2" href="$animaNonLocalMeansImageFilter_8hxx.html" title="animaNonLocalMeansImageFilter.hxx" alt="" coords="50,104,285,131"/>
-<area shape="rect" id="node8" href="$animaMeanAndVarianceImagesFilterTest_8cxx.html" title="animaMeanAndVarianceImages\lFilterTest.cxx" alt="" coords="310,97,513,138"/>
+<area shape="rect" id="node8" href="$animaMeanAndVarianceImagesFilter_8hxx.html" title="animaMeanAndVarianceImages\lFilter.hxx" alt="" coords="310,97,513,138"/>
+<area shape="rect" id="node9" href="$animaMeanAndVarianceImagesFilterTest_8cxx.html" title="animaMeanAndVarianceImages\lFilterTest.cxx" alt="" coords="538,97,741,138"/>
 <area shape="rect" id="node3" href="$animaNonLocalMeansImageFilter_8h.html" title="animaNonLocalMeansImageFilter.h" alt="" coords="56,187,279,213"/>
 <area shape="rect" id="node4" href="$animaNLMeans_8cxx.html" title="animaNLMeans.cxx" alt="" coords="5,269,139,296"/>
 <area shape="rect" id="node5" href="$animaNonLocalMeansTemporalImageFilter_8hxx.html" title="animaNonLocalMeansTemporal\lImageFilter.hxx" alt="" coords="163,262,365,303"/>

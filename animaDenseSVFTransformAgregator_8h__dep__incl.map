@@ -1,19 +1,19 @@
 <map id="animaDenseSVFTransformAgregator.h" name="animaDenseSVFTransformAgregator.h">
-<area shape="rect" id="node2" href="$animaDistortionCorrectionRegistrationMethod_8hxx.html" title="animaDistortionCorrection\lRegistrationMethod.hxx" alt="" coords="55,81,225,122"/>
-<area shape="rect" id="node5" href="$animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html" title="animaPyramidalDistortion\lCorrectionBlockMatchingBridge.h" alt="" coords="35,353,249,394"/>
+<area shape="rect" id="node2" href="$animaDistortionCorrectionRegistrationMethod_8hxx.html" title="animaDistortionCorrection\lRegistrationMethod.hxx" alt="" coords="48,81,219,122"/>
+<area shape="rect" id="node5" href="$animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html" title="animaPyramidalDistortion\lCorrectionBlockMatchingBridge.h" alt="" coords="11,353,225,394"/>
 <area shape="rect" id="node7" href="$animaKissingSymmetricBlockMatchingRegistrationMethod_8hxx.html" title="animaKissingSymmetricBlock\lMatchingRegistrationMethod.hxx" alt="" coords="587,81,795,122"/>
-<area shape="rect" id="node10" href="$animaPyramidalDenseSVFMatchingBridge_8h.html" title="animaPyramidalDenseSVFMatching\lBridge.h" alt="" coords="322,353,549,394"/>
+<area shape="rect" id="node10" href="$animaPyramidalDenseSVFMatchingBridge_8h.html" title="animaPyramidalDenseSVFMatching\lBridge.h" alt="" coords="298,353,525,394"/>
 <area shape="rect" id="node15" href="$animaSymmetricBlockMatchingRegistrationMethod_8hxx.html" title="animaSymmetricBlockMatching\lRegistrationMethod.hxx" alt="" coords="357,81,563,122"/>
 <area shape="rect" id="node17" href="$animaTensorKissingSymmetricBlockMatchingRegistrationMethod_8hxx.html" title="animaTensorKissingSymmetric\lBlockMatchingRegistrationMethod.hxx" alt="" coords="819,81,1060,122"/>
 <area shape="rect" id="node20" href="$animaPyramidalDenseTensorSVFMatchingBridge_8h.html" title="animaPyramidalDenseTensor\lSVFMatchingBridge.h" alt="" coords="1165,353,1355,394"/>
 <area shape="rect" id="node22" href="$animaTensorSymmetricBlockMatchingRegistrationMethod_8hxx.html" title="animaTensorSymmetricBlock\lMatchingRegistrationMethod.hxx" alt="" coords="1085,81,1293,122"/>
 <area shape="rect" id="node3" href="$animaDistortionCorrectionRegistrationMethod_8h.html" title="animaDistortionCorrection\lRegistrationMethod.h" alt="" coords="48,171,219,213"/>
 <area shape="rect" id="node4" href="$animaPyramidalDistortionCorrectionBlockMatchingBridge_8hxx.html" title="animaPyramidalDistortion\lCorrectionBlockMatchingBridge.hxx" alt="" coords="5,262,232,303"/>
-<area shape="rect" id="node6" href="$animaBMDistortionCorrection_8cxx.html" title="animaBMDistortionCorrection.cxx" alt="" coords="37,443,248,469"/>
+<area shape="rect" id="node6" href="$animaBMDistortionCorrection_8cxx.html" title="animaBMDistortionCorrection.cxx" alt="" coords="13,443,224,469"/>
 <area shape="rect" id="node8" href="$animaKissingSymmetricBlockMatchingRegistrationMethod_8h.html" title="animaKissingSymmetricBlock\lMatchingRegistrationMethod.h" alt="" coords="595,171,791,213"/>
 <area shape="rect" id="node9" href="$animaPyramidalDenseSVFMatchingBridge_8hxx.html" title="animaPyramidalDenseSVFMatching\lBridge.hxx" alt="" coords="358,262,585,303"/>
 <area shape="rect" id="node12" href="$animaPyramidalBlockMatchingBridge_8hxx.html" title="animaPyramidalBlockMatching\lBridge.hxx" alt="" coords="611,262,809,303"/>
-<area shape="rect" id="node11" href="$animaDenseSVFBMRegistration_8cxx.html" title="animaDenseSVFBMRegistration.cxx" alt="" coords="322,443,549,469"/>
+<area shape="rect" id="node11" href="$animaDenseSVFBMRegistration_8cxx.html" title="animaDenseSVFBMRegistration.cxx" alt="" coords="298,443,525,469"/>
 <area shape="rect" id="node13" href="$animaPyramidalBlockMatchingBridge_8h.html" title="animaPyramidalBlockMatching\lBridge.h" alt="" coords="611,353,809,394"/>
 <area shape="rect" id="node14" href="$animaPyramidalBMRegistration_8cxx.html" title="animaPyramidalBMRegistration.cxx" alt="" coords="599,443,821,469"/>
 <area shape="rect" id="node16" href="$animaSymmetricBlockMatchingRegistrationMethod_8h.html" title="animaSymmetricBlockMatching\lRegistrationMethod.h" alt="" coords="365,171,571,213"/>

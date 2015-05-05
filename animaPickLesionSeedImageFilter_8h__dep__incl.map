@@ -1,6 +1,7 @@
 <map id="animaPickLesionSeedImageFilter.h" name="animaPickLesionSeedImageFilter.h">
-<area shape="rect" id="node2" href="$animaPickLesionSeeds_8cxx.html" title="animaPickLesionSeeds.cxx" alt="" coords="5,104,184,131"/>
-<area shape="rect" id="node3" href="$animaQMRISampleCreationImageFilter_8hxx.html" title="animaQMRISampleCreationImage\lFilter.hxx" alt="" coords="208,97,427,138"/>
-<area shape="rect" id="node4" href="$animaQMRISampleCreationImageFilter_8h.html" title="animaQMRISampleCreationImage\lFilter.h" alt="" coords="208,187,427,229"/>
-<area shape="rect" id="node5" href="$animaQMRILesionSampleCreator_8cxx.html" title="animaQMRILesionSampleCreator.cxx" alt="" coords="199,277,435,304"/>
+<area shape="rect" id="node2" href="$animaPickLesionSeedImageFilter_8hxx.html" title="animaPickLesionSeedImage\lFilter.hxx" alt="" coords="5,97,192,138"/>
+<area shape="rect" id="node3" href="$animaPickLesionSeeds_8cxx.html" title="animaPickLesionSeeds.cxx" alt="" coords="216,104,395,131"/>
+<area shape="rect" id="node4" href="$animaQMRISampleCreationImageFilter_8hxx.html" title="animaQMRISampleCreationImage\lFilter.hxx" alt="" coords="419,97,637,138"/>
+<area shape="rect" id="node5" href="$animaQMRISampleCreationImageFilter_8h.html" title="animaQMRISampleCreationImage\lFilter.h" alt="" coords="419,187,637,229"/>
+<area shape="rect" id="node6" href="$animaQMRILesionSampleCreator_8cxx.html" title="animaQMRILesionSampleCreator.cxx" alt="" coords="410,277,645,304"/>
 </map>
