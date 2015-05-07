@@ -401,7 +401,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                <span class="keywordflow">if</span> (stdevArg.isSet())</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                {</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    <a class="code" href="namespaceanima.html#a3e0c95cf3b70dde9b0d8acdaffdd8dcc">anima::GetTensorFromVectorRepresentation</a>(resVec,tmpStDevMatrix);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    <a class="code" href="namespaceanima.html#a3e0c95cf3b70dde9b0d8acdaffdd8dcc">anima::GetTensorFromVectorRepresentation</a>(resVec,tmpCovMatrix);</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                    <a class="code" href="namespaceanima.html#a094f5340728b719975b6d4fa20484685">anima::GetTensorPower</a>(tmpCovMatrix,tmpStDevMatrix,0.5);</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                    <a class="code" href="namespaceanima.html#a57c5a40480f2d9052b981119f0a432c6">anima::GetVectorRepresentation</a>(tmpStDevMatrix,resVec);</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                }</div>
@@ -428,7 +428,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        {</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            meanVec = meanIt.Get();</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            sSumVec = sSumIt.Get();</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pos = 0;</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; vectorSize;++i)</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = i;j &lt; vectorSize;++j)</div>
@@ -439,7 +439,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <span class="keywordflow">if</span> (stdevArg.isSet())</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            {</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                <a class="code" href="namespaceanima.html#a3e0c95cf3b70dde9b0d8acdaffdd8dcc">anima::GetTensorFromVectorRepresentation</a>(resVec,tmpStDevMatrix);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                <a class="code" href="namespaceanima.html#a3e0c95cf3b70dde9b0d8acdaffdd8dcc">anima::GetTensorFromVectorRepresentation</a>(resVec,tmpCovMatrix);</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                <a class="code" href="namespaceanima.html#a094f5340728b719975b6d4fa20484685">anima::GetTensorPower</a>(tmpCovMatrix,tmpStDevMatrix,0.5);</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                <a class="code" href="namespaceanima.html#a57c5a40480f2d9052b981119f0a432c6">anima::GetVectorRepresentation</a>(tmpStDevMatrix,resVec);</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            }</div>
@@ -469,7 +469,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 5 2015 06:22:47 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 7 2015 06:22:29 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
