@@ -1,12 +1,10 @@
 <map id="animaPyramidalRegistrationBridge.h" name="animaPyramidalRegistrationBridge.h">
-<area shape="rect" id="node6" href="$animaSplitAffine3DTransform_8h.html" title="animaSplitAffine3DTransform.h" alt="" coords="271,195,469,221"/>
-<area shape="rect" id="node11" href="$animaLogRigid3DTransform_8h.html" title="animaLogRigid3DTransform.h" alt="" coords="601,104,791,131"/>
-<area shape="rect" id="node15" href="$Arguments_8h.html" title="Arguments.h" alt="" coords="1699,104,1793,131"/>
-<area shape="rect" id="node37" href="$animaPyramidalRegistrationBridge_8hxx.html" title="animaPyramidalRegistration\lBridge.hxx" alt="" coords="4155,97,4337,138"/>
-<area shape="rect" id="node9" href="$animaSplitAffine3DTransform_8hxx.html" title="animaSplitAffine3DTransform.hxx" alt="" coords="208,277,417,304"/>
-<area shape="rect" id="node12" href="$animaLogRigid3DTransform_8hxx.html" title="animaLogRigid3DTransform.hxx" alt="" coords="595,195,797,221"/>
-<area shape="rect" id="node13" href="$animaMatrixLogExp_8h.html" title="animaMatrixLogExp.h" alt="" coords="640,277,784,304"/>
-<area shape="rect" id="node32" href="$CliProgress_8h.html" title="CliProgress.h" alt="" coords="1633,195,1729,221"/>
-<area shape="rect" id="node34" href="$GuiArguments_8h.html" title="GuiArguments.h" alt="" coords="1755,195,1869,221"/>
-<area shape="rect" id="node45" href="$animaNewuoaOptimizer_8h.html" title="animaNewuoaOptimizer.h" alt="" coords="5233,195,5401,221"/>
+<area shape="rect" id="node7" href="$animaSplitAffine3DTransform_8h.html" title="animaSplitAffine3DTransform.h" alt="" coords="1361,285,1559,312"/>
+<area shape="rect" id="node12" href="$animaLogRigid3DTransform_8h.html" title="animaLogRigid3DTransform.h" alt="" coords="1187,104,1377,131"/>
+<area shape="rect" id="node26" href="$animaPyramidalRegistrationBridge_8hxx.html" title="animaPyramidalRegistration\lBridge.hxx" alt="" coords="2437,97,2619,138"/>
+<area shape="rect" id="node10" href="$animaSplitAffine3DTransform_8hxx.html" title="animaSplitAffine3DTransform.hxx" alt="" coords="1412,376,1621,403"/>
+<area shape="rect" id="node13" href="$animaLogRigid3DTransform_8hxx.html" title="animaLogRigid3DTransform.hxx" alt="" coords="881,195,1084,221"/>
+<area shape="rect" id="node14" href="$animaMatrixLogExp_8h.html" title="animaMatrixLogExp.h" alt="" coords="759,285,903,312"/>
+<area shape="rect" id="node20" href="$animaMatrixLogExp_8hxx.html" title="animaMatrixLogExp.hxx" alt="" coords="363,376,519,403"/>
+<area shape="rect" id="node34" href="$animaNewuoaOptimizer_8h.html" title="animaNewuoaOptimizer.h" alt="" coords="3688,195,3856,221"/>
 </map>

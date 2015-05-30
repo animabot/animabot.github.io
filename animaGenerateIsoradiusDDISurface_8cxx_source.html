@@ -144,7 +144,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">double</span> k = KappaArg.getValue();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">double</span> d = MeanDiffArg.getValue();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">double</span> n = IntraVArg.getValue();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">double</span> dFiber = 1.71e-3 / (1.0 - 2.0 * n * <a class="code" href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">anima::xi</a>(k));</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">double</span> dFiber = 1.71e-3 / (1.0 - 2.0 * n * <a class="code" href="namespaceanima.html#aa155a8ad28d67b1309795a4b72d5a2d2">anima::xi</a>(k));</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (d == 0)</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        d = dFiber;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">double</span> r = sqrt(RadiusArg.getValue() * dFiber);</div>
@@ -158,7 +158,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            phi[j] = j*step*2.0*M_PI;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            inVec[0] = r * sin(theta[i]) * cos(phi[j]);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            inVec[1] = r * sin(theta[i]) * sin(phi[j]);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            prob(i,j) = <a class="code" href="namespaceanima.html#ac9197e41f0321df0fddf98069017dade">anima::ComputeSymmetricPDF</a>(inVec, muVec, k, d, n, inStep, integrand);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            prob(i,j) = <a class="code" href="namespaceanima.html#abc5ddcff0421ae3957884f47e9af51e1">anima::ComputeSymmetricPDF</a>(inVec, muVec, k, d, n, inStep, integrand);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div>
@@ -177,15 +177,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="ttc" id="namespaceanima_html_abc5ddcff0421ae3957884f47e9af51e1"><div class="ttname"><a href="namespaceanima.html#abc5ddcff0421ae3957884f47e9af51e1">anima::ComputeSymmetricPDF</a></div><div class="ttdeci">double ComputeSymmetricPDF(const VectorType &amp;w, const VectorType &amp;mu, const ScalarType &amp;kappa, const ScalarType &amp;d, const ScalarType &amp;nu, const ScalarType &amp;step, std::vector&lt; ScalarType &gt; &amp;integrand)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00095">animaDDIDistribution.hxx:95</a></div></div>
 <div class="ttc" id="animaDDIDistribution_8h_html"><div class="ttname"><a href="animaDDIDistribution_8h.html">animaDDIDistribution.h</a></div></div>
 <div class="ttc" id="animaGenerateIsoradiusDDISurface_8cxx_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="animaGenerateIsoradiusDDISurface_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="animaGenerateIsoradiusDDISurface_8cxx_source.html#l00010">animaGenerateIsoradiusDDISurface.cxx:10</a></div></div>
 <div class="ttc" id="animaHyperbolicFunctions_8h_html"><div class="ttname"><a href="animaHyperbolicFunctions_8h.html">animaHyperbolicFunctions.h</a></div></div>
-<div class="ttc" id="namespaceanima_html_ac341bd69a70af69030fcf86cac5cbc60"><div class="ttname"><a href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">anima::xi</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double xi(const T &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00029">animaHyperbolicFunctions.hxx:29</a></div></div>
-<div class="ttc" id="namespaceanima_html_ac9197e41f0321df0fddf98069017dade"><div class="ttname"><a href="namespaceanima.html#ac9197e41f0321df0fddf98069017dade">anima::ComputeSymmetricPDF</a></div><div class="ttdeci">ANIMASTATISTICS_EXPORT double ComputeSymmetricPDF(const VectorType &amp;w, const VectorType &amp;mu, const ScalarType &amp;kappa, const ScalarType &amp;d, const ScalarType &amp;nu, const ScalarType &amp;step, std::vector&lt; ScalarType &gt; &amp;integrand)</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIDistribution_8hxx_source.html#l00095">animaDDIDistribution.hxx:95</a></div></div>
+<div class="ttc" id="namespaceanima_html_aa155a8ad28d67b1309795a4b72d5a2d2"><div class="ttname"><a href="namespaceanima.html#aa155a8ad28d67b1309795a4b72d5a2d2">anima::xi</a></div><div class="ttdeci">double xi(const T &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00029">animaHyperbolicFunctions.hxx:29</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 28 2015 06:22:32 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 30 2015 06:23:47 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

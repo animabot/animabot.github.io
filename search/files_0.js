@@ -184,7 +184,6 @@ var searchData=
   ['animalocalpatchmeandistanceimagefilter_2ehxx',['animaLocalPatchMeanDistanceImageFilter.hxx',['../animaLocalPatchMeanDistanceImageFilter_8hxx.html',1,'']]],
   ['animalogarithmfunctions_2eh',['animaLogarithmFunctions.h',['../animaLogarithmFunctions_8h.html',1,'']]],
   ['animalogarithmfunctions_2ehxx',['animaLogarithmFunctions.hxx',['../animaLogarithmFunctions_8hxx.html',1,'']]],
-  ['animalogeuclideantensorssquareddifference_2ecxx',['animaLogEuclideanTensorsSquaredDifference.cxx',['../animaLogEuclideanTensorsSquaredDifference_8cxx.html',1,'']]],
   ['animalogexpmapsunitsphere_2eh',['animaLogExpMapsUnitSphere.h',['../animaLogExpMapsUnitSphere_8h.html',1,'']]],
   ['animalogexpmapsunitsphere_2ehxx',['animaLogExpMapsUnitSphere.hxx',['../animaLogExpMapsUnitSphere_8hxx.html',1,'']]],
   ['animalogrigid3dtransform_2eh',['animaLogRigid3DTransform.h',['../animaLogRigid3DTransform_8h.html',1,'']]],
@@ -223,7 +222,6 @@ var searchData=
   ['animamatrixoperations_2ehxx',['animaMatrixOperations.hxx',['../animaMatrixOperations_8hxx.html',1,'']]],
   ['animameanandvarianceimagesfilter_2eh',['animaMeanAndVarianceImagesFilter.h',['../animaMeanAndVarianceImagesFilter_8h.html',1,'']]],
   ['animameanandvarianceimagesfilter_2ehxx',['animaMeanAndVarianceImagesFilter.hxx',['../animaMeanAndVarianceImagesFilter_8hxx.html',1,'']]],
-  ['animameanandvarianceimagesfiltertest_2ecxx',['animaMeanAndVarianceImagesFilterTest.cxx',['../animaMeanAndVarianceImagesFilterTest_8cxx.html',1,'']]],
   ['animamergeblockimages_2ecxx',['animaMergeBlockImages.cxx',['../animaMergeBlockImages_8cxx.html',1,'']]],
   ['animamestimatesvfimagefilter_2eh',['animaMEstimateSVFImageFilter.h',['../animaMEstimateSVFImageFilter_8h.html',1,'']]],
   ['animamestimatesvfimagefilter_2ehxx',['animaMEstimateSVFImageFilter.hxx',['../animaMEstimateSVFImageFilter_8hxx.html',1,'']]],
@@ -388,9 +386,6 @@ var searchData=
   ['animatransformseriexmlgenerator_2ecxx',['animaTransformSerieXmlGenerator.cxx',['../animaTransformSerieXmlGenerator_8cxx.html',1,'']]],
   ['animatrigonometricfunctions_2eh',['animaTrigonometricFunctions.h',['../animaTrigonometricFunctions_8h.html',1,'']]],
   ['animatrigonometricfunctions_2ehxx',['animaTrigonometricFunctions.hxx',['../animaTrigonometricFunctions_8hxx.html',1,'']]],
-  ['animavarianceimagefilter_2eh',['animaVarianceImageFilter.h',['../animaVarianceImageFilter_8h.html',1,'']]],
-  ['animavarianceimagefilter_2ehxx',['animaVarianceImageFilter.hxx',['../animaVarianceImageFilter_8hxx.html',1,'']]],
-  ['animavarianceimagefiltertest_2ecxx',['animaVarianceImageFilterTest.cxx',['../animaVarianceImageFilterTest_8cxx.html',1,'']]],
   ['animavectorimagepatchstatistics_2eh',['animaVectorImagePatchStatistics.h',['../animaVectorImagePatchStatistics_8h.html',1,'']]],
   ['animavectorimagepatchstatistics_2ehxx',['animaVectorImagePatchStatistics.hxx',['../animaVectorImagePatchStatistics_8hxx.html',1,'']]],
   ['animavectormodellinearinterpolateimagefunction_2eh',['animaVectorModelLinearInterpolateImageFunction.h',['../animaVectorModelLinearInterpolateImageFunction_8h.html',1,'']]],
@@ -404,6 +399,5 @@ var searchData=
   ['animavoxelexhaustiveoptimizer_2ecxx',['animaVoxelExhaustiveOptimizer.cxx',['../animaVoxelExhaustiveOptimizer_8cxx.html',1,'']]],
   ['animavoxelexhaustiveoptimizer_2eh',['animaVoxelExhaustiveOptimizer.h',['../animaVoxelExhaustiveOptimizer_8h.html',1,'']]],
   ['animawatsondistribution_2eh',['animaWatsonDistribution.h',['../animaWatsonDistribution_8h.html',1,'']]],
-  ['animawatsondistribution_2ehxx',['animaWatsonDistribution.hxx',['../animaWatsonDistribution_8hxx.html',1,'']]],
-  ['arguments_2eh',['Arguments.h',['../Arguments_8h.html',1,'']]]
+  ['animawatsondistribution_2ehxx',['animaWatsonDistribution.hxx',['../animaWatsonDistribution_8hxx.html',1,'']]]
 ];

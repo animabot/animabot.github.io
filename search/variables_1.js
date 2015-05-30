@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['arg',['arg',['../classGenericArgumentArg.html#a380bb2c54d0d195a35038616f01d2c44',1,'GenericArgumentArg']]],
-  ['argkind',['ArgKind',['../structGuiArguments.html#ae15228b611504e21314e401e2656cc08',1,'GuiArguments']]],
-  ['argname',['ArgName',['../structGuiArguments.html#ad3ae673e27b9e6e4313ad34c106eed86',1,'GuiArguments']]]
+  ['base',['base',['../structarguments.html#a2ba373523404c6062e706a7c7c38e91d',1,'arguments']]],
+  ['blockmatch',['BlockMatch',['../structanima_1_1BlockMatchingBaseRegistrationMethod_1_1ThreadedMatchData.html#af5d0fa64f5f3480ff6e7213efdf57265',1,'anima::BlockMatchingBaseRegistrationMethod::ThreadedMatchData::BlockMatch()'],['../structanima_1_1DistortionCorrectionRegistrationMethod_1_1ThreadedMatchData.html#a54d9b8ae0a69186f4f451e32d48475a1',1,'anima::DistortionCorrectionRegistrationMethod::ThreadedMatchData::BlockMatch()'],['../structanima_1_1TensorBlockMatchingBaseRegistrationMethod_1_1ThreadedMatchData.html#af1426d1424dc1274f9d45dc306771288',1,'anima::TensorBlockMatchingBaseRegistrationMethod::ThreadedMatchData::BlockMatch()']]],
+  ['blocks_5fvariances',['blocks_variances',['../structanima_1_1BlockMatchingInitializer_1_1BlockGeneratorThreadStruct.html#a0d5cad2c202e1140f511da7701d79e20',1,'anima::BlockMatchingInitializer::BlockGeneratorThreadStruct']]]
 ];

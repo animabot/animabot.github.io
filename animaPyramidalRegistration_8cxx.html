@@ -97,9 +97,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">animaPyramidalRegistration.cxx File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="Arguments_8h_source.html">Arguments.h</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="animaPyramidalRegistrationBridge_8h_source.html">animaPyramidalRegistrationBridge.h</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="animaPyramidalRegistrationBridge_8h_source.html">animaPyramidalRegistrationBridge.h</a>&gt;</code><br/>
 <code>#include &lt;itkTimeProbe.h&gt;</code><br/>
+<code>#include &lt;tclap/CmdLine.h&gt;</code><br/>
+<code>#include &lt;<a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for animaPyramidalRegistration.cxx:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -107,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="animaPyramidalRegistration_8cxx__incl.png" border="0" usemap="#animaPyramidalRegistration_8cxx" alt=""/></div>
 <map name="animaPyramidalRegistration_8cxx" id="animaPyramidalRegistration_8cxx">
-<area shape="rect" id="node2" href="Arguments_8h.html" title="Arguments.h" alt="" coords="1591,179,1685,205"/><area shape="rect" id="node26" href="animaPyramidalRegistrationBridge_8h.html" title="animaPyramidalRegistration\lBridge.h" alt="" coords="2590,81,2772,122"/><area shape="rect" id="node20" href="CliProgress_8h.html" title="CliProgress.h" alt="" coords="30,269,127,296"/><area shape="rect" id="node22" href="GuiArguments_8h.html" title="GuiArguments.h" alt="" coords="152,269,267,296"/><area shape="rect" id="node31" href="animaSplitAffine3DTransform_8h.html" title="animaSplitAffine3DTransform.h" alt="" coords="2894,179,3092,205"/><area shape="rect" id="node35" href="animaLogRigid3DTransform_8h.html" title="animaLogRigid3DTransform.h" alt="" coords="2679,179,2869,205"/><area shape="rect" id="node37" href="animaPyramidalRegistrationBridge_8hxx.html" title="animaPyramidalRegistration\lBridge.hxx" alt="" coords="3926,171,4108,213"/><area shape="rect" id="node33" href="animaSplitAffine3DTransform_8hxx.html" title="animaSplitAffine3DTransform.hxx" alt="" coords="2981,269,3191,296"/><area shape="rect" id="node36" href="animaLogRigid3DTransform_8hxx.html" title="animaLogRigid3DTransform.hxx" alt="" coords="2517,269,2720,296"/><area shape="rect" id="node45" href="animaNewuoaOptimizer_8h.html" title="animaNewuoaOptimizer.h" alt="" coords="4531,269,4699,296"/></map>
+<area shape="rect" id="node2" href="animaPyramidalRegistrationBridge_8h.html" title="animaPyramidalRegistration\lBridge.h" alt="" coords="610,81,792,122"/><area shape="rect" id="node46" href="animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="3159,179,3341,205"/><area shape="rect" id="node8" href="animaSplitAffine3DTransform_8h.html" title="animaSplitAffine3DTransform.h" alt="" coords="399,360,597,387"/><area shape="rect" id="node13" href="animaLogRigid3DTransform_8h.html" title="animaLogRigid3DTransform.h" alt="" coords="673,179,863,205"/><area shape="rect" id="node27" href="animaPyramidalRegistrationBridge_8hxx.html" title="animaPyramidalRegistration\lBridge.hxx" alt="" coords="1967,171,2149,213"/><area shape="rect" id="node11" href="animaSplitAffine3DTransform_8hxx.html" title="animaSplitAffine3DTransform.hxx" alt="" coords="251,451,460,477"/><area shape="rect" id="node14" href="animaLogRigid3DTransform_8hxx.html" title="animaLogRigid3DTransform.hxx" alt="" coords="773,269,976,296"/><area shape="rect" id="node15" href="animaMatrixLogExp_8h.html" title="animaMatrixLogExp.h" alt="" coords="960,360,1104,387"/><area shape="rect" id="node21" href="animaMatrixLogExp_8hxx.html" title="animaMatrixLogExp.hxx" alt="" coords="1051,451,1207,477"/><area shape="rect" id="node35" href="animaNewuoaOptimizer_8h.html" title="animaNewuoaOptimizer.h" alt="" coords="1192,269,1360,296"/></map>
 </div>
 </div>
 <p><a href="animaPyramidalRegistration_8cxx_source.html">Go to the source code of this file.</a></p>
@@ -142,16 +143,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaPyramidalRegistration_8cxx_source.html#l00007">7</a> of file <a class="el" href="animaPyramidalRegistration_8cxx_source.html">animaPyramidalRegistration.cxx</a>.</p>
-
-<p>References <a class="el" href="animaPyramidalRegistrationBridge_8hxx_source.html#l00042">PyramidalRegistrationBridge&lt; ScalarType &gt;::ParseParameters()</a>.</p>
+<p>Definition at line <a class="el" href="animaPyramidalRegistration_8cxx_source.html#l00006">6</a> of file <a class="el" href="animaPyramidalRegistration_8cxx_source.html">animaPyramidalRegistration.cxx</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 28 2015 06:22:33 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 30 2015 06:23:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

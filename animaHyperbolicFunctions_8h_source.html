@@ -95,43 +95,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">animaHyperbolicFunctions.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="animaHyperbolicFunctions_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *  hyperbolicFunctions</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Created by Aymeric Stamm on 30/03/13.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  Copyright 2012 INRIA/IRISA. All rights reserved.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;AnimaSpecialFunctionsExport.h&quot;</span></div>
+<a href="animaHyperbolicFunctions_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span>anima</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a2aa9fd33a6f72b5f65a217c2848432ac">ShOverId</a>(<span class="keyword">const</span> T &amp;x);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T1, <span class="keyword">class</span> T2, <span class="keyword">class</span> T3&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a2e4b0c5b37a91f8b6f7d87fd70ce856f">ShRatio</a>(<span class="keyword">const</span> T1 &amp;k, <span class="keyword">const</span> T2 &amp;alpha, <span class="keyword">const</span> T3 &amp;beta);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#aa155a8ad28d67b1309795a4b72d5a2d2">xi</a>(<span class="keyword">const</span> T &amp;k);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#ab74695ff21c4f045a25e158f5aaf9fd1">jtwo</a>(<span class="keyword">const</span> T &amp;k);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a67acaf9ea11bd8eec95ceaa1655256e1">jfour</a>(<span class="keyword">const</span> T &amp;k);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;} <span class="comment">// end namespace hyperbolic_functions</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>anima</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="animaHyperbolicFunctions_8hxx.html">animaHyperbolicFunctions.hxx</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; ANIMASPECIALFUNCTIONS_EXPORT <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a546b11905751e6de497ca20586193836">ShOverId</a>(<span class="keyword">const</span> T &amp;x);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T1, <span class="keyword">class</span> T2, <span class="keyword">class</span> T3&gt; ANIMASPECIALFUNCTIONS_EXPORT <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#a12de5574fa5ea868a1ed8b4c64eff799">ShRatio</a>(<span class="keyword">const</span> T1 &amp;k, <span class="keyword">const</span> T2 &amp;alpha, <span class="keyword">const</span> T3 &amp;beta);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; ANIMASPECIALFUNCTIONS_EXPORT <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">xi</a>(<span class="keyword">const</span> T &amp;k);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; ANIMASPECIALFUNCTIONS_EXPORT <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#aa6a70b979a57a3a4de5c297af39003df">jtwo</a>(<span class="keyword">const</span> T &amp;k);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt; ANIMASPECIALFUNCTIONS_EXPORT <span class="keywordtype">double</span> <a class="code" href="namespaceanima.html#ae73ff17970dfd958496d0072d20baf8b">jfour</a>(<span class="keyword">const</span> T &amp;k);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;} <span class="comment">// end namespace hyperbolic_functions</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="animaHyperbolicFunctions_8hxx.html">animaHyperbolicFunctions.hxx</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="ttc" id="namespaceanima_html_aa6a70b979a57a3a4de5c297af39003df"><div class="ttname"><a href="namespaceanima.html#aa6a70b979a57a3a4de5c297af39003df">anima::jtwo</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double jtwo(const T &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00041">animaHyperbolicFunctions.hxx:41</a></div></div>
-<div class="ttc" id="namespaceanima_html_a546b11905751e6de497ca20586193836"><div class="ttname"><a href="namespaceanima.html#a546b11905751e6de497ca20586193836">anima::ShOverId</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double ShOverId(const T &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00008">animaHyperbolicFunctions.hxx:8</a></div></div>
-<div class="ttc" id="namespaceanima_html_ac341bd69a70af69030fcf86cac5cbc60"><div class="ttname"><a href="namespaceanima.html#ac341bd69a70af69030fcf86cac5cbc60">anima::xi</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double xi(const T &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00029">animaHyperbolicFunctions.hxx:29</a></div></div>
-<div class="ttc" id="namespaceanima_html_a12de5574fa5ea868a1ed8b4c64eff799"><div class="ttname"><a href="namespaceanima.html#a12de5574fa5ea868a1ed8b4c64eff799">anima::ShRatio</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double ShRatio(const T1 &amp;k, const T2 &amp;alpha, const T3 &amp;beta)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00020">animaHyperbolicFunctions.hxx:20</a></div></div>
+<div class="ttc" id="namespaceanima_html_a2aa9fd33a6f72b5f65a217c2848432ac"><div class="ttname"><a href="namespaceanima.html#a2aa9fd33a6f72b5f65a217c2848432ac">anima::ShOverId</a></div><div class="ttdeci">double ShOverId(const T &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00008">animaHyperbolicFunctions.hxx:8</a></div></div>
+<div class="ttc" id="namespaceanima_html_aa155a8ad28d67b1309795a4b72d5a2d2"><div class="ttname"><a href="namespaceanima.html#aa155a8ad28d67b1309795a4b72d5a2d2">anima::xi</a></div><div class="ttdeci">double xi(const T &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00029">animaHyperbolicFunctions.hxx:29</a></div></div>
+<div class="ttc" id="namespaceanima_html_a2e4b0c5b37a91f8b6f7d87fd70ce856f"><div class="ttname"><a href="namespaceanima.html#a2e4b0c5b37a91f8b6f7d87fd70ce856f">anima::ShRatio</a></div><div class="ttdeci">double ShRatio(const T1 &amp;k, const T2 &amp;alpha, const T3 &amp;beta)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00020">animaHyperbolicFunctions.hxx:20</a></div></div>
+<div class="ttc" id="namespaceanima_html_ab74695ff21c4f045a25e158f5aaf9fd1"><div class="ttname"><a href="namespaceanima.html#ab74695ff21c4f045a25e158f5aaf9fd1">anima::jtwo</a></div><div class="ttdeci">double jtwo(const T &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00041">animaHyperbolicFunctions.hxx:41</a></div></div>
+<div class="ttc" id="namespaceanima_html_a67acaf9ea11bd8eec95ceaa1655256e1"><div class="ttname"><a href="namespaceanima.html#a67acaf9ea11bd8eec95ceaa1655256e1">anima::jfour</a></div><div class="ttdeci">double jfour(const T &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00053">animaHyperbolicFunctions.hxx:53</a></div></div>
 <div class="ttc" id="animaHyperbolicFunctions_8hxx_html"><div class="ttname"><a href="animaHyperbolicFunctions_8hxx.html">animaHyperbolicFunctions.hxx</a></div></div>
-<div class="ttc" id="namespaceanima_html_ae73ff17970dfd958496d0072d20baf8b"><div class="ttname"><a href="namespaceanima.html#ae73ff17970dfd958496d0072d20baf8b">anima::jfour</a></div><div class="ttdeci">ANIMASPECIALFUNCTIONS_EXPORT double jfour(const T &amp;k)</div><div class="ttdef"><b>Definition:</b> <a href="animaHyperbolicFunctions_8hxx_source.html#l00053">animaHyperbolicFunctions.hxx:53</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 28 2015 06:22:32 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 30 2015 06:23:47 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['cliprogress_2ecxx',['CliProgress.cxx',['../CliProgress_8cxx.html',1,'']]],
-  ['cliprogress_2eh',['CliProgress.h',['../CliProgress_8h.html',1,'']]]
+  ['ddicostfunction_2ecxx',['ddiCostFunction.cxx',['../ddiCostFunction_8cxx.html',1,'']]],
+  ['ddicostfunction_2eh',['ddiCostFunction.h',['../ddiCostFunction_8h.html',1,'']]]
 ];

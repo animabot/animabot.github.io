@@ -16,7 +16,7 @@
 <area shape="rect" id="node16" href="$classanima_1_1InhomogeneousDiffusionImageFilter.html" title="anima::InhomogeneousDiffusion\lImageFilter\&lt; TInputImage,\l TDiffusionScalarImage, TOutputImage \&gt;" alt="" coords="210,933,465,989"/>
 <area shape="rect" id="node17" href="$classanima_1_1LogTensorImageFilter.html" title="anima::LogTensorImageFilter\l\&lt; TScalarType, NDimensions \&gt;" alt="" coords="238,1013,437,1054"/>
 <area shape="rect" id="node18" href="$classanima_1_1MaskedImageToImageFilter.html" title="anima::MaskedImageToImage\lFilter\&lt; TInputImage, TOutputImage \&gt;" alt="" coords="219,1078,455,1119"/>
-<area shape="rect" id="node24" href="$classanima_1_1MeanAndVarianceImagesFilter.html" title="anima::MeanAndVarianceImages\lFilter\&lt; TInputImage, TOutputImage \&gt;" alt="" coords="219,1143,455,1185"/>
+<area shape="rect" id="node24" href="$classanima_1_1MeanAndVarianceImagesFilter.html" title="Applies an variance filter to an image. " alt="" coords="219,1143,455,1185"/>
 <area shape="rect" id="node25" href="$classanima_1_1MEstimateSVFImageFilter.html" title="anima::MEstimateSVFImage\lFilter\&lt; TScalarType, NDegrees\lOfFreedom, NDimensions \&gt;" alt="" coords="238,1208,437,1264"/>
 <area shape="rect" id="node26" href="$classanima_1_1NonCentralChiNoiseGeneratorImageFilter.html" title="anima::NonCentralChiNoise\lGeneratorImageFilter\&lt; Dimension \&gt;" alt="" coords="224,1287,451,1329"/>
 <area shape="rect" id="node27" href="$classanima_1_1NonLocalMeansImageFilter.html" title="anima::NonLocalMeansImage\lFilter\&lt; TInputImage \&gt;" alt="" coords="242,1353,433,1394"/>
@@ -36,9 +36,8 @@
 <area shape="rect" id="node44" href="$classanima_1_1SimuBlochSE.html" title="anima::SimuBlochSE\l\&lt; TImage \&gt;" alt="" coords="266,2337,409,2378"/>
 <area shape="rect" id="node45" href="$classanima_1_1SimuBlochSPGRE.html" title="anima::SimuBlochSPGRE\l\&lt; TImage \&gt;" alt="" coords="252,2402,423,2443"/>
 <area shape="rect" id="node46" href="$classanima_1_1StimulatedSpinEchoImageFilter.html" title="anima::StimulatedSpinEcho\lImageFilter\&lt; TImage, TOutputImage \&gt;" alt="" coords="216,2467,459,2509"/>
-<area shape="rect" id="node47" href="$classanima_1_1VarianceImageFilter.html" title="Applies an averaging filter to an image. " alt="" coords="234,2533,441,2574"/>
-<area shape="rect" id="node48" href="$classanima_1_1MaskedImageToImageFilter.html" title="anima::MaskedImageToImage\lFilter\&lt; itk::Image\&lt; PixelScalar\lType, 3 \&gt;, itk::VectorImage\l\&lt; PixelScalarType, 3 \&gt; \&gt;" alt="" coords="240,2598,435,2669"/>
-<area shape="rect" id="node52" href="$classanima_1_1MaskedImageToImageFilter.html" title="anima::MaskedImageToImage\lFilter\&lt; itk::VectorImage\l\&lt; PixelScalarType, 3 \&gt;, itk\l::Image\&lt; PixelScalarType, 3 \&gt; \&gt;" alt="" coords="235,2803,439,2874"/>
+<area shape="rect" id="node47" href="$classanima_1_1MaskedImageToImageFilter.html" title="anima::MaskedImageToImage\lFilter\&lt; itk::Image\&lt; PixelScalar\lType, 3 \&gt;, itk::VectorImage\l\&lt; PixelScalarType, 3 \&gt; \&gt;" alt="" coords="240,2533,435,2603"/>
+<area shape="rect" id="node51" href="$classanima_1_1MaskedImageToImageFilter.html" title="anima::MaskedImageToImage\lFilter\&lt; itk::VectorImage\l\&lt; PixelScalarType, 3 \&gt;, itk\l::Image\&lt; PixelScalarType, 3 \&gt; \&gt;" alt="" coords="235,2738,439,2809"/>
 <area shape="rect" id="node19" href="$classanima_1_1CombinedRelaxometryEstimationImageFilter.html" title="anima::CombinedRelaxometry\lEstimationImageFilter\&lt;\l TInputImage, TOutputImage \&gt;" alt="" coords="577,911,775,967"/>
 <area shape="rect" id="node20" href="$classanima_1_1T1RelaxometryEstimationImageFilter.html" title="anima::T1RelaxometryEstimation\lImageFilter\&lt; TInputImage,\l TOutputImage \&gt;" alt="" coords="571,991,781,1047"/>
 <area shape="rect" id="node21" href="$classanima_1_1T1SERelaxometryEstimationImageFilter.html" title="anima::T1SERelaxometryEstimation\lImageFilter\&lt; TInputImage,\l TOutputImage \&gt;" alt="" coords="563,1071,789,1127"/>
@@ -47,13 +46,13 @@
 <area shape="rect" id="node31" href="$classanima_1_1FiniteStrainDDIResampleImageFilter.html" title="anima::FiniteStrainDDIResample\lImageFilter\&lt; TInputScalarType,\l Dimension, TInterpolatorPrecisionType \&gt;" alt="" coords="547,1483,805,1539"/>
 <area shape="rect" id="node32" href="$classanima_1_1FiniteStrainODFResampleImageFilter.html" title="anima::FiniteStrainODFResample\lImageFilter\&lt; TInputScalarType,\l Dimension, TInterpolatorPrecisionType \&gt;" alt="" coords="547,1563,805,1619"/>
 <area shape="rect" id="node33" href="$classanima_1_1FiniteStrainTensorResampleImageFilter.html" title="anima::FiniteStrainTensor\lResampleImageFilter\&lt; TInputScalar\lType, Dimension, TInterpolatorPrecisionType \&gt;" alt="" coords="531,1643,821,1699"/>
-<area shape="rect" id="node49" href="$classanima_1_1DDIModelEstimatorImageFilter.html" title="anima::DDIModelEstimator\lImageFilter\&lt; PixelScalarType \&gt;" alt="" coords="575,2514,777,2555"/>
-<area shape="rect" id="node50" href="$classanima_1_1DTIEstimationImageFilter.html" title="anima::DTIEstimationImage\lFilter\&lt; PixelScalarType \&gt;" alt="" coords="586,2579,766,2621"/>
-<area shape="rect" id="node51" href="$classanima_1_1DTINonCentralChiEstimationImageFilter.html" title="anima::DTINonCentralChiEstimation\lImageFilter\&lt; PixelScalarType \&gt;" alt="" coords="563,2645,789,2686"/>
-<area shape="rect" id="node53" href="$classanima_1_1CramersTestImageFilter.html" title="anima::CramersTestImageFilter\l\&lt; PixelScalarType \&gt;" alt="" coords="575,2710,777,2751"/>
-<area shape="rect" id="node54" href="$classanima_1_1LocalPatchCovarianceDistanceImageFilter.html" title="anima::LocalPatchCovariance\lDistanceImageFilter\&lt; PixelScalar\lType \&gt;" alt="" coords="569,2775,783,2831"/>
-<area shape="rect" id="node55" href="$classanima_1_1LocalPatchMeanDistanceImageFilter.html" title="anima::LocalPatchMeanDistance\lImageFilter\&lt; PixelScalarType \&gt;" alt="" coords="571,2854,781,2895"/>
-<area shape="rect" id="node56" href="$classanima_1_1NLMeansPatientToGroupComparisonImageFilter.html" title="anima::NLMeansPatientToGroup\lComparisonImageFilter\&lt; PixelScalar\lType \&gt;" alt="" coords="561,2919,791,2975"/>
-<area shape="rect" id="node57" href="$classanima_1_1PatientToGroupComparisonImageFilter.html" title="Implements patient to group comparison as in http://dx.doi.org/10.1007/978&#45;3&#45;540&#45;85988&#45;8_116. " alt="" coords="565,2998,787,3039"/>
-<area shape="rect" id="node58" href="$classanima_1_1PatientToGroupODFComparisonImageFilter.html" title="anima::PatientToGroupODFComparison\lImageFilter\&lt; PixelScalarType \&gt;" alt="" coords="870,2998,1119,3039"/>
+<area shape="rect" id="node48" href="$classanima_1_1DDIModelEstimatorImageFilter.html" title="anima::DDIModelEstimator\lImageFilter\&lt; PixelScalarType \&gt;" alt="" coords="575,2449,777,2490"/>
+<area shape="rect" id="node49" href="$classanima_1_1DTIEstimationImageFilter.html" title="anima::DTIEstimationImage\lFilter\&lt; PixelScalarType \&gt;" alt="" coords="586,2514,766,2555"/>
+<area shape="rect" id="node50" href="$classanima_1_1DTINonCentralChiEstimationImageFilter.html" title="anima::DTINonCentralChiEstimation\lImageFilter\&lt; PixelScalarType \&gt;" alt="" coords="563,2579,789,2621"/>
+<area shape="rect" id="node52" href="$classanima_1_1CramersTestImageFilter.html" title="anima::CramersTestImageFilter\l\&lt; PixelScalarType \&gt;" alt="" coords="575,2645,777,2686"/>
+<area shape="rect" id="node53" href="$classanima_1_1LocalPatchCovarianceDistanceImageFilter.html" title="anima::LocalPatchCovariance\lDistanceImageFilter\&lt; PixelScalar\lType \&gt;" alt="" coords="569,2709,783,2765"/>
+<area shape="rect" id="node54" href="$classanima_1_1LocalPatchMeanDistanceImageFilter.html" title="anima::LocalPatchMeanDistance\lImageFilter\&lt; PixelScalarType \&gt;" alt="" coords="571,2789,781,2830"/>
+<area shape="rect" id="node55" href="$classanima_1_1NLMeansPatientToGroupComparisonImageFilter.html" title="anima::NLMeansPatientToGroup\lComparisonImageFilter\&lt; PixelScalar\lType \&gt;" alt="" coords="561,2853,791,2909"/>
+<area shape="rect" id="node56" href="$classanima_1_1PatientToGroupComparisonImageFilter.html" title="Implements patient to group comparison as in http://dx.doi.org/10.1007/978&#45;3&#45;540&#45;85988&#45;8_116. " alt="" coords="565,2933,787,2974"/>
+<area shape="rect" id="node57" href="$classanima_1_1PatientToGroupODFComparisonImageFilter.html" title="anima::PatientToGroupODFComparison\lImageFilter\&lt; PixelScalarType \&gt;" alt="" coords="870,2933,1119,2974"/>
 </map>

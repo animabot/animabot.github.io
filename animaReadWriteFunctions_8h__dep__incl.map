@@ -23,8 +23,10 @@
 <area shape="rect" id="node23" href="$animaBMDistortionCorrection_8cxx.html" title="animaBMDistortionCorrection.cxx" alt="" coords="4641,261,4852,288"/>
 <area shape="rect" id="node24" href="$animaPyramidalDistortionCorrectionBlockMatchingBridge_8hxx.html" title="animaPyramidalDistortion\lCorrectionBlockMatchingBridge.hxx" alt="" coords="4709,81,4936,122"/>
 <area shape="rect" id="node26" href="$animaDistortionCorrection_8cxx.html" title="animaDistortionCorrection.cxx" alt="" coords="4960,88,5152,115"/>
-<area shape="rect" id="node27" href="$animaApplyDistortionCorrection_8cxx.html" title="animaApplyDistortionCorrection.cxx" alt="" coords="5176,88,5399,115"/>
-<area shape="rect" id="node28" href="$animaApplyTransformSerie_8cxx.html" title="animaApplyTransformSerie.cxx" alt="" coords="5423,88,5621,115"/>
-<area shape="rect" id="node29" href="$animaConnectedComponents_8cxx.html" title="animaConnectedComponents.cxx" alt="" coords="5647,88,5860,115"/>
+<area shape="rect" id="node27" href="$animaPyramidalRegistration_8cxx.html" title="animaPyramidalRegistration.cxx" alt="" coords="5177,88,5380,115"/>
+<area shape="rect" id="node28" href="$animaApplyDistortionCorrection_8cxx.html" title="animaApplyDistortionCorrection.cxx" alt="" coords="5405,88,5628,115"/>
+<area shape="rect" id="node29" href="$animaApplyTransformSerie_8cxx.html" title="animaApplyTransformSerie.cxx" alt="" coords="5653,88,5851,115"/>
+<area shape="rect" id="node30" href="$animaSymmetryConstrainedRegistration_8cxx.html" title="animaSymmetryConstrained\lRegistration.cxx" alt="" coords="5875,81,6057,122"/>
+<area shape="rect" id="node31" href="$animaConnectedComponents_8cxx.html" title="animaConnectedComponents.cxx" alt="" coords="6083,88,6296,115"/>
 <area shape="rect" id="node25" href="$animaPyramidalDistortionCorrectionBlockMatchingBridge_8h.html" title="animaPyramidalDistortion\lCorrectionBlockMatchingBridge.h" alt="" coords="4715,171,4929,213"/>
 </map>

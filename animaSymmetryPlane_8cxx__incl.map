@@ -1,10 +1,12 @@
 <map id="animaSymmetryPlane.cxx" name="animaSymmetryPlane.cxx">
-<area shape="rect" id="node2" href="$Arguments_8h.html" title="Arguments.h" alt="" coords="1521,80,1615,107"/>
-<area shape="rect" id="node26" href="$animaPyramidalSymmetryBridge_8h.html" title="animaPyramidalSymmetryBridge.h" alt="" coords="3279,80,3497,107"/>
-<area shape="rect" id="node20" href="$CliProgress_8h.html" title="CliProgress.h" alt="" coords="2181,163,2277,189"/>
-<area shape="rect" id="node22" href="$GuiArguments_8h.html" title="GuiArguments.h" alt="" coords="2303,163,2417,189"/>
-<area shape="rect" id="node32" href="$animaSymmetryPlaneTransform_8h.html" title="animaSymmetryPlaneTransform.h" alt="" coords="2648,163,2864,189"/>
-<area shape="rect" id="node37" href="$animaPyramidalSymmetryBridge_8hxx.html" title="animaPyramidalSymmetryBridge.hxx" alt="" coords="3629,163,3859,189"/>
-<area shape="rect" id="node34" href="$animaSymmetryPlaneTransform_8hxx.html" title="animaSymmetryPlaneTransform.hxx" alt="" coords="2697,253,2924,280"/>
-<area shape="rect" id="node44" href="$animaNewuoaOptimizer_8h.html" title="animaNewuoaOptimizer.h" alt="" coords="4257,253,4425,280"/>
+<area shape="rect" id="node2" href="$animaPyramidalSymmetryBridge_8h.html" title="animaPyramidalSymmetryBridge.h" alt="" coords="1945,80,2164,107"/>
+<area shape="rect" id="node8" href="$animaSymmetryPlaneTransform_8h.html" title="animaSymmetryPlaneTransform.h" alt="" coords="2636,155,2852,181"/>
+<area shape="rect" id="node14" href="$animaPyramidalSymmetryBridge_8hxx.html" title="animaPyramidalSymmetryBridge.hxx" alt="" coords="1939,155,2169,181"/>
+<area shape="rect" id="node11" href="$animaSymmetryPlaneTransform_8hxx.html" title="animaSymmetryPlaneTransform.hxx" alt="" coords="3134,237,3361,264"/>
+<area shape="rect" id="node21" href="$animaNewuoaOptimizer_8h.html" title="animaNewuoaOptimizer.h" alt="" coords="452,237,620,264"/>
+<area shape="rect" id="node31" href="$animaVectorOperations_8h.html" title="animaVectorOperations.h" alt="" coords="826,237,992,264"/>
+<area shape="rect" id="node40" href="$animaResampleImageFilter_8h.html" title="animaResampleImageFilter.h" alt="" coords="2701,237,2891,264"/>
+<area shape="rect" id="node37" href="$animaVectorOperations_8hxx.html" title="animaVectorOperations.hxx" alt="" coords="601,328,780,355"/>
+<area shape="rect" id="node38" href="$animaLogarithmFunctions_8h.html" title="animaLogarithmFunctions.h" alt="" coords="693,419,872,445"/>
+<area shape="rect" id="node48" href="$animaResampleImageFilter_8hxx.html" title="animaResampleImageFilter.hxx" alt="" coords="2315,328,2516,355"/>
 </map>

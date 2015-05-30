@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['clarguments',['CLArguments',['../structCLArguments.html',1,'']]],
-  ['cliarguments',['CliArguments',['../classCliArguments.html',1,'']]],
   ['combinedrelaxometrycostfunction',['CombinedRelaxometryCostFunction',['../classanima_1_1CombinedRelaxometryCostFunction.html',1,'anima']]],
   ['combinedrelaxometryestimationimagefilter',['CombinedRelaxometryEstimationImageFilter',['../classanima_1_1CombinedRelaxometryEstimationImageFilter.html',1,'anima']]],
   ['commanditerationupdate',['CommandIterationUpdate',['../classCommandIterationUpdate.html',1,'']]],

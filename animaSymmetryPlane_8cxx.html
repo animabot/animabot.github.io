@@ -92,15 +92,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">animaSymmetryPlane.cxx File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="Arguments_8h_source.html">Arguments.h</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="animaPyramidalSymmetryBridge_8h_source.html">animaPyramidalSymmetryBridge.h</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="animaPyramidalSymmetryBridge_8h_source.html">animaPyramidalSymmetryBridge.h</a>&gt;</code><br/>
 <code>#include &lt;itkTimeProbe.h&gt;</code><br/>
+<code>#include &lt;tclap/CmdLine.h&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for animaSymmetryPlane.cxx:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -108,16 +107,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="animaSymmetryPlane_8cxx__incl.png" border="0" usemap="#animaSymmetryPlane_8cxx" alt=""/></div>
 <map name="animaSymmetryPlane_8cxx" id="animaSymmetryPlane_8cxx">
-<area shape="rect" id="node2" href="Arguments_8h.html" title="Arguments.h" alt="" coords="1521,80,1615,107"/><area shape="rect" id="node26" href="animaPyramidalSymmetryBridge_8h.html" title="animaPyramidalSymmetryBridge.h" alt="" coords="3279,80,3497,107"/><area shape="rect" id="node20" href="CliProgress_8h.html" title="CliProgress.h" alt="" coords="2181,163,2277,189"/><area shape="rect" id="node22" href="GuiArguments_8h.html" title="GuiArguments.h" alt="" coords="2303,163,2417,189"/><area shape="rect" id="node32" href="animaSymmetryPlaneTransform_8h.html" title="animaSymmetryPlaneTransform.h" alt="" coords="2648,163,2864,189"/><area shape="rect" id="node37" href="animaPyramidalSymmetryBridge_8hxx.html" title="animaPyramidalSymmetryBridge.hxx" alt="" coords="3629,163,3859,189"/><area shape="rect" id="node34" href="animaSymmetryPlaneTransform_8hxx.html" title="animaSymmetryPlaneTransform.hxx" alt="" coords="2697,253,2924,280"/><area shape="rect" id="node44" href="animaNewuoaOptimizer_8h.html" title="animaNewuoaOptimizer.h" alt="" coords="4257,253,4425,280"/></map>
+<area shape="rect" id="node2" href="animaPyramidalSymmetryBridge_8h.html" title="animaPyramidalSymmetryBridge.h" alt="" coords="1945,80,2164,107"/><area shape="rect" id="node8" href="animaSymmetryPlaneTransform_8h.html" title="animaSymmetryPlaneTransform.h" alt="" coords="2636,155,2852,181"/><area shape="rect" id="node14" href="animaPyramidalSymmetryBridge_8hxx.html" title="animaPyramidalSymmetryBridge.hxx" alt="" coords="1939,155,2169,181"/><area shape="rect" id="node11" href="animaSymmetryPlaneTransform_8hxx.html" title="animaSymmetryPlaneTransform.hxx" alt="" coords="3134,237,3361,264"/><area shape="rect" id="node21" href="animaNewuoaOptimizer_8h.html" title="animaNewuoaOptimizer.h" alt="" coords="452,237,620,264"/><area shape="rect" id="node31" href="animaVectorOperations_8h.html" title="animaVectorOperations.h" alt="" coords="826,237,992,264"/><area shape="rect" id="node40" href="animaResampleImageFilter_8h.html" title="animaResampleImageFilter.h" alt="" coords="2701,237,2891,264"/><area shape="rect" id="node37" href="animaVectorOperations_8hxx.html" title="animaVectorOperations.hxx" alt="" coords="601,328,780,355"/><area shape="rect" id="node38" href="animaLogarithmFunctions_8h.html" title="animaLogarithmFunctions.h" alt="" coords="693,419,872,445"/><area shape="rect" id="node48" href="animaResampleImageFilter_8hxx.html" title="animaResampleImageFilter.hxx" alt="" coords="2315,328,2516,355"/></map>
 </div>
 </div>
 <p><a href="animaSymmetryPlane_8cxx_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCLArguments.html">CLArguments</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ace7f414039e764f5229a85f450521d1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaSymmetryPlane_8cxx.html#ace7f414039e764f5229a85f450521d1c">main</a> (int ac, const char **av)</td></tr>
@@ -148,16 +142,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaSymmetryPlane_8cxx_source.html#l00036">36</a> of file <a class="el" href="animaSymmetryPlane_8cxx_source.html">animaSymmetryPlane.cxx</a>.</p>
-
-<p>References <a class="el" href="Arguments_8h_source.html#l00595">GenericArguments::parsed</a>, and <a class="el" href="Arguments_8h_source.html#l00608">GenericArguments::usage()</a>.</p>
+<p>Definition at line <a class="el" href="animaSymmetryPlane_8cxx_source.html#l00006">6</a> of file <a class="el" href="animaSymmetryPlane_8cxx_source.html">animaSymmetryPlane.cxx</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 28 2015 06:22:33 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 30 2015 06:23:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

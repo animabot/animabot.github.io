@@ -1,14 +1,14 @@
 <map id="animaODFEstimator.cxx" name="animaODFEstimator.cxx">
-<area shape="rect" id="node2" href="$animaODFEstimatorImageFilter_8h.html" title="animaODFEstimatorImageFilter.h" alt="" coords="844,80,1058,107"/>
-<area shape="rect" id="node34" href="$animaGradientFileReader_8h.html" title="animaGradientFileReader.h" alt="" coords="1682,80,1860,107"/>
-<area shape="rect" id="node41" href="$animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="2368,80,2550,107"/>
-<area shape="rect" id="node8" href="$animaODFEstimatorImageFilter_8hxx.html" title="animaODFEstimatorImageFilter.hxx" alt="" coords="545,155,770,181"/>
+<area shape="rect" id="node2" href="$animaODFEstimatorImageFilter_8h.html" title="animaODFEstimatorImageFilter.h" alt="" coords="824,80,1038,107"/>
+<area shape="rect" id="node34" href="$animaGradientFileReader_8h.html" title="animaGradientFileReader.h" alt="" coords="1662,80,1840,107"/>
+<area shape="rect" id="node41" href="$animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="2348,80,2530,107"/>
+<area shape="rect" id="node8" href="$animaODFEstimatorImageFilter_8hxx.html" title="animaODFEstimatorImageFilter.hxx" alt="" coords="525,155,750,181"/>
 <area shape="rect" id="node10" href="$animaODFSphericalHarmonicBasis_8h.html" title="animaODFSphericalHarmonic\lBasis.h" alt="" coords="637,230,830,271"/>
-<area shape="rect" id="node20" href="$animaVectorOperations_8h.html" title="animaVectorOperations.h" alt="" coords="1146,237,1312,264"/>
-<area shape="rect" id="node11" href="$animaSphericalHarmonic_8h.html" title="animaSphericalHarmonic.h" alt="" coords="588,328,764,355"/>
-<area shape="rect" id="node15" href="$animaODFSphericalHarmonicBasis_8hxx.html" title="animaODFSphericalHarmonic\lBasis.hxx" alt="" coords="370,321,563,362"/>
-<area shape="rect" id="node25" href="$animaVectorOperations_8hxx.html" title="animaVectorOperations.hxx" alt="" coords="1250,328,1428,355"/>
-<area shape="rect" id="node26" href="$animaLogarithmFunctions_8h.html" title="animaLogarithmFunctions.h" alt="" coords="984,411,1163,437"/>
-<area shape="rect" id="node27" href="$animaLogarithmFunctions_8hxx.html" title="animaLogarithmFunctions.hxx" alt="" coords="511,485,703,512"/>
-<area shape="rect" id="node36" href="$animaGradientFileReader_8hxx.html" title="animaGradientFileReader.hxx" alt="" coords="1676,155,1866,181"/>
+<area shape="rect" id="node20" href="$animaVectorOperations_8h.html" title="animaVectorOperations.h" alt="" coords="1126,237,1292,264"/>
+<area shape="rect" id="node11" href="$animaSphericalHarmonic_8h.html" title="animaSphericalHarmonic.h" alt="" coords="428,328,604,355"/>
+<area shape="rect" id="node15" href="$animaODFSphericalHarmonicBasis_8hxx.html" title="animaODFSphericalHarmonic\lBasis.hxx" alt="" coords="629,321,822,362"/>
+<area shape="rect" id="node25" href="$animaVectorOperations_8hxx.html" title="animaVectorOperations.hxx" alt="" coords="1120,328,1299,355"/>
+<area shape="rect" id="node26" href="$animaLogarithmFunctions_8h.html" title="animaLogarithmFunctions.h" alt="" coords="810,411,990,437"/>
+<area shape="rect" id="node27" href="$animaLogarithmFunctions_8hxx.html" title="animaLogarithmFunctions.hxx" alt="" coords="424,485,616,512"/>
+<area shape="rect" id="node36" href="$animaGradientFileReader_8hxx.html" title="animaGradientFileReader.hxx" alt="" coords="1656,155,1846,181"/>
 </map>

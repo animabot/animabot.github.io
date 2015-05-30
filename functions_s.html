@@ -276,7 +276,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html#a69da9647f8974af518609de05ec88445">anima::PseudoResidualsNoiseImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalBlockMatchingBridge.html#a0b51a865e9c6c00dd4be67b747a4053e">anima::PyramidalBlockMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#aa6dbeb469d10b97b10f9eea1dc9f1ea6">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#a534e86330f228dfb278ee6463ae19d66">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#a4c08947d089f40cc978ca14b7ef797dc">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#acc7507d308ffb056294b692d173ecf3d">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidImageFilter.html#a78f64f9f8b1cb1cbef98f3d13b25523a">anima::PyramidImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1QMRISampleCreationImageFilter.html#a49338f8fdf3e38b443e06397fa882ae7">anima::QMRISampleCreationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1RecursiveLineYvvGaussianImageFilter.html#a2ba68274903a146429e2666a1d6ef45f">anima::RecursiveLineYvvGaussianImageFilter&lt; TInputImage, TOutputImage &gt;</a>
@@ -307,7 +309,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#a1f7275f754409462122128fa69c8ee76">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
 , <a class="el" href="classanima_1_1TensorMeanSquaresImageToImageMetric.html#a6beffcac5790ab9b5426b59cd6274df3">anima::TensorMeanSquaresImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1TensorSymmetricBlockMatchingRegistrationMethod.html#a86d55a1392c1f5c2f32bf4aba73b413f">anima::TensorSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
-, <a class="el" href="classanima_1_1VarianceImageFilter.html#a4a76f68817b27a120a0661adc464bfa8">anima::VarianceImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#a6689499636daea7e46ffec467b1ea5bb">anima::VectorModelLinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;</a>
 , <a class="el" href="classanima_1_1VoxelExhaustiveOptimizer.html#a87f9bd628746789009d93450bb7aec3a">anima::VoxelExhaustiveOptimizer</a>
 , <a class="el" href="classCommandIterationUpdate.html#a82da0970ef8c14141f85f3465f08242e">CommandIterationUpdate</a>
@@ -321,9 +322,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetAbsoluteCostChange()
 : <a class="el" href="classanima_1_1DDIModelEstimatorImageFilter.html#a2d77f49d5295ae1c8fb393a304c2bcdc">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;</a>
-</li>
-<li>setActivity()
-: <a class="el" href="classimpl__cliprogress_1_1ProgressDisplay.html#adc5ec1ac5b8955b742069e8de7f4f6a3">impl_cliprogress::ProgressDisplay</a>
 </li>
 <li>SetAgregator()
 : <a class="el" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#abcdf2377704447ab2d927f8c99146060">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
@@ -719,6 +717,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1SimuBlochCoherentGRE.html#a78addb252458d511cc2dd1c8bce16282">anima::SimuBlochCoherentGRE&lt; TImage &gt;</a>
 , <a class="el" href="classanima_1_1SimuBlochSPGRE.html#aa780c9fd61277dc3040e7fef1e3ba3f6">anima::SimuBlochSPGRE&lt; TImage &gt;</a>
 </li>
+<li>SetFastRegistration()
+: <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#a00ed0c929f8883047be22dd11ee25b82">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
+</li>
 <li>SetFAThreshold()
 : <a class="el" href="classanima_1_1DDIProbabilisticTractographyImageFilter.html#ab46ce2f06cad5323eedaba18b705b4d1">anima::DDIProbabilisticTractographyImageFilter</a>
 , <a class="el" href="classanima_1_1DTIProbabilisticTractographyImageFilter.html#a818e0414cf23d4f25bf8cc190765a8ba">anima::DTIProbabilisticTractographyImageFilter</a>
@@ -748,11 +749,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a6af7237c3d9ef8874b16afa844c74608">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#a102050e69e8d620038d5ec850fc223ae">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html#ac05ab1733bfcd0f47782bafd33b6d86a">anima::PyramidalDistortionCorrectionBlockMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#aeb9f0e80f444940bd45fd0d445d4f8e1">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#af6fda197e18c1285d81623351746cc76">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#a8ee016c8555f8d40a81e261613342f89">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a76c3e6aaf91087c0531306af8a62b79f">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
-</li>
-<li>setFinished()
-: <a class="el" href="classimpl__cliprogress_1_1ProgressDisplay.html#a2550da860a15cf128fc83a184d562fff">impl_cliprogress::ProgressDisplay</a>
 </li>
 <li>SetFirstGroupIndexes()
 : <a class="el" href="classanima_1_1CramersTestImageFilter.html#a4c65b4d89705f9b1a65f9ef9483239ef">anima::CramersTestImageFilter&lt; PixelScalarType &gt;</a>
@@ -796,7 +796,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1PyramidalBlockMatchingBridge.html#acc4680fe4557af21756544da871372c7">anima::PyramidalBlockMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a316ca2fcb72256a8f049863e68f26ee5">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#a56830dda49d30219a50cbf60d26c7e17">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#a00179d952751cfcca605ff43feca3ea5">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#a364c8edabb7cd2353a718067bff7192f">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#af4972427b81d72b73516f74745d8d23b">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
+</li>
+<li>SetFloSymmetryTransform()
+: <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#ada3c4dbb7d383e8bd4dba6083af47a19">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 </li>
 <li>SetFluidSigma()
 : <a class="el" href="classanima_1_1MEstimateSVFImageFilter.html#afc09e4b11bbc7e4b9023f06fe01b9267">anima::MEstimateSVFImageFilter&lt; TScalarType, NDegreesOfFreedom, NDimensions &gt;</a>
@@ -838,11 +843,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>SetGradientTensorImage()
 : <a class="el" href="classanima_1_1DDIModelEstimatorImageFilter.html#a65f4f1f809192b5787468be09e3a6e64">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;</a>
 </li>
-<li>setGraph()
-: <a class="el" href="classimpl__cliprogress_1_1ProgressDisplay.html#a5524df25ea84c7d906d6f1964e52a4e6">impl_cliprogress::ProgressDisplay</a>
-</li>
 <li>SetHistogramSize()
-: <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#aa15cc78296433b80af41d21ca798a320">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+: <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#a1bef58e689513797861ea82a2591dd60">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#aa15cc78296433b80af41d21ca798a320">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#a1ff58d8fc020d9d30c53f8670ed08534">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 </li>
 <li>SetIdentity()
 : <a class="el" href="classanima_1_1DirectionScaleSkewTransform.html#afb2df717d70fed604df50bf3971ff239">anima::DirectionScaleSkewTransform&lt; TScalarType &gt;</a>
@@ -850,15 +854,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1SplitAffine3DTransform.html#ab537793c94b73469c92918ad706285a5">anima::SplitAffine3DTransform&lt; TScalarType &gt;</a>
 , <a class="el" href="classanima_1_1SymmetryConstrainedTransform.html#a13e1bac8961fb168d3b7e9e186fb017b">anima::SymmetryConstrainedTransform&lt; TScalarType &gt;</a>
 , <a class="el" href="classanima_1_1SymmetryPlaneTransform.html#a43680b3e2fccb7f2643ab2a6f80764b2">anima::SymmetryPlaneTransform&lt; TScalarType &gt;</a>
-</li>
-<li>setImageF()
-: <a class="el" href="classimpl__cliprogress_1_1ProgressDisplay.html#acebca7198d628e0fab084e50db6404b5">impl_cliprogress::ProgressDisplay</a>
-</li>
-<li>setImageG()
-: <a class="el" href="classimpl__cliprogress_1_1ProgressDisplay.html#ab0e34bddc98e27e8a7594396a5234fc2">impl_cliprogress::ProgressDisplay</a>
-</li>
-<li>setImageRGB()
-: <a class="el" href="classimpl__cliprogress_1_1ProgressDisplay.html#ade58f358628ff9a275a1e65eae7d532d">impl_cliprogress::ProgressDisplay</a>
 </li>
 <li>SetIndexesFromFiles()
 : <a class="el" href="classanima_1_1LowMemoryCramersTestBridge.html#a7cc1e4311883d4259c2c86c26027949d">anima::LowMemoryCramersTestBridge</a>
@@ -1023,6 +1018,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a6424420200f11eb44c6d1837b63dee5c">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#aa8e6467e555c77af81c506939c245cd0">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html#a5f24323f7602fbd03480efaad56e5d02">anima::PyramidalDistortionCorrectionBlockMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#a092d1ef5290d4f0a32d8e1b25067a71f">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 </li>
 <li>SetLastTransformParameters()
 : <a class="el" href="classanima_1_1DistortionCorrectionRegistrationMethod.html#aa2f51c868874167b374ecee6ba8d69a2">anima::DistortionCorrectionRegistrationMethod&lt; TInputImage &gt;</a>
@@ -1163,7 +1159,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a2d6bb58aad571e931f77a3bde558130f">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#a0bffb993d10f7a6794cc8367b43ac6eb">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html#a1537c5d4a9d69e4b88790a2fda70a6c5">anima::PyramidalDistortionCorrectionBlockMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#a526e79fe604d0d78a88563865d3b0df4">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#aa5eca10c107b8c674a61bbc3fc54bc83">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#a54f988bba6428003b708e448e7a1a0f8">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 </li>
 <li>SetMetricKind()
 : <a class="el" href="classanima_1_1BlockMatchingBaseRegistrationMethod.html#aa9cf41558658bff47781209cf9e7c30f">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
@@ -1309,7 +1307,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a482bb13c317f2b30e84bbd819e2f335f">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#ae4ece0a895e496978148e1a4895a26b7">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html#ac60a2c1042610004bbcc14d70dca34f5">anima::PyramidalDistortionCorrectionBlockMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#af7b41c3e0095b625edaaa612e12d1889">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#a227175d2cf394c8836e0126d2ab75be7">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#a9002c00c57ca2c70f04419e47a5f0f06">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 </li>
 <li>SetNumberOfRandomRestarts()
 : <a class="el" href="classanima_1_1DDIModelEstimatorImageFilter.html#ad157a0fe4a8505d87a4ed79e669278c7">anima::DDIModelEstimatorImageFilter&lt; PixelScalarType &gt;</a>
@@ -1381,6 +1381,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a653990e1058bf1ad24b7d6327ccecf60">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#ae482ca9fe92f3876f870a0ce0f12168c">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html#a4afff5f136fbf15a1f5faf3dc51fe42f">anima::PyramidalDistortionCorrectionBlockMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#aacf48d9e41591e6458c9e90f26022e63">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#abbf27eb2beb3fbe3e58889a38e9b8a74">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a6e80979f9d1d5e17533dd9fe40bc798f">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SetOptimizerMaxIterations()
@@ -1459,7 +1461,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetOutputSpacing()
 : <a class="el" href="classanima_1_1OrientedModelBaseResampleImageFilter.html#a94181f0e14c15b9eb822f11a1edf4dda">anima::OrientedModelBaseResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>
-, <a class="el" href="classanima_1_1ResampleImageFilter.html#a009e33fdbbd948aca15618e29115957c">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
+, <a class="el" href="classanima_1_1ResampleImageFilter.html#abdc4455394fda91703d18a4771553897">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
 </li>
 <li>SetOutputStartIndex()
 : <a class="el" href="classanima_1_1ResampleImageFilter.html#a7350b6c24500749f10c7318d257bc442">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
@@ -1476,11 +1478,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#ac1c55d2832b52d1f0fb7b9e5124a9f30">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#a022c389fead4bb551502d1cc8d5c5908">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html#ab0a39d6cb5e6e834ff738201a0302595">anima::PyramidalDistortionCorrectionBlockMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#a0c48eac460c8a4a648388973707ad135">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#a32c38a11b4661df7c8bac606b598b1e8">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#a9781f5c1ec2ec4d729c6d3120a897728">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 </li>
 <li>SetOutputTransformType()
 : <a class="el" href="classanima_1_1BaseTransformAgregator.html#aad0e8a0f8c2f1a8b517cc1fc2525b68a">anima::BaseTransformAgregator&lt; NDimensions &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalBlockMatchingBridge.html#a2c18056caa4390dee0e98ef6680c7016">anima::PyramidalBlockMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#a121373179ce7301700bafb0188f16bdf">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 </li>
 <li>SetParallelDiffusivity()
 : <a class="el" href="classanima_1_1DDICostFunction.html#a5bd51de2903058138c0732b6c093563a">anima::DDICostFunction</a>
@@ -1518,9 +1523,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>SetPositionDistanceFuseThreshold()
 : <a class="el" href="classanima_1_1BaseProbabilisticTractographyImageFilter.html#a9a9f85ef193a6b1ea4caae25072d890e">anima::BaseProbabilisticTractographyImageFilter</a>
 </li>
-<li>setProgress()
-: <a class="el" href="classimpl__cliprogress_1_1ProgressDisplay.html#af817801831ea76a09543882daef9bfce">impl_cliprogress::ProgressDisplay</a>
-</li>
 <li>SetProgressCallback()
 : <a class="el" href="classanima_1_1PyramidalBlockMatchingBridge.html#af8487acd9342db8d1a7ff60ceb8f7357">anima::PyramidalBlockMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a5b88e96867f3646937c32fcade655e97">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
@@ -1544,7 +1546,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetRadius()
 : <a class="el" href="classanima_1_1MeanAndVarianceImagesFilter.html#a756952ac4b645af146e78c78815ebf14">anima::MeanAndVarianceImagesFilter&lt; TInputImage, TOutputImage &gt;</a>
-, <a class="el" href="classanima_1_1VarianceImageFilter.html#a8a89779e57ee9d1afa0b40230948651d">anima::VarianceImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 </li>
 <li>SetRawSignal()
 : <a class="el" href="classanima_1_1DTINonCentralChiCostFunction.html#ac60e4ec3774d7cfae3749fa4308f540d">anima::DTINonCentralChiCostFunction</a>
@@ -1553,11 +1554,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1PyramidalBlockMatchingBridge.html#ae1fad793c1707af934985846ab2984e2">anima::PyramidalBlockMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a213d3ac5a5127a39c8102439c284bf4b">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#af5df0b2a50db0938b951c76f6b12e320">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#a40fb394296eb21c9b85c12d2b13c725e">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#a2acaa7b0d71716a794e94ec5223c9f07">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#adc4cf068a5b747826b23500c7ece47b9">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1ResampleImageFilter.html#a89853a78f79404ac26a644225214ca78">anima::ResampleImageFilter&lt; TInputImage, TOutputImage, TInterpolatorPrecisionType &gt;</a>
 </li>
 <li>SetReferenceSymmetryPlanes()
 : <a class="el" href="classanima_1_1SymmetryConstrainedTransform.html#a77a84f26d8267977a534cfc4e3196a27">anima::SymmetryConstrainedTransform&lt; TScalarType &gt;</a>
+</li>
+<li>SetRefSymmetryTransform()
+: <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#a9123b6dc3c3fdc49e7859415346c4557">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 </li>
 <li>SetRefVal()
 : <a class="el" href="classanima_1_1GaussianNoiseGeneratorImageFilter.html#a83f797dedebe2243a4ada6ab03badffe">anima::GaussianNoiseGeneratorImageFilter&lt; Dimension &gt;</a>
@@ -1589,7 +1595,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#afc7266d99379626bcbf012dc402c8c3c">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#a345375eeab850ba30966b832e45e207e">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html#a94eb0fcf748aff499c6f810b1a7f7147">anima::PyramidalDistortionCorrectionBlockMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#a73826417593b84ef77414d290bd0d374">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#af214bdb1f8df0de9a9a13db8e613956a">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#a15e883bc22f5a5f4781f46cefab0677c">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 </li>
 <li>SetRhoBegin()
 : <a class="el" href="classanima_1_1BobyqaOptimizer.html#ae8035fb79e57f0c2631b067bbb9cfcb3">anima::BobyqaOptimizer</a>
@@ -1649,7 +1657,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1PyramidalBlockMatchingBridge.html#a09e778c5049f779dc48e8e886535c37b">anima::PyramidalBlockMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a1f94985b84bd2bfac3f7b9a2c471fde4">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#ac994e457b7daf63662c442ea8709f8f0">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#a36768964f069f1ccfcff3665a4e4983b">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#a92733e38e6cda02cd3c6274d7ce84279">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#ae3982306e325a085c0903d97aa01ac4d">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a2e9f42365ee7583326410114fdf1245c">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SetSearchNeighborhood()
@@ -1665,7 +1675,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#ad70d2ed2a676a56a9e164909ea3710de">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#aaa7eae8afc4308897bb3311c9d663d79">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html#ab597b19d2a0c0c98170002b7733f2ec5">anima::PyramidalDistortionCorrectionBlockMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#ab03b28c4929eb830613f356df897d940">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#acb01b028ada242b34cb4782e536c546f">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#a5c2ce0b2afd0ff759c48b74979f9b2c8">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ab8e04c660467d2bfcd26e89936ac2e20">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SetSearchScaleRadius()
@@ -1675,6 +1687,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a340669dcd14bbecd7b6369496e09a4a9">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#adaf57be2ef6131efdb9ca9d123baf716">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html#a9cbe92d56f4a7d109bdc5e12490b9f44">anima::PyramidalDistortionCorrectionBlockMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#a107625e27ff0ad59304ccc53c5ec7424">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#a085d23b3daf732c07d8197b65a63fc48">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SetSearchSkewRadius()
@@ -1684,6 +1697,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#a7dac4b855f2e4d79817d5b5e3015762b">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#a83d46d76625acc759dc49e3d8effed6f">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html#a5967fb82e704fa46be33b34d4d24aa4b">anima::PyramidalDistortionCorrectionBlockMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#aa1f30e320455f1d42abb0cac359615d2">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ac1842318ded53fe1055ee7642b866550">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SetSearchStepSize()
@@ -1756,9 +1770,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1LowMemoryPatientToGroupODFComparisonBridge.html#ac26826ff03fb01ca9f436d6195c81fee">anima::LowMemoryPatientToGroupODFComparisonBridge</a>
 , <a class="el" href="classanima_1_1PatientToGroupComparisonImageFilter.html#a4bd36b23038e9f2f6a21a875be526564">anima::PatientToGroupComparisonImageFilter&lt; PixelScalarType &gt;</a>
 </li>
-<li>setStatus()
-: <a class="el" href="classimpl__cliprogress_1_1ProgressDisplay.html#aecda9b32f32a78c57deb90047785cf78">impl_cliprogress::ProgressDisplay</a>
-</li>
 <li>SetStDevThreshold()
 : <a class="el" href="classanima_1_1PyramidalBlockMatchingBridge.html#ad2a79d523071ef7c74bb7277f8909abd">anima::PyramidalBlockMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#ac2cfd2233bfd63d317cc51b96ffe1a26">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
@@ -1807,7 +1818,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>SetT1FlipAngles()
 : <a class="el" href="classanima_1_1CombinedRelaxometryCostFunction.html#ab13472d27a880ea82d693b32e8855541">anima::CombinedRelaxometryCostFunction</a>
-, <a class="el" href="classanima_1_1CombinedRelaxometryEstimationImageFilter.html#a8ae060e5f0096976accfc95d1db48b5a">anima::CombinedRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
+, <a class="el" href="classanima_1_1CombinedRelaxometryEstimationImageFilter.html#af8d3d6ed4fe9c905b0eef7114e40c839">anima::CombinedRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 </li>
 <li>SetT1Map()
 : <a class="el" href="classanima_1_1T2EPGRelaxometryEstimationImageFilter.html#adb79b94582a0075fb4c73d373c8871b0">anima::T2EPGRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
@@ -1842,7 +1853,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1CombinedRelaxometryCostFunction.html#a4b3df14d12844746ca2b0d754d90c45e">anima::CombinedRelaxometryCostFunction</a>
 , <a class="el" href="classanima_1_1CombinedRelaxometryEstimationImageFilter.html#ae8a01c5e10d4efd7f7e71fbeadcfe42b">anima::CombinedRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1T2EPGRelaxometryCostFunction.html#aeb35517dd68f5d66fd34ae4d99bac4dd">anima::T2EPGRelaxometryCostFunction</a>
-, <a class="el" href="classanima_1_1T2EPGRelaxometryEstimationImageFilter.html#a2022c9ed839ff2b17c254ee7baa5a42b">anima::T2EPGRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
+, <a class="el" href="classanima_1_1T2EPGRelaxometryEstimationImageFilter.html#ac1a4dbca3b1a1a2ba9132528e1ecdd94">anima::T2EPGRelaxometryEstimationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 </li>
 <li>SetT2RelaxometrySignals()
 : <a class="el" href="classanima_1_1CombinedRelaxometryCostFunction.html#abbf9f38f014ee97516015305525153b9">anima::CombinedRelaxometryCostFunction</a>
@@ -1993,7 +2004,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1PyramidalBlockMatchingBridge.html#a9a47ece14377588d4d2eb8fb075a0f61">anima::PyramidalBlockMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#af4aa92f67cbe713902158a809db3b2a3">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html#acbb35973e7037324cc0b74d0f859d435">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#a83f065407450c5151c62388d697af6f6">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#a97c44e42887d31bbf1fb1b0076a34dc3">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#a422a4ced9f7a2d31398ee0924543c376">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 </li>
 <li>SetUpToDate()
 : <a class="el" href="classanima_1_1BaseTransformAgregator.html#a0a7a9550fbc86737c46954a82697c9eb">anima::BaseTransformAgregator&lt; NDimensions &gt;</a>
@@ -2170,7 +2183,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1SpectralClusteringFilter.html#a194648fc81eda8d54119c22eee8329d0">anima::SpectralClusteringFilter&lt; ScalarType &gt;</a>
 </li>
 <li>SphericalHarmonic()
-: <a class="el" href="classanima_1_1SphericalHarmonic.html#a56919ac678c549ad8145d5146e377942">anima::SphericalHarmonic</a>
+: <a class="el" href="classanima_1_1SphericalHarmonic.html#a165dfa5ccabddf3f4fa9b913e250ff35">anima::SphericalHarmonic</a>
 </li>
 <li>SplitAffine3DTransform()
 : <a class="el" href="classanima_1_1SplitAffine3DTransform.html#aec63313f251328d254e15ef85165af4c">anima::SplitAffine3DTransform&lt; TScalarType &gt;</a>
@@ -2302,7 +2315,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1PseudoResidualsNoiseImageFilter.html#a3b7d215970462dcd501441edb45237a0">anima::PseudoResidualsNoiseImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalBlockMatchingBridge.html#a197ed01b247a4b86dd7f2061db6d9406">anima::PyramidalBlockMatchingBridge&lt; ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalDenseSVFMatchingBridge.html#aa7e26e9c41bc9c059c76f97ccc47da7f">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalRegistrationBridge.html#ae9ff2c4c95e9cf006b16658965a5eece">anima::PyramidalRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidalSymmetryBridge.html#aa3915d2ca3612ac58693b10d318e3277">anima::PyramidalSymmetryBridge&lt; PixelType, ScalarType &gt;</a>
+, <a class="el" href="classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html#ad2e843dcb3e5eb8f4222354934f6d172">anima::PyramidalSymmetryConstrainedRegistrationBridge&lt; ScalarType &gt;</a>
 , <a class="el" href="classanima_1_1PyramidImageFilter.html#ae4ad10b05ce912734bacbc6842d0c18b">anima::PyramidImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1QMRISampleCreationImageFilter.html#a4a2c5acc5adc72e859c32bff5aec6c36">anima::QMRISampleCreationImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1RecursiveLineYvvGaussianImageFilter.html#a72bf0a9a05695da6d59d7105db6da96d">anima::RecursiveLineYvvGaussianImageFilter&lt; TInputImage, TOutputImage &gt;</a>
@@ -2333,7 +2348,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html#ae69e0a5d328d0bcb937561422cf09e02">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
 , <a class="el" href="classanima_1_1TensorMeanSquaresImageToImageMetric.html#a1e242cc6267baffd4afeb6a20bdca48a">anima::TensorMeanSquaresImageToImageMetric&lt; TFixedImagePixelType, TMovingImagePixelType, ImageDimension &gt;</a>
 , <a class="el" href="classanima_1_1TensorSymmetricBlockMatchingRegistrationMethod.html#a7494cdb8faa923638f3d5567695be45d">anima::TensorSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
-, <a class="el" href="classanima_1_1VarianceImageFilter.html#a4b2a1e1fa813076604d6be843241006d">anima::VarianceImageFilter&lt; TInputImage, TOutputImage &gt;</a>
 , <a class="el" href="classanima_1_1VectorModelLinearInterpolateImageFunction.html#ad5cbc77c5cc1cc8c455e5ea3e73b7c5e">anima::VectorModelLinearInterpolateImageFunction&lt; TInputImage, TCoordRep &gt;</a>
 , <a class="el" href="classanima_1_1VoxelExhaustiveOptimizer.html#af541ceb6e54961ade5b4e4d4f827750d">anima::VoxelExhaustiveOptimizer</a>
 , <a class="el" href="classCommandIterationUpdate.html#a7321e36a5179cac3cf6dc00de2d5f494">CommandIterationUpdate</a>
@@ -2362,7 +2376,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classanima_1_1SymmetricBlockMatchingRegistrationMethod.html#a73293e0d9d4c8eaa57f1681a0c3916bc">anima::SymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;</a>
 </li>
 <li>SymmetryConstrainedTransform()
-: <a class="el" href="classanima_1_1SymmetryConstrainedTransform.html#af93a0dc76e8643e7de19c0bab88e31d7">anima::SymmetryConstrainedTransform&lt; TScalarType &gt;</a>
+: <a class="el" href="classanima_1_1SymmetryConstrainedTransform.html#a1976febab24b787c36ab0f7cba1932c5">anima::SymmetryConstrainedTransform&lt; TScalarType &gt;</a>
 </li>
 <li>SymmetryPlaneTransform()
 : <a class="el" href="classanima_1_1SymmetryPlaneTransform.html#a109a191a842aebcec892a1edb8c82bc9">anima::SymmetryPlaneTransform&lt; TScalarType &gt;</a>
@@ -2371,7 +2385,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 28 2015 06:22:35 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 30 2015 06:23:50 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

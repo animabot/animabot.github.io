@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['x',['x',['../structanima_1_1ODFProbabilisticTractographyImageFilter_1_1XYZ.html#ab8b03ee4265390fad2aa5db1677fbe2a',1,'anima::ODFProbabilisticTractographyImageFilter::XYZ']]],
-  ['xindex',['xindex',['../structarguments.html#af8866e27e0a5c9dd6070c2aa5586f0a4',1,'arguments']]],
-  ['xml',['Xml',['../classGenericArguments.html#ae1ae5e4889e22054da5ffdf1b96bc014',1,'GenericArguments']]],
-  ['xsize',['xsize',['../structarguments.html#ab57aa9ee959872b10854b14eea8a9f23',1,'arguments']]]
+  ['z',['z',['../structanima_1_1ODFProbabilisticTractographyImageFilter_1_1XYZ.html#a8eed56d9663fb8a2d2842f9f16b456b2',1,'anima::ODFProbabilisticTractographyImageFilter::XYZ']]],
+  ['zeroweight',['zeroWeight',['../namespaceanima.html#ad2a73c5d99ff7b3631bbb14553882089',1,'anima']]],
+  ['zindex',['zindex',['../structarguments.html#a3719c527cdd56e62420060f52549974c',1,'arguments']]],
+  ['zsize',['zsize',['../structarguments.html#aa2781becb634b4ba4a51da0cfabe92c1',1,'arguments']]]
 ];

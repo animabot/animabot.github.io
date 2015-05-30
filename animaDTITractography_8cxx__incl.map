@@ -1,11 +1,8 @@
 <map id="animaDTITractography.cxx" name="animaDTITractography.cxx">
-<area shape="rect" id="node2" href="$animaDTITractographyImageFilter_8h.html" title="animaDTITractographyImage\lFilter.h" alt="" coords="3577,81,3767,122"/>
-<area shape="rect" id="node12" href="$Arguments_8h.html" title="Arguments.h" alt="" coords="2073,88,2167,115"/>
-<area shape="rect" id="node36" href="$animaLogTensorImageFilter_8h.html" title="animaLogTensorImageFilter.h" alt="" coords="647,88,839,115"/>
-<area shape="rect" id="node50" href="$animaFibersWriter_8h.html" title="animaFibersWriter.h" alt="" coords="3417,88,3552,115"/>
-<area shape="rect" id="node29" href="$CliProgress_8h.html" title="CliProgress.h" alt="" coords="3146,179,3243,205"/>
-<area shape="rect" id="node31" href="$GuiArguments_8h.html" title="GuiArguments.h" alt="" coords="2201,179,2316,205"/>
-<area shape="rect" id="node38" href="$animaLogTensorImageFilter_8hxx.html" title="animaLogTensorImageFilter.hxx" alt="" coords="382,179,585,205"/>
-<area shape="rect" id="node41" href="$animaBaseTensorTools_8h.html" title="animaBaseTensorTools.h" alt="" coords="401,261,567,288"/>
-<area shape="rect" id="node46" href="$animaBaseTensorTools_8hxx.html" title="animaBaseTensorTools.hxx" alt="" coords="684,344,863,371"/>
+<area shape="rect" id="node2" href="$animaDTITractographyImageFilter_8h.html" title="animaDTITractographyImage\lFilter.h" alt="" coords="1007,81,1196,122"/>
+<area shape="rect" id="node13" href="$animaLogTensorImageFilter_8h.html" title="animaLogTensorImageFilter.h" alt="" coords="293,88,485,115"/>
+<area shape="rect" id="node29" href="$animaFibersWriter_8h.html" title="animaFibersWriter.h" alt="" coords="847,88,981,115"/>
+<area shape="rect" id="node16" href="$animaLogTensorImageFilter_8hxx.html" title="animaLogTensorImageFilter.hxx" alt="" coords="287,179,491,205"/>
+<area shape="rect" id="node19" href="$animaBaseTensorTools_8h.html" title="animaBaseTensorTools.h" alt="" coords="511,261,677,288"/>
+<area shape="rect" id="node24" href="$animaBaseTensorTools_8hxx.html" title="animaBaseTensorTools.hxx" alt="" coords="795,344,973,371"/>
 </map>

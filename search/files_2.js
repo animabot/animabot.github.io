@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ddicostfunction_2ecxx',['ddiCostFunction.cxx',['../ddiCostFunction_8cxx.html',1,'']]],
-  ['ddicostfunction_2eh',['ddiCostFunction.h',['../ddiCostFunction_8h.html',1,'']]]
+  ['tinyxml2_2ecxx',['tinyxml2.cxx',['../tinyxml2_8cxx.html',1,'']]],
+  ['tinyxml2_2eh',['tinyxml2.h',['../tinyxml2_8h.html',1,'']]]
 ];

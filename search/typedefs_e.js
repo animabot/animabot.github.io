@@ -7,5 +7,5 @@ var searchData=
   ['regionsplitterpointer',['RegionSplitterPointer',['../classanima_1_1MaskedImageToImageFilter.html#a81c74b12e50f2a43ce1a63de7a89965d',1,'anima::MaskedImageToImageFilter']]],
   ['regionsplittertype',['RegionSplitterType',['../classanima_1_1MaskedImageToImageFilter.html#a25cd38a1619078a357fe78dbde0e4347',1,'anima::MaskedImageToImageFilter']]],
   ['regiontype',['RegionType',['../classanima_1_1PyramidImageFilter.html#aa46460df80b97f48ef64167fd1990f89',1,'anima::PyramidImageFilter::RegionType()'],['../classanima_1_1OrientedModelBaseResampleImageFilter.html#a72fa0dc20d39ef980abfafe0a782a9a5',1,'anima::OrientedModelBaseResampleImageFilter::RegionType()'],['../classanima_1_1BaseTransformAgregator.html#aaf056c17d1a63d6722023917ea6df9d6',1,'anima::BaseTransformAgregator::RegionType()']]],
-  ['rigidtransformtype',['RigidTransformType',['../classPyramidalRegistrationBridge.html#aef550d577d16a0b8b5ad5d77c10f39ab',1,'PyramidalRegistrationBridge']]]
+  ['rigidtransformtype',['RigidTransformType',['../classanima_1_1PyramidalRegistrationBridge.html#aaf348a8a89e9ccb87e976d97fffcd0e2',1,'anima::PyramidalRegistrationBridge']]]
 ];

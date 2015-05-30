@@ -7,15 +7,17 @@
 <area shape="rect" id="node13" href="$classanima_1_1PyramidalDenseSVFMatchingBridge.html" title="anima::PyramidalDenseSVFMatching\lBridge\&lt; ImageDimension \&gt;" alt="" coords="171,498,405,539"/>
 <area shape="rect" id="node14" href="$classanima_1_1PyramidalDenseTensorSVFMatchingBridge.html" title="anima::PyramidalDenseTensor\lSVFMatchingBridge\&lt; ImageDimension \&gt;" alt="" coords="161,563,415,605"/>
 <area shape="rect" id="node15" href="$classanima_1_1PyramidalDistortionCorrectionBlockMatchingBridge.html" title="anima::PyramidalDistortion\lCorrectionBlockMatchingBridge\l\&lt; ImageDimension \&gt;" alt="" coords="186,628,390,684"/>
-<area shape="rect" id="node16" href="$classanima_1_1PyramidalSymmetryBridge.html" title="anima::PyramidalSymmetry\lBridge\&lt; PixelType, ScalarType \&gt;" alt="" coords="183,707,393,749"/>
-<area shape="rect" id="node17" href="$classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html" title="anima::TensorBlockMatching\lBaseRegistrationMethod\l\&lt; TInputImage \&gt;" alt="" coords="194,772,382,828"/>
+<area shape="rect" id="node16" href="$classanima_1_1PyramidalRegistrationBridge.html" title="anima::PyramidalRegistration\lBridge\&lt; ScalarType \&gt;" alt="" coords="194,707,382,749"/>
+<area shape="rect" id="node17" href="$classanima_1_1PyramidalSymmetryBridge.html" title="anima::PyramidalSymmetry\lBridge\&lt; PixelType, ScalarType \&gt;" alt="" coords="183,773,393,814"/>
+<area shape="rect" id="node18" href="$classanima_1_1PyramidalSymmetryConstrainedRegistrationBridge.html" title="anima::PyramidalSymmetry\lConstrainedRegistrationBridge\l\&lt; ScalarType \&gt;" alt="" coords="191,837,385,893"/>
+<area shape="rect" id="node19" href="$classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html" title="anima::TensorBlockMatching\lBaseRegistrationMethod\l\&lt; TInputImage \&gt;" alt="" coords="194,917,382,973"/>
 <area shape="rect" id="node3" href="$classanima_1_1DDIProbabilisticTractographyImageFilter.html" title="anima::DDIProbabilisticTractography\lImageFilter" alt="" coords="466,5,697,46"/>
 <area shape="rect" id="node4" href="$classanima_1_1DTIProbabilisticTractographyImageFilter.html" title="anima::DTIProbabilisticTractography\lImageFilter" alt="" coords="467,70,696,111"/>
 <area shape="rect" id="node5" href="$classanima_1_1ODFProbabilisticTractographyImageFilter.html" title="anima::ODFProbabilisticTractography\lImageFilter" alt="" coords="464,135,699,177"/>
 <area shape="rect" id="node7" href="$classanima_1_1AsymmetricBlockMatchingRegistrationMethod.html" title="anima::AsymmetricBlockMatching\lRegistrationMethod\&lt; TInputImage \&gt;" alt="" coords="467,201,695,242"/>
 <area shape="rect" id="node8" href="$classanima_1_1KissingSymmetricBlockMatchingRegistrationMethod.html" title="anima::KissingSymmetricBlock\lMatchingRegistrationMethod\l\&lt; TInputImage \&gt;" alt="" coords="482,265,681,321"/>
 <area shape="rect" id="node9" href="$classanima_1_1SymmetricBlockMatchingRegistrationMethod.html" title="anima::SymmetricBlockMatching\lRegistrationMethod\&lt; TInputImage \&gt;" alt="" coords="467,345,695,386"/>
-<area shape="rect" id="node18" href="$classanima_1_1TensorAsymmetricBlockMatchingRegistrationMethod.html" title="anima::TensorAsymmetricBlock\lMatchingRegistrationMethod\l\&lt; TInputImage \&gt;" alt="" coords="480,692,683,748"/>
-<area shape="rect" id="node19" href="$classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html" title="anima::TensorKissingSymmetric\lBlockMatchingRegistrationMethod\l\&lt; TInputImage \&gt;" alt="" coords="472,772,691,828"/>
-<area shape="rect" id="node20" href="$classanima_1_1TensorSymmetricBlockMatchingRegistrationMethod.html" title="anima::TensorSymmetricBlock\lMatchingRegistrationMethod\l\&lt; TInputImage \&gt;" alt="" coords="483,852,680,908"/>
+<area shape="rect" id="node20" href="$classanima_1_1TensorAsymmetricBlockMatchingRegistrationMethod.html" title="anima::TensorAsymmetricBlock\lMatchingRegistrationMethod\l\&lt; TInputImage \&gt;" alt="" coords="480,837,683,893"/>
+<area shape="rect" id="node21" href="$classanima_1_1TensorKissingSymmetricBlockMatchingRegistrationMethod.html" title="anima::TensorKissingSymmetric\lBlockMatchingRegistrationMethod\l\&lt; TInputImage \&gt;" alt="" coords="472,917,691,973"/>
+<area shape="rect" id="node22" href="$classanima_1_1TensorSymmetricBlockMatchingRegistrationMethod.html" title="anima::TensorSymmetricBlock\lMatchingRegistrationMethod\l\&lt; TInputImage \&gt;" alt="" coords="483,997,680,1053"/>
 </map>
