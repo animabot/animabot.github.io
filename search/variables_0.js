@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['_5fdocument',['_document',['../classtinyxml2_1_1XMLNode.html#a8d2d2be0bb6797625551eb0e91f0ff62',1,'tinyxml2::XMLNode']]],
-  ['_5ffirstchild',['_firstChild',['../classtinyxml2_1_1XMLNode.html#aa20c91e4213dc930c5bdf420322ca342',1,'tinyxml2::XMLNode']]],
-  ['_5flastchild',['_lastChild',['../classtinyxml2_1_1XMLNode.html#a099b6560ae44ab9edb8453aaf1a3747b',1,'tinyxml2::XMLNode']]],
-  ['_5fnext',['_next',['../classtinyxml2_1_1XMLNode.html#a27e985496b37dd00eb5b9cf59b9e3fb1',1,'tinyxml2::XMLNode']]],
-  ['_5fparent',['_parent',['../classtinyxml2_1_1XMLNode.html#a176dd1c4965c21c366de192164aa2c13',1,'tinyxml2::XMLNode']]],
-  ['_5fprev',['_prev',['../classtinyxml2_1_1XMLNode.html#a9739eb0fb9a1188266052055e7a6bf6b',1,'tinyxml2::XMLNode']]],
-  ['_5fvalue',['_value',['../classtinyxml2_1_1XMLNode.html#a3ea9884098b8379de2bb5ab3fc85c0fc',1,'tinyxml2::XMLNode']]]
+  ['base',['base',['../structarguments.html#a2ba373523404c6062e706a7c7c38e91d',1,'arguments']]],
+  ['blockmatch',['BlockMatch',['../structanima_1_1BlockMatchingBaseRegistrationMethod_1_1ThreadedMatchData.html#af5d0fa64f5f3480ff6e7213efdf57265',1,'anima::BlockMatchingBaseRegistrationMethod::ThreadedMatchData::BlockMatch()'],['../structanima_1_1DistortionCorrectionRegistrationMethod_1_1ThreadedMatchData.html#a54d9b8ae0a69186f4f451e32d48475a1',1,'anima::DistortionCorrectionRegistrationMethod::ThreadedMatchData::BlockMatch()'],['../structanima_1_1TensorBlockMatchingBaseRegistrationMethod_1_1ThreadedMatchData.html#af1426d1424dc1274f9d45dc306771288',1,'anima::TensorBlockMatchingBaseRegistrationMethod::ThreadedMatchData::BlockMatch()']]],
+  ['blocks_5fvariances',['blocks_variances',['../structanima_1_1BlockMatchingInitializer_1_1BlockGeneratorThreadStruct.html#a0d5cad2c202e1140f511da7701d79e20',1,'anima::BlockMatchingInitializer::BlockGeneratorThreadStruct']]]
 ];

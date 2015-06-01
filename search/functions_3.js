@@ -8,18 +8,12 @@ var searchData=
   ['ddimodelestimatorimagefilter',['DDIModelEstimatorImageFilter',['../classanima_1_1DDIModelEstimatorImageFilter.html#a12952b4a87f8bb7c9439978a3f9ce6e7',1,'anima::DDIModelEstimatorImageFilter']]],
   ['ddiprobabilistictractographyimagefilter',['DDIProbabilisticTractographyImageFilter',['../classanima_1_1DDIProbabilisticTractographyImageFilter.html#a5ec8a098c79e01ffad3b9a74085665a8',1,'anima::DDIProbabilisticTractographyImageFilter']]],
   ['dditestaveragingonrealvalueimagefilter',['DDITestAveragingOnRealValueImageFilter',['../classanima_1_1DDITestAveragingOnRealValueImageFilter.html#a25527b0072d17c12e020e550a54da81f',1,'anima::DDITestAveragingOnRealValueImageFilter']]],
-  ['deleteattribute',['DeleteAttribute',['../classtinyxml2_1_1XMLElement.html#aebd45aa7118964c30b32fe12e944628a',1,'tinyxml2::XMLElement']]],
-  ['deletechild',['DeleteChild',['../classtinyxml2_1_1XMLNode.html#a363b6edbd6ebd55f8387d2b89f2b0921',1,'tinyxml2::XMLNode']]],
-  ['deletechildren',['DeleteChildren',['../classtinyxml2_1_1XMLNode.html#a0360085cc54df5bff85d5c5da13afdce',1,'tinyxml2::XMLNode']]],
-  ['deletenode',['DeleteNode',['../classtinyxml2_1_1XMLDocument.html#ac1d6e2c7fcc1a660624ac4f68e96380d',1,'tinyxml2::XMLDocument']]],
   ['densesvftransformagregator',['DenseSVFTransformAgregator',['../classanima_1_1DenseSVFTransformAgregator.html#a51483def46c078c3ae9891d4f4bd2b65',1,'anima::DenseSVFTransformAgregator']]],
   ['directionscaleskewtransform',['DirectionScaleSkewTransform',['../classanima_1_1DirectionScaleSkewTransform.html#a5ef41e755809cc35176b157c13cd0e4e',1,'anima::DirectionScaleSkewTransform::DirectionScaleSkewTransform()'],['../classanima_1_1DirectionScaleSkewTransform.html#a24dda42203ebd01b813b1def0baedfb3',1,'anima::DirectionScaleSkewTransform::DirectionScaleSkewTransform(unsigned int ParamersDim)']]],
   ['directionscaletransform',['DirectionScaleTransform',['../classanima_1_1DirectionScaleTransform.html#a6fc944f6c11bb61977a13f766b5d90ab',1,'anima::DirectionScaleTransform']]],
   ['directiontransform',['DirectionTransform',['../classanima_1_1DirectionTransform.html#a7a84ae0d5678cafd23136dae6a2708bc',1,'anima::DirectionTransform']]],
   ['distortioncorrectionimagefilter',['DistortionCorrectionImageFilter',['../classanima_1_1DistortionCorrectionImageFilter.html#ae328ce64f30a3925a1091283ba630205',1,'anima::DistortionCorrectionImageFilter']]],
   ['distortioncorrectionregistrationmethod',['DistortionCorrectionRegistrationMethod',['../classanima_1_1DistortionCorrectionRegistrationMethod.html#a9a89abc0a261441da404b4ced7bf1075',1,'anima::DistortionCorrectionRegistrationMethod']]],
-  ['doubleattribute',['DoubleAttribute',['../classtinyxml2_1_1XMLElement.html#a536922a5cae9c9769a3dc1b7a8ff0d44',1,'tinyxml2::XMLElement']]],
-  ['doublevalue',['DoubleValue',['../classtinyxml2_1_1XMLAttribute.html#a336153e5aa1b7ccd6502fc249bfb3fd7',1,'tinyxml2::XMLAttribute']]],
   ['dtiestimationimagefilter',['DTIEstimationImageFilter',['../classanima_1_1DTIEstimationImageFilter.html#a79b18ebcbc0722df19a5c060cb49e6a1',1,'anima::DTIEstimationImageFilter']]],
   ['dtiextrapolateimagefilter',['DTIExtrapolateImageFilter',['../classanima_1_1DTIExtrapolateImageFilter.html#a15c38d14e9276e7ac69d2f321632c77a',1,'anima::DTIExtrapolateImageFilter']]],
   ['dtinoncentralchicostfunction',['DTINonCentralChiCostFunction',['../classanima_1_1DTINonCentralChiCostFunction.html#a390c511659e3762b78d202d3d81aa297',1,'anima::DTINonCentralChiCostFunction']]],
@@ -27,6 +21,5 @@ var searchData=
   ['dtiprobabilistictractographyimagefilter',['DTIProbabilisticTractographyImageFilter',['../classanima_1_1DTIProbabilisticTractographyImageFilter.html#ae51d9e7cd6b116f24b65534273592403',1,'anima::DTIProbabilisticTractographyImageFilter']]],
   ['dtiscalarmapsimagefilter',['DTIScalarMapsImageFilter',['../classanima_1_1DTIScalarMapsImageFilter.html#a8fa50082957eebeafbc7117f8f85e7d0',1,'anima::DTIScalarMapsImageFilter']]],
   ['dtitractographyimagefilter',['dtiTractographyImageFilter',['../classanima_1_1dtiTractographyImageFilter.html#a9ba696565f36fdb57af0b2576d85426e',1,'anima::dtiTractographyImageFilter']]],
-  ['dwisimulatorfromdtiimagefilter',['DWISimulatorFromDTIImageFilter',['../classanima_1_1DWISimulatorFromDTIImageFilter.html#afc4b81db6db42261942d7a64b3b050f4',1,'anima::DWISimulatorFromDTIImageFilter']]],
-  ['dynarray',['DynArray',['../classtinyxml2_1_1DynArray.html#af076df9203a7eda3f3501a0c84dbbb8a',1,'tinyxml2::DynArray']]]
+  ['dwisimulatorfromdtiimagefilter',['DWISimulatorFromDTIImageFilter',['../classanima_1_1DWISimulatorFromDTIImageFilter.html#afc4b81db6db42261942d7a64b3b050f4',1,'anima::DWISimulatorFromDTIImageFilter']]]
 ];

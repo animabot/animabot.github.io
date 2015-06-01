@@ -15,8 +15,6 @@ var searchData=
   ['blockmatchinginitializer',['BlockMatchingInitializer',['../classanima_1_1BlockMatchingInitializer.html#a22ea8a0a3cd45143dd5a52ebc7ca2b73',1,'anima::BlockMatchingInitializer']]],
   ['bobyqaoptimizer',['BobyqaOptimizer',['../classanima_1_1BobyqaOptimizer.html#a3b5c0dfc956d23701777483ee084af5b',1,'anima::BobyqaOptimizer::BobyqaOptimizer()'],['../classanima_1_1BobyqaOptimizer.html#aa3aaafde652439a465732575a158de8f',1,'anima::BobyqaOptimizer::BobyqaOptimizer(const BobyqaOptimizer &amp;)']]],
   ['bobyqb_5f',['bobyqb_',['../classanima_1_1BobyqaOptimizer.html#a614cd5c9e5e308c70f0f148b1a1e491c',1,'anima::BobyqaOptimizer']]],
-  ['boolattribute',['BoolAttribute',['../classtinyxml2_1_1XMLElement.html#a34811e4d1881e4ecc95c49f0f3799115',1,'tinyxml2::XMLElement']]],
-  ['boolvalue',['BoolValue',['../classtinyxml2_1_1XMLAttribute.html#afb444b7a12527f836aa161b54b2f7ce7',1,'tinyxml2::XMLAttribute']]],
   ['bootstrap',['BootStrap',['../classanima_1_1CramersTestImageFilter.html#a8ddd0a5959abc95bd26b913982f0a715',1,'anima::CramersTestImageFilter']]],
   ['bootstrap4dvolumeimagefilter',['Bootstrap4DVolumeImageFilter',['../classanima_1_1Bootstrap4DVolumeImageFilter.html#a59569199fc18f5916838b0933f52dd28',1,'anima::Bootstrap4DVolumeImageFilter']]],
   ['build_5fhistogram',['build_histogram',['../namespaceanima.html#a32a7057d868e86b8fb86e9dd7da5f63d',1,'anima']]],

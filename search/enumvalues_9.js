@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['needs_5fentity_5fprocessing',['NEEDS_ENTITY_PROCESSING',['../classtinyxml2_1_1StrPair.html#a0301ef962e15dd94574431f1c61266c5a4f1e01a55f8efe4ca72c32d454060237',1,'tinyxml2::StrPair']]],
-  ['needs_5fnewline_5fnormalization',['NEEDS_NEWLINE_NORMALIZATION',['../classtinyxml2_1_1StrPair.html#a0301ef962e15dd94574431f1c61266c5a8f2045d56e70745d718672c0da91d0e0',1,'tinyxml2::StrPair']]],
   ['newuoa',['Newuoa',['../animaPyramidalSymmetryBridge_8h.html#a6bae71413b0c9ee3fdd2b0cb2abe9d1da12de133e0ec0006f2c3896b1b0f9da4c',1,'animaPyramidalSymmetryBridge.h']]],
   ['nlopt_5fauglag',['NLOPT_AUGLAG',['../classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2a1c6f257b93408b429ed24abc99fa5f17',1,'anima::NLOPTOptimizers']]],
   ['nlopt_5fauglag_5feq',['NLOPT_AUGLAG_EQ',['../classanima_1_1NLOPTOptimizers.html#af699d8413c9939f585420fa4115923b2aea4fc567e6b2394b0fbd7bb91c8eb9df',1,'anima::NLOPTOptimizers']]],

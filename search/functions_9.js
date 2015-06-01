@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['jfour',['jfour',['../namespaceanima.html#a67acaf9ea11bd8eec95ceaa1655256e1',1,'anima']]],
-  ['jtwo',['jtwo',['../namespaceanima.html#ab74695ff21c4f045a25e158f5aaf9fd1',1,'anima']]]
+  ['kissingsymmetricblockmatchingregistrationmethod',['KissingSymmetricBlockMatchingRegistrationMethod',['../classanima_1_1KissingSymmetricBlockMatchingRegistrationMethod.html#a25da5eb72cc7cab30aa414ddbc045a59',1,'anima::KissingSymmetricBlockMatchingRegistrationMethod']]],
+  ['kmeansfilter',['KMeansFilter',['../classanima_1_1KMeansFilter.html#a694df1bd6b38df4d27aecabca6254b2a',1,'anima::KMeansFilter']]]
 ];

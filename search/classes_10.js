@@ -14,7 +14,6 @@ var searchData=
   ['sphericalharmonic',['SphericalHarmonic',['../classanima_1_1SphericalHarmonic.html',1,'anima']]],
   ['splitaffine3dtransform',['SplitAffine3DTransform',['../classanima_1_1SplitAffine3DTransform.html',1,'anima']]],
   ['stimulatedspinechoimagefilter',['StimulatedSpinEchoImageFilter',['../classanima_1_1StimulatedSpinEchoImageFilter.html',1,'anima']]],
-  ['strpair',['StrPair',['../classtinyxml2_1_1StrPair.html',1,'tinyxml2']]],
   ['symmetricblockmatchingregistrationmethod',['SymmetricBlockMatchingRegistrationMethod',['../classanima_1_1SymmetricBlockMatchingRegistrationMethod.html',1,'anima']]],
   ['symmetryconstrainedtransform',['SymmetryConstrainedTransform',['../classanima_1_1SymmetryConstrainedTransform.html',1,'anima']]],
   ['symmetryplanetransform',['SymmetryPlaneTransform',['../classanima_1_1SymmetryPlaneTransform.html',1,'anima']]]
