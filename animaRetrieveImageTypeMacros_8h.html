@@ -125,17 +125,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:af1890b54a3fbda98f8a8149e5c5f1e03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaRetrieveImageTypeMacros_8h.html#af1890b54a3fbda98f8a8149e5c5f1e03">ANIMA_CHECK_IF_COMPONENTS_ARE_VECTORS</a>(imageIO, ComponentType, Dimension, function, args...)</td></tr>
-<tr class="separator:af1890b54a3fbda98f8a8149e5c5f1e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec54df9abdb1d96900b3d4634ca65a4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaRetrieveImageTypeMacros_8h.html#aec54df9abdb1d96900b3d4634ca65a4d">ANIMA_RETRIEVE_COMPONENT_TYPE</a>(imageIO, function, args...)</td></tr>
-<tr class="separator:aec54df9abdb1d96900b3d4634ca65a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b4db8ad0e447b61c653f7fb353ee7cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaRetrieveImageTypeMacros_8h.html#a8b4db8ad0e447b61c653f7fb353ee7cc">ANIMA_RETRIEVE_NUMBER_OF_COMPONENTS</a>(imageIO, ComponentType, dimension, function, args...)</td></tr>
-<tr class="separator:a8b4db8ad0e447b61c653f7fb353ee7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdaf97610491494ed1e50126277a08d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaRetrieveImageTypeMacros_8h.html#afdaf97610491494ed1e50126277a08d6">ANIMA_RETRIEVE_NUMBER_OF_DIMENSIONS</a>(imageIO, ComponentType, function, args...)</td></tr>
-<tr class="separator:afdaf97610491494ed1e50126277a08d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae0ce9c713f4b8624be45f0bdbbd1db4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaRetrieveImageTypeMacros_8h.html#aae0ce9c713f4b8624be45f0bdbbd1db4">ANIMA_CHECK_IF_COMPONENTS_ARE_VECTORS</a>(imageIO, ComponentType, Dimension, function,...)</td></tr>
+<tr class="separator:aae0ce9c713f4b8624be45f0bdbbd1db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add03c8506eac9e25eb00bfae3e10aba2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaRetrieveImageTypeMacros_8h.html#add03c8506eac9e25eb00bfae3e10aba2">ANIMA_RETRIEVE_COMPONENT_TYPE</a>(imageIO, function,...)</td></tr>
+<tr class="separator:add03c8506eac9e25eb00bfae3e10aba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab40b6ecc297bbaaeb0a2c7b4a60a134"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaRetrieveImageTypeMacros_8h.html#aab40b6ecc297bbaaeb0a2c7b4a60a134">ANIMA_RETRIEVE_NUMBER_OF_COMPONENTS</a>(imageIO, ComponentType, dimension, function,...)</td></tr>
+<tr class="separator:aab40b6ecc297bbaaeb0a2c7b4a60a134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0e96735c692576fb5576e50f5ccd76e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaRetrieveImageTypeMacros_8h.html#aa0e96735c692576fb5576e50f5ccd76e">ANIMA_RETRIEVE_NUMBER_OF_DIMENSIONS</a>(imageIO, ComponentType, function,...)</td></tr>
+<tr class="separator:aa0e96735c692576fb5576e50f5ccd76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="af1890b54a3fbda98f8a8149e5c5f1e03"></a>
+<a class="anchor" id="aae0ce9c713f4b8624be45f0bdbbd1db4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -167,7 +167,7 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">args...&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -187,13 +187,13 @@ Macros</h2></td></tr>
 <div class="line">case 1:\</div>
 <div class="line">    {\</div>
 <div class="line">        typedef itk::Image&lt;ComponentType, Dimension&gt; ImageType;\</div>
-<div class="line">        function&lt;ImageType&gt;(args);\</div>
+<div class="line">        function&lt;ImageType&gt;(__VA_ARGS__);\</div>
 <div class="line">        break;\</div>
 <div class="line">    }\</div>
 <div class="line">default:\</div>
 <div class="line">    {\</div>
 <div class="line">        typedef itk::VectorImage&lt;ComponentType, Dimension&gt; VectorImageType;\</div>
-<div class="line">        function&lt;VectorImageType&gt;(args);\</div>
+<div class="line">        function&lt;VectorImageType&gt;(__VA_ARGS__);\</div>
 <div class="line">    }\</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>Check if one image is a Scalar image or not from an itk::ImageIOBase, then call a given function templated on either a itk::Image or itk::VectorImage</p>
@@ -205,7 +205,7 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aec54df9abdb1d96900b3d4634ca65a4d"></a>
+<a class="anchor" id="add03c8506eac9e25eb00bfae3e10aba2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -225,7 +225,7 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">args...&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -239,25 +239,25 @@ Macros</h2></td></tr>
 <div class="line">    case itk::ImageIOBase::UCHAR:\</div>
 <div class="line">        std::cerr &lt;&lt; <span class="stringliteral">&quot;Component type detected is &#39;unsigned char&#39;, anima only use &#39;char&#39;, overflow may happen&quot;</span> &lt;&lt; std::endl;\</div>
 <div class="line">    case itk::ImageIOBase::CHAR:\</div>
-<div class="line">        function&lt;char&gt;(args);\</div>
+<div class="line">        function&lt;char&gt;(__VA_ARGS__);\</div>
 <div class="line">        break;\</div>
 <div class="line">    case itk::ImageIOBase::UINT:\</div>
 <div class="line">        std::cerr &lt;&lt; <span class="stringliteral">&quot;Component type detected is &#39;unsigned int&#39;, anima only use &#39;unsigned short&#39;.\n&quot;</span>\</div>
 <div class="line">                     <span class="stringliteral">&quot;Undetermine behavor may happen.&quot;</span> &lt;&lt; std::endl;\</div>
 <div class="line">    case itk::ImageIOBase::USHORT:\</div>
-<div class="line">        function&lt;unsigned short&gt;(args);\</div>
+<div class="line">        function&lt;unsigned short&gt;(__VA_ARGS__);\</div>
 <div class="line">        break;\</div>
 <div class="line">    case itk::ImageIOBase::INT:\</div>
 <div class="line">        std::cerr &lt;&lt; <span class="stringliteral">&quot;Component type detected is &#39;int&#39;, anima only use &#39;short&#39;.&quot;</span>\</div>
 <div class="line">                     <span class="stringliteral">&quot;Undetermine behavor may happen&quot;</span> &lt;&lt; std::endl;\</div>
 <div class="line">    case itk::ImageIOBase::SHORT:\</div>
-<div class="line">        function&lt;short&gt;(args);\</div>
+<div class="line">        function&lt;short&gt;(__VA_ARGS__);\</div>
 <div class="line">        break;\</div>
 <div class="line">    case itk::ImageIOBase::FLOAT:\</div>
-<div class="line">        function&lt;float&gt;(args);\</div>
+<div class="line">        function&lt;float&gt;(__VA_ARGS__);\</div>
 <div class="line">        break;\</div>
 <div class="line">    case itk::ImageIOBase::DOUBLE:\</div>
-<div class="line">        function&lt;double&gt;(args);\</div>
+<div class="line">        function&lt;double&gt;(__VA_ARGS__);\</div>
 <div class="line">        break;\</div>
 <div class="line">    default:\</div>
 <div class="line">        itk::ExceptionObject excp(__FILE__, __LINE__, <span class="stringliteral">&quot;Component type not supported.&quot;</span>, ITK_LOCATION);\</div>
@@ -272,7 +272,7 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8b4db8ad0e447b61c653f7fb353ee7cc"></a>
+<a class="anchor" id="aab40b6ecc297bbaaeb0a2c7b4a60a134"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -304,7 +304,7 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">args...&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -316,12 +316,12 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">switch</span> (imageIO-&gt;GetNumberOfComponents())\</div>
 <div class="line">{\</div>
 <div class="line">case 1:\</div>
-<div class="line">    function&lt;itk::Image&lt;ComponentType, dimension&gt;(args);\</div>
+<div class="line">    function&lt;itk::Image&lt;ComponentType, dimension&gt;(__VA_ARGS__);\</div>
 <div class="line">    break;\</div>
 <div class="line">case 3:\</div>
-<div class="line">    function&lt;itk::Image&lt;itk::Vector&lt;ComponentType, 3&gt;, 1&gt;(args);\</div>
+<div class="line">    function&lt;itk::Image&lt;itk::Vector&lt;ComponentType, 3&gt;, 1&gt;(__VA_ARGS__);\</div>
 <div class="line">case 6:\</div>
-<div class="line">    function&lt;itk::Image&lt;itk::Vector&lt;ComponentType, 6&gt;, 1&gt;(args);\</div>
+<div class="line">    function&lt;itk::Image&lt;itk::Vector&lt;ComponentType, 6&gt;, 1&gt;(__VA_ARGS__);\</div>
 <div class="line">default:\</div>
 <div class="line">    itk::ExceptionObject excp(__FILE__, __LINE__, <span class="stringliteral">&quot;Number of Component not supported.&quot;</span>, ITK_LOCATION);\</div>
 <div class="line">    throw excp;\</div>
@@ -333,7 +333,7 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afdaf97610491494ed1e50126277a08d6"></a>
+<a class="anchor" id="aa0e96735c692576fb5576e50f5ccd76e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -359,7 +359,7 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">args...&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -371,13 +371,13 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">switch</span> (imageIO-&gt;GetNumberOfDimensions())\</div>
 <div class="line">{\</div>
 <div class="line">    case 2:\</div>
-<div class="line">        function&lt;ComponentType, 2&gt;(args);\</div>
+<div class="line">        function&lt;ComponentType, 2&gt;(__VA_ARGS__);\</div>
 <div class="line">        break;\</div>
 <div class="line">    case 3:\</div>
-<div class="line">        function&lt;ComponentType, 3&gt;(args);\</div>
+<div class="line">        function&lt;ComponentType, 3&gt;(__VA_ARGS__);\</div>
 <div class="line">        break;\</div>
 <div class="line">    case 4:\</div>
-<div class="line">        function&lt;ComponentType, 4&gt;(args);\</div>
+<div class="line">        function&lt;ComponentType, 4&gt;(__VA_ARGS__);\</div>
 <div class="line">        break;\</div>
 <div class="line">    default:\</div>
 <div class="line">        itk::ExceptionObject excp(__FILE__, __LINE__, <span class="stringliteral">&quot;Number of type not supported.&quot;</span>, ITK_LOCATION);\</div>
@@ -395,7 +395,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 2 2015 06:23:24 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 3 2015 06:22:22 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

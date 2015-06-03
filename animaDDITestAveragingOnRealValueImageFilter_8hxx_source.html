@@ -252,7 +252,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="comment">// Be sure there is no nan value in a voxel</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 25; ++i)</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">if</span> (isnan(voxelOutputValue[i]))</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">if</span> (voxelOutputValue[i] != voxelOutputValue[i])</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                 std::cerr &lt;&lt; <span class="stringliteral">&quot;Problem, OutputVoxel, (xIndex : &quot;</span> &lt;&lt; inputIndex[0] &lt;&lt;  <span class="stringliteral">&quot;, yIndex : &quot;</span> &lt;&lt; inputIndex[1] &lt;&lt; <span class="stringliteral">&quot;, zIndex : &quot;</span> &lt;&lt; inputIndex[2] &lt;&lt; <span class="stringliteral">&quot;) has a nan value.&quot;</span>&lt;&lt; std::endl;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        outputIterator.Set(voxelOutputValue);</div>
@@ -285,7 +285,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 2 2015 06:23:22 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 3 2015 06:22:20 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

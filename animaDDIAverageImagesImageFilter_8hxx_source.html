@@ -264,7 +264,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="comment">// Check if there is no nan values in a voxel</span></div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; voxelOutputValue.GetSize(); ++i)</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keywordflow">if</span> (isnan(voxelOutputValue[i]))</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keywordflow">if</span> (voxelOutputValue[i] != voxelOutputValue[i])</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            {</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                    std::cerr &lt;&lt; <span class="stringliteral">&quot;Problem, OutputVoxel has a nan value, index : &quot;</span> &lt;&lt; inputIndex  &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                    exit(-1);</div>
@@ -304,7 +304,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 2 2015 06:23:21 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 3 2015 06:22:19 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
