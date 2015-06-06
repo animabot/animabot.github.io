@@ -114,117 +114,118 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">typename</span> ImageType::Pointer inputImage = anima::readImage&lt;ImageType&gt;(args.<a class="code" href="structarguments.html#a78d8f68365158fe74fa2e64da230beaa">input</a>);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">typename</span> ImageType::Pointer spaceImage = anima::readImage&lt;ImageType&gt;(args.<a class="code" href="structarguments.html#aa5ddfbb592da374631b4c0fc9642a368">space</a>);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    inputImage-&gt;SetOrigin(spaceImage-&gt;GetOrigin());</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    inputImage-&gt;SetSpacing(spaceImage-&gt;GetSpacing());</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    inputImage-&gt;SetDirection(spaceImage-&gt;GetDirection());</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    anima::writeImage&lt;ImageType&gt;(args.<a class="code" href="structarguments.html#a62af88ecd8390f94a17b625718a941a0">output</a>, inputImage);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> ComponentType, <span class="keywordtype">int</span> dimension&gt;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="animaOverwritePhysicalSpace_8cxx.html#a8017fe3c0a3c50ced784a6950b320d83">   29</a></span>&#160;<a class="code" href="animaOverwritePhysicalSpace_8cxx.html#a8017fe3c0a3c50ced784a6950b320d83">checkIfComponentsAreVectors</a>(itk::ImageIOBase::Pointer imageIO, <span class="keyword">const</span> <a class="code" href="structarguments.html">arguments</a> &amp;args)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="animaRetrieveImageTypeMacros_8h.html#aae0ce9c713f4b8624be45f0bdbbd1db4">ANIMA_CHECK_IF_COMPONENTS_ARE_VECTORS</a>(imageIO, ComponentType, dimension, <a class="code" href="animaOverwritePhysicalSpace_8cxx.html#a17ae39de212f7b2af7d92a92283a0f2f">overwritePhysicalSpace</a>, args)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> ComponentType&gt;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="animaOverwritePhysicalSpace_8cxx.html#a712ca32394448241d1457782abc03675">   36</a></span>&#160;<a class="code" href="animaOverwritePhysicalSpace_8cxx.html#a712ca32394448241d1457782abc03675">retrieveNbDimensions</a>(itk::ImageIOBase::Pointer imageIO, <span class="keyword">const</span> <a class="code" href="structarguments.html">arguments</a> &amp;args)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="animaRetrieveImageTypeMacros_8h.html#aa0e96735c692576fb5576e50f5ccd76e">ANIMA_RETRIEVE_NUMBER_OF_DIMENSIONS</a>(imageIO, ComponentType, <a class="code" href="animaOverwritePhysicalSpace_8cxx.html#a8017fe3c0a3c50ced784a6950b320d83">checkIfComponentsAreVectors</a>, imageIO, args);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="animaOverwritePhysicalSpace_8cxx.html#ace7f414039e764f5229a85f450521d1c">   41</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="animaOverwritePhysicalSpace_8cxx.html#ace7f414039e764f5229a85f450521d1c">main</a>(<span class="keywordtype">int</span> ac, <span class="keyword">const</span> <span class="keywordtype">char</span>** av)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    TCLAP::CmdLine cmd(<span class="stringliteral">&quot;animaOverwritePhysicalSpace can be used to rewrite an image with exactly &quot;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                       <span class="stringliteral">&quot;the same real coordinates repair than the one given by  the reference image.&quot;</span>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    TCLAP::ValueArg&lt;std::string&gt; inputArg(<span class="stringliteral">&quot;i&quot;</span>,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="stringliteral">&quot;input&quot;</span>,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="stringliteral">&quot;Input image&quot;</span>,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keyword">true</span>,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="stringliteral">&quot;Input image.&quot;</span>,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            cmd);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    TCLAP::ValueArg&lt;std::string&gt; outputArg(<span class="stringliteral">&quot;o&quot;</span>,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="stringliteral">&quot;output&quot;</span>,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="stringliteral">&quot;Output Image image&quot;</span>,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="stringliteral">&quot;Output image.&quot;</span>,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            cmd);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    TCLAP::ValueArg&lt;std::string&gt; spaceArg(<span class="stringliteral">&quot;s&quot;</span>,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="stringliteral">&quot;space&quot;</span>,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="stringliteral">&quot;Image used as space reference&quot;</span>,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="stringliteral">&quot;Image used as space reference.&quot;</span>,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            cmd);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        cmd.parse(ac,av);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; e)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; e.error() &lt;&lt; <span class="stringliteral">&quot;for argument &quot;</span> &lt;&lt; e.argId() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="structarguments.html">arguments</a> args;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    args.<a class="code" href="structarguments.html#a78d8f68365158fe74fa2e64da230beaa">input</a> = inputArg.getValue(); args.<a class="code" href="structarguments.html#a62af88ecd8390f94a17b625718a941a0">output</a> = outputArg.getValue(); args.<a class="code" href="structarguments.html#aa5ddfbb592da374631b4c0fc9642a368">space</a> = spaceArg.getValue();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">// Find out the type of the image in file</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    itk::ImageIOBase::Pointer imageIO = itk::ImageIOFactory::CreateImageIO(args.<a class="code" href="structarguments.html#a78d8f68365158fe74fa2e64da230beaa">input</a>.c_str(),</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                                                           itk::ImageIOFactory::ReadMode);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span>( !imageIO )</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Itk could not find suitable IO factory for the input&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// Now that we found the appropriate ImageIO class, ask it to read the meta data from the image file.</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    imageIO-&gt;SetFileName(inputArg.getValue());</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    imageIO-&gt;ReadImageInformation();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span>(args.<a class="code" href="structarguments.html#a62af88ecd8390f94a17b625718a941a0">output</a> != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <a class="code" href="animaRetrieveImageTypeMacros_8h.html#add03c8506eac9e25eb00bfae3e10aba2">ANIMA_RETRIEVE_COMPONENT_TYPE</a>(imageIO, <a class="code" href="animaOverwritePhysicalSpace_8cxx.html#a712ca32394448241d1457782abc03675">retrieveNbDimensions</a>, imageIO, args)</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">catch</span> ( itk::ExceptionObject &amp; err )</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;Itk cannot overwrite physical space, be sure to use valid arguments...&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            std::cerr &lt;&lt; err &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//    inputImage-&gt;SetOrigin(spaceImage-&gt;GetOrigin());</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//    inputImage-&gt;SetSpacing(spaceImage-&gt;GetSpacing());</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//    inputImage-&gt;SetDirection(spaceImage-&gt;GetDirection());</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    inputImage-&gt;CopyInformation(spaceImage);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    anima::writeImage&lt;ImageType&gt;(args.<a class="code" href="structarguments.html#a62af88ecd8390f94a17b625718a941a0">output</a>, inputImage);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> ComponentType, <span class="keywordtype">int</span> dimension&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="animaOverwritePhysicalSpace_8cxx.html#a8017fe3c0a3c50ced784a6950b320d83">   30</a></span>&#160;<a class="code" href="animaOverwritePhysicalSpace_8cxx.html#a8017fe3c0a3c50ced784a6950b320d83">checkIfComponentsAreVectors</a>(itk::ImageIOBase::Pointer imageIO, <span class="keyword">const</span> <a class="code" href="structarguments.html">arguments</a> &amp;args)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="animaRetrieveImageTypeMacros_8h.html#aae0ce9c713f4b8624be45f0bdbbd1db4">ANIMA_CHECK_IF_COMPONENTS_ARE_VECTORS</a>(imageIO, ComponentType, dimension, <a class="code" href="animaOverwritePhysicalSpace_8cxx.html#a17ae39de212f7b2af7d92a92283a0f2f">overwritePhysicalSpace</a>, args)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> ComponentType&gt;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="animaOverwritePhysicalSpace_8cxx.html#a712ca32394448241d1457782abc03675">   37</a></span>&#160;<a class="code" href="animaOverwritePhysicalSpace_8cxx.html#a712ca32394448241d1457782abc03675">retrieveNbDimensions</a>(itk::ImageIOBase::Pointer imageIO, <span class="keyword">const</span> <a class="code" href="structarguments.html">arguments</a> &amp;args)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="animaRetrieveImageTypeMacros_8h.html#aa0e96735c692576fb5576e50f5ccd76e">ANIMA_RETRIEVE_NUMBER_OF_DIMENSIONS</a>(imageIO, ComponentType, <a class="code" href="animaOverwritePhysicalSpace_8cxx.html#a8017fe3c0a3c50ced784a6950b320d83">checkIfComponentsAreVectors</a>, imageIO, args);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="animaOverwritePhysicalSpace_8cxx.html#ace7f414039e764f5229a85f450521d1c">   42</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="animaOverwritePhysicalSpace_8cxx.html#ace7f414039e764f5229a85f450521d1c">main</a>(<span class="keywordtype">int</span> ac, <span class="keyword">const</span> <span class="keywordtype">char</span>** av)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    TCLAP::CmdLine cmd(<span class="stringliteral">&quot;animaOverwritePhysicalSpace can be used to rewrite an image with exactly &quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                       <span class="stringliteral">&quot;the same real coordinates repair than the one given by  the reference image.&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    TCLAP::ValueArg&lt;std::string&gt; inputArg(<span class="stringliteral">&quot;i&quot;</span>,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="stringliteral">&quot;input&quot;</span>,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="stringliteral">&quot;Input image&quot;</span>,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="stringliteral">&quot;Input image.&quot;</span>,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            cmd);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    TCLAP::ValueArg&lt;std::string&gt; outputArg(<span class="stringliteral">&quot;o&quot;</span>,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="stringliteral">&quot;output&quot;</span>,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="stringliteral">&quot;Output Image image&quot;</span>,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="stringliteral">&quot;Output image.&quot;</span>,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            cmd);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    TCLAP::ValueArg&lt;std::string&gt; spaceArg(<span class="stringliteral">&quot;s&quot;</span>,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="stringliteral">&quot;space&quot;</span>,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="stringliteral">&quot;Image used as space reference&quot;</span>,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="stringliteral">&quot;Image used as space reference.&quot;</span>,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            cmd);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        cmd.parse(ac,av);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">catch</span> (TCLAP::ArgException&amp; e)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; e.error() &lt;&lt; <span class="stringliteral">&quot;for argument &quot;</span> &lt;&lt; e.argId() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="structarguments.html">arguments</a> args;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    args.<a class="code" href="structarguments.html#a78d8f68365158fe74fa2e64da230beaa">input</a> = inputArg.getValue(); args.<a class="code" href="structarguments.html#a62af88ecd8390f94a17b625718a941a0">output</a> = outputArg.getValue(); args.<a class="code" href="structarguments.html#aa5ddfbb592da374631b4c0fc9642a368">space</a> = spaceArg.getValue();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// Find out the type of the image in file</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    itk::ImageIOBase::Pointer imageIO = itk::ImageIOFactory::CreateImageIO(args.<a class="code" href="structarguments.html#a78d8f68365158fe74fa2e64da230beaa">input</a>.c_str(),</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                                                           itk::ImageIOFactory::ReadMode);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span>( !imageIO )</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Itk could not find suitable IO factory for the input&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// Now that we found the appropriate ImageIO class, ask it to read the meta data from the image file.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    imageIO-&gt;SetFileName(inputArg.getValue());</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    imageIO-&gt;ReadImageInformation();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span>(args.<a class="code" href="structarguments.html#a62af88ecd8390f94a17b625718a941a0">output</a> != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="animaRetrieveImageTypeMacros_8h.html#add03c8506eac9e25eb00bfae3e10aba2">ANIMA_RETRIEVE_COMPONENT_TYPE</a>(imageIO, <a class="code" href="animaOverwritePhysicalSpace_8cxx.html#a712ca32394448241d1457782abc03675">retrieveNbDimensions</a>, imageIO, args)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">catch</span> ( itk::ExceptionObject &amp; err )</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;Itk cannot overwrite physical space, be sure to use valid arguments...&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            std::cerr &lt;&lt; err &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
 <div class="ttc" id="animaOverwritePhysicalSpace_8cxx_html_a17ae39de212f7b2af7d92a92283a0f2f"><div class="ttname"><a href="animaOverwritePhysicalSpace_8cxx.html#a17ae39de212f7b2af7d92a92283a0f2f">overwritePhysicalSpace</a></div><div class="ttdeci">void overwritePhysicalSpace(const arguments &amp;args)</div><div class="ttdef"><b>Definition:</b> <a href="animaOverwritePhysicalSpace_8cxx_source.html#l00015">animaOverwritePhysicalSpace.cxx:15</a></div></div>
 <div class="ttc" id="structarguments_html_a62af88ecd8390f94a17b625718a941a0"><div class="ttname"><a href="structarguments.html#a62af88ecd8390f94a17b625718a941a0">arguments::output</a></div><div class="ttdeci">std::string output</div><div class="ttdef"><b>Definition:</b> <a href="animaCollapseImage_8cxx_source.html#l00015">animaCollapseImage.cxx:15</a></div></div>
-<div class="ttc" id="animaOverwritePhysicalSpace_8cxx_html_a712ca32394448241d1457782abc03675"><div class="ttname"><a href="animaOverwritePhysicalSpace_8cxx.html#a712ca32394448241d1457782abc03675">retrieveNbDimensions</a></div><div class="ttdeci">void retrieveNbDimensions(itk::ImageIOBase::Pointer imageIO, const arguments &amp;args)</div><div class="ttdef"><b>Definition:</b> <a href="animaOverwritePhysicalSpace_8cxx_source.html#l00036">animaOverwritePhysicalSpace.cxx:36</a></div></div>
+<div class="ttc" id="animaOverwritePhysicalSpace_8cxx_html_a712ca32394448241d1457782abc03675"><div class="ttname"><a href="animaOverwritePhysicalSpace_8cxx.html#a712ca32394448241d1457782abc03675">retrieveNbDimensions</a></div><div class="ttdeci">void retrieveNbDimensions(itk::ImageIOBase::Pointer imageIO, const arguments &amp;args)</div><div class="ttdef"><b>Definition:</b> <a href="animaOverwritePhysicalSpace_8cxx_source.html#l00037">animaOverwritePhysicalSpace.cxx:37</a></div></div>
 <div class="ttc" id="structarguments_html_aa5ddfbb592da374631b4c0fc9642a368"><div class="ttname"><a href="structarguments.html#aa5ddfbb592da374631b4c0fc9642a368">arguments::space</a></div><div class="ttdeci">std::string space</div><div class="ttdef"><b>Definition:</b> <a href="animaOverwritePhysicalSpace_8cxx_source.html#l00010">animaOverwritePhysicalSpace.cxx:10</a></div></div>
 <div class="ttc" id="animaRetrieveImageTypeMacros_8h_html_add03c8506eac9e25eb00bfae3e10aba2"><div class="ttname"><a href="animaRetrieveImageTypeMacros_8h.html#add03c8506eac9e25eb00bfae3e10aba2">ANIMA_RETRIEVE_COMPONENT_TYPE</a></div><div class="ttdeci">#define ANIMA_RETRIEVE_COMPONENT_TYPE(imageIO, function,...)</div><div class="ttdef"><b>Definition:</b> <a href="animaRetrieveImageTypeMacros_8h_source.html#l00016">animaRetrieveImageTypeMacros.h:16</a></div></div>
-<div class="ttc" id="animaOverwritePhysicalSpace_8cxx_html_a8017fe3c0a3c50ced784a6950b320d83"><div class="ttname"><a href="animaOverwritePhysicalSpace_8cxx.html#a8017fe3c0a3c50ced784a6950b320d83">checkIfComponentsAreVectors</a></div><div class="ttdeci">void checkIfComponentsAreVectors(itk::ImageIOBase::Pointer imageIO, const arguments &amp;args)</div><div class="ttdef"><b>Definition:</b> <a href="animaOverwritePhysicalSpace_8cxx_source.html#l00029">animaOverwritePhysicalSpace.cxx:29</a></div></div>
+<div class="ttc" id="animaOverwritePhysicalSpace_8cxx_html_a8017fe3c0a3c50ced784a6950b320d83"><div class="ttname"><a href="animaOverwritePhysicalSpace_8cxx.html#a8017fe3c0a3c50ced784a6950b320d83">checkIfComponentsAreVectors</a></div><div class="ttdeci">void checkIfComponentsAreVectors(itk::ImageIOBase::Pointer imageIO, const arguments &amp;args)</div><div class="ttdef"><b>Definition:</b> <a href="animaOverwritePhysicalSpace_8cxx_source.html#l00030">animaOverwritePhysicalSpace.cxx:30</a></div></div>
 <div class="ttc" id="animaReadWriteFunctions_8h_html"><div class="ttname"><a href="animaReadWriteFunctions_8h.html">animaReadWriteFunctions.h</a></div></div>
 <div class="ttc" id="animaRetrieveImageTypeMacros_8h_html_aa0e96735c692576fb5576e50f5ccd76e"><div class="ttname"><a href="animaRetrieveImageTypeMacros_8h.html#aa0e96735c692576fb5576e50f5ccd76e">ANIMA_RETRIEVE_NUMBER_OF_DIMENSIONS</a></div><div class="ttdeci">#define ANIMA_RETRIEVE_NUMBER_OF_DIMENSIONS(imageIO, ComponentType, function,...)</div><div class="ttdef"><b>Definition:</b> <a href="animaRetrieveImageTypeMacros_8h_source.html#l00057">animaRetrieveImageTypeMacros.h:57</a></div></div>
 <div class="ttc" id="animaRetrieveImageTypeMacros_8h_html"><div class="ttname"><a href="animaRetrieveImageTypeMacros_8h.html">animaRetrieveImageTypeMacros.h</a></div></div>
 <div class="ttc" id="structarguments_html_a78d8f68365158fe74fa2e64da230beaa"><div class="ttname"><a href="structarguments.html#a78d8f68365158fe74fa2e64da230beaa">arguments::input</a></div><div class="ttdeci">std::string input</div><div class="ttdef"><b>Definition:</b> <a href="animaCollapseImage_8cxx_source.html#l00015">animaCollapseImage.cxx:15</a></div></div>
 <div class="ttc" id="animaRetrieveImageTypeMacros_8h_html_aae0ce9c713f4b8624be45f0bdbbd1db4"><div class="ttname"><a href="animaRetrieveImageTypeMacros_8h.html#aae0ce9c713f4b8624be45f0bdbbd1db4">ANIMA_CHECK_IF_COMPONENTS_ARE_VECTORS</a></div><div class="ttdeci">#define ANIMA_CHECK_IF_COMPONENTS_ARE_VECTORS(imageIO, ComponentType, Dimension, function,...)</div><div class="ttdef"><b>Definition:</b> <a href="animaRetrieveImageTypeMacros_8h_source.html#l00088">animaRetrieveImageTypeMacros.h:88</a></div></div>
-<div class="ttc" id="animaOverwritePhysicalSpace_8cxx_html_ace7f414039e764f5229a85f450521d1c"><div class="ttname"><a href="animaOverwritePhysicalSpace_8cxx.html#ace7f414039e764f5229a85f450521d1c">main</a></div><div class="ttdeci">int main(int ac, const char **av)</div><div class="ttdef"><b>Definition:</b> <a href="animaOverwritePhysicalSpace_8cxx_source.html#l00041">animaOverwritePhysicalSpace.cxx:41</a></div></div>
+<div class="ttc" id="animaOverwritePhysicalSpace_8cxx_html_ace7f414039e764f5229a85f450521d1c"><div class="ttname"><a href="animaOverwritePhysicalSpace_8cxx.html#ace7f414039e764f5229a85f450521d1c">main</a></div><div class="ttdeci">int main(int ac, const char **av)</div><div class="ttdef"><b>Definition:</b> <a href="animaOverwritePhysicalSpace_8cxx_source.html#l00042">animaOverwritePhysicalSpace.cxx:42</a></div></div>
 <div class="ttc" id="structarguments_html"><div class="ttname"><a href="structarguments.html">arguments</a></div><div class="ttdef"><b>Definition:</b> <a href="animaCollapseImage_8cxx_source.html#l00013">animaCollapseImage.cxx:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 4 2015 06:22:46 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 6 2015 06:22:38 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
