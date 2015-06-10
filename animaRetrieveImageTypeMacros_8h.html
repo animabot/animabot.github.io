@@ -118,7 +118,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="animaRetrieveImageTypeMacros_8h__dep__incl.png" border="0" usemap="#animaRetrieveImageTypeMacros_8hdep" alt=""/></div>
 <map name="animaRetrieveImageTypeMacros_8hdep" id="animaRetrieveImageTypeMacros_8hdep">
-<area shape="rect" id="node2" href="animaCollapseImage_8cxx.html" title="animaCollapseImage.cxx" alt="" coords="5,80,168,107"/><area shape="rect" id="node3" href="animaConvertImage_8cxx.html" title="animaConvertImage.cxx" alt="" coords="193,80,351,107"/><area shape="rect" id="node4" href="animaCropImage_8cxx.html" title="animaCropImage.cxx" alt="" coords="375,80,517,107"/><area shape="rect" id="node5" href="animaOverwritePhysicalSpace_8cxx.html" title="animaOverwritePhysicalSpace.cxx" alt="" coords="543,80,761,107"/><area shape="rect" id="node6" href="animaApplyTransformSerie_8cxx.html" title="animaApplyTransformSerie.cxx" alt="" coords="786,80,984,107"/></map>
+<area shape="rect" id="node2" href="animaCollapseImage_8cxx.html" title="animaCollapseImage.cxx" alt="" coords="5,80,168,107"/><area shape="rect" id="node3" href="animaConvertImage_8cxx.html" title="animaConvertImage.cxx" alt="" coords="193,80,351,107"/><area shape="rect" id="node4" href="animaCropImage_8cxx.html" title="animaCropImage.cxx" alt="" coords="375,80,517,107"/><area shape="rect" id="node5" href="animaVectorizeImages_8cxx.html" title="animaVectorizeImages.cxx" alt="" coords="542,80,716,107"/><area shape="rect" id="node6" href="animaApplyTransformSerie_8cxx.html" title="animaApplyTransformSerie.cxx" alt="" coords="741,80,939,107"/></map>
 </div>
 </div>
 <p><a href="animaRetrieveImageTypeMacros_8h_source.html">Go to the source code of this file.</a></p>
@@ -199,9 +199,9 @@ Macros</h2></td></tr>
 </div><!-- fragment --><p>Check if one image is a Scalar image or not from an itk::ImageIOBase, then call a given function templated on either a itk::Image or itk::VectorImage</p>
 <p>imageIO -&gt; An itk::ImageIOBase setted for your image file. ComponentType -&gt; The type used to templatized the function to call. Dimension -&gt; The number of dimension on used to templatized the function yo call. function -&gt; The name of the function to call. function&lt;itk::Image&lt;ComponentType, Dimension&gt; &gt;(args, args...) or function&lt;itk::VectorImage&lt;ComponentType, Dimension&gt; &gt;(args, args...) args... -&gt; A list of arguments to pass to the function </p>
 
-<p>Definition at line <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00088">88</a> of file <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html">animaRetrieveImageTypeMacros.h</a>.</p>
+<p>Definition at line <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00085">85</a> of file <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html">animaRetrieveImageTypeMacros.h</a>.</p>
 
-<p>Referenced by <a class="el" href="animaConvertImage_8cxx_source.html#l00030">checkIfComponentsAreVectors()</a>.</p>
+<p>Referenced by <a class="el" href="animaConvertImage_8cxx_source.html#l00045">checkIfComponentsAreVectors()</a>.</p>
 
 </div>
 </div>
@@ -268,7 +268,7 @@ Macros</h2></td></tr>
 
 <p>Definition at line <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00016">16</a> of file <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html">animaRetrieveImageTypeMacros.h</a>.</p>
 
-<p>Referenced by <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00174">main()</a>.</p>
+<p>Referenced by <a class="el" href="animaApplyTransformSerie_8cxx_source.html#l00175">main()</a>.</p>
 
 </div>
 </div>
@@ -329,7 +329,7 @@ Macros</h2></td></tr>
 </div><!-- fragment --><p>Retrieve the number of components of one image from an itk::ImageIOBase, then call a given function templated on a vector image of the right size.</p>
 <p>imageIO -&gt; An itk::ImageIOBase setted for your image file. ComponentType -&gt; The type used to templatized the function to call. Dimension -&gt; The number of dimension on used to templatized the function yo call. function -&gt; The name of the function to call. function&lt;itk::Image&lt;ik::Vector&lt;ComponentType, ComponentSize&gt;, Dimension&gt; &gt;(args, args...) args... -&gt; A list of arguments to pass to the function </p>
 
-<p>Definition at line <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00121">121</a> of file <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html">animaRetrieveImageTypeMacros.h</a>.</p>
+<p>Definition at line <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00118">118</a> of file <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html">animaRetrieveImageTypeMacros.h</a>.</p>
 
 </div>
 </div>
@@ -370,9 +370,6 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">switch</span> (imageIO-&gt;GetNumberOfDimensions())\</div>
 <div class="line">{\</div>
-<div class="line">    case 2:\</div>
-<div class="line">        function&lt;ComponentType, 2&gt;(__VA_ARGS__);\</div>
-<div class="line">        break;\</div>
 <div class="line">    case 3:\</div>
 <div class="line">        function&lt;ComponentType, 3&gt;(__VA_ARGS__);\</div>
 <div class="line">        break;\</div>
@@ -395,7 +392,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 06:22:31 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 10 2015 06:31:31 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

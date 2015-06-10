@@ -99,11 +99,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="animaDTIEstimationImageFilter_8h_source.html">animaDTIEstimationImageFilter.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="animaGradientFileReader_8h_source.html">animaGradientFileReader.h</a>&gt;</code><br/>
+<code>#include &lt;tclap/CmdLine.h&gt;</code><br/>
 <code>#include &lt;itkImageFileReader.h&gt;</code><br/>
 <code>#include &lt;itkImageFileWriter.h&gt;</code><br/>
-<code>#include &lt;<a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>&gt;</code><br/>
 <code>#include &lt;itkTimeProbe.h&gt;</code><br/>
-<code>#include &lt;tclap/CmdLine.h&gt;</code><br/>
+<code>#include &lt;<a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="animaReorientation_8h_source.html">animaReorientation.h</a>&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for animaDTIEstimator.cxx:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -111,7 +112,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="animaDTIEstimator_8cxx__incl.png" border="0" usemap="#animaDTIEstimator_8cxx" alt=""/></div>
 <map name="animaDTIEstimator_8cxx" id="animaDTIEstimator_8cxx">
-<area shape="rect" id="node2" href="animaDTIEstimationImageFilter_8h.html" title="animaDTIEstimationImageFilter.h" alt="" coords="1368,80,1581,107"/><area shape="rect" id="node34" href="animaGradientFileReader_8h.html" title="animaGradientFileReader.h" alt="" coords="2387,80,2565,107"/><area shape="rect" id="node43" href="animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="2921,80,3103,107"/><area shape="rect" id="node3" href="animaMaskedImageToImageFilter_8h.html" title="animaMaskedImageToImageFilter.h" alt="" coords="486,155,713,181"/><area shape="rect" id="node16" href="animaDTIEstimationImageFilter_8hxx.html" title="animaDTIEstimationImageFilter.hxx" alt="" coords="1451,155,1676,181"/><area shape="rect" id="node6" href="animaImageRegionSplitterMask_8h.html" title="animaImageRegionSplitter\lMask.h" alt="" coords="287,230,461,271"/><area shape="rect" id="node13" href="animaMaskedImageToImageFilter_8hxx.html" title="animaMaskedImageToImageFilter.hxx" alt="" coords="688,237,928,264"/><area shape="rect" id="node9" href="animaImageRegionSplitterMask_8hxx.html" title="animaImageRegionSplitter\lMask.hxx" alt="" coords="337,321,511,362"/><area shape="rect" id="node22" href="animaVectorOperations_8h.html" title="animaVectorOperations.h" alt="" coords="1915,237,2081,264"/><area shape="rect" id="node27" href="animaVectorOperations_8hxx.html" title="animaVectorOperations.hxx" alt="" coords="1909,328,2088,355"/><area shape="rect" id="node28" href="animaLogarithmFunctions_8h.html" title="animaLogarithmFunctions.h" alt="" coords="1807,411,1987,437"/><area shape="rect" id="node29" href="animaLogarithmFunctions_8hxx.html" title="animaLogarithmFunctions.hxx" alt="" coords="1801,485,1993,512"/><area shape="rect" id="node36" href="animaGradientFileReader_8hxx.html" title="animaGradientFileReader.hxx" alt="" coords="2559,155,2749,181"/></map>
+<area shape="rect" id="node2" href="animaDTIEstimationImageFilter_8h.html" title="animaDTIEstimationImageFilter.h" alt="" coords="1073,155,1287,181"/><area shape="rect" id="node34" href="animaGradientFileReader_8h.html" title="animaGradientFileReader.h" alt="" coords="2187,155,2365,181"/><area shape="rect" id="node45" href="animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="1477,80,1659,107"/><area shape="rect" id="node47" href="animaReorientation_8h.html" title="animaReorientation.h" alt="" coords="1909,80,2051,107"/><area shape="rect" id="node3" href="animaMaskedImageToImageFilter_8h.html" title="animaMaskedImageToImageFilter.h" alt="" coords="467,229,695,256"/><area shape="rect" id="node16" href="animaDTIEstimationImageFilter_8hxx.html" title="animaDTIEstimationImageFilter.hxx" alt="" coords="1289,229,1513,256"/><area shape="rect" id="node6" href="animaImageRegionSplitterMask_8h.html" title="animaImageRegionSplitter\lMask.h" alt="" coords="421,305,595,346"/><area shape="rect" id="node13" href="animaMaskedImageToImageFilter_8hxx.html" title="animaMaskedImageToImageFilter.hxx" alt="" coords="5,312,245,339"/><area shape="rect" id="node9" href="animaImageRegionSplitterMask_8hxx.html" title="animaImageRegionSplitter\lMask.hxx" alt="" coords="421,395,595,437"/><area shape="rect" id="node22" href="animaVectorOperations_8h.html" title="animaVectorOperations.h" alt="" coords="2190,312,2356,339"/><area shape="rect" id="node27" href="animaVectorOperations_8hxx.html" title="animaVectorOperations.hxx" alt="" coords="2184,403,2363,429"/><area shape="rect" id="node28" href="animaLogarithmFunctions_8h.html" title="animaLogarithmFunctions.h" alt="" coords="2090,485,2269,512"/><area shape="rect" id="node29" href="animaLogarithmFunctions_8hxx.html" title="animaLogarithmFunctions.hxx" alt="" coords="2084,560,2276,587"/><area shape="rect" id="node36" href="animaGradientFileReader_8hxx.html" title="animaGradientFileReader.hxx" alt="" coords="2433,229,2623,256"/></map>
 </div>
 </div>
 <p><a href="animaDTIEstimator_8cxx_source.html">Go to the source code of this file.</a></p>
@@ -146,7 +147,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaDTIEstimator_8cxx_source.html#l00011">11</a> of file <a class="el" href="animaDTIEstimator_8cxx_source.html">animaDTIEstimator.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaDTIEstimator_8cxx_source.html#l00013">13</a> of file <a class="el" href="animaDTIEstimator_8cxx_source.html">animaDTIEstimator.cxx</a>.</p>
 
 <p>References <a class="el" href="animaGradientFileReader_8h_source.html#l00023">anima::GradientFileReader&lt; GradientType, BValueScalarType &gt;::SetGradientFileName()</a>.</p>
 
@@ -155,7 +156,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 06:22:31 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 10 2015 06:31:31 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

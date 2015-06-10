@@ -782,6 +782,15 @@ Functions</h2></td></tr>
 <tr class="memitem:abfde13101befabf80fb8428af674fce4"><td class="memTemplParams" colspan="2">template&lt;class ScalarType &gt; </td></tr>
 <tr class="memitem:abfde13101befabf80fb8428af674fce4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#abfde13101befabf80fb8428af674fce4">RemoveNullFascicles</a> (std::vector&lt; vnl_vector&lt; ScalarType &gt; &gt; &amp;fascicles, std::vector&lt; ScalarType &gt; &amp;wFree, const bool optionsBoundV)</td></tr>
 <tr class="separator:abfde13101befabf80fb8428af674fce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6524e2b5a61a31ee2ee65b720aeb58a6"><td class="memTemplParams" colspan="2">template&lt;class ImageType &gt; </td></tr>
+<tr class="memitem:a6524e2b5a61a31ee2ee65b720aeb58a6"><td class="memTemplItemLeft" align="right" valign="top">itk::SmartPointer&lt; ImageType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a6524e2b5a61a31ee2ee65b720aeb58a6">reorient3DImage</a> (typename itk::SmartPointer&lt; ImageType &gt; input, itk::SpatialOrientation::ValidCoordinateOrientationFlags orientation)</td></tr>
+<tr class="separator:a6524e2b5a61a31ee2ee65b720aeb58a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdfd54bb43067688c199ce2ada996166"><td class="memTemplParams" colspan="2">template&lt;class ImageType &gt; </td></tr>
+<tr class="memitem:acdfd54bb43067688c199ce2ada996166"><td class="memTemplItemLeft" align="right" valign="top">itk::SmartPointer&lt; ImageType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#acdfd54bb43067688c199ce2ada996166">reorientImage</a> (typename itk::SmartPointer&lt; ImageType &gt; input, itk::SpatialOrientation::ValidCoordinateOrientationFlags orientation)</td></tr>
+<tr class="separator:acdfd54bb43067688c199ce2ada996166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5866620cc4d1ba9b88327367a489de25"><td class="memTemplParams" colspan="2">template&lt;class ImageType , class GradientType &gt; </td></tr>
+<tr class="memitem:a5866620cc4d1ba9b88327367a489de25"><td class="memTemplItemLeft" align="right" valign="top">itk::SmartPointer&lt; ImageType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a5866620cc4d1ba9b88327367a489de25">reorientImageAndGradient</a> (typename itk::SmartPointer&lt; ImageType &gt; input, itk::SpatialOrientation::ValidCoordinateOrientationFlags orientation, std::vector&lt; GradientType &gt; &amp;gradients)</td></tr>
+<tr class="separator:a5866620cc4d1ba9b88327367a489de25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ddf2c4c202d4d3d3d44041fbc416bcf"><td class="memTemplParams" colspan="2">template&lt;class VectorType &gt; </td></tr>
 <tr class="memitem:a3ddf2c4c202d4d3d3d44041fbc416bcf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a3ddf2c4c202d4d3d3d44041fbc416bcf">Revert</a> (const VectorType &amp;v, const unsigned int vSize, VectorType &amp;resVec)</td></tr>
 <tr class="separator:a3ddf2c4c202d4d3d3d44041fbc416bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5598,6 +5607,102 @@ template&lt;class ScalarType &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a6524e2b5a61a31ee2ee65b720aeb58a6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ImageType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">itk::SmartPointer&lt;ImageType&gt; anima::reorient3DImage </td>
+          <td>(</td>
+          <td class="paramtype">typename itk::SmartPointer&lt; ImageType &gt;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">itk::SpatialOrientation::ValidCoordinateOrientationFlags&#160;</td>
+          <td class="paramname"><em>orientation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaReorientation_8h_source.html#l00014">14</a> of file <a class="el" href="animaReorientation_8h_source.html">animaReorientation.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acdfd54bb43067688c199ce2ada996166"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ImageType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">itk::SmartPointer&lt;ImageType&gt; anima::reorientImage </td>
+          <td>(</td>
+          <td class="paramtype">typename itk::SmartPointer&lt; ImageType &gt;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">itk::SpatialOrientation::ValidCoordinateOrientationFlags&#160;</td>
+          <td class="paramname"><em>orientation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaReorientation_8h_source.html#l00033">33</a> of file <a class="el" href="animaReorientation_8h_source.html">animaReorientation.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5866620cc4d1ba9b88327367a489de25"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ImageType , class GradientType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">itk::SmartPointer&lt;ImageType&gt; anima::reorientImageAndGradient </td>
+          <td>(</td>
+          <td class="paramtype">typename itk::SmartPointer&lt; ImageType &gt;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">itk::SpatialOrientation::ValidCoordinateOrientationFlags&#160;</td>
+          <td class="paramname"><em>orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; GradientType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>gradients</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaReorientation_8h_source.html#l00142">142</a> of file <a class="el" href="animaReorientation_8h_source.html">animaReorientation.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3ddf2c4c202d4d3d3d44041fbc416bcf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -6854,7 +6959,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 06:22:31 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 10 2015 06:31:31 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

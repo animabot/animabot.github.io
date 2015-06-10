@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>ANIMA: animaOverwritePhysicalSpace.cxx File Reference</title>
+<title>ANIMA: animaVectorizeImages.cxx File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_29451194e96d97a87fe9896dcac739f0.html">common_tools</a></li><li class="navelem"><a class="el" href="dir_a10d12a9fd71d02eb3653e497e6ed262.html">overwrite_physical_space</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9c2949fb4b0d798bef9219bd612ff198.html">anima-nightly-src</a></li><li class="navelem"><a class="el" href="dir_cba819e852300327c79ea2428eabdb99.html">math-tools</a></li><li class="navelem"><a class="el" href="dir_29451194e96d97a87fe9896dcac739f0.html">common_tools</a></li><li class="navelem"><a class="el" href="dir_9534966da2a1577e38b5447f35a3d720.html">vectorize_images</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -95,24 +95,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">animaOverwritePhysicalSpace.cxx File Reference</div>  </div>
+<div class="title">animaVectorizeImages.cxx File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;tclap/CmdLine.h&gt;</code><br/>
-<code>#include &lt;itkImage.h&gt;</code><br/>
 <code>#include &lt;<a class="el" href="animaReadWriteFunctions_8h_source.html">animaReadWriteFunctions.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="animaRetrieveImageTypeMacros_8h_source.html">animaRetrieveImageTypeMacros.h</a>&gt;</code><br/>
+<code>#include &lt;itkComposeImageFilter.h&gt;</code><br/>
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for animaOverwritePhysicalSpace.cxx:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for animaVectorizeImages.cxx:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="animaOverwritePhysicalSpace_8cxx__incl.png" border="0" usemap="#animaOverwritePhysicalSpace_8cxx" alt=""/></div>
-<map name="animaOverwritePhysicalSpace_8cxx" id="animaOverwritePhysicalSpace_8cxx">
-<area shape="rect" id="node4" href="animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="319,80,501,107"/><area shape="rect" id="node8" href="animaRetrieveImageTypeMacros_8h.html" title="animaRetrieveImageTypeMacros.h" alt="" coords="659,80,879,107"/></map>
+<div class="center"><img src="animaVectorizeImages_8cxx__incl.png" border="0" usemap="#animaVectorizeImages_8cxx" alt=""/></div>
+<map name="animaVectorizeImages_8cxx" id="animaVectorizeImages_8cxx">
+<area shape="rect" id="node3" href="animaReadWriteFunctions_8h.html" title="animaReadWriteFunctions.h" alt="" coords="319,80,501,107"/><area shape="rect" id="node7" href="animaRetrieveImageTypeMacros_8h.html" title="animaRetrieveImageTypeMacros.h" alt="" coords="621,80,840,107"/></map>
 </div>
 </div>
-<p><a href="animaOverwritePhysicalSpace_8cxx_source.html">Go to the source code of this file.</a></p>
+<p><a href="animaVectorizeImages_8cxx_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -122,16 +122,16 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8017fe3c0a3c50ced784a6950b320d83"><td class="memTemplParams" colspan="2">template&lt;class ComponentType , int dimension&gt; </td></tr>
-<tr class="memitem:a8017fe3c0a3c50ced784a6950b320d83"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaOverwritePhysicalSpace_8cxx.html#a8017fe3c0a3c50ced784a6950b320d83">checkIfComponentsAreVectors</a> (itk::ImageIOBase::Pointer imageIO, const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
+<tr class="memitem:a8017fe3c0a3c50ced784a6950b320d83"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaVectorizeImages_8cxx.html#a8017fe3c0a3c50ced784a6950b320d83">checkIfComponentsAreVectors</a> (itk::ImageIOBase::Pointer imageIO, const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
 <tr class="separator:a8017fe3c0a3c50ced784a6950b320d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace7f414039e764f5229a85f450521d1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaOverwritePhysicalSpace_8cxx.html#ace7f414039e764f5229a85f450521d1c">main</a> (int ac, const char **av)</td></tr>
+<tr class="memitem:ace7f414039e764f5229a85f450521d1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animaVectorizeImages_8cxx.html#ace7f414039e764f5229a85f450521d1c">main</a> (int ac, const char **av)</td></tr>
 <tr class="separator:ace7f414039e764f5229a85f450521d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17ae39de212f7b2af7d92a92283a0f2f"><td class="memTemplParams" colspan="2">template&lt;class ImageType &gt; </td></tr>
-<tr class="memitem:a17ae39de212f7b2af7d92a92283a0f2f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaOverwritePhysicalSpace_8cxx.html#a17ae39de212f7b2af7d92a92283a0f2f">overwritePhysicalSpace</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
-<tr class="separator:a17ae39de212f7b2af7d92a92283a0f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a712ca32394448241d1457782abc03675"><td class="memTemplParams" colspan="2">template&lt;class ComponentType &gt; </td></tr>
-<tr class="memitem:a712ca32394448241d1457782abc03675"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaOverwritePhysicalSpace_8cxx.html#a712ca32394448241d1457782abc03675">retrieveNbDimensions</a> (itk::ImageIOBase::Pointer imageIO, const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
+<tr class="memitem:a712ca32394448241d1457782abc03675"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaVectorizeImages_8cxx.html#a712ca32394448241d1457782abc03675">retrieveNbDimensions</a> (itk::ImageIOBase::Pointer imageIO, const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
 <tr class="separator:a712ca32394448241d1457782abc03675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bbda0b847445fd95618d87b03e0cd47"><td class="memTemplParams" colspan="2">template&lt;class InputImageType &gt; </td></tr>
+<tr class="memitem:a4bbda0b847445fd95618d87b03e0cd47"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="animaVectorizeImages_8cxx.html#a4bbda0b847445fd95618d87b03e0cd47">vectorize</a> (const <a class="el" href="structarguments.html">arguments</a> &amp;args)</td></tr>
+<tr class="separator:a4bbda0b847445fd95618d87b03e0cd47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a8017fe3c0a3c50ced784a6950b320d83"></a>
@@ -160,11 +160,9 @@ template&lt;class ComponentType , int dimension&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html#l00030">30</a> of file <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html">animaOverwritePhysicalSpace.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaVectorizeImages_8cxx_source.html#l00044">44</a> of file <a class="el" href="animaVectorizeImages_8cxx_source.html">animaVectorizeImages.cxx</a>.</p>
 
-<p>References <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00088">ANIMA_CHECK_IF_COMPONENTS_ARE_VECTORS</a>, and <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html#l00015">overwritePhysicalSpace()</a>.</p>
-
-<p>Referenced by <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html#l00037">retrieveNbDimensions()</a>.</p>
+<p>Referenced by <a class="el" href="animaVectorizeImages_8cxx_source.html#l00060">retrieveNbDimensions()</a>.</p>
 
 </div>
 </div>
@@ -192,33 +190,9 @@ template&lt;class ComponentType , int dimension&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html#l00042">42</a> of file <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html">animaOverwritePhysicalSpace.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaVectorizeImages_8cxx_source.html#l00065">65</a> of file <a class="el" href="animaVectorizeImages_8cxx_source.html">animaVectorizeImages.cxx</a>.</p>
 
-<p>References <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00016">ANIMA_RETRIEVE_COMPONENT_TYPE</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::input</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::output</a>, <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html#l00037">retrieveNbDimensions()</a>, and <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html#l00010">arguments::space</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a17ae39de212f7b2af7d92a92283a0f2f"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class ImageType &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void overwritePhysicalSpace </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
-          <td class="paramname"><em>args</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html#l00015">15</a> of file <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html">animaOverwritePhysicalSpace.cxx</a>.</p>
-
-<p>References <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::input</a>, <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::output</a>, and <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html#l00010">arguments::space</a>.</p>
-
-<p>Referenced by <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html#l00030">checkIfComponentsAreVectors()</a>.</p>
+<p>References <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00016">ANIMA_RETRIEVE_COMPONENT_TYPE</a>, <a class="el" href="animaVectorizeImages_8cxx_source.html#l00012">arguments::fileList</a>, and <a class="el" href="animaVectorizeImages_8cxx_source.html#l00060">retrieveNbDimensions()</a>.</p>
 
 </div>
 </div>
@@ -248,18 +222,40 @@ template&lt;class ComponentType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html#l00037">37</a> of file <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html">animaOverwritePhysicalSpace.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaVectorizeImages_8cxx_source.html#l00060">60</a> of file <a class="el" href="animaVectorizeImages_8cxx_source.html">animaVectorizeImages.cxx</a>.</p>
 
-<p>References <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00057">ANIMA_RETRIEVE_NUMBER_OF_DIMENSIONS</a>, and <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html#l00030">checkIfComponentsAreVectors()</a>.</p>
+<p>References <a class="el" href="animaRetrieveImageTypeMacros_8h_source.html#l00057">ANIMA_RETRIEVE_NUMBER_OF_DIMENSIONS</a>, and <a class="el" href="animaVectorizeImages_8cxx_source.html#l00044">checkIfComponentsAreVectors()</a>.</p>
 
-<p>Referenced by <a class="el" href="animaOverwritePhysicalSpace_8cxx_source.html#l00042">main()</a>.</p>
+<p>Referenced by <a class="el" href="animaVectorizeImages_8cxx_source.html#l00065">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4bbda0b847445fd95618d87b03e0cd47"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class InputImageType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void vectorize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structarguments.html">arguments</a> &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="animaVectorizeImages_8cxx_source.html#l00017">17</a> of file <a class="el" href="animaVectorizeImages_8cxx_source.html">animaVectorizeImages.cxx</a>.</p>
+
+<p>References <a class="el" href="animaVectorizeImages_8cxx_source.html#l00012">arguments::fileList</a>, <a class="el" href="animaConcatenateImages_8cxx_source.html#l00011">arguments::inputs</a>, and <a class="el" href="animaCollapseImage_8cxx_source.html#l00015">arguments::output</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 06:22:31 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 10 2015 06:31:31 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
