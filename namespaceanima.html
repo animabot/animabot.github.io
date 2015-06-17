@@ -274,7 +274,7 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1OrientedModelBaseResampleImageFilter.html">OrientedModelBaseResampleImageFilter</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanima_1_1pair__decreasing__comparator.html">pair_decreasing_comparator</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanima_1_1pair__increasing__comparator.html">pair_increasing_comparator</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1PatientToGroupComparisonImageFilter.html">PatientToGroupComparisonImageFilter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements patient to group comparison as in <a href="http://dx.doi.org/10.1007/978-3-540-85988-8_116">http://dx.doi.org/10.1007/978-3-540-85988-8_116</a>.  <a href="classanima_1_1PatientToGroupComparisonImageFilter.html#details">More...</a><br/></td></tr>
@@ -410,9 +410,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a9ff04ca634c401501fb0edc345a6d31a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a9ff04ca634c401501fb0edc345a6d31a">bessel_ratio_i</a> (const double &amp;x, unsigned int N, unsigned int approx_order=10)</td></tr>
 <tr class="memdesc:a9ff04ca634c401501fb0edc345a6d31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the ratio of modified Bessel functions of the first kind: I_{N} / I_{N-1} (N &gt;= 1)  <a href="#a9ff04ca634c401501fb0edc345a6d31a">More...</a><br/></td></tr>
 <tr class="separator:a9ff04ca634c401501fb0edc345a6d31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0717c7c35ad380729aca648aade7a2ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a0717c7c35ad380729aca648aade7a2ea">BHCorrection</a> (std::vector&lt; double &gt; &amp;pvalues)</td></tr>
-<tr class="memdesc:a0717c7c35ad380729aca648aade7a2ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">In place correction of p-values according to Benjamini Hochberg FDR method.  <a href="#a0717c7c35ad380729aca648aade7a2ea">More...</a><br/></td></tr>
-<tr class="separator:a0717c7c35ad380729aca648aade7a2ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92423baa1c21297b3c178acd9b836ea8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a92423baa1c21297b3c178acd9b836ea8">BHCorrection</a> (std::vector&lt; double &gt; &amp;pvalues, double qValue)</td></tr>
+<tr class="separator:a92423baa1c21297b3c178acd9b836ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32a7057d868e86b8fb86e9dd7da5f63d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a32a7057d868e86b8fb86e9dd7da5f63d">build_histogram</a> (int myhist[], int cleaned_voxel_values[], int dummy_counter)</td></tr>
 <tr class="separator:a32a7057d868e86b8fb86e9dd7da5f63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57c7846ce23f8b9e6030dd666dcfec3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a57c7846ce23f8b9e6030dd666dcfec3e">clean_data</a> (itk::Image&lt; unsigned short, 3 &gt;::Pointer image_ref, int &amp;counter_brain_voxels_ref)</td></tr>
@@ -1055,7 +1054,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0717c7c35ad380729aca648aade7a2ea"></a>
+<a class="anchor" id="a92423baa1c21297b3c178acd9b836ea8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1063,15 +1062,24 @@ Variables</h2></td></tr>
           <td class="memname">ANIMASTATISTICALTESTS_EXPORT void anima::BHCorrection </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>pvalues</em></td><td>)</td>
+          <td class="paramname"><em>pvalues</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>qValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>In place correction of p-values according to Benjamini Hochberg FDR method Output is a thresholded list at the specified q-value Eq. (1) of Y. Benjamini and Y. Hochberg. Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing. Journal of the Royal Statistical Society. Series B (Methodological) Vol. 57, No. 1 (1995), pp. 289-300 </p>
 
-<p>In place correction of p-values according to Benjamini Hochberg FDR method. </p>
-
-<p>Definition at line <a class="el" href="animaFDRCorrection_8cxx_source.html#l00007">7</a> of file <a class="el" href="animaFDRCorrection_8cxx_source.html">animaFDRCorrection.cxx</a>.</p>
+<p>Definition at line <a class="el" href="animaFDRCorrection_8cxx_source.html#l00008">8</a> of file <a class="el" href="animaFDRCorrection_8cxx_source.html">animaFDRCorrection.cxx</a>.</p>
 
 <p>Referenced by <a class="el" href="animaFDRCorrectImageFilter_8hxx_source.html#l00015">anima::FDRCorrectImageFilter&lt; PixelScalarType &gt;::GenerateData()</a>, and <a class="el" href="animaBackgroundNoiseVarianceEstimationImageFilter_8hxx_source.html#l00316">anima::BackgroundNoiseVarianceEstimationImageFilter&lt; TInputImage &gt;::UpdateOutputFromPValues()</a>.</p>
 
@@ -6959,7 +6967,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 10 2015 06:31:31 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 17 2015 06:22:04 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

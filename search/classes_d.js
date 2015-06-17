@@ -4,7 +4,7 @@ var searchData=
   ['pair_5fcomparator',['pair_comparator',['../structanima_1_1PickLesionSeedImageFilter_1_1pair__comparator.html',1,'anima::PickLesionSeedImageFilter']]],
   ['pair_5fcomparator',['pair_comparator',['../structanima_1_1BaseProbabilisticTractographyImageFilter_1_1pair__comparator.html',1,'anima::BaseProbabilisticTractographyImageFilter']]],
   ['pair_5fdecreasing_5fcomparator',['pair_decreasing_comparator',['../structanima_1_1DDILinearInterpolateImageFunction_1_1pair__decreasing__comparator.html',1,'anima::DDILinearInterpolateImageFunction']]],
-  ['pair_5fdecreasing_5fcomparator',['pair_decreasing_comparator',['../structanima_1_1pair__decreasing__comparator.html',1,'anima']]],
+  ['pair_5fincreasing_5fcomparator',['pair_increasing_comparator',['../structanima_1_1pair__increasing__comparator.html',1,'anima']]],
   ['patienttogroupcomparisonimagefilter',['PatientToGroupComparisonImageFilter',['../classanima_1_1PatientToGroupComparisonImageFilter.html',1,'anima']]],
   ['patienttogroupodfcomparisonimagefilter',['PatientToGroupODFComparisonImageFilter',['../classanima_1_1PatientToGroupODFComparisonImageFilter.html',1,'anima']]],
   ['picklesionseedimagefilter',['PickLesionSeedImageFilter',['../classanima_1_1PickLesionSeedImageFilter.html',1,'anima']]],

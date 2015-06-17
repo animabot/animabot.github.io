@@ -101,41 +101,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>anima</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="namespaceanima.html#a0717c7c35ad380729aca648aade7a2ea">    7</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceanima.html#a0717c7c35ad380729aca648aade7a2ea">BHCorrection</a>(std::vector &lt;double&gt; &amp;pvalues)</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    std::vector &lt; std::pair &lt;unsigned int, double&gt; &gt; indexedPvalues;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numData = pvalues.size();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numData;++i)</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        indexedPvalues.push_back(std::pair &lt;unsigned int, double&gt; (i,pvalues[i]));</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::sort(indexedPvalues.begin(),indexedPvalues.end(),<a class="code" href="structanima_1_1pair__decreasing__comparator.html">pair_decreasing_comparator</a>());</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">// Update p-values</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numData;++i)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">double</span> newPvalue = std::min(1.0,indexedPvalues[i].second * numData / (numData - i));</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">if</span> (i &gt; 0)</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">if</span> (newPvalue &gt; indexedPvalues[i-1].second)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                newPvalue = indexedPvalues[i-1].second;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        indexedPvalues[i].second = newPvalue;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// Now put back values to their places</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numData;++i)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        pvalues[indexedPvalues[i].first] = indexedPvalues[i].second;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;} <span class="comment">// end of namespace anima</span></div>
-<div class="ttc" id="namespaceanima_html_a0717c7c35ad380729aca648aade7a2ea"><div class="ttname"><a href="namespaceanima.html#a0717c7c35ad380729aca648aade7a2ea">anima::BHCorrection</a></div><div class="ttdeci">void BHCorrection(std::vector&lt; double &gt; &amp;pvalues)</div><div class="ttdoc">In place correction of p-values according to Benjamini Hochberg FDR method. </div><div class="ttdef"><b>Definition:</b> <a href="animaFDRCorrection_8cxx_source.html#l00007">animaFDRCorrection.cxx:7</a></div></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="namespaceanima.html#a92423baa1c21297b3c178acd9b836ea8">    8</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceanima.html#a92423baa1c21297b3c178acd9b836ea8">BHCorrection</a>(std::vector &lt;double&gt; &amp;pvalues, <span class="keywordtype">double</span> qValue)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    std::vector &lt; std::pair &lt;unsigned int, double&gt; &gt; indexedPvalues;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> numData = pvalues.size();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numData;++i)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        indexedPvalues.push_back(std::pair &lt;unsigned int, double&gt; (i,pvalues[i]));</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::sort(indexedPvalues.begin(),indexedPvalues.end(),<a class="code" href="structanima_1_1pair__increasing__comparator.html">pair_increasing_comparator</a>());</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// Update p-values</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> breakingIndex = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numData;++i)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (indexedPvalues[i].second &gt; qValue * (i + 1) / numData)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            breakingIndex = i;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// Now put back values to their places</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;i &lt; numData;++i)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        pvalues[indexedPvalues[i].first] = (i &lt; breakingIndex);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} <span class="comment">// end of namespace anima</span></div>
+<div class="ttc" id="namespaceanima_html_a92423baa1c21297b3c178acd9b836ea8"><div class="ttname"><a href="namespaceanima.html#a92423baa1c21297b3c178acd9b836ea8">anima::BHCorrection</a></div><div class="ttdeci">void BHCorrection(std::vector&lt; double &gt; &amp;pvalues, double qValue)</div><div class="ttdef"><b>Definition:</b> <a href="animaFDRCorrection_8cxx_source.html#l00008">animaFDRCorrection.cxx:8</a></div></div>
 <div class="ttc" id="animaFDRCorrection_8h_html"><div class="ttname"><a href="animaFDRCorrection_8h.html">animaFDRCorrection.h</a></div></div>
-<div class="ttc" id="structanima_1_1pair__decreasing__comparator_html"><div class="ttname"><a href="structanima_1_1pair__decreasing__comparator.html">anima::pair_decreasing_comparator</a></div><div class="ttdef"><b>Definition:</b> <a href="animaFDRCorrection_8h_source.html#l00010">animaFDRCorrection.h:10</a></div></div>
+<div class="ttc" id="structanima_1_1pair__increasing__comparator_html"><div class="ttname"><a href="structanima_1_1pair__increasing__comparator.html">anima::pair_increasing_comparator</a></div><div class="ttdef"><b>Definition:</b> <a href="animaFDRCorrection_8h_source.html#l00010">animaFDRCorrection.h:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 10 2015 06:31:28 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 17 2015 06:22:02 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
