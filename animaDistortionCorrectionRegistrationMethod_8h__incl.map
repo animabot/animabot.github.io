@@ -1,7 +1,7 @@
 <map id="animaDistortionCorrectionRegistrationMethod.h" name="animaDistortionCorrectionRegistrationMethod.h">
 <area shape="rect" id="node8" href="$animaBaseTransformAgregator_8h.html" title="animaBaseTransformAgregator.h" alt="" coords="1037,285,1247,312"/>
 <area shape="rect" id="node14" href="$animaDistortionCorrectionRegistrationMethod_8hxx.html" title="animaDistortionCorrection\lRegistrationMethod.hxx" alt="" coords="2461,97,2632,138"/>
-<area shape="rect" id="node11" href="$animaBaseTransformAgregator_8hxx.html" title="animaBaseTransformAgregator.hxx" alt="" coords="1017,376,1239,403"/>
+<area shape="rect" id="node11" href="$animaBaseTransformAgregator_8hxx.html" title="animaBaseTransformAgregator.hxx" alt="" coords="1031,376,1253,403"/>
 <area shape="rect" id="node16" href="$animaSmoothingRecursiveYvvGaussianImageFilter_8h.html" title="animaSmoothingRecursiveYvv\lGaussianImageFilter.h" alt="" coords="3737,187,3932,229"/>
 <area shape="rect" id="node26" href="$animaFastCorrelationImageToImageMetric_8h.html" title="animaFastCorrelationImage\lToImageMetric.h" alt="" coords="1678,187,1857,229"/>
 <area shape="rect" id="node29" href="$animaFastMeanSquaresImageToImageMetric_8h.html" title="animaFastMeanSquaresImage\lToImageMetric.h" alt="" coords="1933,187,2131,229"/>

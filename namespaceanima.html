@@ -416,9 +416,9 @@ Functions</h2></td></tr>
 <tr class="separator:a32a7057d868e86b8fb86e9dd7da5f63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57c7846ce23f8b9e6030dd666dcfec3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a57c7846ce23f8b9e6030dd666dcfec3e">clean_data</a> (itk::Image&lt; unsigned short, 3 &gt;::Pointer image_ref, int &amp;counter_brain_voxels_ref)</td></tr>
 <tr class="separator:a57c7846ce23f8b9e6030dd666dcfec3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac47fd551adf9ce27791e10ec8ecb1bad"><td class="memTemplParams" colspan="2">template&lt;class ScalarType , unsigned int NDimensions&gt; </td></tr>
-<tr class="memitem:ac47fd551adf9ce27791e10ec8ecb1bad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#ac47fd551adf9ce27791e10ec8ecb1bad">composeDistortionCorrections</a> (rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt; *baseTrsf, rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt; *positiveAddOn, rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt; *negativeAddOn, unsigned int numThreads)</td></tr>
-<tr class="separator:ac47fd551adf9ce27791e10ec8ecb1bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae431bd39edc419b04e3639826516e0d6"><td class="memTemplParams" colspan="2">template&lt;class ScalarType , unsigned int NDimensions&gt; </td></tr>
+<tr class="memitem:ae431bd39edc419b04e3639826516e0d6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#ae431bd39edc419b04e3639826516e0d6">composeDistortionCorrections</a> (typename rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt;::Pointer &amp;baseTrsf, typename rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt;::Pointer &amp;positiveAddOn, typename rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt;::Pointer &amp;negativeAddOn, unsigned int numThreads)</td></tr>
+<tr class="separator:ae431bd39edc419b04e3639826516e0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4793ea3b2bba15c52366d7cb4dbbf227"><td class="memTemplParams" colspan="2">template&lt;class ScalarType , unsigned int NDimensions&gt; </td></tr>
 <tr class="memitem:a4793ea3b2bba15c52366d7cb4dbbf227"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanima.html#a4793ea3b2bba15c52366d7cb4dbbf227">composeSVF</a> (itk::StationaryVelocityFieldTransform&lt; ScalarType, NDimensions &gt; *baseTrsf, itk::StationaryVelocityFieldTransform&lt; ScalarType, NDimensions &gt; *addonTrsf)</td></tr>
 <tr class="separator:a4793ea3b2bba15c52366d7cb4dbbf227"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1155,7 +1155,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac47fd551adf9ce27791e10ec8ecb1bad"></a>
+<a class="anchor" id="ae431bd39edc419b04e3639826516e0d6"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1164,19 +1164,19 @@ template&lt;class ScalarType , unsigned int NDimensions&gt; </div>
         <tr>
           <td class="memname">void anima::composeDistortionCorrections </td>
           <td>(</td>
-          <td class="paramtype">rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt; *&#160;</td>
+          <td class="paramtype">typename rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt;::Pointer &amp;&#160;</td>
           <td class="paramname"><em>baseTrsf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt; *&#160;</td>
+          <td class="paramtype">typename rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt;::Pointer &amp;&#160;</td>
           <td class="paramname"><em>positiveAddOn</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt; *&#160;</td>
+          <td class="paramtype">typename rpi::DisplacementFieldTransform&lt; ScalarType, NDimensions &gt;::Pointer &amp;&#160;</td>
           <td class="paramname"><em>negativeAddOn</em>, </td>
         </tr>
         <tr>
@@ -1192,10 +1192,9 @@ template&lt;class ScalarType , unsigned int NDimensions&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Compose distortion correction opposite updates, ensures opposite symmetry baseTrsf is replaced by the result ! </p>
 
 <p>Definition at line <a class="el" href="animaVelocityUtils_8hxx_source.html#l00060">60</a> of file <a class="el" href="animaVelocityUtils_8hxx_source.html">animaVelocityUtils.hxx</a>.</p>
-
-<p>Referenced by <a class="el" href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00180">anima::DistortionCorrectionRegistrationMethod&lt; TInputImage &gt;::StartOptimization()</a>, and <a class="el" href="animaPyramidalDistortionCorrectionBlockMatchingBridge_8hxx_source.html#l00079">anima::PyramidalDistortionCorrectionBlockMatchingBridge&lt; ImageDimension &gt;::Update()</a>.</p>
 
 </div>
 </div>
@@ -1227,7 +1226,7 @@ template&lt;class ScalarType , unsigned int NDimensions&gt; </div>
 
 <p>Definition at line <a class="el" href="animaVelocityUtils_8hxx_source.html#l00013">13</a> of file <a class="el" href="animaVelocityUtils_8hxx_source.html">animaVelocityUtils.hxx</a>.</p>
 
-<p>Referenced by <a class="el" href="animaTensorBlockMatchingBaseRegistrationMethod_8hxx_source.html#l00328">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;::ComposeAddOnWithTransform()</a>, and <a class="el" href="animaBlockMatchingBaseRegistrationMethod_8hxx_source.html#l00331">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;::ComposeAddOnWithTransform()</a>.</p>
+<p>Referenced by <a class="el" href="animaTensorBlockMatchingBaseRegistrationMethod_8hxx_source.html#l00328">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;::ComposeAddOnWithTransform()</a>, and <a class="el" href="animaBlockMatchingBaseRegistrationMethod_8hxx_source.html#l00330">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;::ComposeAddOnWithTransform()</a>.</p>
 
 </div>
 </div>
@@ -4121,7 +4120,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="animaMatrixLogExp_8hxx_source.html#l00199">199</a> of file <a class="el" href="animaMatrixLogExp_8hxx_source.html">animaMatrixLogExp.hxx</a>.</p>
 
-<p>Referenced by <a class="el" href="animaLinearTransformEstimationTools_8hxx_source.html#l00142">computeLogEuclideanAverage()</a>, <a class="el" href="animaLogRigid3DTransform_8hxx_source.html#l00083">anima::LogRigid3DTransform&lt; TScalarType &gt;::ComputeMatrix()</a>, <a class="el" href="animaDirectionScaleSkewTransform_8hxx_source.html#l00125">anima::DirectionScaleSkewTransform&lt; TScalarType &gt;::ComputeMatrix()</a>, <a class="el" href="animaAverageLinearTransforms_8cxx_source.html#l00008">main()</a>, <a class="el" href="animaTensorKissingSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00055">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>, <a class="el" href="animaKissingSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00056">anima::KissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>, <a class="el" href="animaSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00025">anima::SymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>, and <a class="el" href="animaTensorSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00024">anima::TensorSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>.</p>
+<p>Referenced by <a class="el" href="animaLinearTransformEstimationTools_8hxx_source.html#l00142">computeLogEuclideanAverage()</a>, <a class="el" href="animaLogRigid3DTransform_8hxx_source.html#l00083">anima::LogRigid3DTransform&lt; TScalarType &gt;::ComputeMatrix()</a>, <a class="el" href="animaDirectionScaleSkewTransform_8hxx_source.html#l00125">anima::DirectionScaleSkewTransform&lt; TScalarType &gt;::ComputeMatrix()</a>, <a class="el" href="animaAverageLinearTransforms_8cxx_source.html#l00008">main()</a>, <a class="el" href="animaTensorKissingSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00055">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>, <a class="el" href="animaKissingSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00057">anima::KissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>, <a class="el" href="animaSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00026">anima::SymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>, and <a class="el" href="animaTensorSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00024">anima::TensorSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>.</p>
 
 </div>
 </div>
@@ -4219,7 +4218,7 @@ template&lt;class T &gt; </div>
 
 <p>References <a class="el" href="namespaceanima.html#a7bc25e5eab100694f0413638a77b2080">GetPadeLogarithm()</a>, and <a class="el" href="animaMatrixLogExp_8hxx_source.html#l00014">GetSquareRoot()</a>.</p>
 
-<p>Referenced by <a class="el" href="animaMatrixLogExp_8hxx_source.html#l00320">anima::MatrixLoggerFilter&lt; TInputScalarType, TOutputScalarType, NDimensions, NDegreesOfFreedom &gt;::InternalLogger()</a>, <a class="el" href="animaAverageLinearTransforms_8cxx_source.html#l00008">main()</a>, <a class="el" href="animaTensorKissingSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00055">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>, <a class="el" href="animaKissingSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00056">anima::KissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>, <a class="el" href="animaTensorSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00024">anima::TensorSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>, and <a class="el" href="animaSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00025">anima::SymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>.</p>
+<p>Referenced by <a class="el" href="animaMatrixLogExp_8hxx_source.html#l00320">anima::MatrixLoggerFilter&lt; TInputScalarType, TOutputScalarType, NDimensions, NDegreesOfFreedom &gt;::InternalLogger()</a>, <a class="el" href="animaAverageLinearTransforms_8cxx_source.html#l00008">main()</a>, <a class="el" href="animaTensorKissingSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00055">anima::TensorKissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>, <a class="el" href="animaKissingSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00057">anima::KissingSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>, <a class="el" href="animaTensorSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00024">anima::TensorSymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>, and <a class="el" href="animaSymmetricBlockMatchingRegistrationMethod_8hxx_source.html#l00026">anima::SymmetricBlockMatchingRegistrationMethod&lt; TInputImage &gt;::PerformOneIteration()</a>.</p>
 
 </div>
 </div>
@@ -4495,7 +4494,7 @@ template&lt;class ScalarType , unsigned int NDimensions&gt; </div>
 
 <p>Definition at line <a class="el" href="animaVelocityUtils_8hxx_source.html#l00041">41</a> of file <a class="el" href="animaVelocityUtils_8hxx_source.html">animaVelocityUtils.hxx</a>.</p>
 
-<p>Referenced by <a class="el" href="animaTransformSeriesReader_8hxx_source.html#l00218">anima::TransformSeriesReader&lt; TScalarType, NDimensions &gt;::addSVFTransformation()</a>, <a class="el" href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00432">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;::GetOutputDisplacementFieldTransform()</a>, <a class="el" href="animaTensorBlockMatchingBaseRegistrationMethod_8hxx_source.html#l00257">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;::ResampleImages()</a>, <a class="el" href="animaBlockMatchingBaseRegistrationMethod_8hxx_source.html#l00259">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;::ResampleImages()</a>, <a class="el" href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00180">anima::DistortionCorrectionRegistrationMethod&lt; TInputImage &gt;::StartOptimization()</a>, <a class="el" href="animaPyramidalDenseTensorSVFMatchingBridge_8hxx_source.html#l00100">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;::Update()</a>, and <a class="el" href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00114">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;::Update()</a>.</p>
+<p>Referenced by <a class="el" href="animaTransformSeriesReader_8hxx_source.html#l00218">anima::TransformSeriesReader&lt; TScalarType, NDimensions &gt;::addSVFTransformation()</a>, <a class="el" href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00433">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;::GetOutputDisplacementFieldTransform()</a>, <a class="el" href="animaTensorBlockMatchingBaseRegistrationMethod_8hxx_source.html#l00257">anima::TensorBlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;::ResampleImages()</a>, <a class="el" href="animaBlockMatchingBaseRegistrationMethod_8hxx_source.html#l00258">anima::BlockMatchingBaseRegistrationMethod&lt; TInputImage &gt;::ResampleImages()</a>, <a class="el" href="animaDistortionCorrectionRegistrationMethod_8hxx_source.html#l00180">anima::DistortionCorrectionRegistrationMethod&lt; TInputImage &gt;::StartOptimization()</a>, <a class="el" href="animaPyramidalDenseTensorSVFMatchingBridge_8hxx_source.html#l00101">anima::PyramidalDenseTensorSVFMatchingBridge&lt; ImageDimension &gt;::Update()</a>, and <a class="el" href="animaPyramidalDenseSVFMatchingBridge_8hxx_source.html#l00114">anima::PyramidalDenseSVFMatchingBridge&lt; ImageDimension &gt;::Update()</a>.</p>
 
 </div>
 </div>
@@ -6967,7 +6966,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 17 2015 06:22:04 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 25 2015 06:22:03 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

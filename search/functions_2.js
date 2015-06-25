@@ -16,7 +16,7 @@ var searchData=
   ['combinedrelaxometryestimationimagefilter',['CombinedRelaxometryEstimationImageFilter',['../classanima_1_1CombinedRelaxometryEstimationImageFilter.html#a98601c019a6c2d822ef53456554de92a',1,'anima::CombinedRelaxometryEstimationImageFilter']]],
   ['commanditerationupdate',['CommandIterationUpdate',['../classCommandIterationUpdate.html#a3b6dc4b6e947779a656ce69152377a70',1,'CommandIterationUpdate']]],
   ['composeaddonwithtransform',['ComposeAddOnWithTransform',['../classanima_1_1BlockMatchingBaseRegistrationMethod.html#a269fa7c2e902fe0da84ca4e78af4d218',1,'anima::BlockMatchingBaseRegistrationMethod::ComposeAddOnWithTransform()'],['../classanima_1_1TensorBlockMatchingBaseRegistrationMethod.html#ac0246645b20cd9123d9f9949a4750eba',1,'anima::TensorBlockMatchingBaseRegistrationMethod::ComposeAddOnWithTransform()']]],
-  ['composedistortioncorrections',['composeDistortionCorrections',['../namespaceanima.html#ac47fd551adf9ce27791e10ec8ecb1bad',1,'anima']]],
+  ['composedistortioncorrections',['composeDistortionCorrections',['../namespaceanima.html#ae431bd39edc419b04e3639826516e0d6',1,'anima']]],
   ['composesvf',['composeSVF',['../namespaceanima.html#a4793ea3b2bba15c52366d7cb4dbbf227',1,'anima']]],
   ['computeaffinelswfromtranslations',['computeAffineLSWFromTranslations',['../namespaceanima.html#a43838be2d79eee59b50768dc6b3ea58e',1,'anima']]],
   ['computeangle',['ComputeAngle',['../namespaceanima.html#a27b9fbdb7fea6e2eb3ae248e5fa575f7',1,'anima']]],

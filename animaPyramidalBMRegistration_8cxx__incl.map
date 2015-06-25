@@ -1,21 +1,21 @@
 <map id="animaPyramidalBMRegistration.cxx" name="animaPyramidalBMRegistration.cxx">
-<area shape="rect" id="node3" href="$animaPyramidalBlockMatchingBridge_8h.html" title="animaPyramidalBlockMatching\lBridge.h" alt="" coords="1713,81,1912,122"/>
-<area shape="rect" id="node4" href="$animaBaseTransformAgregator_8h.html" title="animaBaseTransformAgregator.h" alt="" coords="3229,451,3439,477"/>
+<area shape="rect" id="node3" href="$animaPyramidalBlockMatchingBridge_8h.html" title="animaPyramidalBlockMatching\lBridge.h" alt="" coords="1549,81,1748,122"/>
+<area shape="rect" id="node4" href="$animaBaseTransformAgregator_8h.html" title="animaBaseTransformAgregator.h" alt="" coords="3395,451,3604,477"/>
 <area shape="rect" id="node11" href="$animaPyramidImageFilter_8h.html" title="animaPyramidImageFilter.h" alt="" coords="251,360,429,387"/>
 <area shape="rect" id="node19" href="$animaBlockMatchInitializer_8h.html" title="animaBlockMatchInitializer.h" alt="" coords="1044,360,1231,387"/>
-<area shape="rect" id="node27" href="$animaBlockMatchingBaseRegistrationMethod_8h.html" title="animaBlockMatchingBaseRegistration\lMethod.h" alt="" coords="2045,353,2285,394"/>
-<area shape="rect" id="node40" href="$animaPyramidalBlockMatchingBridge_8hxx.html" title="animaPyramidalBlockMatching\lBridge.hxx" alt="" coords="2065,171,2264,213"/>
-<area shape="rect" id="node8" href="$animaBaseTransformAgregator_8hxx.html" title="animaBaseTransformAgregator.hxx" alt="" coords="3223,541,3445,568"/>
+<area shape="rect" id="node27" href="$animaBlockMatchingBaseRegistrationMethod_8h.html" title="animaBlockMatchingBaseRegistration\lMethod.h" alt="" coords="1929,353,2169,394"/>
+<area shape="rect" id="node40" href="$animaPyramidalBlockMatchingBridge_8hxx.html" title="animaPyramidalBlockMatching\lBridge.hxx" alt="" coords="1901,171,2100,213"/>
+<area shape="rect" id="node8" href="$animaBaseTransformAgregator_8hxx.html" title="animaBaseTransformAgregator.hxx" alt="" coords="3389,541,3611,568"/>
 <area shape="rect" id="node14" href="$animaPyramidImageFilter_8hxx.html" title="animaPyramidImageFilter.hxx" alt="" coords="245,451,435,477"/>
 <area shape="rect" id="node16" href="$animaResampleImageFilter_8h.html" title="animaResampleImageFilter.h" alt="" coords="1063,541,1252,568"/>
 <area shape="rect" id="node17" href="$animaFiniteStrainTensorResampleImageFilter_8h.html" title="animaFiniteStrainTensorResample\lImageFilter.h" alt="" coords="36,534,255,575"/>
 <area shape="rect" id="node23" href="$animaBlockMatchInitializer_8hxx.html" title="animaBlockMatchInitializer.hxx" alt="" coords="1038,451,1236,477"/>
 <area shape="rect" id="node36" href="$animaBlockMatchingBaseRegistrationMethod_8hxx.html" title="animaBlockMatchingBaseRegistration\lMethod.hxx" alt="" coords="1511,443,1751,485"/>
 <area shape="rect" id="node37" href="$animaSmoothingRecursiveYvvGaussianImageFilter_8h.html" title="animaSmoothingRecursiveYvv\lGaussianImageFilter.h" alt="" coords="1549,534,1744,575"/>
-<area shape="rect" id="node45" href="$animaAsymmetricBlockMatchingRegistrationMethod_8h.html" title="animaAsymmetricBlockMatching\lRegistrationMethod.h" alt="" coords="2060,262,2269,303"/>
-<area shape="rect" id="node46" href="$animaSymmetricBlockMatchingRegistrationMethod_8h.html" title="animaSymmetricBlockMatching\lRegistrationMethod.h" alt="" coords="1831,262,2036,303"/>
-<area shape="rect" id="node47" href="$animaKissingSymmetricBlockMatchingRegistrationMethod_8h.html" title="animaKissingSymmetricBlock\lMatchingRegistrationMethod.h" alt="" coords="1226,262,1421,303"/>
-<area shape="rect" id="node48" href="$animaLSWTransformAgregator_8h.html" title="animaLSWTransformAgregator.h" alt="" coords="2295,269,2504,296"/>
-<area shape="rect" id="node49" href="$animaLTSWTransformAgregator_8h.html" title="animaLTSWTransformAgregator.h" alt="" coords="2529,269,2745,296"/>
-<area shape="rect" id="node50" href="$animaMEstTransformAgregator_8h.html" title="animaMEstTransformAgregator.h" alt="" coords="2771,269,2980,296"/>
+<area shape="rect" id="node45" href="$animaAsymmetricBlockMatchingRegistrationMethod_8h.html" title="animaAsymmetricBlockMatching\lRegistrationMethod.h" alt="" coords="1896,262,2105,303"/>
+<area shape="rect" id="node46" href="$animaSymmetricBlockMatchingRegistrationMethod_8h.html" title="animaSymmetricBlockMatching\lRegistrationMethod.h" alt="" coords="1667,262,1872,303"/>
+<area shape="rect" id="node47" href="$animaKissingSymmetricBlockMatchingRegistrationMethod_8h.html" title="animaKissingSymmetricBlock\lMatchingRegistrationMethod.h" alt="" coords="1062,262,1257,303"/>
+<area shape="rect" id="node48" href="$animaLSWTransformAgregator_8h.html" title="animaLSWTransformAgregator.h" alt="" coords="2131,269,2340,296"/>
+<area shape="rect" id="node49" href="$animaLTSWTransformAgregator_8h.html" title="animaLTSWTransformAgregator.h" alt="" coords="2365,269,2581,296"/>
+<area shape="rect" id="node50" href="$animaMEstTransformAgregator_8h.html" title="animaMEstTransformAgregator.h" alt="" coords="2607,269,2816,296"/>
 </map>

@@ -15,12 +15,12 @@
 <area shape="rect" id="node49" href="$animaTensorMeanSquaresImageToImageMetric_8hxx.html" title="animaTensorMeanSquaresImage\lToImageMetric.hxx" alt="" coords="2163,155,2372,197"/>
 <area shape="rect" id="node4" href="$animaDTIScalarMapsImageFilter_8h.html" title="animaDTIScalarMapsImageFilter.h" alt="" coords="25,253,247,280"/>
 <area shape="rect" id="node5" href="$animaComputeDTIScalarMaps_8cxx.html" title="animaComputeDTIScalarMaps.cxx" alt="" coords="5,344,224,371"/>
-<area shape="rect" id="node7" href="$animaExpTensorImageFilter_8h.html" title="animaExpTensorImageFilter.h" alt="" coords="455,253,647,280"/>
+<area shape="rect" id="node7" href="$animaExpTensorImageFilter_8h.html" title="animaExpTensorImageFilter.h" alt="" coords="549,253,741,280"/>
 <area shape="rect" id="node8" href="$animaExpTensors_8cxx.html" title="animaExpTensors.cxx" alt="" coords="249,344,393,371"/>
-<area shape="rect" id="node9" href="$animaPyramidalDenseTensorSVFMatchingBridge_8hxx.html" title="animaPyramidalDenseTensor\lSVFMatchingBridge.hxx" alt="" coords="656,337,845,378"/>
-<area shape="rect" id="node11" href="$animaPyramidImage_8cxx.html" title="animaPyramidImage.cxx" alt="" coords="469,344,632,371"/>
-<area shape="rect" id="node12" href="$animaTensorApplyTransformSerie_8cxx.html" title="animaTensorApplyTransform\lSerie.cxx" alt="" coords="829,427,1016,469"/>
-<area shape="rect" id="node10" href="$animaPyramidalDenseTensorSVFMatchingBridge_8h.html" title="animaPyramidalDenseTensor\lSVFMatchingBridge.h" alt="" coords="616,427,805,469"/>
+<area shape="rect" id="node9" href="$animaPyramidalDenseTensorSVFMatchingBridge_8hxx.html" title="animaPyramidalDenseTensor\lSVFMatchingBridge.hxx" alt="" coords="419,337,608,378"/>
+<area shape="rect" id="node11" href="$animaPyramidImage_8cxx.html" title="animaPyramidImage.cxx" alt="" coords="683,344,845,371"/>
+<area shape="rect" id="node12" href="$animaTensorApplyTransformSerie_8cxx.html" title="animaTensorApplyTransform\lSerie.cxx" alt="" coords="789,427,976,469"/>
+<area shape="rect" id="node10" href="$animaPyramidalDenseTensorSVFMatchingBridge_8h.html" title="animaPyramidalDenseTensor\lSVFMatchingBridge.h" alt="" coords="419,427,608,469"/>
 <area shape="rect" id="node14" href="$animaLogTensorImageFilter_8h.html" title="animaLogTensorImageFilter.h" alt="" coords="849,253,1041,280"/>
 <area shape="rect" id="node15" href="$animaDTITractography_8cxx.html" title="animaDTITractography.cxx" alt="" coords="921,344,1095,371"/>
 <area shape="rect" id="node16" href="$animaLogTensors_8cxx.html" title="animaLogTensors.cxx" alt="" coords="1119,344,1264,371"/>
