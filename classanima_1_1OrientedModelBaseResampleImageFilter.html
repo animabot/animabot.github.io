@@ -243,6 +243,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a3ab44b8da6b9600e43030b446ce7dc3a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1OrientedModelBaseResampleImageFilter.html#a3ab44b8da6b9600e43030b446ce7dc3a">ComputeRotationParametersFromRotationMatrix</a> (const vnl_matrix&lt; double &gt; &amp;transformRotationMatrix, vnl_matrix&lt; double &gt; &amp;modelRotationMatrix)</td></tr>
 <tr class="memdesc:a3ab44b8da6b9600e43030b446ce7dc3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">For some models, the transform induced rotation matrix is not enough and needs to be used to get rotation parameters, default is just a copy of the current matrix.  <a href="#a3ab44b8da6b9600e43030b446ce7dc3a">More...</a><br/></td></tr>
 <tr class="separator:a3ab44b8da6b9600e43030b446ce7dc3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a992053e4e8f34807aea8f262e17a69f3"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1OrientedModelBaseResampleImageFilter.html#a992053e4e8f34807aea8f262e17a69f3">GetOutputVectorLength</a> ()</td></tr>
+<tr class="separator:a992053e4e8f34807aea8f262e17a69f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42e3ef5d08584f7ab3981fe545ec6317"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanima_1_1OrientedModelBaseResampleImageFilter.html#a42e3ef5d08584f7ab3981fe545ec6317">InitializeInterpolator</a> ()</td></tr>
 <tr class="memdesc:a42e3ef5d08584f7ab3981fe545ec6317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the default interpolator, might change in derived classes.  <a href="#a42e3ef5d08584f7ab3981fe545ec6317">More...</a><br/></td></tr>
 <tr class="separator:a42e3ef5d08584f7ab3981fe545ec6317"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -755,7 +757,7 @@ template&lt;typename TInputScalarType , unsigned int Dimension, typename TInterp
 
 <p>Reimplemented in <a class="el" href="classanima_1_1FiniteStrainODFResampleImageFilter.html#a58659f0ac6b998683c55ba7bc2a3ea89">anima::FiniteStrainODFResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00026">26</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html">animaOrientedModelBaseResampleImageFilter.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00037">37</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html">animaOrientedModelBaseResampleImageFilter.hxx</a>.</p>
 
 </div>
 </div>
@@ -782,7 +784,7 @@ template&lt;typename TInputScalarType , unsigned int Dimension, typename TInterp
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00167">167</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html">animaOrientedModelBaseResampleImageFilter.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00178">178</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html">animaOrientedModelBaseResampleImageFilter.hxx</a>.</p>
 
 <p>References <a class="el" href="animaBaseTensorTools_8hxx_source.html#l00126">anima::ExtractRotationFromMatrixTransform()</a>.</p>
 
@@ -822,7 +824,7 @@ template&lt;typename TInputScalarType , unsigned int Dimension, typename TInterp
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00181">181</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html">animaOrientedModelBaseResampleImageFilter.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00192">192</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html">animaOrientedModelBaseResampleImageFilter.hxx</a>.</p>
 
 <p>References <a class="el" href="animaBaseTensorTools_8hxx_source.html#l00165">anima::RecomposeTensor()</a>.</p>
 
@@ -864,7 +866,7 @@ template&lt;typename TInputScalarType , unsigned int Dimension, typename TInterp
 
 <p>For some models, the transform induced rotation matrix is not enough and needs to be used to get rotation parameters, default is just a copy of the current matrix. </p>
 
-<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8h_source.html#l00132">132</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8h_source.html">animaOrientedModelBaseResampleImageFilter.h</a>.</p>
+<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8h_source.html#l00134">134</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8h_source.html">animaOrientedModelBaseResampleImageFilter.h</a>.</p>
 
 </div>
 </div>
@@ -1021,6 +1023,35 @@ template&lt;typename TInputScalarType , unsigned int Dimension, typename TInterp
 
 </div>
 </div>
+<a class="anchor" id="a992053e4e8f34807aea8f262e17a69f3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TInputScalarType , unsigned int Dimension, typename TInterpolatorPrecisionType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="classanima_1_1OrientedModelBaseResampleImageFilter.html">anima::OrientedModelBaseResampleImageFilter</a>&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;::GetOutputVectorLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classanima_1_1FiniteStrainDDIResampleImageFilter.html#a0f9e270bfd1feb183e7e54dc5a30d49b">anima::FiniteStrainDDIResampleImageFilter&lt; TInputScalarType, Dimension, TInterpolatorPrecisionType &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00026">26</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html">animaOrientedModelBaseResampleImageFilter.hxx</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a84d85ed8e466dabb1a9acaf584d0d31a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1101,7 +1132,7 @@ template&lt;typename TInputScalarType , unsigned int Dimension, typename TInterp
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8h_source.html#l00104">104</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8h_source.html">animaOrientedModelBaseResampleImageFilter.h</a>.</p>
+<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8h_source.html#l00106">106</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8h_source.html">animaOrientedModelBaseResampleImageFilter.h</a>.</p>
 
 </div>
 </div>
@@ -1139,7 +1170,7 @@ template&lt;typename TInputScalarType , unsigned int Dimension, typename TInterp
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00069">69</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html">animaOrientedModelBaseResampleImageFilter.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00080">80</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html">animaOrientedModelBaseResampleImageFilter.hxx</a>.</p>
 
 </div>
 </div>
@@ -1177,7 +1208,7 @@ template&lt;typename TInputScalarType , unsigned int Dimension, typename TInterp
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00121">121</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html">animaOrientedModelBaseResampleImageFilter.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00132">132</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html">animaOrientedModelBaseResampleImageFilter.hxx</a>.</p>
 
 </div>
 </div>
@@ -1215,7 +1246,7 @@ template&lt;typename TInputScalarType , unsigned int Dimension, typename TInterp
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8h_source.html#l00117">117</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8h_source.html">animaOrientedModelBaseResampleImageFilter.h</a>.</p>
+<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8h_source.html#l00119">119</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8h_source.html">animaOrientedModelBaseResampleImageFilter.h</a>.</p>
 
 </div>
 </div>
@@ -1457,7 +1488,7 @@ template&lt;typename TInputScalarType , unsigned int Dimension, typename TInterp
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00058">58</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html">animaOrientedModelBaseResampleImageFilter.hxx</a>.</p>
+<p>Definition at line <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html#l00069">69</a> of file <a class="el" href="animaOrientedModelBaseResampleImageFilter_8hxx_source.html">animaOrientedModelBaseResampleImageFilter.hxx</a>.</p>
 
 </div>
 </div>
@@ -1493,7 +1524,7 @@ template&lt;typename TInputScalarType , unsigned int Dimension, typename TInterp
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 22 2015 06:21:54 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jul 24 2015 06:21:52 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

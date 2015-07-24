@@ -136,31 +136,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbOfImages = 0;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">while</span> (!inputFile.eof())</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">char</span> tmpStr[2048];</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        inputFile.getline(tmpStr,2048);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span> (strcmp(tmpStr,<span class="stringliteral">&quot;&quot;</span>) == 0)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Loading image &quot;</span> &lt;&lt; nbOfImages &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; tmpStr &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        mainFilter-&gt;SetInput(anima::readImage&lt;ImageType&gt; (inFileArg.getValue()).GetPointer());</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        nbOfImages++;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    mainFilter-&gt;SetNumberOfOutputFascicles(outputFascicleArg.getValue());</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    mainFilter-&gt;SetMethod(methodArg.getValue());</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    mainFilter-&gt;SetNumberOfThreads(nbpArg.getValue());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    mainFilter-&gt;Update();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    anima::writeImage&lt;ImageType&gt; (resArg.getValue(), mainFilter-&gt;GetOutput());</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Writing image: &quot;</span> &lt;&lt; resArg.getValue() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">while</span> (!inputFile.eof())</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">char</span> tmpStr[2048];</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        inputFile.getline(tmpStr,2048);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> (strcmp(tmpStr,<span class="stringliteral">&quot;&quot;</span>) == 0)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Loading image &quot;</span> &lt;&lt; nbOfImages &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; tmpStr &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        mainFilter-&gt;SetInput(nbOfImages, anima::readImage&lt;ImageType&gt; (tmpStr));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        nbOfImages++;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    mainFilter-&gt;SetNumberOfOutputFascicles(outputFascicleArg.getValue());</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    mainFilter-&gt;SetMethod(methodArg.getValue());</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    mainFilter-&gt;SetNumberOfThreads(nbpArg.getValue());</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    mainFilter-&gt;Update();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    anima::writeImage&lt;ImageType&gt; (resArg.getValue(), mainFilter-&gt;GetOutput());</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Writing image: &quot;</span> &lt;&lt; resArg.getValue() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="ttc" id="animaDDIAverageImagesImageFilter_8h_html"><div class="ttname"><a href="animaDDIAverageImagesImageFilter_8h.html">animaDDIAverageImagesImageFilter.h</a></div></div>
 <div class="ttc" id="classanima_1_1DDIAverageImagesImageFilter_html_a7e9123f39070ce7128b7a75215cb692f"><div class="ttname"><a href="classanima_1_1DDIAverageImagesImageFilter.html#a7e9123f39070ce7128b7a75215cb692f">anima::DDIAverageImagesImageFilter::Pointer</a></div><div class="ttdeci">itk::SmartPointer&lt; Self &gt; Pointer</div><div class="ttdef"><b>Definition:</b> <a href="animaDDIAverageImagesImageFilter_8h_source.html#l00024">animaDDIAverageImagesImageFilter.h:24</a></div></div>
 <div class="ttc" id="classanima_1_1DDIAverageImagesImageFilter_html_ae78baefcf7aec7204078b2271c9d1c8d"><div class="ttname"><a href="classanima_1_1DDIAverageImagesImageFilter.html#ae78baefcf7aec7204078b2271c9d1c8d">anima::DDIAverageImagesImageFilter::New</a></div><div class="ttdeci">static Pointer New()</div></div>
@@ -169,7 +170,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 22 2015 06:21:51 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jul 24 2015 06:21:49 for ANIMA by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
